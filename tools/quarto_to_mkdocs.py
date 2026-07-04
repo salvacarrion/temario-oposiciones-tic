@@ -102,7 +102,7 @@ def main():
         'site_author': author,
         'repo_name': 'salvacarrion/temario-oposiciones-tic',
         'repo_url': 'https://github.com/salvacarrion/temario-oposiciones-tic',
-        'copyright': 'Copyright &copy; 2026 Salva Carrión &mdash; Licencia <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" rel="noopener">CC BY-NC 4.0</a> (puedes compartir y adaptar el material dando crédito al autor y sin fines comerciales)',
+        'copyright': 'Copyright &copy; 2026 Salva Carrión &mdash; Licencia <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" rel="noopener">CC BY-NC 4.0</a>',
         'theme': {
             'name': 'material',
             'logo': 'logos/monkey128.png',
