@@ -102,6 +102,9 @@ def main():
         'site_author': author,
         'theme': {
             'name': 'material',
+            'logo': 'logos/monkey128.png',
+            'favicon': 'favicon/favicon.ico',
+            'custom_dir': 'theme_overrides',
             'palette': [
                 {
                     'media': '(prefers-color-scheme: light)',
