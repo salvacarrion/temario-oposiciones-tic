@@ -22,3 +22,10 @@
 \setlist[enumerate,7]{label=\arabic*.}
 \setlist[enumerate,8]{label=\alph*.}
 \setlist[enumerate,9]{label=\roman*.}
+
+% Evitar que las imágenes se desborden de la página
+\usepackage[export]{adjustbox}
+\let\oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{%
+  \oldincludegraphics[#1,max width=\linewidth]{#2}%
+}

@@ -1,3 +1,1 @@
-# Prólogo {.unnumbered}
-
-{{< include src/prologo.md >}}
+{{< include src/index.md >}}

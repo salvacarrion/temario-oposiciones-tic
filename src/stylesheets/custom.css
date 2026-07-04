@@ -1,0 +1,14 @@
+/* Estilos propios del temario para MkDocs Material */
+
+/* Separador sutil entre subtemas (H2) */
+.md-content h2 {
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+/* Evitar el separador en el primer subtema de la página */
+.md-content h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}

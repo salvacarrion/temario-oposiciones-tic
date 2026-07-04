@@ -30,6 +30,7 @@ book:
     right: "Licencia CC BY-NC 4.0"
   chapters:
     - index.qmd
+    - prologo.md
     - part: "Bloque I — Marco jurídico y administrativo"
       chapters:
         - src/01-jerarquia-normativa-y-fuentes-del-derecho.md
@@ -131,12 +132,11 @@ format:
     # minty, morph, pulse, quartz, sandstone, simplex, sketchy, slate, solar,
     # spacelab, superhero, united, vapor, yeti, zephyr, cerulean, cyborg,
     # darkly, journal (https://quarto.org/docs/output-formats/html-themes.html)
-    theme:
-      light: [cosmo, assets/custom.scss]
-      dark: [darkly, assets/custom.scss]
+    theme: [cosmo, assets/custom.scss]
     toc: true
-    toc-depth: 3
+    toc-depth: 2
     number-depth: 2
+    include-after-body: assets/custom.html
   pdf:
     documentclass: scrreprt
     toc-depth: 2
