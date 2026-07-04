@@ -3,6 +3,9 @@ site_description: Cuerpos de informática de las administraciones públicas
 site_author: Salvador Carrión Ponz
 theme:
   name: material
+  logo: logos/monkey128.png
+  favicon: favicon/favicon.ico
+  custom_dir: theme_overrides
   palette:
   - media: '(prefers-color-scheme: light)'
     scheme: default
