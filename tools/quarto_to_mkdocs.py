@@ -100,6 +100,9 @@ def main():
         'site_name': title,
         'site_description': subtitle,
         'site_author': author,
+        'repo_name': 'salvacarrion/temario-oposiciones-tic',
+        'repo_url': 'https://github.com/salvacarrion/temario-oposiciones-tic',
+        'copyright': 'Copyright &copy; 2026 Salva Carrión &mdash; Licencia <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" rel="noopener">CC BY-NC 4.0</a> (puedes compartir y adaptar el material dando crédito al autor y sin fines comerciales)',
         'theme': {
             'name': 'material',
             'logo': 'logos/monkey128.png',
@@ -151,7 +154,6 @@ def main():
             'javascripts/mathjax.js',
             'https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js'
         ],
-        'copyright': 'CC BY-NC 4.0 — puedes compartir y adaptar el material dando crédito al autor y sin fines comerciales.<br><small>Aviso: este es un temario personal, no un material oficial. Aunque he procurado la máxima precisión, no puedo garantizar la ausencia de errores ni que la normativa citada siga vigente; contrasta siempre con las fuentes oficiales (BOE/DOGV) antes del examen.</small>',
         'docs_dir': 'src',
         'site_dir': 'book-mkdocs',
         'nav': nav
