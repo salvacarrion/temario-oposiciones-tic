@@ -1,4 +1,4 @@
-name: Deploy Quarto book to GitHub Pages
+name: Deploy MkDocs book with Quarto PDF to GitHub Pages
 
 on:
   push:
@@ -19,16 +19,37 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: Install MkDocs dependencies
+        run: |
+          pip install mkdocs-material
+
       - name: Set up Quarto (con TinyTeX para el PDF)
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
-      - name: Render book (HTML + PDF)
-        run: quarto render
+
+      - name: Render PDF with Quarto
+        run: quarto render --to pdf
+
+      - name: Copy generated PDF to MkDocs source directory
+        run: |
+          cp book-quarto/temario-oposiciones-tic.pdf src/temario-oposiciones-tic.pdf
+
+      - name: Build MkDocs Site
+        run: mkdocs build
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: book-quarto
+          path: book-mkdocs
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

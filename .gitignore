@@ -4,6 +4,7 @@ index_files/
 site_libs/
 src/*.html
 /*.pdf
+src/temario-oposiciones-tic.pdf
 
 # Documentos de referencia pesados (leyes/guías); ver references/README.md.
 # Los .md con enlaces sí se versionan.
