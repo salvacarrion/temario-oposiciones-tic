@@ -156,6 +156,9 @@ def main():
         ],
         'docs_dir': 'src',
         'site_dir': 'book-mkdocs',
+        'extra': {
+            'generator': False
+        },
         'nav': nav
     }
     
