@@ -21,3 +21,14 @@ references/**/*.pdf
 
 # temporary files
 tmp/
+
+# IDE files
+.idea/
+
+# Output directories
+book-mkdocs/
+
+# Python cache
+__pycache__/
+*.pyc
+tools/__pycache__/

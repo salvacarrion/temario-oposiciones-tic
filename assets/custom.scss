@@ -26,3 +26,16 @@ main table thead th {
 main table tbody tr:nth-child(even) {
   background-color: rgba(128, 128, 128, 0.06);
 }
+
+/* Separador sutil entre subtemas (H2) */
+main section.level2 h2 {
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+/* Evitar el separador en el primer subtema de la página */
+main section.level2:first-of-type h2 {
+  border-top: none;
+  padding-top: 0;
+}
