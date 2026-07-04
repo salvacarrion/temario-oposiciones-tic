@@ -1,0 +1,22 @@
+# Salida generada por quarto
+book-quarto/
+index_files/
+site_libs/
+src/*.html
+/*.pdf
+
+# Documentos de referencia pesados (leyes/guías); ver references/README.md.
+# Los .md con enlaces sí se versionan.
+references/**/*.pdf
+
+# Sistema
+.DS_Store
+
+/.quarto/
+**/*.quarto_ipynb
+
+# Configuración local de Claude Code
+.claude/settings.local.json
+
+# temporary files
+tmp/
