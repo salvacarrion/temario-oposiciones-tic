@@ -1,0 +1,145 @@
+# Configuración e ÍNDICE del libro. Al añadir/reordenar capítulos, edita
+# la lista book.chapters (y renumera los ficheros NN-*.md si hace falta).
+#
+# El índice objetivo completo (85 capítulos, con subtemas) está en PLAN.md.
+# Los capítulos aún sin contenido NO se listan aquí (no publicar esqueletos),
+# por eso hay huecos en la numeración de ficheros (17, 22, 33, 39, 46, 67,
+# 69, 78-85): la numeración visible del libro se compactará sola hasta que
+# existan.
+
+project:
+  type: book
+  output-dir: book-quarto
+  resources:
+    - src/media
+
+lang: es
+
+book:
+  title: "Temario de Oposiciones TIC"
+  subtitle: "Cuerpos de informática de las administraciones públicas"
+  author: "Salvador Carrión Ponz"
+  output-file: temario-oposiciones-tic
+  site-url: https://salvacarrion.github.io/temario-oposiciones-tic/
+  repo-url: https://github.com/salvacarrion/temario-oposiciones-tic
+  repo-actions: [edit, issue]
+  search: true
+  downloads: [pdf]
+  page-footer:
+    left: "© Salvador Carrión Ponz"
+    right: "Licencia CC BY-NC 4.0"
+  chapters:
+    - index.qmd
+    - part: "Bloque I — Marco jurídico y administrativo"
+      chapters:
+        - src/01-jerarquia-normativa-y-fuentes-del-derecho.md
+        - src/02-constitucion-espanola.md
+        - src/03-estatuto-de-autonomia-de-la-comunitat-valenciana.md
+        - src/04-consell-y-gobierno-valenciano.md
+        - src/05-union-europea.md
+        - src/06-leyes-de-igualdad.md
+        - src/07-violencia-de-genero.md
+        - src/08-transparencia-y-buen-gobierno.md
+        - src/09-regimen-juridico-del-sector-publico.md
+        - src/10-procedimiento-administrativo-comun.md
+        - src/11-contratos-del-sector-publico.md
+        - src/12-estatuto-basico-del-empleado-publico.md
+        - src/13-funcion-publica-valenciana.md
+        - src/14-hacienda-publica-de-la-generalitat.md
+        - src/15-prevencion-de-riesgos-laborales.md
+    - part: "Bloque II — Sociedad digital y gestión TIC"
+      chapters:
+        - src/16-sociedad-digital.md
+        - src/18-gestion-de-los-servicios-tic.md
+        - src/19-direccion-y-gestion-de-proyectos.md
+        - src/20-analisis-de-procesos.md
+        - src/21-metodologias-agiles-y-escalado-agil.md
+    - part: "Bloque III — Ingeniería del software"
+      chapters:
+        - src/23-analisis-y-diseno-de-aplicaciones.md
+        - src/24-proceso-unificado-y-uml.md
+        - src/25-calidad-del-software.md
+        - src/26-control-de-versiones-integracion-continua-y-devops.md
+        - src/27-testeo-de-software.md
+    - part: "Bloque IV — Seguridad de la información"
+      chapters:
+        - src/28-ciberseguridad.md
+        - src/29-esquema-nacional-de-seguridad.md
+        - src/30-analisis-y-gestion-de-riesgos.md
+        - src/31-gestion-de-ciberincidentes.md
+        - src/32-desarrollo-seguro-de-aplicaciones.md
+    - part: "Bloque V — Datos, IA y tecnologías emergentes"
+      chapters:
+        - src/34-inteligencia-artificial-y-aprendizaje-automatico.md
+        - src/35-inteligencia-artificial-aplicada.md
+        - src/36-bases-de-datos.md
+        - src/37-gestion-de-datos-corporativos-y-big-data.md
+        - src/38-gobernanza-del-dato.md
+        - src/40-apis-y-apificacion.md
+        - src/41-automatizacion-robotica-de-procesos.md
+        - src/42-blockchain-y-otras-tecnologias-emergentes.md
+    - part: "Bloque VI — Sistemas e infraestructuras"
+      chapters:
+        - src/43-centros-de-proceso-de-datos.md
+        - src/44-virtualizacion-y-contenedores.md
+        - src/45-sistemas-de-almacenamiento.md
+        - src/47-computacion-en-la-nube-y-altas-prestaciones.md
+        - src/48-puesto-de-trabajo-tic.md
+    - part: "Bloque VII — Protección de datos y administración electrónica"
+      chapters:
+        - src/49-proteccion-de-datos-personales.md
+        - src/50-administracion-electronica.md
+        - src/51-documento-y-expediente-electronico.md
+    - part: "Bloque VIII — Desarrollo web y de aplicaciones"
+      chapters:
+        - src/52-arquitecturas-de-desarrollo-web.md
+        - src/53-tecnologias-web.md
+        - src/54-accesibilidad-y-usabilidad.md
+        - src/55-desarrollo-de-aplicaciones-moviles.md
+        - src/56-soa-servicios-web-y-microservicios.md
+        - src/57-programacion.md
+    - part: "Bloque IX — Interoperabilidad y confianza digital"
+      chapters:
+        - src/58-esquema-nacional-de-interoperabilidad.md
+        - src/59-infraestructuras-y-servicios-comunes-de-interoperabilidad.md
+        - src/60-criptografia.md
+        - src/61-identificacion-y-firma-electronica.md
+        - src/62-sistemas-de-informacion-geografica.md
+        - src/63-infraestructuras-de-datos-espaciales.md
+    - part: "Bloque X — Redes y comunicaciones"
+      chapters:
+        - src/64-modelos-osi-y-tcp-ip.md
+        - src/65-protocolos-de-comunicaciones.md
+        - src/66-redes-de-computadores.md
+        - src/68-virtualizacion-de-redes.md
+        - src/70-redes-de-emergencia.md
+        - src/71-redes-inalambricas-y-5g.md
+        - src/72-internet-de-las-cosas-y-redes-de-sensores.md
+        - src/73-ciudades-inteligentes.md
+        - src/74-seguridad-en-las-comunicaciones.md
+    - part: "Bloque XI — Administración de la Generalitat"
+      chapters:
+        - src/75-agenda-digital-valenciana.md
+        - src/76-seguridad-de-la-informacion-en-la-generalitat.md
+        - src/77-administracion-electronica-y-plataformas-de-la-generalitat.md
+  appendices:
+    - src/referencias.md
+
+format:
+  html:
+    # Temas Bootswatch disponibles: cosmo, flatly, litera, lumen, lux, materia,
+    # minty, morph, pulse, quartz, sandstone, simplex, sketchy, slate, solar,
+    # spacelab, superhero, united, vapor, yeti, zephyr, cerulean, cyborg,
+    # darkly, journal (https://quarto.org/docs/output-formats/html-themes.html)
+    theme:
+      light: [cosmo, assets/custom.scss]
+      dark: [darkly, assets/custom.scss]
+    toc: true
+    toc-depth: 3
+    number-depth: 2
+  pdf:
+    documentclass: scrreprt
+    toc-depth: 2
+    number-depth: 2
+    colorlinks: true
+    include-in-header: assets/deep-lists.tex

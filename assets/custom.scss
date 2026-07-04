@@ -1,0 +1,28 @@
+/*-- scss:rules --*/
+
+/* Estilos propios del temario (Quarto los aplica sobre el tema elegido).
+   Colores en rgba de gris para que funcionen en tema claro y oscuro. */
+
+/* Imágenes de bloque centradas */
+main p > img:only-child,
+main figure img {
+  display: block;
+  margin: 0.8rem auto;
+  max-width: 100%;
+}
+
+/* Tablas: centradas, bordes finos, cabecera destacada y filas alternas */
+main table {
+  margin: 1rem auto;
+}
+main table td,
+main table th {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+}
+main table thead th {
+  background-color: rgba(128, 128, 128, 0.12);
+}
+main table tbody tr:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.06);
+}
