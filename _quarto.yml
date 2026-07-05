@@ -71,8 +71,8 @@ book:
         - src/32-desarrollo-seguro-de-aplicaciones.md
     - part: "Bloque V — Datos, IA y tecnologías emergentes"
       chapters:
-        - src/34-inteligencia-artificial-y-aprendizaje-automatico.md
-        - src/35-inteligencia-artificial-aplicada.md
+        - src/34-inteligencia-artificial.md
+        - src/35-etica-regulacion-inteligencia-artificial.md
         - src/36-bases-de-datos.md
         - src/37-gestion-de-datos-corporativos-y-big-data.md
         - src/38-gobernanza-del-dato.md
