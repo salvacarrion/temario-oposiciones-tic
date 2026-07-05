@@ -12,3 +12,59 @@
   border-top: none;
   padding-top: 0;
 }
+
+/* --- Personalización de los subtemas del sidebar izquierdo --- */
+
+/* 1. Todos los subtemas (activos, pasados y futuros) con opacidad completa y color de texto normal */
+.md-sidebar--primary .md-nav--secondary .md-nav__link {
+  color: var(--md-default-fg-color) !important;
+  opacity: 1 !important;
+}
+
+/* Desactivar el highlighting de hover para los subtemas (mantener color de texto normal) */
+.md-sidebar--primary .md-nav--secondary .md-nav__link:hover {
+  color: var(--md-default-fg-color) !important;
+}
+
+/* 2. Subtema seleccionado (activo): en negrita pero sin raya verde */
+.md-sidebar--primary .md-nav--secondary .md-nav__link--active {
+  color: var(--md-default-fg-color) !important;
+  font-weight: bold !important;
+}
+
+/* Colorear los Bloques en el sidebar izquierdo para diferenciarlos de los temas */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link {
+  color: #555555 !important; /* Gris estándar oscuro */
+  font-weight: bold !important;
+}
+
+/* Color de hover para los Bloques */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link:hover {
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* Poner el Tema seleccionado (página activa) en negrita además de su color verde/teal */
+.md-sidebar--primary .md-nav__link--active {
+  font-weight: bold !important;
+}
+
+/* --- Fijar el título del topbar con el nombre del sitio --- */
+
+/* Mostrar siempre el nombre del sitio */
+.md-header__ellipsis .md-header__topic:not([data-md-component="header-topic"]) {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+}
+
+/* Ocultar el título del tema/subtema en el topbar */
+.md-header__ellipsis .md-header__topic[data-md-component="header-topic"] {
+  display: none !important;
+}
+
+
+
+
+
+
+
