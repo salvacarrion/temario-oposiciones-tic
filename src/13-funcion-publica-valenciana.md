@@ -1,875 +1,250 @@
 # Función pública valenciana
 
-## Ley 4/2021, de la función pública valenciana
+La función pública valenciana se regula en un paquete normativo propio: la **Ley 4/2021, de 16 de abril, de la Función Pública Valenciana**, que sustituyó a la Ley 10/2010 (LOGFPV), y tres reglamentos de desarrollo que las convocatorias piden de forma literal: el **Decreto 3/2017** (selección, provisión de puestos y movilidad), el **Decreto 42/2019** (condiciones de trabajo del personal funcionario) y el **Decreto 49/2021** (teletrabajo).
+
+## Ley 4/2021, de la Función Pública Valenciana
+
+La **Ley 4/2021, de 16 de abril** (DOGV de **20 de abril de 2021**, BOE de 28 de mayo de 2021) ordena la función pública valenciana en **191 artículos agrupados en 11 títulos**, además de sus disposiciones adicionales, transitorias y finales. Deroga la **Ley 10/2010, de 9 de julio, de Ordenación y Gestión de la Función Pública Valenciana**. Ha sido modificada, entre otras, por la Ley 7/2021, el Decreto-ley 12/2022 (anexos de cuerpos y escalas), el Decreto-ley 7/2024, la Ley 6/2024 y la Ley 5/2025.
 
 ### Título I. Objeto, principios y ámbito de aplicación de la ley
 
-### Objeto
-
-Ordenar y regular la función pública valenciana y los instrumentos de gestión y determinación del régimen jurídico del personal.
-
-### Principios informadores
-
-Los principios y fundamentos que ordenan la función pública valenciana (FPV) son:
-
-- Servicio a la ciudadanía y a los intereses generales.
-- **Sometimiento pleno a la ley y al derecho.**
-- Economía, eficacia y eficiencia.
-- Igualdad.
-- Objetividad, profesionalidad, transparencia, integridad, imparcialidad y austeridad.
-- Desarrollo y cualificación profesional permanente.
-- Igualdad, mérito, capacidad, publicidad y transparencia en el acceso y la promoción profesional.
-- Eficacia en la planificación y gestión de los recursos humanos.
-
-**La FPV está constituida por** el conjunto de personas que prestan servicios retribuidos en la administración mediante una relación regulada por normativa administrativa o laboral.
-
-### Principios de la actuación del empleado público
-
-Imparcialidad, profesionalidad, diligencia, buena fe, confidencialidad, responsabilidad, ejemplaridad y honradez.
-
-### Ámbito de aplicación
-
-La ley se aplicará a:
-
-- Personal funcionario.
-- Personal laboral (cuando se disponga expresamente).
-- Personal eventual, en los términos y limitaciones previstas.
-
-Se aplica a quienes presten servicios en:
-
-- La Administración de la Generalitat.
-- Organismos públicos de la Generalitat.
-- Consorcios adscritos a la Generalitat.
-- Administraciones de entidades locales de la Comunidad Valenciana.
-- Universidades públicas de la Comunidad Valenciana.
-
-### Exclusiones
-
-- **Personal docente no universitario** y personal estatutario de sanidad (régimen específico).
-
-### Personal con legislación específica
-
-- Personal al servicio de las Cortes Valencianas e instituciones de la Generalitat reguladas por el Estatuto de Autonomía.
-- Administración de Justicia.
-- Personal docente investigador de universidades públicas.
+- **Art. 1. Objeto**: «la ordenación y regulación de la función pública valenciana, así como de sus instrumentos de gestión y la determinación del régimen jurídico del personal incluido en su ámbito de aplicación», en el marco de la legislación básica estatal.
+- **Art. 2. Principios informadores**: servicio a la ciudadanía y a los intereses generales; sometimiento pleno a la ley y al derecho; economía, eficacia y eficiencia; igualdad efectiva de mujeres y hombres; objetividad, profesionalidad, transparencia, integridad, imparcialidad y austeridad; desarrollo y cualificación profesional permanente; evaluación y responsabilidad en la gestión; jerarquía; negociación colectiva y participación; ética profesional; igualdad, mérito, capacidad, publicidad y transparencia en el acceso y la promoción; eficacia en la planificación y gestión de los recursos humanos; adecuación de los sistemas retributivos; igualdad de oportunidades de las personas con discapacidad; cooperación entre administraciones; promoción de la estabilidad en el empleo público.
+- **La función pública valenciana está constituida por** «el conjunto de personas que prestan servicios retribuidos en la misma mediante una relación regulada por la normativa administrativa o laboral» (art. 2.2).
+- **Principios de actuación del personal empleado público** (art. 2.3): imparcialidad, profesionalidad, diligencia, buena fe, confidencialidad, responsabilidad, ejemplaridad y honradez.
+- **Art. 3. Ámbito subjetivo**: se aplica al personal funcionario, al laboral (cuando así se disponga expresamente) y al eventual, que preste servicios en:
+    - La **Administración de la Generalitat** (servicios centrales y periféricos de la Presidencia y las consellerias).
+    - Los **organismos públicos** de la Generalitat y los **consorcios** adscritos a ella.
+    - Las **administraciones de las entidades locales** de la Comunitat Valenciana (y sus consorcios, organismos autónomos y entidades públicas empresariales).
+    - Las **universidades públicas** valencianas, exclusivamente respecto de su **personal de administración y servicios**.
+- El **personal docente no universitario y el estatutario sanitario** se rige por su normativa específica y, subsidiariamente, por esta ley (salvo retribuciones complementarias, movilidad interadministrativa y promoción profesional; la evaluación del desempeño sí les aplica).
+- **Art. 4. Personal con legislación específica** (la ley solo se les aplica cuando su normativa lo disponga, con carácter supletorio): personal de **Les Corts**, de las **Instituciones estatutarias** de la Generalitat, funcionarios de la **Administración de Justicia** dependiente de la Generalitat y **personal docente e investigador** de las universidades públicas.
 
 ### Título III. Personal al servicio de las administraciones públicas
 
-### Concepto y clases de personal empleado público
-
-El personal empleado público es aquel que desempeña profesionalmente funciones retribuidas al servicio de los intereses generales en:
-
-- La Generalitat.
-- Las Entidades Locales.
-- Las Universidades públicas.
-
-### Se clasifica en:
-
-- **Personal funcionario de carrera.**
-- **Personal funcionario interino.**
-- **Personal laboral** (fijo, indefinido o temporal).
-- **Personal eventual.**
-
-### Personal funcionario de carrera
-
-- **Definición:** Persona que, en virtud de un nombramiento legal, se incorpora a la administración pública mediante una relación jurídica regulada por derecho administrativo para realizar servicios profesionales retribuidos de carácter permanente.
-- **Acceso:** Por procedimiento selectivo o por vía de transferencia.
-
-### Personal funcionario interino
-
-- **Definición:** Persona que, en virtud de un nombramiento legal, presta servicios en una administración pública por razones justificadas de necesidad y urgencia mediante una relación profesional de carácter temporal. Realiza funciones atribuidas al personal funcionario de carrera.
-- **Supuestos de nombramiento:**
-    - Cobertura de plazas vacantes cuando no sea posible hacerlo con personal funcionario de carrera.
-    - Sustitución transitoria de titulares.
-    - Programas de carácter temporal, con duración no superior a 3 años, prorrogable por 1 año más.
-    - Exceso o acumulación de tareas, con una duración máxima de 6 meses dentro de un periodo de 12 meses.
-- **Selección:**
-    - Basada en los principios de igualdad, mérito, capacidad y publicidad.
-    - Puede realizarse mediante bolsas u otras vías, siempre que se exija superar alguna prueba de conocimiento.
-- **Cese:**
-    - Finalización de la causa que dio lugar al nombramiento.
-    - Provisión de la plaza por funcionario de carrera.
-    - Transcurso de los plazos máximos establecidos.
-    - Amortización de la plaza.
-    - Incumplimiento de requisitos.
-- **Régimen aplicable:**
-    - General de los funcionarios de carrera.
-- **Categoría de entrada:** El puesto con el menor nivel de complemento competencial.
-
-### Personal laboral
-
-- **Definición:** Persona que, tras superar un proceso selectivo, formaliza un contrato de trabajo por escrito con la administración pública, estableciendo una relación profesional caracterizada por ajenidad, dependencia, voluntariedad y retribución.
-- **Tipos:**
-    - Fijo.
-    - Por tiempo indefinido.
-    - Temporal.
-- **Selección:**
-    - Basada en los principios de igualdad, mérito, capacidad y publicidad.
-    - Puede realizarse mediante bolsas u otras vías, siempre que se exija superar alguna prueba de conocimiento.
-- **Puestos de trabajo:**
-    - Se incluyen en la oferta de empleo público o en la siguiente.
-    - No podrán ocupar puestos de funcionarios de carrera, salvo excepciones (Salud, Violencia de Género, sentencia judicial, entre otras).
-- **Régimen aplicable:**
-    - General de los funcionarios de carrera.
-- **Categoría de entrada:** El puesto con el menor nivel de complemento competencial.
-
-### Personal eventual
-
-- **Definición:** Persona que, en virtud de nombramiento, ocupa un puesto con carácter no permanente para desempeñar funciones expresamente definidas como de confianza o asesoramiento especial.
-- **Características:**
-    - Nombramiento y cese libres.
-    - Cese automático al cesar la autoridad que lo designó.
-    - Nombramiento por:
-        - Gabinetes de la Presidencia de la Generalitat, Vicepresidencia del Consell y Consellers.
-        - Rector en las Universidades públicas.
-        - Instituciones estatutarias o Entidades Locales, según su normativa.
-    - No constituye mérito para el acceso a la función pública ni para la promoción interna.
-- **Régimen aplicable:**
-    - General de los funcionarios de carrera.
-- **Funciones de confianza:**
-    - Asesoramiento estratégico o difusión de propuestas.
-    - Dedicación especial y disponibilidad horaria.
-
-### Personal directivo público profesional
-
-- **Definición:** Persona que desarrolla funciones directivas profesionales en la administración pública.
-- **Funciones:**
-    - Establecimiento y evaluación de objetivos.
-    - Formulación y ejecución de programas y políticas.
-    - Planificación, coordinación, evaluación, innovación, entre otras.
-- **Requisitos:**
-    - Titulación universitaria.
-    - Acreditación de experiencia y conocimientos.
-- **Designación:**
-    - Basada en los principios de igualdad, mérito, capacidad, transparencia e idoneidad.
-    - Convocatoria pública.
-    - Nombramiento realizado por la Presidencia de la Generalitat o la conselleria correspondiente.
-- **Puestos reservados a funcionarios de carrera:**
-    - En la Administración de la Generalitat: Subgrupo A1, nivel competencial 24 y grado de desarrollo profesional II.
-    - En otras administraciones: Subgrupo A1, nivel competencial 24 y 10 años de antigüedad.
-- **Régimen aplicable:**
-    - Funcionarios: "Servicio activo".
-    - No funcionarios: Establecido por decreto del Consell.
-- **Evaluación:**
-    - Periódica, basada en criterios de eficacia, eficiencia y responsabilidad en la gestión.
-    - Cese sin derecho a indemnización.
+- **Art. 16. Concepto**: es personal empleado público quien desempeña profesionalmente funciones retribuidas al servicio de los intereses generales. Se clasifica en: **personal funcionario de carrera**, **personal funcionario interino**, **personal laboral** (fijo, por tiempo indefinido o temporal) y **personal eventual**.
+- **Art. 17. Personal funcionario de carrera**: se incorpora en virtud de **nombramiento legal**, mediante una relación regulada por el **derecho administrativo**, para desempeñar servicios profesionales retribuidos **de carácter permanente**. Se integra por procedimiento selectivo o por transferencia. Le corresponden en exclusiva las funciones que impliquen participación directa o indirecta en el **ejercicio de potestades públicas** o en la salvaguardia de los intereses generales.
+- **Art. 18. Personal funcionario interino**: nombrado por razones expresamente justificadas de **necesidad y urgencia**, con relación temporal, para funciones propias de funcionarios de carrera. Supuestos:
+    - **Vacantes** que no puedan cubrirse con funcionarios de carrera, por un máximo de **3 años**.
+    - **Sustitución transitoria** de la persona titular.
+    - **Programas de carácter temporal**: duración máxima de **3 años**, prorrogable anualmente sin que el total pueda exceder de **4 años**.
+    - **Exceso o acumulación de tareas**: máximo de **9 meses dentro de un periodo de 18 meses**.
+- La selección de interinos se hace por procedimientos ágiles, mediante **bolsas de trabajo vinculadas a las ofertas de empleo público** (solo pueden inscribirse quienes hayan aprobado alguna prueba del proceso selectivo) o por convocatorias específicas que exijan superar alguna prueba de conocimiento. Los nombramientos se efectúan en puestos de la **categoría de entrada** (el menor nivel de complemento competencial del intervalo del cuerpo). El cese se produce por cobertura reglada del puesto, supresión o amortización, transcurso del plazo o fin de la causa, sin derecho a compensación.
+- **Art. 19. Personal laboral**: vinculado por **contrato de trabajo** formalizado por escrito tras superar un proceso selectivo; puede ser **fijo, por tiempo indefinido o temporal**. No puede ocupar puestos clasificados para personal funcionario, salvo tres supuestos: cambio de puesto **por motivos de salud**, traslado por **violencia de género** y adscripción de quien tenga reconocida por **sentencia judicial** la condición de indefinido no fijo.
+- **Art. 20. Personal eventual**: nombramiento **no permanente** solo para funciones expresamente definidas como de **confianza o asesoramiento especial**. Nombramiento y cese **libres**; cesa automáticamente cuando cesa la autoridad a la que asesora. En la Administración de la Generalitat pueden disponer de él los **gabinetes de la Presidencia, la Vicepresidencia y las consellerias**; en las universidades lo nombra el **rector o rectora**. Los entes del sector público instrumental **no pueden** nombrar personal eventual. Su desempeño **no constituye mérito** para el acceso ni para la promoción interna.
+- **Dirección pública profesional** (arts. 21-27):
+    - Desarrolla **funciones directivas profesionales** en la Presidencia, las consellerias y sus organismos autónomos y consorcios. Los puestos directivos que sean **altos cargos** (nombrados por decreto del Consell) quedan fuera. No puede haber puestos de dirección pública profesional dependientes de otros de la misma naturaleza.
+    - **Funciones**: establecimiento y evaluación de objetivos, ejecución de programas y políticas públicas, planificación y coordinación, dirección de personas y gestión de recursos, con alto nivel de autonomía y responsabilidad.
+    - **Requisitos**: titulación universitaria y acreditación de experiencia y conocimientos. Los puestos reservados a personal funcionario de carrera exigen: en la Generalitat, subgrupo **A1**, nivel competencial **24** y grado de desarrollo profesional **II**; en otras administraciones, subgrupo **A1**, nivel **24** y **10 años** de antigüedad en el subgrupo.
+    - **Designación**: convocatoria pública conforme a publicidad, mérito, capacidad, transparencia e idoneidad; nombramiento **motivado** de la **Presidencia de la Generalitat o conselleria** correspondiente, que puede declararla desierta.
+    - Sus puestos figuran en una **relación de puestos de trabajo específica** (no es materia obligatoria de negociación) y existe un **Registro de personal directivo** en la conselleria de función pública.
+    - **Régimen**: los funcionarios de carrera permanecen en **servicio activo**; retribución con parte fija y parte **variable** por objetivos (incompatible con el complemento de actividad profesional); régimen de incompatibilidades de los **altos cargos** (sin serlo); evaluación periódica por eficacia, eficiencia y control de resultados; **cese discrecional sin derecho a indemnización**.
 
 ### Título V. Nacimiento y extinción de la relación de servicio
 
-### CAPÍTULO I: SELECCIÓN DE PERSONAL
-
-### Principios de selección
-
-La selección del personal empleado público se regirá por los principios de:
-
-- Igualdad, mérito y capacidad.
-- Publicidad, transparencia e imparcialidad.
-- Profesionalidad, independencia, confidencialidad y discrecionalidad.
-- Adecuación entre el contenido de las pruebas y las funciones del puesto.
-- Agilidad, eficacia y eficiencia.
-- Igualdad de oportunidades y accesibilidad universal.
-
-### Procedimiento de selección
-
-El procedimiento tendrá carácter abierto y garantizará la libre concurrencia.
-
-### Contenido de las bases de la convocatoria
-
-Deberán incluir:
-
-- Número de vacantes, requisitos de acceso y sistema selectivo.
-- Composición del órgano técnico de selección.
-- Características del curso selectivo, distribución por sexos, entre otros.\ Se publicarán en el **Diario Oficial de la Generalitat Valenciana (DOGV)** o equivalente.
-
-### Requisitos de los aspirantes
-
-- Nacionalidad española o de la UE, en los términos previstos.
-- Haber cumplido 16 años.
-- Titulación exigida para el puesto.
-
-### Reserva de plazas para discapacitados
-
-- Un mínimo del 10% de plazas (con 3% para discapacidad intelectual y 2% para enfermedad mental con grado igual o superior al 33%).
-
-### Sistemas selectivos
-
-- **Oposición:** Sistema ordinario.
-- **Concurso-oposición:** Máximo 40% del valor del concurso.
-- **Concurso:** Sólo en casos excepcionales.
-
-### Idiomas
-
-Las pruebas se realizarán en castellano o valenciano, salvo excepciones justificadas.
-
-### Duración del curso selectivo
-
-- Grupo A: Máximo 6 meses.
-- Otros grupos: Máximo 3 meses.
-
-### Órganos técnicos de selección
-
-- Designación a propuesta de la EVAP.
-- Compuestos exclusivamente por personal funcionario (o laboral, si la selección es de este tipo).
-- Requisitos de los miembros: Titulación igual o superior a la del puesto, mayoría con la titulación requerida en la convocatoria.
-- Incompatibilidades: No haber formado a aspirantes en los últimos 5 años.
-
-### CAPÍTULO II: ADQUISICIÓN Y PERDIDA DE LA CONDICIÓN DE PERSONAL EMPLEADO PÚBLICO
-
-### Adquisición y pérdida de la condición de personal funcionario de carrera
-
-### Adquisición de la condición de personal funcionario de carrera
-
-Se adquiere al:
-
-1. Superar el proceso selectivo.
-2. Ser nombrado por la administración y publicado en el DOGV (máximo 6 meses desde la resolución).
-3. Realizar el juramento o promesa.
-4. Tomar posesión del puesto.
-
-### Causas de pérdida de la condición de personal funcionario de carrera
-
-1. **Renuncia:**
-    - Debe presentarse por escrito y ser aceptada expresamente.
-    - No se admitirá si el funcionario está sujeto a expediente disciplinario o procesamiento penal.
-2. **Pérdida de la nacionalidad:**
-    - Española, de la UE o de países con tratados internacionales aplicables.
-3. **Inhabilitación:**
-    - **Absoluta:** Afecta a todos los empleos o cargos.
-    - **Especial:** Limita los empleos especificados en la sentencia.
-4. **Jubilación:**
-    - **Voluntaria:** Según lo establecido en la normativa.
-    - **Forzosa:** Con posibilidad de prórroga hasta los 70 años.
-    - **Incapacidad permanente:** Reconocida oficialmente.
-5. **Sanción firme de separación del servicio:**
-    - Impuesta como medida disciplinaria.
-6. **Fallecimiento.**
-
-### Rehabilitación de la condición de personal funcionario
-
-Se podrá solicitar si desaparecen las causas que motivaron la pérdida.
-
-### Adquisición y pérdida de la condición de personal laboral fijo
-
-- **Adquisición:** Superación del proceso selectivo, formalización del contrato y juramento o promesa.
-- **Pérdida:** Causas similares a las aplicables al personal funcionario, ajustadas a la normativa laboral.
+- **Art. 60. Principios de selección**: igualdad, mérito y capacidad; publicidad; transparencia; imparcialidad y profesionalidad de los órganos de selección; independencia, confidencialidad y discrecionalidad técnica; adecuación entre las pruebas y las funciones; agilidad; eficacia y eficiencia; igualdad de oportunidades entre ambos sexos; accesibilidad universal.
+- **Art. 61. Convocatorias**: los procedimientos son abiertos y garantizan la libre concurrencia; se inician por convocatoria pública en el **DOGV** o boletín correspondiente, que vincula a la administración, a los órganos de selección y a quienes participan. Las bases contienen, como mínimo: vacantes y clasificación, requisitos de acceso, sistema selectivo (pruebas, temario y baremo), composición del órgano técnico de selección, características del curso selectivo o prácticas y distribución porcentual de los dos sexos en el cuerpo.
+- **Art. 62. Requisitos de acceso**: nacionalidad española o de estado con acceso permitido; haber cumplido **16 años** y no exceder la edad de jubilación forzosa; capacidades y aptitudes físicas y psíquicas; no haber sido separado del servicio ni estar inhabilitado; titulación exigida; en su caso, acreditar la **competencia lingüística en valenciano** que se determine, respetando la proporcionalidad con las funciones.
+- **Art. 64. Reserva para personas con discapacidad o diversidad funcional**: cupo **no inferior al 10 %** de las vacantes de cada oferta de empleo público, hasta alcanzar progresivamente el **3 % de los efectivos totales**. En la Administración de la Generalitat, al menos un **5 %** se reserva a personas con discapacidad intelectual o enfermedad mental: un **3 %** específico para discapacidad intelectual y un **2 %** para enfermedad mental con grado igual o superior al **33 %**.
+- **Art. 65. Sistemas selectivos**: oposición, concurso-oposición y concurso.
+    - La **oposición** es el sistema **ordinario y preferente**: por acuerdo del Consell se le reserva al menos el **50 %** de los puestos de la oferta de empleo público anual.
+    - El **concurso** (solo valoración de méritos) es **excepcional** y únicamente para funcionarios de carrera **cuando lo establezca una ley**.
+    - En el **concurso-oposición**, la fase de concurso no puede superar el **40 % de la puntuación total** del proceso ni determinar por sí sola su resultado.
+    - Las pruebas pueden completarse con **cursos selectivos** (máximo **6 meses** para el grupo A y **3 meses** para el resto), periodos de prácticas, pruebas de idiomas, psicotécnicos o entrevistas.
+    - El personal aspirante tiene derecho a **elegir la lengua oficial** (castellano o valenciano) en que realiza las pruebas.
+- **Art. 67. Órganos técnicos de selección**: órganos colegiados de carácter técnico. En la Administración de la Generalitat, la propuesta de designación de sus miembros corresponde a la **dirección general competente en materia de función pública**. Compuestos exclusivamente por **personal funcionario** (también laboral si se selecciona personal de esta clase), de grupo con titulación **igual o superior** a la exigida y con **más de la mitad** de sus miembros con titulación de la **misma área de conocimientos**. No pueden formar parte: el personal de elección o designación política, los interinos, el personal laboral no fijo, el eventual, ni quienes hayan **preparado aspirantes en los últimos 5 años**. No pueden proponer más personas aprobadas que plazas convocadas, salvo que la convocatoria lo prevea (con listas complementarias para renuncias).
+- **Art. 68. Adquisición de la condición de funcionario de carrera** (requisitos sucesivos):
+    1. Superación del procedimiento selectivo.
+    2. **Nombramiento** publicado en el DOGV en el plazo máximo de **6 meses** desde la finalización del procedimiento (o del curso selectivo o prácticas).
+    3. **Juramento o promesa** de acatamiento a la Constitución, al Estatut y al ordenamiento jurídico.
+    4. **Toma de posesión** en plazo no superior a **1 mes** desde la publicación del nombramiento.
+- **Art. 69. Causas de pérdida** de la condición de funcionario de carrera:
+    - **Renuncia**: por escrito y aceptada expresamente; no se acepta si hay expediente disciplinario o auto de procesamiento o apertura de juicio oral; no inhabilita para ingresar de nuevo.
+    - **Pérdida de la nacionalidad** tenida en cuenta para el nombramiento.
+    - **Jubilación total**: voluntaria (con los requisitos del régimen de Seguridad Social), forzosa (a la edad legal, con posible prolongación **hasta los 70 años**, revisable anualmente) o por **incapacidad permanente**.
+    - **Sanción firme de separación del servicio**.
+    - **Pena firme de inhabilitación** absoluta (todos los empleos) o especial (los especificados en la sentencia).
+    - **Fallecimiento**.
+- **Art. 74. Rehabilitación**: puede solicitarse si la pérdida se debió a pérdida de nacionalidad o jubilación por incapacidad, cuando desaparezcan las causas; en caso de inhabilitación penal es **excepcional** y el silencio es **desestimatorio**.
+- **Art. 75. Personal laboral fijo**: adquiere la condición por superación del proceso selectivo, **formalización del contrato** y juramento o promesa; la pierde por las causas de extinción del contrato previstas en la normativa laboral.
 
 ### Título VI. Derechos, deberes e incompatibilidades del personal empleado público
 
-### CAPÍTULO I: DERECHOS DEL PERSONAL EMPLEADO PÚBLICO
-
-### Derechos individuales
-
-- **Inamovilidad** en la condición de personal funcionario de carrera.
-- Desempeño efectivo de funciones.
-- Promoción y desarrollo profesional.
-- Percepción de retribuciones e indemnizaciones.
-- Ser informado sobre tareas a desempeñar.
-- Asistencia y defensa jurídica en procedimientos derivados de actos en el ejercicio de sus funciones.
-- Formación continua y actualizada.
-- Derecho a la intimidad, a la protección de datos y conciliación de la vida personal, familiar y laboral.
-- Libertad de expresión.
-- Vacaciones, permisos y licencias.
-- Derecho a la jubilación.
-- Derecho a la libre asociación.
-
-### Derecho al teletrabajo
-
-- Condicionado a que el contenido competencial del puesto lo permita y no afecte las necesidades del servicio.
-- **Voluntario y reversible.**
-- La administración proporcionará y mantendrá los medios tecnológicos necesarios.
-- Derecho garantizado a la desconexión digital.
-- Regulación establecida reglamentariamente.
-
-### Derechos individuales ejercidos de forma colectiva
-
-- Libertad sindical.
-- Derecho a participar y negociar colectivamente.
-- Derecho de huelga.
-- Participación en conflictos colectivos.
-- Derecho de reunión.
-
-### Derecho a la protección frente a represalias por denuncias
-
-- Régimen de protección específico para quienes denuncien irregularidades.
-- Prohibición de medidas desfavorables motivadas por la denuncia.
-- Si se adoptan medidas desfavorables, corresponde a la administración justificar que no están vinculadas a la denuncia.
-- Posibilidad de eximir de sanciones al denunciante que haya participado en los hechos, siempre que existan otras personas responsables.
-
-### CAPÍTULO II: RÉGIMEN DE JORNADA, PERMISOS, LICENCIAS Y VACACIONES
-
-### Jornada de trabajo
-
-- Determinada según la normativa básica estatal.
-- **Tiempo mínimo entre jornadas:** 12 horas.
-- Reducción de jornada para quienes estén a menos de 5 años de la jubilación forzosa.
-
-### Permisos
-
-- **Asuntos particulares:** 6 días por año, incrementándose con antigüedad:
-    - +2 días a partir del sexto trienio.
-    - +1 día más desde el octavo trienio.
-- **Permiso retribuido por embarazo:** Desde la semana 37 (o 35 en caso de embarazo múltiple).
-
-### Licencias
-
-- Para cursos externos o estudios.
-- Participación en programas de cooperación internacional.
-- Por interés particular.
-- Para atender enfermedades de familiares o personas bajo guarda y custodia.
-
-### Vacaciones
-
-- 22 días hábiles por año trabajado (o la parte proporcional).
-- **Vacaciones no disfrutadas** por incapacidad temporal podrán disfrutarse hasta 18 meses después del final del año.
-- Incremento por antigüedad:
-    - +1 día adicional cada 5 años (15/20/25/30 años → 23/24/25/26 días).
-
-### Personal laboral
-
-- Jornada, permisos, licencias y vacaciones regulados en el TREBEP.
-
-### CAPÍTULO III: RÉGIMEN RETRIBUTIVO Y SEGURIDAD SOCIAL
-
-### Retribuciones
-
-- **Básicas:** Sueldo y trienios (incluyen las dos pagas extraordinarias).
-- **Complementarias:**
-    - Complemento de carrera administrativa (progresión profesional).
-    - Complemento del puesto de trabajo:
-        - **Competencial:** Dificultad técnica y complejidad.
-        - **De desempeño:** Condiciones particulares, dedicación y disponibilidad.
-    - Complemento de actividad profesional: Basado en interés, iniciativa, esfuerzo y rendimiento. **No será fijo ni periódico.**
-
-### Personal funcionario en prácticas
-
-- Percibirá las retribuciones del grupo al que aspire.
-- Si ya ocupaba otro puesto, puede optar por mantener su sueldo anterior.
-- Mantendrá los trienios reconocidos.
-
-### Deducción de retribuciones
-
-- Proporcional al tiempo no trabajado sin justificación.
-
-### Régimen de seguridad social
-
-- Aplicable al personal funcionario propio o de nuevo ingreso: **Régimen General de la Seguridad Social.**
-
-### CAPÍTULO IV: DEBERES, CÓDIGO DE CONDUCTA Y RÉGIMEN DE INCOMPATIBILIDADES
-
-### Deberes del personal empleado público
-
-- **Cumplir con diligencia las tareas encomendadas**.
-- Velar por los intereses generales.
-- Respetar la Constitución, el Estatuto de Autonomía y el resto del ordenamiento jurídico.
-
-### Código de conducta
-
-- Principios de actuación:
-    - Satisfacción de los intereses generales.
-    - Lealtad, buena fe y respeto.
-    - Prohibición de aceptar tratos de favor.
-    - Confidencialidad.
-    - Uso adecuado de recursos públicos.
-- Obligaciones específicas:
-    - Mantener actualizada su formación.
-    - Seguridad laboral y eficiencia.
-
-### Incompatibilidades
-
-- **Prohibición de realizar actividades** que comprometan imparcialidad, menoscaben el cumplimiento de sus deberes o perjudiquen los intereses generales.
-
-### Resolución de incompatibilidades
-
-- **Administración de la Generalitat:** Conseller en materia de función pública.
-- **Universidades:** Rector.
-
-### CAPÍTULO V: FORMACIÓN DEL PERSONAL EMPLEADO PÚBLICO
-
-### Definición
-
-Formación como aprendizaje planificado para adquirir, retener y transferir conocimientos y destrezas que mejoren el servicio público.
-
-### L'Escola Valenciana d'Administració Pública (EVAP)
-
-- Diseña, organiza, coordina y homologa acciones formativas.
-- Asistencia a formaciones consideradas tiempo de trabajo.
-- Formación accesible durante permisos (maternidad/paternidad) o incapacidades temporales.
-
-### Obligatoriedad de la formación
-
-- Excepto por causas justificadas.
+- **Art. 76. Derechos individuales**: inamovilidad en la condición de funcionario de carrera; desempeño efectivo de las funciones; promoción y carrera profesional; percepción de retribuciones e indemnizaciones; ser informado de sus tareas por la jefatura inmediata; asistencia y defensa jurídica; formación continua; intimidad, protección de datos y **desconexión digital**; no discriminación; conciliación de la vida personal, familiar y laboral; libertad de expresión; vacaciones, permisos y licencias; jubilación; libre asociación profesional y afiliación sindical; protección frente al acoso; protección en caso de denuncia de irregularidades.
+- **Derecho al teletrabajo** (art. 76.2): modalidad de prestación a distancia mediante TIC, condicionada a que el contenido del puesto lo permita y a las necesidades del servicio; **voluntario y reversible**; la administración proporciona y mantiene los medios tecnológicos; se garantiza la desconexión digital fuera de la franja de disponibilidad. Se desarrolla reglamentariamente (Decreto 49/2021).
+- **Art. 77. Derechos individuales ejercidos colectivamente**: libertad sindical, participación y negociación colectiva, huelga (con servicios esenciales), conflictos colectivos y reunión.
+- **Art. 78. Protección de quien denuncia irregularidades**: régimen específico de protección; las denuncias anónimas se archivan (salvo riesgo grave para el interés general); se protege el secreto de la identidad. No puede adoptarse contra el denunciante ninguna medida que perjudique su situación laboral: se **presumen represivas** las medidas desfavorables, y corresponde a la administración probar que no están vinculadas a la denuncia. Si el denunciante participó en los hechos, puede ser **eximido de sanción** (previa solicitud, si es el primero en denunciar, aporta pruebas, repara el perjuicio y colabora plenamente) o ver **reducida** la sanción.
+- **Jornada** (art. 79): se determina en el marco de la normativa básica estatal; entre el final de una jornada y el comienzo de la siguiente deben mediar **como mínimo 12 horas**. Derecho a reducción de jornada para quien esté a **menos de 5 años** de la jubilación forzosa. Las funcionarias víctimas de violencia de género tienen derecho a reducción o reordenación del tiempo de trabajo: si la reducción es de un **30 % o menos**, las retribuciones se mantienen **íntegras**.
+- **Permisos** (art. 80): los del **art. 48 del TREBEP**, y además **2 días adicionales** de asuntos particulares al cumplir el **sexto trienio**, incrementados en **1 día más por cada trienio cumplido a partir del octavo**. Permiso retribuido para las funcionarias en estado de gestación desde el primer día de la **semana 37** de embarazo (semana **35** en gestación múltiple). Los días de asuntos particulares requieren autorización previa, pero su disfrute dentro del año natural no puede quedar condicionado por ella.
+- **Licencias** (art. 81), previa autorización: por cursos externos, por estudios, por participación en programas acreditados de cooperación internacional, por interés particular y por enfermedad de familiares o personas bajo guarda o custodia.
+- **Vacaciones** (art. 82): **22 días hábiles** por año natural (los sábados no se consideran hábiles). Si la incapacidad temporal u otros permisos impiden su disfrute, pueden tomarse hasta **18 meses** después del final del año. Por antigüedad: **23 días** a partir de **15 años** de servicio, **24** a los **20**, **25** a los **25** y **26** a los **30 años**.
+- **Retribuciones** (arts. 84-96):
+    - **Básicas**: **sueldo** (por grupo o subgrupo) y **trienios** (cada 3 años de servicio). Tienen también consideración de básicas los componentes de sueldo y trienios de las pagas extraordinarias.
+    - **Complementarias**: complemento de **carrera administrativa** (progresión en la carrera horizontal); complemento del **puesto de trabajo**, con un componente **competencial** (dificultad técnica y responsabilidad) y otro **de desempeño** (condiciones particulares, dedicación, disponibilidad e incompatibilidad); complemento de **actividad profesional** (interés, iniciativa, esfuerzo y resultados: **no es fijo ni periódico** y exige planificación de objetivos y evaluación); y **gratificaciones por servicios extraordinarios** fuera de la jornada (nunca fijas ni periódicas).
+    - **Pagas extraordinarias**: **dos al año**, devengadas el **1 de junio y el 1 de diciembre**, por el importe de una mensualidad de las retribuciones básicas y de las complementarias de carrera y puesto.
+    - **Personal en prácticas**: percibe el sueldo del grupo al que aspira (más los complementos del puesto si lo desempeña); si ya prestaba servicios, puede optar por sus retribuciones anteriores; conserva los trienios reconocidos.
+    - **Deducción de retribuciones**: la parte de jornada no realizada sin causa justificada da lugar a deducción proporcional de haberes, sin carácter sancionador (también en caso de huelga).
+    - **Seguridad Social** (art. 96): al personal funcionario propio o de nuevo ingreso se le aplica el **Régimen General de la Seguridad Social**. En incapacidad temporal se complementan las prestaciones **hasta el máximo** que permita la normativa básica estatal.
+- **Deberes y código de conducta** (arts. 97-99): desempeñar con diligencia las tareas y velar por los intereses generales con sujeción a la **Constitución, el Estatut y el resto del ordenamiento jurídico**. Principios de actuación: satisfacción de los intereses generales y abstención en conflictos de interés; lealtad y buena fe; **rechazo de cualquier regalo, favor o servicio** en condiciones ventajosas más allá de los usos habituales y de cortesía; respeto de derechos fundamentales sin discriminación; no influir en trámites sin justificación; **secreto** de las materias clasificadas y discreción. Obligaciones: trato atento y respetuoso; diligencia y cumplimiento de jornada y horario; obediencia a las instrucciones profesionales salvo infracción manifiesta del ordenamiento; informar a la ciudadanía; **conocer las lenguas oficiales**; conservar los recursos públicos; mantener actualizada la formación; observar la normativa de seguridad y salud; uso adecuado de los medios informáticos.
+- **Incompatibilidades** (art. 103): remisión a la legislación básica estatal (Ley 53/1984). La competencia para resolver las declaraciones de compatibilidad corresponde, según el colectivo: al **conseller competente en sanidad** o **en educación** para su personal; al **conseller competente en función pública** para el personal de la Administración de la Generalitat; al **rector** en las universidades; al **Pleno** en las entidades locales; y al **Consell** el acuerdo expreso para autorizar compatibilidades de actividades públicas que superen los límites retributivos de la Ley 53/1984.
+- **Formación** (arts. 104-106): la coordinación, programación y ejecución corresponde a la dirección general competente en función pública a través del **Institut Valencià d'Administració Pública (IVAP)**, que diseña, organiza, coordina y homologa las acciones formativas, gestiona los cursos derivados de los procesos de selección y promoción y fomenta la formación en igualdad. La asistencia a las acciones formativas **se considera tiempo de trabajo**; puede acudirse a ellas durante los permisos de maternidad y paternidad, excedencias por motivos familiares e incapacidad temporal. La formación es también un **deber**: salvo causa justificada, hay que asistir a las actividades programadas.
 
 ### Título VII. Provisión de puestos y movilidad
 
-### CAPÍTULO I: DISPOSICIONES GENERALES
-
-### Movilidad
-
-- **Personal funcionario de carrera:** Derecho a la movilidad voluntaria.
-- **Personal laboral:** Regido por convenios colectivos y planes de igualdad.
-
-### Clases de movilidad:
-
-- **Movilidad provisional o definitiva.**
-- **De carácter voluntario o forzoso,** en función de las necesidades del servicio.
-
-### CAPÍTULO II: MOVILIDAD VOLUNTARIA DEL PERSONAL FUNCIONARIO DE CARRERA
-
-### Sistemas ordinarios de provisión de puestos
-
-Permiten cubrir puestos vacantes de carácter funcionarial mediante:
-
-- **1. Concurso de méritos**
-    - **Tipos de concurso:**
-        - **Concurso ordinario:** Valoración exclusiva de méritos, capacidades y aptitudes.
-        - **Concurso específico:** Incluye evaluación de méritos y competencias, pruebas prácticas, memorias, entrevistas, etc.
-    - Publicación en DOGV.
-    - **Periodicidad máxima:** Cada 2 años, salvo circunstancias excepcionales.
-    - Permanencia mínima en el puesto definitivo: **2 años.**
-- **2. Libre designación:** Selección discrecional basada en la idoneidad del candidato respecto a los requisitos.
-    - Publicación en DOGV.
-    - Plazo de solicitud: **10 días.**
-    - **Puestos limitados a:**
-        - Subdirección general o jefatura de servicio.
-        - Secretarías de altos cargos.
-        - Coordinadores-asesores de subsecretarías o secretarías autonómicas.
-        - Personal conductor.
-    - Resuelto por el conseller de la Conselleria a la que esté adscrito
-
-### Remoción y cese de puestos
-
-- **Por libre designación:** Carácter discrecional.
-- **Por concurso:** Por evaluación negativa, rendimiento insuficiente o incumplimiento de funciones.
-- En caso de cese:
-    - **El funcionario queda a disposición** del órgano superior de personal de su adscripción.
-    - **Preferencia sobre nuevo ingreso** para elegir puesto.
-    - Retribuciones garantizadas durante **1 mes** si el puesto es suprimido.
-
-### Otras formas de provisión de puestos de trabajo
-
-- **Comisión de servicios ordinaria:**
-    - Temporal y excepcional para casos de necesidad urgente.
-    - Máximo: **2 años** (6 meses si es por libre designación).
-    - Los puestos vacantes deben incluirse en la OPE o concursos.
-- **Comisión de servicios para la puesta en marcha de proyectos y desempeño de funciones especiales no asignadas específicamente a un puesto de trabajo:**
-    - Para tareas de naturaleza especial.
-    - Máximo: **1 año, prorrogable otro año más.**
-- **Comisión de servicios en misiones o programas de cooperación internacional:**
-    - Máximo: **6 meses.**
-    - **Si excede**, cambia la situación administrativa:
-        - Retribución por la AAPP: **Servicio activo.**
-        - Retribución externa: **Servicios especiales.**
-- **Adscripción provisional:** Temporal, aplicable por cese, reingreso o rehabilitación.
-- **Permuta de puestos:** Intercambio entre titulares de puestos similares.
-- **Mejora de empleo provisional:** Permite ocupar temporalmente puestos de cuerpos distintos.
-    - Se reserva el puesto original y se perciben retribuciones del nuevo puesto.
-- **Cambio por motivos de salud, discapacidad o diversidad funcional:**
-    - No implica merma retributiva.
-    - Preferencia sobre interinos.
-- **Traslado por violencia de género o terrorismo:**
-    - Considerado forzoso y no requiere vacante.
-
-### CAPÍTULO III: MOVILIDAD FORZOSA DEL PERSONAL FUNCIONARIO DE CARRERA
-
-### Comisión de servicios forzosa
-
-- Aplicable por necesidades urgentes del servicio.
-- **Orden de asignación:**
-    - Misma localidad.
-    - Prioridad por conciliación familiar.
-    - Menor antigüedad.
-    - Menor edad.
-- Máximo: **6 meses, prorrogable otros 6.**
-- **Cambio de localidad:** Derecho a indemnización.
-
-### Reasignación de efectivos
-
-- Aplicable por supresión del puesto.
-- Puede requerir cursos formativos.
-- Carácter definitivo.
-- **Indemnización:** Por cambio de residencia.
-
-### Adscripción temporal
-
-- Por acumulación de tareas, programas concretos o necesidades temporales.
-- Duración máxima: **1 año, prorrogable otro.**
-- No implica cambio de localidad.
-
-### CAPÍTULO IV: MOVILIDAD INTERADMINISTRATIVA E INTERSECTORIAL
-
-### Movilidad interadministrativa
-
-- Acceso a puestos en otras administraciones bajo el principio de reciprocidad.
-- Situación administrativa: **Servicio en otras AAPP.**
-
-### Movilidad intersectorial
-
-- Regida por la "Comissió Intersectorial de l’Ocupació Pública de la Generalitat".
+- **Disposiciones generales** (arts. 107-109): se garantiza el derecho a la **movilidad voluntaria** del funcionario de carrera. La movilidad, provisional o definitiva, puede ser **voluntaria o forzosa**; la forzosa exige necesidades del servicio, negociación sindical previa y respeto de las retribuciones y condiciones esenciales. El personal laboral se rige por sus convenios colectivos.
+- **Sistemas ordinarios de provisión** (art. 110): **concurso** y **libre designación**, por convocatoria pública y según la relación de puestos de trabajo.
+- **Concurso** (arts. 111-114): es el **procedimiento normal** de provisión. Méritos valorables: resultado de la evaluación del desempeño, progresión en la carrera, desempeño de puestos de igual o superior nivel, antigüedad, nivel competencial, valenciano e idiomas comunitarios, titulaciones adicionales, cursos de formación y actividad científica o docente.
+    - **Concurso ordinario**: solo méritos, capacidades y aptitudes generales.
+    - **Concurso específico**: dos fases; en la segunda se valoran conocimientos y aptitudes ligados a las funciones del puesto, con posibles pruebas prácticas, memorias o entrevistas (estas, con parámetros preestablecidos y **grabación audiovisual**), sin que esa segunda fase pueda superar el **45 % del total**.
+    - Las convocatorias las publica la **dirección general competente en función pública** en el DOGV; ningún mérito puede superar el **40 %** de la puntuación máxima; pueden prever una puntuación mínima y una fase de **resultas**.
+    - **Periodicidad**: se convocan concursos con una periodicidad **máxima de 2 años**.
+    - **Permanencia**: hay que permanecer un mínimo de **2 años** en el puesto obtenido con destino definitivo para concursar de nuevo (con excepciones: misma conselleria, puesto amortizado, remoción o primer destino), y de **4 años** en el caso de las agrupaciones de puestos de trabajo. Quien obtiene puesto por concurso no puede pasar a comisión de servicios hasta transcurrido **1 año**.
+- **Libre designación** (art. 115): apreciación **discrecional** de la idoneidad de las personas candidatas. Se reserva únicamente a los puestos de **subdirección general y jefatura de servicio**, las **secretarías de altos cargos**, los puestos de **coordinador asesor** dependientes de subsecretarías o secretarías autonómicas y el **personal conductor** al servicio directo de los miembros del Consell. Convocatoria pública en el DOGV con plazo de **10 días hábiles** para solicitudes; resuelve la **Presidencia de la Generalitat o la conselleria** a la que esté adscrito el puesto (puede declararla desierta).
+- **Remoción y cese** (art. 116): el cese en puestos de libre designación es **discrecional**. El titular de un puesto obtenido por concurso puede ser removido por supresión o alteración sustancial del puesto, por **evaluación negativa del desempeño** o por cumplimiento inadecuado o rendimiento insuficiente (estos dos últimos con expediente contradictorio y audiencia de la junta de personal). La remoción compete a la **conselleria de función pública** y el cese a la Presidencia o conselleria del puesto. Garantías del removido o cesado: queda a disposición de la jefatura superior de personal, con **preferencia sobre el nuevo ingreso**; mantiene durante un plazo máximo de **1 mes** las retribuciones anteriores (salvo actividad profesional y gratificaciones); se le adscribe provisionalmente a un puesto de nivel **no inferior en más de dos niveles** al reconocido; y si desempeñó al menos **2 años** un puesto de libre designación, conserva un componente de desempeño no inferior al **80 %** del que tenía.
+- **Otras formas de provisión** (arts. 117-125):
+    - **Comisión de servicios ordinaria**: voluntaria, temporal y excepcional, por urgente e inaplazable necesidad; máximo **2 años** en puestos de concurso y **6 meses** si son de libre designación. Los puestos así cubiertos deben incluirse en los concursos o en la oferta de empleo público.
+    - **Comisión de servicios para proyectos o funciones especiales** no asignadas a un puesto: máximo **1 año prorrogable por otro**.
+    - **Comisión de servicios en misiones o programas de cooperación internacional**: hasta **6 meses**; si la misión supera los 6 meses, el funcionario queda en **servicio activo** si le retribuye su administración o en **servicios especiales** si le retribuye el organismo internacional.
+    - **Adscripción provisional**: procede tras cese o remoción sin obtener otro puesto, por reingreso o por rehabilitación.
+    - **Permuta** de puestos entre dos funcionarios de carrera titulares, en los supuestos que se determinen reglamentariamente.
+    - **Mejora de empleo**: nombramiento provisional de un funcionario de carrera para un puesto de cuerpo distinto (supuestos del art. 18.2); se le reserva su puesto y queda en **servicio activo** en su cuerpo; percibe el sueldo del nuevo grupo y los complementos del puesto desempeñado, conservando trienios y carrera; máximo **2 años** en puestos vacantes.
+    - **Cambio de puesto por motivos de salud, discapacidad o diversidad funcional**: previa valoración del órgano de prevención de riesgos; tiene **preferencia sobre el nombramiento de interinos y la mejora de empleo** y no puede implicar merma retributiva.
+    - **Traslado por violencia de género o violencia terrorista**: derecho al traslado provisional a otro puesto análogo, **sin necesidad de vacante** de necesaria cobertura; se considera traslado **forzoso** a efectos indemnizatorios.
+- **Movilidad forzosa** (arts. 126-128):
+    - **Comisión de servicios forzosa**: para puestos de urgente provisión no cubiertos voluntariamente; se destina por este orden a personal de la **misma localidad**, al que tenga **menos dificultades de conciliación**, al de **menor antigüedad** y, en igualdad, al de **menor edad**; duración máxima de **6 meses prorrogable por otros 6**; con indemnización si implica cambio de localidad.
+    - **Reasignación de efectivos**: por supresión del puesto en un plan de ordenación de personal; adscripción **definitiva**; puede exigir cursos de formación del IVAP; obligatoria en el mismo municipio y voluntaria si implica cambio de residencia, en cuyo caso da derecho a indemnización (gastos de viaje, **3 dietas** por miembro de la familia y **3 mensualidades** de retribuciones).
+    - **Adscripción temporal**: a otro órgano o unidad por acumulación de cargas o programas concretos, **sin cambio de localidad**, por el plazo imprescindible y máximo de **1 año prorrogable por otro**; no aplicable a subdirecciones generales ni jefaturas de servicio.
+- **Movilidad interadministrativa e intersectorial** (arts. 129-130): acceso a puestos de otras administraciones conforme al principio de **reciprocidad** y a lo dispuesto en las relaciones de puestos de trabajo; quien obtiene destino en otra administración queda en la situación de **servicio en otras administraciones públicas**. La movilidad entre sectores (administración general, docente, sanitario, justicia) se articula a través de la **Comissió Intersectorial de l'Ocupació Pública** de la Generalitat.
 
 ### Título VIII. Promoción profesional
 
-### Derecho a la promoción profesional del personal funcionario de carrera
+- **Modalidades** (art. 132):
+    - **Carrera horizontal**: progresión mediante un sistema de **grados de desarrollo profesional**, **sin cambiar de puesto**; valora la trayectoria, la calidad de los trabajos, los conocimientos y el resultado de la evaluación del desempeño. Los grados reconocidos se **consolidan** (salvo sanción de demérito). El personal interino tiene derecho al complemento de carrera según el tiempo de servicios prestados.
+    - **Carrera vertical**: adquisición de un mayor **nivel competencial** mediante la obtención de puestos con destino definitivo. El nivel se adquiere por el desempeño de puestos del mismo componente competencial durante **2 años continuados o 3 con interrupción**; se tiene derecho a percibir como mínimo el componente competencial del nivel consolidado.
+    - **Promoción interna vertical**: acceso a un cuerpo o escala de un grupo o subgrupo **superior** (p. ej., de A2 a A1). El personal del subgrupo **C1** con la titulación exigida puede promocionar al grupo **A sin pasar por el B**.
+    - **Promoción interna horizontal**: acceso a otro cuerpo o escala del **mismo grupo o subgrupo** de clasificación.
+- **Promoción interna** (art. 135): requiere reunir los requisitos de acceso, **2 años de servicios efectivos** en el cuerpo o escala de origen y superar las pruebas. En la Administración de la Generalitat, las ofertas de empleo público reservan al turno de promoción interna un porcentaje **no inferior al 40 %** de las vacantes convocadas a oposición o concurso-oposición (aplicación suspendida para parte de la oferta de 2024 por el Decreto-ley 4/2024). Las convocatorias pueden eximir de pruebas ya acreditadas en el acceso al cuerpo de origen; quienes acceden por promoción interna tienen **preferencia** para elegir vacantes sobre el turno libre.
+- **Evaluación del desempeño** (art. 137): procedimiento que **mide y valora la conducta profesional y el rendimiento o el logro de resultados**, para individualizar y diferenciar la contribución de cada empleado. Se adecua a criterios de transparencia, objetividad, fiabilidad, imparcialidad y no discriminación. Sus efectos alcanzan a la carrera horizontal, la formación, la provisión de puestos y el complemento de actividad profesional; la **continuidad en los puestos obtenidos por concurso** queda vinculada a su resultado.
 
-El personal funcionario de carrera tiene derecho a un conjunto ordenado de oportunidades de ascenso y expectativas de progreso profesional.
+### Título IX. Situaciones administrativas del personal funcionario de carrera
 
-### Modalidades de promoción profesional del personal funcionario de carrera
+- **Art. 138. Situaciones**: servicio activo, servicios especiales, servicio en otras administraciones públicas, excedencia voluntaria, excedencia forzosa, expectativa de destino y suspensión de funciones. Se puede pasar de una situación a otra sin reingreso previo si se reúnen los requisitos.
+- **Servicio activo** (art. 140): quien ocupa un puesto mediante cualquiera de los procedimientos de provisión. No lo alteran las licencias, permisos, vacaciones ni la incapacidad temporal. El personal cesado permanece en activo hasta que se le atribuya otro puesto.
+- **Servicios especiales** (arts. 141-143): se declara, entre otros supuestos, al adquirir la condición de funcionario de organizaciones internacionales; en misiones internacionales de más de **6 meses** retribuidas por el organismo; al ser nombrado miembro del Gobierno o del Consell, **alto cargo**, o adscrito al Tribunal Constitucional, Defensor del Pueblo, Síndic de Greuges o Tribunal de Cuentas; al ser elegido diputado, senador o miembro de asambleas legislativas; al desempeñar cargos electivos retribuidos y de dedicación exclusiva en entidades locales; al ser designado **personal eventual** (si no se opta por permanecer en activo); o al ostentar cargo electivo en organizaciones sindicales más representativas.
+    - **Efectos**: se perciben las retribuciones del puesto o cargo desempeñado (más los **trienios** reconocidos); el tiempo computa a efectos de antigüedad, promoción y Seguridad Social; **reserva del mismo puesto** si se obtuvo por concurso (si era de libre designación o adscripción provisional, reserva de un puesto del mismo cuerpo y localidad).
+    - **Reingreso**: debe solicitarse en el plazo de **1 mes** desde el fin de la causa; si no, se declara la **excedencia voluntaria por interés particular**. La administración debe asignar puesto en el plazo de 1 mes desde la solicitud.
+- **Servicio en otras administraciones públicas** (arts. 144-145): para quien obtiene destino en otra administración por transferencia, concurso o libre designación. Se rige por la legislación de la administración de destino, conserva la condición de funcionario de la de origen y el tiempo computa como **servicio activo** en su cuerpo de origen.
+- **Excedencias voluntarias** (arts. 146-159), en siete modalidades:
 
-- **Carrera horizontal:**
-    - Progresión a través de un sistema de grados, sin necesidad de cambiar de puesto de trabajo.
-    - Reconoce individualmente el desarrollo profesional alcanzado.
-- **Carrera vertical:**
-    - Adquisición de un mayor nivel competencial al obtener puestos con destino definitivo.
-    - **Requisito:** Ejercer un puesto con el mismo nivel competencial durante **2 años continuados o 3 años con interrupciones.**
-- **Promoción interna vertical:**
-    - Acceso de un grupo o subgrupo a otro superior (según lo dispuesto en el TREBEP).
-    - Ejemplo: Pasar de A2 a A1.
-    - **Requisito:** Haber prestado **2 años de servicios** en el cuerpo o escala de origen.
-- **Promoción interna horizontal:**
-    - Acceso a una plaza de igual clasificación profesional en otra área o sector.
-    - Ejemplo: Pasar de la Administración General a la Administración Especial.
+| Modalidad | Requisitos clave | Retribución y cómputo | Reserva de puesto |
+| --- | --- | --- | --- |
+| Interés particular | **3 años** de servicios efectivos inmediatamente anteriores; reingreso tras **2 años** mínimo; subordinada a las necesidades del servicio; no procede con expediente disciplinario | Sin retribución ni cómputo | No |
+| Agrupación familiar | Cónyuge o pareja de hecho con puesto definitivo en otra localidad; **sin tiempo previo exigible** | Sin retribución ni cómputo | No |
+| Automática por prestar servicios en el sector público | Acceso como funcionario de carrera o laboral fijo a otro puesto del sector público | Sin retribución; los servicios se reconocen al reingresar | No |
+| Cuidado de familiares | Cuidado de cada hijo o hija, o de cónyuge, pareja o familiar hasta **2.º grado** (o persona bajo guarda) que no pueda valerse por sí mismo; máximo **3 años** por sujeto causante | Computa a efectos de antigüedad, promoción y Seguridad Social | Sí, durante los **3 años** |
+| Violencia de género | Sin tiempo mínimo previo ni plazo de permanencia | Retribuciones **íntegras los 3 primeros meses**; el periodo con reserva computa | **6 meses**, prorrogables por periodos de 3 hasta **18 meses** |
+| Violencia terrorista | En los términos de la normativa estatal básica, en las mismas condiciones que la anterior | Ídem | Ídem |
+| Incentivada | Estar en reasignación de efectivos, expectativa de destino o excedencia forzosa | **1 mensualidad por año** de servicio, máximo **12**; sin cómputo | No; dura **5 años** e impide trabajar en el sector público; reingreso anticipado posible tras **2 años** por acuerdo, devolviendo la parte proporcional |
 
-### Promoción profesional del personal laboral
-
-El personal laboral tiene derecho a la promoción profesional conforme a los convenios colectivos aplicables.
-
-### Evaluación del desempeño
-
-- Mide y valora la conducta profesional y el rendimiento con el objetivo de individualizar y diferenciar la contribución del personal empleado público.
-- La **continuidad en los puestos obtenidos por concurso** dependerá de los resultados de esta evaluación.
-
-### Título IX. Situaciones administrativas del personal funcionario de carrera (FC)
-
-### Servicio activo
-
-- El personal funcionario de carrera se encuentra en esta situación cuando ocupa un puesto mediante cualquiera de los procedimientos de provisión previstos en la ley.
-- **Circunstancias que no alteran esta situación:**
-    - Licencias, permisos, incapacidades temporales y vacaciones.
-- El personal cesado en su puesto permanece en servicio activo hasta que se le asigne otro.
-
-### Servicios especiales
-
-- Aplica cuando el funcionario es nombrado para:
-    - Organismos internacionales, Ministro/Conseller, alto cargo, miembro del Tribunal Constitucional, Defensor del Pueblo, diputado, personal eventual, entre otros.
-- **Plazo para solicitar el reingreso al servicio activo:** 1 mes.
-    - De no hacerlo, será declarado en excedencia voluntaria por interés particular.
-- **Derechos:**
-    - Retribuciones del puesto que desempeñen (más trienios).
-    - Se computa el tiempo de permanencia como servicio activo.
-    - Reserva del puesto si se obtuvo por concurso.
-
-### Servicio en otras administraciones públicas
-
-- Cuando el personal funcionario de carrera obtiene destino en otra administración por concurso o libre designación.
-- Legislación aplicable: La de la administración en la que presta servicios.
-- El tiempo computará como **servicio activo**.
-
-### Excedencia voluntaria
-
-- **Por interés particular:**
-    - **Requisitos**: **3 años** de servicios efectivos en cualquier administración.
-    - No aplica durante expedientes disciplinarios o sanciones.
-    - **Retribuciones**: Ninguna.
-    - **Cómputo de tiempo**: No.
-    - **Reingreso**: Requiere al menos **2 años en excedencia**.
-- **Por agrupación familiar:**
-    - Aplica si el cónyuge reside en otra localidad desempeñando un puesto definitivo.
-    - No hay requisito de servicios previos.
-    - **Retribuciones**: Ninguna.
-    - **Cómputo de tiempo:** No.
-- **Automática por prestar servicios en el sector público:**
-    - Aplica al acceder a otro puesto en el sector público.
-    - **Retribuciones**: Ninguna.
-    - **Cómputo de tiempo:** Reconocido posteriormente.
-- **Por cuidado de familiares:**
-    - **Duración**: Máximo de **3 años**.
-    - **Supuestos**: Hijo, cónyuge, familiar hasta 2.º grado o persona bajo guarda y custodia.
-    - **Restricción**: Puede limitarse a dos funcionarios si es por la misma persona.
-    - **Cómputo de tiempo**: **Sí**, con excepciones.
-    - **Reserva del puesto**: Hasta **3 años**.
-- **Por razón de violencia de género o terrorismo:**
-    - Sin tiempo mínimo previo ni plazo de permanencia.
-    - **Reserva del puesto:** Hasta **6 meses** (prorrogable hasta 18 meses en períodos de 3 meses).
-    - **Retribuciones**: Íntegras durante los 3 primeros meses.
-- **Incentivada:**
-    - Aplica a quienes están en "expectativa de destino" o "excedencia forzosa".
-    - Duración máxima: **5 años**.
-    - Retribuciones: Una mensualidad por año, hasta un máximo de **12**.
-    - Reingreso: Posible tras **2 años** si ambas partes acuerdan.
-
-### Excedencia forzosa
-
-- **Causas:**
-    - Suspensión firme del puesto por sanción sin vacantes disponibles al reingresar.
-    - Finalización de excedencia voluntaria sin vacantes disponibles.
-    - Expectativa de destino agotada sin causas imputables al funcionario.
-- **Derechos:**
-    - Retribuciones básicas.
-    - Cómputo del tiempo como servicio activo.
-    - Participación obligatoria en concursos convocados (de no hacerlo, pasa a excedencia voluntaria).
-
-### Expectativa de destino
-
-- Aplica cuando el puesto de trabajo es suprimido o no hay dotación presupuestaria.
-- **Derechos:**
-    - **Retribuciones básicas más el 50%** del complemento del puesto.
-- **Obligaciones:**
-    - Aceptar destinos, participar en concursos y cursos de formación.
-- Duración máxima: **1 año**.
-    - Superado este plazo, pasa a excedencia forzosa salvo causas no imputables al interesado.
-
-### Suspensión de funciones
-
-- **Suspensión provisional:**
-    - Medida cautelar durante un procedimiento judicial o disciplinario.
-    - Duración: **Máx. 6 meses** (salvo paralización del proceso judicial).
-    - Retribuciones básicas percibidas, salvo que la sentencia sea firme, debiendo devolverlas.
-- **Suspensión firme:**
-    - Excede los **6 meses** y conlleva la pérdida del puesto de trabajo.
-    - Privación del ejercicio de funciones y derechos inherentes.
-
-### Reingreso al servicio activo
-
-- Mediante convocatoria de concurso o libre designación.
-- También puede ser por adscripción provisional, de forma motivada.
-
-### Situaciones administrativas del personal laboral
-
-- Se aplican según normativa específica o convenios colectivos, pudiendo adoptar situaciones similares a las del personal funcionario de carrera.
+- **Excedencia forzosa** (arts. 160-161): se declara cuando, tras una **suspensión firme** con pérdida del puesto, no hay vacante al reingresar; cuando se agota la **expectativa de destino** por causa no imputable a la administración o se incumplen sus obligaciones; o cuando, finalizada una excedencia voluntaria sin reserva, no hay puesto disponible. Efectos: **retribuciones básicas** (y prestaciones familiares por hijo a cargo); el tiempo computa a efectos de **antigüedad y Seguridad Social**. Obligaciones: participar en los concursos de su localidad (si no, pasa a excedencia voluntaria por interés particular) y aceptar los destinos ofrecidos; no puede desempeñar puestos en el sector público.
+- **Expectativa de destino** (arts. 162-163): para el funcionario cuyo puesto se suprime por redistribución de efectivos o racionalización y no obtiene otro. Percibe las **retribuciones básicas, el complemento de carrera, el nivel competencial adquirido y el 50 % del componente de desempeño** del complemento del puesto. Está obligado a aceptar destinos en su localidad, concursar y asistir a cursos. Duración máxima de **1 año**; después pasa a excedencia forzosa, salvo que el exceso no le sea imputable.
+- **Suspensión de funciones** (arts. 164-165): priva del ejercicio de las funciones y de los derechos inherentes.
+    - **Provisional**: medida cautelar en procedimiento judicial o disciplinario; en el disciplinario no puede exceder de **6 meses** salvo paralización imputable al interesado. Se perciben las **retribuciones básicas**; si la suspensión se eleva a firme, hay que **devolver** lo percibido; si no llega a sanción, se restituye la diferencia con intereses y el tiempo computa como servicio activo.
+    - **Firme**: por sentencia o sanción disciplinaria firme; determina la **pérdida del puesto de trabajo cuando excede de 6 meses**. Durante su cumplimiento no se puede prestar servicio en ninguna administración.
+- **Reingreso al servicio activo** (art. 166): quien no tiene reserva de puesto reingresa participando en convocatorias de concurso o libre designación, o de forma motivada por **adscripción provisional** condicionada a las necesidades del servicio.
 
 ### Título X. Régimen disciplinario
 
-### Responsabilidad disciplinaria
+- **Responsabilidad disciplinaria** (art. 167): incurre en ella quien realiza una conducta tipificada como falta, quien **induce** directamente a otro a realizarla y quien **encubre** faltas consumadas muy graves o graves cuando derive daño grave para la administración o la ciudadanía. Si la sanción no puede cumplirse por la situación del sancionado, se hará efectiva cuando el cambio de situación lo permita, salvo prescripción.
+- **Principios de la potestad disciplinaria** (art. 168): legalidad y tipicidad; irretroactividad de las disposiciones sancionadoras no favorables (y retroactividad de las favorables); proporcionalidad; culpabilidad; presunción de inocencia; contradicción y audiencia. Si hay **indicios fundados de criminalidad**, se suspende la tramitación y se comunica al **Ministerio Fiscal**.
+- **Faltas** (arts. 169-172): se clasifican en muy graves, graves y leves.
+    - **Muy graves**: las previstas en la **normativa básica estatal** (TREBEP) y, además: uso excesivo o arbitrario de la autoridad; informes manifiestamente ilegales con perjuicio grave; consumo de alcohol o estupefacientes que ponga en peligro a otras personas; daños graves intencionados al patrimonio; intervenir con causa de abstención de forma decisiva para una resolución manifiestamente ilegal; realización reiterada o lucrativa de actividades personales o profesionales en la jornada; incumplir la normativa de prevención causando daños; y la **agresión grave**.
+    - **Graves**, entre otras: falta de obediencia debida; abuso de autoridad; grave desconsideración con empleados o ciudadanía; daños al patrimonio que no constituyan falta muy grave; falta injustificada de rendimiento; no guardar el debido sigilo; **incumplimiento injustificado de la jornada que acumule un mínimo de 10 horas al mes**; acciones para **evadir los sistemas de control horario**; simulación de enfermedad o accidente que comporte ausencia; grave perturbación del servicio; uso de permisos y licencias para fines distintos; denuncias falsas de mala fe.
+    - **Leves**: incumplimiento injustificado del horario que no sea falta grave; **falta injustificada de asistencia de 1 día**; incorrección con el público o el personal; descuido o negligencia en el ejercicio de las funciones.
+- **Sanciones** (arts. 173-174), según la gravedad:
 
-El personal empleado público es responsable disciplinariamente cuando:
+| Faltas | Sanciones | Prescripción de la falta | Prescripción de la sanción |
+| --- | --- | --- | --- |
+| Muy graves | Separación del servicio (o revocación del nombramiento del interino, con exclusión de bolsas); suspensión de funciones de **3 a 6 años**; traslado forzoso con cambio de localidad de **1 a 3 años**; demérito (pérdida de **2 grados** de carrera, exclusión de provisión y promoción o prohibición de jefaturas de **2 a 4 años**) | **3 años** | **3 años** |
+| Graves | Suspensión de **15 días a 3 años**; traslado forzoso con cambio de localidad hasta **1 año** o sin cambio de localidad; demérito (pérdida de **1 grado**, exclusión o prohibición de jefaturas hasta **2 años**) | **2 años** | **2 años** |
+| Leves | Suspensión de funciones de hasta **15 días**; apercibimiento | **6 meses** | **1 año** |
 
-- Realiza actos o conductas tipificadas como falta.
-- Induce a otro a realizar faltas.
-- Encubre faltas consumadas muy graves o graves que causen daño grave a la administración o la ciudadanía.
+- La prescripción de las faltas se cuenta desde su comisión (o el cese, si son continuadas) y la de las sanciones desde la **firmeza** de la resolución. Puede imponerse de forma complementaria la obligación de realizar **cursos de ética pública e igualdad**. Las sanciones se anotan en el Registro de Personal y se cancelan transcurridos periodos equivalentes a los de prescripción (la separación del servicio y el despido no son cancelables).
+- **Extinción de la responsabilidad** (art. 176): cumplimiento de la sanción, fallecimiento y prescripción de la falta o de la sanción.
+- **Procedimiento disciplinario** (arts. 177-180): las sanciones graves y muy graves exigen procedimiento con todas las garantías, que debe resolverse y notificarse en el plazo máximo de **1 año** (caducidad conforme a la Ley 39/2015). Puede abrirse un periodo de **información previa de duración máxima de 1 mes**. Las faltas **leves** se sancionan por un procedimiento **sumario y simplificado** con audiencia, que no puede exceder de **1 mes**. Rige la **separación entre la fase instructora y la sancionadora**, encomendadas a órganos distintos; el trámite de audiencia es de **10 a 15 días**.
+- **Órganos competentes** (art. 181): la **iniciación** corresponde a la **jefatura superior de personal** de la Presidencia, conselleria, organismo o consorcio. La **resolución**: al **Consell**, la separación del servicio; a la **dirección general competente en función pública**, el demérito; a la **Presidencia de la Generalitat o conselleria** correspondiente, las sanciones muy graves y graves; y a la **jefatura superior de personal**, las leves.
 
-Cuando el cumplimiento de la sanción no sea posible debido a una situación que lo impida, se hará efectiva cuando la situación cambie, salvo que haya prescrito.
+### Título XI. La representación, negociación colectiva y participación institucional
 
-### Principios de la potestad disciplinaria
+- **Juntas de personal** (arts. 183-185). En la Administración de la Generalitat se constituye:
+    - Una junta de personal en cada **centro de trabajo**, entendiendo por tal, a efectos electorales, la totalidad de unidades administrativas de **una misma provincia**.
+    - Una junta de personal **adicional para los servicios centrales**.
+    - Una junta en cada **organismo autónomo** con censo mínimo de **50 personas funcionarias**.
+    - Sus miembros disponen de un crédito máximo de **40 horas mensuales** retribuidas (renunciable y acumulable, aunque no a favor de personal en puestos de libre designación). Funciones: recibir información sobre política de personal y retribuciones, emitir informes sobre traslados de instalaciones y sistemas de organización, ser informadas de las **sanciones por faltas muy graves**, ser oídas sobre jornada, horario y vacaciones, y vigilar el cumplimiento de la normativa laboral, de igualdad y de prevención.
+- **Mesas de negociación** (art. 186):
+    - **Mesa General de Negociación de las Administraciones Públicas de la Comunitat Valenciana**: condiciones comunes a todas las administraciones valencianas (con las universidades y la Federación Valenciana de Municipios y Provincias).
+    - **Mesa General de Negociación I**: condiciones comunes al personal **funcionario, estatutario y laboral** de la Generalitat.
+    - **Mesa General de Negociación II**: condiciones comunes al personal **funcionario y estatutario** de la Generalitat. De ella dependen las **mesas sectoriales de Función Pública, Educación, Sanidad y Justicia**.
+    - **Mesa General de Negociación de Administración Local** y **Mesa General de Negociación de Universidades Públicas**, coordinadas por la Generalitat para las materias de regulación autonómica.
+    - Pueden constituirse además **mesas técnicas** dependientes de las anteriores.
+- **Pactos y acuerdos** (art. 188): son objeto de negociación, entre otras materias, la aplicación de los incrementos retributivos, las retribuciones complementarias, los criterios generales de acceso, carrera, provisión y clasificación de puestos, la evaluación del desempeño, los planes de igualdad, la formación, la acción social y los criterios generales de las ofertas de empleo público. Quedan **excluidas** de la obligatoriedad de negociación: las **potestades de organización** (salvo repercusión en condiciones de trabajo), los derechos de la ciudadanía y usuarios, las condiciones de trabajo del personal directivo público profesional, los poderes de dirección y control jerárquico y la regulación concreta de los sistemas y procedimientos de acceso y promoción.
+- **Solución extrajudicial de conflictos** (art. 189): la **Mesa General de Negociación I** actúa como instancia previa; si no hay solución, cabe **mediación** de mutuo acuerdo, cuyos acuerdos tienen la misma eficacia que los pactos y acuerdos.
+- **Participación institucional y diálogo social** (arts. 190-191): la participación en prevención de riesgos se articula en la **Comisión Paritaria de Seguridad y Salud en el Trabajo**. Como foros de diálogo social se crean la **Comisión de Diálogo Social del Sector Público Instrumental** y la **Comisión de Estudio y Debate para la Reversión de los Servicios Públicos Externalizados**.
 
-- **Legalidad y tipicidad:** Solo serán sancionables actos tipificados en la normativa aplicable.
-- **Irretroactividad:** No se aplicará una sanción retroactivamente salvo que sea favorable al interesado.
-- **Proporcionalidad:** Adecuación entre la infracción cometida y la sanción impuesta.
-- **Culpabilidad:** Solo se sancionan actos dolosos o culposos.
-- **Presunción de inocencia:** Nadie será sancionado sin pruebas suficientes.
-- **Contradicción y audiencia:** Derecho del interesado a ser escuchado y defenderse.
+## Decreto 3/2017, de selección, provisión de puestos de trabajo y movilidad
 
-Cuando existan indicios fundados de criminalidad, se suspenderá el procedimiento disciplinario y se remitirá al Ministerio Fiscal.
+El **Decreto 3/2017, de 13 de enero, del Consell**, aprueba el Reglamento de selección, provisión de puestos de trabajo y movilidad del personal de la función pública valenciana (**98 artículos en 6 títulos**). Desarrollaba la Ley 10/2010 (LOGFPV) y sigue vigente en lo que no se oponga a la Ley 4/2021; en caso de divergencia prevalece la ley (por ejemplo, la reserva de discapacidad del 7 % del decreto es hoy del **10 %**, y el nombramiento por exceso de tareas de 6 meses en 12 es hoy de **9 meses en 18**).
 
-### Clasificación de las faltas
-
-1. **Muy graves:**
-    - Las Tipificadas en el TREBEP.
-    - Perjuicio grave a la administración o ciudadanía.
-    - Daños graves intencionados al patrimonio.
-    - Realización reiterada de actividades profesionales incompatibles.
-    - Agresión grave.
-    - **Sanciones correspondientes:**
-        - Separación del servicio.
-        - Suspensión de funciones (3 a 6 años).
-        - Traslado forzoso con cambio de localidad (1 a 3 años).
-        - Demérito (pérdida de dos grados, exclusión de procedimientos 2-4 años, prohibición de ocupar puestos de jefatura durante 2-4 años).
-2. **Graves:**
-    - Falta de obediencia debida.
-    - Abuso de autoridad.
-    - Grave desconsideración con empleados públicos o ciudadanía.
-    - Daños al patrimonio de menor entidad.
-    - Rendimiento insuficiente sin justificación.
-    - Incumplimiento de deberes de confidencialidad.
-    - Incumplimiento de jornada superior a 10 horas al mes.
-    - Evasión del control horario.
-    - Simulación de enfermedad para obtener permisos.
-    - **Sanciones correspondientes:**
-        - Suspensión de funciones (15 días a 3 años).
-        - Traslado forzoso (con o sin cambio de localidad).
-        - Demérito (pérdida de un grado, exclusión de procedimientos 2 años, prohibición de ocupar puestos de jefatura 2 años).
-3. **Leves:**
-    - Incumplimiento ocasional de la jornada laboral.
-    - Falta injustificada de un día.
-    - Incorrección o descuido en el cumplimiento de las tareas.
-    - Negligencia leve.
-    - **Sanciones correspondientes:**
-        - Suspensión de funciones hasta **15 días**.
-        - Apercibimiento.
-
-### Prescripción de infracciones y sanciones
-
-- **Infracciones:\***
-    - **Muy graves**: 3 años.
-    - **Graves**: 2 años.
-    - **Leves**: 6 meses.
-
-*\*El plazo comienza desde la comisión del acto o su cese si es continuado.*
-
-- **Sanciones:\***
-    - **Muy graves**: 3 años.
-    - **Graves**: 2 años.
-    - **Leves**: 1 año.
-
-*\*El plazo comienza desde la firmeza de la sanción.*
-
-### Extinción de la responsabilidad disciplinaria
-
-- Cumplimiento de la sanción.
-- Fallecimiento del responsable.
-- Prescripción de la falta o sanción.
-
-### Procedimiento disciplinario
-
-- **Duración máxima:** 1 año para resolver y notificar.
-- **Fase de información previa:** Duración máxima de 1 mes para determinar si procede la incoación.
-- **Separación entre fase instructora y sancionadora.**
-- **Sanciones leves:** Procedimiento sumario y simplificado, duración máxima de 1 mes.
-
-### Órganos competentes
-
-- **Iniciación del procedimiento:**
-    - La jefatura superior de personal de la Generalitat, conselleria, organismo público o consorcio correspondiente.
-- **Resolución:**
-    - **Separación del servicio**: Consell.
-    - **Demérito**: Dirección General de Función Pública.
-    - **Sanciones graves y muy graves**: President de la Generalitat o conseller.
-    - **Sanciones leves:** Jefatura superior de personal correspondiente.
+- **Oferta de empleo público** (art. 4): la elabora la conselleria competente en función pública, la aprueba el **Consell** y se publica en el DOGV en el **primer trimestre** del año. Las convocatorias pueden incluir hasta un **10 % adicional** de vacantes. En la Administración de la Generalitat la oferta debe ejecutarse en el plazo **improrrogable de 2 años**. Se reserva a promoción interna un porcentaje **no inferior al 40 %** de las vacantes.
+- **Convocatorias y pruebas** (arts. 10-21): convoca el **conseller competente en materia de función pública**, con publicación en el DOGV; pueden ser **unitarias** (varios cuerpos con capacidades comunes) o específicas. Cabe la **conservación de la nota** de un ejercicio para la convocatoria inmediata siguiente si supera el **60 %** de la calificación máxima y no ha pasado más de **1 año**. El orden de actuación de aspirantes se fija por **sorteo público único anual**. Quien no comparece a una prueba decae en su derecho aunque la causa sea justificada, con excepciones tasadas (pruebas orales sucesivas, embarazo de riesgo o parto y víctimas de violencia de género, cuyas pruebas se aplazan). La relación de personas aprobadas se publica por orden de puntuación en el DOGV.
+- **Órganos técnicos de selección** (arts. 28-31): los nombra la persona titular de la **conselleria competente en función pública**; composición **impar, no inferior a 5 titulares** con suplentes, atendiendo a criterios de paridad; el nombramiento se publica en el DOGV con una antelación mínima de **1 mes** al inicio de las pruebas. No pueden formar parte el personal político, interino, laboral no fijo, eventual ni **directivo profesional**, ni quienes hayan preparado aspirantes en los **5 años** anteriores.
+- **Bolsas de empleo temporal** (arts. 34-37): vinculadas al desarrollo de las ofertas de empleo público. Pueden integrarlas quienes hayan **aprobado algún ejercicio** del proceso selectivo, el personal interino o en mejora de empleo cesado que participó en el proceso, y los funcionarios de carrera con algún ejercicio aprobado en un proceso de otro cuerpo. Se constituyen por cuerpos, escalas o agrupaciones (o agrupando varios afines) y caben **bolsas específicas** para personas con diversidad funcional intelectual y **bolsas extraordinarias** (por pruebas o baremación) en ausencia de las ordinarias. Los **llamamientos** siguen el orden de puntuación, con excepciones para proteger a víctimas de violencia de género o terrorismo y los cambios por salud. Una **comisión de seguimiento** con participación sindical supervisa su gestión.
+- **Concursos** (arts. 38-52): en los **concursos generales** se valoran la antigüedad y pertenencia al cuerpo, el grado de desarrollo profesional y el nivel competencial, la formación (titulaciones, cursos del **IVAP** o homologados, valenciano acreditado por la **Junta Qualificadora de Coneixements de Valencià** e idiomas comunitarios) y el desempeño de puestos de igual o superior nivel; ningún mérito puede superar el **35 %** de la puntuación total. En los **concursos específicos**, la segunda fase (méritos específicos, pruebas prácticas, memorias o entrevistas) no puede exceder el **45 %** del total. Las **comisiones de valoración** ejecutan el procedimiento y cabe una fase de **resultas**.
+- **Libre designación** (arts. 58-64): la convoca la **dirección general competente en función pública** (por iniciativa propia o a propuesta de la conselleria del puesto) en el DOGV; las solicitudes se presentan electrónicamente en el plazo de **10 días** con un historial profesional; **no se exige permanencia mínima** en el puesto anterior para participar. La dirección general emite **informe preceptivo y vinculante** sobre el cumplimiento de requisitos y resuelve la conselleria proponente de forma motivada. El **cese es discrecional** del titular de la conselleria; el cesado se adscribe a un puesto de nivel no inferior en más de **2 niveles** al reconocido y conserva 1 mes las retribuciones anteriores.
+- **Comisión de servicios** (art. 74): la resuelve la **dirección general de función pública** a petición de la conselleria de destino, con informe favorable de la de origen y conformidad de la persona interesada. Máximo de **2 años** en puestos de concurso y de **6 meses** en puestos de libre designación (cuya convocatoria debe pedirse simultáneamente). Se reserva el puesto de origen si se obtuvo por concurso y se perciben las retribuciones del puesto desempeñado.
+- **Mejora de empleo** (art. 77): exige pertenecer a un cuerpo distinto al del puesto, **formar parte de la bolsa de empleo temporal** correspondiente y reunir la titulación y requisitos del puesto; con carácter general se efectúa en puestos de la **categoría de entrada**. El tiempo trabajado se valora como experiencia profesional en los procesos de acceso.
+- **Nivel competencial** (arts. 90-92): se adquiere por el desempeño de puestos con el mismo componente competencial durante **2 años continuados o 3 con interrupción**; el reconocimiento es **de oficio**. Como nivel inicial se consolida el del puesto adjudicado tras el proceso selectivo. Quien obtiene un puesto superior en 2 o más niveles consolida **cada 2 años el superior en 2 niveles** al que poseía. El tiempo en comisión de servicios, adscripción provisional, servicios especiales, excedencia por cuidado de familiares, mejora de empleo (si el nivel es igual o superior), reasignación y expectativa de destino computa con reglas específicas.
+- **Planes de ordenación de personal** (arts. 93-94): contenido mínimo (objetivos, efectivos y puestos afectados, medidas) y tramitación con negociación sindical.
+- **Comisión de Estudio de la Diversidad Funcional** (arts. 95-98): órgano colegiado adscrito a la conselleria de función pública que asesora para hacer efectivo el acceso al empleo público de las personas con diversidad funcional. La integran una **presidencia** (funcionario con rango mínimo de jefatura de servicio), **6 vocales** (2 de función pública, 3 de los centros de evaluación de discapacidades y 1 del servicio de prevención) y una secretaría con voz y voto. Emite **dictamen preceptivo** sobre las dudas de compatibilidad funcional en procesos selectivos, de provisión y de bolsas, y en las medidas de movilidad forzosa temporal que afecten a personal con diversidad funcional.
 
 ## Decreto 42/2019, de condiciones de trabajo del personal funcionario
 
-### Jornada de trabajo
+El **Decreto 42/2019, de 22 de marzo, del Consell**, regula las condiciones de trabajo (jornada, horario, permisos, licencias y vacaciones) del personal funcionario de la Administración de la Generalitat.
 
-- **Duración**: Depende del **complemento de desempeño**:
-    - **Inferior a E038**: 35 horas semanales.
-    - **Igual o superior a E038**: 37 horas y 30 minutos semanales (**Especial dedicación**), sujeto a **incompatibilidades**.
-- **Compensación por exceso de horario (urgencias)**:
-    - Horas trabajadas en **días hábiles**: Se compensan a razón de **2 horas por cada hora trabajada**.
-    - Horas trabajadas en **días inhábiles**: Se compensan a razón de **2 horas y 30 minutos por cada hora trabajada**.
-    - **Plazo para disfrutar la compensación**: Dentro de los **3 meses siguientes**.
-
-### Horario laboral
-
-- **Descanso mínimo entre jornadas**: **12 horas**.
-- **Distribución del horario**:
-    - **Parte fija**: De 9:00 a 14:00 (de lunes a viernes).
-    - **Parte variable**: El resto del tiempo, distribuido entre:
-        - **Mañanas**: De 7:30 a 9:00.
-        - **Tardes**: De 14:00 a 19:00 (hasta las 16:00 los viernes).
-- **Compensación horaria**: Dentro del mes natural o, como máximo, en los **dos meses siguientes**.
-- **Descanso semanal**:
-    - Preferentemente **48 horas continuadas**.
-    - Si no es posible: mínimo de **36 horas continuadas**.
-
-### Pausa diaria
-
-- Duración: **30 minutos**, **computable como tiempo de trabajo efectivo**.
-- **Horario para el personal burocrático**: Entre las **10:00 y las 12:00**.
-
-### Justificación de ausencias
-
-- **Sin parte médico**: Notificación dentro de la **primera hora** al personal responsable.
-- **Con parte médico**: Presentación en un plazo máximo de **3 días desde su expedición**.
-- **Ausencias prolongadas o reiteradas**: Podrá exigirse parte médico aunque no excedan de **2 o 3 días**.
-
-### Permisos
-
-- **Generalidades**:
-    - No requieren autorización, excepto los permisos por asuntos propios, que **sí necesitan autorización expresa**.
-    - **Denegación de permisos**: Deberá estar **motivada**.
-- **Permisos específicos**:
-    - **Matrimonio**: **15 días**.
-    - **Conciliación de la vida personal, familiar y laboral**: **Tiempo indispensable**.
-    - **Fallecimiento, accidente o enfermedad grave**:
-        - **Familiar de primer grado**:
-            - **Misma localidad**: **3 días**.
-            - **Distinta localidad**: **5 días**.
-        - **Familiar de segundo grado**:
-            - **Misma localidad**: **2 días**.
-            - **Distinta localidad**: **4 días**.
-    - **Exámenes finales o pruebas definitivas de aptitud**: **Día del examen**.
-    - **Traslado de domicilio habitual**:
-        - **Misma localidad**: **1 día**.
-        - **Distinta localidad**: **2 días**.
-    - **Por deber inexcusable**: **Tiempo indispensable**.
-    - **Asuntos propios**: **6 días al año**, disfrutables hasta el **15 de febrero del año siguiente**.
-        - **Personal interino**: **1 día por cada 2 meses trabajados**.
-    - **Días compensatorios**:
-        - **24 y 31 de diciembre** si coinciden con festivo, sábado o día no laborable.
-        - **2 días adicionales** por festividad autonómica.
-
-### Licencias
-
-- **Generalidades**: Requieren **autorización expresa**. Las denegaciones deben estar **motivadas**.
-- **Licencias retribuidas**:
-    - **Cursos externos**: Hasta **40 horas al año**.
-    - **Estudios relacionados**: Hasta **12 meses**.
-    - **Programas de cooperación internacional**: Hasta **6 meses**.
-- **Licencias no retribuidas** (periodos continuados e ininterrumpidos):
-    - **Por interés particular**: Hasta **6 meses cada 3 años**.
-    - **Por enfermedad de familiares o guarda y custodia**: Hasta **1 año**.
-    - **Por perfeccionamiento profesional**: Hasta **3 meses cada año**.
-
-### Vacaciones
-
-- **Duración**:
-    - **22 días hábiles al año**.
-    - **Días adicionales por antigüedad**:
-        - **15, 20, 25 y 30 años de servicio** → **1 día adicional por cada tramo**, hasta un máximo de **25 días**.
-- **Disfrute**:
-    - **Plazo general**: Durante el **año natural** y hasta el **31 de enero del año siguiente**.
-    - **Condiciones**:
-        - La mitad de los días debe disfrutarse entre **junio y septiembre**, en periodos mínimos de **7 días**.
-        - Derecho **no condicionado al servicio**.
-        - Interrupción en caso de **hospitalización no voluntaria**.
-        - **No se sustituyen** por compensaciones económicas.
-    - **Solicitud de preferencia**: Antes del **1 de mayo**.
-- **Preferencias para disfrutar las vacaciones**:
-    - **Personas con hijos menores de 14 años**.
-    - **Personas con mayores de 65 años a su cargo**.
+- **Jornada de trabajo**: la jornada general es de **35 horas semanales**; la de los puestos de **especial dedicación**, de **37 horas y 30 minutos**. Son de especial dedicación los puestos con componente de desempeño igual o superior al fijado para cada grupo: **A1: E038**, A2: E023, B: E021, C1: E019, C2: E015 y APF: E013.
+- **Jornada especial por necesidades urgentes**: el exceso de horario se compensa a razón de **2 horas por cada hora** trabajada (o **2 horas y 30 minutos** si el requerimiento es en día inhábil), disfrutables dentro de los **3 meses** naturales siguientes (ampliables excepcionalmente otros 3).
+- **Descansos**: mínimo de **12 horas** entre jornadas; descanso semanal preferentemente de **48 horas continuadas** y nunca inferior a **36**. Los días **24 y 31 de diciembre** se está exento de asistencia al trabajo.
+- **Horario**: parte fija de permanencia obligatoria de **9:00 a 14:00, de lunes a viernes**; parte flexible de **7:30 a 9:00 y de 14:00 a 19:00** de lunes a jueves (los viernes hasta las **16:00**). La diferencia de horario se recupera dentro del **mes natural** o, como máximo, en los **2 meses siguientes**.
+- **Pausa diaria**: **30 minutos**, computable como **tiempo de trabajo efectivo**; el personal burocrático la disfruta preferentemente entre las **10:00 y las 12:00**.
+- **Justificación de ausencias**: la ausencia por enfermedad sin parte de baja se comunica preferentemente durante la **hora siguiente al inicio de la jornada**, y al reincorporarse se presenta justificante médico si la ausencia dura **2 o 3 días** o, siendo menor, si hay reiteración. En incapacidad temporal, el parte de baja se presenta en el plazo de **3 días** desde su expedición y los de confirmación como máximo el **tercer día hábil** siguiente al suyo.
+- **Permisos** (los del TREBEP y la Ley 4/2021, con estas concreciones):
+    - **Matrimonio o unión de hecho**: **15 días naturales** y consecutivos.
+    - **Fallecimiento** y **accidente o enfermedad grave** del cónyuge, pareja o familiar de **primer grado**: **3 días hábiles** en la misma localidad y **5** en distinta localidad; de **segundo grado**: **2 y 4 días hábiles**.
+    - **Exámenes finales y pruebas definitivas de aptitud**: el día de su celebración.
+    - **Traslado de domicilio habitual**: **1 día** en la misma localidad y **2** en distinta.
+    - **Deber inexcusable**: el tiempo indispensable.
+    - **Asuntos propios**: hasta **6 días** por año natural, disfrutables hasta el **15 de febrero** del año siguiente, más los días adicionales por trienios; su denegación debe motivarse. El personal **interino** disfruta **1 día por cada 2 meses completos** trabajados (acumulables y abonables si el servicio impide disfrutarlos). Tienen preferencia de elección quienes tengan hijos menores de **14 años** (en periodos escolares no lectivos) o personas mayores de **65 años** o con diversidad funcional dependientes a su cargo.
+    - **Días compensatorios**: cuando el 24 y el 31 de diciembre coinciden en festivo, sábado o día no laborable se conceden **2 días** de permiso; además, hasta **2 días** al año cuando festividades de ámbito autonómico o nacional coincidan en sábado.
+- **Licencias**:
+    - **Retribuidas**: por **cursos externos** (hasta **40 horas al año**), por **estudios** relacionados con el puesto o la carrera (hasta **12 meses**, concedida por la dirección general de función pública) y por **participación en programas acreditados de cooperación internacional** (hasta **6 meses**).
+    - **Sin retribución** (en periodos continuados e ininterrumpidos): por **interés particular** (hasta **6 meses cada 3 años**), por **enfermedad grave de familiares** o persona bajo guarda que conviva con el solicitante (hasta **1 año** por sujeto causante) y para **perfeccionamiento profesional** (hasta **3 meses al año**).
+- **Vacaciones**: **22 días hábiles** al año (o la parte proporcional), más los días adicionales por antigüedad (**23/24/25/26** días a los 15/20/25/30 años de servicio). Se disfrutan a lo largo del año natural y hasta el **31 de enero** siguiente; al menos la mitad, preferentemente, entre **junio y septiembre**, en periodos mínimos de **7 días naturales** consecutivos (aunque 7 días pueden tomarse de forma independiente). El disfrute dentro del año no puede condicionarse a las necesidades del servicio ni sustituirse por compensación económica; la **hospitalización no voluntaria** lo interrumpe. Quien desee vacaciones en verano lo solicita antes del **1 de mayo**; el resto, con 1 mes de antelación.
 
 ## Decreto 49/2021, de regulación del teletrabajo
 
-### Puestos de trabajo susceptibles de ser desempeñados mediante teletrabajo
+El **Decreto 49/2021, de 1 de abril, del Consell**, regula el teletrabajo como modalidad de prestación de servicios del personal empleado público de la Administración de la Generalitat, en desarrollo del art. 76.2 de la Ley 4/2021. Deroga el Decreto 82/2016.
 
-Son aquellos puestos que **puedan ser ejercidos de forma autónoma y a distancia**, siempre que se consideren las características específicas del puesto y los medios requeridos para su desarrollo. Algunos ejemplos destacados incluyen:
+- **Puestos susceptibles**: los que puedan ejercerse de forma **autónoma y a distancia**. Con carácter orientativo: estudio y análisis de proyectos; elaboración de informes y asesoramiento técnico; redacción, corrección y tratamiento de documentos; **gestión y análisis, diseño y programación de sistemas de información y comunicaciones**; traducción; y tramitación de expedientes mediante aplicaciones informáticas o redes corporativas.
+- **Puestos excluidos**: los que conllevan necesariamente **servicios presenciales** (oficinas de registro con atención presencial, personal no docente de centros docentes, personal de emergencias y de residencias y centros de atención a personas). Los puestos de estructura del **nivel 30** solo teletrabajan si el programa lo justifica expresamente.
+- **Requisitos de las personas solicitantes**: estar en **servicio activo** (o en situación con reserva de puesto, reingresando si se le autoriza); haber desempeñado el puesto durante periodos que sumen al menos **3 meses dentro de los últimos 2 años**; que el puesto sea de la tipología incluida en el programa de teletrabajo; y que el lugar de teletrabajo cumpla la normativa de **seguridad y salud** en el trabajo. Los requisitos deben mantenerse durante toda la prestación.
+- **Duración**: la fija cada **programa de teletrabajo**, con una duración máxima de **1 año prorrogable por periodos iguales** (prórroga tácita si el órgano proponente no manifiesta lo contrario).
+- **Jornada**: como máximo **3 días a la semana** en teletrabajo y el resto presencial. Los puestos de estructura provistos por **libre designación** (y los del nivel 30 autorizados) solo pueden teletrabajar **2 días a la semana**. La jornada diaria **no puede fraccionarse** entre ambas modalidades. Se fijan **periodos mínimos de interconexión** (tiempo de trabajo efectivo de disponibilidad para la administración, la ciudadanía y el resto del personal), que comprenden la parte no flexible del horario.
+- **Medios y formación**: la Administración proporciona y mantiene los **medios tecnológicos** necesarios; antes de iniciar la modalidad hay que superar un **curso de formación específico**. El servicio de prevención de riesgos laborales verifica las condiciones de seguridad y salud.
+- **Control y seguimiento**: la **Comisión de Control y Seguimiento del Teletrabajo** supervisa y evalúa la implantación de esta modalidad, y la **Inspección General de Servicios** evalúa su repercusión en la prestación de los servicios públicos.
 
-- **Estudio y análisis de proyectos**
-- **Elaboración de informes y asesoramiento técnico**
-- **Redacción, corrección y tratamiento de documentos**
-- **Gestión de sistemas de información y comunicaciones**
-- **Análisis, diseño y programación de sistemas de información y comunicaciones**
-- **Traducción**
-- **Tramitación de expedientes** mediante aplicaciones informáticas, ofimáticas o redes corporativas
+## Fuentes {.unnumbered .unlisted}
 
-### Requisitos para acceder al teletrabajo
-
-Para optar al teletrabajo, el empleado público deberá cumplir los siguientes requisitos:
-
-- Estar en situación de **servicio activo**
-- Haber desempeñado el puesto de trabajo durante un **mínimo de 3 meses**
-- Que el puesto de trabajo sea de **tipología aceptada** como susceptible de teletrabajo
-- Que el lugar donde se realice el teletrabajo cumpla con la **normativa establecida** en materia de seguridad, salud y ergonomía
-
-### Duración máxima del teletrabajo
-
-El teletrabajo se autoriza por una duración máxima de **1 año**, aunque podrá ser prorrogado por **periodos sucesivos de igual duración** previa evaluación de su desempeño.
-
-### Jornada y organización del teletrabajo
-
-- El teletrabajo estará limitado a un máximo de **3 días a la semana**, siendo el resto de los días de carácter **presencial**.
-- Durante los días de teletrabajo, se establecen **periodos mínimos de interconexión** para garantizar el control y seguimiento de la actividad laboral.
-
-### Medios tecnológicos para el teletrabajo
-
-La Administración de la Generalitat será responsable de proporcionar y mantener los **medios tecnológicos necesarios** para que el personal empleado público pueda desarrollar su actividad de manera eficiente y segura.
-
-### Formación obligatoria
-
-Es imprescindible que el personal que desee acceder al teletrabajo realice un **curso de formación específico**, diseñado para garantizar el conocimiento adecuado de las herramientas y protocolos asociados a esta modalidad de prestación de servicios.
-
-### Comisión de Control y Seguimiento del Teletrabajo de la Administración de la Generalitat
-
-Se crea esta comisión como órgano encargado de la **supervisión, seguimiento y evaluación** del teletrabajo. Este organismo velará por el cumplimiento de los objetivos y la correcta implementación de la modalidad de teletrabajo en los distintos servicios.
-
-### Inspección General de Servicios
-
-Este organismo será el encargado de **evaluar la repercusión** que tiene el teletrabajo en la prestación de los servicios públicos, asegurando que la calidad y eficiencia no se vean afectadas por esta modalidad.
+- Ley 4/2021, de 16 de abril, de la Función Pública Valenciana (BOE-A-2021-8880, texto consolidado, última modificación 6 de mayo de 2026).
+- Decreto 3/2017, de 13 de enero, del Consell, por el que se aprueba el Reglamento de selección, provisión de puestos de trabajo y movilidad del personal de la función pública valenciana (DOGV núm. 7964, de 24 de enero de 2017, sin modificaciones posteriores).
+- Decreto 42/2019, de 22 de marzo, del Consell, de regulación de las condiciones de trabajo del personal funcionario de la Administración de la Generalitat (DOGV, texto consolidado, versión vigente desde el 6 de julio de 2023).
+- Decreto 49/2021, de 1 de abril, del Consell, de regulación del teletrabajo (DOGV, texto consolidado, versión vigente desde el 28 de abril de 2021).

@@ -78,34 +78,33 @@ Recordatorio de mayorías: **simple** (más votos a favor que en contra entre lo
 ## Título preliminar
 
 - **Art. 1: Valores / Soberanía / Forma política**:
-    - España es un **Estado social y democrático de Derecho** que tiene como valores superiores: **libertad, justicia, igualdad y pluralismo político**.
-    - La **soberanía nacional reside en el pueblo español**, de quien emanan los poderes del Estado.
-    - Su forma política es la **Monarquía parlamentaria**.
+    - «España se constituye en un **Estado social y democrático de Derecho**, que propugna como valores superiores de su ordenamiento jurídico la **libertad, la justicia, la igualdad y el pluralismo político**».
+    - «La **soberanía nacional** reside en el **pueblo español**, del que emanan los poderes del Estado».
+    - «La forma política del Estado español es la **Monarquía parlamentaria**».
 - **Art. 2: Unidad / Autonomía / Solidaridad**:
-    - La Constitución se basa en la **indisoluble unidad de la Nación española**.
-    - Reconoce el derecho a la **autonomía de nacionalidades y regiones** y garantiza la **solidaridad entre todas ellas**.
+    - «La Constitución se fundamenta en la **indisoluble unidad de la Nación española**, patria común e indivisible de todos los españoles, y reconoce y garantiza el derecho a la **autonomía** de las **nacionalidades y regiones** que la integran y la **solidaridad** entre todas ellas».
 - **Art. 3: Lenguas**:
-    - El **castellano** es la lengua española **oficial del Estado**: todos los españoles tienen el **deber de conocerla** y el **derecho a usarla**.
-    - Las demás lenguas españolas serán también oficiales en sus respectivas comunidades autónomas según los estatutos.
-    - Se protege la **riqueza lingüística** como patrimonio cultural.
+    - «El **castellano** es la lengua española **oficial del Estado**. Todos los españoles tienen el **deber de conocerla** y el **derecho a usarla**».
+    - «Las demás lenguas españolas serán también oficiales en las respectivas Comunidades Autónomas **de acuerdo con sus Estatutos**».
+    - «La riqueza de las distintas modalidades lingüísticas de España es un **patrimonio cultural** que será objeto de especial respeto y protección».
 - **Art. 4: Bandera de España**:
-    - Formada por **tres franjas horizontales**: roja, amarilla (doble de ancha) y roja.
-    - Las banderas autonómicas podrán utilizarse junto a la bandera nacional.
+    - «La bandera de España está formada por **tres franjas horizontales, roja, amarilla y roja**, siendo la amarilla de **doble anchura** que cada una de las rojas».
+    - Los Estatutos podrán reconocer banderas y enseñas propias, que «se utilizarán **junto a la bandera de España** en sus edificios públicos y en sus actos oficiales».
 - **Art. 5: Capital del Estado**:
-    - La capital de España es la **villa de Madrid**.
+    - «La capital del Estado es la **villa de Madrid**».
 - **Art. 6: Partidos políticos**:
-    - Representan el **pluralismo político** y son instrumentos fundamentales para la **participación política**.
-    - Su estructura interna y funcionamiento deben ser **democráticos**.
+    - «Los partidos políticos expresan el **pluralismo político**, concurren a la formación y manifestación de la **voluntad popular** y son **instrumento fundamental para la participación política**».
+    - Su creación y el ejercicio de su actividad son **libres**; «su estructura interna y funcionamiento deberán ser **democráticos**».
 - **Art. 7: Sindicatos y asociaciones empresariales**:
-    - Contribuyen a la **defensa de intereses económicos y sociales**.
-    - Estructura interna y funcionamiento democráticos.
+    - «Los sindicatos de trabajadores y las asociaciones empresariales contribuyen a la **defensa y promoción de los intereses económicos y sociales** que les son propios».
+    - Creación y ejercicio libres; estructura interna y funcionamiento **democráticos**.
 - **Art. 8: Fuerzas Armadas**:
-    - Compuestas por **Ejército de Tierra, Armada y Ejército del Aire**.
-    - Su misión es garantizar la **soberanía e independencia** de España, defender su **integridad territorial** y el **ordenamiento constitucional**.
+    - «Las Fuerzas Armadas, constituidas por el **Ejército de Tierra, la Armada y el Ejército del Aire**, tienen como misión **garantizar la soberanía e independencia de España, defender su integridad territorial y el ordenamiento constitucional**».
+    - Una **ley orgánica** regulará las bases de la organización militar.
 - **Art. 9: Sujeción a la ley / Garantías jurídicas**:
-    - Los ciudadanos y los poderes públicos están **sujetos a la Constitución y al resto del ordenamiento jurídico**.
-    - Los poderes públicos deben promover que la libertad y la igualdad sean **reales y efectivas** y facilitar la participación de todos.
-    - Garantías (art. 9.3): **principio de legalidad, jerarquía normativa, publicidad de las normas, irretroactividad de las disposiciones sancionadoras no favorables o restrictivas de derechos individuales, seguridad jurídica, responsabilidad e interdicción de la arbitrariedad de los poderes públicos**.
+    - «**Los ciudadanos y los poderes públicos** están sujetos a la **Constitución y al resto del ordenamiento jurídico**».
+    - Corresponde a los poderes públicos promover las condiciones para que la libertad y la igualdad del individuo y de sus grupos «sean **reales y efectivas**», **remover los obstáculos** que impidan su plenitud y **facilitar la participación** de todos en la vida política, económica, cultural y social.
+    - Garantías (art. 9.3): «la Constitución garantiza el **principio de legalidad**, la **jerarquía normativa**, la **publicidad de las normas**, la **irretroactividad** de las disposiciones sancionadoras no favorables o restrictivas de derechos individuales, la **seguridad jurídica**, la **responsabilidad** y la **interdicción de la arbitrariedad** de los poderes públicos».
 
 ## Título I. De los derechos y deberes fundamentales
 
@@ -443,7 +442,7 @@ Recordatorio de mayorías: **simple** (más votos a favor que en contra entre lo
 
 - **Art. 117: Principios del Poder Judicial**:
     - La justicia **emana del pueblo** y se administra **en nombre del Rey** por Jueces y Magistrados **independientes, inamovibles, responsables y sometidos únicamente al imperio de la ley**.
-    - La potestad jurisdiccional —**juzgar y hacer ejecutar lo juzgado**— corresponde **exclusivamente** a los Juzgados y Tribunales determinados por las leyes.
+    - La potestad jurisdiccional, **juzgar y hacer ejecutar lo juzgado**, corresponde **exclusivamente** a los Juzgados y Tribunales determinados por las leyes.
     - El principio de **unidad jurisdiccional** es la base de la organización y funcionamiento de los Tribunales; la jurisdicción militar queda limitada al **ámbito estrictamente castrense** y a los supuestos de estado de sitio.
     - **Se prohíben los Tribunales de excepción**.
 - **Art. 118: Cumplimiento de las resoluciones**:
