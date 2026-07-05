@@ -2,11 +2,12 @@
 
 [![Deploy](https://github.com/salvacarrion/temario-oposiciones-tic/actions/workflows/deploy.yml/badge.svg)](https://github.com/salvacarrion/temario-oposiciones-tic/actions/workflows/deploy.yml)
 [![Licencia: CC BY-NC 4.0](https://img.shields.io/badge/licencia-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.es)
-[![Hecho con Quarto](https://img.shields.io/badge/hecho%20con-Quarto-75AADB.svg)](https://quarto.org)
+[![Web: MkDocs Material](https://img.shields.io/badge/web-MkDocs%20Material-526CFE.svg)](https://squidfunk.github.io/mkdocs-material/)
+[![PDF: Quarto](https://img.shields.io/badge/PDF-Quarto-75AADB.svg)](https://quarto.org)
 
-Temario **libre y gratuito**, de elaboración propia, para oposiciones de informática (cuerpos TIC, grupos A1/A2) de las administraciones públicas españolas. Formato libro, con versión web y PDF.
+Temario **libre y gratuito**, de elaboración propia, para oposiciones de informática (cuerpos TIC, grupos A1/A2) de las administraciones públicas españolas. Un solo contenido, dos formatos: libro web y PDF.
 
-📖 **Leer el libro**: <https://salvacarrion.github.io/temario-oposiciones-tic/> (el PDF completo se puede descargar desde la barra lateral del libro).
+📖 **[Leer el libro](https://salvacarrion.github.io/temario-oposiciones-tic/)** · ⬇️ **[Descargar el PDF](https://salvacarrion.github.io/temario-oposiciones-tic/temario-oposiciones-tic.pdf)**
 
 ## Origen
 
@@ -16,7 +17,21 @@ Lo he ampliado con temas de otros procesos selectivos (sanidad, universidad…) 
 
 ## ¿Qué oposiciones cubre?
 
-El grueso del temario (tecnología, seguridad, datos, administración electrónica, marco jurídico estatal, unión europea, etc) es común a la mayoría de cuerpos TIC de nivel A1/A2: Administración de la Generalitat Valenciana (su origen, con cobertura completa), sanidad, universidades, administración local y otras administraciones públicas. Solo los temas específicos valencianos habría que sustituirlos por los del ámbito correspondiente.
+El grueso del temario es común a la mayoría de cuerpos TIC de nivel A1/A2: Administración de la Generalitat Valenciana (su origen, con cobertura completa), sanidad, universidades, administración local y otras administraciones públicas. Solo los temas específicos valencianos habría que sustituirlos por los del ámbito correspondiente.
+
+Los **11 bloques** actuales:
+
+1. Marco jurídico y administrativo
+2. Sociedad digital y gestión TIC
+3. Ingeniería del software
+4. Seguridad de la información
+5. Datos, IA y tecnologías emergentes
+6. Sistemas e infraestructuras
+7. Protección de datos y administración electrónica
+8. Desarrollo web y de aplicaciones
+9. Interoperabilidad y confianza digital
+10. Redes y comunicaciones
+11. Administración de la Generalitat
 
 ## Contribuir
 
@@ -24,12 +39,30 @@ El grueso del temario (tecnología, seguridad, datos, administración electróni
 
 Si el material te ha resultado útil y quieres apoyarlo, puedes invitarme a un café en [ko-fi.com/salvacarrion](https://ko-fi.com/salvacarrion). ☕
 
-## Detalles técnicos
+## Cómo se construye
 
-El temario está escrito en markdown (un fichero por tema, en [`src/`](src/)) y se compila con [Quarto](https://quarto.org) a libro web y PDF, lo que facilita mantenerlo y aceptar contribuciones. La publicación en GitHub Pages es automática con cada push a `main` mediante GitHub Actions.
+El contenido está escrito en markdown, un fichero por tema en [`src/`](src/). A partir de esa única fuente se generan las dos versiones del libro:
+
+| Formato | Herramienta | Configuración |
+| --- | --- | --- |
+| Web | [MkDocs](https://www.mkdocs.org) + tema [Material](https://squidfunk.github.io/mkdocs-material/) | [`mkdocs.yml`](mkdocs.yml) |
+| PDF | [Quarto](https://quarto.org) | [`_quarto.yml`](_quarto.yml) |
+
+Cada push a `main` regenera el PDF, construye la web y publica ambos en GitHub Pages mediante [GitHub Actions](.github/workflows/deploy.yml).
+
+### Desarrollo local
+
+```bash
+# Web: vista previa con recarga automática en http://127.0.0.1:8000
+pip install mkdocs-material
+mkdocs serve
+
+# PDF (requiere Quarto con TinyTeX)
+quarto render --to pdf
+```
 
 ## Licencia
 
-[**CC BY-NC 4.0**](LICENSE.md) — puedes compartir y adaptar el material dando crédito al autor y **sin fines comerciales**.
+[**CC BY-NC 4.0**](LICENSE.md): puedes compartir y adaptar el material dando crédito al autor y **sin fines comerciales**.
 
 **Aviso**: este es un temario personal, no un material oficial. Aunque he procurado la máxima precisión, no puedo garantizar la ausencia de errores ni que la normativa citada siga vigente; contrasta siempre con las fuentes oficiales (BOE/DOGV) antes del examen.

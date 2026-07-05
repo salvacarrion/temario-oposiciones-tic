@@ -1,14 +1,20 @@
-Este documento recoge el temario que utilicé para aprobar las oposiciones al **Cuerpo Superior Técnico de Ingeniería en Informática de la Administración de la Generalitat (A1-06)**. El contenido ha sido elaborado íntegramente por mí, basándome en fuentes públicas disponibles en internet, como documentos, wikis y otros recursos de acceso libre.
+Este temario es el que elaboré y utilicé para aprobar las pruebas selectivas de acceso al **Cuerpo Superior Técnico de Ingeniería en Informática de la Administración de la Generalitat Valenciana (A1-06)**, convocatoria 5/22. Después lo amplié con temas de otros procesos selectivos (sanidad, universidades, administración local) a los que también me presenté, de modo que no es el temario cerrado de un único cuerpo, sino una base común para preparar oposiciones TIC de las administraciones públicas.
 
-El objetivo de este material es proporcionar una **referencia, clara, estructurada y gratuita**, para quienes estén preparándose oposiciones de informática o similares.
+Todo el contenido es de elaboración propia, a partir de fuentes públicas: normativa consolidada (BOE/DOGV), guías y estándares oficiales, y otros recursos de acceso libre. El objetivo es ofrecer una referencia **clara, estructurada y gratuita** a quien esté preparando oposiciones de informática o similares.
+
+En **julio de 2026** decidí publicarlo, revisarlo y actualizarlo para que otras personas puedan aprovecharlo. Al publicarse como proyecto **open source**, la idea es que pueda corregirse, mejorarse y mantenerse entre todos.
 
 ______________________________________________________________________
 
-### Aviso Legal
+### Cómo contribuir
 
-Estos temas reflejan mi criterio personal en cuanto a la estructuración y el formato del contenido. Aunque he procurado la máxima precisión, no puedo garantizar la exactitud, exhaustividad o ausencia de errores en la información presentada\*\*. Por lo tanto, el uso de este material queda bajo tu propia responsabilidad.\*\*
+Este material lo mantengo en mi tiempo libre y seguro que contiene erratas o normativa que ha cambiado. Si detectas errores o tienes sugerencias, abre una [*issue*](https://github.com/salvacarrion/temario-oposiciones-tic/issues) o envía directamente un *pull request*: cada página del libro tiene enlaces de edición y de reporte de errores. En temas legales, cita la fuente (BOE/DOGV consolidado) para que la corrección sea verificable. ¡Toda ayuda es bienvenida!
 
-Si detectas errores, tienes sugerencias o deseas contribuir a mejorar este temario, estaré encantado de recibir tu colaboración. ¡Toda ayuda es bienvenida!
+______________________________________________________________________
+
+### Aviso legal
+
+Este es un temario personal, no un material oficial. Estos temas reflejan mi criterio personal en cuanto a la estructuración y el formato del contenido. Aunque he procurado la máxima precisión, no puedo garantizar la exactitud, exhaustividad o ausencia de errores en la información presentada, ni que la normativa citada siga vigente. **El uso de este material queda bajo tu propia responsabilidad**: contrasta siempre con las fuentes oficiales (BOE/DOGV) y con las bases de tu convocatoria antes del examen.
 
 ______________________________________________________________________
 
