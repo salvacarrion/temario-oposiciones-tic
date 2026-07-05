@@ -27,11 +27,10 @@ theme:
       name: Switch to light mode
   features:
   - navigation.instant
-  - navigation.sections
-  - navigation.expand
   - navigation.top
   - navigation.tracking
   - navigation.indexes
+  - navigation.expand
   - toc.integrate
   - content.code.copy
   - search.suggest
@@ -42,6 +41,8 @@ markdown_extensions:
 - pymdownx.superfences
 - pymdownx.arithmatex
 - attr_list
+- toc:
+    toc_depth: 2
 extra_javascript:
 - javascripts/mathjax.js
 - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

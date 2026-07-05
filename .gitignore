@@ -9,6 +9,8 @@ src/temario-oposiciones-tic.pdf
 # Documentos de referencia pesados (leyes/guías); ver references/README.md.
 # Los .md con enlaces sí se versionan.
 references/**/*.pdf
+# Caché de texto (pdftotext -layout) para grep; se regenera desde el PDF.
+references/**/*.pdf.txt
 
 # Sistema
 .DS_Store
