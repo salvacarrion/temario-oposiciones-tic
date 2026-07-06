@@ -12,10 +12,10 @@ La seguridad de la información en la Administración de la Generalitat se rige 
 - **Derogaciones**: deroga expresamente el **Decreto 66/2012** (política de seguridad de la información) y el **Decreto 130/2012** (organización de la seguridad de la información).
 - **Estructura**: **15 artículos** en **3 capítulos** (disposiciones generales; política de seguridad de la información; organización de la seguridad), **3 disposiciones adicionales**, una disposición derogatoria y **6 disposiciones finales**.
 - **Novedades organizativas** frente al modelo de 2012:
-  - Suprime el Comité de Seguridad de la Información (CSI); sus funciones las asume la **CITSA**.
-  - Elimina los roles ligados a los ficheros de datos personales de la antigua LOPD.
-  - Descentraliza las responsabilidades de seguridad en las consellerias y, en su caso, en las entidades del sector público instrumental.
-  - Estructura la organización en **tres niveles**: gobierno, supervisión y operativo.
+    - Suprime el Comité de Seguridad de la Información (CSI); sus funciones las asume la **CITSA**.
+    - Elimina los roles ligados a los ficheros de datos personales de la antigua LOPD.
+    - Descentraliza las responsabilidades de seguridad en las consellerias y, en su caso, en las entidades del sector público instrumental.
+    - Estructura la organización en **tres niveles**: gobierno, supervisión y operativo.
 
 ### Capítulo I. Disposiciones generales
 
@@ -29,10 +29,10 @@ La seguridad de la información en la Administración de la Generalitat se rige 
 - **Art. 5. Misión**: la que corresponde a la Administración de la Generalitat en el ejercicio de las competencias atribuidas por el **Estatuto de Autonomía** (LO 5/1982), de acuerdo con la **Ley 5/1983**, del Consell.
 - **Art. 6. Marco regulatorio**: el **RGPD**; la **LO 3/2018** (protección de datos); las **Leyes 39/2015 y 40/2015**; el **RD 203/2021** (funcionamiento del sector público por medios electrónicos); el **RD 311/2022** (ENS); el **Decreto 53/2024** (creación de la CITSA); el **Decreto 10/2024** (atribuciones del delegado de protección de datos); y las normas que las complementen, desarrollen o sustituyan.
 - **Art. 7. Desarrollo y estructuración de la documentación de seguridad**: el cuerpo normativo es de obligado cumplimiento y se estructura en **tres niveles de desarrollo**, de forma que cada norma se fundamenta en las de nivel superior:
-  - **Primer nivel**: la propia política de seguridad de la información (este decreto).
-  - **Segundo nivel**: directrices de seguridad generales, que determinan qué se puede hacer y qué no, sin considerar aspectos de implementación ni tecnológicos. Las aprueba la **CITSA**.
-  - **Tercer nivel**: políticas específicas de ámbitos o sistemas particulares, junto con procedimientos, guías e instrucciones técnicas. Las aprueba el **responsable del sistema**, que además mantiene la documentación actualizada y gestiona su acceso.
-  - Todo el personal está obligado a conocer y cumplir la política y las normas y procedimientos que afecten a sus funciones.
+    - **Primer nivel**: la propia política de seguridad de la información (este decreto).
+    - **Segundo nivel**: directrices de seguridad generales, que determinan qué se puede hacer y qué no, sin considerar aspectos de implementación ni tecnológicos. Las aprueba la **CITSA**.
+    - **Tercer nivel**: políticas específicas de ámbitos o sistemas particulares, junto con procedimientos, guías e instrucciones técnicas. Las aprueba el **responsable del sistema**, que además mantiene la documentación actualizada y gestiona su acceso.
+    - Todo el personal está obligado a conocer y cumplir la política y las normas y procedimientos que afecten a sus funciones.
 - **Art. 8. Riesgos derivados del tratamiento de datos personales**: para cada sistema que trate datos personales, el responsable o encargado del tratamiento realizará un análisis de riesgos conforme al **art. 24 del RGPD**; en los supuestos del **art. 35 del RGPD** (art. 28 de la LO 3/2018), una evaluación de impacto asesorada por el delegado de protección de datos. Si las medidas resultantes son más exigentes que las del ENS, prevalecen; el responsable de seguridad las integra en un **único plan de seguridad** por sistema de información.
 
 ### Capítulo III. Organización de la seguridad
