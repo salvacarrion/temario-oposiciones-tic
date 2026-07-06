@@ -17,7 +17,7 @@ lang: es
 
 book:
   title: "Temario de Oposiciones TIC"
-  subtitle: "Cuerpos de informática de las administraciones públicas"
+  subtitle: "Cuerpo Superior Técnico de Ingeniería Informática"
   author: "Salvador Carrión Ponz"
   output-file: temario-oposiciones-tic
   site-url: https://salvacarrion.github.io/temario-oposiciones-tic/
