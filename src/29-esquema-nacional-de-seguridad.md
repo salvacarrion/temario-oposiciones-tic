@@ -1,515 +1,288 @@
 # El Esquema Nacional de Seguridad (Real Decreto 311/2022)
 
+El **Real Decreto 311/2022, de 3 de mayo**, regula el **Esquema Nacional de Seguridad (ENS)**, establecido en el **artículo 156.2 de la Ley 40/2015**, de Régimen Jurídico del Sector Público. Deroga el **Real Decreto 3/2010, de 8 de enero**, para adaptar el esquema a la evolución de las ciberamenazas, al marco europeo de ciberseguridad y a la creciente dependencia tecnológica del sector público.
+
+## Características y estructura
+
+- **Objeto (art. 1)**: el ENS «está constituido por los principios básicos y requisitos mínimos necesarios para una protección adecuada de la información tratada y los servicios prestados», con objeto de asegurar «el acceso, la confidencialidad, la integridad, la trazabilidad, la autenticidad, la disponibilidad y la conservación de los datos, la información y los servicios utilizados por medios electrónicos».
+- **Publicación y entrada en vigor**: publicado en el BOE el **4 de mayo de 2022**; en vigor desde el **5 de mayo de 2022** (día siguiente al de su publicación).
+- **Estructura**: **41 artículos** en **7 capítulos** (disposiciones generales; principios básicos; política de seguridad y requisitos mínimos; auditoría, informe e incidentes de seguridad; normas de conformidad; actualización; categorización), 3 disposiciones adicionales, 1 transitoria, 1 derogatoria, 3 finales y **4 anexos**:
+    - **Anexo I**: categorías de seguridad de los sistemas de información.
+    - **Anexo II**: medidas de seguridad.
+    - **Anexo III**: auditoría de la seguridad.
+    - **Anexo IV**: glosario.
+- **Adecuación (disposición transitoria única)**: los sistemas preexistentes dispusieron de **24 meses** desde la entrada en vigor (hasta el **5 de mayo de 2024**) para alcanzar su plena adecuación al nuevo ENS; los sistemas nuevos lo aplican desde su concepción.
+- **Novedades frente al RD 3/2010**: principio de vigilancia continua, **perfiles de cumplimiento específicos** para entidades o sectores concretos, y un Anexo II renovado sobre la base de un requisito general por medida y unos posibles **refuerzos** graduados según el nivel de seguridad perseguido.
+
+### Ámbito de aplicación (art. 2)
+
+- **Todo el sector público**, en los términos del **art. 2 de la Ley 40/2015** (Administración General del Estado, comunidades autónomas, entidades locales y sector público institucional).
+- **Sistemas que tratan información clasificada**: también se les aplica el ENS, sin perjuicio de la **Ley 9/1968, de Secretos Oficiales**, pudiendo requerir medidas complementarias de seguridad.
+- **Entidades del sector privado** cuando, en virtud de una relación contractual, **presten servicios o provean soluciones** a las entidades del sector público. Deben contar con su propia **política de seguridad**, aprobada por su órgano con máximas competencias ejecutivas. Los **pliegos** de los contratos incluirán los requisitos de conformidad con el ENS, cautela que se extiende a la **cadena de suministro** de los contratistas en lo necesario según el análisis de riesgos.
+- **Redes y servicios 5G**: se aplica además el **Real Decreto-ley 7/2022**, de requisitos de seguridad de redes y servicios 5G.
+- **Sistemas que tratan datos personales (art. 3)**: se aplican también el **RGPD** y la **LO 3/2018 (LOPDGDD)** (o la LO 7/2021 en el ámbito penal). El responsable o encargado del tratamiento, asesorado por el delegado de protección de datos, realizará el análisis de riesgos del art. 24 del RGPD y, en los supuestos de su art. 35, la evaluación de impacto. **Prevalecen las medidas que resulten agravadas** respecto de las previstas en el ENS.
+
+### Desarrollo del ENS (disposición adicional segunda)
+
+El ENS se desarrolla mediante **instrucciones técnicas de seguridad (ITS)**, de **obligado cumplimiento**, aprobadas por resolución de la Secretaría de Estado competente en función pública, y mediante las **guías CCN-STIC** (particularmente la **serie 800**), elaboradas y difundidas por el **Centro Criptológico Nacional (CCN)**. Las cuatro ITS aprobadas son:
+
+| ITS | Aprobación |
+| --- | --- |
+| Informe del Estado de la Seguridad | Resolución de **7 de octubre de 2016** |
+| Conformidad con el ENS | Resolución de **13 de octubre de 2016** |
+| Auditoría de la Seguridad de los Sistemas de Información | Resolución de **27 de marzo de 2018** |
+| Notificación de Incidentes de Seguridad | Resolución de **13 de abril de 2018** |
+
 ## Principios básicos y requisitos mínimos
 
-### Objeto
-
-El objeto de este Real Decreto es regular el Esquema Nacional de Seguridad, el cual establece los principios básicos y requisitos mínimos necesarios para una protección adecuada de la información, a fin de asegurar el acceso, confidencialidad, integridad, trazabilidad, autenticidad, disponibilidad y conservación de los datos, información y servicios.
-
-### Ámbito de aplicación
-
-El ENS aplica a todo el sector público y a las entidades del sector privado cuando presten servicios a las entidades del sector público. Para los sistemas de información clasificada, se podrán adoptar medidas complementarias.
+Los **siete principios básicos** (art. 5, desarrollados en los arts. 6 a 11) orientan las decisiones en materia de seguridad; los **quince requisitos mínimos** (art. 12) son las exigencias que toda política de seguridad debe desarrollar.
 
 ### Principios básicos
 
-1. **Seguridad como proceso integral:** Involucra elementos técnicos, humanos, materiales y organizativos.
-2. **Gestión de la seguridad basada en los riesgos:** La seguridad debe gestionarse mediante un sistema actualizado que evalúe riesgos.
-3. **Prevención, detección, respuesta y conservación:** Se requiere un enfoque preventivo y reactivo.
-4. **Existencia de líneas de defensa:** Deben implementarse medidas organizativas, físicas y lógicas.
-5. **Vigilancia continua:** Monitoreo constante de la seguridad.
-6. **Reevaluación periódica:** Revisión y actualización constantes.
-7. **Diferenciación de responsabilidades:**
-    - **Responsable de Información:** Determina los requisitos de la información tratada.
-    - **Responsable del Servicio:** Define los requisitos de los servicios prestados.
-    - **Responsable de Seguridad:** Establece los requisitos de seguridad de la información y los servicios.
-    - **Responsable del Sistema:** Implementa y supervisa la seguridad del sistema, pudiendo delegar en administradores u operadores.
+- **Seguridad como proceso integral (art. 6)**: constituido por todos los elementos humanos, materiales, técnicos, jurídicos y organizativos relacionados con el sistema; excluye cualquier actuación puntual o tratamiento coyuntural. Máxima atención a la **concienciación** de las personas.
+- **Gestión de la seguridad basada en los riesgos (art. 7)**: el análisis y la gestión de riesgos es una actividad **continua y permanentemente actualizada**; las medidas deben ser proporcionadas a la información, los servicios y los riesgos.
+- **Prevención, detección, respuesta y conservación (art. 8)**: prevenir que las amenazas se materialicen, detectar los ciberincidentes, responder restaurando información y servicios, y **conservar** los datos en soporte electrónico durante todo el ciclo vital.
+- **Existencia de líneas de defensa (art. 9)**: múltiples capas de seguridad de naturaleza **organizativa, física y lógica**, que permitan reaccionar ante incidentes no evitados y minimizar el impacto final.
+- **Vigilancia continua (art. 10)**: detección de actividades o comportamientos anómalos y respuesta oportuna; evaluación permanente del estado de la seguridad de los activos.
+- **Reevaluación periódica (art. 10)**: las medidas de seguridad se reevalúan y actualizan periódicamente, pudiendo llegar a un replanteamiento de la seguridad.
+- **Diferenciación de responsabilidades (art. 11)**: se diferencian el responsable de la información, el del servicio, el de la seguridad y el del sistema; la responsabilidad de la seguridad estará **diferenciada** de la responsabilidad sobre la explotación.
 
-### Requisitos mínimos de la política de seguridad
+### Roles y responsabilidades (arts. 11 y 13)
 
-Permiten una protección adecuada de la información y los servicios, incluyendo:
+- **Responsable de la información**: determina los requisitos de la información tratada.
+- **Responsable del servicio**: determina los requisitos de los servicios prestados.
+- **Responsable de la seguridad**: determina las decisiones para satisfacer los requisitos de seguridad, supervisa la implantación de las medidas y reporta sobre ellas.
+- **Responsable del sistema**: desarrolla la forma concreta de implementar la seguridad y supervisa la operación diaria, pudiendo **delegar en administradores u operadores**.
+- El responsable de la seguridad **será distinto** del responsable del sistema y **sin dependencia jerárquica** entre ambos; solo excepcionalmente, por falta justificada de recursos, pueden coincidir aplicando **medidas compensatorias** (art. 13.3).
+- En servicios externalizados, la organización prestataria designará un **POC** (punto o persona de contacto) para la seguridad de la información tratada y el servicio prestado, sin perjuicio de que la responsabilidad última resida en la entidad del sector público destinataria (art. 13.5).
+- Una ITS regulará el **Esquema de Certificación de Responsables de la Seguridad** (art. 13.4).
 
-- **Organización e implantación del proceso de seguridad.**
-- **Análisis y gestión de riesgos específicos de cada organización.**
-- **Gestión de personal:** Formación, información y supervisión.
-- **Profesionalidad:** Personal cualificado y dedicado.
-- **Autorización y control de accesos:** Control y limitación de accesos.
-- **Protección de instalaciones:** Control de acceso y áreas diferenciadas.
-- **Adquisición de productos y servicios de seguridad acorde a la categoría y nivel de seguridad.**
-- **Mínimo privilegio y seguridad por defecto.**
-- **Integridad y actualización del sistema con autorización formal previa.**
-- **Protección de la información almacenada y en tránsito.**
-- **Prevención ante interconexiones de redes públicas.**
-- **Registro de actividad y detección de código dañino.**
-- **Gestión de incidentes de seguridad y continuidad de la actividad.**
-- **Mejora continua del proceso de seguridad.**
+### Política de seguridad (art. 12)
 
-### Perfiles de cumplimiento específicos
+Conjunto de directrices que rigen cómo una organización gestiona y protege la información que trata y los servicios que presta. **Cada administración pública** contará con una política de seguridad **formalmente aprobada** por el órgano competente; los municipios pueden disponer de una política común elaborada por la entidad comarcal o provincial que asuma esa responsabilidad. Su contenido mínimo:
 
-El Centro Criptológico Nacional (CCN) valida y publica perfiles de cumplimiento específicos aplicables a entidades o sectores de actividad concretos.
+- Los objetivos o misión de la organización.
+- El marco regulatorio de las actividades.
+- Los roles o funciones de seguridad (deberes, responsabilidades, designación y renovación).
+- La estructura y composición del comité o comités de gestión y coordinación de la seguridad.
+- Las directrices para la estructuración de la documentación de seguridad del sistema.
+- Los riesgos que se derivan del tratamiento de los datos personales.
 
-### Esquemas de acreditación y validación
+### Requisitos mínimos (art. 12.6)
 
-Garantizan que las implementaciones y configuraciones de soluciones de seguridad cumplan con el ENS y las guías de seguridad CCN-STIC.
+La política de seguridad se desarrollará aplicando estos **quince requisitos mínimos**, que se exigen **en proporción a los riesgos** identificados en cada sistema (algunos podrán obviarse en sistemas sin riesgos significativos):
 
-### Auditoría de la seguridad
+1. Organización e implantación del proceso de seguridad.
+2. Análisis y gestión de los riesgos.
+3. Gestión de personal.
+4. Profesionalidad.
+5. Autorización y control de los accesos.
+6. Protección de las instalaciones.
+7. Adquisición de productos de seguridad y contratación de servicios de seguridad.
+8. Mínimo privilegio.
+9. Integridad y actualización del sistema.
+10. Protección de la información almacenada y en tránsito.
+11. Prevención ante otros sistemas de información interconectados.
+12. Registro de la actividad y detección de código dañino.
+13. Incidentes de seguridad.
+14. Continuidad de la actividad.
+15. Mejora continua del proceso de seguridad.
 
-Es obligatoria una auditoría ordinaria cada dos años o cuando se realicen modificaciones sustanciales en el sistema. Los niveles de auditoría dependen de la categoría del sistema:
+Cada requisito se desarrolla en los arts. 13 a 27. Destacan para examen:
 
-- **Básica**: Autoevaluación y análisis del responsable de seguridad.
-- **Media/Alta**: Auditoría completa con informe de cumplimiento.
-
-### Estado de seguridad de los sistemas
-
-El Comité Sectorial de Administración Electrónica debe conocer el estado de la seguridad en los sistemas de información. El CCN facilita la recogida y consolidación de información de seguridad.
-
-### Centro Criptológico Nacional (CCN)
-
-El CCN, a través del CCN-CERT, gestiona la respuesta ante incidentes de seguridad. Sus funciones incluyen:
-
-- Respuesta a incidentes, formación, concienciación y sensibilización.
-- Divulgación de buenas prácticas, guías CCN-STIC y avisos de ciberseguridad.
-- Validación de perfiles de cumplimiento específicos y esquemas de acreditación.
-
-### CCN-CERT
-
-Es el coordinador estatal de la respuesta técnica ante incidentes de seguridad en el sector público. Actúa en coordinación con INCIBE-CERT para el sector privado, brindando soporte y supervisando la reconexión de sistemas tras incidentes.
-
-### Normas de conformidad
-
-El ENS rige la seguridad en sedes y registros electrónicos, así como el acceso de los ciudadanos a servicios públicos. Cada organismo debe establecer su propio mecanismo de control.
-
-### Actualización
-
-El ENS requiere una actualización constante para adaptarse a los cambios tecnológicos.
-
-### Plazos de adecuación
-
-Las entidades tienen un plazo de 24 meses para adaptarse a los nuevos requisitos del ENS.
-
-### Categorización de los sistemas de información
-
-Los sistemas se clasifican en función del impacto de un incidente en las dimensiones de seguridad (Disponibilidad, Autenticidad, Integridad, Confidencialidad, Trazabilidad) y pueden tener una categoría de seguridad Básica, Media o Alta.
-
-### Anexo I: Categorías de los sistemas
-
-Determina la categoría del sistema en función del nivel de seguridad en cada dimensión. Los niveles de seguridad son:
-
-- **Bajo:** Perjuicio limitado.
-- **Medio:** Perjuicio grave.
-- **Alto:** Perjuicio muy grave.
-
-### Anexo II: Medidas de seguridad
-
-Las medidas de seguridad se estructuran en el Marco Organizativo, el Marco Operacional y las Medidas de Protección:
-
-- **Marco Organizativo:** Define normativa, política y procedimientos de seguridad.
-- **Marco Operacional:** Protege la operación del sistema, incluye control de acceso, gestión de recursos externos, servicios en nube y continuidad del servicio.
-- **Medidas de Protección:** Protección de instalaciones, gestión del personal, seguridad de equipos y comunicaciones, protección de soportes de información y aplicaciones.
+- **Adquisición de productos y servicios (art. 19)**: se utilizarán, de forma proporcionada a la categoría del sistema y al nivel de seguridad, productos con **funcionalidad de seguridad certificada**. El **Organismo de Certificación** del Esquema Nacional de Evaluación y Certificación de la Seguridad de las TI, del **CCN**, determina los requisitos de certificación. El CCN publica el **Catálogo de Productos y Servicios STIC (CPSTIC)** con productos cualificados.
+- **Cumplimiento de los requisitos mínimos (art. 28)**: se materializa aplicando las **medidas de seguridad del Anexo II**, formalizado en la **Declaración de Aplicabilidad** (ver más abajo).
 
 ## Categorización de los sistemas
 
-La categorización de sistemas es fundamental para determinar el nivel de protección necesario. El proceso incluye:
+La **categoría de seguridad** de un sistema modula el equilibrio entre la importancia de la información y los servicios y el **esfuerzo de seguridad** requerido, bajo el principio de proporcionalidad (art. 40). Se determina valorando el **impacto que tendría un incidente** sobre la capacidad de la organización para alcanzar sus objetivos, proteger sus activos y garantizar la conformidad con el ordenamiento jurídico (Anexo I). La categoría debe **reevaluarse anualmente** o cuando se produzcan modificaciones significativas.
 
-1. **Participantes y Procedimiento**:
-    - **Responsable de Información (RINFO)** y **Responsable de Servicio (RSER)**: Aprueban los niveles de seguridad del sistema.
-    - En sistemas departamentales, RINFO y RSER pueden ser la misma persona.
-    - **Responsable de Seguridad (RSEG)**: Asesora y valida la categorización.
-    - **Responsable Funcional (RFUN)**: Define los requisitos funcionales.
-    - **Responsable Informático (RINF)**: Jefe de proyecto, analista o responsable técnico. Puede proponer niveles cuando RINFO/RSER no lo hayan hecho y el RFUN no muestre iniciativa.
-2. **Dimensiones del ENS**: **DICTA**
-    - **Disponibilidad**
-    - **Integridad**
-    - **Confidencialidad**
-    - **Trazabilidad**
-    - **Autenticidad**
-3. **Categorización del Sistema**:
-    - Se determina el nivel de seguridad como **BÁSICO**, **MEDIO** o **ALTO**, tomando el valor máximo entre las dimensiones: **MAX(D, I, C, T, A)**.
-4. **Criterios de Valoración según el ENS**:
-    - **Activos de tipo Información (ICTA)**:
-        - **ALTO**: Daño grave de difícil o imposible reparación.
-        - **MEDIO**: Daño importante aunque subsanable.
-        - **BAJO**: Algún perjuicio.
-        - **N/A**: Irrelevante.
-    - **Activos de tipo Servicio (Disponibilidad)**:
-        - **ALTO**: **RTO** (Recovery Time Objective) menor a 4 horas.
-        - **MEDIO**: RTO entre 4 horas y 1 día.
-        - **BAJO**: RTO entre 1 y 5 días.
-        - **N/A**: RTO superior a 5 días.
-    - **Tratamiento de Alto Riesgo**:
-        - Evaluación sistemática y exhaustiva de aspectos personales.
-        - Elaboración de perfiles.
-        - Datos de categorías especiales.
-        - Observación de una zona pública.
+### Dimensiones de la seguridad
 
-### Nivel de Madurez en la Implantación de Medidas
+El impacto se valora sobre **cinco dimensiones** de la seguridad, identificadas por sus iniciales (regla mnemotécnica **DICTA**):
 
-- **L0 - Inexistente**: Medida no aplicada.
-- **L1 - Inicial / Ad hoc**: Depende de la buena voluntad de los operarios.
-- **L2 - Repetible**: Existe un mínimo de planificación, además de la buena voluntad.
-- **L3 - Proceso Definido**: Existe un catálogo de procesos actualizado y definido.
-- **L4 - Gestionado y Medible**: Se conoce la eficacia y eficiencia de los procesos mediante métricas.
-- **L5 - Optimizado**: Existe una mejora continua del proceso.
+- **D**isponibilidad
+- **I**ntegridad
+- **C**onfidencialidad
+- **T**razabilidad
+- **A**utenticidad
 
-### Documentación de Seguridad
+### Niveles de seguridad por dimensión
 
-El **Responsable de Seguridad del Sistema** es el encargado de elaborar la documentación de seguridad, que varía según la categoría del sistema:
+Cada dimensión afectada se adscribe a un nivel **BAJO**, **MEDIO** o **ALTO**; si una dimensión no se ve afectada, no se adscribe a ningún nivel:
 
-- **Categoría BÁSICA**:
-    - **Declaración de Conformidad**: Basada en una **autoevaluación**.
-    - **Documento de Autoevaluación**: Analizado y validado por el RSEG.
-- **Categoría MEDIA/ALTA**:
-    - **Certificación de Conformidad**: Requiere una **auditoría formal**.
-    - **Informe de Auditoría**: Analizado y validado por el RSEG.
+| Criterio | BAJO (perjuicio limitado) | MEDIO (perjuicio grave) | ALTO (perjuicio muy grave) |
+| --- | --- | --- | --- |
+| Capacidad de la organización | Reducción apreciable (sigue funcionando) | Reducción significativa (sigue funcionando) | **Anulación efectiva** |
+| Daño en los activos | Menor | Significativo | Muy grave, incluso irreparable |
+| Incumplimiento de ley o regulación | Formal, subsanable | Material, o formal no subsanable | Grave |
+| Perjuicio a individuos | Menor, fácilmente reparable | Significativo, de difícil reparación | Grave, de difícil o imposible reparación |
 
-**Aclaraciones**:
+Cuando un sistema trate diferentes informaciones y preste diferentes servicios, su nivel en cada dimensión será el **mayor** de los establecidos para cada información y servicio.
 
-- Las **autoevaluaciones y auditorías** se realizarán cada **2 años** de forma ordinaria, y de forma extraordinaria cada vez que se produzcan **modificaciones significativas** en el sistema.
-- Ambas categorías pueden someterse a una auditoría formal si se considera necesario.
+### Categorías de seguridad
 
-**Contenido de la Documentación**:
+Se definen **tres categorías**: un sistema es de categoría **ALTA** si alguna dimensión alcanza el nivel ALTO; **MEDIA** si alguna alcanza el nivel MEDIO y ninguna uno superior; y **BÁSICA** si alguna alcanza el nivel BAJO y ninguna uno superior.
 
-- **Política de Seguridad** del sistema.
-- **Información que maneja el sistema**, junto con su valoración.
-- **Servicio que presta el sistema**, junto con su valoración.
-- **Datos de carácter personal** involucrados.
-- **Categoría del sistema** determinada.
-- **Declaración de Aplicabilidad** de las medidas de seguridad.
-- **Análisis de Riesgos** realizado.
-- **Insuficiencia del sistema** en términos de nivel de madurez:
-    - **BÁSICO**: Nivel L2.
-    - **MEDIO**: Nivel L3.
-    - **ALTO**: Nivel L4.
-- **Plan de Mejora de la Seguridad**, incluyendo plazos y responsables.
+- **Facultades (art. 41)**: la **valoración** de cada información o servicio corresponde al **responsable de la información o del servicio**; la **determinación de la categoría** del sistema, al **responsable de la seguridad**. En la práctica, la propuesta de valoración suele elaborarse de forma delegada por los responsables funcionales o técnicos que conocen el sistema, sin perjuicio de a quién corresponde la facultad.
+- En la práctica administrativa, los **servicios** se valoran principalmente en la dimensión de **disponibilidad**, y la **información** en las restantes (integridad, confidencialidad, autenticidad y trazabilidad). Cada valoración se acompaña de una **justificación** basada en los criterios del Anexo I; la guía **CCN-STIC 803** (valoración de los sistemas en el ENS) y el informe de buenas prácticas **BP/14** del CCN (Declaración de Aplicabilidad en el ENS) ofrecen criterios de referencia comunes (disposiciones legales, perjuicio al ciudadano, incumplimientos normativos, pérdidas económicas, daño reputacional).
 
-## Medidas de seguridad
+## Las medidas de seguridad (Anexo II)
 
-![](media/image400.png)
+Para cumplir los principios básicos y los requisitos mínimos se aplican las medidas del Anexo II, proporcionales a las **dimensiones de seguridad relevantes** y a la **categoría** del sistema. Son **73 medidas** organizadas en **tres grupos**:
 
-## Plan de adecuación al ENS
+- **Marco organizativo [org]** (4 medidas): relacionadas con la organización global de la seguridad. Comprende la política de seguridad, la normativa de seguridad, los procedimientos de seguridad y el proceso de autorización.
+- **Marco operacional [op]** (33 medidas): para proteger la operación del sistema como conjunto integral de componentes para un fin.
+- **Medidas de protección [mp]** (36 medidas): protegen activos concretos, según su naturaleza y la calidad exigida por el nivel de seguridad de las dimensiones afectadas.
 
-![](media/image44.png) **Nota:** Según la fuente los pasos y el orden de como realizarlo cambia.
+| Grupo | Familia | Contenido | Medidas |
+| --- | --- | --- | --- |
+| op.pl | Planificación | Análisis de riesgos, arquitectura de seguridad, componentes certificados | 5 |
+| op.acc | Control de acceso | Identificación, requisitos de acceso, segregación, mecanismos de autenticación | 6 |
+| op.exp | Explotación | Inventario, configuración, mantenimiento, gestión de incidentes, registros, claves | 10 |
+| op.ext | Recursos externos | Contratación y ANS, gestión diaria, **cadena de suministro**, interconexión | 4 |
+| op.nub | Servicios en la nube | Protección de servicios en la nube (novedad de 2022) | 1 |
+| op.cont | Continuidad del servicio | Análisis de impacto, plan de continuidad, pruebas, medios alternativos | 4 |
+| op.mon | Monitorización del sistema | Detección de intrusión, sistema de métricas, vigilancia | 3 |
+| mp.if | Instalaciones e infraestructuras | Áreas separadas, control de acceso físico, energía, incendios, inundaciones | 7 |
+| mp.per | Gestión del personal | Caracterización del puesto, deberes, concienciación, formación | 4 |
+| mp.eq | Protección de los equipos | Puesto despejado, bloqueo, portátiles, otros dispositivos | 4 |
+| mp.com | Protección de las comunicaciones | Perímetro seguro, confidencialidad, integridad y autenticidad, separación de flujos | 4 |
+| mp.si | Soportes de información | Marcado, criptografía, custodia, transporte, borrado y destrucción | 5 |
+| mp.sw | Aplicaciones informáticas | Desarrollo, aceptación y puesta en servicio | 2 |
+| mp.info | Protección de la información | Datos personales, calificación, firma electrónica, sellos de tiempo, copias de seguridad | 6 |
+| mp.s | Protección de los servicios | Correo electrónico, servicios web, navegación, denegación de servicio | 4 |
 
-### 1. Identificar el alcance del sistema / Política de Seguridad y Definición de Roles
+Convenciones de aplicación de las medidas:
 
-- **Identificar roles y personas participantes**:
-    - **Aprobadores**: Responsable de la Información (**RINFO**), Responsable del Servicio (**RSER**), Responsable Funcional (**RFUN**).
-    - **Proponentes de la categorización**: Responsable de Seguridad (**RSEG**), Responsable del Sistema (**RSIS**), Responsable de Infraestructura/Tecnología (**RINF/RTEC**).
-- **Identificar tipos de activo**: **Información y Servicios**.
+- Cada medida se exige atendiendo a la **categoría del sistema** o al **nivel de una o más dimensiones concretas** (p. ej. la continuidad del servicio depende de la Disponibilidad; la identificación, de Trazabilidad y Autenticidad).
+- Para cada nivel o categoría, la medida puede no aplicar («n.a.»), aplicar en su **requisito base** («aplica») o aplicar con **refuerzos** («+ Rn»), incrementales o alternativos entre sí.
+- Cuando en un sistema existan **subsistemas** que requieran un nivel de medidas diferente al del sistema principal, podrán **segregarse** de este, aplicando a cada uno su nivel con los refuerzos correspondientes, siempre que puedan delimitarse la información y los servicios afectados (Anexo II.2). Debe mantenerse en todo caso un sistema global que agrupe a los subsistemas.
+- Las medidas seleccionadas se formalizan en la **Declaración de Aplicabilidad**, **firmada por el responsable de la seguridad** (art. 28.2). En la práctica se mantiene como documento vivo que detalla, para cada medida, su aplicabilidad, estado de implantación, justificación y evidencias, alineado con la categorización y el análisis de riesgos.
+- Las medidas del Anexo II pueden reemplazarse por **medidas compensatorias** cuando se justifique documentalmente que protegen igual o mejor el riesgo; la correspondencia se recoge en la Declaración de Aplicabilidad y requiere aprobación formal del responsable de la seguridad (art. 28.3).
+- **Perfiles de cumplimiento específicos (art. 30)**: conjuntos de medidas idóneos para entidades o sectores concretos (p. ej. entidades locales), en virtud del principio de proporcionalidad; los **valida y publica el CCN**.
 
-### 2. Categorización del Sistema
-
-- **Listar activos**: Catalogar los activos de **información y servicios**.
-- **Valorar activos**: Según **DICTA** y justificando cada valoración.
-- **Categorizar sistema**: Basado en el valor máximo de **Disponibilidad (D), Integridad (I), Confidencialidad (C), Trazabilidad (T)** y **Autenticidad (A)**.
-
-**\*3. Declaración de Aplicabilidad Provisional**
-
-Resultado inicial de la categorización del sistema
-
-### 4. Análisis de Riesgos
-
-- **Categoría Básica**: Análisis informal (**autoevaluación**).
-- **Categoría Media/Alta**: Análisis formal (**MAGERIT** y herramientas como **PILAR**).
-
-### 5. Aprobar la Declaración de Aplicabilidad Definitiva o Perfil de Cumplimiento Específico
-
-- **Aplicar niveles de cumplimiento**: Implementar medidas y, si es necesario, medidas compensatorias.
-- **Aceptación del nivel del riesgo**: Aceptar el **riesgo residual**.
-- **Declaración de Aplicabilidad Final**: Documento definitivo tras la aceptación del riesgo.
-
-### 6. Política de seguridad.
+![Extracto de la tabla de medidas de seguridad del Anexo II](media/image400.png){width=100%}
 
 ## Adecuación, conformidad y certificación
 
-Para la Certificación o conformidad con el ENS abordar las siguientes fases:
+El proceso de adecuación al ENS que describe el CCN en su portal se articula en cinco fases: elaborar el **plan de adecuación**, implantar la seguridad, obtener la **declaración o certificación de conformidad**, informar sobre el **estado de la seguridad** y mantener una **vigilancia y mejora continua**. Las guías de la serie CCN-STIC 800 dan soporte a cada fase.
 
-1. **Plan de adecuación**
-    1. Identificación del alcance del sistema.
-    2. Categorización del sistema.
-    3. Declaración de Aplicabilidad Provisional.
-    4. Análisis de riesgos.
-    5. Validación de la Declaración de Aplicabilidad Definitiva o Perfil de Cumplimiento Específico.
-    6. Política de seguridad.
-2. **Implantación de la seguridad**
-    1. Hoja de ruta para la implementación de medidas de seguridad.
-    2. Elaboración del marco normativo e implementación.
-    3. Aprobación del sistema de gestión de seguridad.
-3. **Declaración / Certificación de conformidad**
-    1. Auditoría formal (Categoría MEDIA o Alta) o Autoevaluación (Categoría BÁSICA)
-4. **Informar sobre el Estado de Seguridad**
-    1. Métricas e indicadores
-5. **Vigilancia y Mejora continua**
-    1. **Acciones:** Revisión de la política de seguridad de la información, revisión de la información y servicios, actualización de riesgos, revisión de la Declaración de Aplicabilidad, Realización de auditorías internas, Revisión del Plan de Mejora, Revisión de las medidas de seguridad, Revisión y actualización de procedimientos, y Revisión de estado de seguridad
-6. **Procesos de Adecuación para Entidades Locales**
-7. **Catálogo de Productos Cualificados**
+![Ciclo de adecuación al ENS y guías CCN-STIC de apoyo a cada fase](media/image44.png){width=90%}
 
-**\*Fuente:** <https://ens.ccn.cni.es/es/conformidad/proceso-de-adecuacion>
+### Plan de adecuación
+
+Documento inicial que recoge:
+
+1. **Política de seguridad** y definición de roles (responsables de la información, del servicio, de la seguridad y del sistema).
+2. **Identificación del alcance**: activos de tipo **información** y de tipo **servicio**.
+3. **Categorización del sistema**: valorar cada activo en las cinco dimensiones (DICTA), justificando cada valoración, y categorizar según el nivel máximo.
+4. **Declaración de aplicabilidad provisional**, derivada de la categorización.
+5. **Análisis de riesgos**, con una metodología reconocida internacionalmente (art. 14): en la práctica, **MAGERIT** con herramientas como **PILAR** (ver tema 30).
+6. **Declaración de aplicabilidad definitiva** (o perfil de cumplimiento específico), tras la aceptación del **riesgo residual**.
+
+Tras el plan viene la **implantación**: hoja de ruta de medidas, elaboración del marco normativo interno y aprobación del sistema de gestión de la seguridad. Para las **entidades locales** existe un itinerario específico desarrollado con la FEMP, y el catálogo **CPSTIC** facilita la selección de productos cualificados.
+
+### Auditoría de la seguridad (art. 31 y Anexo III)
+
+- **Auditoría ordinaria**: **al menos cada dos años**, para verificar el cumplimiento del ENS.
+- **Auditoría extraordinaria**: siempre que se produzcan **modificaciones sustanciales** en el sistema; su realización **reinicia el cómputo** de los dos años.
+- El plazo puede **extenderse tres meses** por impedimentos de fuerza mayor no imputables a la entidad.
+- **Categoría BÁSICA**: no necesita auditoría; basta una **autoevaluación** realizada por el mismo personal que administra el sistema (o en quien delegue), documentada. Los informes de autoevaluación los analiza el responsable de la seguridad, que eleva las conclusiones al responsable del sistema.
+- **Categorías MEDIA y ALTA**: auditoría formal conforme a la **ITS de Auditoría de la Seguridad**. El informe dictamina el grado de cumplimiento, identifica hallazgos y se presenta al responsable del sistema y al responsable de la seguridad.
+- En sistemas de categoría **ALTA**, ante deficiencias graves, el responsable del sistema podrá **suspender temporalmente** el tratamiento de información, la prestación del servicio o la operación del sistema (art. 31.6).
+
+### Conformidad (art. 38 e ITS de Conformidad)
+
+- **Categoría BÁSICA**: **autoevaluación** que da lugar a una **Declaración de Conformidad** (puede optar voluntariamente por certificarse).
+- **Categorías MEDIA y ALTA**: **auditoría de certificación** que da lugar a una **Certificación de Conformidad**, emitida por **entidades de certificación acreditadas por ENAC** (norma UNE-EN ISO/IEC 17065) o por órganos públicos con competencias de auditoría.
+- Los **distintivos de conformidad** (de declaración o de certificación) deben publicarse en las **sedes electrónicas o portales de internet** de las entidades, con enlace al documento correspondiente.
+
+### Informe del estado de la seguridad (art. 32)
+
+La **Comisión Sectorial de Administración Electrónica** recoge la información sobre las principales variables de seguridad de los sistemas para elaborar un perfil general del estado de la seguridad. El **CCN** articula los procedimientos de recogida y consolidación, a través de la plataforma **INES** (Informe Nacional del Estado de Seguridad).
+
+### Respuesta a incidentes de seguridad (arts. 33 y 34)
+
+- El CCN articula la respuesta a incidentes en torno al **CCN-CERT**, que ejerce la **coordinación nacional** de la respuesta técnica de los CSIRT en el ámbito del sector público.
+- Las entidades del sector público **notificarán al CCN** los incidentes con **impacto significativo**, conforme a la ITS de Notificación de Incidentes de Seguridad.
+- Las organizaciones **privadas** que presten servicios a entidades públicas notificarán al **INCIBE-CERT**, que lo pondrá inmediatamente en conocimiento del CCN-CERT.
+- Tras un incidente, el CCN-CERT determina técnicamente el **riesgo de reconexión** de los sistemas afectados.
+- El CCN-CERT presta soporte y coordinación ante incidentes, investiga y divulga mejores prácticas (guías **CCN-STIC**), forma especialistas e informa sobre vulnerabilidades y amenazas (art. 34). La gestión de ciberincidentes se desarrolla en el tema 31.
 
 ## Caso práctico: plan de adecuación al ENS
 
-La Subsecretaría de la Conselleria de Hacienda y Administración Pública de la Generalitat Valenciana debe adaptar sus sistemas de información al Esquema Nacional de Seguridad (ENS). Los sistemas implicados gestionan los siguientes activos:
+La Subsecretaría de la Conselleria de Hacienda y Administración Pública de la Generalitat Valenciana debe adaptar sus sistemas de información al ENS. Los sistemas implicados gestionan los siguientes activos:
 
-- **Información**:
-    - Trámites telemáticos de tributos y juego.
-- **Servicios**:
-    - Plataforma de contratación de la Generalitat Valenciana.
-    - Tramitación electrónica de procedimientos en materia de juego.
-    - Pago de tributos.
+- **Información**: trámites telemáticos de tributos y juego.
+- **Servicios**: plataforma de contratación de la Generalitat, tramitación electrónica de procedimientos en materia de juego y pago de tributos.
 
-### Se solicita:
+Se solicita: (1) identificar y categorizar los activos; (2) identificar las medidas del Anexo II aplicables; (3) realizar un análisis de riesgos semiformal; y (4) emitir la declaración de aplicabilidad definitiva.
 
-1. **Identificar y Categorización de Activos**
-2. Identificar las **medidas de seguridad** del Anexo II del ENS aplicables a cada activo, en función de su categorización.
-3. Realizar un **análisis de riesgos semiformal**, identificando amenazas, evaluando su probabilidad e impacto, y proponiendo medidas para su mitigación.
-4. **Declaración de Aplicabilidad Definitiva**
+### Paso 1: identificación y categorización de activos
 
-### Solución.
+Se identifican los **servicios esenciales** y la **información esencial** del sistema y se valoran en las cinco dimensiones (DICTA): los servicios, en disponibilidad; la información, en las dimensiones restantes. La propuesta la elaboran los responsables funcionales o técnicos y la aprueban los responsables de la información y del servicio:
 
-### Paso 1: Identificación y Categorización de Activos
+| Información | Responsable | D | I | C | T | A |
+| --- | --- | --- | --- | --- | --- | --- |
+| Trámites telemáticos de tributos y juego | Subsecretaría de la Conselleria de Hacienda y Administración Pública | n/a | M | M | M | M |
 
-1. **Activos identificados:**
-    1. **Información:**
-        1. Trámites telemáticos de tributos y juegos
-    2. **Servicio:**
-        1. Plataforma de contratación de la GVA
-        2. Tramitación electrónica de procedimientos en materia de juego
-        3. Pago de tributos
-2. **Valoración según DICTA:**
+| Servicio | Responsable | D | I | C | T | A |
+| --- | --- | --- | --- | --- | --- | --- |
+| Plataforma de contratación de la GVA | Secretaría General Administrativa de la Conselleria | B | n/a | n/a | B | B |
+| Tramitación electrónica en materia de juego | Secretaría General Administrativa de la Conselleria | M | n/a | n/a | M | M |
+| Pago de tributos | Secretaría General Administrativa de la Conselleria | M | n/a | n/a | M | M |
 
-Basándonos en los principios del ENS (Disponibilidad, Integridad, Confidencialidad, Trazabilidad y Autenticidad), caracterizamos los activos de la siguiente manera:
+Cada valoración se justifica con los criterios del Anexo I. Por ejemplo: los trámites de tributos y juego se valoran **MEDIO** en confidencialidad e integridad porque su revelación o alteración supondría un perjuicio significativo de difícil reparación (datos fiscales personales) y un incumplimiento material de la normativa tributaria y de protección de datos; la plataforma de contratación se valora **BAJO** en disponibilidad porque una interrupción causaría un perjuicio limitado y subsanable (los plazos de licitación pueden ampliarse).
 
-1. **Tabla de activos de información**
+Ninguna dimensión alcanza el nivel ALTO y varias alcanzan el MEDIO: el sistema se clasifica de categoría **MEDIA**. El responsable de la seguridad determina la categoría y la reevaluará anualmente.
 
-| Información                           | Responsable                                                          | D   | I   | C   | T   | A   |
-| ------------------------------------- | -------------------------------------------------------------------- | --- | --- | --- | --- | --- |
-| Trámites telemáticos tributos y juego | Subsecretaría de la conselleria de hacienda y administración pública | n/a | M   | M   | M   | M   |
+### Paso 2: identificación de medidas del Anexo II
 
-1. **Tabla de activos de servicio**
+Selección orientativa por activo, conforme a las dimensiones relevantes y la categoría MEDIA:
 
-| Servicio                                                      | Responsable                                                                    | D   | I   | C   | T   | A   |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------ | --- | --- | --- | --- | --- |
-| Plataforma de contratación GVA                                | Secretaría gral. Admva. De la conselleria de hacienda y administración pública | B   | n/a | n/a | B   | B   |
-| Tramitación electrónica de procedimientos en materia de juego | Secretaría gral. Admva. De la conselleria de hacienda y administración pública | M   | n/a | n/a | M   | M   |
-| Pago de tributos                                              | Secretaría gral. Admva. De la conselleria de hacienda y administración pública | M   | n/a | n/a | M   | M   |
+- **Trámites telemáticos de tributos y juego**: control de acceso (doble factor, contraseñas robustas) y auditoría y registros (registro de eventos, alertas automáticas).
+- **Plataforma de contratación**: protección de la información (cifrado, copias de seguridad diarias), control de acceso (mínimo privilegio) y disponibilidad (redundancia mínima).
+- **Tramitación electrónica de juego**: protección de la información (AES-256, segregación lógica), control de acceso (doble factor, listas de control), auditoría y registro (detección de intrusiones) y disponibilidad (balanceo, redundancia de servidores).
+- **Pago de tributos**: protección de la información (AES-256, TLS 1.3), auditoría y registro (registro centralizado de eventos) y disponibilidad y continuidad (tolerancia a fallos, planes de contingencia).
 
-1. **Categorización del sistema:**
+Resultado: se emite la **declaración de aplicabilidad provisional**, pendiente del análisis de riesgos para su validación definitiva.
 
-> Según la fórmula ENS (MAX(D, I, C, T, A)), el sistema se clasifica con categoría **MEDIA**.
+### Paso 3: análisis de riesgos (semiformal)
 
-### Paso 2: Identificación de Medidas del Anexo II a Aplicar
+Se identifican las principales amenazas por activo y se evalúan su probabilidad (P) y su impacto (I) para obtener el riesgo inicial (R = P x I):
 
-1. **Información:**
-    - **Trámites telemáticos de tributos y juego:**
-        1. **Gestión de accesos**: Doble factor, contraseñas robustas,…
-        2. **Auditoría y registros:** Registro de eventos, alertas automáticas,…
-2. **Servicio:**
-    - **Plataforma de contratación:**
-        1. **Protección de la información:** Cifrado básico, copias de seguridad diarias,…)
-        2. **Gestión de accesos:** Limitar accesos, mínimos privilegios, sistemas de registro,…
-        3. **Disponibilidad:** Redundancia mínima,…
-    - **Tramitación electrónica:**
-        1. **Protección de la información:** AES-256, segregación lógica,…
-        2. **Gestión de accesos:** Doble factor, listas de control,…
-        3. **Auditoría y registro:** Detección de intrusiones (IDS),…
-        4. **Disponibilidad:** Sistemas de balanceo, redundancia de servidores,…
-    - **Pago tributos:**
-        1. **Protección de la información:** AES-256 y TLS 1.3
-        2. **Auditoría y registro:** Registro centralizado de eventos, generar informes regulares,…
-        3. **Disponibilidad y continuidad:** Tolerancia a fallos, planes de contingencia,…
+| Activo | Amenaza | Probabilidad | Impacto | Riesgo inicial |
+| --- | --- | --- | --- | --- |
+| Trámites telemáticos | Acceso no autorizado | Media | Alto | Alto |
+| Trámites telemáticos | Fuga de información | Media | Alto | Alto |
+| Plataforma de contratación | Ataque DDoS | Alta | Alto | Alto |
+| Plataforma de contratación | Pérdida de disponibilidad | Media | Medio | Medio |
+| Tramitación electrónica | Modificación no autorizada | Media | Alto | Alto |
+| Tramitación electrónica | Fallos en la integridad | Media | Medio | Medio |
+| Pago de tributos | Acceso no autorizado | Media | Alto | Alto |
+| Pago de tributos | Pérdida de disponibilidad | Media | Alto | Alto |
 
-**Resultado:** Se emite una Declaración de Aplicabilidad Provisional, pendiente del análisis de riesgos para su validación definitiva. Sistema de categoría **MEDIA.**
+Para cada amenaza se proponen medidas de seguridad y un tratamiento que reduzca el riesgo a un nivel aceptable:
 
-### Paso 3: Análisis de Riesgos (Semiformal)
+| Amenaza | Riesgo inicial | Medidas de seguridad | Propuesta de tratamiento | Riesgo residual |
+| --- | --- | --- | --- | --- |
+| Acceso no autorizado (trámites) | Alto | Autenticación multifactor, contraseñas robustas, cifrado | Desplegar MFA y actualizar la política de contraseñas | Medio |
+| Fuga de información (trámites) | Alto | Registro de eventos, auditorías periódicas, alertas | Registro centralizado y auditorías semestrales | Medio |
+| Ataque DDoS (contratación) | Alto | Solución anti-DDoS, redundancia, balanceo de carga | Ampliar balanceo y garantizar redundancia | Bajo |
+| Pérdida de disponibilidad (contratación) | Medio | Copias de seguridad, planes de contingencia | Revisar y probar regularmente los planes | Bajo |
+| Modificación no autorizada (tramitación) | Alto | Control de acceso, mínimo privilegio, cifrado AES-256 | Listas de control de acceso y segregación lógica | Medio |
+| Fallos de integridad (tramitación) | Medio | Verificación de integridad, supervisión automática | Automatizar la supervisión y pruebas regulares | Bajo |
+| Acceso no autorizado (pago) | Alto | TLS 1.3, cifrado AES-256, autenticación multifactor | Reforzar el cifrado de las comunicaciones y MFA | Bajo |
+| Pérdida de disponibilidad (pago) | Alto | Tolerancia a fallos, sistemas de respaldo | Failover en tiempo real y más capacidad de respaldo | Bajo |
 
-Basado en los activos identificados en la fase anterior, se evalúan las principales amenazas, su probabilidad, impacto, y se proponen medidas de mitigación.
+### Paso 4: declaración de aplicabilidad definitiva
 
-1. **Identificación de Riesgos**
+Tras implantar las medidas propuestas, los riesgos residuales se consideran aceptables para un sistema de categoría **MEDIA**. El responsable de la seguridad firma la **declaración de aplicabilidad definitiva**, que recoge las medidas adoptadas y los responsables asignados. Al ser de categoría MEDIA, el sistema deberá superar una **auditoría de certificación** al menos **cada dos años** para obtener y mantener su **Certificación de Conformidad** con el ENS.
 
-<table>
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 28%" />
-<col style="width: 16%" />
-<col style="width: 11%" />
-<col style="width: 15%" />
-</colgroup>
-<thead>
-<tr>
-<th>Activo</th>
-<th style="text-align: center;">Amenaza</th>
-<th style="text-align: center;"><p>Probabilidad</p>
-<p>(P)</p></th>
-<th style="text-align: center;"><p>Impacto</p>
-<p>(I)</p></th>
-<th style="text-align: center;"><p>Riesgo Inicial</p>
-<p>(R = P x I)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="2">Trámites telemáticos</td>
-<td>Acceso no autorizado</td>
-<td style="text-align: center;">Media</td>
-<td style="text-align: center;">Alto</td>
-<td style="text-align: center;">Alto</td>
-</tr>
-<tr>
-<td>Fuga de información</td>
-<td style="text-align: center;">Media</td>
-<td style="text-align: center;">Alto</td>
-<td style="text-align: center;">Alto</td>
-</tr>
-<tr>
-<td rowspan="2">Plataforma de contratación</td>
-<td>Ataque DDoS</td>
-<td style="text-align: center;">Alta</td>
-<td style="text-align: center;">Alto</td>
-<td style="text-align: center;">Alto</td>
-</tr>
-<tr>
-<td>Pérdida de disponibilidad</td>
-<td style="text-align: center;">Media</td>
-<td style="text-align: center;">Medio</td>
-<td style="text-align: center;">Medio</td>
-</tr>
-<tr>
-<td rowspan="2">Tramitación electrónica</td>
-<td>Modificación no autorizada</td>
-<td style="text-align: center;">Media</td>
-<td style="text-align: center;">Alto</td>
-<td style="text-align: center;">Alto</td>
-</tr>
-<tr>
-<td>Fallos en la integridad</td>
-<td style="text-align: center;">Media</td>
-<td style="text-align: center;">Medio</td>
-<td style="text-align: center;">Medio</td>
-</tr>
-<tr>
-<td rowspan="2">Pago de tributos</td>
-<td>Acceso no autorizado</td>
-<td style="text-align: center;">Media</td>
-<td style="text-align: center;">Alto</td>
-<td style="text-align: center;">Alto</td>
-</tr>
-<tr>
-<td>Pérdida de disponibilidad</td>
-<td style="text-align: center;">Media</td>
-<td style="text-align: center;">Alto</td>
-<td style="text-align: center;">Alto</td>
-</tr>
-</tbody>
-</table>
+## Fuentes {.unnumbered .unlisted}
 
-1. **Medidas de Seguridad y Tratamiento de Riesgos**
-
-<table style="width:100%;">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 9%" />
-<col style="width: 24%" />
-<col style="width: 12%" />
-<col style="width: 21%" />
-<col style="width: 11%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: center;">Amenaza</th>
-<th style="text-align: center;">Riesgo Inicial</th>
-<th style="text-align: center;">Medidas de Seguridad</th>
-<th style="text-align: center;">Madurez (L1-L5)</th>
-<th style="text-align: center;">Propuesta de Tratamiento</th>
-<th style="text-align: center;">Riesgo Residual</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Acceso no autorizado en trámites telemáticos</td>
-<td style="text-align: center;">Alto</td>
-<td>- Autenticación multifactor<br />
-- Contraseñas robustas<br />
-- Cifrado de datos</td>
-<td style="text-align: center;">L2</td>
-<td>Desplegar autenticación multifactor y actualizar políticas de
-contraseñas</td>
-<td style="text-align: center;">Medio</td>
-</tr>
-<tr>
-<td>Fuga de información en trámites telemáticos</td>
-<td style="text-align: center;">Alto</td>
-<td>- Registro de eventos<br />
-- Auditorías periódicas<br />
-- Alertas automáticas</td>
-<td style="text-align: center;">L1</td>
-<td>Implementar un sistema de registro centralizado y realizar
-auditorías semestrales</td>
-<td style="text-align: center;">Medio</td>
-</tr>
-<tr>
-<td>Ataque DDoS en plataforma de contratación</td>
-<td style="text-align: center;">Alto</td>
-<td>- Solución AntiDDoS<br />
-- Redundancia de servidores<br />
-- Balanceo de carga</td>
-<td style="text-align: center;">L2</td>
-<td>Ampliar capacidad de balanceo y garantizar redundancia de
-servidores</td>
-<td style="text-align: center;">Bajo</td>
-</tr>
-<tr>
-<td>Pérdida de disponibilidad en plataforma de contratación</td>
-<td style="text-align: center;">Medio</td>
-<td>- Copias de seguridad<br />
-- Planes de contingencia</td>
-<td style="text-align: center;">L3</td>
-<td>Revisar y probar regularmente los planes de contingencia</td>
-<td style="text-align: center;">Bajo</td>
-</tr>
-<tr>
-<td>Modificación no autorizada en tramitación electrónica</td>
-<td style="text-align: center;">Alto</td>
-<td>- Control de acceso<br />
-- Gestión de privilegios mínimos<br />
-- Cifrado AES-256</td>
-<td style="text-align: center;">L2</td>
-<td>Implementar listas de control de acceso y sistemas de segregación
-lógica</td>
-<td style="text-align: center;">Medio</td>
-</tr>
-<tr>
-<td>Fallos en la integridad en tramitación electrónica</td>
-<td style="text-align: center;">Medio</td>
-<td>- Verificación de integridad<br />
-- Supervisión automática</td>
-<td style="text-align: center;">L3</td>
-<td>Automatizar supervisión continua y realizar pruebas regulares de
-integridad</td>
-<td style="text-align: center;">Bajo</td>
-</tr>
-<tr>
-<td>Acceso no autorizado en pago de tributos</td>
-<td style="text-align: center;">Alto</td>
-<td>- TLS 1.3<br />
-- Cifrado AES-256<br />
-- Autenticación multifactor</td>
-<td style="text-align: center;">L2</td>
-<td>Reforzar el cifrado en todas las comunicaciones y aplicar
-autenticación multifactor</td>
-<td style="text-align: center;">Bajo</td>
-</tr>
-<tr>
-<td>Pérdida de disponibilidad en pago de tributos</td>
-<td style="text-align: center;">Alto</td>
-<td>- Tolerancia a fallos<br />
-- Sistemas de respaldo</td>
-<td style="text-align: center;">L3</td>
-<td>Garantizar mecanismos de failover en tiempo real y aumentar
-capacidad de respaldo</td>
-<td style="text-align: center;">Bajo</td>
-</tr>
-</tbody>
-</table>
-
-### Paso 4: Declaración de Aplicabilidad definitiva
-
-Tras implementar las medidas de seguridad propuestas y alcanzar un nivel de madurez adecuado **(L2-L3 para la mayoría de riesgos)**, los riesgos residuales se consideran aceptables para el sistema categorizado como **MEDIA**. Se emite la Declaración de Aplicabilidad Definitiva, incluyendo las medidas adoptadas, su eficacia comprobada, y los responsables asignados para garantizar el cumplimiento continuo del ENS.
+- Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (texto consolidado, última modificación 6 de noviembre de 2024).
+- Resolución de 7 de octubre de 2016 (ITS de Informe del Estado de la Seguridad) y Resolución de 13 de octubre de 2016 (ITS de Conformidad con el ENS), de la Secretaría de Estado de Administraciones Públicas.
+- Resolución de 27 de marzo de 2018 (ITS de Auditoría de la Seguridad) y Resolución de 13 de abril de 2018 (ITS de Notificación de Incidentes de Seguridad), de la Secretaría de Estado de Función Pública.
+- CCN, portal del Esquema Nacional de Seguridad, proceso de adecuación: <https://ens.ccn.cni.es/es/conformidad/proceso-de-adecuacion> (consultado el 6 de julio de 2026).
