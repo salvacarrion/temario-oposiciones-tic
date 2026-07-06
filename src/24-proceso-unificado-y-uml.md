@@ -269,21 +269,41 @@ Describe los tipos de objetos y sus relaciones estáticas:
         - **Ejemplo:** Una persona puede leer una o ninguna revista.
         - **Codigo:**
 
-> public class Persona { > > // Una persona puede tener 0 o 1 revista. > > private Revista revista; > > }
+```java
+public class Persona {
+    // Una persona puede tener 0 o 1 revista.
+    private Revista revista;
+}
+```
 
 - **Agregación o Agrupación**: Una clase contiene a otra, pero ambas pueden existir independientemente.
     - **Dibujo:** [Clase 1 1 Alumno]
     - **Ejemplo:** Una clase "tiene" alumnos, pero si la clase desaparece, los alumnos pueden seguir existiendo.
     - **Código:**
 
-> public class Clase { > > private Alumno alumno; > > public Clase(Alumno alumno) { > > this.alumno = alumno; > > } > > }
+```java
+public class Clase {
+    private Alumno alumno;
+    public Clase(Alumno alumno) {
+        this.alumno = alumno;
+    }
+}
+```
 
 - **Composición**: Relación fuerte donde la existencia de un objeto depende del otro.
-    - **Dibujo:** [Facturas 0..\* 1 Empresa]
+    - **Dibujo:** [Facturas 0..* 1 Empresa]
     - **Ejemplo:** Una empresa tiene facturas. Si la empresa desaparece, sus facturas también dejan de existir.
     - **Código:**
 
-> public class Empresa { > > private Factura factura; > > public Empresa() { > > // Las facturas dependen de la empresa. > > this.factura = new Factura(); > > } > > }
+```java
+public class Empresa {
+    private Factura factura;
+    public Empresa() {
+        // Las facturas dependen de la empresa.
+        this.factura = new Factura();
+    }
+}
+```
 
 - **Restricciones**:
     - **Complete/incomplete**: Define si todas las instancias de una superclase deben pertenecer a una subclase.

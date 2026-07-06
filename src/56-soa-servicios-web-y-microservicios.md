@@ -168,15 +168,13 @@ Un mensaje SOAP es un documento XML con una estructura definida:
 
 ### Ejemplo de Mensaje SOAP
 
-\<?xml version='1.0' ?>
-
-\<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
-
-\<env:Header>...\</env:Header>
-
-\<env:Body>...\</env:Body>
-
-\</env:Envelope>
+```xml
+<?xml version='1.0' ?>
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+  <env:Header>...</env:Header>
+  <env:Body>...</env:Body>
+</env:Envelope>
+```
 
 ### Modelo de Procesado SOAP
 
@@ -434,31 +432,21 @@ El **DTD** define elementos, atributos y entidades permitidos, así como sus com
 
 Ejemplo de **DTD interno**:
 
-\<!DOCTYPE note \[
-
-\<!ELEMENT note (to,from,heading,body)>
-
-\<!ELEMENT to (#PCDATA)>
-
-\<!ELEMENT from (#PCDATA)>
-
-\<!ELEMENT heading (#PCDATA)>
-
-\<!ELEMENT body (#PCDATA)>
-
-\]>
-
-\<note>
-
-\<to>Tove\</to>
-
-\<from>Jani\</from>
-
-\<heading>Reminder\</heading>
-
-\<body>Don't forget me this weekend\</body>
-
-\</note>
+```xml
+<!DOCTYPE note [
+  <!ELEMENT note (to,from,heading,body)>
+  <!ELEMENT to (#PCDATA)>
+  <!ELEMENT from (#PCDATA)>
+  <!ELEMENT heading (#PCDATA)>
+  <!ELEMENT body (#PCDATA)>
+]>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend</body>
+</note>
+```
 
 ### XML Schema (XSD)
 
@@ -470,27 +458,19 @@ Los **esquemas XML (XSD)** son similares a los DTD, pero con diferencias clave:
 
 Ejemplo de esquema XSD:
 
-\<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-\<xs:element name="contact">
-
-\<xs:complexType>
-
-\<xs:sequence>
-
-\<xs:element name="name" type="xs:string" />
-
-\<xs:element name="company" type="xs:string" />
-
-\<xs:element name="phone" type="xs:int" />
-
-\</xs:sequence>
-
-\</xs:complexType>
-
-\</xs:element>
-
-\</xs:schema>
+```xml
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="contact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="company" type="xs:string" />
+        <xs:element name="phone" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+```
 
 ### Parseadores de XML: DOM y SAX
 

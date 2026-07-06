@@ -231,181 +231,131 @@ Transformamos el modelo E/R en un esquema relacional, definiendo las tablas y su
 
 ### Tabla Autor:
 
+```
 ID_Autor INT NOT NULL PRIMARY KEY
-
 Nombre VARCHAR(50)
-
 Apellidos VARCHAR(50)
+```
 
 ### Tabla Libro:
 
+```
 ISBN VARCHAR(13) NOT NULL PRIMARY KEY
-
 Título VARCHAR(100)
-
 Año_Publicación YEAR
-
 Género VARCHAR(30)
+```
 
 ### Tabla Libro_Autor (Tabla intermedia para la relación N:M):
 
+```
 ISBN VARCHAR(13) NOT NULL
-
 ID_Autor INT NOT NULL
-
 PRIMARY KEY (ISBN, ID_Autor)
-
 FOREIGN KEY (ISBN) REFERENCES Libro(ISBN)
-
 FOREIGN KEY (ID_Autor) REFERENCES Autor(ID_Autor)
+```
 
 ### Ejemplar:
 
+```
 Código_Ejemplar INT NOT NULL PRIMARY KEY
-
 ISBN VARCHAR(13) NOT NULL
-
 Localización VARCHAR(30)
-
 FOREIGN KEY (ISBN) REFERENCES Libro(ISBN)
+```
 
 ### Tabla Socio:
 
+```
 Número_Socio INT NOT NULL PRIMARY KEY
-
 Nombre VARCHAR(50)
-
 Dirección VARCHAR(100)
-
 Teléfono VARCHAR(15)
+```
 
 ### Tabla Préstamo:
 
+```
 ID_Préstamo INT NOT NULL PRIMARY KEY
-
 Código_Ejemplar INT NOT NULL
-
 Número_Socio INT NOT NULL
-
 Fecha_Préstamo DATE
-
 Fecha_Devolución DATE
-
 FOREIGN KEY (Código_Ejemplar) REFERENCES Ejemplar(Código_Ejemplar)
-
 FOREIGN KEY (Número_Socio) REFERENCES Socio(Número_Socio)
+```
 
 ### Tabla Reserva:
 
+```
 ID_Reserva INT NOT NULL PRIMARY KEY
-
 ISBN VARCHAR(13) NOT NULL
-
 Número_Socio INT NOT NULL
-
 Fecha_Reserva DATE
-
 FOREIGN KEY (ISBN) REFERENCES Libro(ISBN)
-
 FOREIGN KEY (Número_Socio) REFERENCES Socio(Número_Socio)
+```
 
 ### 4. Diseño físico
 
 Adaptamos el esquema lógico al SGBD seleccionado, considerando aspectos como índices, tipos de datos y optimización.
 
+```sql
 CREATE TABLE Autor (
-
-ID_Autor INT NOT NULL PRIMARY KEY,
-
-Nombre VARCHAR(50),
-
-Apellidos VARCHAR(50)
-
+    ID_Autor INT NOT NULL PRIMARY KEY,
+    Nombre VARCHAR(50),
+    Apellidos VARCHAR(50)
 );
 
 CREATE TABLE Libro (
-
-ISBN VARCHAR(13) NOT NULL PRIMARY KEY,
-
-Titulo VARCHAR(100),
-
-Año_Publicacion YEAR,
-
-Genero VARCHAR(30)
-
+    ISBN VARCHAR(13) NOT NULL PRIMARY KEY,
+    Titulo VARCHAR(100),
+    Año_Publicacion YEAR,
+    Genero VARCHAR(30)
 );
 
 CREATE TABLE Libro_Autor (
-
-ISBN VARCHAR(13) NOT NULL,
-
-ID_Autor INT NOT NULL,
-
-PRIMARY KEY (ISBN, ID_Autor),
-
-FOREIGN KEY (ISBN) REFERENCES Libro(ISBN),
-
-FOREIGN KEY (ID_Autor) REFERENCES Autor(ID_Autor)
-
+    ISBN VARCHAR(13) NOT NULL,
+    ID_Autor INT NOT NULL,
+    PRIMARY KEY (ISBN, ID_Autor),
+    FOREIGN KEY (ISBN) REFERENCES Libro(ISBN),
+    FOREIGN KEY (ID_Autor) REFERENCES Autor(ID_Autor)
 );
 
 CREATE TABLE Ejemplar (
-
-Codigo_Ejemplar INT NOT NULL PRIMARY KEY,
-
-ISBN VARCHAR(13) NOT NULL,
-
-Localizacion VARCHAR(30),
-
-FOREIGN KEY (ISBN) REFERENCES Libro(ISBN)
-
+    Codigo_Ejemplar INT NOT NULL PRIMARY KEY,
+    ISBN VARCHAR(13) NOT NULL,
+    Localizacion VARCHAR(30),
+    FOREIGN KEY (ISBN) REFERENCES Libro(ISBN)
 );
 
 CREATE TABLE Socio (
-
-Numero_Socio INT NOT NULL PRIMARY KEY,
-
-Nombre VARCHAR(50),
-
-Direccion VARCHAR(100),
-
-Telefono VARCHAR(15)
-
+    Numero_Socio INT NOT NULL PRIMARY KEY,
+    Nombre VARCHAR(50),
+    Direccion VARCHAR(100),
+    Telefono VARCHAR(15)
 );
 
 CREATE TABLE Prestamo (
-
-ID_Prestamo INT NOT NULL PRIMARY KEY,
-
-Codigo_Ejemplar INT NOT NULL,
-
-Numero_Socio INT NOT NULL,
-
-Fecha_Prestamo DATE,
-
-Fecha_Devolucion DATE,
-
-FOREIGN KEY (Codigo_Ejemplar) REFERENCES Ejemplar(Codigo_Ejemplar),
-
-FOREIGN KEY (Numero_Socio) REFERENCES Socio(Numero_Socio)
-
+    ID_Prestamo INT NOT NULL PRIMARY KEY,
+    Codigo_Ejemplar INT NOT NULL,
+    Numero_Socio INT NOT NULL,
+    Fecha_Prestamo DATE,
+    Fecha_Devolucion DATE,
+    FOREIGN KEY (Codigo_Ejemplar) REFERENCES Ejemplar(Codigo_Ejemplar),
+    FOREIGN KEY (Numero_Socio) REFERENCES Socio(Numero_Socio)
 );
 
 CREATE TABLE Reserva (
-
-ID_Reserva INT NOT NULL PRIMARY KEY,
-
-ISBN VARCHAR(13) NOT NULL,
-
-Numero_Socio INT NOT NULL,
-
-Fecha_Reserva DATE,
-
-FOREIGN KEY (ISBN) REFERENCES Libro(ISBN),
-
-FOREIGN KEY (Numero_Socio) REFERENCES Socio(Numero_Socio)
-
+    ID_Reserva INT NOT NULL PRIMARY KEY,
+    ISBN VARCHAR(13) NOT NULL,
+    Numero_Socio INT NOT NULL,
+    Fecha_Reserva DATE,
+    FOREIGN KEY (ISBN) REFERENCES Libro(ISBN),
+    FOREIGN KEY (Numero_Socio) REFERENCES Socio(Numero_Socio)
 );
+```
 
 ### 5. Optimización
 
