@@ -1,5 +1,11 @@
 # Desarrollo de aplicaciones móviles
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Diseño y Desarrollo de Aplicaciones Móviles
 
 El diseño y desarrollo de aplicaciones móviles requiere considerar el tipo de aplicación a crear, los principios de diseño adecuados y los entornos de trabajo disponibles. Las aplicaciones móviles se clasifican en tres categorías principales: **nativas**, **web** e **híbridas**.

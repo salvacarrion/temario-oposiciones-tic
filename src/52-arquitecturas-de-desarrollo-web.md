@@ -1,5 +1,11 @@
 # Arquitecturas de desarrollo web
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Arquitectura de Desarrollo en la Web
 
 La arquitectura web define cómo los componentes de una aplicación web se organizan y comunican entre sí.

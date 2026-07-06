@@ -1,5 +1,11 @@
 # Administración electrónica
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Real Decreto 203/2021, de actuación y funcionamiento del sector público por medios electrónicos
 
 Su objetivo es desarrollar y consolidar la administración electrónica, facilitando la relación entre los ciudadanos y las administraciones públicas.

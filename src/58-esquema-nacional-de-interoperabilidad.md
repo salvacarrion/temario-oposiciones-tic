@@ -1,5 +1,11 @@
 # El Esquema Nacional de Interoperabilidad
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Real Decreto 4/2010, del Esquema Nacional de Interoperabilidad (ENI)
 
 El Real Decreto 4/2010 establece el Esquema Nacional de Interoperabilidad (ENI) en el ámbito de la Administración Electrónica. Su objetivo es comprender y definir el conjunto de criterios y recomendaciones que las Administraciones Públicas deben tener en cuenta para la toma de decisiones tecnológicas que garanticen la interoperabilidad.

@@ -1,5 +1,11 @@
 # Protocolos de comunicaciones
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 **Protocolos de comunicaciones según el Modelo TCP/IP**: Aplicación, Transporte, Internet y Enlace de Datos.
 
 ## Protocolos de la Capa de Aplicación

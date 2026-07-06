@@ -1,5 +1,11 @@
 # La sociedad digital
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Tecnología y desarrollo en la Sociedad Digital
 
 **Sociedad Digital:** Busca integrar las tecnologías en todos los ámbitos de la sociedad para generar desarrollo y bienestar. En la Comunitat Valenciana, el **Plan COM DIGITAL 2025** lidera esta transformación, con objetivos agrupados en **seis ejes estratégicos**:

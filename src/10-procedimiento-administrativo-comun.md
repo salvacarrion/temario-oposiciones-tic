@@ -1,5 +1,11 @@
 # El procedimiento administrativo común de las Administraciones Públicas (Ley 39/2015)
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Título preliminar
 
 ### Objeto

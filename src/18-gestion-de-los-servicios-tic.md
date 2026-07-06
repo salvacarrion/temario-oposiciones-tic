@@ -1,5 +1,11 @@
 # La gestión de los servicios TIC
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Guías ITIL
 
 **Definición**: La Biblioteca de Infraestructura de Tecnologías de la Información (ITIL, por sus siglas en inglés) es un conjunto de prácticas que recoge las mejores prácticas en la gestión de servicios, desarrolladas a lo largo de los años mediante la observación de organizaciones diversas.

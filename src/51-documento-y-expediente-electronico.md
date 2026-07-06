@@ -1,5 +1,11 @@
 # Documento y expediente electrónico. Gestión documental
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Gestión Documental
 
 La **gestión documental** consiste en controlar de manera eficiente y sistemática la creación, recepción, mantenimiento, utilización y disposición de los documentos. Esto abarca desde la generación hasta la eliminación o conservación permanente de los mismos, siguiendo políticas establecidas para asegurar su integridad y accesibilidad.

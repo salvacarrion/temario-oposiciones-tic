@@ -1,5 +1,11 @@
 # Análisis y gestión de riesgos
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Análisis de riesgos en la gestión de proyectos
 
 El análisis de riesgos consiste en estudiar posibles amenazas y eventos no deseados, así como los daños que éstos pueden causar en los activos de una organización. La gestión de riesgos se refiere al conjunto de actividades que una organización realiza para evaluar y reducir tales efectos, utilizando para ello metodologías como MAGERIT, una de las más empleadas en la Administración.

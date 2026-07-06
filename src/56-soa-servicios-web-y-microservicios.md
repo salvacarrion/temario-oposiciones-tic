@@ -1,5 +1,11 @@
 # SOA, servicios web y microservicios
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## La arquitectura orientada a servicios (SOA)
 
 La **Arquitectura Orientada a Servicios (SOA)** es un estilo de diseño que organiza la funcionalidad de un sistema en **pequeñas partes reutilizables llamadas "servicios"**, diseñadas para ser accesibles a través de **interfaces estandarizadas (APIs)**. Sus objetivos principales incluyen:

@@ -1,5 +1,11 @@
 # Virtualización y contenedores
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Virtualización
 
 La virtualización es una técnica que permite abstraer un recurso físico en uno virtual mediante software.

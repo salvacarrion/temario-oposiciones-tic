@@ -1,5 +1,11 @@
 # Gestión de datos corporativos y Big Data
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Gestión de Datos Corporativos
 
 La gestión de datos corporativos es fundamental en cualquier organización. Los sistemas de información están compuestos por **hardware** (subsistema físico), **software** (subsistema lógico), **datos**, **métodos o procedimientos**, y **personas**.

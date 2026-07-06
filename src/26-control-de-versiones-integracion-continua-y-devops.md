@@ -1,5 +1,11 @@
 # Control de versiones, integración continua y DevOps
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## DevOps y CI/CD
 
 DevOps es un conjunto de prácticas que busca integrar los equipos de desarrollo de software (Dev) y de operaciones de TI (Ops) para acelerar el ciclo de vida del desarrollo y mejorar la calidad de la entrega. El objetivo principal de DevOps es fomentar una comunicación fluida, colaboración y automatización a lo largo del ciclo de desarrollo y operación del software, promoviendo una cultura de cambio constante y mejora continua.

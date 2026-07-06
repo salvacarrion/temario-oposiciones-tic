@@ -1,5 +1,11 @@
 # Leyes de igualdad
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Ley Orgánica 3/2007, para la igualdad efectiva de mujeres y hombres
 
 ### Objeto y Principios Generales

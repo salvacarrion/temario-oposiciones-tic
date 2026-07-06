@@ -1,5 +1,11 @@
 # Administración electrónica y plataformas de la Generalitat
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Decreto 220/2014, del Reglamento de administración electrónica de la Comunitat Valenciana
 
 ### Objetivos Específicos

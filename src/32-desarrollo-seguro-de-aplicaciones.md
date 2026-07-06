@@ -1,5 +1,11 @@
 # Desarrollo seguro de aplicaciones
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Proceso de desarrollo seguro
 
 El **proceso de desarrollo seguro** se enfoca en la creación de sistemas y aplicaciones robustos que integren medidas de seguridad desde el inicio y a lo largo de todo el ciclo de vida del desarrollo. Este proceso es fundamental para garantizar la protección de los datos y el cumplimiento normativo en el entorno tecnológico actual.

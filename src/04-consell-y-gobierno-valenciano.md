@@ -1,5 +1,11 @@
 # El Consell y el gobierno valenciano (Ley 5/1983)
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Título I. Del President de la Generalitat
 
 ### CAPÍTULO I: DE LA ELECCIÓN Y EL ESTATUTO PERSONAL

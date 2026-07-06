@@ -1,5 +1,11 @@
 # Infraestructuras y servicios comunes de interoperabilidad
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 La interoperabilidad entre Administraciones Públicas se refiere a la capacidad de intercambiar información y servicios de manera eficiente y efectiva. Esto se logra mediante infraestructuras y servicios comunes y compartidos.
 
 - **Infraestructuras**:\ Incluyen redes de comunicación, sistemas de información y estándares técnicos de interoperabilidad. Ejemplos:

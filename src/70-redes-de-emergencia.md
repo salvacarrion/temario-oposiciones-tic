@@ -1,5 +1,11 @@
 # Redes de emergencia
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Redes de emergencia
 
 Las **redes de emergencia**, o **PPDR (Public Protection & Disaster Recovery),** son sistemas de comunicación diseñados para ser utilizados en situaciones de emergencia o crisis.

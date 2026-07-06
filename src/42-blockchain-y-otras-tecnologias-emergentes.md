@@ -1,5 +1,11 @@
 # Blockchain y otras tecnologías emergentes
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Tecnología blockchain, funcionamiento, tipos, estructura y aplicaciones
 
 **Tecnología que permite la creación de una base de datos distribuida y descentralizada** de forma segura. Su funcionamiento se basa en bloques de información que están encadenados entre sí, proporcionando una mayor **seguridad, transparencia y confiabilidad** en las transacciones que se realizan.

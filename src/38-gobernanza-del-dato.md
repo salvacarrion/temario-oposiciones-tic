@@ -1,5 +1,11 @@
 # Gobernanza del dato
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Gobernanza del dato y metodologías
 
 La gobernanza del dato es un enfoque estratégico para convertir los datos en un activo fundamental de la organización. Implica el ejercicio de autoridad, control y toma de decisiones compartida sobre la gestión de los activos de datos. Esto abarca la definición de políticas y procedimientos para la recopilación, almacenamiento, protección y uso de los datos, asignando responsables e implementando sistemas de control. Las responsabilidades incluyen establecer la infraestructura, configurar y mantener procesos y políticas, e identificar a quienes gestionarán y protegerán los datos. Sus componentes principales son **Personas**, **Procesos**, **Tecnología** y **Mejora continua**, y se rige por principios como ser accesible y seguro, sostenible, y orientado a la mejora continua.

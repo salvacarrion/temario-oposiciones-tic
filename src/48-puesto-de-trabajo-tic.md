@@ -1,5 +1,11 @@
 # Puesto de trabajo TIC
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## El puesto de trabajo TIC en una organización
 
 El puesto de trabajo TIC es fundamental para asegurar el correcto funcionamiento y gestión de la infraestructura tecnológica en una organización. Su objetivo principal es garantizar que todos los sistemas y aplicaciones operen de manera eficiente y segura, facilitando así las actividades cotidianas de la empresa.

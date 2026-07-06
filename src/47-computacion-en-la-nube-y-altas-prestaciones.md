@@ -1,5 +1,11 @@
 # Computación en la nube y de altas prestaciones
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Cluster computing, Grid computing, Cloud computing
 
 ### Clúster

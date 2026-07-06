@@ -1,5 +1,11 @@
 # Análisis de procesos
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Análisis de Procesos
 
 Conjunto de actividades que convierten elementos de entrada en elementos de salida.

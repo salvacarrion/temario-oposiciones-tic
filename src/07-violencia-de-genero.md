@@ -1,5 +1,11 @@
 # Protección integral contra la violencia de género (Ley Orgánica 1/2004)
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ### Definición
 
 *“Todo acto de **violencia física y psicológica** que se ejerce sobre las mujeres por parte de quienes estén o hayan estado ligados a ellas por relaciones de afectividad”.*
