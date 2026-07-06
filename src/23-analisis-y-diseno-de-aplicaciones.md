@@ -1,5 +1,11 @@
 # Análisis y diseño de aplicaciones
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Análisis y diseño de aplicaciones
 
 El análisis y diseño de aplicaciones son etapas fundamentales dentro del desarrollo de sistemas de información. Estas tareas aseguran que el software cumpla con los requisitos definidos, sea funcional y esté preparado para ser implementado de manera efectiva.

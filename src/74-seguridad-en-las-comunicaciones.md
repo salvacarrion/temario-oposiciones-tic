@@ -1,5 +1,11 @@
 # Seguridad en las comunicaciones
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Seguridad en las Comunicaciones
 
 La seguridad en las comunicaciones protege la integridad, confidencialidad y disponibilidad de los datos durante su transmisión a través de redes. Incluye medidas, políticas y tecnologías que mitigan riesgos y previenen accesos no autorizados.

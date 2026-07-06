@@ -1,5 +1,11 @@
 # Sistemas de información geográfica
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Sistemas de Información Geográfica (SIG)
 
 Son herramientas esenciales para la gestión y análisis de datos geográficos, integrando información gráfica y alfanumérica. Estos sistemas permiten trabajar con planos digitales y datos asociados, ofreciendo múltiples funcionalidades y aplicaciones prácticas.

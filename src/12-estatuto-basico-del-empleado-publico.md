@@ -1,5 +1,11 @@
 # El Estatuto Básico del Empleado Público (TREBEP)
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Objeto, ámbito y clases de personal (Títulos I y II)
 
 - **Establecer las bases** del régimen estatutario de los funcionarios públicos incluidos en su ámbito de aplicación.

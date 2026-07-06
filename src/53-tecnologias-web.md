@@ -1,5 +1,11 @@
 # Tecnologías web
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Desarrollo de páginas web
 
 **Lenguajes de marcas o de marcado**: Definen la estructura, la semántica y controlan el procesamiento de un documento digital.

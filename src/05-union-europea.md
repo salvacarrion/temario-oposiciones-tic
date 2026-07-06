@@ -1,5 +1,11 @@
 # La Unión Europea
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Características del Ordenamiento Jurídico de la Unión Europea
 
 La Unión Europea (UE) es una **organización supranacional** compuesta por **27 Estados miembros** que ceden parte de sus competencias para formar un sistema jurídico de obligado cumplimiento. Fue establecida mediante el **Tratado de Maastricht** el 1 de noviembre de 1993.

@@ -1,5 +1,11 @@
 # Prevención de riesgos laborales
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Ley 31/1995, de prevención de riesgos laborales
 
 ### Objeto

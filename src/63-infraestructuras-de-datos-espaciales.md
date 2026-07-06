@@ -1,5 +1,11 @@
 # Infraestructuras de datos espaciales
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Definición y Componentes. Arquitectura y Servicios Web de una IDE
 
 **Infraestructuras de Datos Espaciales (IDE):** Son plataformas de interoperabilidad diseñadas para compartir información geográfica de forma eficiente. Integran datos espaciales de diferentes organismos mediante tecnologías, políticas, acuerdos institucionales, datos y servicios estandarizados, facilitando su acceso, manejo, intercambio y distribución a través de Internet.

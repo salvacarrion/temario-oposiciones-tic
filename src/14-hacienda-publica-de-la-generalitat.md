@@ -1,5 +1,11 @@
 # Hacienda pública de la Generalitat (Ley 1/2015)
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Ley 1/2015, de Hacienda Pública, del Sector Público Instrumental y de Subvenciones
 
 ### Objeto de la Ley

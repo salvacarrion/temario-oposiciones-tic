@@ -1,5 +1,11 @@
 # Internet de las cosas y redes de sensores
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Internet de las Cosas (IoT)
 
 La **Internet de las Cosas, o Internet of Things (IoT)** es una red de dispositivos conectados que pueden recopilar y compartir datos a través de internet. Estos dispositivos no solo se comunican entre sí, sino que también pueden tomar decisiones de manera autónoma.

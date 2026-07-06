@@ -1,5 +1,11 @@
 # APIs y apificación
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Apificación
 
 La **apificación** es la generalización del uso de APIs en la estrategia de negocio, permitiendo exponer partes de una aplicación o sistema como APIs. Esto facilita que otras aplicaciones puedan interactuar y acceder a datos o funcionalidades del sistema original. Es un proceso clave en la digitalización y en la conexión de servicios tecnológicos.

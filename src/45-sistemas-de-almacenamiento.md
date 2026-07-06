@@ -1,5 +1,11 @@
 # Sistemas de almacenamiento
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Sistemas de almacenamiento: DAS, NAS, y SAN
 
 Los **sistemas de almacenamiento** son fundamentales en entornos empresariales y departamentales de gran envergadura. Se optimizan mediante la **virtualización del almacenamiento**, lo que permite gestionar los recursos de manera más eficiente y flexible.

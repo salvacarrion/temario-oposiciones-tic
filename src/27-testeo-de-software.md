@@ -1,5 +1,11 @@
 # Testeo de software
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Fundamentos del testeo (ISTQB)
 
 El testeo de software es una disciplina crítica dentro del desarrollo de software que permite identificar defectos y verificar que el software cumple con los requisitos establecidos. Según los fundamentos de ISTQB (International Software Testing Qualifications Board), el testeo de software ayuda a validar la funcionalidad del sistema y a mejorar la calidad general del producto antes de su implementación en entornos productivos.

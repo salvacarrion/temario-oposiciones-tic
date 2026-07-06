@@ -1,5 +1,11 @@
 # Virtualización de redes
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Virtualización de redes
 
 Es una tecnología que combina hardware y software para presentar una vista lógica de la red que difiere de la infraestructura física subyacente. Esta técnica permite **combinar múltiples redes físicas en una sola red virtual** o, por el contrario, **dividir una red física en varias redes virtuales independientes**. Cada red virtual puede tener sus propias características y configuraciones, lo que proporciona una gran flexibilidad en la gestión de recursos.

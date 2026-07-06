@@ -1,5 +1,11 @@
 # Modelos OSI y TCP/IP
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Modelo de Referencia OSI (Open Systems Interconnection)
 
 El Modelo OSI es un marco de referencia lógico y conceptual diseñado para estandarizar y normalizar la interconexión de sistemas abiertos, facilitando la compatibilidad entre diferentes tecnologías de red. Creado en 1980 por la **ISO** (International Organization for Standardization), **no es un modelo de red** específico **ni define protocolos concretos**, pero sí establece las funcionalidades que deben cumplir los protocolos de comunicación para lograr un estándar común.

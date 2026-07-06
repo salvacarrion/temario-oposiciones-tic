@@ -1,5 +1,11 @@
 # Dirección y gestión de proyectos
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ### Introducción a la Gestión de Proyectos
 
 Un **proyecto** es una estructura organizacional temporal creada para desarrollar un producto o servicio único (entregable) dentro de limitaciones como tiempo, coste y calidad.

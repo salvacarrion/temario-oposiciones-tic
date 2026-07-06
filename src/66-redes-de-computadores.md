@@ -1,5 +1,11 @@
 # Redes de computadores
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Red de computadores: Componentes, Categorías, dispositivos,…
 
 Una red de computadores es un conjunto de equipos, conocidos como nodos, y software conectados entre sí mediante dispositivos físicos que transmiten y reciben datos a través de impulsos eléctricos, ondas electromagnéticas u otros medios. Su finalidad es compartir información, recursos y ofrecer servicios entre los dispositivos conectados.

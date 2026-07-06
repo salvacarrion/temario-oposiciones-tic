@@ -1,5 +1,11 @@
 # Protección de datos personales
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## El Reglamento General de Protección de Datos (RGPD)
 
 El Reglamento General de Protección de Datos (RGPD) es la normativa europea que regula la protección de las personas físicas en lo que respecta al tratamiento de sus datos personales y las normas relativas a la libre circulación de dichos datos.

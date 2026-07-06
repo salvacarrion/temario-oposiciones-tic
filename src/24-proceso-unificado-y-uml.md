@@ -1,5 +1,11 @@
 # Proceso unificado y UML
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Proceso Unificado de Desarrollo de Software
 
 El **Proceso Unificado de Desarrollo de Software (PUDS)** es un marco de desarrollo que se caracteriza por ser **dirigido por casos de uso**, **centrado en la arquitectura** y **iterativo e incremental**. Ofrece un conjunto mínimo de prácticas que maximizan la eficiencia de los equipos de desarrollo, independientemente del tipo de proyecto. Hace uso de **UML** para la especificación y diseño y tiene como refinamiento más conocido el **RUP (Rational Unified Process)**, una versión privada desarrollada por IBM.

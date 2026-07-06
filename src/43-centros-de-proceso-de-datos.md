@@ -1,5 +1,11 @@
 # Centros de proceso de datos
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Diseño de un Centro de Procesamiento de Datos (CPD)
 
 El Centro de Procesamiento de Datos (CPD) o Centro de Datos Corporativo (CDC) es el lugar donde se concentran todos los recursos necesarios para el almacenamiento, procesamiento y transmisión de la información de una organización. Su principal objetivo es garantizar la continuidad y disponibilidad de los servicios, asegurando que los sistemas críticos estén siempre operativos.

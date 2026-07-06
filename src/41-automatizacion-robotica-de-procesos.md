@@ -1,5 +1,11 @@
 # Automatización robótica de procesos (RPA)
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Automatización Robótica de Procesos (RPA)
 
 La **Automatización Robótica de Procesos (RPA)** consiste en una tecnología emergente que permite automatizar procesos de negocio replicando las acciones de un ser humano al interactuar con la interfaz de usuario de un sistema informático. A diferencia de otras formas de automatización, RPA prescinde de las dependencias de APIs de programación y utiliza robots de software que interpretan la interfaz de aplicaciones de terceros para ejecutar tareas siguiendo los mismos pasos que un usuario humano. Estos robots son configurados o "entrenados" mediante la demostración de pasos, eliminando la necesidad de programación mediante código.

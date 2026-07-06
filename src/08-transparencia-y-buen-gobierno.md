@@ -1,5 +1,11 @@
 # Transparencia y buen gobierno
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Ley 19/2013 de Transparencia, Acceso a la Información Pública y Buen Gobierno
 
 ### Objeto

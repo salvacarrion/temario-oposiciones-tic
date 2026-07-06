@@ -1,5 +1,11 @@
 # Ciberseguridad
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Marco normativo de la ciberseguridad
 
 La ciberseguridad en la Administración de la Generalitat se basa en una serie de normativas que establecen los principios y requisitos para proteger adecuadamente la información y los servicios prestados.

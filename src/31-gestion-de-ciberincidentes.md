@@ -1,5 +1,11 @@
 # Gestión de ciberincidentes
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Gestión de ciberincidentes
 
 ### Fases: Preparación, Identificación, Contención, Mitigación, Recuperación y Actuaciones Post-Incidente

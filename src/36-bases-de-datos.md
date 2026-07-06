@@ -1,5 +1,11 @@
 # Bases de datos
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Diseño e implementación de bases de datos relacionales
 
 El diseño e implementación de bases de datos relacionales es fundamental en la gestión eficiente de datos en sistemas informáticos. Un **Sistema de Gestión de Bases de Datos (SGBD o DBMS)** es el software encargado de administrar el acceso y la manipulación de los datos almacenados.

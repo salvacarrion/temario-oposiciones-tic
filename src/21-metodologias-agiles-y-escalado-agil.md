@@ -1,5 +1,11 @@
 # Metodologías ágiles y escalado ágil
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Clasificación de las Metodologías de Desarrollo
 
 Las metodologías de desarrollo se clasifican en función de tres conceptos clave: **desarrollo**, **trabajo** y **conocimiento**.

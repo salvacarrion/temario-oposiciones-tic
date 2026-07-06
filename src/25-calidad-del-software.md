@@ -1,5 +1,11 @@
 # Calidad del software
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Aseguramiento de la calidad del software
 
 El aseguramiento de la calidad del software es un conjunto de procedimientos y normas que garantizan que el desarrollo y los productos de software cumplan con los niveles de calidad establecidos. Este proceso busca minimizar errores y asegurar que el software entregado se ajuste a las especificaciones y necesidades del cliente, garantizando su correcto funcionamiento y fiabilidad.

@@ -1,5 +1,11 @@
 # Redes inalámbricas y 5G
 
+!!! warning "Tema pendiente de revisión"
+    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
+    incompleto, desactualizado o contener errores. Úsalo con precaución y
+    contrástalo siempre con fuentes oficiales.
+
+
 ## Redes inalámbricas
 
 Las redes inalámbricas permiten la conexión de nodos mediante ondas electromagnéticas, eliminando la necesidad de una red cableada. Son esenciales en entornos donde la movilidad y la flexibilidad son prioritarias.
