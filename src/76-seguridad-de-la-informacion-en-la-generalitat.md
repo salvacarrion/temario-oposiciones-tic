@@ -4,6 +4,8 @@ La seguridad de la información en la Administración de la Generalitat se rige 
 
 ## Decreto 49/2025, de política de seguridad de la información
 
+**Sin modificaciones desde su publicación (2 de abril de 2025).**
+
 ### Características y estructura
 
 - **Denominación oficial**: Decreto 49/2025, de **1 de abril**, del Consell, por el que se establece la política de la seguridad de la información de la Administración de la Generalitat (**DOGV de 2 de abril de 2025**; corrección de errores de 4 de abril de 2025, que subsana la numeración del art. 9).
@@ -61,6 +63,8 @@ El art. 9 estructura la organización de la seguridad en **tres niveles** (salvo
 - **Entrada en vigor** (DF sexta): el día siguiente al de su publicación en el DOGV.
 
 ## Orden 19/2013, de uso seguro de medios tecnológicos
+
+**Texto consolidado a 6 de junio de 2019.**
 
 ### Características y estructura
 

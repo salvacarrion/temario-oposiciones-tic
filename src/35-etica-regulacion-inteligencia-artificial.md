@@ -16,6 +16,8 @@ Estos principios inspiran los requisitos del Reglamento y sirven de base para lo
 
 ## El Reglamento de Inteligencia Artificial: objeto, ámbito y definiciones
 
+**Sin modificaciones desde su entrada en vigor (1 de agosto de 2024).**
+
 El **Reglamento (UE) 2024/1689**, de 13 de junio de 2024 (Reglamento de Inteligencia Artificial, conocido como *AI Act*), es la primera regulación integral de la IA del mundo. Se publicó en el DOUE el **12 de julio de 2024** y entró en vigor el **1 de agosto de 2024**, con aplicación escalonada.
 
 - **Objeto (art. 1)**: «mejorar el funcionamiento del mercado interior y promover la adopción de una inteligencia artificial (IA) centrada en el ser humano y fiable, garantizando al mismo tiempo un elevado nivel de protección de la salud, la seguridad y los derechos fundamentales», así como «prestar apoyo a la innovación».

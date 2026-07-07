@@ -1,4 +1,6 @@
-# El Estatuto de Autonomía de la Comunitat Valenciana (Ley Orgánica 5/1982)
+# Estatuto de Autonomía de la Comunitat Valenciana (Ley Orgánica 5/1982)
+
+**Texto consolidado a 28 de diciembre de 2022.**
 
 ## Características y estructura
 

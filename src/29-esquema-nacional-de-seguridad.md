@@ -1,4 +1,6 @@
-# El Esquema Nacional de Seguridad (Real Decreto 311/2022)
+# Esquema Nacional de Seguridad (Real Decreto 311/2022)
+
+**Texto consolidado a 6 de noviembre de 2024.**
 
 El **Real Decreto 311/2022, de 3 de mayo**, regula el **Esquema Nacional de Seguridad (ENS)**, establecido en el **artículo 156.2 de la Ley 40/2015**, de Régimen Jurídico del Sector Público. Deroga el **Real Decreto 3/2010, de 8 de enero**, para adaptar el esquema a la evolución de las ciberamenazas, al marco europeo de ciberseguridad y a la creciente dependencia tecnológica del sector público.
 

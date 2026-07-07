@@ -1,4 +1,6 @@
-# La Constitución Española de 1978
+# Constitución Española de 1978
+
+**Texto consolidado a 20 de mayo de 2026.**
 
 ## Características y estructura
 
