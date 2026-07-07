@@ -1,535 +1,319 @@
 # Protección de datos personales
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
-
+La protección de datos personales es un derecho fundamental amparado por el **artículo 18.4 de la Constitución**. Su marco vigente lo forman el **Reglamento (UE) 2016/679** (Reglamento General de Protección de Datos, RGPD), directamente aplicable en toda la Unión Europea, y la **Ley Orgánica 3/2018** (LOPDGDD), que adapta el ordenamiento español al reglamento y lo completa.
 
 ## El Reglamento General de Protección de Datos (RGPD)
 
-El Reglamento General de Protección de Datos (RGPD) es la normativa europea que regula la protección de las personas físicas en lo que respecta al tratamiento de sus datos personales y las normas relativas a la libre circulación de dichos datos.
+**Sin modificaciones desde su aplicación (25 de mayo de 2018).**
 
-### Objeto
+El **Reglamento (UE) 2016/679, de 27 de abril de 2016**, regula la protección de las personas físicas en lo que respecta al tratamiento de sus datos personales y la libre circulación de estos datos. Deroga la Directiva 95/46/CE y, como reglamento, es obligatorio en todos sus elementos y directamente aplicable en cada Estado miembro **desde el 25 de mayo de 2018** (art. 99).
 
-Proteger los **derechos y libertades fundamentales de las personas físicas**, especialmente su derecho a la protección de datos personales. Además, establece que la **libre circulación de datos personales** dentro de la Unión Europea no puede ser restringida ni prohibida por motivos relacionados con la protección de las personas físicas en lo que respecta al tratamiento de datos personales.
+### Objeto, ámbito y definiciones
 
-### Ámbito de Aplicación
+- **Objeto (art. 1)**: proteger «los derechos y libertades fundamentales de las personas físicas y, en particular, su derecho a la protección de los datos personales». La libre circulación de los datos personales en la Unión no puede ser restringida ni prohibida por motivos relacionados con esa protección.
+- **Ámbito material (art. 2)**: se aplica al tratamiento total o parcialmente automatizado de datos personales, y al no automatizado de datos contenidos o destinados a ser incluidos en un fichero.
+- **Exclusiones**: actividades fuera del ámbito del Derecho de la Unión; actividades exclusivamente personales o domésticas; tratamientos por autoridades competentes con fines de prevención, investigación, detección o enjuiciamiento de infracciones penales (regidos por la Directiva (UE) 2016/680, transpuesta en España por la **LO 7/2021**).
+- **Ámbito territorial (art. 3)**: tratamiento en el contexto de las actividades de un **establecimiento en la Unión** (aunque el tratamiento ocurra fuera) y tratamiento de interesados que residan en la Unión por responsables no establecidos en ella, cuando ofrezcan bienes o servicios o controlen su comportamiento.
 
-El RGPD **se aplica** a:
+Definiciones clave (art. 4):
 
-- Tratamientos total o parcialmente automatizados de datos personales.
-- Tratamientos no automatizados de datos personales que formen parte de un fichero o estén destinados a ser incluidos en uno.
+- **Datos personales**: toda información sobre una persona física identificada o identificable.
+- **Tratamiento**: cualquier operación o conjunto de operaciones realizadas sobre datos personales, sea o no por procedimientos automatizados.
+- **Seudonimización**: tratamiento que impide atribuir los datos a un interesado sin utilizar información adicional, que debe mantenerse por separado.
+- **Fichero**: conjunto estructurado de datos personales accesibles con arreglo a criterios determinados.
+- **Responsable del tratamiento**: quien determina los fines y medios del tratamiento.
+- **Encargado del tratamiento**: quien trata datos personales por cuenta del responsable.
+- **Consentimiento**: «toda manifestación de voluntad libre, específica, informada e inequívoca» por la que el interesado acepta el tratamiento.
+- **Violación de la seguridad de los datos**: toda violación de la seguridad que ocasione la destrucción, pérdida o alteración accidental o ilícita de datos, o su comunicación o acceso no autorizados.
 
-**Se excluyen** de su ámbito:
+### Principios y licitud del tratamiento
 
-- Actividades que no estén comprendidas en el Derecho de la Unión.
-- Tratamientos realizados por personas físicas en el ejercicio de actividades exclusivamente personales o domésticas.
-- Tratamientos efectuados por autoridades competentes con fines de prevención, investigación, detección o enjuiciamiento de infracciones penales.
+Principios del tratamiento (art. 5), cuyo cumplimiento debe poder demostrar el responsable (**responsabilidad proactiva**):
 
-### Definiciones Clave
+- **Licitud, lealtad y transparencia**: tratamiento lícito, leal y transparente con el interesado.
+- **Limitación de la finalidad**: fines determinados, explícitos y legítimos; sin tratamientos ulteriores incompatibles.
+- **Minimización de datos**: adecuados, pertinentes y limitados a lo necesario.
+- **Exactitud**: exactos y, si fuera necesario, actualizados.
+- **Limitación del plazo de conservación**: identificación de los interesados solo durante el tiempo necesario.
+- **Integridad y confidencialidad**: seguridad adecuada, incluida la protección contra el tratamiento no autorizado o ilícito.
 
-- **Datos personales**: Cualquier información sobre una persona física identificada o identificable.
-- **Tratamiento**: Cualquier operación o conjunto de operaciones realizadas sobre datos personales, ya sea por procedimientos automatizados o no.
-- **Seudonimización**: Tratamiento de datos personales de manera que no puedan atribuirse a un interesado sin utilizar información adicional, siempre que dicha información adicional se mantenga separada.
-- **Fichero**: Cualquier conjunto estructurado de datos personales accesibles según criterios específicos, ya sea centralizado, descentralizado o distribuido de forma funcional o geográfica.
-- **Responsable del tratamiento**: Persona física o jurídica que determina los fines y medios del tratamiento.
-- **Encargado del tratamiento**: Persona física o jurídica que trata datos personales por cuenta del responsable del tratamiento.
-- **Consentimiento del interesado**: Toda manifestación de voluntad libre, específica, informada e inequívoca por la que el interesado acepta el tratamiento de sus datos personales.
-
-### Principios del Tratamiento de Datos
-
-- **Licitud, lealtad y transparencia**: Los datos deben tratarse de manera legal, justa y transparente.
-- **Limitación de la finalidad**: Recogidos con fines determinados, explícitos y legítimos, y no tratados ulteriormente de manera incompatible con dichos fines.
-- **Minimización de datos**: Adecuados, pertinentes y limitados a lo necesario en relación con los fines para los que son tratados.
-- **Exactitud**: Datos exactos y, si fuera necesario, actualizados.
-- **Limitación del plazo de conservación**: Mantenidos de forma que se permita la identificación de los interesados durante no más tiempo del necesario.
-- **Integridad y confidencialidad**: Tratados de manera que se garantice una seguridad adecuada, incluida la protección contra el tratamiento no autorizado o ilícito.
-- **Responsabilidad proactiva**: El responsable del tratamiento es responsable del cumplimiento de estos principios y capaz de demostrarlo.
-
-### Licitud del Tratamiento
-
-El tratamiento es lícito si se cumple al menos una de las siguientes condiciones:
+El tratamiento solo es lícito si concurre al menos una de las **bases jurídicas del art. 6**:
 
 - Consentimiento del interesado.
-- Necesario para la ejecución de un contrato.
-- Necesario para el cumplimiento de una obligación legal.
-- Necesario para proteger intereses vitales del interesado o de otra persona física.
-- Necesario para el cumplimiento de una misión realizada en interés público o en el ejercicio de poderes públicos.
-- Necesario para la satisfacción de intereses legítimos perseguidos por el responsable o por un tercero.
-
-### Condiciones para el Consentimiento
-
-El responsable del tratamiento debe ser capaz de demostrar que el interesado ha dado su consentimiento al tratamiento de sus datos personales. El interesado tiene derecho a retirar su consentimiento en cualquier momento. En el caso de servicios de la sociedad de la información dirigidos a niños, **el consentimiento es válido a partir de los 16 años**, aunque los Estados miembros pueden establecer una edad inferior, con **un mínimo absoluto de 13 años (en España, 14 años)**.
-
-### Tratamiento de Categorías Especiales de Datos Personales
-
-Está prohibido el tratamiento de datos que revelen:
-
-- Origen étnico o racial.
-- Opiniones políticas.
-- Convicciones religiosas o filosóficas.
-- Afiliación sindical.
-- Datos genéticos.
-- Datos biométricos dirigidos a identificar de manera unívoca a una persona física.
-- Datos relativos a la salud.
-- Datos relativos a la vida sexual u orientación sexual.
-
-### Excepciones:
-
-- Consentimiento explícito del interesado (salvo que el Derecho de la Unión o de los Estados miembros lo prohíba).
-- Cumplimiento de obligaciones y ejercicio de derechos específicos del responsable o del interesado en el ámbito laboral y de la seguridad y protección social.
+- Ejecución de un contrato en el que el interesado es parte.
+- Cumplimiento de una obligación legal del responsable.
 - Protección de intereses vitales del interesado o de otra persona física.
-- Tratamiento efectuado en el ámbito de sus actividades legítimas y con las garantías adecuadas por parte de fundaciones, asociaciones u otros organismos sin ánimo de lucro.
-- Datos que el interesado haya hecho manifiestamente públicos.
-- Necesario por razones de interés público esencial.
-- Fines de medicina preventiva o laboral, evaluación de la capacidad laboral, diagnóstico médico, prestación de asistencia o tratamiento de tipo sanitario o social.
-- Fines de archivo en interés público, investigación científica o histórica o fines estadísticos.
+- Misión realizada en **interés público** o en el ejercicio de **poderes públicos**.
+- Satisfacción de **intereses legítimos** del responsable o de un tercero; esta base **no es aplicable al tratamiento realizado por las autoridades públicas** en el ejercicio de sus funciones.
 
-### Tratamiento de Datos Personales Relativos a Condenas e Infracciones Penales
+Condiciones del consentimiento (arts. 7 y 8):
 
-Sólo puede llevarse a cabo bajo la supervisión de autoridades públicas o si está autorizado por el Derecho de la Unión o de los Estados miembros que prevea garantías adecuadas para los derechos y libertades de los interesados.
+- El responsable debe poder **demostrar** que el interesado consintió; la retirada es posible en cualquier momento y tan fácil como darlo.
+- En servicios de la sociedad de la información dirigidos a niños, el consentimiento es válido a partir de los **16 años**; los Estados pueden rebajar la edad hasta un mínimo de **13 años**. En España es de **14 años** (art. 7 LOPDGDD).
 
-### Derechos del Interesado
+Categorías especiales de datos (arts. 9 y 10): está **prohibido** tratar datos que revelen origen étnico o racial, opiniones políticas, convicciones religiosas o filosóficas o afiliación sindical, así como datos genéticos, biométricos dirigidos a identificar de manera unívoca a una persona, datos de salud y datos de vida sexual u orientación sexual. Excepciones principales:
 
-- **Derecho de Información**: El responsable debe proporcionar al interesado información clara y transparente sobre el tratamiento de sus datos en el plazo de un mes, prorrogable hasta dos meses más en casos necesarios, informando del motivo de la prórroga.
-    - **Información a facilitar:**
-        - Identidad y datos de contacto del responsable y, en su caso, de su representante.
-        - Datos de contacto del delegado de protección de datos.
-        - Fines del tratamiento.
-        - Base jurídica del tratamiento.
-        - Destinatarios o categorías de destinatarios de los datos personales.
-        - Intención de transferir datos personales a un tercer país u organización internacional.
-        - Plazo de conservación de los datos.
-        - Existencia de derechos de acceso, rectificación, supresión, limitación, oposición y portabilidad.
-        - Derecho a retirar el consentimiento en cualquier momento.
-        - Derecho a presentar una reclamación ante una autoridad de control.
-- **Derecho de Rectificación**: El interesado tiene derecho a obtener sin dilación indebida la rectificación de los datos personales inexactos que le conciernan.
-- **Derecho de Supresión ("Derecho al Olvido")**: El interesado tiene derecho a obtener sin dilación indebida la supresión de los datos personales que le conciernan cuando:
-    - Ya no sean necesarios en relación con los fines para los que fueron recogidos.
-    - Retire el consentimiento en que se basaba el tratamiento.
-    - Se oponga al tratamiento y no prevalezcan otros motivos legítimos.
-    - Los datos hayan sido tratados ilícitamente.
-    - Deban suprimirse para el cumplimiento de una obligación legal.
-    - **Excepciones:**
-        - Ejercicio del derecho a la libertad de expresión e información.
-        - Cumplimiento de una obligación legal.
-        - Razones de interés público en el ámbito de la salud pública.
-        - Fines de archivo en interés público, investigación científica o histórica o fines estadísticos.
-        - Formulación, ejercicio o defensa de reclamaciones.
-- **Derecho a la Limitación del Tratamiento**: El interesado tiene derecho a obtener la limitación del tratamiento cuando:
-    - Impugne la exactitud de los datos personales.
-    - El tratamiento sea ilícito y se oponga a la supresión de los datos.
-    - El responsable ya no necesite los datos, pero el interesado los necesite para reclamaciones.
-    - Se haya opuesto al tratamiento y esté pendiente la verificación de motivos legítimos.
-- **Obligación de Notificación**: El responsable debe comunicar cualquier rectificación, supresión o limitación del tratamiento a cada uno de los destinatarios a quienes se hayan comunicado los datos personales.
-- **Derecho a la Portabilidad de los Datos**: El interesado tiene derecho a recibir los datos personales que le incumban en un formato estructurado, de uso común y lectura mecánica, y a transmitirlos a otro responsable sin impedimentos.
-- **Derecho de Oposición**: El interesado puede oponerse en cualquier momento al tratamiento de sus datos personales por motivos relacionados con su situación particular.
-    - **Excepciones:**
-        - Cuando existan motivos legítimos imperiosos para el tratamiento que prevalezcan sobre los intereses, derechos y libertades del interesado.
-        - Para el reconocimiento, ejercicio o defensa de reclamaciones.
-        - Fines de investigación científica o histórica o fines estadísticos por razones de interés público.
-- **Limitaciones**: El Derecho de la Unión o de los Estados miembros puede limitar el alcance de los derechos y obligaciones para salvaguardar:
-    - Seguridad del Estado.
-    - Defensa.
-    - Seguridad pública.
-    - Prevención, investigación, detección o enjuiciamiento de infracciones penales.
-    - Otros intereses públicos importantes.
-    - Protección judicial e independencia de los jueces.
-    - Protección del interesado o de los derechos y libertades de otras personas.
+- Consentimiento explícito del interesado (salvo que el Derecho lo prohíba).
+- Obligaciones y derechos en el ámbito laboral y de la seguridad y protección social.
+- Intereses vitales, cuando el interesado no pueda consentir.
+- Actividades legítimas de fundaciones, asociaciones y entidades sin ánimo de lucro.
+- Datos hechos manifiestamente públicos por el interesado.
+- Reclamaciones y tribunales; interés público esencial.
+- Medicina preventiva o laboral, diagnóstico, asistencia sanitaria o social; salud pública.
+- Archivo en interés público, investigación científica o histórica y estadística.
 
-### Delegado de Protección de Datos (DPD)
+Los datos relativos a **condenas e infracciones penales** solo pueden tratarse bajo la supervisión de las autoridades públicas o cuando lo autorice el Derecho con garantías adecuadas (art. 10).
 
-El Delegado de Protección de Datos es el profesional encargado de garantizar el cumplimiento de la normativa de protección de datos dentro de una organización.
+### Derechos del interesado (arts. 12 a 23)
 
-- **Designación Obligatoria**:
-    - Cuando el tratamiento lo lleva a cabo una autoridad u organismo público.
-    - Cuando las actividades principales del responsable o encargado consistan en operaciones que requieran una observación habitual y sistemática de interesados a gran escala.
-    - Cuando las actividades principales consistan en el tratamiento a gran escala de categorías especiales de datos o datos relativos a condenas e infracciones penales.
-- **Designación Conjunta**: Una entidad puede designar un único DPD para varias autoridades u organismos públicos, teniendo en cuenta su estructura y tamaño.
-- **Cualificaciones**: El DPD debe ser designado atendiendo a sus cualidades profesionales y, en particular, a sus conocimientos especializados del Derecho y las prácticas en materia de protección de datos.
-- **Posición en la Organización**:
-    - El responsable o encargado debe publicar sus datos de contacto y comunicarlos a la autoridad de control.
-    - Debe garantizar que el DPD no reciba instrucciones en cuanto al desempeño de sus funciones.
-    - No puede ser destituido ni sancionado por el desempeño de sus funciones.
-    - Rinde cuentas directamente al más alto nivel jerárquico.
-- **Funciones**:
-    - Informar y asesorar al responsable o encargado y a los empleados sobre sus obligaciones en protección de datos.
-    - Supervisar el cumplimiento del RGPD, incluyendo la asignación de responsabilidades, formación y auditorías.
-    - Asesorar en la evaluación de impacto relativa a la protección de datos.
-    - Cooperar y actuar como punto de contacto con la autoridad de control.
-- **Confidencialidad**: Está obligado a mantener el secreto o confidencialidad en el desempeño de sus funciones.
-- **Compatibilidad de Funciones**: Puede desempeñar otras funciones y cometidos, siempre que no den lugar a conflictos de intereses.
-- **Protección de Datos Desde el Diseño y Por Defecto (Art. 25)**:
-    El responsable del tratamiento debe aplicar, tanto en el momento de determinar los medios como en el del propio tratamiento, medidas técnicas y organizativas apropiadas para garantizar y poder demostrar que el tratamiento es conforme con el RGPD.
+El responsable facilita las actuaciones derivadas de una solicitud de derechos **en el plazo de un mes**, prorrogable **otros dos meses** teniendo en cuenta la complejidad y el número de solicitudes, informando de la prórroga y sus motivos dentro del primer mes (art. 12.3). La actuación es **gratuita**, salvo solicitudes manifiestamente infundadas o excesivas.
 
-    - **Medidas a Implementar**:
-        - **Seudonimización y Minimización**: Tratar únicamente los datos personales necesarios para cada finalidad específica.
-        - **Limitación de Acceso**: Garantizar que, por defecto, los datos personales no sean accesibles a un número indeterminado de personas sin intervención del interesado.
-        - **Plazo de Conservación y Accesibilidad**: Aplicar medidas que afecten a la cantidad de datos recogidos, extensión del tratamiento, plazo de conservación y accesibilidad.
-    - **Certificación**: El cumplimiento de estas obligaciones puede demostrarse mediante mecanismos de certificación adecuados.
+- **Información (arts. 13 y 14)**: identidad del responsable, contacto del delegado de protección de datos, fines y base jurídica, destinatarios, transferencias previstas a terceros países, plazo de conservación, derechos del interesado, derecho a retirar el consentimiento y a reclamar ante la autoridad de control. Si los datos no se obtienen del interesado, la información se facilita en un plazo razonable y **a más tardar dentro de un mes** (art. 14.3), añadiendo las categorías de datos y su origen.
+- **Acceso (art. 15)**: confirmación de si se tratan sus datos y acceso a ellos y a la información asociada.
+- **Rectificación (art. 16)**: rectificación sin dilación indebida de los datos inexactos.
+- **Supresión, «derecho al olvido» (art. 17)**: cuando los datos ya no sean necesarios, se retire el consentimiento, haya oposición sin motivos legítimos prevalentes, el tratamiento sea ilícito o lo exija una obligación legal. No procede, entre otros casos, por libertad de expresión e información, cumplimiento de obligaciones legales, salud pública, archivo e investigación, o defensa de reclamaciones.
+- **Limitación del tratamiento (art. 18)**: mientras se verifica la exactitud impugnada, cuando el tratamiento ilícito no deba acabar en supresión, cuando el interesado necesite los datos para reclamaciones o mientras se verifica una oposición.
+- **Notificación (art. 19)**: el responsable comunica las rectificaciones, supresiones y limitaciones a cada destinatario de los datos.
+- **Portabilidad (art. 20)**: recibir los datos «en un formato estructurado, de uso común y lectura mecánica» y transmitirlos a otro responsable.
+- **Oposición (art. 21)**: por motivos relacionados con su situación particular, salvo motivos legítimos imperiosos, defensa de reclamaciones o fines de investigación de interés público.
+- **Decisiones individuales automatizadas (art. 22)**: derecho a no ser objeto de una decisión «basada únicamente en el tratamiento automatizado, incluida la elaboración de perfiles», que produzca efectos jurídicos o afecte significativamente de modo similar.
+- **Limitaciones (art. 23)**: el Derecho de la Unión o de los Estados puede limitar estos derechos para salvaguardar, entre otros, la seguridad del Estado, la defensa, la seguridad pública, la persecución de infracciones penales, otros intereses públicos importantes, la independencia judicial o los derechos de terceros.
 
-## Caso práctico: Análisis de Riesgos en la Protección de Datos (AARR PD)
+### Obligaciones del responsable y del encargado
 
-### Plantilla para el Análisis de Riesgos de Protección de Datos (AARR PD)
+- **Protección de datos desde el diseño y por defecto (art. 25)**: medidas técnicas y organizativas apropiadas (como la seudonimización y la minimización) desde la determinación de los medios del tratamiento; por defecto, solo se tratan los datos necesarios para cada fin específico y no se hacen accesibles a un número indeterminado de personas sin intervención del interesado.
+- **Encargado (art. 28)**: elegir encargados con garantías suficientes y regular el encargo mediante contrato u otro acto jurídico escrito.
+- **Registro de las actividades de tratamiento (art. 30)**: responsables y encargados documentan fines, categorías de interesados y datos, destinatarios, transferencias, plazos de supresión y medidas de seguridad. Exención: empresas u organizaciones con **menos de 250 empleados**, salvo tratamiento con riesgo, no ocasional o de categorías especiales o penales.
+- **Seguridad del tratamiento (art. 32)**: medidas apropiadas al riesgo, entre otras la **seudonimización y el cifrado**; garantizar la «confidencialidad, integridad, disponibilidad y resiliencia permanentes» de sistemas y servicios; restaurar la disponibilidad y el acceso con rapidez tras un incidente; verificar y evaluar regularmente la eficacia de las medidas.
 
-### Responsable del tratamiento:
+Violaciones de la seguridad (arts. 33 y 34):
 
-(Nombre y cargo del responsable del tratamiento de datos)
+- **Notificación a la autoridad de control**: sin dilación indebida y, de ser posible, **a más tardar 72 horas** después de tener constancia, salvo que sea improbable que constituya un riesgo para los derechos y libertades; superado el plazo, deben indicarse los motivos de la dilación.
+- **Contenido mínimo**: naturaleza de la violación (categorías y número aproximado de interesados y de registros), contacto del DPD, posibles consecuencias y medidas adoptadas o propuestas.
+- El **encargado** notifica al responsable sin dilación indebida; el responsable **documenta** todas las violaciones.
+- **Comunicación al interesado**: sin dilación indebida cuando sea probable un **alto riesgo** para sus derechos y libertades. No es necesaria si los datos se hicieron ininteligibles (por ejemplo, cifrado), si medidas posteriores eliminan la probabilidad del alto riesgo o si supone un esfuerzo desproporcionado (en ese caso, comunicación pública).
 
-### 1. Evaluación de Impacto de Protección de Datos (EIPD)
+Evaluación de impacto y consulta previa (arts. 35 y 36):
 
-*¿Es necesario realizarla?*
+- La **evaluación de impacto relativa a la protección de datos (EIPD)** se realiza **antes** del tratamiento cuando sea probable un **alto riesgo**, en particular: evaluación sistemática y exhaustiva de aspectos personales basada en tratamiento automatizado (elaboración de perfiles) con efectos jurídicos; tratamiento **a gran escala** de categorías especiales o datos penales; **observación sistemática a gran escala de una zona de acceso público**.
+- Contenido mínimo: descripción sistemática de las operaciones y fines, evaluación de la necesidad y proporcionalidad, evaluación de los riesgos y medidas previstas para afrontarlos.
+- Si la EIPD muestra un alto riesgo que el responsable no mitiga, procede la **consulta previa** a la autoridad de control (art. 36).
 
-☐ Sí ☐ No
+### Transferencias internacionales de datos (arts. 44 a 49)
 
-**Criterio:** Se considera necesaria únicamente cuando sea probable que el tratamiento implique un alto riesgo para los derechos y libertades de las personas físicas.
+Solo pueden transferirse datos personales a terceros países u organizaciones internacionales si se cumplen las condiciones del capítulo V, de modo que no se menoscabe el nivel de protección del reglamento (art. 44):
 
-**Nota:** Seguir modelo de la **tabla EIPD**
+- **Decisión de adecuación (art. 45)**: la Comisión declara que el tercer país, territorio, sector u organización garantiza un nivel de protección adecuado; la transferencia no requiere autorización específica.
+- **Garantías adecuadas (art. 46)**: a falta de decisión de adecuación: instrumentos jurídicamente vinculantes entre autoridades públicas, **normas corporativas vinculantes** (BCR, art. 47), cláusulas contractuales tipo, códigos de conducta y mecanismos de certificación.
+- **Excepciones para situaciones específicas (art. 49)**: consentimiento explícito informado de los riesgos, ejecución de un contrato, razones importantes de interés público, reclamaciones, intereses vitales o transferencias desde registros públicos.
 
-### 2. Análisis de Riesgos
+### Multas administrativas (art. 83)
 
-### Tabla referencia
+Las multas deben ser en cada caso «efectivas, proporcionadas y disuasorias». Su cuantía se gradúa según la naturaleza, gravedad y duración de la infracción, la intencionalidad, las medidas paliativas, el grado de cooperación o los beneficios obtenidos, entre otros criterios. Hay dos niveles:
 
-<table>
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr>
-<th colspan="2" rowspan="2"
-style="text-align: center;"><strong>Riesgo</strong></th>
-<th colspan="3"
-style="text-align: center;"><strong>Impacto</strong></th>
-</tr>
-<tr>
-<th><strong>Bajo</strong></th>
-<th><strong>Medio</strong></th>
-<th><strong>Alto</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="3"><strong>Probabilidad</strong></td>
-<td><strong>Baja</strong></td>
-<td><strong>Insignificante</strong></td>
-<td><strong>Bajo</strong></td>
-<td><strong>Medio</strong></td>
-</tr>
-<tr>
-<td><strong>Media</strong></td>
-<td><strong>Bajo</strong></td>
-<td><strong>Medio</strong></td>
-<td><strong>Alto</strong></td>
-</tr>
-<tr>
-<td><strong>Alta</strong></td>
-<td><strong>Medio</strong></td>
-<td><strong>Alto</strong></td>
-<td><strong>Máximo</strong></td>
-</tr>
-</tbody>
-</table>
+| Nivel | Cuantía máxima | Infracciones (entre otras) |
+| --- | --- | --- |
+| Art. 83.4 | **10 000 000 € o el 2 %** del volumen de negocio total anual global (la de mayor cuantía) | Obligaciones del responsable y del encargado (arts. 8, 11, 25 a 39, 42 y 43): diseño y por defecto, registro de actividades, seguridad, notificación de violaciones, EIPD, delegado de protección de datos |
+| Art. 83.5 | **20 000 000 € o el 4 %** del volumen de negocio total anual global (la de mayor cuantía) | Principios y licitud, condiciones del consentimiento (arts. 5, 6, 7 y 9), derechos de los interesados (arts. 12 a 22), transferencias internacionales (arts. 44 a 49), incumplimiento de resoluciones de la autoridad de control |
 
-### Criterios para la determinación del riesgo:
-
-- **Frecuencia:** Casi nunca, Raro, A veces, Pasará
-- **Fuente:** Interna/Externa, Accidental/Deliberada, Humana (ej.: error)/Material (ej.: incendio),…
-
-### Identificación de amenazas y evaluación del riesgo:
-
-| Tipo                       | Amenaza                                    | Probabilidad | Impacto       | Riesgo (Impacto x Probabilidad) |
-| -------------------------- | ------------------------------------------ | ------------ | ------------- | ------------------------------- |
-| Acceso Ilegítimo           | Acceso no autorizado por personal interno. | Raro         | Significativo | Medio                           |
-| Modificación no autorizada | Cambios accidentales en datos críticos.    | A veces      | Máximo        | Alto                            |
-| Eliminación de datos       | Pérdida de datos por fallo técnico.        | Pasará       | Máximo        | Alto                            |
-
-*(Añadir tantas filas como amenazas sean identificadas)*
-
-### 3. Gestión del Riesgo
-
-### Definición de medidas compensatorias:
-
-| Amenaza                    | Medidas compensatorias                                               | Nivel de Riesgo tras medidas (Residual) |
-| -------------------------- | -------------------------------------------------------------------- | --------------------------------------- |
-| Acceso Ilegítimo           | Control de acceso por roles y registro de accesos en SIEM.           | Bajo                                    |
-| Modificación no autorizada | Implementar control de versiones y permisos de edición restrictivos. | Medio                                   |
-| Eliminación de datos       | Implementar copias de seguridad automatizadas y redundantes.         | Bajo                                    |
-
-### Notas:
-
-- **Riesgo medio:** Quedará al criterio del responsable considerar medidas compensatorias o no
-- **Riesgo alto:** Obligatoriamente se deberán aplicar medidas compensatorias
-
-### Comentarios / Observaciones:
-
-**Ejemplo:** Los riesgos evaluados tras las medidas compensatorias son aceptables y se garantiza la protección adecuada conforme a la normativa vigente.
-
-### Plantilla para la Evaluación de Impacto de Protección de Datos (EIPD)
-
-### Responsable del tratamiento:
-
-(Nombre y cargo del responsable del tratamiento de datos)
-
-### 1. Descripción del tratamiento
-
-### Identificación de los datos tratados:
-
-- **Naturaleza**: Datos de categorías especiales, datos tratados automáticamente, posibles dificultades,…
-- **Alcance**: Volumen de datos, precisión, extensión geográfica,…
-- **Contexto**: Sector, normativa aplicable, actividad,…
-- **Finalidad**: Describir los objetivos del tratamiento,…
-
-**Nota:** Plantear preguntas para cada dimensión (ej.: ¿Qué datos se recogen?, ¿Para qué se recogen?, ¿qué se pretende conseguir?,… )
-
-**2. Diagrama de flujos de datos:** (No es una tabla)
-
-|                  | Interesado                     | Responsable del tratamiento  | Encargado del tratamiento         |
-| ---------------- | ------------------------------ | ---------------------------- | --------------------------------- |
-| Capturar datos   | Proporciona datos personales → | Recoge datos →               |                                   |
-| Almacenar datos  |                                |                              | Almacena datos en servidores      |
-| Usar datos       | Consume servicio →             | Utiliza datos →              | Procesa datos según instrucciones |
-| Transferir datos |                                | Transfiere los datos →       | Transfiere los datos              |
-| Borrar datos     |                                | Ordena el borrado de datos → | Elimina datos de forma segura     |
-
-**3. Ronda de consultas:** Interesados, expertos, organizaciones,…
-
-**4. Evaluación de la necesidad y proporcionalidad:** Base jurídica que legitima el tratamiento, mecanismos para asegurar la calidad de datos y la minimización de estos, medidas para garantizar el ejercicio de derechos a los afectados, transferencias internacionales de datos,…
-
-### 5. Gestión de los riesgos para los derechos y libertades
-
-**5.1. Identificación de amenazas y riesgos:** Aplicando DICTA
-
-| Categoría                  | Amenaza específica             | D     | I     | C     | T   | A   |
-| -------------------------- | ------------------------------ | ----- | ----- | ----- | --- | --- |
-| Acceso ilegítimo           | Robo de credenciales.          | **X** |       | **X** |     |     |
-| Modificación no autorizada | Manipulación de datos.         |       | **X** |       |     |     |
-| Eliminación de datos       | Pérdida por fallo en sistemas. | **X** |       |       |     |     |
-
-**Nota:** También puedes usar la leyenda B/M/A
-
-### 5.2. Evaluación de riesgos:
-
-| Amenaza                    | Impacto       | Probabilidad | Riesgo (Impacto x Probabilidad) |
-| -------------------------- | ------------- | ------------ | ------------------------------- |
-| Acceso ilegítimo           | Significativo | A veces      | Alto                            |
-| Modificación no autorizada | Máximo        | Raro         | Medio                           |
-| Eliminación de datos       | Máximo        | Pasará       | Alto                            |
-
-### Notas sobre la evaluación de riesgos:
-
-- **Impacto (4 niveles):** Despreciable, Limitado, Significativo, y Máximo
-- **Probabilidad (4 niveles):** Casi nunca, Raro, A veces, Pasará
-- **Riesgo (inherente):** Impacto x Probabilidad
-
-### 5.3. Tratamiento del riesgo:
-
-| Amenaza                    | Medidas aplicadas                                                             | Riesgo residual |
-| -------------------------- | ----------------------------------------------------------------------------- | --------------- |
-| Acceso ilegítimo           | Autenticación multifactor, políticas de contraseña, formación al personal,... | Bajo            |
-| Modificación no autorizada | Control de acceso, registro de cambios, auditorías periódicas,…               | Medio           |
-| Eliminación de datos       | Copias de seguridad, sistemas redundantes, plan de recuperación,…             | Bajo            |
-
-### 5.4. Riesgo residual:
-
-**Ejemplo:** Tras las medidas de mitigación, los riesgos residuales del sistema son MEDIOS, fin dea garantizar los derechos de los interesados.
-
-**6. Plan de acción:** Conjunto de iniciativas para implantar los controles previos
-
-| Control                         | Descripción                                      | Responsable       | Plazo de implementación |
-| ------------------------------- | ------------------------------------------------ | ----------------- | ----------------------- |
-| Autenticación multifactor       | Configuración para accesos internos.             | Responsable de TI | 30 días                 |
-| Copias de seguridad redundantes | Implementación en nube segura.                   | Responsable de TI | 15 días                 |
-| Formación al personal           | Capacitación en seguridad y protección de datos. | Recursos Humanos  | Continuo                |
-
-### 7. Comentarios / Observaciones
-
-**Ejemplo:** El riesgo residual es aceptable tras la implementación de los controles, y el tratamiento cumple con los principios de **protección de datos desde el diseño y por defecto**.
-
-______________________________________________________________________
-
-### Notas adicionales
-
-- **Protección de datos desde el diseño**: Minimizar, ocultar, separar y abstraer los datos desde las primeras fases del tratamiento.
-- **Protección de datos por defecto**: Limitar la cantidad de datos, la extensión del tratamiento, el plazo de conservación y la accesibilidad.
-- **Medidas de seguridad recomendadas** (según el ENS): Pseudoanonimización, cifrado, restauración de datos, verificación periódica, y evitar usar datos reales en entornos de prueba.
-- **Gestión de brechas de seguridad**:
-    - **AEPD**: Notificación en menos de 72 horas si hay un riesgo probable.
-    - **Persona interesada**: Notificar si afecta a sus derechos y libertades.
-    - **CSIRT-CV**: Informar si la brecha afecta a la Generalitat Valenciana.
+Cada Estado miembro puede decidir si se imponen multas administrativas a las **autoridades y organismos públicos** (art. 83.7). España lo ha regulado en el art. 77 LOPDGDD (ver más adelante).
 
 ## Ley Orgánica 3/2018, de protección de datos personales y garantía de los derechos digitales (LOPDGDD)
 
-La protección de datos personales es un derecho fundamental destinado a salvaguardar la intimidad, privacidad e integridad de los individuos. En España, este ámbito se regula principalmente a través de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y Garantía de los Derechos Digitales (LOPD-GDD), que adapta el ordenamiento jurídico español al Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, conocido como Reglamento General de Protección de Datos (RGPD).
+**Texto consolidado a 27 de diciembre de 2025.**
 
-### Datos Personales y Objeto de la Ley
+La **Ley Orgánica 3/2018, de 5 de diciembre**, adapta el ordenamiento jurídico español al RGPD, completa sus disposiciones y garantiza los derechos digitales de la ciudadanía. Deroga la anterior **LO 15/1999**, de protección de datos de carácter personal. Consta de **97 artículos en diez títulos**.
 
-Los **datos personales** se definen como cualquier información en texto, imagen o audio que permita la identificación de una persona física.
+### Objeto y ámbito de aplicación (Título I)
 
-### Objeto:
+- **Objeto (art. 1)**: «adaptar el ordenamiento jurídico español al Reglamento (UE) 2016/679 [...] y completar sus disposiciones», y «garantizar los derechos digitales de la ciudadanía conforme al mandato establecido en el artículo 18.4 de la Constitución». El derecho fundamental a la protección de datos se ejerce con arreglo al RGPD y a esta ley orgánica.
+- **Exclusiones (art. 2)**: las propias del RGPD (actividades domésticas, ámbito penal), los tratamientos de **datos de personas fallecidas** (sin perjuicio del art. 3) y los de **materias clasificadas**; se rigen por su normativa específica los tratamientos del régimen electoral, de instituciones penitenciarias y de los Registros Civil, de la Propiedad y Mercantiles.
+- **Datos de las personas fallecidas (art. 3)**: las personas vinculadas al fallecido por razones familiares o de hecho **y sus herederos** pueden solicitar el acceso, rectificación o supresión de sus datos, salvo prohibición expresa del fallecido o de una ley (que no afecta al derecho de los herederos sobre los datos patrimoniales). También pueden hacerlo las personas o instituciones designadas expresamente por el fallecido, los representantes legales y el Ministerio Fiscal en caso de menores, y las personas designadas para funciones de apoyo en caso de discapacidad.
 
-- Adaptar el ordenamiento jurídico español al RGPD.
-- Garantizar los derechos digitales de la ciudadanía.
-- Proteger la intimidad, privacidad e integridad del individuo.
-- Regular los deberes en los procesos de transferencia de datos para garantizar la seguridad del intercambio.
+### Principios y consentimiento (Título II)
 
-### Ámbito de Aplicación
+- **Exactitud de los datos (art. 4)**: los datos deben ser exactos y actualizados; el responsable no es imputable por inexactitud si adoptó las medidas razonables y los datos se obtuvieron del afectado, de un mediador, de otro responsable o de un registro público.
+- **Deber de confidencialidad (art. 5)**: obliga a responsables, encargados y a quienes intervengan en el tratamiento; es complementario del secreto profesional y **subsiste** aun finalizada la relación con el responsable o encargado.
+- **Consentimiento (art. 6)**: «toda manifestación de voluntad libre, específica, informada e inequívoca» por la que el afectado acepta el tratamiento.
+- **Menores de edad (art. 7)**: el consentimiento del menor es válido a partir de los **14 años**; por debajo, se requiere el del titular de la patria potestad o tutela.
+- **Categorías especiales (art. 9)**: para evitar situaciones discriminatorias, **el solo consentimiento del afectado no basta** para levantar la prohibición de tratamientos cuya finalidad principal sea identificar su ideología, afiliación sindical, religión, orientación sexual, creencias u origen racial o étnico. Los tratamientos de interés público esencial, sanitarios o de investigación fundados en el Derecho español requieren amparo en una **norma con rango de ley**.
 
-La LOPD-GDD **se aplica** a:
+### Ejercicio de los derechos (Título III)
 
-- Cualquier tratamiento de datos total o parcialmente automatizado.
-- Tratamientos no automatizados de datos personales contenidos o destinados a ser incluidos en un fichero.
+- **Disposiciones generales (art. 12)**: los derechos de los arts. 15 a 22 del RGPD pueden ejercerse directamente o por **representante legal o voluntario**; el responsable debe informar de los medios disponibles (fácilmente accesibles) y no puede denegar el ejercicio por haber optado el afectado por otro medio; la prueba del cumplimiento recae en el responsable; las actuaciones son **gratuitas**. Los titulares de la patria potestad pueden ejercer los derechos de los menores de 14 años.
+- **Derecho de acceso (art. 13)**: se entiende otorgado si el responsable facilita un **sistema de acceso remoto, directo y seguro** a los datos. Se considera repetitivo ejercerlo **más de una vez en seis meses** sin causa legítima.
+- **Rectificación, supresión, limitación, portabilidad y oposición (arts. 14 a 18)**: se ejercen conforme al RGPD, con las precisiones de la ley (al rectificar, el afectado indica los datos y la corrección; la supresión no impide el bloqueo).
 
-### Se excluyen:
+### Obligaciones de responsables y encargados (Título V)
 
-- Los tratamientos excluidos en el RGPD: actividades personales o domésticas, y aquellos realizados por autoridades con fines de prevención, investigación, detección o enjuiciamiento de infracciones penales.
-- Datos de personas fallecidas.
-- Materias clasificadas.
-- Casos regidos por legislaciones específicas (régimen electoral, instituciones penitenciarias, Registro Civil, Registro de la Propiedad y Mercantiles).
+- **Registro de las actividades de tratamiento (art. 31)**: obligatorio salvo la excepción del art. 30.5 RGPD; los cambios se comunican al DPD si lo hay. Los sujetos del art. 77.1 (sector público) deben hacer público un **inventario de sus actividades de tratamiento**, accesible por medios electrónicos, con la información del art. 30 RGPD y su **base legal**.
+- **Bloqueo de los datos (art. 32)**: al rectificar o suprimir, el responsable debe **bloquear** los datos: identificarlos y reservarlos impidiendo su tratamiento (incluida su visualización), quedando solo a disposición de jueces y tribunales, Ministerio Fiscal y Administraciones competentes (en particular las autoridades de protección de datos) para exigir responsabilidades, y solo durante su plazo de prescripción. Transcurrido el plazo, los datos se destruyen.
 
-### Acceso a Datos de Personas Fallecidas
+### Régimen sancionador (Título IX)
 
-Las personas vinculadas por razones familiares o de hecho pueden solicitar el acceso, rectificación y supresión de los datos personales de personas fallecidas, salvo que el fallecido lo hubiera prohibido expresamente o así lo establezca la ley. También pueden ejercer estos derechos:
+La LOPDGDD tipifica las infracciones por referencia al art. 83 del RGPD (las multas aplicables son las de ese artículo) y fija su prescripción:
 
-- Instituciones o personas designadas expresamente por el fallecido.
-- Representantes legales de menores y el Ministerio Fiscal.
-- Representantes legales de personas con discapacidad, el Ministerio Fiscal y el personal de apoyo.
+- **Muy graves (prescriben a los 3 años, art. 72)**: tratamiento que vulnere los principios del art. 5 RGPD o sin base de licitud; uso de los datos para una finalidad no compatible sin consentimiento ni base legal; categorías especiales sin excepción aplicable; **omisión del deber de informar** al afectado; exigencia de un canon por informar o atender derechos fuera de los supuestos del art. 12.5 RGPD; impedimento, obstaculización o **no atención reiterada** del ejercicio de derechos; **transferencias internacionales sin garantías**; incumplimiento de resoluciones de la autoridad de control; resistencia u obstrucción a la inspección.
+- **Graves (prescriben a los 2 años, art. 73)**: tratamiento de datos de un **menor sin recabar el consentimiento** válido; falta de medidas de protección desde el diseño y por defecto o de un **nivel de seguridad adecuado al riesgo**; contratar un encargado sin garantías suficientes o **sin contrato escrito**; **no disponer del registro de actividades**; no notificar a la autoridad o al afectado (cuando fuera requerido) una **violación de seguridad**.
+- **Leves (prescriben al año, art. 74)**: infracciones «de carácter meramente formal», como facilitar información incompleta de los arts. 13 y 14 RGPD; exigir un canon que exceda los costes; no atender solicitudes de derechos (fuera de la no atención reiterada); notificación de una violación de seguridad **incompleta, tardía o defectuosa**; registro de actividades incompleto.
+- **Prescripción de las sanciones (art. 78)**: 1 año (importe **igual o inferior a 40.000 €**), 2 años (**40.001 a 300.000 €**) y 3 años (**superior a 300.000 €**).
 
-**\*Principios fundamentales de Protección de Datos:** Según RGDP
+Las Administraciones públicas están sujetas al régimen especial del **art. 77** (ver la sección del DPD en las AAPP).
 
-1. **Licitud, lealtad y transparencia**: Trato legal y transparente con información clara al interesado.
-2. **Limitación de la finalidad**: Uso de datos solo para fines específicos y legítimos.
-3. **Minimización de datos**: Solo recoger datos estrictamente necesarios.
-4. **Exactitud**: Mantener datos actualizados y corregir errores.
-5. **Limitación del plazo**: Conservar datos solo el tiempo necesario.
-6. **Integridad y confidencialidad**: Garantizar seguridad frente a accesos no autorizados o pérdida.
-7. **Responsabilidad proactiva**: Demostrar cumplimiento de la normativa.
-8. **Protección desde el diseño y por defecto**: Incorporar medidas de protección desde el inicio.
+### Garantía de los derechos digitales (Título X)
 
-### Principios de Protección de Datos (Título II)
+El Título X (arts. 79 a 97) desarrolla el mandato del art. 18.4 CE reconociendo un catálogo de derechos en la era digital:
 
-### Exactitud de los datos
+- **Red y educación**: neutralidad de Internet (art. 80), acceso universal a Internet (art. 81), seguridad digital (art. 82), educación digital (art. 83) y protección de los menores en Internet (arts. 84 y 92).
+- **Internet y medios digitales**: derecho de rectificación (art. 85) y de actualización de informaciones (art. 86); **derecho al olvido** en búsquedas de Internet (art. 93) y en redes sociales (art. 94); portabilidad en redes sociales (art. 95); **testamento digital** (art. 96).
+- **Ámbito laboral**: intimidad frente a dispositivos digitales (art. 87), **derecho a la desconexión digital** (art. 88), videovigilancia y grabación de sonidos (art. 89), geolocalización (art. 90) y derechos digitales en la negociación colectiva (art. 91).
 
-Los datos deben ser exactos y, si es necesario, actualizados. El responsable del tratamiento no será imputable si ha adoptado todas las medidas razonables y los datos fueron obtenidos del afectado, de un mediador, de otro responsable o de un registro público.
+## El delegado de protección de datos en las AAPP
 
-### Deber de confidencialidad
+El delegado de protección de datos (DPD, o DPO por sus siglas en inglés) es la figura que garantiza dentro de la organización el cumplimiento de la normativa de protección de datos. Lo regulan los arts. 37 a 39 del RGPD y los arts. 34 a 37 de la LOPDGDD; en el sector público su designación es **siempre obligatoria**.
 
-Responsables, encargados y cualquier persona que intervenga en el tratamiento deben mantener la confidencialidad, complementaria al secreto profesional, incluso después de finalizar su relación con el responsable o encargado.
+- **Designación obligatoria (art. 37.1 RGPD)**: cuando el tratamiento lo lleve a cabo una **autoridad u organismo público** (excepto los tribunales en ejercicio de su función judicial); cuando las actividades principales requieran una **observación habitual y sistemática de interesados a gran escala**; o cuando consistan en el tratamiento **a gran escala de categorías especiales** de datos o de datos penales.
+- **Entidades obligadas «en todo caso» (art. 34.1 LOPDGDD)**: entre otras, colegios profesionales, centros docentes y universidades, operadores de comunicaciones electrónicas y prestadores de servicios de la sociedad de la información que elaboren perfiles a gran escala, entidades de crédito y establecimientos financieros, aseguradoras, empresas de servicios de inversión, distribuidores y comercializadores de energía, ficheros de solvencia y de fraude, actividades de publicidad con elaboración de perfiles, **centros sanitarios** obligados a mantener historias clínicas, emisores de informes comerciales, operadores de juego online, empresas de seguridad privada y federaciones deportivas que traten datos de menores.
+- **DPD único**: un grupo empresarial o **varias autoridades u organismos públicos** pueden compartir un único DPD, atendiendo a su estructura organizativa y tamaño (art. 37.2 y 37.3 RGPD).
+- **Comunicación y publicidad**: los datos de contacto del DPD se publican y se comunican a la autoridad de control (art. 37.7 RGPD); las designaciones, nombramientos y ceses se comunican a la AEPD o a la autoridad autonómica en el plazo de **10 días**, y las autoridades mantienen una **lista pública** de delegados accesible por medios electrónicos (art. 34 LOPDGDD).
+- **Cualificación**: se designa atendiendo a sus cualidades profesionales y, en particular, a sus **conocimientos especializados del Derecho y la práctica en materia de protección de datos** (art. 37.5 RGPD). Puede ser **persona física o jurídica**, de la plantilla o mediante contrato de servicios; la cualificación puede acreditarse mediante esquemas voluntarios de **certificación** (art. 35 LOPDGDD).
+- **Posición**: participa de forma adecuada y en tiempo oportuno en todas las cuestiones de protección de datos; recibe los recursos necesarios; **no recibe instrucciones** en el desempeño de sus funciones y **no puede ser destituido ni sancionado** por desempeñarlas (salvo **dolo o negligencia grave**, art. 36.2 LOPDGDD); rinde cuentas directamente **al más alto nivel jerárquico**; está obligado al secreto; puede desempeñar otras funciones si no generan conflicto de intereses (art. 38 RGPD). Tiene acceso a los datos y procesos de tratamiento sin que pueda oponérsele ningún deber de confidencialidad (art. 36.3 LOPDGDD).
+- **Funciones (art. 39 RGPD)**: informar y asesorar al responsable, al encargado y a los empleados; **supervisar el cumplimiento** (asignación de responsabilidades, concienciación, formación y auditorías); asesorar sobre la EIPD y supervisar su aplicación; cooperar con la autoridad de control y actuar como su **punto de contacto**.
+- **Intervención en reclamaciones (art. 37 LOPDGDD)**: el afectado puede dirigirse al DPD antes de reclamar ante la autoridad; el DPD le comunica la decisión en el plazo máximo de **2 meses**. Si la reclamación llega a la autoridad, esta puede remitirla al DPD para que responda en el plazo de **1 mes**.
 
-### Tratamiento Basado en el Consentimiento del Afectado
+El **régimen sancionador de las AAPP (art. 77 LOPDGDD)** completa este marco:
 
-El consentimiento es una manifestación de voluntad **libre, específica, informada e inequívoca** por la que el afectado acepta el tratamiento de sus datos personales. En el caso de menores de edad:
+- **Ámbito (art. 77.1)**: órganos constitucionales o con relevancia constitucional (y sus análogos autonómicos), órganos jurisdiccionales, AGE, administraciones autonómicas y entidades locales, organismos públicos y entidades de Derecho público, autoridades administrativas independientes, Banco de España, corporaciones de Derecho público (potestades públicas), fundaciones del sector público, universidades públicas, consorcios y grupos parlamentarios y políticos.
+- **Sin multa**: la autoridad de protección de datos dicta resolución **declarando la infracción** y estableciendo las medidas para que cese o se corrijan sus efectos; se notifica al responsable o encargado, al órgano del que dependa jerárquicamente y a los afectados interesados.
+- **Responsabilidad disciplinaria**: la autoridad propondrá la iniciación de **actuaciones disciplinarias** cuando existan indicios suficientes.
+- **Amonestación pública**: si la infracción es imputable a autoridades y directivos que desatendieron informes técnicos o recomendaciones, la resolución incluye una **amonestación con denominación del cargo** y se ordena su publicación en el **BOE o diario oficial autonómico**.
+- **Transparencia**: las actuaciones se comunican al **Defensor del Pueblo** (o instituciones autonómicas análogas) y la AEPD publica en su web las resoluciones contra estas entidades **con indicación de la identidad** del responsable o encargado.
 
-- **Mayores de 14 años**: Pueden otorgar su consentimiento, salvo que la ley exija la asistencia de los titulares de la patria potestad o tutela.
-- **Menores de 14 años**: Se requiere el consentimiento del titular de la patria potestad o tutela.
+## La AEPD y las autoridades autonómicas
 
-No será suficiente el consentimiento para levantar la prohibición del tratamiento de **categorías especiales de datos** (ideología, afiliación sindical, religión, orientación sexual, creencias u origen racial o étnico), salvo excepciones legales, como en el ámbito sanitario.
+### La Agencia Española de Protección de Datos (AEPD)
 
-El tratamiento de datos por obligación legal, interés público o ejercicio de poderes públicos debe estar fundado en el cumplimiento de una obligación legal exigible al responsable.
+La AEPD es la autoridad de control estatal que supervisa la aplicación del RGPD y de la LOPDGDD (Título VII, arts. 44 a 56).
 
-### Transparencia e información sobre los Derechos de las Personas
+- **Naturaleza (art. 44)**: **autoridad administrativa independiente** de ámbito estatal de las previstas en la Ley 40/2015, con personalidad jurídica y plena capacidad pública y privada, que «actúa con plena independencia de los poderes públicos». Su denominación oficial es «**Agencia Española de Protección de Datos, Autoridad Administrativa Independiente**». Se relaciona con el Gobierno **a través del Ministerio de Justicia** y es la **representante común** de las autoridades de protección de datos españolas en el **Comité Europeo de Protección de Datos (CEPD)**.
+- **Régimen jurídico (art. 45)**: se rige por el RGPD, la LOPDGDD y su desarrollo; su Estatuto se aprueba por real decreto (**RD 389/2021, de 1 de junio**).
+- **Régimen económico y de personal (art. 46)**: elabora y aprueba su presupuesto y lo remite al Gobierno «para que sea integrado, con independencia, en los Presupuestos Generales del Estado». Su personal puede ser funcionario o laboral.
+- **Funciones y potestades (art. 47)**: las funciones del art. 57 y las potestades del art. 58 del RGPD (investigación, correctivas y de autorización), además de las que le atribuyan otras leyes.
+- **Presidencia y Adjunto (art. 48)**: la Presidencia dirige la Agencia, ostenta su representación y dicta sus resoluciones, circulares y directrices, auxiliada por un **Adjunto**. Se nombran por el Gobierno, a propuesta del **Ministerio de Justicia**, entre personas de reconocida competencia, previa **convocatoria pública** y evaluación de mérito, capacidad, competencia e idoneidad; la propuesta debe ser **ratificada por la Comisión de Justicia del Congreso por mayoría de 3/5** en primera votación (o mayoría absoluta en segunda, con votos de al menos dos grupos parlamentarios). El nombramiento se realiza por **real decreto del Consejo de Ministros**. Mandato de **5 años, renovable para otro período de igual duración**; solo cesan a petición propia o por separación acordada por el Consejo de Ministros (incumplimiento grave, incapacidad sobrevenida, incompatibilidad o condena firme por delito doloso).
+- **Consejo Consultivo (art. 49)**: órgano de asesoramiento de la Presidencia, integrado, entre otros, por un diputado, un senador, un representante del CGPJ, uno de la AGE y uno de cada comunidad autónoma con autoridad de protección de datos propia.
+- **Investigación y auditoría (arts. 51 a 55)**: las actuaciones de investigación las realizan funcionarios de la Agencia o **funcionarios ajenos habilitados** expresamente; la AEPD puede acordar **planes de auditoría preventiva** (art. 54) y aprobar **circulares** (art. 55), y ejerce la **acción exterior** del Estado en materia de protección de datos (art. 56).
 
-Los afectados tienen los siguientes derechos:
+### Autoridades autonómicas de protección de datos
 
-- **Transparencia e información**: Se debe facilitar información básica sobre el tratamiento, incluyendo:
-    1. La identidad del responsable y su representante.
-    2. La finalidad del tratamiento.
-    3. La posibilidad de ejercer sus derechos.
+- **Competencias (art. 57 LOPDGDD)**: pueden ejercer las funciones y potestades de los arts. 57 y 58 del RGPD sobre los tratamientos de: el **sector público de su comunidad autónoma y las entidades locales** de su territorio (y quienes les presten servicios); las personas físicas o jurídicas que ejerzan **funciones públicas** en materias de competencia autonómica o local; y los tratamientos previstos en los respectivos **Estatutos de Autonomía**.
+- **Autoridades existentes**: Cataluña (**Autoritat Catalana de Protecció de Dades**), País Vasco (**Agencia Vasca de Protección de Datos**) y Andalucía (**Consejo de Transparencia y Protección de Datos de Andalucía**). La Comunitat Valenciana no cuenta con autoridad propia, por lo que la autoridad competente sobre su sector público es la **AEPD**.
+- **Cooperación institucional (art. 58)**: la ley articula la cooperación entre la AEPD y las autoridades autonómicas para la aplicación coherente del RGPD.
 
-Si los datos no proceden del afectado, también:
+## Caso práctico: análisis de riesgos y evaluación de impacto
 
-1. Las categorías de datos tratados.
-2. Las fuentes de procedencia de los datos.
-- **Ejercicio de los derechos**: Puede realizarse directamente o mediante representante legal o voluntario. El responsable está obligado a informar sobre los medios para ejercerlos y no puede negarse por optar por otro medio. La actuación es gratuita.
+El RGPD impone un enfoque basado en el riesgo: todo tratamiento exige un análisis de riesgos previo y, cuando sea probable un alto riesgo para los derechos y libertades, una EIPD antes de iniciar el tratamiento (art. 35). Las siguientes plantillas orientativas ilustran ambos ejercicios.
 
-### Derechos de las Personas
+### Plantilla de análisis de riesgos (AARR)
 
-- **Derecho de acceso**: El responsable puede pedir que el afectado especifique los datos a los que se refiere la solicitud. Se considera otorgado si se provee un sistema de acceso remoto, directo y seguro. Se puede considerar "repetitivo" si se accede más de una vez en seis meses sin causa legítima.
-- **Derecho de rectificación**: Permite corregir datos personales inexactos o incompletos.
-- **Derecho de supresión ("derecho al olvido")**: El afectado puede solicitar la eliminación de sus datos cuando, entre otros motivos, ya no sean necesarios para los fines para los que fueron recogidos.
-- **Derecho a la limitación del tratamiento**: Implica el marcado de los datos personales conservados con el fin de limitar su tratamiento en el futuro.
-- **Derecho a la portabilidad**: Posibilita recibir los datos personales facilitados en un formato estructurado y transmitirlos a otro responsable.
-- **Derecho de oposición**: El afectado puede oponerse al tratamiento de sus datos por motivos relacionados con su situación particular.
+**1. ¿Es necesaria una EIPD?** Solo cuando sea probable que el tratamiento implique un **alto riesgo** para los derechos y libertades de las personas físicas. En caso afirmativo, seguir la plantilla EIPD.
 
-### Responsables y Encargados del Tratamiento
+**2. Análisis de riesgos.** El riesgo se estima como impacto × probabilidad, con una matriz de referencia:
 
-- **Responsable del tratamiento**: Persona física o jurídica que, solo o junto con otros, determina los fines y medios del tratamiento. Establece relaciones con los afectados y controla y se responsabiliza de los datos. Debe determinar si, al finalizar la prestación de servicios del encargado, los datos deben ser destruidos, devueltos o entregados a un nuevo encargado.
-- **Encargado del tratamiento**: Persona física o jurídica que trata datos por cuenta del responsable. No decide sobre los fines y medios del tratamiento. Puede conservar los datos bloqueados mientras puedan derivarse responsabilidades de su relación con el responsable.
+| Probabilidad / Impacto | Bajo | Medio | Alto |
+| --- | --- | --- | --- |
+| **Baja** | Insignificante | Bajo | Medio |
+| **Media** | Bajo | Medio | Alto |
+| **Alta** | Medio | Alto | Máximo |
 
-### Obligaciones de Responsables y Encargados
+Criterios para caracterizar cada amenaza:
 
-- **Medidas técnicas y organizativas**: Deben aplicar medidas apropiadas y realizar valoraciones de impacto para garantizar y demostrar el cumplimiento de la normativa.
-- **Registro de actividades de tratamiento**: Responsables y encargados deben llevar un registro de las actividades de tratamiento. Deben comunicar los cambios al Delegado de Protección de Datos, si lo hubiera.
-- **Bloqueo de datos**: Están obligados a bloquear los datos cuando proceda su rectificación o supresión, conservándolos únicamente a disposición de jueces, tribunales y autoridades competentes. Transcurrido el plazo legal, deben destruirse.
-- **Notificación de brechas de seguridad**: Deben notificar cualquier violación de seguridad a la Agencia Española de Protección de Datos en un plazo máximo de 72 horas.
+- **Frecuencia**: casi nunca, raro, a veces, pasará.
+- **Fuente**: interna/externa, accidental/deliberada, humana (error) / material (incendio).
 
-### Delegado de Protección de Datos (DPO)
+Identificación de amenazas y evaluación del riesgo (añadir tantas filas como amenazas):
 
-El Delegado de Protección de Datos actúa como interlocutor entre el responsable o encargado y las autoridades de protección de datos. Sus características son:
+| Tipo | Amenaza | Probabilidad | Impacto | Riesgo |
+| --- | --- | --- | --- | --- |
+| Acceso ilegítimo | Acceso no autorizado por personal interno | Raro | Significativo | Medio |
+| Modificación no autorizada | Cambios accidentales en datos críticos | A veces | Máximo | Alto |
+| Eliminación de datos | Pérdida de datos por fallo técnico | Pasará | Máximo | Alto |
 
-- **Designación**: Obligatoria en ciertas entidades como colegios profesionales, centros docentes, entidades financieras, empresas de suministro de energía, centros sanitarios, entre otros.
-- **Notificación**: El nombramiento se notifica a la Agencia Española de Protección de Datos o a las autoridades autonómicas en un plazo de 10 días.
-- **Cualificación**: Persona física o jurídica cualificada, preferentemente con titulación universitaria y especializada en derecho.
-- **Independencia**: No puede ser removido ni sancionado por el responsable o encargado, salvo por dolo o negligencia grave.
-- **Acceso a datos**: Tiene acceso a los datos personales, incluso los protegidos por secreto profesional.
-- **Funciones**:
-    - Documentar y comunicar vulneraciones al órgano de administración o dirección.
-    - Responder a reclamaciones de los afectados en un plazo de dos meses.
-    - Cooperar con la autoridad de control y ser su punto de contacto.
-- **Reclamaciones**: En caso de reclamación ante las autoridades, el afectado puede dirigirse al DPO. Las agencias deben remitir la reclamación al delegado en un plazo de un mes.
+**3. Gestión del riesgo.** Definición de medidas compensatorias y riesgo residual:
 
-### Agencia Española de Protección de Datos (AEPD)
+| Amenaza | Medidas compensatorias | Riesgo residual |
+| --- | --- | --- |
+| Acceso ilegítimo | Control de acceso por roles y registro de accesos en SIEM | Bajo |
+| Modificación no autorizada | Control de versiones y permisos de edición restrictivos | Medio |
+| Eliminación de datos | Copias de seguridad automatizadas y redundantes | Bajo |
 
-La **AEPD** es la autoridad administrativa independiente que supervisa la aplicación de la normativa de protección de datos en España. Características principales:
+Criterio de aceptación: con **riesgo medio**, queda a criterio del responsable adoptar medidas compensatorias; con **riesgo alto**, las medidas son obligatorias.
 
-- **Personalidad jurídica**: Tiene plena capacidad pública y privada, actuando con independencia de los poderes públicos.
-- **Denominación oficial**: "Agencia Española de Protección de Datos, Autoridad Administrativa Independiente".
-- **Funciones**: Supervisar y garantizar el cumplimiento de la LOPD-GDD y del RGPD, y representar a España en el Comité Europeo de Protección de Datos.
-- **Relación con el Gobierno**: Se relaciona a través del Ministerio de Justicia.
-- **Régimen jurídico**: Cuenta con un estatuto propio, aprobado por el Gobierno.
-- **Régimen económico y de personal**:
-    - Elabora y aprueba sus propios presupuestos, independientes de los Presupuestos Generales del Estado.
-    - Su personal puede ser funcionario o laboral.
-- **Composición**:
-    - **Presidencia**: Dirige y representa a la AEPD, dictando resoluciones, circulares y directrices. Sus actos agotan la vía administrativa. Nombrada por el Gobierno a propuesta del Ministerio de Justicia, por un mandato de cinco años prorrogable.
-    - **Adjunto**: Asiste a la Presidencia.
-    - **Consejo Consultivo**: Órgano de asesoramiento, compuesto por representantes de diversos sectores y expertos.
-- **Investigaciones**: Realizadas por funcionarios de la AEPD o funcionarios ajenos habilitados.
-- **Acción exterior**: La AEPD es responsable de las relaciones internacionales en materia de protección de datos.
+### Plantilla de evaluación de impacto (EIPD)
 
-### Régimen Sancionador
+**1. Descripción del tratamiento**, en cuatro dimensiones (plantear preguntas para cada una: qué datos se recogen, para qué, qué se pretende conseguir):
 
-Las **infracciones** se clasifican en:
+- **Naturaleza**: categorías especiales, tratamientos automatizados, posibles dificultades.
+- **Alcance**: volumen de datos, precisión, extensión geográfica.
+- **Contexto**: sector, normativa aplicable, actividad.
+- **Finalidad**: objetivos del tratamiento.
 
-- **Muy graves** (prescriben a los **3 años**):
-    - Uso de datos para una finalidad diferente a la comunicada.
-    - Omisión del deber de informar al afectado.
-    - Exigir pago para acceder a los propios datos.
-    - Transferencias internacionales sin garantías adecuadas.
-- **Graves** (prescriben a los **2 años**):
-    - Tratamiento de datos de menores sin consentimiento.
-    - No adoptar medidas técnicas y organizativas adecuadas.
-    - Incumplir el deber de nombrar responsable o encargado.
-- **Leves** (prescriben en **1 año**):
-    - Falta de transparencia en la información.
-    - No atender solicitudes de información del afectado.
-    - Incumplimiento por parte del encargado del tratamiento.
+**2. Diagrama de flujos de datos**, identificando qué hace cada actor en cada fase:
 
-### Conceptos Clave Adicionales
+| Fase | Interesado | Responsable | Encargado |
+| --- | --- | --- | --- |
+| Capturar | Proporciona datos personales | Recoge datos | |
+| Almacenar | | | Almacena datos en servidores |
+| Usar | Consume el servicio | Utiliza los datos | Procesa según instrucciones |
+| Transferir | | Transfiere los datos | Transfiere los datos |
+| Borrar | | Ordena el borrado | Elimina de forma segura |
 
-- **Responsabilidad Proactiva**: Los responsables deben aplicar medidas técnicas y organizativas para cumplir la ley y demostrar dicho cumplimiento ante las autoridades, adoptando un enfoque preventivo.
-- **Registro de Actividades de Tratamiento**: Obligatorio para responsables y encargados, especialmente si la empresa tiene más de 250 empleados o trata datos sensibles (especiales, penales o que impliquen riesgos para derechos y libertades).
-- **Nuevos Derechos de los Ciudadanos**: Además de los derechos tradicionales, se incluyen el derecho al olvido y a la desconexión digital. Los derechos se resumen en el acrónimo **ARSULIPO**: Acceso, Rectificación, Supresión, Limitación del tratamiento, Portabilidad y Oposición.
-- **Obligación de Informar**: Los responsables deben informar sobre su identidad, tipo de datos recabados, finalidad del tratamiento, cesiones a terceros, plazo de conservación y vías para ejercer los derechos ARSULIPO.
-- **Notificación de Brechas de Seguridad**: Se debe notificar cualquier brecha a la AEPD en un plazo máximo de **72 horas**.
+**3. Ronda de consultas**: interesados, expertos, organizaciones.
 
-### Notas sobre la Nueva LOPD-GDD
+**4. Evaluación de la necesidad y proporcionalidad**: base jurídica que legitima el tratamiento, mecanismos de calidad y minimización de datos, medidas para garantizar el ejercicio de derechos, transferencias internacionales.
 
-- **Ampliación de la Información**: Se incrementa la información que se debe proporcionar a los usuarios sobre el tratamiento de sus datos y sus derechos.
-- **Privacidad desde el Diseño**: Se promueve la incorporación de medidas de protección de datos desde el inicio de cualquier proyecto o sistema que implique tratamiento de datos personales.
-- **Consentimiento Expreso**: El consentimiento debe ser libre, informado, específico e inequívoco, requiriendo una clara acción afirmativa.
-- **Figura del Delegado de Protección de Datos**: Se define y regula la figura del DPO, especificando sus funciones, cualificaciones y entidades obligadas a designarlo.
+**5. Gestión de los riesgos para los derechos y libertades.** Identificación de amenazas por dimensiones de seguridad (DICTA; también puede usarse la leyenda B/M/A):
+
+| Categoría | Amenaza específica | D | I | C | T | A |
+| --- | --- | --- | --- | --- | --- | --- |
+| Acceso ilegítimo | Robo de credenciales | X | | X | | |
+| Modificación no autorizada | Manipulación de datos | | X | | | |
+| Eliminación de datos | Pérdida por fallo en sistemas | X | | | | |
+
+Evaluación del riesgo inherente (impacto: despreciable, limitado, significativo, máximo; probabilidad: casi nunca, raro, a veces, pasará):
+
+| Amenaza | Impacto | Probabilidad | Riesgo |
+| --- | --- | --- | --- |
+| Acceso ilegítimo | Significativo | A veces | Alto |
+| Modificación no autorizada | Máximo | Raro | Medio |
+| Eliminación de datos | Máximo | Pasará | Alto |
+
+Tratamiento del riesgo y riesgo residual:
+
+| Amenaza | Medidas aplicadas | Riesgo residual |
+| --- | --- | --- |
+| Acceso ilegítimo | Autenticación multifactor, políticas de contraseña, formación | Bajo |
+| Modificación no autorizada | Control de acceso, registro de cambios, auditorías periódicas | Medio |
+| Eliminación de datos | Copias de seguridad, sistemas redundantes, plan de recuperación | Bajo |
+
+**6. Plan de acción**: iniciativas para implantar los controles previstos:
+
+| Control | Descripción | Responsable | Plazo |
+| --- | --- | --- | --- |
+| Autenticación multifactor | Configuración para accesos internos | Responsable de TI | 30 días |
+| Copias de seguridad redundantes | Implementación en nube segura | Responsable de TI | 15 días |
+| Formación del personal | Capacitación en seguridad y protección de datos | Recursos Humanos | Continuo |
+
+**7. Conclusión**: valorar si el riesgo residual es aceptable y si el tratamiento cumple los principios de protección de datos desde el diseño y por defecto.
+
+Notas finales:
+
+- **Protección de datos desde el diseño**: minimizar, ocultar, separar y abstraer los datos desde las primeras fases del tratamiento.
+- **Protección de datos por defecto**: limitar la cantidad de datos, la extensión del tratamiento, el plazo de conservación y la accesibilidad.
+- **Medidas de seguridad recomendadas** (alineadas con el ENS): seudonimización, cifrado, restauración de datos, verificación periódica y no usar datos reales en entornos de prueba.
+- **Gestión de brechas**: notificación a la **AEPD en un máximo de 72 horas** salvo que sea improbable el riesgo; comunicación a los interesados si es probable un **alto riesgo** para sus derechos; en el ámbito de la Generalitat, informar también al **CSIRT-CV**.
+
+## Fuentes {.unnumbered .unlisted}
+
+- Reglamento (UE) 2016/679, general de protección de datos (RGPD), DOUE L 119, de 4 de mayo de 2016 (sin actos modificativos posteriores; consulta de julio de 2026).
+- Ley Orgánica 3/2018, de protección de datos personales y garantía de los derechos digitales, texto consolidado, última modificación 27 de diciembre de 2025.
+- Real Decreto 389/2021, por el que se aprueba el Estatuto de la Agencia Española de Protección de Datos (BOE de 2 de junio de 2021).
