@@ -4,6 +4,8 @@ La función pública valenciana se regula en un paquete normativo propio: la **L
 
 ## Ley 4/2021, de la Función Pública Valenciana
 
+**Texto consolidado a 6 de mayo de 2026.**
+
 La **Ley 4/2021, de 16 de abril** (DOGV de **20 de abril de 2021**, BOE de 28 de mayo de 2021) ordena la función pública valenciana en **191 artículos agrupados en 11 títulos**, además de sus disposiciones adicionales, transitorias y finales. Deroga la **Ley 10/2010, de 9 de julio, de Ordenación y Gestión de la Función Pública Valenciana**. Ha sido modificada, entre otras, por la Ley 7/2021, el Decreto-ley 12/2022 (anexos de cuerpos y escalas), el Decreto-ley 7/2024, la Ley 6/2024 y la Ley 5/2025.
 
 ### Título I. Objeto, principios y ámbito de aplicación de la ley
@@ -193,6 +195,8 @@ La **Ley 4/2021, de 16 de abril** (DOGV de **20 de abril de 2021**, BOE de 28 de
 
 ## Decreto 3/2017, de selección, provisión de puestos de trabajo y movilidad
 
+**Sin modificaciones desde su publicación (24 de enero de 2017).**
+
 El **Decreto 3/2017, de 13 de enero, del Consell**, aprueba el Reglamento de selección, provisión de puestos de trabajo y movilidad del personal de la función pública valenciana (**98 artículos en 6 títulos**). Desarrollaba la Ley 10/2010 (LOGFPV) y sigue vigente en lo que no se oponga a la Ley 4/2021; en caso de divergencia prevalece la ley (por ejemplo, la reserva de discapacidad del 7 % del decreto es hoy del **10 %**, y el nombramiento por exceso de tareas de 6 meses en 12 es hoy de **9 meses en 18**).
 
 - **Oferta de empleo público** (art. 4): la elabora la conselleria competente en función pública, la aprueba el **Consell** y se publica en el DOGV en el **primer trimestre** del año. Las convocatorias pueden incluir hasta un **10 % adicional** de vacantes. En la Administración de la Generalitat la oferta debe ejecutarse en el plazo **improrrogable de 2 años**. Se reserva a promoción interna un porcentaje **no inferior al 40 %** de las vacantes.
@@ -208,6 +212,8 @@ El **Decreto 3/2017, de 13 de enero, del Consell**, aprueba el Reglamento de sel
 - **Comisión de Estudio de la Diversidad Funcional** (arts. 95-98): órgano colegiado adscrito a la conselleria de función pública que asesora para hacer efectivo el acceso al empleo público de las personas con diversidad funcional. La integran una **presidencia** (funcionario con rango mínimo de jefatura de servicio), **6 vocales** (2 de función pública, 3 de los centros de evaluación de discapacidades y 1 del servicio de prevención) y una secretaría con voz y voto. Emite **dictamen preceptivo** sobre las dudas de compatibilidad funcional en procesos selectivos, de provisión y de bolsas, y en las medidas de movilidad forzosa temporal que afecten a personal con diversidad funcional.
 
 ## Decreto 42/2019, de condiciones de trabajo del personal funcionario
+
+**Texto consolidado a 6 de julio de 2023.**
 
 El **Decreto 42/2019, de 22 de marzo, del Consell**, regula las condiciones de trabajo (jornada, horario, permisos, licencias y vacaciones) del personal funcionario de la Administración de la Generalitat.
 
@@ -231,6 +237,8 @@ El **Decreto 42/2019, de 22 de marzo, del Consell**, regula las condiciones de t
 - **Vacaciones**: **22 días hábiles** al año (o la parte proporcional), más los días adicionales por antigüedad (**23/24/25/26** días a los 15/20/25/30 años de servicio). Se disfrutan a lo largo del año natural y hasta el **31 de enero** siguiente; al menos la mitad, preferentemente, entre **junio y septiembre**, en periodos mínimos de **7 días naturales** consecutivos (aunque 7 días pueden tomarse de forma independiente). El disfrute dentro del año no puede condicionarse a las necesidades del servicio ni sustituirse por compensación económica; la **hospitalización no voluntaria** lo interrumpe. Quien desee vacaciones en verano lo solicita antes del **1 de mayo**; el resto, con 1 mes de antelación.
 
 ## Decreto 49/2021, de regulación del teletrabajo
+
+**Texto consolidado a 28 de abril de 2021.**
 
 El **Decreto 49/2021, de 1 de abril, del Consell**, regula el teletrabajo como modalidad de prestación de servicios del personal empleado público de la Administración de la Generalitat, en desarrollo del art. 76.2 de la Ley 4/2021. Deroga el Decreto 82/2016.
 
