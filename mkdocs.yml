@@ -57,15 +57,15 @@ nav:
 - Prólogo: prologo.md
 - Bloque I — Marco jurídico y administrativo:
   - 'Tema 1: Jerarquía normativa y fuentes del derecho': 01-jerarquia-normativa-y-fuentes-del-derecho.md
-  - 'Tema 2: La Constitución Española de 1978': 02-constitucion-espanola.md
-  - 'Tema 3: El Estatuto de Autonomía de la Comunitat Valenciana (Ley Orgánica 5/1982)': 03-estatuto-de-autonomia-de-la-comunitat-valenciana.md
+  - 'Tema 2: Constitución Española de 1978': 02-constitucion-espanola.md
+  - 'Tema 3: Estatuto de Autonomía de la Comunitat Valenciana (Ley Orgánica 5/1982)': 03-estatuto-de-autonomia-de-la-comunitat-valenciana.md
   - '⚠️ Tema 4: El Consell y el gobierno valenciano (Ley 5/1983)': 04-consell-y-gobierno-valenciano.md
   - '⚠️ Tema 5: La Unión Europea': 05-union-europea.md
   - '⚠️ Tema 6: Leyes de igualdad': 06-leyes-de-igualdad.md
   - '⚠️ Tema 7: Protección integral contra la violencia de género (Ley Orgánica 1/2004)': 07-violencia-de-genero.md
   - '⚠️ Tema 8: Transparencia y buen gobierno': 08-transparencia-y-buen-gobierno.md
-  - '⚠️ Tema 9: Régimen jurídico del sector público (Ley 40/2015)': 09-regimen-juridico-del-sector-publico.md
-  - '⚠️ Tema 10: El procedimiento administrativo común de las Administraciones Públicas (Ley 39/2015)': 10-procedimiento-administrativo-comun.md
+  - 'Tema 9: Régimen jurídico del sector público (Ley 40/2015)': 09-regimen-juridico-del-sector-publico.md
+  - 'Tema 10: Procedimiento administrativo común de las Administraciones Públicas (Ley 39/2015)': 10-procedimiento-administrativo-comun.md
   - '⚠️ Tema 11: Contratos del sector público (Ley 9/2017)': 11-contratos-del-sector-publico.md
   - '⚠️ Tema 12: El Estatuto Básico del Empleado Público (TREBEP)': 12-estatuto-basico-del-empleado-publico.md
   - 'Tema 13: Función pública valenciana': 13-funcion-publica-valenciana.md
@@ -85,7 +85,7 @@ nav:
   - '⚠️ Tema 27: Testeo de software': 27-testeo-de-software.md
 - Bloque IV — Seguridad de la información:
   - 'Tema 28: Ciberseguridad': 28-ciberseguridad.md
-  - 'Tema 29: El Esquema Nacional de Seguridad (Real Decreto 311/2022)': 29-esquema-nacional-de-seguridad.md
+  - 'Tema 29: Esquema Nacional de Seguridad (Real Decreto 311/2022)': 29-esquema-nacional-de-seguridad.md
   - '⚠️ Tema 30: Análisis y gestión de riesgos': 30-analisis-y-gestion-de-riesgos.md
   - '⚠️ Tema 31: Gestión de ciberincidentes': 31-gestion-de-ciberincidentes.md
   - '⚠️ Tema 32: Desarrollo seguro de aplicaciones': 32-desarrollo-seguro-de-aplicaciones.md
@@ -105,7 +105,7 @@ nav:
   - '⚠️ Tema 47: Computación en la nube y de altas prestaciones': 47-computacion-en-la-nube-y-altas-prestaciones.md
   - '⚠️ Tema 48: Puesto de trabajo TIC': 48-puesto-de-trabajo-tic.md
 - Bloque VII — Protección de datos y administración electrónica:
-  - '⚠️ Tema 49: Protección de datos personales': 49-proteccion-de-datos-personales.md
+  - 'Tema 49: Protección de datos personales': 49-proteccion-de-datos-personales.md
   - '⚠️ Tema 50: Administración electrónica': 50-administracion-electronica.md
   - '⚠️ Tema 51: Documento y expediente electrónico. Gestión documental': 51-documento-y-expediente-electronico.md
 - Bloque VIII — Desarrollo web y de aplicaciones:
@@ -135,7 +135,7 @@ nav:
 - Bloque XI — Administración de la Generalitat:
   - 'Tema 75: La agenda digital valenciana': 75-agenda-digital-valenciana.md
   - 'Tema 76: Seguridad de la información en la Generalitat': 76-seguridad-de-la-informacion-en-la-generalitat.md
-  - '⚠️ Tema 77: Administración electrónica y plataformas de la Generalitat': 77-administracion-electronica-y-plataformas-de-la-generalitat.md
+  - 'Tema 77: Administración electrónica y plataformas de la Generalitat': 77-administracion-electronica-y-plataformas-de-la-generalitat.md
 - Apéndices:
   - Referencias: referencias.md
 - Descargar PDF: temario-oposiciones-tic.pdf
