@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 450" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B7183"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="940" height="450" rx="8" fill="#FFFFFF"/>
+  <text x="24" y="36" font-size="17" font-weight="bold" fill="#1F3A55">Fase de instrucción (II): servicios instrumentales</text>
+
+  <!-- Procedimiento -->
+  <rect x="24" y="180" width="170" height="92" rx="8" fill="#2C6E9E"/>
+  <text x="109" y="210" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Procedimiento</text>
+  <text x="109" y="228" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">administrativo</text>
+  <text x="109" y="250" font-size="11.5" fill="#D8E8F5" text-anchor="middle">tramitador corporativo</text>
+
+  <!-- Barra PAI -->
+  <rect x="250" y="70" width="64" height="330" rx="8" fill="#5B7B9A"/>
+  <text x="282" y="235" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle" transform="rotate(-90 282 235)">PAI · servicios instrumentales</text>
+
+  <!-- Servicios -->
+  <rect x="380" y="70" width="240" height="96" rx="8" fill="#E8F1FA" stroke="#4A90C4" stroke-width="1.5"/>
+  <text x="500" y="98" font-size="13.5" font-weight="bold" fill="#1F3A55" text-anchor="middle">Carpeta ciudadana</text>
+  <text x="500" y="118" font-size="11.5" fill="#33424F" text-anchor="middle">consolidación del expediente:</text>
+  <text x="500" y="134" font-size="11.5" fill="#33424F" text-anchor="middle">estado (fase y trámite)</text>
+  <text x="500" y="150" font-size="11.5" fill="#33424F" text-anchor="middle">y documentos</text>
+
+  <rect x="380" y="200" width="240" height="72" rx="8" fill="#E8F1FA" stroke="#4A90C4" stroke-width="1.5"/>
+  <text x="500" y="230" font-size="13.5" font-weight="bold" fill="#1F3A55" text-anchor="middle">Firma</text>
+  <text x="500" y="250" font-size="11.5" fill="#33424F" text-anchor="middle">portafirmas corporativo</text>
+
+  <rect x="380" y="306" width="240" height="96" rx="8" fill="#E8F1FA" stroke="#4A90C4" stroke-width="1.5"/>
+  <text x="500" y="340" font-size="13.5" font-weight="bold" fill="#1F3A55" text-anchor="middle">Gestión documental</text>
+  <text x="500" y="362" font-size="11.5" fill="#33424F" text-anchor="middle">GDE · SGDE</text>
+
+  <!-- PAG -->
+  <rect x="700" y="86" width="150" height="64" rx="8" fill="#FBF0DE" stroke="#C08A2D" stroke-width="1.5"/>
+  <text x="775" y="112" font-size="12.5" font-weight="bold" fill="#5C4413" text-anchor="middle">Carpeta Ciudadana</text>
+  <text x="775" y="130" font-size="11.5" fill="#5C4413" text-anchor="middle">(PAG)</text>
+  <text x="872" y="108" font-size="11" fill="#33424F">ciudadanía</text>
+  <text x="872" y="132" font-size="11" fill="#33424F">AAPP</text>
+
+  <!-- Expediente -->
+  <rect x="660" y="306" width="260" height="96" rx="8" fill="#FFFFFF" stroke="#8296A6" stroke-width="1.5"/>
+  <text x="790" y="336" font-size="12.5" font-weight="bold" fill="#33424F" text-anchor="middle">Documento y expediente</text>
+  <text x="790" y="354" font-size="12.5" font-weight="bold" fill="#33424F" text-anchor="middle">electrónico (formato ENI)</text>
+  <text x="790" y="374" font-size="11" fill="#33424F" text-anchor="middle">índice, metadatos y firmas</text>
+
+  <!-- Flechas -->
+  <g stroke="#5B7183" stroke-width="2" fill="none">
+    <line x1="198" y1="226" x2="246" y2="226" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <line x1="314" y1="118" x2="376" y2="118" marker-end="url(#arrow)"/>
+    <line x1="314" y1="236" x2="376" y2="236" marker-end="url(#arrow)"/>
+    <line x1="314" y1="354" x2="376" y2="354" marker-end="url(#arrow)"/>
+    <line x1="620" y1="118" x2="696" y2="118" marker-end="url(#arrow)"/>
+    <line x1="620" y1="354" x2="656" y2="354" marker-end="url(#arrow)"/>
+    <line x1="850" y1="104" x2="866" y2="104" marker-end="url(#arrow)"/>
+    <line x1="850" y1="128" x2="866" y2="128" marker-end="url(#arrow)"/>
+  </g>
+
+  <text x="916" y="434" font-size="11" fill="#8A97A3" text-anchor="end">Elaboración propia.</text>
+</svg>
