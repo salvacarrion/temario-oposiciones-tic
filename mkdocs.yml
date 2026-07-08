@@ -59,15 +59,15 @@ nav:
   - 'Tema 1: Jerarquía normativa y fuentes del derecho': 01-jerarquia-normativa-y-fuentes-del-derecho.md
   - 'Tema 2: Constitución Española de 1978': 02-constitucion-espanola.md
   - 'Tema 3: Estatuto de Autonomía de la Comunitat Valenciana (Ley Orgánica 5/1982)': 03-estatuto-de-autonomia-de-la-comunitat-valenciana.md
-  - '⚠️ Tema 4: El Consell y el gobierno valenciano (Ley 5/1983)': 04-consell-y-gobierno-valenciano.md
-  - '⚠️ Tema 5: La Unión Europea': 05-union-europea.md
+  - 'Tema 4: Consell y gobierno valenciano (Ley 5/1983)': 04-consell-y-gobierno-valenciano.md
+  - 'Tema 5: Unión Europea': 05-union-europea.md
   - '⚠️ Tema 6: Leyes de igualdad': 06-leyes-de-igualdad.md
-  - '⚠️ Tema 7: Protección integral contra la violencia de género (Ley Orgánica 1/2004)': 07-violencia-de-genero.md
+  - 'Tema 7: Protección integral contra la violencia de género (Ley Orgánica 1/2004)': 07-violencia-de-genero.md
   - '⚠️ Tema 8: Transparencia y buen gobierno': 08-transparencia-y-buen-gobierno.md
   - 'Tema 9: Régimen jurídico del sector público (Ley 40/2015)': 09-regimen-juridico-del-sector-publico.md
   - 'Tema 10: Procedimiento administrativo común de las Administraciones Públicas (Ley 39/2015)': 10-procedimiento-administrativo-comun.md
-  - '⚠️ Tema 11: Contratos del sector público (Ley 9/2017)': 11-contratos-del-sector-publico.md
-  - '⚠️ Tema 12: El Estatuto Básico del Empleado Público (TREBEP)': 12-estatuto-basico-del-empleado-publico.md
+  - 'Tema 11: Contratos del sector público (Ley 9/2017)': 11-contratos-del-sector-publico.md
+  - 'Tema 12: Estatuto Básico del Empleado Público (TREBEP)': 12-estatuto-basico-del-empleado-publico.md
   - 'Tema 13: Función pública valenciana': 13-funcion-publica-valenciana.md
   - '⚠️ Tema 14: Hacienda pública de la Generalitat (Ley 1/2015)': 14-hacienda-publica-de-la-generalitat.md
   - '⚠️ Tema 15: Prevención de riesgos laborales': 15-prevencion-de-riesgos-laborales.md
@@ -116,10 +116,10 @@ nav:
   - '⚠️ Tema 56: SOA, servicios web y microservicios': 56-soa-servicios-web-y-microservicios.md
   - '⚠️ Tema 57: Programación': 57-programacion.md
 - Bloque IX — Interoperabilidad y confianza digital:
-  - '⚠️ Tema 58: El Esquema Nacional de Interoperabilidad': 58-esquema-nacional-de-interoperabilidad.md
-  - '⚠️ Tema 59: Infraestructuras y servicios comunes de interoperabilidad': 59-infraestructuras-y-servicios-comunes-de-interoperabilidad.md
+  - 'Tema 58: Esquema Nacional de Interoperabilidad': 58-esquema-nacional-de-interoperabilidad.md
+  - 'Tema 59: Infraestructuras y servicios comunes de interoperabilidad': 59-infraestructuras-y-servicios-comunes-de-interoperabilidad.md
   - '⚠️ Tema 60: Criptografía': 60-criptografia.md
-  - '⚠️ Tema 61: Identificación y firma electrónica': 61-identificacion-y-firma-electronica.md
+  - 'Tema 61: Identificación y firma electrónica': 61-identificacion-y-firma-electronica.md
   - '⚠️ Tema 62: Sistemas de información geográfica': 62-sistemas-de-informacion-geografica.md
   - '⚠️ Tema 63: Infraestructuras de datos espaciales': 63-infraestructuras-de-datos-espaciales.md
 - Bloque X — Redes y comunicaciones:

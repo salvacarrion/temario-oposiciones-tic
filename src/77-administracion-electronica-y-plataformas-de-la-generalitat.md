@@ -129,17 +129,17 @@ Los componentes anteriores se articulan a lo largo de las fases del procedimient
 
 - **Iniciación**: la persona interesada presenta su solicitud por la Sede PROP (con identificación, firma y, en su caso, pago de tasas), presencialmente (con digitalización y copia auténtica en la oficina de asistencia) o desde otra administración a través del **SIR**; la representación se acredita contra el Registro electrónico de representantes y todo asiento genera justificante.
 
-![](media/image67.png){width=95%}
+![](media/procedimiento-electronico-iniciacion.png){width=95%}
 
 - **Instrucción**: el órgano gestor consulta los datos necesarios mediante los **servicios de verificación de la PAI** (que enlazan con la PID estatal y con los proveedores propios de la GVA), evitando pedir documentos que ya obren en poder de las administraciones, y usa los servicios instrumentales corporativos: firma, gestión documental (**GDE**) y consolidación del expediente en la carpeta ciudadana.
 
-![](media/image68.png){width=95%}
+![](media/procedimiento-electronico-instruccion-verificacion.png){width=95%}
 
-![](media/image69.png){width=95%}
+![](media/procedimiento-electronico-instruccion-instrumentales.png){width=95%}
 
 - **Finalización**: la resolución se notifica electrónicamente (módulo de notificaciones, con acceso también por la DEHú) o por vía postal, el estado del expediente y sus documentos se consolidan en la carpeta ciudadana, y el expediente cerrado pasa al archivo electrónico conforme a la política de gestión documental.
 
-![](media/image70.png){width=95%}
+![](media/procedimiento-electronico-finalizacion.png){width=95%}
 
 ## La Plataforma Autonómica de Interoperabilidad (PAI)
 
