@@ -6,9 +6,9 @@
 !!! warning "Temario en proceso de revisión"
     La gran mayoría de temas **no han sido revisados** todavía. Su contenido puede estar incompleto, desactualizado o contener errores. Los temas marcados con **⚠️** en el menú lateral están pendientes de revisión. Contrasta siempre con fuentes oficiales.
 
-Hola! Soy **Salva Carrión** y este es el temario que elaboré para preparar mis oposiciones al cuerpo superior de ingeniería informática, publicado ahora como proyecto **open source** para que cualquiera pueda usarlo y mejorarlo.
+Hola! Soy **Salva Carrión** y este es la evolución del temario que elaboré para aprobar la oposición al **Cuerpo Superior Técnico de Ingeniería en Informática de la Generalitat Valenciana** (convocatoria 5/22): una versión limpia, ampliada y actualizada de mi temario original, publicada como proyecto **open source** para que cualquiera pueda usarla y mejorarla.
 
-No es un temario oficial ni sustituye al programa de cada convocatoria. Úsalo como punto de partida, contrástalo con las bases oficiales y adáptalo a la oposición que estés preparando.
+No es un temario oficial ni sustituye al programa de cada convocatoria: cubre de forma muy exhaustiva el programa de la GVA, aunque también se solapa en un muy alto grado con los de la mayoría de oposiciones TIC. Úsalo como punto de partida, contrástalo con las bases oficiales para adaptarlo a la oposición que estés preparando.
 
 ### Estructura del temario
 
