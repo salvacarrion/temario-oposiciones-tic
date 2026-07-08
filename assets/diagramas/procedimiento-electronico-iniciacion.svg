@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B7183"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="940" height="470" rx="8" fill="#FFFFFF"/>
+  <text x="24" y="36" font-size="17" font-weight="bold" fill="#1F3A55">Fase de iniciación: canales de entrada y registro</text>
+
+  <!-- Actores -->
+  <rect x="24" y="150" width="136" height="64" rx="8" fill="#F2F4F6" stroke="#8296A6" stroke-width="1.5"/>
+  <text x="92" y="178" font-size="13" font-weight="bold" fill="#33424F" text-anchor="middle">Persona</text>
+  <text x="92" y="196" font-size="13" font-weight="bold" fill="#33424F" text-anchor="middle">interesada</text>
+
+  <rect x="24" y="330" width="136" height="64" rx="8" fill="#F2F4F6" stroke="#8296A6" stroke-width="1.5"/>
+  <text x="92" y="358" font-size="13" font-weight="bold" fill="#33424F" text-anchor="middle">Otras AAPP</text>
+  <text x="92" y="376" font-size="13" font-weight="bold" fill="#33424F" text-anchor="middle">y Correos</text>
+
+  <!-- Canales -->
+  <rect x="220" y="70" width="256" height="84" rx="8" fill="#E8F1FA" stroke="#4A90C4" stroke-width="1.5"/>
+  <text x="348" y="98" font-size="13.5" font-weight="bold" fill="#1F3A55" text-anchor="middle">Canal presencial</text>
+  <text x="348" y="118" font-size="12" fill="#33424F" text-anchor="middle">oficina de asistencia: digitalización</text>
+  <text x="348" y="135" font-size="12" fill="#33424F" text-anchor="middle">y copia electrónica auténtica</text>
+
+  <rect x="220" y="190" width="256" height="84" rx="8" fill="#E8F1FA" stroke="#4A90C4" stroke-width="1.5"/>
+  <text x="348" y="218" font-size="13.5" font-weight="bold" fill="#1F3A55" text-anchor="middle">Canal electrónico (Sede PROP)</text>
+  <text x="348" y="238" font-size="12" fill="#33424F" text-anchor="middle">identificación, firma y pago de tasas;</text>
+  <text x="348" y="255" font-size="12" fill="#33424F" text-anchor="middle">acreditación de la representación</text>
+
+  <rect x="220" y="330" width="256" height="84" rx="8" fill="#FBF0DE" stroke="#C08A2D" stroke-width="1.5"/>
+  <text x="348" y="358" font-size="13.5" font-weight="bold" fill="#5C4413" text-anchor="middle">SIR / ORVE</text>
+  <text x="348" y="378" font-size="12" fill="#33424F" text-anchor="middle">intercambio de asientos registrales</text>
+  <text x="348" y="395" font-size="12" fill="#33424F" text-anchor="middle">entre administraciones</text>
+
+  <!-- Registro de entrada -->
+  <rect x="560" y="200" width="150" height="76" rx="8" fill="#D2E5F5" stroke="#2C6E9E" stroke-width="2"/>
+  <text x="635" y="232" font-size="13.5" font-weight="bold" fill="#1F3A55" text-anchor="middle">Registro electrónico</text>
+  <text x="635" y="250" font-size="13.5" font-weight="bold" fill="#1F3A55" text-anchor="middle">de entrada</text>
+
+  <!-- Carpeta ciudadana -->
+  <rect x="560" y="62" width="150" height="64" rx="8" fill="#FBF0DE" stroke="#C08A2D" stroke-width="1.5"/>
+  <text x="635" y="88" font-size="13" font-weight="bold" fill="#5C4413" text-anchor="middle">Carpeta Ciudadana</text>
+  <text x="635" y="106" font-size="12" fill="#5C4413" text-anchor="middle">(PAG)</text>
+
+  <!-- Registro departamental -->
+  <rect x="560" y="356" width="150" height="64" rx="8" fill="#F2F4F6" stroke="#8296A6" stroke-width="1.5"/>
+  <text x="635" y="382" font-size="13" font-weight="bold" fill="#33424F" text-anchor="middle">Registro</text>
+  <text x="635" y="400" font-size="13" font-weight="bold" fill="#33424F" text-anchor="middle">departamental</text>
+
+  <!-- Procedimiento -->
+  <rect x="764" y="192" width="156" height="92" rx="8" fill="#2C6E9E"/>
+  <text x="842" y="218" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Procedimiento</text>
+  <text x="842" y="236" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">administrativo</text>
+  <text x="842" y="256" font-size="11.5" fill="#D8E8F5" text-anchor="middle">tramitador corporativo</text>
+  <text x="842" y="272" font-size="11.5" fill="#D8E8F5" text-anchor="middle">DIR3 · SIA</text>
+
+  <!-- Flechas -->
+  <g stroke="#5B7183" stroke-width="2" fill="none">
+    <line x1="160" y1="168" x2="216" y2="120" marker-end="url(#arrow)"/>
+    <line x1="160" y1="196" x2="216" y2="224" marker-end="url(#arrow)"/>
+    <line x1="160" y1="362" x2="216" y2="368" marker-end="url(#arrow)"/>
+    <line x1="476" y1="112" x2="556" y2="220" marker-end="url(#arrow)"/>
+    <line x1="476" y1="232" x2="556" y2="238" marker-end="url(#arrow)"/>
+    <line x1="476" y1="372" x2="556" y2="256" marker-end="url(#arrow)"/>
+    <line x1="710" y1="238" x2="760" y2="238" marker-end="url(#arrow)"/>
+    <line x1="635" y1="196" x2="635" y2="130" marker-end="url(#arrow)"/>
+    <line x1="635" y1="280" x2="635" y2="352" marker-end="url(#arrow)"/>
+  </g>
+
+  <text x="916" y="454" font-size="11" fill="#8A97A3" text-anchor="end">Elaboración propia.</text>
+</svg>
