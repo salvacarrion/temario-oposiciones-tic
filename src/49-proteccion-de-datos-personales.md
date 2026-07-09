@@ -2,7 +2,7 @@
 
 La protección de datos personales es un derecho fundamental amparado por el **artículo 18.4 de la Constitución**. Su marco vigente lo forman el **Reglamento (UE) 2016/679** (Reglamento General de Protección de Datos, RGPD), directamente aplicable en toda la Unión Europea, y la **Ley Orgánica 3/2018** (LOPDGDD), que adapta el ordenamiento español al reglamento y lo completa.
 
-## El Reglamento General de Protección de Datos (RGPD)
+## Reglamento General de Protección de Datos (RGPD)
 
 **Sin modificaciones desde su aplicación (25 de mayo de 2018).**
 

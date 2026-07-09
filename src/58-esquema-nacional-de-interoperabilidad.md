@@ -163,7 +163,7 @@ El protocolo concreto de intercambio es el **SCSP** (última sección de este te
 
 ## Interoperabilidad europea, nacional y autonómica
 
-### El Marco Europeo de Interoperabilidad (EIF)
+## El Marco Europeo de Interoperabilidad (EIF)
 
 El **Marco Europeo de Interoperabilidad** (*European Interoperability Framework*, EIF) es el modelo europeo de referencia para la interoperabilidad de los servicios públicos. Su versión vigente se adoptó como **anexo 2 de la Comunicación COM(2017) 134, de 23 de marzo de 2017** («Marco Europeo de Interoperabilidad. Estrategia de aplicación»), y contiene **47 recomendaciones** organizadas en torno a:
 
@@ -173,7 +173,7 @@ El **Marco Europeo de Interoperabilidad** (*European Interoperability Framework*
 
 El ENI es el **marco nacional de interoperabilidad** español alineado con el EIF; el observatorio **NIFO** (*National Interoperability Framework Observatory*) hace el seguimiento del estado de la interoperabilidad y del alineamiento de los marcos nacionales con el EIF.
 
-### El Reglamento sobre la Europa Interoperable
+### Reglamento sobre la Europa Interoperable
 
 El **Reglamento (UE) 2024/903, de 13 de marzo de 2024**, por el que se establecen medidas a fin de garantizar un alto nivel de interoperabilidad del sector público en toda la Unión (**Reglamento sobre la Europa Interoperable**), convierte en norma vinculante la política europea de interoperabilidad, hasta entonces articulada mediante programas e instrumentos no vinculantes (IDA, IDABC, ISA e ISA², bajo el que se elaboró el EIF de 2017). Es **directamente aplicable desde el 12 de julio de 2024** (la evaluación de la interoperabilidad y las autoridades nacionales competentes, desde el **12 de enero de 2025**). Elementos clave:
 

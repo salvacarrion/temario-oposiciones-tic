@@ -8,7 +8,7 @@
 
 ## Cifrado y Sistemas Criptográficos
 
-### El cifrado
+### Cifrado
 
 Proceso de codificación de la información para protegerla de accesos no autorizados. Los **algoritmos acreditados** utilizados para este propósito se encuentran en el documento **"SOGIS Agreed Cryptographic Mechanisms"**.
 

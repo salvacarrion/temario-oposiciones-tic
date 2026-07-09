@@ -193,7 +193,7 @@ La PAI sigue una **arquitectura SOA** cuya pieza central es un **bus** de servic
 - **Disponibilidad**: **24x7** (condicionada a la del servicio final).
 - **Trazabilidad**: guarda la información del intercambio de mensajes, sin almacenar su contenido.
 
-### El Cliente de la PAI
+### Cliente de la PAI
 
 El **Cliente PAI CV** es un **frontal web** que permite realizar consultas a los servicios de verificación sin necesidad de integrar una aplicación de tramitación: ofrece los servicios de la PID estatal, los no intermediados de la AEAT y los propios de la Generalitat. Para su uso, el certificado de sello de órgano del organismo debe instalarse en los servidores de la **DGTIC**. Cada organismo designa un **Personal Administrador Delegado (PAD)** que gestiona las altas de usuarios; cada acceso se vincula a un procedimiento concreto (código **SIA**, norma legal y artículos que justifican la consulta, y régimen de consentimiento).
 

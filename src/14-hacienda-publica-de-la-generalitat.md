@@ -1,69 +1,216 @@
 # Hacienda pública de la Generalitat (Ley 1/2015)
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+**Texto consolidado a 29 de diciembre de 2025.**
 
+## Características y estructura
 
-## Ley 1/2015, de Hacienda Pública, del Sector Público Instrumental y de Subvenciones
+La **Ley 1/2015, de 6 de febrero, de la Generalitat, de Hacienda Pública, del Sector Público Instrumental y de Subvenciones** es la norma de cabecera del régimen económico-financiero de la Generalitat: el equivalente autonómico de la **Ley 47/2003, General Presupuestaria**, que integra además el régimen jurídico básico de su sector público instrumental y el desarrollo autonómico de la **Ley 38/2003, General de Subvenciones**.
 
-### Objeto de la Ley
+- **Publicación y vigor**: **DOGV de 12 de febrero de 2015** y **BOE de 26 de febrero de 2015**; entró en vigor **al mes de su publicación** en el DOGV.
+- **Deroga** el **Decreto Legislativo de 26 de junio de 1991**, por el que se aprobó el texto refundido de la Ley de Hacienda Pública de la Generalitat Valenciana.
+- **Objeto (art. 1)**: «regular el régimen económico-financiero del sector público de la Generalitat, el cual se ordena en torno a las siguientes materias: hacienda pública, presupuesto, contabilidad, tesorería y endeudamiento, y control financiero». Regula igualmente, en el Título IX, «el régimen jurídico básico del sector público instrumental de la Generalitat» y, en el Título X, «el régimen jurídico de las subvenciones otorgadas por la Generalitat».
+- **Estructura**: **178 artículos** en **10 Títulos**; en el texto consolidado, **17 disposiciones adicionales**, **9 transitorias**, **1 derogatoria** y **2 finales**:
+    - **Título I.** Del ámbito de aplicación y de la Hacienda Pública de la Generalitat (arts. 1-23).
+    - **Título II.** De los Presupuestos de la Generalitat (arts. 24-66).
+    - **Título III.** Tesorería de la Generalitat (arts. 67-79).
+    - **Título IV.** Deuda pública (arts. 80-88).
+    - **Título V.** Régimen de avales (arts. 89-91).
+    - **Título VI.** Del control interno de la gestión económico-financiera efectuada por la Intervención General de la Generalitat (arts. 92-123 quinquies).
+    - **Título VII.** Contabilidad del sector público de la Generalitat (arts. 124-143).
+    - **Título VIII.** Responsabilidades (arts. 144-151).
+    - **Título IX.** Sector público instrumental de la Generalitat (arts. 152-158).
+    - **Título X.** Subvenciones (arts. 159-178).
+- **Reformas**: la ley se retoca con frecuencia mediante las leyes de acompañamiento presupuestario (entre otras, la **Ley 9/2019**, que añadió la supervisión continua al Título VI, y la **Ley 7/2023**). Las más recientes afectan al Título X: el **Decreto-ley 7/2024** (convalidado y tramitado como **Ley 6/2024**) modificó los arts. 160 y 164-166, y el **Decreto-ley 14/2025**, tramitado como **Ley 3/2026, de 29 de junio**, simplificó los arts. 62, 164-166 y 177.
 
-- Regular el **régimen económico-financiero** del sector público de la Generalitat.
-- Se centra en aspectos como **hacienda pública, presupuesto, contabilidad, tesorería, endeudamiento** y **control financiero**.
-- Proporciona el **régimen jurídico básico** del sector público instrumental de la Generalitat.
-- Define el **régimen jurídico de las subvenciones** otorgadas por la Generalitat.
+El temario se centra en los Títulos I, II, IX y X, que se desarrollan a continuación.
 
-### Ámbito de Aplicación
+## Título I. Del ámbito de aplicación y de la Hacienda Pública de la Generalitat
 
-- **Sector público de la Generalitat**, que incluye:
-    - **Administración de la Generalitat**.
-    - **Sector público instrumental**, compuesto por organismos públicos, sociedades mercantiles, fundaciones y consorcios adscritos.
-    - **Instituciones de la Generalitat**.
+### Capítulo I. Ámbito de aplicación y organización del sector público de la Generalitat
 
-### Estructura del Sector Público de la Generalitat
+Artículos 1 a 5: objeto, delimitación del sector público de la Generalitat y su ordenación en sectores.
 
-- **Sector público administrativo**:
-    - Incluye la **Administración de la Generalitat**, organismos autónomos, instituciones de la Generalitat, consorcios y entidades de derecho público orientadas al beneficio público.
-    - Presupuestos de carácter **limitativo y vinculante**.
-- **Sector público empresarial y fundacional**:
-    - Compuesto por entidades públicas empresariales, sociedades mercantiles, fundaciones y otras entidades de derecho público diferentes al sector administrativo.
-    - Presupuestos de carácter **estimativo y no vinculante**.
+- **Art. 2. Sector público de la Generalitat**: forman parte de él, a los efectos de la ley:
+    - La **Administración de la Generalitat**.
+    - El **sector público instrumental** de la Generalitat.
+    - Las **Instituciones de la Generalitat** del art. 20.3 del Estatuto de Autonomía, tengan o no personalidad jurídica; su régimen de **contabilidad y control** queda sometido a sus normas propias, no a esta ley.
+    - La ley **no se aplica a Les Corts**, que gozan de autonomía presupuestaria (art. 21 del Estatuto), sin perjuicio de la coordinación para elaborar el Proyecto de Ley de Presupuestos.
+    - Se regulan también los **fondos carentes de personalidad jurídica** dotados mayoritariamente desde los presupuestos de la Generalitat (art. 2.4) y, solo a efectos del seguimiento de la estabilidad presupuestaria (LO 2/2012), las **universidades públicas** dependientes y demás entes del sector administraciones públicas según el SEC (art. 2.5).
+- **Art. 2.3. Sector público instrumental**: integrado, siempre bajo dependencia o vinculación de la Administración de la Generalitat o de otros entes de su sector público, por:
+    - Los **organismos públicos**: organismos autónomos, entidades públicas empresariales y otras entidades de derecho público.
+    - Las **sociedades mercantiles** de la Generalitat.
+    - Las **fundaciones** del sector público de la Generalitat.
+    - Los **consorcios** adscritos a la Generalitat cuyos actos estén sujetos directa o indirectamente a su poder de decisión.
+- **Art. 3. Estructura del sector público**: se ordena en dos sectores:
+    - **Sector público administrativo**: la Administración de la Generalitat y sus organismos autónomos, las Instituciones y aquellos consorcios y entidades de derecho público que cumplan alguna de estas dos características: que su actividad principal no sea la producción en régimen de mercado de bienes y servicios (o efectúen redistribución de renta sin ánimo de lucro), o que **no se financien mayoritariamente con ingresos comerciales**.
+    - **Sector público empresarial y fundacional**: las entidades públicas empresariales, las sociedades mercantiles, las fundaciones y los consorcios y entidades de derecho público no incluidos en el sector administrativo.
+- **Art. 4. Régimen económico-presupuestario básico**: el presupuesto de gastos del sector administrativo tiene carácter **limitativo y vinculante** (en las entidades de derecho público de este sector, limitativo solo por su **importe global**, salvo gastos de personal y subvenciones nominativas, siempre limitativos); el del sector empresarial y fundacional es **estimativo y no vinculante**, salvo los gastos de personal, limitativos por su cuantía total.
+- **Art. 5. Normativa reguladora**: la actividad económico-financiera se sujeta a la normativa comunitaria, a la legislación básica estatal y a los principios de **estabilidad presupuestaria y sostenibilidad financiera**; se rige por esta ley, sus normas de desarrollo y las leyes anuales de presupuestos, con aplicación supletoria del derecho administrativo y, en su defecto, del derecho común. Se someten a su normativa específica los tributos, el patrimonio, la contratación y las ayudas y subvenciones.
 
-### Presupuestos de la Generalitat
+### Capítulo II. Del régimen de la Hacienda Pública de la Generalitat
 
-- **Definición**: Expresión cifrada, conjunta y sistemática de los derechos y obligaciones a liquidar durante el ejercicio.
-- **Componentes**:
-    - Presupuestos de los sujetos del sector público administrativo.
-    - Presupuestos de explotación y capital del sector empresarial y fundacional.
-    - Presupuestos de fondos sin personalidad jurídica financiados mayoritariamente por la Generalitat.
-- **Características**:
-    - Presupuesto único y anual, aprobado por **Les Corts**.
-    - Elaborado por la **Conselleria de Hacienda**.
-- **Clasificaciones de los estados de gastos**: Orgánica, por programas, económica y territorial.
-- **Clasificaciones de los estados de ingresos**: Orgánica y económica.
+- **Art. 6. Definición**: la Hacienda Pública de la Generalitat comprende «el conjunto de derechos y obligaciones de contenido económico cuya titularidad corresponde a la Administración de la Generalitat y al resto de sujetos que conforman el sector público administrativo». La Administración y sus organismos autónomos tienen el **mismo tratamiento fiscal que el Estado**.
+- **Art. 7. Derechos**: de **naturaleza pública** (tributos y demás derechos derivados del ejercicio de potestades administrativas: impuestos, tasas y contribuciones especiales propios, tributos cedidos, recargos, precios públicos, participación en el Fondo de Garantía de Servicios Públicos Fundamentales y en ingresos del Estado, fondos de compensación interterritorial, deuda y operaciones de crédito, multas y sanciones, fondos de la UE) y de **naturaleza privada** (ingresos de patrimonio, legados, donaciones y demás de derecho privado).
+- **Art. 8. Administración de los derechos**: corresponde a la persona titular de la **conselleria competente en materia de hacienda** y, en los entes del sector administrativo, a su presidencia o dirección.
+- **Art. 9. Límites**: los derechos económicos no pueden **enajenarse, gravarse ni arrendarse** salvo previsión legal; no cabe conceder **exenciones, condonaciones, rebajas ni moratorias** salvo en los casos que determinen las leyes; no puede **transigirse ni someterse a arbitraje** sino mediante **decreto del Consell**, previo dictamen del **Consell Jurídic Consultiu**.
+- **Art. 10. Prerrogativas de los derechos de naturaleza pública**: su gestión recaudatoria goza de las prerrogativas de los tributos de la **Ley 58/2003, General Tributaria**; responsabilidad solidaria en los supuestos del art. 42.2 LGT; **derecho de abstención** en los procesos concursales, con posibilidad de suscribir convenios (competencia del titular de hacienda).
+- **Art. 12. Providencia de apremio**: es **título suficiente** para iniciar el procedimiento de apremio y tiene la **misma fuerza ejecutiva que la sentencia judicial**. El procedimiento se suspende de inmediato y **sin garantía** si el interesado demuestra error material, aritmético o de hecho, o que la deuda ha prescrito o ha sido ingresada, condonada, compensada, aplazada o suspendida.
+- **Art. 13. Aplazamiento y fraccionamiento**: posibles con **interés de demora** por el procedimiento de la LGT; exigen garantía salvo deudas de **baja cuantía** o riesgo para la capacidad productiva y el nivel de empleo del deudor sin bienes suficientes.
+- **Art. 14. Compensación**: las deudas de naturaleza pública pueden extinguirse por compensación con créditos reconocidos a favor del deudor; si el deudor es una **entidad local**, la vía de apremio solo procede si es imposible la compensación.
+- **Art. 15. Prescripción de los derechos**: **4 años** para reconocer y liquidar créditos (desde que el derecho pudo ejercitarse) y para recaudar los ya liquidados (desde su notificación o vencimiento); se interrumpe conforme a la LGT y **se aplica de oficio**.
+- **Art. 16. Intereses de demora**: las cantidades adeudadas devengan interés **desde el día siguiente a su vencimiento**, al tipo del **interés legal** fijado en la Ley de Presupuestos Generales del Estado.
+- **Art. 17. Derechos de naturaleza privada**: su efectividad se sujeta a las normas y procedimientos del **derecho privado**.
+- **Arts. 18-20. Obligaciones**: nacen «de la ley, de los negocios jurídicos y de los actos o hechos que, según derecho, las generen» (art. 18); solo son **exigibles** cuando resulten de la ejecución del presupuesto, de **sentencia judicial firme** o de operaciones no presupuestarias legalmente autorizadas (art. 19); se extinguen por las causas del **Código Civil** y del resto del ordenamiento (art. 20).
+- **Art. 21. Prerrogativas**: ningún tribunal o autoridad administrativa puede despachar **mandamiento de ejecución ni providencia de embargo** contra bienes o derechos materialmente afectados a un servicio o función pública (se consideran siempre afectados el dinero, valores y créditos de la Hacienda). Si el cumplimiento de una resolución judicial exige modificar créditos, el procedimiento debe concluirse en los **3 meses** siguientes a su notificación.
+- **Art. 22. Intereses de demora**: si la administración no paga en los **3 meses** siguientes al reconocimiento de la obligación o a la notificación de la resolución judicial, abonará el interés del art. 16 desde que el acreedor **reclame por escrito**.
+- **Art. 23. Prescripción de las obligaciones**: **4 años** para el reconocimiento o liquidación de obligaciones no solicitadas y para exigir el pago de las ya reconocidas; se interrumpe conforme al **Código Civil**.
 
-### Sector Público Instrumental
+## Título II. De los presupuestos de la Generalitat
 
-- **Organismos públicos**:
-    - Con personalidad jurídica pública, patrimonio y tesorería propios.
-    - Se crean por ley de **Les Corts**.
-    - Clasificación:
-        - **Organismos autónomos**: Regidos por el derecho administrativo.
-        - **Entidades de derecho público**: Regidas por el derecho privado, aunque pueden ejercer potestades administrativas.
-- **Sociedades mercantiles de la Generalitat**:
-    - Sociedades bajo control de la Generalitat.
-- **Fundaciones del sector público**:
-    - Con personalidad jurídica de naturaleza privada.
-    - No ejercen potestades administrativas.
-    - Regidas principalmente por el derecho privado y legislación específica.
-- **Consorcios de la Generalitat**:
-    - Adscritos a la Generalitat según normativa básica estatal.
+### Capítulo I. Principios y reglas de programación y de gestión presupuestaria
 
-### Subvenciones
+- **Art. 24. Principios de programación**: **estabilidad presupuestaria, sostenibilidad financiera, plurianualidad, transparencia, eficiencia** en la asignación y utilización de los recursos públicos, **responsabilidad y lealtad institucional**; la Generalitat velará por el **equilibrio territorial** y la solidaridad interna. Toda actuación que afecte a gastos o ingresos presentes o futuros debe valorar previamente sus repercusiones y supeditarse a la estabilidad y a los escenarios plurianuales.
+- **Art. 25. Principios de gestión**: régimen de **presupuesto único y anual**, aprobado por **Les Corts** y enmarcado en un escenario plurianual; el ejercicio coincide con el **año natural**. Rigen la **especialidad** (los créditos se destinan exclusivamente a su finalidad autorizada), la **no afectación** de los recursos (salvo que una ley disponga lo contrario) y el **presupuesto bruto** (derechos y obligaciones se aplican por su importe íntegro).
 
-- **Definición**: Ayudas otorgadas por la Generalitat a terceros con objetivos específicos.
-- **Procedimientos de concesión**:
-    - **Concurrencia competitiva**: Modelo general basado en criterios objetivos y comparación de solicitudes.
-    - **Concesión directa**: Excepcional, limitada a casos específicos justificados por ley.
+### Capítulo II. Programación presupuestaria y objetivo de estabilidad
+
+- **Art. 26. Informes**: con carácter previo a la aprobación de disposiciones legales y reglamentarias, convenios, acuerdos del Consell y planes o programas plurianuales, así como de acuerdos con incidencia retributiva, la conselleria de hacienda emite informe **preceptivo y vinculante** sobre su adecuación a las disponibilidades presupuestarias, sobre la base de una **memoria económica**.
+- **Art. 27. Escenarios presupuestarios plurianuales**: programan la actividad del sector con presupuesto limitativo, se ajustan al **objetivo de estabilidad** y abarcan **3 años**; los elabora la **conselleria de hacienda**, que da cuenta al Consell antes de aprobar el Proyecto de Ley de Presupuestos.
+- **Art. 28. Programas plurianuales**: desarrollan los escenarios por un período mínimo de **3 años**, con objetivos, acciones y dotaciones; se agrupan por consellerias.
+- **Art. 29. Evaluación**: los responsables de los programas formulan un **balance de resultados** y un **informe de gestión**; las asignaciones a las consellerias tienen en cuenta el nivel de cumplimiento de objetivos de ejercicios anteriores.
+
+### Capítulo III. Contenido, elaboración y estructura
+
+- **Art. 30. Definición**: los Presupuestos de la Generalitat son «la expresión cifrada, conjunta y sistemática de los derechos y obligaciones a liquidar durante el ejercicio por cada uno de los sujetos que forman parte del sector público de la Generalitat».
+- **Art. 31. Alcance y contenido**: integran los presupuestos del **sector administrativo**, los **presupuestos de explotación y capital** del sector empresarial y fundacional y los de los **fondos sin personalidad jurídica**. Determinan las obligaciones máximas reconocibles, los derechos a liquidar, los objetivos de cada gestor y la **estimación de los beneficios fiscales**.
+- **Art. 32. Créditos y programas de gasto**: crédito presupuestario es cada asignación individualizada de gasto; los programas agregan créditos orientados a objetivos y detallan objetivos mensurables, actividades, medios, líneas de subvención e **indicadores de ejecución**.
+- **Art. 33. Procedimiento de elaboración**: aprobados los objetivos de estabilidad y la regla de gasto, el **Consell** acuerda el **límite máximo de gasto no financiero**; la conselleria de hacienda fija por orden el procedimiento y los plazos, recibe las propuestas de instituciones y consellerias, elabora el anteproyecto del presupuesto de ingresos y el **Anteproyecto de Ley de Presupuestos**, que su titular eleva al Consell.
+- **Art. 34. Remisión a Les Corts**: el Proyecto de Ley se remite **antes del 1 de noviembre** de cada año. Se acompaña, entre otros documentos, de los estados consolidados, la memoria explicativa, el detalle de plantillas, la distribución de gastos por objetivos, el detalle plurianual de las inversiones, la liquidación del año anterior y el estado de ejecución del corriente, el **informe económico-financiero**, la **memoria de beneficios fiscales** y el **informe de impacto de género**.
+- **Art. 35. Prórroga**: si Les Corts no aprueban el presupuesto antes del primer día del ejercicio, se entiende **prorrogado el anterior** hasta la aprobación y publicación del nuevo en el DOGV; la prórroga no afecta a los créditos para programas o actuaciones que terminen en el ejercicio prorrogado ni a obligaciones que se extingan en él.
+- **Art. 37. Estructura de los estados de gastos** (presupuestos limitativos), según cuatro clasificaciones:
+    - **Orgánica**: por secciones y servicios presupuestarios.
+    - **Por programas**: con identificación funcional de los créditos según su finalidad.
+    - **Económica**: por capítulos, separando operaciones **corrientes** (gastos de personal, gastos corrientes en bienes y servicios, gastos financieros, transferencias corrientes), **de capital** (inversiones reales, transferencias de capital), **financieras** (activos y pasivos financieros) y el **Fondo de Contingencia**. Los capítulos se desglosan en artículos, conceptos y subconceptos.
+    - **Territorial**: por provincias, comarcas o municipios.
+- **Art. 38. Estructura de los estados de ingresos**: clasificaciones **orgánica y económica** (corrientes: impuestos directos e indirectos, tasas, precios públicos y otros ingresos, transferencias corrientes e ingresos patrimoniales; de capital: enajenación de inversiones reales y transferencias de capital; operaciones financieras: activos y pasivos financieros).
+
+### Capítulo IV. De los créditos y sus modificaciones
+
+- **Art. 39. Especialidad de los créditos**: los créditos son **limitativos** (no cabe adquirir compromisos superiores a su importe) y las normas de rango inferior a ley o actos que lo vulneren son **nulos de pleno derecho**. Solo se contraen obligaciones del propio ejercicio, con tres excepciones: **atrasos de personal**, obligaciones derivadas de **resoluciones judiciales** y compromisos de **ejercicios cerrados** debidamente adquiridos; cualquier otra imputación exige **acuerdo del Consell** publicado en el DOGV en **10 días**.
+- **Art. 40. Compromisos de gasto plurianuales**: admisibles si la ejecución se inicia en el propio ejercicio, con un máximo de **cuatro ejercicios posteriores** y sin exceder del **70 %** del crédito inicial en el primero, el **60 %** en el segundo y el **50 %** en el tercero y el cuarto. En los contratos de obra se practica una **retención adicional del 10 %** del importe de adjudicación. Los límites no se aplican a la carga financiera de la deuda ni a los arrendamientos de inmuebles, y el **Consell** puede modificarlos en casos justificados; en gastos financiados por el Estado o la UE rigen las normas del financiador.
+- **Art. 41. Tramitación anticipada**: los expedientes de gasto pueden iniciarse en el ejercicio anterior si existe previsión reiterada de crédito o crédito en el proyecto de ley de presupuestos presentado; puede llegarse como máximo al momento **inmediato anterior al compromiso de gasto**, con **cláusula suspensiva** condicionada a la existencia de crédito adecuado y suficiente.
+- **Art. 42. Inmuebles con pago diferido**: en adquisiciones directas de importe superior a **2 millones de euros** puede diferirse el pago, con desembolso inicial mínimo del **25 %** y el resto distribuido en los **cuatro ejercicios siguientes** dentro de los porcentajes del art. 40.
+- **Art. 43. Fondo de Contingencia**: dotación diferenciada para necesidades **inaplazables, no discrecionales y no previstas**; no puede financiar decisiones discrecionales; su cuantía se fija en la ley anual y su remanente **no es incorporable** a ejercicios posteriores.
+- **Art. 44. Modificación de los créditos iniciales**: solo mediante **incorporaciones de crédito, créditos extraordinarios y suplementos de crédito, ampliaciones de crédito, transferencias de crédito y generaciones y anulaciones de crédito**. La ley anual determina los órganos competentes; las modificaciones se informan por la **Intervención** y se publican en el **DOGV**.
+- **Art. 45. Incorporaciones de crédito**: los créditos no vinculados a obligaciones reconocidas **se anulan** el último día del ejercicio; solo son incorporables los autorizados por norma legal, los financiados con **ingresos afectados** y los derivados de retenciones para créditos extraordinarios o suplementos pendientes de aprobación. Se financian con remanente de tesorería afectado, baja en el Fondo de Contingencia o baja en otros créditos no financieros.
+- **Arts. 46-47. Créditos extraordinarios y suplementos de crédito**: para gastos inaplazables sin crédito o con crédito insuficiente, el Consell remite a **Les Corts** el correspondiente **proyecto de ley** especificando los recursos que los financian. En organismos autónomos y entidades con presupuesto limitativo, la concesión corresponde al titular de **hacienda** hasta el **5 %** de los créditos de su presupuesto y al **Consell** entre el 5 % y el **15 %** (porcentajes acumulados por ejercicio); por encima, **ley de Les Corts**. El Consell da cuenta **trimestralmente** a la Comisión de Economía, Presupuestos y Hacienda.
+- **Art. 48. Ampliaciones de crédito**: solo los créditos relacionados **taxativamente** en la ley anual de presupuestos; se amplían hasta el importe de las obligaciones y se financian con bajas en otros créditos, mayores ingresos o el Fondo de Contingencia.
+- **Art. 49. Transferencias de crédito**: traspasos de dotaciones entre créditos, con limitaciones: no desde **gastos de personal** (salvo justificación de no afectación), no desde **operaciones financieras** al resto, no desde **operaciones de capital a corrientes** (salvo funcionamiento de nuevas inversiones o servicios públicos fundamentales) y no minorando **créditos extraordinarios o suplementados**. Tampoco cabe minorar ni dotar o incrementar por transferencia las **subvenciones nominativas**.
+- **Art. 50. Generaciones de crédito**: pueden generar crédito, entre otros, las **aportaciones** del Estado, de la UE o de otras personas para financiar gastos propios de los fines de la Generalitat, los **recursos legalmente afectados**, las ventas de bienes y servicios, las enajenaciones de inmovilizado, los reembolsos de préstamos, los **excesos de recaudación** y los reintegros de pagos indebidos de presupuestos cerrados; en general exigen el ingreso previo o el compromiso firme de aportación.
+- **Art. 51. Anticipos de tesorería**: con carácter excepcional, el **Consell** puede concederlos para gastos inaplazables hasta el **1 %** de los créditos autorizados por la ley de presupuestos, cuando ya se haya aprobado un proyecto de concesión de crédito extraordinario o suplemento, o cuando una norma con rango de ley imponga obligaciones que los exijan; si Les Corts no aprueban el proyecto de ley, el anticipo se cancela con cargo a los créditos de la conselleria.
+
+### Capítulo V. Del sector público empresarial y fundacional
+
+- **Art. 52. Presupuesto**: las entidades del sector empresarial y fundacional elaboran **presupuestos de explotación y de capital** (previsión de la cuenta de resultados y del estado de recursos y dotaciones), que se integran en los presupuestos consolidados de la Generalitat, con previsión de balance y memoria como anexos.
+- **Art. 53. Programa de actuación plurianual**: formulado anualmente, refleja los datos económico-financieros del ejercicio presupuestario y de los **tres siguientes**, con las líneas estratégicas, los objetivos y el programa de inversiones territorializado.
+- **Art. 54. Modificaciones presupuestarias**: en las entidades financiadas con cargo a los presupuestos de la Generalitat (o con más del **50 %** de su cifra de negocios en transacciones con el sector público), las variaciones que afecten a aportaciones de la Generalitat corresponden al órgano competente sobre los créditos afectados, y las de **gastos de personal** a la conselleria de adscripción con informe favorable de hacienda; se publican en el DOGV en **un mes**.
+- **Art. 55. Contrato-programa**: los que se formalicen con la Generalitat incluyen, como mínimo, objetivos (de personal, rentabilidad o reestructuración), aportaciones con cargo a los presupuestos, efectos del incumplimiento y régimen de control por hacienda; los aprueba el **Consell** a propuesta de la conselleria de adscripción. No excluye la elaboración de los presupuestos de explotación y capital ni del programa de actuación plurianual.
+
+### Capítulo VI. De la gestión presupuestaria
+
+- **Art. 56. Gestión económico-financiera**: la conselleria de hacienda realiza el **seguimiento de la ejecución** de los créditos y del cumplimiento de objetivos, pudiendo adoptar medidas provisionales que ratifica el Consell.
+- **Art. 57. No disponibilidad de los créditos**: el **Consell**, a propuesta de hacienda, puede acordar la no disponibilidad de créditos, instrumentada mediante **retenciones**, con publicación en el DOGV en **2 meses**; si supera el **20 %** del presupuesto consolidado debe darse cuenta a **Les Corts**.
+- **Art. 58. Fases de ejecución del presupuesto de gastos**:
+    - **Aprobación del gasto**: autoriza la realización de un gasto por cuantía cierta o aproximada, reservando todo o parte de un crédito; inicia el procedimiento **sin implicar relaciones con terceros**.
+    - **Compromiso o disposición del gasto**: acuerda la realización de gastos previamente aprobados por importe determinado o determinable; es un acto **con relevancia jurídica para con terceros**, que vincula a la Hacienda a la realización del gasto.
+    - **Reconocimiento de la obligación**: declara la existencia de un **crédito exigible** contra la Hacienda, derivado de un gasto aprobado y dispuesto, y comporta la propuesta de pago; exige la **acreditación documental previa** de la prestación o del derecho del acreedor.
+    - **Ordenación del pago y pago material**: las obligaciones se extinguen por el pago, la compensación, la prescripción u otro medio legal.
+    - Cuando la naturaleza de la operación lo determine, se **acumulan en un solo acto** las fases precisas.
+- **Art. 59. Competencias**: los titulares de las consellerias aprueban los gastos, disponen los créditos de sus servicios y reconocen las obligaciones, proponiendo a hacienda la ordenación de los pagos; en los entes con presupuesto limitativo, sus presidencias o direcciones.
+- **Art. 60. Ordenación de pagos**: la **ordenación general de pagos** de la Administración de la Generalitat corresponde a la persona titular de la **conselleria de hacienda**; en el resto del sector administrativo, a sus presidencias o direcciones.
+- **Art. 62. Pagos indebidos y reintegros** (redacción de la Ley 3/2026): pago indebido es el realizado por **error material, aritmético o de hecho** a favor de persona sin derecho de cobro o en cuantía superior a la reconocida. El perceptor queda obligado a su **restitución** y el órgano que cometió el error dispone **de oficio** su restitución. El reintegro devenga el interés del art. 16 desde el pago hasta que se acuerde su procedencia, pero **no devenga interés** si el perceptor devuelve voluntariamente los fondos **sin requerimiento previo** de la Administración.
+- **Art. 63. Anticipos de caja fija**: provisiones de fondos **extrapresupuestarias y permanentes** a las habilitaciones para atender de forma inmediata **gastos periódicos o repetitivos**, con posterior aplicación al presupuesto; son fondos públicos y forman parte de la Tesorería.
+- **Art. 64. Pagos a justificar**: órdenes de pago que excepcionalmente no pueden acompañarse de los documentos justificativos; la aplicación de las cantidades se justifica en **3 meses** (**6 meses** en expropiaciones); en su defecto se requiere al perceptor por **10 días** antes de librar certificación de descubierto. La cuenta se aprueba o repara en los **2 meses** siguientes a la justificación.
+- **Arts. 65-66. Gestión del presupuesto de ingresos**: fases de **reconocimiento del derecho** y **propuesta de ingreso**; en las devoluciones de ingresos indebidos, el derecho comprende el importe ingresado más el **interés legal** desde el ingreso hasta la orden de pago de la devolución.
+
+## Título IX. Sector público instrumental de la Generalitat
+
+### Capítulo I. De los organismos públicos
+
+- **Art. 152. Organismos públicos**: se crean **por ley de Les Corts**; tienen **personalidad jurídica pública, patrimonio y tesorería propios y autonomía de gestión**, y desarrollan, mediante **descentralización funcional**, actividades de ejecución o gestión administrativas, prestacionales, de fomento o de contenido económico.
+- **Art. 153. Clasificación y adscripción**: se clasifican en **organismos autónomos** y **entidades de derecho público**; pueden depender funcionalmente de una o varias consellerias, sin perjuicio de su adscripción a la competente por razón de la materia de su actividad principal.
+- **Art. 154. Organismos autónomos**: se rigen por el **derecho administrativo** y se les encomienda, en ejecución de programas específicos de una conselleria, la realización de actividades administrativas, de fomento, prestacionales o de gestión de servicios públicos; su personal es **funcionario o laboral**, en los mismos términos que en la Administración de la Generalitat.
+- **Art. 155. Entidades de derecho público**: facultadas para ejercer **potestades administrativas**, realizar actividades prestacionales y de fomento, gestionar servicios o producir bienes de interés público susceptibles o no de contraprestación. Se rigen por el **derecho privado**, excepto en la **formación de la voluntad de sus órganos**, el **ejercicio de las potestades administrativas** y los aspectos específicamente regulados por esta ley, sus estatutos y la legislación presupuestaria. Las de funciones susceptibles de contraprestación se denominan **entidades públicas empresariales**; su personal se rige por el **derecho laboral** y se selecciona por convocatoria pública (igualdad, mérito y capacidad). Las restantes actúan con arreglo a un **plan de acción anual** en el marco de un **contrato plurianual de gestión** aprobado por el Consell.
+
+### Capítulo II. De las sociedades mercantiles, fundaciones y consorcios de la Generalitat
+
+- **Art. 156. Sociedades mercantiles de la Generalitat**: aquellas sobre las que la Generalitat ejerce control, bien por participación directa o indirecta **igual o superior al 50 %** del capital social (sumando las participaciones del sector público instrumental), bien por constituir **grupo de sociedades** según el art. 5 del texto refundido de la Ley del Mercado de Valores. Tienen personalidad jurídica **privada** y en ningún caso pueden ejercer **potestades administrativas**.
+- **Art. 157. Fundaciones del sector público**: personalidad jurídica **privada** y sin potestades administrativas; son del sector público cuando concurra alguna de estas circunstancias: **aportación mayoritaria** (inicial o posterior) de la Generalitat o su sector público, patrimonio integrado en **más del 50 %** por bienes o derechos aportados o cedidos por aquellos con carácter permanente, o **mayoría de derechos de voto** en el patronato.
+- **Art. 158. Consorcios de la Generalitat**: forman parte del sector público instrumental cuando estén **adscritos** a la Generalitat por aplicación de la normativa básica estatal y sus actos estén sujetos directa o indirectamente a su poder de decisión.
+
+## Título X. Subvenciones
+
+El Título X desarrolla para la Generalitat la legislación básica estatal en la materia (**Ley 38/2003, de 17 de noviembre, General de Subvenciones**, a cuya definición de subvención y régimen básico se remite). Es la parte de la ley más reformada: los Decretos-leyes 7/2024 y 14/2025 (Leyes 6/2024 y 3/2026) simplificaron órganos, bases y procedimiento.
+
+### Capítulo I. Disposiciones generales
+
+- **Art. 159. Ámbito de aplicación**: el título se aplica íntegramente a la **Administración de la Generalitat** y a sus organismos públicos cuando la concesión suponga **ejercicio de potestades administrativas**; las sociedades mercantiles y fundaciones se sujetan a los **principios de gestión e información** de la legislación básica. En subvenciones financiadas con **fondos de la UE**, esta ley es supletoria de las normas de aplicación directa.
+- **Art. 160. Órganos competentes** (redacción de la Ley 6/2024):
+    - El **Consell**: aprueba las bases y, en su caso, concede las subvenciones directas por razones de interés público, social, económico o humanitario; autoriza los **convenios** de concesión directa de cuantía superior a **1 millón de euros** (o con el Estado, otras CCAA e instituciones públicas); y autoriza previamente las concesiones en concurrencia competitiva que superen **6 millones de euros por beneficiario**.
+    - Las **personas titulares de las consellerias**: aprueban el **plan estratégico de subvenciones** del departamento y sus organismos, aprueban las **bases reguladoras** (por orden o resolución) e imponen las sanciones.
+    - La persona titular de **hacienda**: impone la sanción de **pérdida de la posibilidad de obtener subvenciones**, ayudas y avales, la prohibición de contratar o la pérdida de la condición de entidad colaboradora.
+    - Titulares de consellerias y presidencias o direcciones de organismos: **aprobación del gasto, convocatoria, concesión** (en concurrencia competitiva y nominativas) y resolución de la **revocación y el reintegro**.
+    - Las competencias de concesión pueden desconcentrarse o delegarse, pero **no cabe delegar la aprobación de las bases reguladoras**.
+- **Art. 161. Entidades colaboradoras**: su participación se instrumenta mediante **convenio** con el órgano concedente (garantías, requisitos, condiciones de entrega de fondos, justificación, contabilidad); vigencia máxima de **4 años**, prorrogable sin que el total exceda de **6 años**.
+- **Art. 162. Ayudas en especie**: las entregas gratuitas de bienes y derechos se rigen por la legislación patrimonial, pero si cumplen los requisitos de una subvención y se adquieren para entregarlas a terceros se aplica esta ley: la adquisición se somete a la **normativa de contratación** y, en caso de reintegro, se reintegra el **precio de adquisición** más el interés de demora.
+- **Art. 163. Procedimientos de concesión**: el procedimiento **ordinario** es la **concurrencia competitiva**; excepcionalmente, en los supuestos de la legislación básica, cabe la **concesión directa**.
+
+### Capítulo II. Procedimiento de concesión
+
+- **Art. 164. Procedimiento en concurrencia competitiva** (redacción de la Ley 3/2026), con las siguientes actuaciones:
+    - **Plan estratégico de subvenciones**: previo, por conselleria (integrando sus organismos), con el contenido de la legislación básica y vigencia de **3 años** salvo justificación; puede ser conjunto entre consellerias y es **público**.
+    - Adecuación de las bases sujetas al **art. 107.1 del TFUE** a la normativa sobre ayudas públicas y competencia de la UE.
+    - **Aprobación de las bases reguladoras** y acreditación previa de la **consignación presupuestaria** suficiente.
+    - **Convocatoria** mediante resolución; si las bases tienen naturaleza de acto administrativo, pueden aprobarse **conjuntamente bases y convocatoria**.
+    - Informes previos a la resolución: del **órgano colegiado** (resultado de la evaluación de solicitudes) y del **órgano instructor** (cumplimiento de los requisitos por los beneficiarios).
+    - **Concesión** y **pago previa justificación**, salvo abonos a cuenta o pagos anticipados. En subvenciones de obras con proyecto técnico, las bases pueden exigir la **supervisión del proyecto** y el visado colegial.
+- **Art. 165. Bases reguladoras**: si desarrollan o complementan una ley sectorial o norma comunitaria tienen naturaleza de **disposición normativa** y se aprueban por **orden** (trámites por vía de urgencia); el resto tienen naturaleza de **acto administrativo** y se aprueban por **resolución**, sin que sus efectos superen la vigencia del plan estratégico. En todo caso, informe preceptivo de la **Abogacía** y de la **Intervención Delegada**. Contenido mínimo (simplificado por el Decreto-ley 14/2025, que suprimió varias letras): objeto, requisitos de los beneficiarios, órganos competentes, entidades colaboradoras, procedimiento y plazo de notificación, **criterios objetivos de otorgamiento** y su ponderación, plazo y forma de justificación y, en su caso, subcontratación. Las bases pueden sustituir la acreditación de requisitos por **declaración responsable** si la concesión no implica un pago anticipado superior al **30 %** (sin límite en ayudas por hechos imprevisibles).
+- **Art. 166. Contenido de la convocatoria**: al menos, indicación de las **bases y su diario oficial**, línea e **importe global máximo**, objeto y condiciones, forma y **plazo de presentación de solicitudes**, plazo de resolución y notificación, documentación, indicación de si agota la vía administrativa, **criterios de valoración**, **cuantía individualizada** o criterios para determinarla, plan de control, garantías de los pagos anticipados y compatibilidad con otras ayudas.
+- **Art. 167. Tramitación anticipada**: puede llegarse hasta el momento **inmediatamente anterior a la resolución de concesión**, condicionada a la existencia de crédito adecuado y suficiente en el ejercicio siguiente.
+- **Art. 168. Concesión directa**: conforme al art. 22.2 de la Ley 38/2003, cabe en tres supuestos:
+    - **Nominativas**: las previstas con objeto, dotación y destinatario inequívocos en los anexos de la **Ley de Presupuestos**; no pueden tener alcance plurianual ni crearse o modificarse una vez aprobada la ley (salvo que el beneficiario sea otra administración territorial o su sector público). Se formalizan por **resolución o convenio**, que tiene el carácter de **bases reguladoras** con un contenido mínimo tasado.
+    - Las **impuestas por una norma de rango legal**, que siguen su propia normativa; su pago exige crédito adecuado y suficiente.
+    - **Con carácter excepcional**, aquellas en que se acrediten **razones de interés público, social, económico o humanitario**, u otras que dificulten su convocatoria pública: el **Consell** aprueba por **decreto** las bases (que no son disposiciones de carácter general y se publican en el DOGV), con memoria justificativa del carácter singular; excepcionalmente pueden instrumentarse por **convenio** con beneficiarios e importes predeterminados y crédito previo.
+    - Todos los procedimientos de concesión directa incorporan el **informe previo de la Abogacía General** de la Generalitat.
+
+### Capítulo III. Gestión y reintegro
+
+- **Art. 169. Comprobación de subvenciones**: el órgano concedente comprueba la justificación y la realización de la actividad; la comprobación material se hace según un **plan de control** aprobado antes de su ejecución, que fija los tipos de control, los **criterios de selección de la muestra** (aleatorios, dirigidos o de riesgo) y el **porcentaje mínimo** de ayuda a controlar.
+- **Art. 170. Comprobación de valores**: la Administración puede comprobar el **valor de mercado** de los gastos subvencionados (precios medios, cotizaciones, registros fiscales, dictamen pericial); el beneficiario puede promover la **tasación pericial contradictoria**.
+- **Art. 171. Abonos a cuenta, pagos anticipados y garantías**: el pago exige la **justificación previa** y que el beneficiario esté **al corriente de sus obligaciones tributarias y con la Seguridad Social** y no sea deudor por reintegro. Si las bases lo prevén, caben **abonos a cuenta** (pagos fraccionados según el ritmo de ejecución) y **pagos anticipados** (entregas previas a la justificación):
+    - Anticipos de **transferencias corrientes**: hasta el **30 %** del importe anual; el Consell puede elevarlo hasta el **50 %**, hasta el **65 %** para entidades sin ánimo de lucro con proyectos de acción social y hasta el **100 %** solo para las subvenciones del art. 22.2.c de la Ley 38/2003.
+    - Anticipos de **transferencias de capital** a administraciones territoriales e institucionales de la Comunitat: hasta el **30 %**.
+    - Es obligatorio establecer un **régimen de garantías** cuando la subvención con pago anticipado supere **1 millón de euros**. Quedan **exonerados de garantía**, salvo previsión en contrario, las administraciones territoriales y sus organismos, los consorcios adscritos, las sociedades y fundaciones de la Generalitat, las personas físicas no empresarias en subvenciones de hasta **6.000 euros**, las universidades públicas, determinadas entidades sin ánimo de lucro y los centros tecnológicos registrados.
+    - No caben pagos anticipados a beneficiarios en situación de **concurso** o insolvencia.
+- **Art. 172. Reintegro de subvenciones**: procede en los supuestos de la normativa básica estatal; las cantidades a reintegrar son **ingresos de derecho público** y devengan **interés de demora**. Responden solidaria o subsidiariamente, entre otros, los miembros asociados del beneficiario, los administradores de sociedades y los socios de entidades disueltas (hasta su cuota de liquidación). El derecho a reconocer o liquidar el reintegro **prescribe a los 4 años**. El procedimiento sigue el procedimiento administrativo común con especialidades: plazo máximo para resolver y notificar de **12 meses**, la resolución **pone fin a la vía administrativa** y se concede **audiencia** en todo caso; iniciado el procedimiento, puede acordarse cautelarmente la **retención de los pagos pendientes**.
+
+### Capítulo IV. Régimen sancionador
+
+- **Art. 173. Régimen sancionador**: se aplica a las **infracciones de la normativa básica estatal** (Ley 38/2003).
+- **Art. 174. Sanciones**:
+    - **Muy graves**: multa pecuniaria proporcional del **doble al triple** de la cantidad indebidamente obtenida, aplicada o no justificada; además, posible pérdida del derecho a obtener ayudas, subvenciones y avales o a ser entidad colaboradora y prohibición de contratar, por plazo de **3 a 5 años**.
+    - **Graves**: multa del **tanto al doble**; sanciones accesorias por plazo de **1 a 3 años**.
+    - **Leves**: multa de **75 a 6.000 euros**.
+- **Art. 175. Graduación**: intencionalidad, cuantía del beneficio ilícito, repercusión social, naturaleza de los perjuicios y **reincidencia** (sanción firme por infracción de la misma naturaleza en los **3 años** anteriores).
+- **Art. 176. Compatibilidad**: las sanciones se entienden sin perjuicio de la **obligación de reintegro** y de las indemnizaciones de daños y perjuicios exigibles.
+- **Art. 177. Procedimiento sancionador** (redacción de la Ley 3/2026): se tramita conforme a la **Ley 39/2015** y a los principios de la potestad sancionadora de la **Ley 40/2015**; se inicia **de oficio** y los acuerdos de imposición **ponen fin a la vía administrativa**; los órganos competentes son los del **art. 160**.
+
+### Capítulo V. Información y transparencia en materia de subvenciones
+
+- **Art. 178. Coordinación con la Base de Datos Nacional de Subvenciones**: los titulares de los órganos y entidades concedentes cumplen las obligaciones de **remisión de información a la BDNS** derivadas de la normativa básica; la **Intervención General de la Generalitat** vela por su cumplimiento y puede ordenar controles sobre los procesos y la información transmitida.
+
+## Fuentes {.unnumbered .unlisted}
+
+- Ley 1/2015, de 6 de febrero, de la Generalitat, de Hacienda Pública, del Sector Público Instrumental y de Subvenciones: texto consolidado (BOE-A-2015-1952), última modificación 29 de diciembre de 2025 (incorpora el Decreto-ley 14/2025, de 26 de diciembre). Contrastado con el BOE online a 9 de julio de 2026: la única reforma posterior, pendiente de consolidar, es la Ley 3/2026, cuyo artículo 83 reproduce sin cambios sustantivos las modificaciones del Decreto-ley 14/2025.
+- Ley 3/2026, de 29 de junio, de la Generalitat, de medidas urgentes frente a la hiperregulación, la agilización de procedimientos y la garantía de la unidad de mercado (DOGV núm. 10396, de 2 de julio de 2026), artículo 83.
+- Ley 38/2003, de 17 de noviembre, General de Subvenciones (marco básico estatal citado por remisión).
