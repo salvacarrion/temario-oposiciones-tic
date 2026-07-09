@@ -49,6 +49,7 @@ El texto vigente cita el «Diari Oficial de la Comunitat Valenciana» (DOCV), de
     - Fallecimiento.
 
     El President continúa en funciones hasta la publicación en el BOE del nombramiento del nuevo President. En los supuestos de **incapacidad y fallecimiento**, asume sus funciones como más alto representante de la Comunitat Valenciana y representante ordinario del Estado el **Presidente de Les Corts**; como President del Consell, los **Vicepresidentes según su orden** (en su defecto, según su antigüedad ininterrumpida en el cargo) y, si no hubiera Vicepresidentes, el **Conseller más antiguo**.
+
 - **Art. 9: Prerrogativas**: tratamiento de **muy honorable**; recibir los honores propios de la dignidad del cargo; **presidir todos los actos** celebrados en el territorio de la Comunitat Valenciana a los que concurra, salvo lo dispuesto en la legislación del Estado; utilizar la **bandera de la Comunitat Valenciana como guión**.
 
 ### Capítulo II. De las atribuciones del President
@@ -237,6 +238,7 @@ El texto vigente cita el «Diari Oficial de la Comunitat Valenciana» (DOCV), de
     - Las materias que requieran **mayoría cualificada**.
 
     En ningún caso procede la **subdelegación** legislativa.
+
 - **Art. 54: Delegación**: expresa, para **materia concreta** y con **plazo fijado**; se **agota** con la publicación del decreto legislativo; no puede entenderse concedida de modo implícito ni por tiempo indeterminado.
 - **Art. 55: Instrumentos**:
     - **Ley de bases**, para formar **textos articulados**: delimita con precisión objeto, alcance, principios y criterios; no puede autorizar su propia modificación ni facultar normas retroactivas.
