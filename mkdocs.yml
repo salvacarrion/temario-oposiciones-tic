@@ -69,7 +69,7 @@ nav:
   - 'Tema 11: Contratos del sector público (Ley 9/2017)': 11-contratos-del-sector-publico.md
   - 'Tema 12: Estatuto Básico del Empleado Público (TREBEP)': 12-estatuto-basico-del-empleado-publico.md
   - 'Tema 13: Función pública valenciana': 13-funcion-publica-valenciana.md
-  - '⚠️ Tema 14: Hacienda pública de la Generalitat (Ley 1/2015)': 14-hacienda-publica-de-la-generalitat.md
+  - 'Tema 14: Hacienda pública de la Generalitat (Ley 1/2015)': 14-hacienda-publica-de-la-generalitat.md
   - '⚠️ Tema 15: Prevención de riesgos laborales': 15-prevencion-de-riesgos-laborales.md
 - Bloque II — Sociedad digital y gestión TIC:
   - '⚠️ Tema 16: La sociedad digital': 16-sociedad-digital.md
@@ -79,7 +79,7 @@ nav:
   - '⚠️ Tema 21: Metodologías ágiles y escalado ágil': 21-metodologias-agiles-y-escalado-agil.md
 - Bloque III — Ingeniería del software:
   - '⚠️ Tema 23: Análisis y diseño de aplicaciones': 23-analisis-y-diseno-de-aplicaciones.md
-  - '⚠️ Tema 24: Proceso unificado y UML': 24-proceso-unificado-y-uml.md
+  - 'Tema 24: Proceso unificado y UML': 24-proceso-unificado-y-uml.md
   - '⚠️ Tema 25: Calidad del software': 25-calidad-del-software.md
   - '⚠️ Tema 26: Control de versiones, integración continua y DevOps': 26-control-de-versiones-integracion-continua-y-devops.md
   - '⚠️ Tema 27: Testeo de software': 27-testeo-de-software.md

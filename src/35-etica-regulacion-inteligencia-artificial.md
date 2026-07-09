@@ -14,7 +14,7 @@ La reflexión ética europea precedió a la regulación. El Grupo independiente 
 
 Estos principios inspiran los requisitos del Reglamento y sirven de base para los códigos de conducta voluntarios (art. 95). El Reglamento añade además una obligación ética transversal ya aplicable: la **alfabetización en materia de IA** (art. 4), por la que proveedores y responsables del despliegue deben garantizar que su personal tenga un nivel suficiente de conocimientos sobre los sistemas de IA que opera.
 
-## El Reglamento de Inteligencia Artificial: objeto, ámbito y definiciones
+## Reglamento de Inteligencia Artificial (AI Act)
 
 **Sin modificaciones desde su entrada en vigor (1 de agosto de 2024).**
 

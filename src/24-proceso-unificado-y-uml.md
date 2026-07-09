@@ -1,574 +1,245 @@
 # Proceso unificado y UML
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+El proceso unificado es el marco de referencia clásico del desarrollo de software orientado a objetos, y UML su lenguaje de modelado. Este tema repasa ambos, su refinamiento comercial (RUP) y una visión de síntesis de Métrica v3, la metodología de desarrollo de las administraciones públicas españolas.
 
+## El proceso unificado de desarrollo
 
-## Proceso Unificado de Desarrollo de Software
-
-El **Proceso Unificado de Desarrollo de Software (PUDS)** es un marco de desarrollo que se caracteriza por ser **dirigido por casos de uso**, **centrado en la arquitectura** y **iterativo e incremental**. Ofrece un conjunto mínimo de prácticas que maximizan la eficiencia de los equipos de desarrollo, independientemente del tipo de proyecto. Hace uso de **UML** para la especificación y diseño y tiene como refinamiento más conocido el **RUP (Rational Unified Process)**, una versión privada desarrollada por IBM.
+El **Proceso Unificado de Desarrollo de Software** (PUDS o UP, *Unified Process*) es un marco de proceso publicado en **1999** por **Ivar Jacobson, Grady Booch y James Rumbaugh**. Ofrece un conjunto mínimo de prácticas que maximizan la eficiencia de los equipos de desarrollo, con independencia del tipo de proyecto. Emplea **UML** como notación para especificar y diseñar el sistema, y su refinamiento más conocido es el **RUP** (*Rational Unified Process*).
 
 ### Características principales
 
-- **Dirigido por casos de uso**: Los casos de uso guían el desarrollo del sistema al definir los requisitos y garantizar que se aporte valor al cliente.
-- **Centrado en la arquitectura**: La arquitectura se representa mediante vistas del modelo (como las vistas **4+1**) y asegura la calidad estructural del sistema.
-- **Iterativo e incremental**: Cada iteración identifica y especifica casos de uso relevantes, diseña una arquitectura basada en ellos, implementa componentes y verifica que cumplen con los requisitos definidos. Este enfoque divide el proyecto en **ciclos de vida**.
+- **Dirigido por casos de uso**: los casos de uso capturan los requisitos y guían el desarrollo y las pruebas, garantizando que el sistema aporte valor al usuario.
+- **Centrado en la arquitectura**: la arquitectura se define pronto, se representa mediante vistas del modelo (las vistas **4+1**) y asegura la calidad estructural del sistema.
+- **Iterativo e incremental**: el proyecto se divide en iteraciones que producen incrementos del producto. Cada iteración identifica y especifica los casos de uso relevantes, diseña la arquitectura, implementa componentes y verifica que cumplen los requisitos.
 
 ### Elementos del proceso
 
-- **Proceso**: Actúa como una plantilla de desarrollo.
-- **Producto**: Es el sistema de software resultante.
-- **Disciplina**: Colección de actividades vinculadas a áreas específicas del proyecto.
-- **Trabajador o rol**: Define el papel desempeñado por una persona en un momento dado.
-- **Artefactos**: Productos tangibles generados, como modelos, código fuente, etc. El artefacto más importante es el **modelo**, que abstrae diferentes perspectivas del sistema.
+- **Proceso**: actúa como plantilla reutilizable de desarrollo.
+- **Producto**: el sistema de software resultante.
+- **Disciplina (flujo de trabajo)**: colección de actividades vinculadas a un área del proyecto.
+- **Trabajador o rol**: papel desempeñado por una persona o equipo en un momento dado.
+- **Artefacto**: producto de trabajo tangible (modelos, código fuente, documentos). El artefacto más importante es el **modelo**, que abstrae el sistema desde una perspectiva concreta.
 
 ### Modelos del sistema
 
-- **Modelo de casos de uso**: Requisitos (Artefactos: Diagramas de casos de uso, secuencia, colaboración y actividad).
-- **Modelo de análisis y diseño**: Análisis y diseño (Artefactos: Diagramas de clases, objetos, secuencia, colaboración y actividad).
-- **Modelo de despliegue**: Diseño (Artefactos: Diagramas de despliegue, secuencia y colaboración).
-- **Modelo de implementación**: Implementación (Artefactos: Diagramas de componentes, secuencia y colaboración).
-- **Modelo de pruebas**: Prueba (Artefactos: Todos los diagramas).
+El proceso unificado describe el sistema como un conjunto de modelos, cada uno asociado a un flujo de trabajo:
 
-![](media/image24.png)
+- **Modelo de casos de uso**: requisitos (diagramas de casos de uso, secuencia, comunicación y actividades).
+- **Modelo de análisis**: análisis (diagramas de clases, objetos, secuencia, comunicación y actividades).
+- **Modelo de diseño** y **modelo de despliegue**: diseño (los anteriores más los diagramas de despliegue).
+- **Modelo de implementación**: implementación (diagramas de componentes, secuencia y comunicación).
+- **Modelo de pruebas**: prueba (utiliza todos los diagramas).
+
+![](media/image24.png){width=75%}
+
+Conviene distinguir los tres primeros modelos, que se suceden en el desarrollo:
+
+| Modelo de casos de uso | Modelo de análisis |
+| :------------------------------------ | :------------------------------------ |
+| Descrito en el lenguaje del cliente | Descrito en el lenguaje del desarrollador |
+| Vista externa del sistema, estructurada por los casos de uso | Vista interna del sistema, estructurada por clases y paquetes estereotipados |
+| Contrato entre el cliente y los desarrolladores sobre qué debe hacer el sistema | Guía de los desarrolladores sobre cómo diseñar e implementar el sistema |
+| Puede contener redundancias e inconsistencias entre requisitos | No debe contener redundancias ni inconsistencias |
+| Define los casos de uso | Define las realizaciones de los casos de uso (una por caso de uso analizado) |
+
+| Modelo de análisis | Modelo de diseño |
+| :------------------------------------ | :------------------------------------ |
+| Conceptual; genérico respecto al diseño (aplicable a varios diseños) | Físico; específico de una implementación |
+| Tres estereotipos de clase: **entidad, control e interfaz** | Cualquier número de estereotipos físicos |
+| Menos formal y menos caro de desarrollar; pocas capas | Más formal y más caro; más capas |
+| Creado principalmente como trabajo manual | Creado como «programación visual» (ingeniería de ida y vuelta) |
+| Puede no mantenerse durante todo el ciclo de vida | Debe mantenerse durante todo el ciclo de vida |
 
 ### Fases del ciclo de vida (estructura dinámica)
 
-- **Inicio**: Define el alcance y desarrolla los casos de negocio.
-    - **Hito**: Objetivos.
-    - **Artefactos**: Documento visión, diagramas de casos de uso, especificaciones de requisitos.
-- **Elaboración**: Planificación detallada y diseño de la arquitectura.
-    - **Hito**: Arquitectura.
-    - **Artefactos**: Modelos y diagramas en vistas lógica, conceptual, física e implementación.
-- **Construcción**: Desarrollo del producto.
-    - **Hito**: Capacidad operacional inicial.
-    - **Artefactos**: Desarrollo de casos de uso, pruebas de desarrollo, pruebas de regresión, etc.
-- **Transición**: Ajustes finales y lanzamiento.
-    - **Hito**: Versión liberada.
-    - **Artefactos**: Pruebas de aceptación, puesta en producción, estabilización.
+El proyecto se organiza en ciclos, y cada ciclo atraviesa **cuatro fases**. Cada fase termina en un **hito principal** que actúa como punto de control:
 
-### Flujos de trabajo (estructura vertical)
+| Fase | Contenido | Artefactos típicos | Hito |
+| :---------- | :------------------- | :------------------------ | :--------------- |
+| **Inicio** (*inception*) | Alcance, caso de negocio y riesgos principales | Documento de visión, casos de uso iniciales, especificación de requisitos | **Objetivos del ciclo de vida** |
+| **Elaboración** | Planificación detallada y diseño de la arquitectura | Modelos y diagramas de las vistas lógica, de proceso, de desarrollo y física | **Arquitectura del ciclo de vida** |
+| **Construcción** | Desarrollo iterativo del producto | Casos de uso implementados, pruebas de desarrollo y de regresión | **Capacidad operacional inicial** |
+| **Transición** | Ajustes finales, despliegue y estabilización | Pruebas de aceptación, puesta en producción | **Lanzamiento del producto** |
 
-- **Del proceso**: Modelado de negocio, requisitos, análisis, diseño, implementación, pruebas, despliegue.
-- **De soporte**: Gestión de cambio, gestión del proyecto, entorno.
+### Flujos de trabajo (estructura estática)
 
-### Iteración y hitos
+El proceso unificado define **cinco flujos de trabajo fundamentales**: **requisitos, análisis, diseño, implementación y prueba**. RUP los amplía hasta **nueve disciplinas**:
 
-Cada iteración abarca varias disciplinas (desde requisitos hasta pruebas) y culmina en un **hito**, que actúa como punto de control para revisar el progreso.
+- **Del proceso (6)**: modelado del negocio, requisitos, análisis y diseño, implementación, pruebas y despliegue.
+- **De soporte (3)**: gestión del cambio y configuraciones, gestión del proyecto y entorno.
 
-![](media/image26.png)
+### Iteraciones e hitos
+
+Cada iteración es un miniproyecto que atraviesa todos los flujos de trabajo (desde los requisitos hasta las pruebas) y culmina en un hito que permite revisar el progreso. El esfuerzo dedicado a cada disciplina varía con la fase, como refleja el clásico diagrama de «jorobas» de RUP:
+
+![](media/image26.png){width=85%}
 
 ### Trabajadores y artefactos asociados
 
-- **Analista de sistemas**: Modelos de casos de uso, actores, glosario.
-- **Especificador de casos de uso**: Casos de uso.
-- **Diseñador de interfaz de usuario**: Prototipos.
-- **Arquitecto**: Modelos de análisis, diseño, despliegue e implementación.
-- **Ingeniero de casos de uso**: Realización de casos de uso.
-- **Ingeniero de componentes**: Clases, subsistemas, interfaces, componentes.
-- **Integrador de sistemas**: Integración del sistema.
-- **Diseñador de pruebas**: Modelos de prueba, casos y procedimientos de prueba.
-- **Ingenieros de pruebas de integración y sistema**: Identificación y documentación de defectos.
+- **Analista de sistemas**: modelo de casos de uso, actores y glosario.
+- **Especificador de casos de uso**: casos de uso detallados.
+- **Diseñador de interfaz de usuario**: prototipos de interfaz.
+- **Arquitecto**: modelos de análisis, diseño, despliegue e implementación (descripción de la arquitectura).
+- **Ingeniero de casos de uso**: realizaciones de casos de uso.
+- **Ingeniero de componentes**: clases, subsistemas, interfaces y componentes.
+- **Integrador de sistemas**: plan de integración.
+- **Diseñador de pruebas**: modelo de pruebas, casos y procedimientos de prueba.
+- **Ingenieros de pruebas de integración y de sistema**: identificación y documentación de defectos.
 
-## Lenguaje Unificado de Modelado (UML)
+## UML: diagramas estructurales y de comportamiento
 
-El Lenguaje Unificado de Modelado (UML) es un **lenguaje gráfico estándar** utilizado para modelar sistemas de software. Su objetivo principal es **visualizar, especificar, construir y documentar** los diferentes aspectos de un sistema. UML se utiliza ampliamente en el diseño y desarrollo de sistemas debido a su capacidad para representar tanto la **estructura estática** como el **comportamiento dinámico** de los mismos.
+El **Lenguaje Unificado de Modelado** (UML, *Unified Modeling Language*) es un lenguaje gráfico estándar para **visualizar, especificar, construir y documentar** sistemas de software. Lo mantiene el **OMG** (*Object Management Group*) y su versión vigente es **UML 2.5.1** (diciembre de **2017**), que define **14 tipos de diagramas**: **7 estructurales** (estáticos) y **7 de comportamiento** (dinámicos).
 
-### Tipos de diagramas en UML 2.5
+### Diagramas estructurales
 
-Los diagramas de UML se dividen en **estructurales** y **de comportamiento**, ofreciendo herramientas para capturar aspectos estáticos y dinámicos del sistema.
+Representan la estructura estática del sistema: sus elementos y las relaciones entre ellos.
 
-### Diagramas estructurales: (Ver tabla)
+| Diagrama | Descripción | Ejemplo |
+| :------------- | :------------------------------------------ | :------------------------ |
+| **De clases** | Clases del sistema con sus atributos, operaciones y relaciones; es el diagrama central del diseño orientado a objetos | ![Ejemplo de diagrama de clases](media/image25.png){width=90%} |
+| **De componentes** | División del sistema en componentes y dependencias entre ellos, con las interfaces que proporcionan y requieren | ![Ejemplo de diagrama de componentes](media/uml-diagrama-componentes.png){width=95%} |
+| **De despliegue** | Disposición física de los artefactos software sobre los nodos hardware (topología) | ![Ejemplo de diagrama de despliegue](media/image27.png){width=90%} |
+| **De objetos** (o de instancias) | Vista de los objetos del sistema y sus relaciones en un instante concreto de ejecución | ![Ejemplo de diagrama de objetos](media/image28.png){width=90%} |
+| **De paquetes** | Agrupaciones lógicas del sistema y dependencias entre ellas | ![Ejemplo de diagrama de paquetes](media/image29.png){width=95%} |
+| **De perfil** | Personaliza UML para un dominio o plataforma mediante estereotipos, valores etiquetados y restricciones | ![Ejemplo de diagrama de perfil](media/image30.png){width=95%} |
+| **De estructura compuesta** | Estructura interna de una clase y colaboraciones que esa estructura hace posibles | ![Ejemplo de diagrama de estructura compuesta](media/image31.png){width=95%} |
 
-Son siete y se centran en la estructura estática del sistema:
+### Diagramas de comportamiento
 
-- **Diagrama de clases**: Representa las clases de un sistema, junto con sus atributos, operaciones y relaciones.
-- **Diagrama de componentes**: Muestra cómo se divide el sistema en componentes y las dependencias entre ellos.
-- **Diagrama de despliegue**: Modela la disposición física de los artefactos del software en los nodos (plataformas de hardware). Representa topologías.
-- **Diagrama de objetos** (o de instancia): Captura una vista específica de los objetos y sus relaciones en un momento determinado.
-- **Diagrama de paquetes**: Agrupa elementos lógicos del sistema y muestra las dependencias entre estos agrupamientos.
-- **Diagrama de perfil**: Permite personalizar UML para un dominio o plataforma específica mediante la definición de estereotipos y restricciones.
-- **Diagrama de estructura compuesta**: Describe la estructura interna de una clase y las colaboraciones que facilita.
+Capturan la dinámica del sistema: cómo evoluciona y cómo interactúan sus elementos. Los **cuatro últimos** forman el subgrupo de los **diagramas de interacción**.
 
-<table>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 38%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th colspan="3" style="text-align: center;"><blockquote>
-<p><strong>Diagramas de Estructurales</strong></p> </blockquote></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><blockquote>
-<p><strong>Diagrama</strong></p> </blockquote></td>
-<td style="text-align: center;"><blockquote>
-<p><strong>Descripción</strong></p> </blockquote></td>
-<td style="text-align: center;"><blockquote>
-<p><strong>Imagen</strong></p> </blockquote></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Diagrama de clases</strong></td>
-<td style="text-align: center;">Muestra las clases en un sistema,
-atributos y operaciones de cada clase y la relación entre cada clase</td>
-<td style="text-align: center;"><img src="media/image25.png"
-style="width:1.34864in;height:1.04874in" alt="760px-Diagrama_de_clases.svg.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Diagrama de
-componentes</strong></td>
-<td style="text-align: center;">Representa cómo un sistema
-de software es dividido en componentes y muestra las dependencias entre estos componentes.</td>
-<td style="text-align: center;"><img src="media/image26.png"
-style="width:2.11326in;height:1.16206in" alt="comp9.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Diagrama de
-despliegue</strong></td>
-<td style="text-align: center;">Se utiliza para modelar la disposición
-física de los artefactos software en nodos (usualmente plataforma de hardware). Topologías.</td>
-<td style="text-align: center;"><img src="media/image27.png"
-style="width:1.58554in;height:1.29788in" alt="deployment_diagram_real_estate-700x573.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Diagramas de objetos o diagramas
-de instancia</strong></td>
-<td style="text-align: center;">Muestra una vista completa o parcial de
-los objetos de un sistema en un instante de ejecución específico.</td>
-<td style="text-align: center;"><img src="media/image28.png"
-style="width:1.3757in;height:0.94423in" alt="Object_diagram.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Diagrama de
-paquetes</strong></td>
-<td style="text-align: center;">Muestra cómo un sistema está dividido en
-agrupaciones lógicas y las dependencias entre esas agrupaciones</td>
-<td style="text-align: center;"><img src="media/image29.png"
-style="width:1.3509in;height:0.78615in" alt="pd01.gif" /></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Diagrama de perfil</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><img src="media/image30.png"
-style="width:1.93347in;height:0.77339in" alt="download.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Diagrama de estructura
-compuesta</strong></td>
-<td style="text-align: center;">Muestra la estructura interna de
-una clase y las colaboraciones que esta estructura hace posibles.</td>
-<td style="text-align: center;"><img src="media/image31.png"
-style="width:2.11326in;height:0.64747in" alt="Composite_Structure_Diagram.png" /></td>
-</tr>
-</tbody>
-</table>
+| Diagrama | Descripción | Ejemplo |
+| :------------- | :------------------------------------------ | :------------------------ |
+| **De actividades** (o de flujo) | Flujos de trabajo paso a paso, con decisiones, bifurcaciones y uniones; representa procesos y algoritmos | ![Ejemplo de diagrama de actividades](media/image32.png){width=50%} |
+| **De casos de uso** | Interacciones entre los actores y el sistema; visión general de la funcionalidad requerida | ![Ejemplo de diagrama de casos de uso](media/image33.png){width=90%} |
+| **De máquina de estados** | Estados por los que pasa un objeto y transiciones entre ellos ante eventos | ![Ejemplo de diagrama de maquina de estados](media/image34.png){width=90%} |
+| **De secuencia** *(interacción)* | Intercambio de mensajes entre objetos ordenado en el tiempo, sobre líneas de vida | ![Ejemplo de diagrama de secuencia](media/image35.png){width=95%} |
+| **De comunicación** *(interacción)* | Interacción centrada en los enlaces entre objetos, con los mensajes numerados en secuencia | ![Ejemplo de diagrama de comunicacion](media/image36.png){width=75%} |
+| **De tiempos** *(interacción)* | Evolución del estado o valor de uno o varios objetos a lo largo de un eje temporal (formas de onda) | ![Ejemplo de diagrama de tiempos](media/image37.png){width=95%} |
+| **Global de interacciones** *(interacción)* | Combina el diagrama de actividades con diagramas de interacción anidados para mostrar secuencias completas | ![Ejemplo de diagrama global de interacciones](media/image38.png){width=55%} |
 
-### Diagramas de comportamiento: (Ver tabla)
+### Notación del modelado estructural
 
-Son cuatro y capturan el comportamiento dinámico de los objetos:
+El diagrama de clases concentra la mayor parte de la notación estructural de UML.
 
-- **Diagrama de actividades** (o de flujo): Representa procesos o flujos de trabajo paso a paso, ilustrando el flujo de control general.
-- **Diagrama de casos de uso**: Describe las interacciones entre actores y el sistema, proporcionando una visión general de las funcionalidades requeridas.
-- **Diagrama de máquina de estados**: Representa el comportamiento de objetos según su estado actual, similar a los diagramas de actividades pero enfocados en los estados.
-- **Diagramas de interacción**: Incluyen:
-    - **Diagrama de secuencia**: Muestra cómo los objetos interactúan en secuencia.
-    - **Diagrama de comunicación**: Representa las interacciones entre objetos en términos de mensajes.
-    - **Diagrama de tiempos**: Describe el comportamiento de los objetos en un marco de tiempo dado.
-    - **Diagrama global de interacciones**: Combina aspectos de los diagramas de actividad e interacción para ilustrar secuencias completas.
+- **Clasificador**: cualquier elemento del modelo que describe características y comportamiento: clases, interfaces, casos de uso, actores, componentes, nodos.
+- **Visibilidad de los miembros**: **público (+)**, **privado (-)**, **protegido (#)** y **de paquete (~)**. Además, la barra (/) señala los atributos **derivados** (calculados a partir de otros) y el subrayado, los miembros **estáticos**.
+- **Ámbito de los miembros**: de **instancia** (cada objeto tiene su propio valor) o de **clase** (compartido por todas las instancias, como los miembros *static* de los lenguajes de programación).
+- **Otros elementos**: **señales** (comunicación asíncrona y unidireccional entre objetos), **tipos de datos** y **enumeraciones**, **interfaces** (contrato que las clases realizan), **paquetes** (agrupan clasificadores relacionados) y **artefactos** (elementos físicos: documentos, ejecutables, bases de datos).
 
-<table>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 38%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th colspan="3" style="text-align: center;">Diagramas de
-comportamiento</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Diagrama</td>
-<td style="text-align: center;"><strong>Descripción</strong></td>
-<td style="text-align: center;"><strong>Imagen</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;">Diagrama de actividades o flujo</td>
-<td style="text-align: center;">Representación gráfica de un algoritmo o
-proceso. Flujos de trabajo paso a paso / Flujo de control general.</td>
-<td style="text-align: center;"><img src="media/image32.png"
-style="width:0.76908in;height:1.04874in" alt="440px-LampFlowchart_es.svg.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;">Diagramas de casos de uso</td>
-<td style="text-align: center;">Representación gráfica de las posibles
-interacciones de un usuario con un sistema. Es decir, ofrecen una visión general de los actores involucrados en un sistema, las diferentes funciones que necesitan esos actores y cómo interactúan estas diferentes funciones.</td>
-<td style="text-align: center;"><img src="media/image33.png"
-style="width:1.78834in;height:1.28919in" alt="996px-UML_diagrama_caso_de_uso.svg.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;">Diagrama de máquina de estados</td>
-<td style="text-align: center;">Similar a los diagramas de actividad.
-Permiten describir el comportamiento de los objetos que actúan de manera diferente de acuerdo con el estado en que se encuentran en el momento.</td>
-<td style="text-align: center;"><img src="media/image34.png"
-style="width:1.69147in;height:1.29788in" alt="3ac1da3e-ab76-41a8-85ba-5e48752138db.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;">Diagrama de secuencia</td>
-<td style="text-align: center;">Muestran cómo los objetos interactúan
-entre sí y el orden en que se producen esas interacciones.</td>
-<td style="text-align: center;"><img src="media/image35.png"
-style="width:1.39886in;height:0.94423in" alt="440px-CrearPais.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;">Diagrama de comunicación</td>
-<td style="text-align: center;">Modela las interacciones entre objetos o
-partes en términos de mensajes en secuencia. Es decir, el foco está en los mensajes pasados entre objetos.</td>
-<td style="text-align: center;"><img src="media/image36.png"
-style="width:1.46461in;height:0.78615in" alt="Kommunikations_diagramm-5.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;">Diagrama de tiempos / Cronograma</td>
-<td style="text-align: center;">Similar a los diagramas de secuencia;
-representan el comportamiento de los objetos en un marco de tiempo dado. Es una gráfica de formas de ondas digitales que muestra la relación temporal entre varias señales, y cómo varía cada señal en relación a las demás.</td>
-<td style="text-align: center;"><img src="media/image37.png"
-style="width:2.11326in;height:1.11626in" alt="Diagrama_de_tiempos.png" /></td>
-</tr>
-<tr>
-<td style="text-align: center;">Diagrama global de interacciones</td>
-<td style="text-align: center;">Similares a los diagramas de actividad
-pero muestran una secuencia de diagramas de interacción</td>
-<td style="text-align: center;"><img src="media/image38.png"
-style="width:0.82137in;height:1.0133in" alt="Iau-diagramm-1.png" /></td>
-</tr>
-</tbody>
-</table>
+Las **relaciones** entre clasificadores y su notación:
 
-### Modelado estructural avanzado
+| Relación | Notación | Significado |
+| :---------------- | :--------------------- | :---------------------------------------- |
+| **Dependencia** | Flecha discontinua | Un elemento usa a otro y le afectan sus cambios |
+| **Asociación** | Línea continua, con la multiplicidad en cada extremo | Relación estructural simple (una Persona lee 0 o 1 Revistas) |
+| **Agregación** | Rombo hueco (blanco) en el «todo» | Relación todo-parte débil: las partes existen sin el todo (una Clase tiene Alumnos; si desaparece, los alumnos siguen existiendo) |
+| **Composición** | Rombo relleno (negro) en el «todo» | Relación todo-parte fuerte: la parte no existe sin el todo (si desaparece la Empresa, desaparecen sus Facturas) |
+| **Generalización (herencia)** | Flecha de triángulo hueco hacia la superclase | Las subclases heredan estructura y comportamiento |
+| **Realización** | Flecha discontinua de triángulo hueco | Una clase implementa el contrato de una interfaz |
 
-Describe los tipos de objetos y sus relaciones estáticas:
-
-- **Clasificador**: Representa el comportamiento y características de los elementos (clases, interfaces, casos de uso, actores).
-- **Modificadores de acceso / Visibilidad**:
-    - Público (+), privado (-), protegido (#), derivado (/), paquete (~), estático (subrayado).
-- **Alcance de los miembros / Ámbito**:
-    - **Instance members**: Propiedades y métodos asociados a instancias específicas.
-    - **Class members**: Propiedades y métodos comunes a todas las instancias (similares a los miembros estáticos en programación).
-- **Relaciones**:
-    - **Asociación**:
-        - **Relación:** Relación simple entre dos clases.
-        - **Dibujo:** [Persona 1 0..1 Revistas]
-        - **Ejemplo:** Una persona puede leer una o ninguna revista.
-        - **Codigo:**
+En código, la diferencia entre agregación y composición está en quién controla el ciclo de vida del objeto contenido:
 
 ```java
-public class Persona {
-    // Una persona puede tener 0 o 1 revista.
-    private Revista revista;
-}
-```
-
-- **Agregación o Agrupación**: Una clase contiene a otra, pero ambas pueden existir independientemente.
-    - **Dibujo:** [Clase 1 1 Alumno]
-    - **Ejemplo:** Una clase "tiene" alumnos, pero si la clase desaparece, los alumnos pueden seguir existiendo.
-    - **Código:**
-
-```java
-public class Clase {
+public class Clase {           // Agregación: el Alumno existe fuera de la Clase
     private Alumno alumno;
-    public Clase(Alumno alumno) {
-        this.alumno = alumno;
-    }
+    public Clase(Alumno alumno) { this.alumno = alumno; }
 }
-```
 
-- **Composición**: Relación fuerte donde la existencia de un objeto depende del otro.
-    - **Dibujo:** [Facturas 0..* 1 Empresa]
-    - **Ejemplo:** Una empresa tiene facturas. Si la empresa desaparece, sus facturas también dejan de existir.
-    - **Código:**
-
-```java
-public class Empresa {
+public class Empresa {         // Composición: la Factura nace y muere con la Empresa
     private Factura factura;
-    public Empresa() {
-        // Las facturas dependen de la empresa.
-        this.factura = new Factura();
-    }
+    public Empresa() { this.factura = new Factura(); }
 }
 ```
 
-- **Restricciones**:
-    - **Complete/incomplete**: Define si todas las instancias de una superclase deben pertenecer a una subclase.
-    - **Disjoint/overlapping**: Define si una instancia puede pertenecer a varias subclases simultáneamente.
+- **Multiplicidad**: número de instancias que participan en cada extremo de una asociación: `1`, `0..1`, `0..*` (o `*`), `1..*`.
+- **Navegabilidad**: las asociaciones pueden ser bidireccionales o unidireccionales (punta de flecha en el extremo navegable).
+- **Restricciones sobre la generalización**: **complete/incomplete** (si toda instancia de la superclase debe pertenecer a alguna subclase) y **disjoint/overlapping** (si una instancia puede pertenecer a varias subclases a la vez).
 
-### Componentes del modelado estructural
+### Modelado arquitectónico: las vistas 4+1
 
-- **Clases**: Plantillas para crear objetos con atributos y métodos.
-- **Señales**: Representan comunicaciones unidireccionales y asincrónicas entre objetos.
-- **Tipos de datos**: Definen valores de datos (ej.: enteros, cadenas).
-- **Paquetes**: Agrupan clasificadores relacionados.
-- **Interfaces**: Definen un contrato que las clases deben implementar.
-- **Enumeraciones**: Tipos de datos definidos por el usuario con valores predefinidos.
-- **Artefactos**: Elementos concretos como documentos, bases de datos o ejecutables.
-- **Relaciones avanzadas**:
-    - **Herencia/Generalización**: Subclases que heredan de superclases.
-    - **Asociaciones unidireccionales y bidireccionales**: Relación entre clases con distinta visibilidad.
+El proceso unificado describe la arquitectura mediante el modelo de vistas **«4+1» de Kruchten** (**1995**): cuatro vistas complementarias más los **escenarios (casos de uso)**, que las conectan y validan.
 
-### Modelado arquitectónico
+| Vista | Qué modela | Destinatarios | Notación típica |
+| :---------- | :-------------------------- | :--------------- | :------------------ |
+| **Lógica** | Funcionalidad y modelo de información; requisitos funcionales | Usuarios finales | Diagramas de clases y de paquetes |
+| **De proceso** | Concurrencia y sincronización; rendimiento, disponibilidad, fiabilidad | Integradores de sistemas | Diagramas de actividades y de interacción |
+| **De desarrollo** | Organización del software en el entorno de desarrollo; reuso, portabilidad, mantenibilidad | Programadores | Diagramas de componentes y de paquetes |
+| **Física (de despliegue)** | Correspondencia software-hardware; topología, comunicaciones, escalabilidad | Ingenieros de sistemas | Diagramas de despliegue |
+| **Escenarios (+1)** | Casos de uso que ilustran y validan las otras cuatro vistas | Todos los implicados | Diagramas de casos de uso |
 
-El diseño arquitectónico de un sistema incluye una visión de alto nivel:
+- **Criterios de selección arquitectónica**: extensibilidad, modificabilidad, simplicidad y eficiencia.
 
-- **Vistas arquitectónicas "4+1"**:
-    - **Vista lógica**: Funcionalidad del sistema desde la perspectiva del usuario.
-    - **Vista de desarrollo**: Cómo se organiza el software desde la perspectiva del programador.
-    - **Vista de proceso**: Enfoque en aspectos dinámicos como concurrencia y escalabilidad.
-    - **Vista física**: Componentes físicos y conexiones entre ellos.
-    - **Vista de casos de uso**: Describe escenarios de interacción para validar la arquitectura.
-- **Criterios de selección arquitectónica**: Extensibilidad, modificabilidad, simplicidad y eficiencia.
+### Qué notación usar en cada contexto
 
-<table style="width:100%;">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 20%" />
-<col style="width: 24%" />
-<col style="width: 21%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: center;">Vista</th>
-<th style="text-align: center;">Lógica (conceptual)</th>
-<th style="text-align: center;">Proceso (ejecución)</th>
-<th style="text-align: center;">Desarrollo (implementación)</th>
-<th style="text-align: center;">Física (despliegue)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Aspecto</td>
-<td>Modelo de información</td>
-<td>Concurrencia y sincronización</td>
-<td>Organización del software en el entorno de desarrollo</td>
-<td>Correspondencia software-hardware</td>
-</tr>
-<tr>
-<td>Stakeholders</td>
-<td>Usuarios finales</td>
-<td>Integradores del sistema</td>
-<td>Programadores</td>
-<td>Ingenieros de sistemas</td>
-</tr>
-<tr>
-<td>Requisitos</td>
-<td>Funcionales</td>
-<td><p>Rendimiento</p>
-<p>Disponibilidad</p> <p>Fiabilidad</p> <p>Concurrencia</p> <p>Distribución</p> <p>Seguridad</p></td>
-<td><p>Gestión del software</p>
-<p>Reuso</p> <p>Portabilidad</p> <p>Mantenibilidad</p> <p>Restricciones impuestas por la plataforma o el lenguaje</p></td>
-<td><p>Rendimiento</p>
-<p>Disponibilidad</p> <p>Fiabilidad</p> <p>Escalabilidad</p> <p>Topología</p> <p>Comunicaciones</p></td>
-</tr>
-<tr>
-<td>Notación</td>
-<td>Clases y asociaciones</td>
-<td>Procesos y comunicaciones</td>
-<td>Componentes y relaciones de uso</td>
-<td>Nodos y rutas de comunicación</td>
-</tr>
-</tbody>
-</table>
+Como síntesis, la correspondencia entre las necesidades de modelado habituales y su notación:
 
-## El Proceso Unificado Racional (RUP)
+| Necesidad | Notación o diagrama |
+| :---------------------------- | :------------------------------------------------ |
+| Diseño de bases de datos | Modelo **entidad/relación** para el diseño conceptual; modelo relacional para el lógico y DDL/SQL para el físico (cap. 36) |
+| Análisis y diseño estructurado | **Diagrama de contexto**, **diagrama de flujo de datos (DFD)**, **diccionario de datos** y diagrama de estructura (jerarquía de módulos) (cap. 23) |
+| Análisis y diseño orientado a objetos | **UML**: diagramas de clases para la estática y de interacción para la dinámica |
+| Captura de requisitos funcionales | **Casos de uso** e historias de usuario (cap. 23) |
+| Modelado de procesos de negocio | **BPMN**, diagramas de flujo normalizados para procesos de negocio (cap. 20) |
 
-El **RUP** es una especificación más detallada del proceso unificado, comercializada por Rational Software (IBM). Se caracteriza por su adaptabilidad al contexto y a las necesidades del cliente.
+## Proceso Unificado Racional (RUP)
 
-### Principios clave del RUP
+El **RUP** (*Rational Unified Process*) es el refinamiento comercial más extendido del proceso unificado. Lo desarrolló **Rational Software** y pertenece a **IBM** desde **2003**. Más que un proceso cerrado es un **marco de proceso adaptable**: cada organización selecciona y configura sus elementos (disciplinas, artefactos, roles) según el contexto y las necesidades del cliente.
 
-- **Dirigido por casos de uso**: Los requisitos guían el desarrollo.
-- **Centrado en la arquitectura**: Garantiza una arquitectura de calidad.
-- **Iterativo e incremental**: Se refina continuamente en ciclos iterativos.
-- **Colaboración entre equipos**: Comunicación fluida y coordinación entre roles.
-- **Foco en la calidad**: Garantiza el cumplimiento de estándares desde el inicio.
-- **Elevación del nivel de abstracción**: Uso de patrones de diseño, frameworks y modelado visual.
+### Principios y buenas prácticas
 
-## Aclaraciones: …sobre los modelos
+RUP asume los tres rasgos del proceso unificado (dirigido por casos de uso, centrado en la arquitectura, iterativo e incremental) y los articula en **seis buenas prácticas**:
 
-### Modelos de Casos de Uso vs. Modelo de Análisis
+- **Desarrollo iterativo**: el sistema se construye en iteraciones cortas con entregas incrementales.
+- **Gestión de requisitos**: los requisitos se documentan, trazan y priorizan de forma sistemática.
+- **Arquitectura basada en componentes**: la arquitectura se construye pronto sobre componentes reutilizables.
+- **Modelado visual**: los modelos UML elevan el nivel de abstracción y facilitan la comunicación.
+- **Verificación continua de la calidad**: las pruebas se integran en todas las iteraciones, no solo al final.
+- **Gestión del cambio**: los cambios se controlan mediante gestión de configuración, versiones e incidencias.
 
-| Modelo de Casos de Uso                                                                                                               | Modelo de Análisis                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Descrito en el lenguaje del cliente.                                                                                                 | Descrito en el lenguaje del desarrollador.                                                                                                                                  |
-| Vista externa del sistema.                                                                                                           | Vista interna del sistema.                                                                                                                                                  |
-| Estructurado por casos de uso; proporciona la estructura a la vista externa.                                                         | Estructurado por clases y paquetes estereotipados; proporciona la estructura a la vista interna.                                                                            |
-| Utilizado fundamentalmente como contrato entre el cliente y los desarrolladores sobre qué debería y qué no debería hacer el sistema. | Utilizado fundamentalmente por los desarrolladores para comprender cómo deberá darse forma al sistema, es decir, cómo deberá ser diseñado e implementado.                   |
-| Puede contener redundancias e inconsistencias entre requisitos.                                                                      | No debería contener redundancias ni inconsistencias entre requisitos.                                                                                                       |
-| Captura la funcionalidad del sistema, incluida la funcionalidad significativa para la arquitectura.                                  | Esboza cómo llevar a cabo la funcionalidad dentro del sistema, incluida la funcionalidad significativa para la arquitectura; sirve como una primera aproximación al diseño. |
-| Define casos de uso que se analizarán con más profundidad en el modelo de análisis.                                                  | Define realizaciones de caso de uso, y cada una de ellas representa el análisis de un caso de uso del modelo de casos de uso.                                               |
+Promueve además la **colaboración entre equipos** y la elevación del nivel de abstracción mediante patrones de diseño y *frameworks*.
 
-### Modelos de Modelo de Análisis vs. Modelo del diseño
+### Estructura y variantes
 
-| Modelo de Análisis                                        | Modelo de Diseño                                                                  |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| Modelo conceptual.                                        | Modelo físico (implementación).                                                   |
-| Genérico respecto al diseño (aplicable a varios diseños). | Específico para una implementación.                                               |
-| Tres estereotipos: entidad, control, interfaz.            | Cualquier número de estereotipos físicos.                                         |
-| Menos formal.                                             | Más formal.                                                                       |
-| Menos caro de desarrollar.                                | Más caro.                                                                         |
-| Menos capas.                                              | Más capas.                                                                        |
-| Dinámico (no muy centrado en la secuencia).               | Dinámico (muy centrado en la secuencia).                                          |
-| Creado principalmente como trabajo manual.                | Creado fundamentalmente como “programación visual” en ingeniería de ida y vuelta. |
-| Puede no mantenerse todo el ciclo de vida.                | Debe ser mantenido todo el ciclo de vida.                                         |
+- **Eje dinámico (horizontal)**: las cuatro fases (inicio, elaboración, construcción y transición) con sus hitos, recorridas en iteraciones.
+- **Eje estático (vertical)**: las nueve disciplinas (seis del proceso y tres de soporte), cuyo peso por fase refleja el diagrama de «jorobas».
+- **Variantes**: **OpenUP** (versión ligera y abierta, dentro del Eclipse Process Framework) y **AUP** (*Agile Unified Process*).
 
-## Aclaraciones: …sobre los diagramas
+## Métrica v3: visión de síntesis
 
-<table>
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 19%" />
-<col style="width: 13%" />
-<col style="width: 27%" />
-<col style="width: 23%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: center;">Área</th>
-<th style="text-align: center;"></th>
-<th style="text-align: center;"></th>
-<th style="text-align: center;">Diagramas</th>
-<th style="text-align: center;">Uso</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="3">Diseño bases de datos</td>
-<td></td>
-<td></td>
-<td>Diagrama E/R</td>
-<td>Diseño conceptual</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Pseudocódigo</td>
-<td>Diseño lógico</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Lenguaje de programación</td>
-<td>Diseño físico</td>
-</tr>
-<tr>
-<td rowspan="4">Análisis y Diseño Estructurado</td>
-<td></td>
-<td></td>
-<td>Diagrama de contexto de sistema (DCS)</td>
-<td>Describir entorno</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Diagrama de flujo de datos (DFD)</td>
-<td>ENTIDAD-PROCESO</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Diagrama de Estructura</td>
-<td>Árbol de directorios</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Diccionario de datos</td>
-<td>Tabla (nombre, tipo, tamaño, descripción)</td>
-</tr>
-<tr>
-<td rowspan="14">Análisis y Diseño Orientado a Objetos (UML)</td>
-<td rowspan="7"><strong>Diagramas estructurales</strong></td>
-<td rowspan="7"></td>
-<td>Diagrama de clases</td>
-<td>Típico para POO (clases, atributos y métodos)</td>
-</tr>
-<tr>
-<td>Diagrama de componentes</td>
-<td>Arquitectura</td>
-</tr>
-<tr>
-<td>Diagrama de despliegue</td>
-<td>BDs-Server-Printer</td>
-</tr>
-<tr>
-<td>Diagrama de objetos</td>
-<td>Interacción entre objetos (A-B)</td>
-</tr>
-<tr>
-<td>Diagrama de paquetes</td>
-<td>Para agrupar “cosas” (simplificar)</td>
-</tr>
-<tr>
-<td>Diagrama de perfiles</td>
-<td>?</td>
-</tr>
-<tr>
-<td>Diagrama de estructura compuesta</td>
-<td>Estructuras internas (PC→[cpu, ram, hdd]</td>
-</tr>
-<tr>
-<td rowspan="7"><strong>Diagramas de comportamiento</strong></td>
-<td rowspan="3"></td>
-<td>Diagrama de actividades (o de flujo)</td>
-<td>If/elses, loops</td>
-</tr>
-<tr>
-<td>Diagrama de casos de uso</td>
-<td>“Comprar café”</td>
-</tr>
-<tr>
-<td>Diagrama de máquina de estados</td>
-<td>Building → Testing → Deploying,…</td>
-</tr>
-<tr>
-<td rowspan="4"><strong>Diagrama de interacción</strong></td>
-<td>Diagrama de secuencia</td>
-<td>Eventos, Redes… |&gt;|</td>
-</tr>
-<tr>
-<td>Diagrama de comunicación</td>
-<td>Mensajes entre objetos A→B</td>
-</tr>
-<tr>
-<td>Diagrama de tiempos (o cronograma)</td>
-<td>Señales digitales</td>
-</tr>
-<tr>
-<td>Diagrama global de interacciones</td>
-<td>Múltiples diagramas de interacción</td>
-</tr>
-<tr>
-<td>BPMN</td>
-<td></td>
-<td></td>
-<td>Diagrama de procesos de negocio</td>
-<td>Diagramas de flujo con un par de reglas</td>
-</tr>
-</tbody>
-</table>
+**Métrica versión 3** es la metodología de **planificación, desarrollo y mantenimiento de sistemas de información** de las administraciones públicas españolas, promovida por el entonces **Ministerio de Administraciones Públicas** (**2001**) y publicada en el PAe. Sigue siendo la referencia metodológica habitual en el desarrollo de software público, y en los desarrollos orientados a objetos emplea la notación UML.
 
-### Notas rápidas:
+- **Base**: el modelo de ciclo de vida de la norma **ISO/IEC 12207** (procesos del ciclo de vida del software), con referencias a ISO/IEC 15504 (SPICE), ISO 9000/9001, IEEE 610.12 y a metodologías como SSADM, Merise, MAGERIT o Eurométodo.
+- **Cobertura**: en una única estructura cubre los desarrollos **estructurado** y **orientado a objetos**.
+- **Estructura**: cada proceso se descompone en **actividades** y estas en **tareas**; para cada tarea se definen participantes, productos de entrada y salida, y técnicas y prácticas.
 
-- **Bases de datos:** Modelos E/R
-- **Datos de una organización:** Análisis estructurado (DFD, Diccionario de datos,…)
-- **Programación Orientada a Objetos:** UML (Diagramas de clases, típicamente)
-- **Proceso Unificado de Desarrollo de Software:** Gestión de proyectos + Diagramas UML
-    - **RUP (Rational Unified Process):** Especificación propietaria
-- **Análisis de requisitos:** UML (Casos de uso)
-- **BPMN (Business Process Model and Notation):** Permite modelar procesos de negocio
+### Procesos principales
+
+- **Planificación de Sistemas de Información (PSI)**: marco estratégico de referencia para los sistemas de información de la organización; produce el **catálogo de requisitos** y la **arquitectura de información** (modelo de información, modelo de sistemas de información, arquitectura tecnológica, plan de proyectos y plan de mantenimiento del PSI).
+- **Desarrollo de Sistemas de Información**, subdividido en cinco procesos:
+    - **Estudio de Viabilidad del Sistema (EVS)**: analiza un conjunto de necesidades y propone una solución a corto plazo con criterios tácticos (económicos, técnicos, legales y operativos); las alternativas pueden ser a medida, producto de mercado o mixtas.
+    - **Análisis del Sistema de Información (ASI)**: especificación detallada del sistema mediante el catálogo de requisitos y los modelos: **casos de uso y clases** en orientación a objetos, **datos y procesos** en desarrollo estructurado.
+    - **Diseño del Sistema de Información (DSI)**: arquitectura del sistema y entorno tecnológico, especificaciones de construcción de los componentes, especificación técnica del plan de pruebas y requisitos de implantación.
+    - **Construcción del Sistema de Información (CSI)**: codificación y pruebas **unitarias, de integración y del sistema**; manuales de usuario y, si procede, componentes de migración y carga inicial de datos.
+    - **Implantación y Aceptación del Sistema (IAS)**: entrega y aceptación del sistema (pruebas de **implantación**, responsabilidad del usuario de operación, y de **aceptación**, del usuario final), plan de mantenimiento, acuerdo de nivel de servicio y paso a producción.
+- **Mantenimiento de Sistemas de Información (MSI)**: obtiene una nueva versión del sistema a partir de las peticiones de los usuarios (por problemas detectados o mejoras). Solo contempla los mantenimientos **correctivo y evolutivo** (excluye el adaptativo y el perfectivo).
+
+### Interfaces
+
+Cuatro interfaces dan soporte organizativo a los procesos principales:
+
+- **Gestión de Proyectos (GP)**: planificación, seguimiento y control de las actividades y los recursos; actividades de **inicio (GPI)**, de **seguimiento y control (GPS)** y de **finalización (GPF)** del proyecto.
+- **Seguridad (SEG)**: incorpora mecanismos de seguridad adicionales al sistema y al propio proceso de desarrollo; contempla los riesgos lógicos y utiliza **MAGERIT** como metodología de análisis y gestión de riesgos si la organización no dispone de una propia.
+- **Gestión de la Configuración (GC)**: identificación y control de los elementos de configuración, sus cambios y versiones mediante un plan de gestión de la configuración; evita cambios incontrolados y facilita el análisis de impacto en el mantenimiento.
+- **Aseguramiento de la Calidad (CAL)**: marco común para definir planes de aseguramiento de la calidad de proyectos concretos; las actividades de evaluación las realiza un grupo de calidad **independiente** de los responsables de los productos.
+
+### Participantes
+
+La metodología clasifica a los participantes en **cinco perfiles**: **directivo**, **jefe de proyecto**, **consultor**, **analista** y **programador**.
+
+## Fuentes {.unnumbered .unlisted}
+
+- Jacobson, I.; Booch, G.; Rumbaugh, J.: *El Proceso Unificado de Desarrollo de Software*. Addison-Wesley, 1999.
+- OMG: *Unified Modeling Language (UML), versión 2.5.1*, diciembre de 2017.
+- Kruchten, P.: «Architectural Blueprints: The "4+1" View Model of Software Architecture», *IEEE Software*, noviembre de 1995.
+- Métrica versión 3, Ministerio de Administraciones Públicas, 2001: documentos «Introducción» y «Participantes» (PAe, consultados en julio de 2026).

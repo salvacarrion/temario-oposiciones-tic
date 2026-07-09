@@ -2,7 +2,7 @@
 
 Tema introductorio al bloque jurídico: qué normas existen, quién dicta cada una y cómo se ordenan entre sí.
 
-## El ordenamiento jurídico y la jerarquía normativa
+## Ordenamiento jurídico y jerarquía normativa
 
 - **Ordenamiento jurídico**: conjunto de normas que rigen un Estado. Es un sistema unitario y coherente, no una simple acumulación de leyes: «los ciudadanos y los poderes públicos están sujetos a la Constitución y al resto del ordenamiento jurídico» (art. 9.1 de la Constitución Española, CE).
 - **Principios constitucionales (art. 9.3 CE)**: legalidad, **jerarquía normativa**, **publicidad de las normas**, **irretroactividad** de las disposiciones sancionadoras no favorables o restrictivas de derechos, **seguridad jurídica**, responsabilidad e **interdicción de la arbitrariedad** de los poderes públicos.

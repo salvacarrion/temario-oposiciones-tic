@@ -2,7 +2,7 @@
 
 La Unión Europea (UE) es una organización supranacional integrada por **27 Estados miembros**, que le atribuyen competencias para alcanzar objetivos comunes. Su marco jurídico vigente lo forman dos tratados con el mismo valor jurídico: el **Tratado de la Unión Europea (TUE)** y el **Tratado de Funcionamiento de la Unión Europea (TFUE)**, en la redacción dada por el **Tratado de Lisboa** (en vigor desde el **1 de diciembre de 2009**).
 
-## El ordenamiento jurídico de la Unión Europea y sus fuentes
+## Ordenamiento jurídico de la Unión Europea y sus fuentes
 
 La UE dispone de un ordenamiento jurídico propio, que se integra en los ordenamientos de los Estados miembros y genera derechos y obligaciones tanto para los Estados como para los ciudadanos. Se articula en tres bloques de fuentes: derecho primario, derecho derivado y derecho complementario.
 
@@ -74,7 +74,7 @@ Junto a las instituciones, los tratados y el derecho derivado crean órganos y o
 - **Defensor del Pueblo Europeo** (art. 228 TFUE): elegido por el Parlamento tras cada elección, para toda la legislatura; investiga las reclamaciones por **mala administración** de las instituciones, órganos y organismos de la Unión (con exclusión del TJUE en sus funciones jurisdiccionales).
 - **Agencias y organismos especializados**: creados por derecho derivado para tareas concretas (por ejemplo, ENISA en ciberseguridad o Europol en cooperación policial).
 
-## El TUE: disposiciones comunes
+## Tratado de la Unión Europea (TUE)
 
 **Versión consolidada: DOUE C 202, de 7 de junio de 2016.**
 
@@ -115,7 +115,7 @@ Otros artículos del TUE preguntables:
 - **Art. 49. Adhesión**: puede solicitarla «cualquier Estado europeo que respete los valores mencionados en el artículo 2 y se comprometa a promoverlos»; el **Consejo se pronuncia por unanimidad**, previa consulta a la Comisión y **previa aprobación del Parlamento por mayoría de sus miembros**.
 - **Art. 50. Retirada voluntaria**: el Estado notifica su intención al Consejo Europeo y se negocia un acuerdo de retirada, que celebra el Consejo por mayoría cualificada previa aprobación del Parlamento; los tratados dejan de aplicarse desde la entrada en vigor del acuerdo o, en su defecto, a los **2 años** de la notificación, salvo prórroga acordada por unanimidad. Se ha aplicado una sola vez: la retirada del **Reino Unido** (efectiva el **31 de enero de 2020**).
 
-## El TFUE: actos jurídicos y procedimientos de adopción
+## Tratado de Funcionamiento de la Unión Europea (TFUE)
 
 **Versión consolidada: DOUE C 202, de 7 de junio de 2016.**
 
