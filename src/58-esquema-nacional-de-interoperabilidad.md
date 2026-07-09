@@ -37,7 +37,7 @@ El ENI se aplica de acuerdo con los principios generales de la ley y con tres pr
 
 ### Interoperabilidad organizativa (Capítulo III)
 
-- **Art. 8. Servicios disponibles por medios electrónicos**: las AAPP establecerán y **publicarán las condiciones de acceso y utilización** de los servicios, datos y documentos que pongan a disposición de las restantes Administraciones (finalidades, modalidades de consumo, requisitos de los usuarios, protocolos y condiciones de seguridad), conformes al ENS y a la normativa de protección de datos. Los servicios se publican a través de la **Red de comunicaciones de las Administraciones públicas españolas** (o red equivalente conectada y segura), y pueden gestionarse mediante **nodos de interoperabilidad**.
+- **Art. 8. Servicios disponibles por medios electrónicos**: las AAPP establecerán y **publicarán las condiciones de acceso y utilización** de los servicios, datos y documentos que pongan a disposición de las restantes Administraciones (finalidades, modalidades de consumo, consulta o interacción, requisitos de los usuarios, protocolos y condiciones de seguridad aplicables), conformes al ENS y a la normativa de protección de datos. Los servicios se publican a través de la **Red de comunicaciones de las Administraciones públicas españolas** (o red equivalente conectada y segura), y pueden gestionarse mediante **nodos de interoperabilidad**.
 - **Art. 9. Inventarios de información administrativa**: cada Administración mantendrá actualizados (redacción del RD 203/2021):
     - la relación de sus **procedimientos administrativos y servicios prestados**, clasificada y estructurada, conectada electrónicamente con el **Sistema de Información Administrativa (SIA)**, y
     - la relación de sus **órganos administrativos y oficinas** orientadas al público, conectada con el **Directorio Común de Unidades Orgánicas y Oficinas (DIR3)**, que provee una **codificación unívoca**.
@@ -63,9 +63,9 @@ El ENI se aplica de acuerdo con los principios generales de la ley y con tres pr
 
 ### Reutilización y transferencia de tecnología (Capítulo VIII)
 
-- **Art. 16. Condiciones de licenciamiento**: las aplicaciones y objetos de información de titularidad pública que se pongan a disposición de otras Administraciones y de los ciudadanos atenderán a estos aspectos:
-    - fin de **aprovechamiento y reutilización** de recursos públicos, con **protección completa contra la apropiación** exclusiva o parcial por terceros;
-    - **exención de responsabilidad** del cedente por el mal uso, errores o mal funcionamiento, y **no obligación de asistencia técnica** ni mantenimiento;
+- **Art. 16. Condiciones de licenciamiento**: para las aplicaciones y objetos de información de titularidad pública puestos a disposición de otras Administraciones y de los ciudadanos:
+    - fin de **aprovechamiento y reutilización** de recursos públicos, con «completa protección contra su **apropiación exclusiva o parcial** por parte de terceros»;
+    - **exención de responsabilidad** del cedente por el posible mal uso, errores o mal funcionamiento, y **no obligación de asistencia técnica** ni mantenimiento;
     - licenciamiento por defecto **sin contraprestación y sin necesidad de convenio**;
     - para lo declarado de **fuentes abiertas**, licencias que garanticen las cuatro libertades (**ejecutar para cualquier propósito, conocer el código fuente, modificar o mejorar, y redistribuir**), procurando la **Licencia Pública de la Unión Europea (EUPL)**;
     - en los **pliegos** de los contratos de desarrollo de aplicaciones se hará constar que la Administración contratante **adquiere los derechos completos de propiedad intelectual**.
@@ -73,18 +73,18 @@ El ENI se aplica de acuerdo con los principios generales de la ley y con tres pr
 
 ### Firma electrónica y certificados (Capítulo IX)
 
-- **Art. 18. Política de firma electrónica y de certificados**: la **AGE define una política marco** de firma electrónica y de certificados que sirve de marco general de interoperabilidad para el **reconocimiento mutuo** de firmas de documentos administrativos. La aplican todos los organismos de la AGE (su no aplicación debe justificarse y ser autorizada por la SGAD, hoy AEAD). Las restantes AAPP pueden **acogerse a ella** o **aprobar políticas propias**, partiendo de la NTI correspondiente; deben ser **interoperables con la política marco** y comunicarse, con sus ficheros de implementación, a la SGAD (hoy AEAD).
+- **Art. 18. Política de firma electrónica y de certificados**: la **AGE define una política de firma electrónica y de certificados** que sirve de **marco general de interoperabilidad** para el **reconocimiento mutuo** de las firmas electrónicas basadas en certificados de documentos administrativos. La aplican todos los organismos de la AGE (su no aplicación debe justificarse y ser autorizada por la SGAD, hoy AEAD). Las restantes AAPP pueden **acogerse a ella** o **aprobar políticas propias** partiendo de la NTI correspondiente; deben ser **interoperables con la política marco** y comunicarse, con sus ficheros de implementación, a la SGAD (hoy AEAD).
 - **Art. 19**: suprimido por el RD 203/2021 (regulaba los aspectos relativos a los prestadores de servicios de certificación, hoy regidos por el Reglamento eIDAS y la Ley 6/2020, tema 61).
 - **Art. 20. Plataformas de validación de certificados y de firma electrónica**: proporcionan **servicios de confianza** a las aplicaciones usuarias, ofreciendo «en un único punto de llamada» los elementos de interoperabilidad necesarios para validar certificados y firmas de dominios administrativos distintos; potencian la armonización de formatos y políticas e **incorporan las listas de confianza** de certificados interoperables nacionales y europeos.
 
 ### Recuperación y conservación del documento electrónico (Capítulo X)
 
 - **Art. 21. Condiciones para la recuperación y conservación**: medidas organizativas y técnicas a lo largo del ciclo de vida del documento, entre ellas:
-    - una **política de gestión de documentos**; inclusión en los expedientes de un **índice electrónico firmado**, que garantiza la integridad del expediente y permite su recuperación;
+    - una **política de gestión de documentos**; expedientes con **índice electrónico firmado**, que garantiza su integridad y permite su recuperación;
     - **identificación única e inequívoca** de cada documento y asociación de los **metadatos mínimos obligatorios** (y, en su caso, complementarios);
     - **clasificación** conforme a un plan adaptado a las funciones y **período de conservación** establecido por las **comisiones calificadoras**;
     - **acceso completo e inmediato** mediante consulta en línea (contenido, firma, sello de tiempo y metadatos) durante todo el período de conservación;
-    - borrado de información o destrucción de soportes solo conforme al procedimiento de **evaluación documental**, «dejando registro de su eliminación»;
+    - borrado de la información o destrucción física de los soportes solo si lo establece el procedimiento de **evaluación documental**, «dejando registro de su eliminación»;
     - **formación tecnológica** del personal y documentación de los procedimientos;
     - creación de **repositorios electrónicos**, «complementarios y equivalentes en cuanto a su función a los archivos convencionales».
 - **Art. 22. Seguridad**: se aplica el **Esquema Nacional de Seguridad** (principios básicos, requisitos mínimos y medidas según la categorización) para garantizar la integridad, autenticidad, confidencialidad, disponibilidad, trazabilidad, calidad, protección, recuperación y conservación de los documentos, sus soportes y medios. La firma en la conservación usa **formatos de firma longeva**.

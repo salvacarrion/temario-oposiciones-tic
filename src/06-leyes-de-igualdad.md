@@ -1,182 +1,170 @@
 # Leyes de igualdad
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
-
+El derecho a la igualdad y a la no discriminación se protege en España mediante un marco multinivel: la **Ley Orgánica 3/2007** desarrolla la igualdad efectiva de mujeres y hombres en todo el Estado; la **Ley 9/2003** de la Generalitat la concreta en la Comunitat Valenciana (fue anterior a la propia ley estatal); y la **Ley 4/2023** extiende la protección a las personas trans y LGTBI, regulando además la rectificación registral de la mención relativa al sexo.
 
 ## Ley Orgánica 3/2007, para la igualdad efectiva de mujeres y hombres
 
-### Objeto y Principios Generales
+**Texto consolidado a 2 de agosto de 2024.**
 
-La **Ley Orgánica 3/2007** tiene como objetivo garantizar la **igualdad de trato y oportunidades** entre mujeres y hombres, eliminando cualquier forma de discriminación hacia la mujer en los ámbitos político, civil, laboral, económico, social y cultural. Busca construir una sociedad **más democrática, justa y solidaria**.
+### Características y estructura
 
-### Ámbito de aplicación
+- **Denominación oficial**: Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres (**BOE de 23 de marzo de 2007**).
+- **Fundamento**: desarrolla los **arts. 9.2 y 14 de la Constitución** e incorpora al ordenamiento español la **Directiva 2002/73/CE** (igualdad de trato en el empleo y la ocupación) y la **Directiva 2004/113/CE** (igualdad de trato en el acceso a bienes y servicios y su suministro).
+- **Estructura**: un Título preliminar, **8 Títulos**, **78 artículos**, 32 disposiciones adicionales (la mayoría modifican otras leyes: LOREG, Estatuto de los Trabajadores, salud, Seguridad Social...), 12 transitorias, 1 derogatoria y 8 finales.
+- **Modificaciones principales**: **RD-ley 6/2019** (nuevo régimen de los planes de igualdad, arts. 45 y 46), **LO 10/2022** (prevención de conductas contra la libertad sexual en el trabajo, arts. 37, 38, 48, 66 y 68) y **LO 2/2024** (añade la DA 32.ª, acceso a la profesión de agente de igualdad).
+- **Composición equilibrada (DA 1.ª)**: presencia de mujeres y hombres de forma que, en el conjunto a que se refiera, las personas de cada sexo **no superen el 60 % ni sean menos del 40 %**. Es la regla que vertebra toda la ley.
+- La **DA 2.ª** modificó la **LOREG** (nuevo **art. 44 bis**): las candidaturas electorales deben tener una composición equilibrada, con un mínimo del **40 %** para cada sexo, también en cada tramo de cinco puestos.
 
-Aplica a toda persona, física o jurídica, que se encuentre o actúe en territorio español, independientemente de su nacionalidad, domicilio o residencia.
+### Título preliminar. Objeto y ámbito de la Ley
 
-### Título I
+- **Art. 1. Objeto de la Ley**: «hacer efectivo el derecho de igualdad de trato y de oportunidades entre mujeres y hombres, en particular mediante la eliminación de la discriminación de la mujer, sea cual fuere su circunstancia o condición, en cualesquiera de los ámbitos de la vida y, singularmente, en las esferas política, civil, laboral, económica, social y cultural». A estos efectos, la ley establece principios de actuación de los poderes públicos, regula derechos y deberes de las personas físicas y jurídicas, públicas y privadas, y prevé medidas para eliminar y corregir toda forma de discriminación por razón de sexo.
+- **Art. 2. Ámbito de aplicación**: todas las personas gozarán de los derechos derivados del principio de igualdad de trato; las obligaciones de la ley se aplican «a toda persona, física o jurídica, que se encuentre o actúe en territorio español, cualquiera que fuese su nacionalidad, domicilio o residencia».
 
-**Principio de igualdad de trato:** Ausencia de toda discriminación directa o indirecta por razón de sexo. Se consideran especialmente relevantes las discriminaciones relacionadas con la maternidad, las obligaciones familiares y el estado civil.
+### Título I. El principio de igualdad y la tutela contra la discriminación
 
-- Es un **principio informador del ordenamiento jurídico**, que debe observarse en la interpretación y aplicación de todas las normas jurídicas.
+Contiene el núcleo conceptual de la ley (arts. 3-13), con las definiciones más preguntables:
 
-**Ámbito laboral:** Aplica tanto al empleo público y privado
+- **Art. 3. Principio de igualdad de trato**: ausencia de toda discriminación, directa o indirecta, por razón de sexo y, especialmente, las derivadas de la **maternidad**, la **asunción de obligaciones familiares** y el **estado civil**.
+- **Art. 4. Integración del principio en la interpretación de las normas**: la igualdad de trato y de oportunidades es **principio informador del ordenamiento jurídico** y se integrará y observará en la interpretación y aplicación de las normas jurídicas.
+- **Art. 5. Igualdad en el empleo**: se garantiza en el empleo **privado y público** (acceso, formación, promoción, condiciones de trabajo, afiliación sindical). No constituye discriminación la diferencia de trato basada en una característica relacionada con el sexo cuando constituya un **requisito profesional esencial y determinante**, con objetivo legítimo y requisito proporcionado.
+- **Art. 6. Discriminación directa e indirecta**: directa es la situación en que una persona «sea, haya sido o pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable»; indirecta, cuando una disposición, criterio o práctica **aparentemente neutros** pone a personas de un sexo en desventaja particular, salvo justificación objetiva con medios necesarios y adecuados. Toda **orden de discriminar** se considera discriminatoria.
+- **Art. 7. Acoso sexual y acoso por razón de sexo**: acoso sexual es cualquier comportamiento **verbal o físico, de naturaleza sexual**, que atente contra la dignidad, en particular creando un entorno **intimidatorio, degradante u ofensivo**; acoso por razón de sexo es el comportamiento realizado **en función del sexo** con el mismo propósito o efecto. Ambos son siempre discriminatorios, y también lo es condicionar un derecho a la aceptación de una situación de acoso.
+- **Art. 8. Discriminación por embarazo o maternidad**: todo trato desfavorable relacionado con el embarazo o la maternidad es **discriminación directa** por razón de sexo.
+- **Art. 9. Indemnidad frente a represalias**: es discriminación el trato adverso consecuencia de una queja, reclamación, denuncia, demanda o recurso destinados a impedir la discriminación.
+- **Art. 10. Consecuencias jurídicas**: los actos y cláusulas de negocios jurídicos discriminatorios son **nulos y sin efecto** y generan responsabilidad mediante reparaciones o indemnizaciones «reales, efectivas y proporcionadas» y sanciones eficaces y disuasorias.
+- **Art. 11. Acciones positivas**: los poderes públicos adoptarán medidas específicas **en favor de las mujeres** para corregir situaciones patentes de desigualdad de hecho; serán aplicables **en tanto subsistan** dichas situaciones y habrán de ser razonables y proporcionadas. También pueden adoptarlas los particulares.
+- **Art. 12. Tutela judicial efectiva**: cualquier persona podrá recabarla (art. 53.2 CE), incluso tras la terminación de la relación en que se produjo la discriminación. En los litigios sobre acoso sexual y por razón de sexo, la **persona acosada es la única legitimada**.
+- **Art. 13. Prueba**: si la parte actora alega actuaciones discriminatorias por razón de sexo, corresponde a la **persona demandada** probar la ausencia de discriminación. Esta inversión de la carga de la prueba **no se aplica a los procesos penales**.
 
-- No constituirá discriminación cuando el sexo constituya un requisito profesional esencial
+### Título II. Políticas públicas para la igualdad
 
-### Discriminación y Acoso
+El Capítulo I (arts. 14-22) fija los principios generales de actuación y el Capítulo II (arts. 23-31) la acción administrativa sectorial.
 
-- **Discriminación directa:** Trato menos favorable hacia una persona por razón de su sexo en una situación comparable.
-- **Discriminación indirecta:** Disposición, criterio o práctica aparentemente neutra que coloca a personas de un sexo en desventaja frente al otro.
-- **Acoso sexual:** Conducta verbal o física de naturaleza sexual que atente contra la dignidad de una persona, creando un entorno **intimidatorio, degradante u ofensivo**.
-- **Acoso por razón de sexo:** Comportamiento basado en el sexo de una persona con el mismo propósito y efectos.
-- **Discriminación por embarazo o maternidad:** Se considera una forma de **discriminación directa**.
-- **Represalias:** Constituyen discriminación.
+- **Art. 14. Criterios generales de actuación de los poderes públicos**: entre otros, el compromiso con la efectividad del derecho de igualdad; su integración en el conjunto de las políticas; la **participación equilibrada** en las candidaturas electorales y en la toma de decisiones; la erradicación de la violencia de género; la atención a colectivos de **especial vulnerabilidad** (minorías, migrantes, niñas, discapacidad, mayores, viudas, víctimas de violencia de género); la protección de la maternidad; la conciliación y la **corresponsabilidad**; y la implantación de un **lenguaje no sexista** en el ámbito administrativo.
+- **Art. 15. Transversalidad**: el principio de igualdad informará, **con carácter transversal**, la actuación de todos los poderes públicos.
+- **Art. 16. Nombramientos**: los poderes públicos **procurarán** atender al principio de presencia equilibrada en los nombramientos de cargos de responsabilidad que les correspondan.
+- **Art. 17. Plan Estratégico de Igualdad de Oportunidades**: el Gobierno lo aprobará **periódicamente**, en las materias de competencia estatal.
+- **Art. 18. Informe periódico**: el Gobierno elaborará un informe periódico sobre la efectividad del principio de igualdad, del que **dará cuenta a las Cortes Generales**.
+- **Art. 19. Informes de impacto de género**: obligatorios en los proyectos de disposiciones de carácter general y en los planes de especial relevancia que se sometan al **Consejo de Ministros**.
+- **Art. 20. Estadísticas y estudios**: los poderes públicos deberán incluir **sistemáticamente la variable de sexo**, establecer nuevos indicadores, analizar la discriminación múltiple y diseñar muestras suficientemente amplias; solo cabe incumplir estas obligaciones excepcionalmente y mediante **informe motivado**.
+- **Art. 21. Colaboración entre Administraciones**: cooperación AGE-comunidades autónomas; en el seno de la **Conferencia Sectorial de la Mujer** podrán adoptarse planes y programas conjuntos. Las entidades locales integrarán el derecho de igualdad en sus competencias.
+- **Art. 22. Planificación equitativa de los tiempos**: las corporaciones locales podrán establecer **Planes Municipales de organización del tiempo** de la ciudad, con posible asistencia técnica del Estado.
+- **Educación (arts. 23-25)**: el sistema educativo incluirá entre sus fines la educación en la igualdad de derechos y oportunidades; las Administraciones educativas atenderán al principio en los **currículos**, eliminarán los contenidos sexistas de **libros de texto y materiales**, integrarán la igualdad en la **formación del profesorado**, promoverán la presencia equilibrada en los **órganos de control y de gobierno** de los centros y la enseñanza del **papel de las mujeres en la Historia**. En la educación superior: asignaturas de igualdad, **postgrados específicos** y estudios e investigaciones especializadas.
+- **Art. 26. Creación y producción artística e intelectual**: ayudas y acciones positivas para la autoría femenina y representación equilibrada en los órganos del sistema de gestión cultural.
+- **Art. 27. Salud**: integración del principio en las políticas, estrategias y programas de salud, en la investigación científica y en la formación del personal (con capacidad para **detectar y atender la violencia de género**); presencia equilibrada en puestos directivos del Sistema Nacional de Salud.
+- **Art. 28. Sociedad de la Información**: los programas públicos de desarrollo de la Sociedad de la Información incorporarán el principio de igualdad; el Gobierno promoverá la plena incorporación de las mujeres (acceso y formación TIC) y sus contenidos; en los **proyectos TIC sufragados total o parcialmente con dinero público** se garantizará que su **lenguaje y contenidos sean no sexistas**.
+- **Art. 29. Deportes**: los programas públicos de deporte incorporarán el principio de igualdad; promoción del **deporte femenino**.
+- **Art. 30. Desarrollo rural**: desarrollo de la **titularidad compartida** en el sector agrario; formación, empleo y red de servicios sociales para la conciliación en el mundo rural; acceso a las TIC de la mujer rural.
+- **Art. 31. Políticas urbanas y vivienda**: fomento del acceso a la vivienda de mujeres en situación de necesidad o en riesgo de exclusión y de las **víctimas de violencia de género**; perspectiva de género en el planeamiento urbanístico.
 
-### Consecuencias Jurídicas y Tutela Judicial
+### Títulos III a VIII (síntesis)
 
-- Los actos y cláusulas discriminatorias son **nulos de pleno derecho** y generan responsabilidad.
-- **Acciones positivas:** Los poderes públicos deben adoptar medidas específicas para **corregir desigualdades estructurales** a favor de las mujeres.
-- **Carga de la prueba:** Corresponde a la persona demandada demostrar la ausencia de discriminación.
-- **Tutela judicial efectiva:** Cualquier persona puede recabarla. La persona acosada es la **única legitimada** en los litigios sobre acoso.
+- **Título III. Igualdad y medios de comunicación (arts. 36-41)**: los medios de titularidad **pública** velarán por una imagen igualitaria, plural y no estereotipada; la **Corporación RTVE** y la **Agencia EFE** usarán un lenguaje no sexista y promoverán la incorporación de mujeres a puestos de responsabilidad; los medios privados respetarán la igualdad; la publicidad discriminatoria «se considerará **publicidad ilícita**» (art. 41).
+- **Título IV. El derecho al trabajo en igualdad de oportunidades (arts. 42-50)**: programas de mejora de la empleabilidad, promoción de la igualdad en la negociación colectiva y derechos de conciliación (arts. 42-44). **Planes de igualdad de las empresas**: obligatorios en las empresas de **cincuenta o más trabajadores** (art. 45.2, redacción del RD-ley 6/2019), cuando lo establezca el convenio colectivo o cuando lo acuerde la autoridad laboral en sustitución de sanciones accesorias; voluntarios para las demás. Son un **conjunto ordenado de medidas evaluables** adoptado tras un **diagnóstico** negociado en la **Comisión Negociadora del Plan de Igualdad**, con un contenido mínimo de 9 materias (selección, clasificación, formación, promoción, condiciones de trabajo con **auditoría salarial**, corresponsabilidad, infrarrepresentación femenina, retribuciones y prevención del acoso). Se crea el **Registro de Planes de Igualdad de las Empresas** y las empresas están **obligadas a inscribir** sus planes (art. 46). La DT 12.ª escalonó la aplicación: **1 año** (más de 150 trabajadores), **2 años** (más de 100 y hasta 150) y **3 años** (de 50 a 100) desde la publicación del RD-ley 6/2019. Desarrollo reglamentario: **RD 901/2020** (planes de igualdad y su registro) y **RD 902/2020** (igualdad retributiva). El art. 50 crea el **distintivo empresarial en materia de igualdad**, que se controla y puede retirarse en caso de incumplimiento.
+- **Título V. El principio de igualdad en el empleo público (arts. 51-64)**: criterios de actuación de las Administraciones públicas (art. 51: remover obstáculos, conciliación, formación en igualdad, presencia equilibrada en órganos de selección, protección frente al acoso, eliminar discriminación retributiva, evaluación periódica). Presencia equilibrada en los **órganos directivos de la AGE** (art. 52), en **tribunales y órganos de selección** (art. 53, salvo razones fundadas y objetivas) y en la designación de representantes (art. 54). Las convocatorias de pruebas selectivas requieren **informe de impacto de género, salvo en casos de urgencia** (art. 55). El tiempo en permisos y excedencias de conciliación **computa en los concursos** de provisión (art. 57). En formación: **preferencia durante un año** para quienes se reincorporen de permisos de maternidad/paternidad o excedencias por guarda, y **reserva de al menos el 40 %** de las plazas de los cursos para el acceso a puestos directivos para empleadas públicas (art. 60). **Protocolo de actuación frente al acoso sexual** negociado con la representación legal (art. 62; aprobado para la AGE por RD 247/2024). El Gobierno aprobará **al inicio de cada legislatura** el **Plan para la Igualdad entre mujeres y hombres en la AGE**, cuyo cumplimiento evalúa **anualmente el Consejo de Ministros** (art. 64). Los arts. 65-68 extienden estas normas a las **Fuerzas Armadas** y a las **Fuerzas y Cuerpos de Seguridad del Estado**.
+- **Título VI. Igualdad de trato en el acceso a bienes y servicios y su suministro (arts. 69-72)**: obligación general para quien suministre bienes o servicios disponibles para el público; ningún contratante podrá **indagar sobre la situación de embarazo**, salvo por razones de protección de la salud (art. 70); prohibidas las diferencias en **primas y prestaciones de seguros** por razón de sexo (factores actuariales, art. 71); el incumplimiento da derecho a indemnización y a la **asimilación a las primas del sexo más beneficiado** (art. 72).
+- **Título VII. La igualdad en la responsabilidad social de las empresas (arts. 73-75)**: acciones voluntarias de RSE en materia de igualdad, concertables con la representación de los trabajadores; posible uso publicitario, con **acción de cesación** del **Instituto de la Mujer** u órganos autonómicos equivalentes ante publicidad engañosa (art. 74); las sociedades obligadas a presentar **cuenta de pérdidas y ganancias no abreviada** procurarán la presencia equilibrada de mujeres y hombres en sus consejos de administración en un plazo de **8 años** (art. 75).
+- **Título VIII. Disposiciones organizativas (arts. 76-78)**: la **Comisión Interministerial de Igualdad** coordina las políticas de los departamentos ministeriales; las **Unidades de Igualdad** (una en cada Ministerio) recaban información estadística, elaboran estudios, asesoran sobre el impacto de género y velan por el cumplimiento de la ley; el **Consejo de Participación de la Mujer** es el órgano colegiado de consulta y asesoramiento para la participación de las mujeres.
 
-**Título I**I
+## Ley 9/2003, de la Generalitat, para la igualdad entre mujeres y hombres
 
-### Actuación de los Poderes Públicos
+**Texto consolidado a 31 de mayo de 2025.**
 
-- **Plan Estratégico de Igualdad de Oportunidades:** Periódicamente aprobado por el Gobierno, incluye medidas para eliminar la discriminación.
-- **Informe periódico:** El Gobierno debe informar a las Cortes Generales sobre el impacto de las políticas de igualdad.
-- **Proyectos normativos:** Deben incorporar un **informe de impacto de género**.
-- **Estadísticas y estudios:** Es obligatorio incluir la variable sexo en estadísticas oficiales.
-- **Conferencia Sectorial de la Mujer:** Coordina la colaboración entre Administraciones Públicas.
-- **Planificación del tiempo:** Fomento de planes municipales de organización del tiempo para una distribución equitativa.
-- **Educación:**
-    - Integrar el principio de igualdad en el sistema educativo.
-    - Eliminar comportamientos y contenidos sexistas.
-    - Fomentar la **presencia equilibrada** en órganos de control.
-    - Reconocer el papel histórico de las mujeres.
-    - En las universidades: Promoción de estudios específicos, investigaciones especializadas y programas de postgrado en igualdad.
-- **Producción artística e intelectual:** Ayudas e incentivos para proyectos que fomenten la igualdad.
-- **Deporte:** Promoción del deporte femenino.
-- **Sociedad de la información:** Proyectos tecnológicos públicos deberán usar **lenguaje no sexista**.
-- **Políticas urbanas:** Fomentar el acceso a la vivienda de mujeres en situación de necesidad o víctimas de violencia de género.
-- **Desarrollo rural:** Reconocimiento de derechos y mejora formativa para mujeres en áreas rurales.
+### Características y estructura
 
-### Ámbito Laboral
+- **Denominación oficial**: Ley 9/2003, de 2 de abril, para la igualdad entre mujeres y hombres (**DOGV de 4 de abril de 2003**; BOE de 8 de mayo de 2003). Es **anterior a la LO 3/2007** estatal.
+- **Fundamento competencial**: la competencia exclusiva de la Generalitat en «promoción de la mujer» (art. 31.26 del Estatuto en su numeración original, citado en el preámbulo; hoy **art. 49.1.26.ª** tras la reforma de 2006).
+- **Estructura**: **4 Títulos** y **52 artículos** (51 más el art. 4 bis), con una disposición adicional, dos transitorias, una derogatoria y una final.
+- **Modificaciones**: Ley 13/2016 (añade el art. 4 bis), Ley 27/2018 (arts. 8, 16 y 20.3), **Ley 9/2019** (arts. 42, 49, 50 y Título IV), Decreto-ley 7/2024 y **Ley 5/2025** (ambos sobre el art. 20).
 
-- **Planes de igualdad:** Obligatorios para empresas con más de 50 trabajadores, deben incluir:
-    - Diagnóstico inicial elaborado por una **Comisión Negociadora**.
-    - Medidas específicas para eliminar la discriminación.
-    - Registro obligatorio en el **Registro de Planes de Igualdad de las Empresas**.
-- **Prevención del acoso:** Códigos de buenas prácticas, campañas informativas y acciones formativas.
-- **Distintivo empresarial:** Otorgado por el Ministerio de Trabajo y Asuntos Sociales a empresas con políticas destacadas en igualdad.
+### Título I. Objeto, principios generales y ámbito de la ley
 
-### Administraciones Públicas
+- **Art. 1. Objeto**: «regular y hacer efectivo el principio de igualdad de mujeres y hombres en la Comunidad Valenciana, establecer los principios generales que deben orientar dicha igualdad, determinar las acciones básicas que deben ser implementadas, así como establecer la organización administrativa de la igualdad de oportunidades entre mujeres y hombres en la Comunidad Valenciana».
+- **Art. 2. Principios generales**: son contrarias al ordenamiento las actuaciones públicas o comportamientos privados discriminatorios; **no toda desigualdad es constitutiva de discriminación**, sino solo la que «carece de justificación objetiva, racional y razonable»; las diferencias de trato deben ser proporcionadas y congruentes con sus fines.
+- **Art. 3. Ámbito**: todo el territorio de la Comunitat Valenciana, para las actuaciones en materia de igualdad de oportunidades promovidas por personas físicas o jurídicas, públicas o privadas.
+- **Art. 4. Principios rectores de la acción administrativa**: modificar los **patrones socioculturales** de conducta asignados por género; **estrategia dual** basada en la complementariedad de las **medidas de acción positiva** y la **transversalidad de género** (las medidas especiales temporales no se consideran discriminatorias y cesarán al alcanzarse los objetivos); el Consell **informará a Les Corts** de las actuaciones realizadas.
+- **Art. 4 bis. Informes de impacto de género** (añadido por la Ley 13/2016): los proyectos normativos incorporarán un informe de impacto por razón de género que acompañará la propuesta **desde el inicio de la tramitación**.
 
-- **Conciliación:** Remover obstáculos que dificulten la conciliación de la vida personal, familiar y laboral.
-- **Convocatorias selectivas:** Requieren informes de impacto de género (excepto en casos urgentes).
-- **Maternidad y paternidad:** Computarán como tiempo trabajado en concursos de méritos.
-- **Formación en igualdad:** Obligatoria en todos los niveles, con reserva del 40% de plazas en cursos directivos para mujeres.
-- **Plan de Igualdad:** Aprobado anualmente para la Administración General del Estado.
+### Título II. De la actuación administrativa
 
-### Acceso a Bienes y Servicios
+Se organiza en siete capítulos sectoriales:
 
-- **Principio de igualdad obligatorio** para todas las entidades que suministren bienes o servicios.
-- **Seguros:** Prohibidas las diferencias en primas y prestaciones por razón de sexo.
-- **Protección del embarazo:** Prohibido indagar sobre el embarazo salvo por razones de protección.
+- **Educación para la igualdad (arts. 5-9)**: sistema **coeducativo** (formación en igualdad, rechazo de la discriminación y orientación académica no sesgada por el género); enseñanza no reglada para mujeres de zonas rurales; **ampliación del horario de apertura** de los centros públicos de infantil y primaria por razones de conciliación; **persona coordinadora de igualdad y convivencia** en los centros no universitarios (art. 8, redacción de la Ley 27/2018); financiación de asignaturas y proyectos docentes universitarios con **enfoque de género**.
+- **Igualdad y participación política (arts. 10-12)**: Les Corts y el Consell **procurarán la presencia paritaria** en los nombramientos de órganos e instituciones; los medios públicos tendrán en cuenta en los espacios electorales gratuitos las candidaturas con presencia equilibrada; las **subvenciones electorales** de la Generalitat se incrementarán en un **10 %** para los **escaños obtenidos por mujeres** (y el mismo porcentaje para los votos de las candidaturas equilibradas), siempre que resulte compatible con la Ley Electoral Valenciana.
+- **Igualdad en el ámbito laboral (arts. 13-24)**: medidas específicas en los **Planes de Empleo Valenciano** (primer empleo, mujeres mayores de **45 años**, retorno al mercado laboral); atención a las mujeres con discapacidad; la **Red Valenciana de Igualdad** (art. 16): servicio de promoción de la igualdad que incorpora la perspectiva de género en las políticas municipales, asesora, previene la violencia de género e informa a las empresas para elaborar planes de igualdad y los **informes técnicos para el visado**. Conciliación: red pública de escuelas infantiles y guarderías laborales, incentivos a la **flexibilidad de horarios** y fomento del **permiso parental compartido**. **Planes de igualdad en las empresas** (art. 20, redacción de la Ley 5/2025): el concepto remite al de la **LO 3/2007**; la administración autonómica **incentivará** a las empresas que sin estar obligadas elaboren y registren un plan; el **visado** del centro directivo competente en igualdad se tendrá en cuenta, cuando lo prevean las bases, como **criterio de valoración y desempate** en la obtención de ayudas, y su solicitud se entiende **estimada por silencio a los 3 meses**. Completan el capítulo la vigilancia de la **discriminación salarial** (Inspección de Trabajo), los programas de inserción sociolaboral para víctimas de malos tratos, el **código de conducta contra el acoso sexual** (Recomendación de la Comisión Europea de 27 de noviembre de 1991) y el control de cláusulas discriminatorias en los convenios a través del Registro de Convenios Colectivos.
+- **Bienestar y familia (arts. 25-27)**: atención a la dependencia como medida de incorporación de las mujeres al trabajo; contra la **feminización de la pobreza**, la Generalitat garantiza mediante un sistema de **anticipos** el pago de pensiones de alimentos impagadas a favor de hijas e hijos menores, con cargo a un **Fondo** presupuestario; medidas de corresponsabilidad en la planificación de familia e infancia.
+- **Sociedad de la información (arts. 28-32)**: acceso y formación de las mujeres en las nuevas tecnologías; campañas accesibles para mujeres con discapacidad (braille, lengua de signos); fomento de una mayor representación femenina en **puestos técnicos y de diseño de tecnologías de la información**.
+- **De la violencia contra las mujeres (arts. 33-39)**: investigación de sus causas; **asistencia jurídica y psicológica especializada y gratuita** a las víctimas; **informe al menos anual** del Gobierno a Les Corts (recursos, denuncias, procedimientos penales, readaptación de agresores); posible ejercicio de la **acción popular** por la Generalitat en agresiones domésticas con resultado de **muerte o lesiones graves**; protocolos de coordinación; **acceso preferente a viviendas sociales** (o prestación económica para alquiler) para las víctimas que abandonen su domicilio; sistemas especiales de protección ante riesgo físico grave.
+- **Igualdad y medios de comunicación (arts. 40-41)**: los medios públicos (y los participados o subvencionados) transmitirán una imagen de las mujeres acorde con la **pluralidad de roles**; su programación promoverá la igualdad y los valores constitucionales.
 
-### Medios de Comunicación y Publicidad
+### Título III. Igualdad y Administración pública
 
-- **Medios públicos:**
-    - Velarán por una imagen igualitaria y no estereotipada.
-    - Utilizarán **lenguaje no sexista**.
-    - Promoverán la incorporación de mujeres a puestos de responsabilidad.
-- **Medios privados:** Deben evitar cualquier forma de discriminación.
-- **Publicidad:** Será ilícita aquella que promueva conductas discriminatorias.
+- **Art. 42. Publicidad no sexista**: la Generalitat velará por la igualdad y la no discriminación en la publicidad en cualquier medio de difusión.
+- **Art. 43. Erradicación de la violencia**: emisión en los medios audiovisuales públicos de programas y campañas institucionales **sostenidas en el tiempo** contra la violencia hacia las mujeres.
+- **Arts. 44-45. Formación y promoción interna**: planes plurianuales de formación para promover el acceso de las mujeres a la promoción interna de la función pública, dentro del respeto a los principios de **mérito y capacidad**, con indicadores y objetivos por departamento.
+- **Art. 46. Contratación**: en caso de **empate en la máxima puntuación**, preferencia en la adjudicación de los contratos de la Generalitat para los licitadores que presenten un **plan de igualdad previamente aprobado por cualquier administración pública**, si igualan a las ofertas más ventajosas; el órgano de contratación puede fijar criterios adicionales de desempate en el anuncio de licitación.
+- **Art. 47. Acoso sexual**: incorporación del código de conducta contra el acoso sexual al régimen de la función pública valenciana.
+- **Art. 48. Lenguaje no sexista**: toda norma o escrito administrativo respetará las normas de **lenguaje no sexista**.
+- **Art. 49. Datos estadísticos e investigaciones**: **desagregación de datos por sexos** en todas las estadísticas e investigaciones de la Comunitat Valenciana.
 
-### Órganos de Igualdad
+### Título IV. Instituciones de protección del derecho a la igualdad
 
-- **Comisión Interministerial de Igualdad:** Coordina políticas de igualdad entre departamentos ministeriales.
-- **Unidades de Igualdad:** En todos los ministerios, se encargan de recabar información estadística, elaborar estudios, asesorar y fomentar el cumplimiento de la ley.
-- **Consejo de Participación de la Mujer:** Órgano consultivo que facilita la participación de las mujeres en la promoción de la igualdad.
+- **Consejo Valenciano de las Mujeres (art. 50)**: órgano de **participación y asesoramiento** para eliminar discriminaciones y promover la participación de las mujeres en la vida política, económica y social.
+- **Defensoría de la Igualdad de Género (art. 51)**: creada para **vigilar el cumplimiento de la ley**; la desempeña el **Síndic de Greuges** en la forma y condiciones que prevé su ley de creación.
 
-### Otros Aspectos Relevantes
+## Ley 4/2023, de igualdad de las personas trans y derechos LGTBI
 
-- **Publicidad engañosa en igualdad:** El Instituto de la Mujer puede cesar campañas de publicidad engañosa.
-- **Evaluación en empleo público:** Los Departamentos Ministeriales deben reportar anualmente el grado de aplicación de las políticas de igualdad.
-- **Reserva del 40% de plazas:** En formación directiva, como medida positiva para fomentar la igualdad.
+**Texto sin modificaciones desde su publicación (BOE de 1 de marzo de 2023).**
 
-## Ley 9/2003, de igualdad entre mujeres y hombres (Comunidad Valenciana)
+### Características y estructura
 
-### Objeto y Ámbito de Aplicación
+- **Denominación oficial**: Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI.
+- **Estructura**: un Título preliminar, **4 Títulos** y **82 artículos**, con 4 disposiciones adicionales, 2 transitorias y **28 finales** (modifican, entre otras normas, el Código Civil, la Ley del Registro Civil, el Estatuto de los Trabajadores y el **TREBEP**).
+- **Deroga** la **Ley 3/2007, de 15 de marzo**, reguladora de la rectificación registral de la mención relativa al sexo de las personas (no confundir con la LO 3/2007 de igualdad: aquella exigía diagnóstico de disforia y dos años de tratamiento, requisitos que desaparecen).
+- **Desarrollo reglamentario**: **RD 1026/2024** (medidas planificadas LGTBI en las empresas, dictado de conformidad con el art. 15.1).
 
-El objeto de la ley es **regular y hacer efectivo el principio de igualdad de mujeres y hombres** en la Comunidad Valenciana, estableciendo los principios generales, las acciones básicas y la organización administrativa necesarias.
+### Disposiciones generales (Título preliminar)
 
-- **Ámbito territorial:** La ley se aplica en todo el territorio de la Comunidad Valenciana.
+- **Art. 1. Objeto**: «garantizar y promover el derecho a la igualdad real y efectiva de las personas lesbianas, gais, trans, bisexuales e intersexuales (en adelante, LGTBI), así como de sus familias»; la ley regula además «el procedimiento y requisitos para la rectificación registral relativa al sexo y, en su caso, nombre de las personas».
+- **Art. 2. Ámbito de aplicación**: toda persona física o jurídica, de carácter público o privado, que **resida, se encuentre o actúe en territorio español**.
+- **Art. 3. Definiciones**: entre otras, **identidad sexual** («vivencia interna e individual del sexo tal y como cada persona la siente y autodefine, pudiendo o no corresponder con el sexo asignado al nacer»); **expresión de género** (manifestación que cada persona hace de su identidad sexual); **persona trans** (aquella cuya identidad sexual no se corresponde con el sexo asignado al nacer); **intersexualidad**; **LGTBIfobia** (y sus especies: homofobia, bifobia, transfobia); discriminación **directa e indirecta**, **múltiple e interseccional**, **por asociación y por error**; **acoso discriminatorio**; y medidas de acción positiva.
 
-### Principios Generales y Rectores de la Acción Administrativa
+### Actuación de los poderes públicos (Título I)
 
-- La **discriminación contraria al ordenamiento jurídico** está prohibida, pero no toda desigualdad constituye discriminación. Se considera discriminatoria la desigualdad que carezca de una justificación **objetiva, racional y razonable**.
-- **Principios rectores:**
-    - Modificar patrones socioculturales asignados por género.
-    - **Estrategia dual:** Combina medidas de acción positiva y transversalidad de género.
-    - Los proyectos normativos incluirán un **informe de impacto de género**.
-    - El Consell informará a Les Corts sobre las actuaciones realizadas.
+- **Art. 4. Deber de protección**: los poderes públicos, en el ámbito de sus competencias, «desarrollarán todas las medidas necesarias para reconocer, garantizar, proteger y promover la igualdad de trato y no discriminación por razón de orientación e identidad sexual, expresión de género o características sexuales de las personas LGTBI y sus familias».
+- **Consejo de Participación de las Personas LGTBI (art. 9)**: órgano de participación ciudadana, colegiado de los previstos en el **art. 22.3 de la Ley 40/2015**; depende del **Ministerio de Igualdad** y presenta una memoria **semestral** que se remite a las Cortes Generales.
+- **Estrategia estatal para la igualdad de trato y no discriminación de las personas LGTBI (art. 10)**: instrumento principal de colaboración territorial; la elabora el Ministerio de Igualdad y se aprueba por **Acuerdo del Consejo de Ministros, previo informe favorable de la Conferencia Sectorial de Igualdad**; carácter **cuatrienal**.
+- **Medidas en el ámbito administrativo (arts. 11-13)**: en el **empleo público**, garantía de los derechos de la ley e implantación de medidas de igualdad en el acceso y la carrera, previa negociación sindical; **formación** inicial y continuada del personal público e inclusión de estos contenidos en los **programas de las pruebas selectivas**; adecuación de la **documentación administrativa y los formularios** a la diversidad sexual y familiar.
+- **Medidas sectoriales (arts. 14-42)**: en el ámbito **laboral**, las empresas de **más de 50 personas trabajadoras** deben contar (plazo de **12 meses** desde la entrada en vigor) con un **conjunto planificado de medidas y recursos** para la igualdad LGTBI, que incluya un **protocolo frente al acoso**, pactado en la negociación colectiva (art. 15, desarrollado por el RD 1026/2024); en **salud**, destaca la **prohibición de las terapias de conversión** (art. 17): quedan prohibidos los métodos de aversión, conversión o contracondicionamiento «incluso si cuentan con el consentimiento de la persona interesada o de su representante legal»; y medidas en educación, cultura y deporte, medios de comunicación e internet, familia e infancia, medio rural, acción exterior y protección internacional.
 
-### Título II
+### Rectificación registral de la mención relativa al sexo (Título II)
 
-### Educación y Participación Política
+Es la novedad principal de la ley: la rectificación registral pasa a basarse en la **voluntad libremente manifestada** (autodeterminación), sin requisitos médicos.
 
-- **Educación:**
-    - Implantación de un sistema **coeducativo** que rechace la discriminación y la orientación académica sesgada.
-    - Igualdad real en las dimensiones curricular, escolar y otras.
-    - **Ampliación del horario de apertura** de centros públicos para fomentar la corresponsabilidad.
-    - Financiación de asignaturas y proyectos universitarios con **enfoque de género**.
-- **Participación política:**
-    - Promoción de una **presencia paritaria** en los órganos políticos.
-    - Incremento del 10% en subvenciones electorales por escaños obtenidos por mujeres, siempre que sea compatible con la **Ley Electoral Valenciana**.
+- **Legitimación (art. 43)**: mayores de **16 años**, por sí mismas; entre **14 y 16 años**, asistidas por sus representantes legales (con **defensor judicial** en caso de desacuerdo); entre **12 y 14 años**, mediante **autorización judicial** por el cauce de la jurisdicción voluntaria; las personas con discapacidad, con las medidas de apoyo que precisen. Las personas trans **menores de edad** tienen derecho en todo caso al **cambio de nombre** registral por razones de identidad sexual (art. 48).
+- **Procedimiento (art. 44)**: solicitud ante **cualquier Oficina del Registro Civil**; no puede condicionarse a **informe médico o psicológico** ni a la **previa modificación de la apariencia o función corporal** (despatologización). Consta de **dos comparecencias**: en la inicial se manifiesta la disconformidad con el sexo registral y se elige nuevo nombre, con información de las consecuencias jurídicas; en la segunda, que debe citarse en el **plazo máximo de 3 meses**, se ratifica la solicitud. La resolución se dicta en el **plazo máximo de 1 mes** desde la segunda comparecencia y es recurrible en **alzada ante la Dirección General de Seguridad Jurídica y Fe Pública**.
+- **Efectos (art. 46)**: **constitutivos** desde su inscripción en el Registro Civil; la rectificación **no altera el régimen jurídico anterior** a efectos de la **LO 1/2004** de violencia de género; quien pase del sexo masculino al femenino puede beneficiarse de las medidas de acción positiva del art. 11 de la LO 3/2007 solo para situaciones **posteriores** al cambio, y quien pase del femenino al masculino **conserva los derechos patrimoniales consolidados**.
+- **Reversibilidad (art. 47)**: transcurridos **6 meses** desde la inscripción, puede recuperarse la mención anterior por el mismo procedimiento; una **nueva rectificación posterior** exige aprobación judicial (jurisdicción voluntaria).
+- El Título II incluye además la adecuación de documentos oficiales (arts. 49-51), la **Estrategia estatal para la inclusión social de las personas trans** (art. 52), medidas de fomento del empleo, la atención sanitaria integral con **consentimiento informado** y el tratamiento del alumnado menor de edad **conforme al nombre registral** (art. 60).
 
-### Ámbito Laboral y Conciliación
+### Protección frente a la discriminación y régimen sancionador (Títulos III y IV)
 
-- **Igualdad en el empleo:**
-    - Los **Planes de Empleo Valenciano** incluirán medidas específicas de igualdad.
-    - Creación de la **Red Valenciana de Igualdad** para incorporar la perspectiva de género en las políticas públicas, asesorar y sensibilizar, y ayudar a las empresas a elaborar planes de igualdad.
-- **Planes de igualdad:**
-    - Documentos que definen estrategias para garantizar la igualdad de oportunidades.
-    - **Obligatorios** en empresas con predominancia de capital público.
-    - Deberán ser visados por la Generalitat para recibir ayudas. Si no se resuelven en **6 meses**, se entenderán **desestimados**.
-- **Conciliación de vida familiar y laboral:**
-    - Incentivos, flexibilización de horarios y permisos parentales.
-    - **Plan Integral de la Familia e Infancia:** Fomenta la corresponsabilidad en tareas familiares y domésticas.
-    - Impulso de la participación femenina en **puestos técnicos y diseño de tecnologías de la información**.
+El Título III regula la protección efectiva y la reparación: actuación administrativa contra la discriminación, **nulidad de los contratos y negocios jurídicos discriminatorios**, reglas sobre la **carga de la prueba**, derecho a la atención y asesoramiento jurídico, asistencia integral a las víctimas de violencia y atención a colectivos específicos (menores, personas con discapacidad, extranjeras, mayores, intersexuales, sinhogarismo).
 
-### Asistencia a Víctimas de Violencia de Género
+El Título IV establece el régimen de infracciones y sanciones:
 
-- Las Administraciones Públicas ofrecerán a las víctimas:
-    - **Asistencia jurídica y psicológica especializada y gratuita**.
-    - Acceso preferente a **viviendas sociales**.
-- En los medios públicos se fomentará la **pluralidad de roles** para la mujer.
+| Infracciones (art. 79) | Ejemplos | Multa (art. 80) | Sanciones accesorias |
+| --- | --- | --- | --- |
+| **Leves** | Expresiones vejatorias en la prestación de servicios; daños a bienes de personas o entidades LGTBI | Apercibimiento o **200-2.000 euros** | |
+| **Graves** | Actos o cláusulas discriminatorias en negocios jurídicos; no retirada de expresiones vejatorias en webs o redes por el prestador; obstrucción a la inspección | **2.001-10.000 euros** | Pérdida o prohibición de subvenciones y de contratar con la Administración hasta **1 año** |
+| **Muy graves** | Acoso discriminatorio; represalias; **terapias de conversión**; denegación de acceso a bienes y servicios (incluida la vivienda); victimización secundaria | **10.001-150.000 euros** | Las anteriores hasta **3 años**; cierre del establecimiento o cese de actividad hasta **3 años** |
 
-### Título III
+- **Prescripción (art. 81)**: las infracciones muy graves prescriben a los **3 años**, las graves a los **2 años** y las leves a los **9 meses**; las sanciones, a los **2 años**, **1 año** y **6 meses** respectivamente.
+- **Art. 82**: no se concederán subvenciones ni fondos públicos a ninguna persona física o jurídica que **cometa, incite o promocione LGTBIfobia**, incluida la promoción o realización de terapias de conversión.
 
-### Actuación de la Administración Pública
+## Fuentes {.unnumbered .unlisted}
 
-- **Erradicación de la violencia:**
-    - Campañas de sensibilización y programas para combatir la violencia de género, el acoso sexual y la explotación sexual.
-- **Formación y promoción:**
-    - Planes plurianuales de formación basados en los principios de mérito y capacidad.
-- **Contrataciones públicas:**
-    - En caso de empate, tendrá preferencia la empresa que presente un plan de igualdad, siempre que su oferta sea igual de ventajosa.
-- **Acoso sexual:**
-    - Incorporación obligatoria del **código de conducta** contra el acoso sexual.
-- **Lenguaje no sexista:** Obligatorio en los escritos administrativos.
-- **Datos estadísticos:** Desagregación por sexos para estudios e investigaciones.
-
-### Título IV
-
-### Organización Institucional
-
-- **Consejo Valenciano de las Mujeres:** Órgano de participación y asesoramiento para eliminar discriminaciones y promover la participación de las mujeres en la vida política, económica y social.
-- **Defensoría de la Igualdad:** Encargada de vigilar el cumplimiento de la ley, desempeñada por el **Síndic de Greuges**.
+- Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres: texto consolidado, última modificación 2 de agosto de 2024 (BOE-A-2007-6115; contrastado con el consolidado online del BOE, julio de 2026).
+- Ley 9/2003, de 2 de abril, de la Generalitat, para la igualdad entre mujeres y hombres: texto consolidado, última modificación 31 de mayo de 2025 (BOE-A-2003-9334; contrastado con el consolidado online del BOE, julio de 2026).
+- Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI: BOE de 1 de marzo de 2023, sin modificaciones posteriores (BOE-A-2023-5366; contrastado con el BOE online, julio de 2026). Desarrollo: Real Decreto 1026/2024, de 8 de octubre.
+- Ley Orgánica 5/1982, de 1 de julio, Estatuto de Autonomía de la Comunitat Valenciana (art. 49.1.26.ª), para la referencia competencial.
