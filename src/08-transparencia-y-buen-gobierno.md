@@ -1,348 +1,198 @@
 # Transparencia y buen gobierno
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+La transparencia pública se articula en España sobre dos pilares: la **Ley 19/2013, de 9 de diciembre**, de transparencia, acceso a la información pública y buen gobierno (norma básica estatal), y las leyes autonómicas que la desarrollan, en la Comunitat Valenciana la **Ley 1/2022, de 13 de abril**, de Transparencia y Buen Gobierno de la Comunitat Valenciana. Ambas se enmarcan en la corriente internacional del gobierno abierto, que concibe la transparencia, la participación y la rendición de cuentas como fundamentos de la calidad democrática.
 
+## Gobierno abierto: principios y participación ciudadana
 
-## Ley 19/2013 de Transparencia, Acceso a la Información Pública y Buen Gobierno
+El gobierno abierto es un modelo de relación entre los poderes públicos y la ciudadanía basado en un diálogo permanente y bidireccional. La Ley 1/2022 lo recoge como principio general (art. 2.10): las administraciones deben promover «un marco de relación y diálogo permanentes y bidireccionales con la ciudadanía que garantice la transparencia y la rendición de cuentas de la actividad pública y facilite la participación y colaboración de la ciudadanía en las políticas públicas y la gestión».
 
-### Objeto
+- **Pilares del gobierno abierto**: **transparencia** (publicidad activa y derecho de acceso), **participación** (intervención de la ciudadanía en el diseño de las políticas), **colaboración** (cooperación entre administraciones, sociedad civil y sector privado) y **rendición de cuentas** (responsabilidad por la acción de gobierno). El Portal de la Transparencia estatal los concreta en cuatro áreas: participación, transparencia, integridad y sensibilización social.
+- **Alianza para el Gobierno Abierto (Open Government Partnership, OGP)**: iniciativa multilateral fundada en **2011**, a la que España se incorporó ese mismo año. Los países miembros asumen compromisos mediante **planes de acción** periódicos evaluados de forma independiente.
+- **Planes de Gobierno Abierto de España**: se han sucedido cinco. El **IV Plan (2020-2024)** introdujo la cogobernanza con la sociedad civil; el **V Plan (2025-2029)**, aprobado por el Foro de Gobierno Abierto el **6 de octubre de 2025**, agrupa **218 iniciativas en 10 compromisos** (transparencia y rendición de cuentas, participación, integridad pública y sensibilización).
+- **Foro de Gobierno Abierto**: órgano de diálogo creado por la **Orden HFP/134/2018, de 15 de febrero**, que reúne de forma paritaria a las administraciones públicas (AGE, CCAA y EELL) y a la sociedad civil para impulsar los planes de acción.
+- **Participación ciudadana en la Comunitat Valenciana**: se regula en la **Ley 2/2015, de 2 de abril**, que tras la Ley 1/2022 pasa a denominarse **Ley de participación ciudadana de la Comunitat Valenciana** (la Ley 1/2022 derogó sus contenidos de transparencia y buen gobierno, y dejó vigente la parte participativa: instrumentos de consulta, audiencia y propuestas ciudadanas).
 
-- **Ampliar y reforzar la transparencia** de la actividad pública.
-- **Regular y garantizar el derecho de acceso a la información pública**.
-- Establecer las **obligaciones de buen gobierno** y las **consecuencias de su incumplimiento**.
+## Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno
 
-### Título I: Transparencia de la Actividad Pública
+**Texto consolidado a 9 de julio de 2022.**
 
-### Ámbito subjetivo
+### Características y estructura
 
-- **Aplicación total**:
-    - **Administraciones públicas**: AGE, administraciones autonómicas, locales, entidades gestoras de la Seguridad Social, mutuas, organismos autónomos, agencias estatales, universidades, y entidades de derecho público.
-    - **Organismos constitucionales**: Casa de SM el Rey, Congreso, Senado, TC, CGPJ, Banco de España, Consejo de Estado, Defensor del Pueblo, Tribunal de Cuentas, Consejo Económico y Social.
-    - **Sociedades mercantiles**: Con capital social público superior al **50%**.
-    - Fundaciones y asociaciones del sector público.
-- **Aplicación parcial**:
-    - Partidos políticos, sindicatos, organizaciones empresariales y entidades privadas que:
-        - Perciban ayudas públicas superiores a **100.000€**.
-        - Perciban ayudas que representen al menos el **40%** de sus ingresos anuales, con un mínimo de **5.000€**.
+- **Denominación oficial**: Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno (**BOE de 10 de diciembre de 2013**).
+- **Objeto (art. 1)**: «ampliar y reforzar la transparencia de la actividad pública, regular y garantizar el derecho de acceso a la información relativa a aquella actividad y establecer las obligaciones de buen gobierno que deben cumplir los responsables públicos así como las consecuencias derivadas de su incumplimiento».
+- **Triple alcance** (preámbulo): publicidad activa, derecho de acceso a la información pública y obligaciones de buen gobierno con su régimen sancionador.
+- **Estructura**: **40 artículos** en un título preliminar (art. 1) y **3 títulos** (I. Transparencia de la actividad pública; II. Buen gobierno; III. Consejo de Transparencia y Buen Gobierno), más 8 disposiciones adicionales y 9 finales.
+- **Entrada en vigor (DF 9.ª)**: el **Título II al día siguiente** de su publicación (11 de diciembre de 2013); el título preliminar y los Títulos I y III **al año** (10 de diciembre de 2014). Las CCAA y EELL dispusieron de un plazo máximo de **2 años** para adaptarse.
+- **Carácter básico (DF 8.ª)**: dictada al amparo de los **arts. 149.1.1.ª, 13.ª y 18.ª CE**, con excepciones (entre otras, el Portal de la Transparencia y el Título III).
+- **Modificaciones**: LO 9/2013 (art. 28), **LO 3/2018 (LOPDGDD)**, que añadió el art. 6 bis y modificó el art. 15.1, y Ley 14/2022 (art. 8.1.a).
 
-### Publicidad activa
+### Título I. Transparencia de la actividad pública
 
-- **Definición**: Publicar información **antes de ser solicitada**, garantizando transparencia.
-- **Obligaciones**:
-    - Publicación periódica y actualización de información relevante.
-    - Uso de **sedes electrónicas o páginas web**.
-    - **Formatos reutilizables, accesibles y gratuitos**, respetando el principio de **accesibilidad universal y diseño para todos**.
-    - **Infracción grave**: El incumplimiento reiterado de la publicidad activa.
-- **Tipos de información**:
-    - **Institucional, organizativa y de planificación**:
-        - Funciones desarrolladas, normativa aplicable, estructura organizativa (organigramas), planes anuales y plurianuales con objetivos concretos.
-    - **Información jurídica**:
-        - Directrices, instrucciones, acuerdos, circulares, proyectos de ley, decretos legislativos, reglamentos sometidos a dictámenes, memorias e informes.
-    - **Económica, presupuestaria y estadística**:
-        - Contratos, convenios, subvenciones, ayudas, presupuestos, cuentas anuales, retribuciones de altos cargos, estadísticas.
-- **Órganos relevantes**:
-    - **Consejo de Transparencia y Buen Gobierno**: Controla el cumplimiento de la Ley en la AGE. Incumplimientos reiterados son **infracciones graves**.
-    - **Portal de Transparencia**: Facilita el acceso a información pública, incluyendo datos solicitados con frecuencia. Depende del Ministerio de la Presidencia.
-- **Principios técnicos ("AIR")**: **Accesibilidad, Interoperabilidad y Reutilización**.
+Regula la publicidad activa y el derecho de acceso. Su ámbito subjetivo es el más amplio de la ley.
 
-### Derecho de acceso a la información pública
+- **Ámbito subjetivo (art. 2)**:
+    - Todas las **Administraciones públicas** (AGE, CCAA, Ceuta y Melilla y entidades locales), las entidades gestoras y servicios comunes de la **Seguridad Social** y las mutuas colaboradoras, los organismos autónomos, agencias estatales, entidades públicas empresariales y entidades de derecho público (incluidas las **universidades públicas**).
+    - Las **corporaciones de derecho público**, en lo relativo a sus actividades sujetas a derecho administrativo.
+    - Los **órganos constitucionales** (Casa de Su Majestad el Rey, Congreso, Senado, Tribunal Constitucional, CGPJ, Banco de España, Consejo de Estado, Defensor del Pueblo, Tribunal de Cuentas, Consejo Económico y Social) y las instituciones autonómicas análogas, **en relación con sus actividades sujetas a derecho administrativo**.
+    - Las **sociedades mercantiles** con participación pública directa o indirecta **superior al 50 %**, las **fundaciones del sector público** y las asociaciones constituidas por administraciones y entidades públicas.
+- **Otros sujetos obligados (art. 3)**, solo a publicidad activa:
+    - Los **partidos políticos, organizaciones sindicales y organizaciones empresariales** (en todo caso, sin condición alguna).
+    - Las **entidades privadas** que perciban en un año ayudas o subvenciones públicas **superiores a 100.000 euros**, o cuando al menos el **40 %** de sus ingresos anuales sean ayudas o subvenciones públicas, siempre que alcancen como mínimo **5.000 euros**.
+- **Obligación de suministrar información (art. 4)**: las personas que **presten servicios públicos o ejerzan potestades administrativas** (y los adjudicatarios de contratos públicos) deben suministrar a la Administración a la que estén vinculadas, previo requerimiento, la información necesaria para que esta cumpla la ley.
 
-- **Definición**: Derecho de toda persona a acceder a documentos en poder de los sujetos obligados, elaborados o adquiridos en el ejercicio de sus funciones.
-- **Límites al acceso**:
-    - **Justificados y proporcionados**:
-        - Defensa y seguridad.
-        - Economía.
-        - Confidencialidad.
-        - Protección del medio ambiente.
-    - **Protección de datos personales**: Aplicable salvo disociación de datos.
-    - **Datos especialmente protegidos**:
-        - **Ideología, religión, afiliación sindical**: Requieren consentimiento expreso y escrito, salvo datos manifiestamente públicos.
-        - **Origen racial, salud, vida sexual**: Requieren consentimiento expreso, salvo norma con rango de ley.
-    - **Acceso parcial**: Cuando los límites solo afectan a una parte.
+Publicidad activa (Capítulo II, arts. 5-11): publicar de forma periódica y actualizada, sin solicitud previa, la información relevante para garantizar la transparencia.
 
-### Procedimiento de acceso
+- **Principios generales (art. 5)**: publicación en sedes electrónicas o páginas web, de manera clara, estructurada y entendible, preferiblemente en **formatos reutilizables**; información comprensible, de acceso fácil y **gratuito**, y accesible conforme al principio de **accesibilidad universal y diseño para todos**. Se aplican los límites de los arts. 14 y 15 (con disociación previa de datos especialmente protegidos).
+- **Información institucional, organizativa y de planificación (art. 6)**: funciones, normativa aplicable, estructura organizativa (organigrama con responsables, perfil y trayectoria) y planes y programas anuales y plurianuales con objetivos, indicadores y grado de cumplimiento.
+- **Registro de actividades de tratamiento (art. 6 bis)**: publicación del inventario de actividades de tratamiento del art. 31 LOPDGDD (añadido por la LO 3/2018).
+- **Información de relevancia jurídica (art. 7)**: directrices, instrucciones, acuerdos, circulares y respuestas a consultas con efectos jurídicos; anteproyectos de ley y proyectos de decretos legislativos y reglamentos; memorias e informes de los expedientes normativos; documentos sometidos a información pública.
+- **Información económica, presupuestaria y estadística (art. 8)**: contratos (los menores pueden publicarse trimestralmente), convenios y encomiendas, subvenciones, presupuestos y su ejecución, cuentas anuales e informes de auditoría y fiscalización, **retribuciones anuales de los altos cargos**, resoluciones de compatibilidad, declaraciones de bienes de los representantes locales, estadísticas de calidad de los servicios y relación de bienes inmuebles.
+- **Control (art. 9)**: corresponde al **Consejo de Transparencia y Buen Gobierno** (en la AGE), que puede dictar resoluciones de cese del incumplimiento. El **incumplimiento reiterado** de las obligaciones de publicidad activa es **infracción grave** a efectos disciplinarios.
+- **Portal de la Transparencia (art. 10)**: desarrollado por la AGE y dependiente del **Ministerio de la Presidencia**; incluye la información cuyo acceso se solicita con mayor frecuencia.
+- **Principios técnicos (art. 11)**: **accesibilidad** (información estructurada y localizable), **interoperabilidad** (conforme al ENI) y **reutilización** (formatos reutilizables conforme a la Ley 37/2007).
 
-- **Solicitud**:
-    - No requiere motivación.
-    - **Contenidos obligatorios:** Identidad del solicitante, información requerida, dirección de contacto y modalidad de acceso.
-- **Causas de inadmisión**:
-    - Información en curso de elaboración.
-    - Documentos auxiliares o sujetos a reelaboración.
-    - Información desconocida por el órgano.
-    - Solicitudes abusivas.
-- **Tramitación**:
-    - **Subsanación**: **10 días**.
-    - **Alegación de terceros:** **15 días**.
-    - **Resolución**: Máximo **1 mes**, prorrogable.
-    - **Motivación requerida**: Resoluciones denegatorias, accesos parciales o diferentes a la modalidad solicitada, accesos tras oposición de terceros.
-- **Formalización**:
-    - Electrónica preferentemente, **gratuita**.
-    - Si no es posible en el momento, debe formalizarse en **10 días**.
+Derecho de acceso a la información pública (Capítulo III, arts. 12-24):
 
-### Régimen de impugnaciones
+- **Titularidad y concepto (arts. 12-13)**: **todas las personas** tienen derecho a acceder a la información pública, en desarrollo del **art. 105.b) CE**. Es información pública «los contenidos o documentos, cualquiera que sea su formato o soporte», que obren en poder de los sujetos del título y «que hayan sido elaborados o adquiridos en el ejercicio de sus funciones».
+- **Límites (art. 14)**: el acceso podrá limitarse cuando suponga un perjuicio para (enumeración cerrada de **12 límites**):
+    - la **seguridad nacional**; la **defensa**; las **relaciones exteriores**; la **seguridad pública**;
+    - la **prevención, investigación y sanción de los ilícitos** penales, administrativos o disciplinarios; la **igualdad de las partes en los procesos judiciales y la tutela judicial efectiva**;
+    - las **funciones administrativas de vigilancia, inspección y control**; los **intereses económicos y comerciales**; la **política económica y monetaria**;
+    - el **secreto profesional y la propiedad intelectual e industrial**; la **garantía de la confidencialidad o el secreto requerido en procesos de toma de decisión**; y la **protección del medio ambiente**.
+    - La aplicación debe ser **justificada y proporcionada** a su objeto y finalidad, atendiendo al caso concreto y a la posible concurrencia de un interés público o privado superior.
+- **Protección de datos personales (art. 15)**:
+    - Datos que revelen **ideología, afiliación sindical, religión o creencias**: solo con **consentimiento expreso y por escrito**, salvo que el afectado los hubiese hecho manifiestamente públicos.
+    - Datos de **origen racial, salud, vida sexual, genéticos o biométricos**, o relativos a infracciones penales o administrativas sin amonestación pública: **consentimiento expreso** o amparo en **norma con rango de ley**.
+    - Datos **meramente identificativos** relacionados con la organización, funcionamiento o actividad pública del órgano: se concede el acceso con carácter general.
+    - En el resto de casos, **ponderación razonada** entre el interés público en la divulgación y los derechos de los afectados; si los datos se han **disociado** previamente, no se aplica este artículo.
+- **Acceso parcial (art. 16)**: si un límite no afecta a toda la información, se concede el acceso omitiendo la parte afectada, salvo que resulte una información distorsionada o sin sentido, indicándolo al solicitante.
+- **Solicitud (art. 17)**: dirigida al titular del órgano que posea la información; debe constar la **identidad** del solicitante, la **información** solicitada, una **dirección de contacto** (preferentemente electrónica) y, en su caso, la **modalidad de acceso** preferida. **No es obligatorio motivar** la solicitud (los motivos pueden exponerse y ser tenidos en cuenta, pero su ausencia no es causa de rechazo).
+- **Causas de inadmisión (art. 18)**, mediante resolución motivada:
+    - información **en curso de elaboración** o de publicación general;
+    - información **auxiliar o de apoyo** (notas, borradores, opiniones, resúmenes, informes internos);
+    - información que exija una **acción previa de reelaboración**;
+    - solicitudes dirigidas a un órgano que **no posee la información** y desconoce el competente (debe indicar en la resolución el órgano que considere competente);
+    - solicitudes **manifiestamente repetitivas o abusivas**.
+- **Tramitación (art. 19)**: si la solicitud no identifica bien la información, **10 días** para concretarla (con suspensión del plazo; en su defecto, desistimiento); si afecta a derechos de terceros, **15 días** de alegaciones (con suspensión del plazo para resolver).
+- **Resolución (art. 20)**: plazo máximo de **1 mes** desde la recepción por el órgano competente, **ampliable por otro mes** si el volumen o complejidad lo exigen, previa notificación. Deben **motivarse** las resoluciones denegatorias, las de acceso parcial o por modalidad distinta y las que concedan el acceso pese a la oposición de un tercero. El silencio es **desestimatorio**. El **incumplimiento reiterado** de la obligación de resolver en plazo es **infracción grave**.
+- **Unidades de información (art. 21)**: en la AGE, unidades especializadas que reciben y tramitan las solicitudes, llevan su registro y mantienen un mapa de contenidos.
+- **Formalización (art. 22)**: acceso preferentemente **electrónico** y **gratuito** (la expedición de copias o el cambio de formato puede devengar exacciones); si no puede darse en el momento de la resolución, se otorgará en un plazo máximo de **10 días**.
+- **Régimen de impugnaciones (arts. 23-24)**:
+    - **Reclamación ante el Consejo de Transparencia y Buen Gobierno**: **potestativa** y previa a la vía contencioso-administrativa, **sustitutiva de los recursos administrativos**. Plazo de interposición: **1 mes**; plazo de resolución: **3 meses**, con silencio **desestimatorio**. Las resoluciones se publican y se comunican al **Defensor del Pueblo**.
+    - Contra las resoluciones de los órganos constitucionales del art. 2.1.f) solo cabe **recurso contencioso-administrativo**.
+    - **DA 4.ª**: en las CCAA y sus EELL, la reclamación se resuelve por el **órgano independiente autonómico** (o por el CTBG previo convenio).
 
-- **Recurso ante el Consejo de Transparencia y Buen Gobierno**:
-    - Sustituye a los recursos administrativos.
-    - **Plazos**:
-        - Presentación: **1 mes**.
-        - Resolución: **3 meses**. Silencio administrativo: Desestimación.
-    - No aplicable frente a órganos constitucionales.
-    - Resoluciones: Se comunicarán al **Defensor del Pueblo**
-- **Recurso contencioso-administrativo**: Procede tras agotar la vía administrativa.
+### Título II. Buen gobierno
 
-### Título II: Buen Gobierno
+Aplicable a los **miembros del Gobierno, secretarios de Estado y demás altos cargos** de la AGE y de las entidades del sector público estatal, y a los altos cargos o asimilados autonómicos y locales (art. 25). Fue el primer título en entrar en vigor.
 
-### Ámbito subjetivo
+- **Principios de buen gobierno (art. 26)**: actuación conforme a la Constitución y al ordenamiento jurídico, promoviendo los derechos fundamentales y las libertades públicas.
+    - **Principios generales**: transparencia en la gestión (con eficacia, economía y eficiencia y satisfacción del interés general), dedicación al servicio público, **imparcialidad**, trato igual y sin discriminaciones, diligencia debida, conducta digna y asunción de la responsabilidad de las propias decisiones.
+    - **Principios de actuación**: plena dedicación y respeto a la normativa de **incompatibilidades y conflictos de intereses**, reserva debida, denuncia de actuaciones irregulares, ejercicio de los poderes solo para su finalidad, abstención en caso de conflicto, **no aceptación de regalos** que superen los usos habituales o de cortesía (los de mayor relevancia se incorporan al patrimonio público), gestión adecuada de los recursos públicos y no obtener ventajas personales de la posición.
+- **Infracciones (arts. 27-29)**, en tres bloques:
+    - **En materia de conflicto de intereses (art. 27)**: se sancionan conforme a la normativa de conflictos de intereses (en la AGE, la Ley 3/2015).
+    - **En materia de gestión económico-presupuestaria (art. 28)**: todas **muy graves**; entre otras, compromisos de gastos y ordenación de pagos **sin crédito suficiente**, omisión de la intervención previa, ausencia de justificación de fondos, incumplimiento de destinar los ingresos extra a **reducir deuda pública**, operaciones de crédito sin autorización, no presentación o falta de puesta en marcha del **plan económico-financiero o de reequilibrio** y el incumplimiento de la obligación de **rendir cuentas**.
+    - **Disciplinarias (art. 29)**:
+        - **Muy graves**: incumplir la Constitución o los Estatutos de Autonomía en el ejercicio de las funciones, discriminación y acoso, acuerdos manifiestamente ilegales con perjuicio grave, uso indebido de información, negligencia en la custodia de **secretos oficiales**, notorio incumplimiento de las funciones, violación de la imparcialidad en procesos electorales, prevalencia del cargo para beneficio indebido, obstaculización de libertades públicas y derechos sindicales, actos contra el derecho de huelga, **acoso laboral**, y la comisión de una grave tras **dos graves sancionadas en el año anterior**.
+        - **Graves**: abuso de autoridad, intervención concurriendo causa de **abstención**, informes o acuerdos ilegales sin perjuicio grave, falta de sigilo, incumplimiento de plazos en materia de incompatibilidades, y una leve tras **dos leves sancionadas en el año anterior**.
+        - **Leves**: incorrección con superiores, compañeros o subordinados; descuido o negligencia en las funciones.
+- **Sanciones (art. 30)**: leves, **amonestación**; graves, **declaración del incumplimiento y publicación en el BOE** y no percepción de la indemnización por cese; muy graves, además de las anteriores, **destitución del cargo** e **inhabilitación de entre 5 y 10 años** para ocupar alto cargo. Si hubiera indicios de delito, se comunica al **Fiscal General del Estado** y se suspende el procedimiento. Las infracciones del art. 28 conllevan además restituir las cantidades e **indemnizar a la Hacienda Pública**.
+- **Órgano competente (art. 31)**: el procedimiento se inicia siempre **de oficio** (propia iniciativa, orden superior, petición razonada o denuncia). Ordena la incoación e impone las sanciones el **Consejo de Ministros** cuando el alto cargo sea miembro del Gobierno o secretario de Estado, y el **Ministro de Hacienda y Administraciones Públicas** para el resto de altos cargos de la AGE (instruye la **Oficina de Conflictos de Intereses**); en CCAA y EELL, sus propios órganos.
+- **Prescripción (art. 32)**: infracciones y sanciones muy graves, **5 años**; graves, **3 años**; leves, **1 año**.
 
-- Se aplica a los **miembros del Gobierno**, Secretarios de Estado, altos cargos de la AGE, entidades del sector público estatal (de derecho público y privado) y otras entidades análogas en las CCAA o EELL.
-- Se consideran **“Altos Cargos”** a aquellos con mayor responsabilidad administrativa o política en estas instituciones.
+### Título III. Consejo de Transparencia y Buen Gobierno
 
-### Principios de buen gobierno
-
-- **Principios generales ("DICTES")**:
-    - **D**edicación al servicio público.
-    - **I**mparcialidad en la toma de decisiones.
-    - **C**onducta digna y ética.
-    - **T**ransparencia en la gestión de asuntos públicos, garantizando la eficacia, economía y eficiencia.
-    - **E**ficiencia y orientación al interés general.
-    - **S**atisfacción del interés colectivo, evitando favoritismos y discriminaciones.
-- **Principios de actuación**:
-    - Cumplimiento pleno de la normativa vigente.
-    - **Denuncia de actividades irregulares**.
-    - **Confidencialidad** en asuntos sensibles o reservados.
-    - **Plena dedicación** al cargo y abstención en caso de conflicto de intereses.
-    - Prohibición de aceptar **regalos o favores** que puedan comprometer la imparcialidad.
-
-### Infracciones y sanciones en materia de buen gobierno
-
-- **Infracciones y sanciones en materia de conflicto de intereses:** Según normativa de la AGE y propia de cada administración.
-- **Infracciones en materia de gestión económico-presupuestaria**:
-    - **Muy graves**:
-        - Uso indebido de fondos públicos.
-        - Compromiso de gastos sin crédito suficiente.
-        - Incumplimiento de destinar ingresos por encima de lo previsto a la reducción de deuda.
-        - No presentar planes económicos-financieros o de reequilibrio.
-        - Desviación de fondos.
-        - No rendir cuentas.
-- **Infracciones disciplinarias**:
-    - **Muy graves**:
-        - Incumplir la Constitución o el Estatuto de Autonomía.
-        - Discriminación por cualquier causa.
-        - Revelar secretos oficiales.
-        - Actuar con parcialidad manifiesta.
-        - Beneficio indebido derivado del cargo.
-        - Acoso laboral.
-        - Reiteración de infracciones graves en **1 año**.
-    - **Graves**:
-        - Abuso de autoridad.
-        - Participación indebida en procedimientos donde deba abstenerse.
-        - Falta de confidencialidad.
-        - Incumplimiento reiterado de plazos legales.
-        - Reiteración de infracciones leves en **1 año**.
-    - **Leves**:
-        - Incorrección, descuido o negligencia en las funciones.
-
-### Sanciones aplicables
-
-- **Por infracciones leves**:
-    - Amonestación.
-- **Por infracciones graves**:
-    - Declaración de incumplimiento.
-    - Publicación en el **BOE**.
-    - Supresión de indemnizaciones (en caso de cese).
-- **Por infracciones muy graves**:
-    - Destitución del cargo.
-    - Inhabilitación para ocupar altos cargos durante **5-10 años**.
-
-### Procedimiento sancionador
-
-- **Inicio del procedimiento**:
-    - De oficio: Por iniciativa propia, orden superior, petición razonada o denuncia.
-- **Órganos competentes**:
-    - **Consejo de Ministros:** Para miembros del Gobierno y Secretarios de Estado.
-    - **Ministro de Hacienda y Administraciones Públicas:** Para altos cargos de la AGE.
-    - **Órganos competentes en CCAA o EELL** para altos cargos de su ámbito.
-- **Comunicación al Fiscal General del Estado**:
-    - Si la infracción pudiera constituir delito, la Administración se abstendrá de continuar el procedimiento sancionador y lo remitirá al Ministerio Fiscal.
-- **Recursos**: Contencioso-Administrativo
-- **Plazos de prescripción**: (Diferente al TREBEP)
-    - **Infracciones:**
-        - **Muy graves**: 5 años.
-        - **Graves**: 3 años.
-        - **Leves**: 1 año.
-    - **Sanciones:**
-        - **Muy graves**: 5 años.
-        - **Graves**: 3 años.
-        - **Leves**: 1 año.
-
-### Título III: Consejo de Transparencia y Buen Gobierno
-
-- **Definición**: Organismo público con personalidad jurídica propia, plena capacidad de obrar, autonomía y plena independencia.
-    - Está adscrito al **Ministerio de Hacienda y Administraciones Públicas**.
-
-### Fines del Consejo
-
-- **Promover la transparencia** de la actividad pública.
-- **Velar por el cumplimiento** de las obligaciones de publicidad activa.
-- **Salvaguardar el ejercicio del derecho de acceso** a la información pública.
-- **Garantizar el cumplimiento de las disposiciones de buen gobierno**.
-
-### Composición
-
-- **Presidente del Consejo**:
-    - **Nombramiento**: Por un período de **5 años no renovable**, entre personas de reconocido prestigio en materias relacionadas con la Ley.
-    - **Ratificación**: Por mayoría absoluta del Congreso de los Diputados.
-    - **Funciones**:
-        - Establecer **criterios de interpretación uniforme** de la Ley.
-        - Velar por el cumplimiento de las **obligaciones de publicidad activa**.
-        - Resolver las **reclamaciones** presentadas en el ámbito de la transparencia.
-        - Responder **consultas** de las administraciones.
-        - Promover el **inicio de procedimientos sancionadores** en caso de infracciones.
-        - Aprobar el **anteproyecto de presupuesto** del Consejo.
-- **Comisión de Transparencia y Buen Gobierno**:
-    - **Composición**:
-        - **Presidente del Consejo.**
-        - **1 Diputado** y **1 Senador**.
-        - **5 representantes**: Tribunal de Cuentas, Defensor del Pueblo, Agencia Española de Protección de Datos (AEPD), Secretaría de Estado de Administraciones Públicas y la Autoridad Independiente de Responsabilidad Fiscal (AIReF).
-    - **Funciones**:
-        - Adoptar **recomendaciones** para mejorar la transparencia y el buen gobierno.
-        - Asesorar en la aplicación de la Ley.
-        - Evaluar el grado de aplicación de la Ley mediante una **memoria anual**.
-        - Promover actividades de **formación y sensibilización**.
-        - Elaborar **directrices, normas y recomendaciones** relacionadas con la transparencia y el buen gobierno.
-        - Colaborar con otros órganos y entidades en materia de transparencia.
+- **Naturaleza (art. 33)**: organismo público con **personalidad jurídica propia y plena capacidad de obrar**, que actúa con **autonomía y plena independencia**. La ley lo adscribe al Ministerio de Hacienda y Administraciones Públicas; en la actualidad se relaciona con la AGE a través del **Ministerio para la Transformación Digital y de la Función Pública** (su Estatuto vigente es el **Real Decreto 615/2024, de 2 de julio**, que derogó el RD 919/2014).
+- **Fines (art. 34)**: **promover la transparencia** de la actividad pública, **velar por el cumplimiento** de las obligaciones de publicidad, **salvaguardar el ejercicio del derecho de acceso** y **garantizar la observancia** de las disposiciones de buen gobierno.
+- **Órganos (art. 35)**: la **Comisión de Transparencia y Buen Gobierno** y el **Presidente** del Consejo (que lo es también de la Comisión).
+- **Comisión (art. 36)**: compuesta por el Presidente, **un Diputado, un Senador** y un representante de cada uno de estos órganos: **Tribunal de Cuentas, Defensor del Pueblo, AEPD, Secretaría de Estado de Administraciones Públicas y AIReF**. Sus miembros no tienen dedicación exclusiva. Al menos **una vez al año** convoca a los órganos autonómicos análogos.
+- **Presidente (art. 37)**: nombrado por **Real Decreto** por un período **no renovable de 5 años**, entre personas de reconocido prestigio y competencia profesional, previa comparecencia ante la comisión correspondiente del **Congreso**, que debe **refrendar el nombramiento por mayoría absoluta** en el plazo de un mes.
+- **Funciones (art. 38)**:
+    - **Del Consejo**: adoptar recomendaciones, asesorar en materia de transparencia, acceso y buen gobierno, **informar preceptivamente** los proyectos normativos estatales que desarrollen la ley, **evaluar su grado de aplicación** (con memoria anual ante las **Cortes Generales**, art. 40), promover buenas prácticas y actividades de formación, y colaborar con órganos análogos.
+    - **Del Presidente**: adoptar **criterios de interpretación uniforme**, velar por el cumplimiento de la **publicidad activa**, conocer de las **reclamaciones** del art. 24, responder **consultas** de los órganos que tramitan solicitudes, **instar el inicio de procedimientos sancionadores** del Título II y aprobar el anteproyecto de presupuesto.
 
 ## Ley 1/2022, de Transparencia y Buen Gobierno de la Comunitat Valenciana
 
-### Título Preliminar
+**Texto consolidado a 31 de mayo de 2025.**
 
-### Objeto
+### Características y estructura
 
-- Regular y garantizar la **transparencia de la actividad pública**.
-- Promover la **reutilización de la información**.
-- Regular el **Consejo Valenciano de Transparencia**.
-- Establecer principios básicos de **integridad y buen gobierno** en las administraciones públicas valencianas mediante códigos éticos y marcos de integridad pública.
-- Impulsar la **rendición de cuentas** a través de la planificación y evaluación de normativas y políticas públicas.
-- Regular el régimen de garantías, responsabilidades y obligaciones.
+- **Denominación oficial**: Ley 1/2022, de 13 de abril, de Transparencia y Buen Gobierno de la Comunitat Valenciana (**DOGV de 22 de abril de 2022**; BOE de 19 de mayo de 2022).
+- **Sustituye a la Ley 2/2015**, de transparencia, buen gobierno y participación ciudadana, de la que deroga los contenidos de transparencia y buen gobierno; la Ley 2/2015 pasa a denominarse **Ley de participación ciudadana de la Comunitat Valenciana** (DF 1.ª).
+- **Objeto (art. 1)**: regular y garantizar «la transparencia de la actividad pública en su doble vertiente de publicidad activa y de derecho de acceso a la información pública», promover la reutilización de la información y regular el **Consejo Valenciano de Transparencia**; establecer los principios de **integridad y buen gobierno** mediante códigos éticos y marcos de integridad pública; impulsar la **rendición de cuentas** a través de la planificación y evaluación de la normativa y las políticas públicas; y regular el **régimen de garantías y responsabilidades** por incumplimiento.
+- **Estructura**: **76 artículos** en un título preliminar y **5 títulos** (I. Transparencia de la actividad pública; II. Consejo Valenciano de Transparencia; III. Buen gobierno e integridad pública; IV. Planificación y evaluación; V. Régimen sancionador), 8 disposiciones adicionales, 3 transitorias, 1 derogatoria y 3 finales.
+- **Entrada en vigor (DF 3.ª)**: con carácter general, a los **20 días** de su publicación en el DOGV (**12 de mayo de 2022**); el capítulo de **publicidad activa, a los 12 meses**; los arts. 39 y 49, al finalizar el mandato de los miembros del anterior Consejo de Transparencia.
+- **Modificaciones**: Ley 8/2022 (acompañamiento 2023), **Ley 4/2024** (arts. 15, 16, 46, 49, 51 y 57; suprime el art. 58), **Decreto-ley 7/2024** convalidado como **Ley 6/2024** (arts. 16, 21, 33, 35, 40, 42, 44 y 45; suprime el art. 61) y **Ley 5/2025** (acompañamiento 2025: arts. 8, 14-17, 20, 23, 34, 40, 45 y 52).
 
-### Principios
+### Título preliminar. Disposiciones generales
 
-- **Transparencia máxima**
-- **Transparencia desde el diseño**
-- **Publicidad**
-- Comprensibilidad y claridad
-- **Veracidad**
-- **Reutilización de la información**
-- Accesibilidad tecnológica universal
-- No discriminación
-- **Orientación a la ciudadanía** y continuidad en el tiempo
-- Gobierno abierto
-- Modernización y neutralidad tecnológica
-- **Responsabilidad y rendición de cuentas**
-- Integridad
-- Buen gobierno
-- **Planificación y evaluación** de políticas y servicios
-- Buena regulación
-- Protección de datos
+- **Principios generales (art. 2)**, 17 en total: **transparencia máxima**, **transparencia desde el diseño**, publicidad, comprensibilidad y claridad, **veracidad**, **reutilización de la información**, accesibilidad tecnológica universal, no discriminación, orientación a la ciudadanía y continuidad en el tiempo, **gobierno abierto**, modernización y neutralidad tecnológica, **responsabilidad y rendición de cuentas**, integridad, **buen gobierno**, planificación y evaluación de políticas y servicios, **buena regulación** (necesidad, eficacia, proporcionalidad, seguridad jurídica, transparencia y eficiencia) y protección de datos.
+- **Ámbito subjetivo (art. 3)**:
+    - La **administración de la Generalitat** y su **sector público instrumental** (en los términos del art. 2.3 de la Ley 1/2015, de hacienda pública).
+    - **Les Corts** y las **instituciones estatutarias** (Síndic de Greuges, Sindicatura de Comptes, Consell Valencià de Cultura, Acadèmia Valenciana de la Llengua, Comitè Econòmic i Social, Consell Jurídic Consultiu) y la **Agencia de Prevención y Lucha contra el Fraude y la Corrupción**, en relación con su actividad administrativa y presupuestaria.
+    - Las **entidades locales** valencianas y su sector público, las **universidades públicas** valencianas y sus entidades, las **corporaciones de derecho público y federaciones deportivas** (en sus actividades sujetas a derecho administrativo) y las asociaciones constituidas por administraciones.
+- **Otros sujetos obligados (art. 4)**: cumplen la publicidad activa de la Ley 19/2013 los **partidos políticos, sindicatos y asociaciones empresariales** que actúen en la Comunitat, y las **entidades privadas** que perciban en un año ayudas de los sujetos del art. 3 **superiores a 50.000 euros** (umbral más exigente que el estatal de 100.000) o cuando representen al menos el **40 %** de sus ingresos anuales (mínimo **5.000 euros**); en este caso deben publicar la información desde el año siguiente y mantenerla **4 años**.
+- **Obligación de suministrar información (art. 5)**: alcanza a prestadores de servicios públicos, quienes ejerzan funciones administrativas delegadas y servicios de interés económico general, adjudicatarios y beneficiarios de subvenciones. Su incumplimiento permite **multas coercitivas de 100 a 1.000 euros**, reiterables cada **15 días**, con tope del **5 %** del importe del contrato o subvención (o **3.000 euros** si no hay cuantía).
+- **Alto cargo (art. 6)**: integrantes del **Consell**; titulares de **secretarías autonómicas, subsecretarías y direcciones generales** y órganos directivos nombrados por el Consell; cargos directivos de máximo nivel del sector público instrumental; quienes tengan **contrato laboral especial de alta dirección**; en la administración local, los miembros de las corporaciones y sus órganos superiores y directivos.
 
-### Ámbito subjetivo
+### Título I. Transparencia de la actividad pública
 
-- **Aplicación total**:
-    - Administración de la Generalitat
-    - Sector público instrumental de la Generalitat
-    - Instituciones estatutarias (Corts Valencianes, Síndic de Greuges, Sindicatura de Comptes, Consell Valencià de Cultura, Acadèmia Valenciana de la Llengua, Comité Econòmic i Social, Consell Jurídic Consultiu, etc.).
-- **Aplicación parcial**:
-    - Partidos políticos, organizaciones sindicales y asociaciones empresariales.
-    - Entidades privadas que reciben ayudas o subvenciones públicas.
+- **Publicidad activa (arts. 10-13)**: los sujetos del art. 3 publican de forma proactiva la información relevante (la administración local se rige por la Ley 19/2013 y sus ordenanzas). Los criterios de publicación (art. 11) exigen información **veraz, objetiva y actualizada**, comprensible y accesible, con indicación del órgano que la genera y fecha de actualización, acceso a **series históricas**, anonimización de datos de categorías especiales y datos **desagregados por sexo** cuando sea relevante.
+- **Portal de Transparencia de la Generalitat (art. 12)**: canal de publicación de la administración de la Generalitat y sus organismos autónomos, adscrito al centro directivo competente en materia de transparencia; el resto de entidades publican en sus sedes o webs.
+- **Control (art. 13)**: corresponde al **Consejo Valenciano de Transparencia**, que puede requerir la subsanación de incumplimientos (plazo no inferior a **20 días**) e instar el procedimiento sancionador.
+- **Información sujeta a publicidad (arts. 14-26)**: institucional, organizativa y de planificación; sobre **altos cargos y asimilados** (agendas, retribuciones, obsequios); de relevancia jurídica; presupuestaria, financiera y contable; **endeudamiento**; patrimonial; **contratación pública**; convenios y encomiendas; **publicidad y promoción institucional**; subvenciones; ordenación del territorio, urbanismo y medio ambiente; estudios, estadísticas y cartografía; y la información solicitada con frecuencia por la ciudadanía.
+- **Derecho de acceso (arts. 27-37)**:
+    - **Titularidad (art. 27)**: cualquier ciudadano, a título individual o en representación de una organización, **sin necesidad de motivar la solicitud ni invocar la ley**.
+    - **Límites (art. 28)**: los del **art. 14 de la Ley 19/2013**; su aplicación es proporcional y de **interpretación restrictiva** en beneficio del acceso; son **temporales** (desaparecida la causa, puede reiterarse la solicitud) y su aplicación exige **motivación con indicación explícita del límite**.
+    - **Solicitud (art. 31)**: preferentemente **electrónica** a través del portal de transparencia o la sede; en la vía telemática la identificación **no exige certificado electrónico**. Las causas de inadmisión son las del **art. 18 de la Ley 19/2013** (art. 32).
+    - **Tramitación (art. 33)**: remisión al órgano competente en **10 días hábiles**; subsanación en **10 días hábiles** (suspende el plazo); alegaciones de terceros afectados en **15 días hábiles** (suspende el plazo); si la información no existe debiendo existir, se informa de la causa.
+    - **Resolución (art. 34)**: plazo máximo de **1 mes** desde la entrada en el registro, **prorrogable un mes más** por volumen o complejidad, mediante resolución motivada. Silencio **desestimatorio**. La resolución **pone fin a la vía administrativa** (recurso contencioso directo o reclamación potestativa ante el CVT).
+    - **Órganos competentes (art. 35)**: en la Generalitat, los titulares de los **órganos superiores y directivos** responsables funcionales de la información.
+    - **Formalización (art. 36)**: régimen del art. 22 de la Ley 19/2013; gratuita por medios electrónicos o comparecencia.
+- **Régimen de impugnaciones (arts. 38-39)**:
+    - **Reclamación ante el Consejo Valenciano de Transparencia (art. 38)**: potestativa, previa a la vía contenciosa y **sustitutiva de los recursos administrativos** (art. 112.2 de la Ley 39/2015). Plazo de interposición: **1 mes**; resolución y notificación: **3 meses**, con silencio desestimatorio. La resolución es **ejecutiva**: si se incumple, el CVT puede imponer **multas coercitivas** (cuantías del art. 5.3). Contra las resoluciones de las instituciones estatutarias solo cabe contencioso-administrativo.
+    - **Procedimiento de mediación (art. 39)**: alternativa voluntaria que puede pedir cualquiera de las partes al presentar la reclamación (o en los **5 días** siguientes a conocer su interposición); suspende el procedimiento ordinario y debe sustanciarse en el plazo máximo de **1 mes**. El acuerdo, ratificado por el CVT, pone fin al procedimiento.
+- **Datos abiertos y reutilización (arts. 40-43)**: apertura efectiva de los datos públicos en **formato digital, accesible vía web, estandarizado y abierto**, desde el diseño y por defecto (los desarrollos informáticos de la Generalitat deben prever la extracción en formatos reutilizables); publicación con **metadatos** en formatos legibles por máquina; priorización de los **datos de alto valor**; georreferenciación e integración en la **Infraestructura Valenciana de Datos Espaciales**; catálogo de datos abiertos accesible desde un punto único.
+- **Organización administrativa (arts. 44-46)**: **Comisión Interdepartamental de Gobierno Abierto** (coordinación general, asistida por una comisión técnica); **unidades de transparencia y participación** en cada conselleria (dependientes de la subsecretaría); y **plan estratégico de transparencia** aprobado por el Consell, con evaluación anual.
 
-### Definición de alto cargo
+### Título II. Consejo Valenciano de Transparencia
 
-- Incluye a los integrantes del Consell, titulares de secretarías autonómicas, subsecretarías, direcciones generales, contratos laborales de alta dirección, y personas con consideración de alto cargo.
+- **Naturaleza (art. 47)**: **autoridad de garantía en materia de transparencia** en la Comunitat Valenciana; su finalidad es garantizar el derecho de acceso y velar por la publicidad activa. Actúa con **autonomía orgánica y plena independencia funcional**, sin sometimiento a instrucciones jerárquicas. Cuenta con una **oficina técnica** de apoyo (rango mínimo de servicio, personal adscrito a la conselleria competente en transparencia) y un **portal web propio**.
+- **Funciones (art. 48)**: resolver las **reclamaciones** en materia de acceso; ejercer la **mediación**; hacer el seguimiento de la ejecución de sus resoluciones; **velar por la publicidad activa** y requerir la subsanación de incumplimientos; **instar expedientes disciplinarios o sancionadores**; resolver **consultas**; adoptar **criterios de interpretación uniforme** y aprobar directrices; **evaluar** el cumplimiento de la ley; **informar preceptivamente** los proyectos normativos de la Generalitat en materia de transparencia; y aprobar y remitir en el **primer trimestre** de cada año una **memoria anual** a Les Corts y al Consell.
+- **Composición (art. 49)**: **3 personas**, con composición equilibrada entre mujeres y hombres. Candidaturas propuestas por los **grupos parlamentarios** entre personas expertas con **más de 10 años** de experiencia profesional; elegidas por el **Pleno de Les Corts por mayoría de 3/5** tras comparecencia en comisión y nombradas por **decreto del president de la Generalitat**. Si en **2 meses** desde la primera votación no hay acuerdo, cabe la elección por **mayoría absoluta** (regla añadida por la Ley 4/2024). Mandato de **5 años**, con posibilidad de **una única reelección**. La **presidencia** la designan sus integrantes de entre ellos, por un solo mandato. Ejercen el cargo con **dedicación exclusiva** y rango de **dirección general**, y solo pueden ser removidos por causas tasadas (defunción, renuncia, extinción del mandato, incapacidad, incompatibilidad o incumplimiento grave declarado por **3/5 de Les Corts**).
+- **Estructura (art. 50)**: **Pleno, Presidencia y Secretaría**. Elabora su reglamento de organización y funcionamiento, que se eleva al **Consell** para su aprobación.
+- **Antecedente (DT 1.ª)**: sustituye al anterior **Consejo de Transparencia, Acceso a la Información Pública y Buen Gobierno** de la Ley 2/2015 (que tenía 5 miembros sin dedicación exclusiva).
 
-### Título I: Transparencia de la actividad pública
+### Título III. Buen gobierno e integridad pública
 
-### Portal de Transparencia
+- **Principios de actuación (art. 54)**: los altos cargos del art. 6 se rigen por la Constitución, el Estatuto de Autonomía y el **Título II de la Ley 19/2013**, y ajustan su actividad, entre otros, a: **integridad, ejemplaridad y transparencia** en la gestión; gestión financiera justa y equitativa; imparcialidad y neutralidad; participación; igualdad de trato; buena fe y buena administración; responsabilidad por las actuaciones propias y de los organismos que dirigen; comunicación de irregularidades por los **canales de denuncia o alerta**; observancia estricta de las **incompatibilidades** y abstención en conflictos de intereses; reserva debida; cumplimiento de la **política de regalos** del código ético; prohibición de usar **tarjetas de crédito o débito** con cargo a fondos públicos; sobriedad y austeridad; y garantía de que los **reconocimientos honoríficos** recaigan en personas sin condena penal firme. El Consell y las corporaciones locales asumen además el compromiso de **rendir cuentas** de su gestión.
+- **Códigos éticos y de conducta (art. 55)**: cada entidad del art. 3 debe elaborar el suyo, con los valores y normas de conducta, la política de regalos, los mecanismos de seguimiento e interpretación y su revisión. Cabe la **adhesión al código de buen gobierno del Consell**, y sus principios se extienden a **contratistas y beneficiarios de subvenciones** a través de pliegos y bases.
+- **Sistema de integridad institucional (art. 56)**: marco impulsado por el Consell en la administración de la Generalitat, que incluye códigos éticos, formación y sensibilización, vías para resolver **consultas y dilemas éticos**, una **comisión de ética institucional** con participación de personas expertas externas y mecanismos de evaluación y mejora continua. Se apoya en la **Agencia de Prevención y Lucha contra el Fraude y la Corrupción** y en el sistema de alertas de la **Ley 22/2018**, de Inspección General de Servicios.
 
-- Obligatoriedad de publicación para la Administración de la Generalitat y sus organismos autónomos.
+### Título IV. Planificación y evaluación
 
-### Información sujeta a publicidad
+- **Plan de gobierno (art. 57)**: conforme al programa de investidura, el Consell elabora y aprueba **durante el primer año de mandato** el plan político de gobierno de la legislatura, de **naturaleza política**, con los objetivos y líneas de actuación más destacadas. A los **3 años** de la toma de posesión, el president debe solicitar a Les Corts un **debate sobre su cumplimiento**. Se publica en el **DOGV** y en el Portal de Transparencia. (El antiguo seguimiento semestral del art. 58 fue **suprimido** por la Ley 4/2024.)
+- **Calidad normativa (arts. 59-62)**: principios de **buena regulación** (necesidad, eficacia, proporcionalidad, seguridad jurídica, transparencia y eficiencia), **simplificación normativa** (con elaboración de **textos consolidados** de valor informativo) y **planificación normativa**.
+- **Evaluación (arts. 63-64)**: fomento de la cultura de la planificación y evaluación de planes y programas.
 
-- Institucional, organizativa y de planificación.
-- Sobre altos cargos o asimilados.
-- De relevancia jurídica.
-- Presupuestaria, financiera, contable, endeudamiento y patrimonial.
-- Contratación pública, convenios de colaboración, subvenciones.
-- Publicidad y promoción institucional.
-- Ordenación del territorio, urbanismo y medio ambiente.
-- Estudios, estadísticas y cartografía.
-- Otras solicitadas por la ciudadanía.
+### Título V. Régimen sancionador
 
-### Acceso a la información pública
+Se aplica sin perjuicio del régimen sancionador del Título II de la Ley 19/2013 (art. 65). Son responsables los altos cargos y el personal de los sujetos del art. 3, y las entidades de los arts. 4 y 5 (art. 67).
 
-- Cualquier ciudadano puede solicitarla.
-- No es necesario motivar la solicitud ni invocar la ley.
+- **Infracciones de altos cargos y personal (art. 68)**:
+    - **Muy graves**: incumplir la publicidad activa desatendiendo el **requerimiento expreso del CVT**; incumplir sus **resoluciones definitivas y firmes** o los acuerdos de mediación; y **ocultar deliberadamente** información pública para impedir su conocimiento.
+    - **Graves**: falta de colaboración con el CVT; **denegar sin motivación** solicitudes de acceso; facilitar información vulnerando de forma relevante el principio de veracidad.
+    - **Leves**: incumplir la publicidad activa; no resolver en plazo injustificadamente; demora injustificada en el envío de información al CVT.
+- **Infracciones de las entidades privadas del art. 4 y de los obligados a suministrar información del art. 5 (arts. 69-70)**: escalas paralelas (muy grave el incumplimiento tras requerimiento del CVT; grave la falta de contestación o la reiteración; leve el retraso o el suministro parcial injustificados).
+- **Sanciones (arts. 71-72)**:
+    - **Altos cargos**: muy graves, declaración del incumplimiento y publicación en el **DOGV**, multa de **6.001 a 12.000 euros**, **cese** en el cargo y prohibición de ocupar alto cargo **hasta 5 años**; graves, multa de **601 a 6.000 euros** y suspensión de **3 a 6 meses**; leves, amonestación o multa de **hasta 600 euros**. Al personal empleado público se le aplica su régimen disciplinario.
+    - **Otras entidades**: multas de **30.001 a 100.000 euros** (muy graves), de **5.001 a 30.000** (graves) y de **200 a 5.000 o amonestación** (leves); las graves y muy graves pueden conllevar el **reintegro de la subvención** o la resolución del contrato, y las muy graves la **prohibición de obtener subvenciones hasta 3 años**.
+- **Procedimiento (art. 74)**: se inicia siempre **de oficio**; el CVT puede **instar la incoación** (el órgano competente está obligado a incoar); toda resolución sancionadora exige **informe previo y preceptivo del CVT** (que suspende el plazo). Plazo máximo para resolver: **6 meses**, con **caducidad**.
+- **Competencias (arts. 75-76)**: incoa y sanciona el **Consell** cuando el infractor sea miembro del Consell o titular de secretaría autonómica, y la **persona titular de la conselleria competente en transparencia** para el resto de altos cargos de la Generalitat y su sector público; instruye el centro directivo con la **inspección general de servicios**. El mismo esquema se aplica a las competencias sancionadoras de buen gobierno del Título II de la Ley 19/2013.
 
-### Apertura de datos
+## Fuentes {.unnumbered .unlisted}
 
-- Mejora la transparencia, promueve la interoperabilidad administrativa y genera valor social.
-- **Publicación en formato digital**, accesible vía web, estandarizado y abierto.
-
-### Título II: Consejo Valenciano de Transparencia
-
-### Características
-
-- Autoridad de garantía en materia de transparencia en la Comunitat Valenciana.
-- Garantiza el derecho de acceso a la información pública y vela por el cumplimiento de la publicidad activa.
-- **Autonomía orgánica e independencia funcional**, sin jerarquías.
-
-### Composición
-
-- Integrado por 3 personas.
-- Candidaturas propuestas por los grupos parlamentarios entre expertos con más de **10 años de experiencia.**
-- Aprobación por mayoría de **3/5 del parlamento**.
-- Mandato de **5 años** con posibilidad de una única reelección.
-- Los integrantes eligen a su presidente y tienen dedicación exclusiva.
-
-### Órganos
-
-- Pleno.
-- Presidencia.
-- Secretaría (desempeñada por un funcionario).
-
-### Título III: Buen Gobierno e Integridad Pública
-
-### Principios de actuación
-
-- Actuar con **integridad, ejemplaridad y transparencia**.
-- Garantizar una **gestión financiera justa y equitativa**.
-- Ejercicio fiel de la función pública y de buena fe.
-- Principio de participación y trato igualitario, sin arbitrariedad ni discriminación.
-- **Responsabilidad personal** en las actuaciones propias y las de los organismos dirigidos.
-- **Rendición de cuentas como principio básico**.
-- Cumplir el régimen de incompatibilidades y la política de regalos.
-- No uso indebido de tarjetas de crédito o débito con cargo a fondos públicos.
-- Garantizar que reconocimientos honoríficos recaigan en personas de relevante compromiso público y sin condenas penales.
-
-### Códigos éticos y de conducta
-
-- Cada institución del ámbito subjetivo debe elaborarlos para fomentar la integridad y el buen gobierno.
-
-### Sistema de integridad institucional
-
-- Incluye códigos éticos, formación, sensibilización y mecanismos para formular y resolver dilemas.
-- Garantía del cumplimiento, seguimiento, evaluación y mejora continua.
-
-### Título IV: Planificación y Evaluación
-
-### Plan de gobierno
-
-- **Plan estratégico de la legislatura**.
-- Define objetivos, líneas de actuación y proyectos de ley clave.
-- Incluye indicadores para el seguimiento.
-
-### Seguimiento del plan de gobierno
-
-- **Periodicidad semestral**.
+- Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno (BOE-A-2013-12887): texto consolidado, última modificación 9 de julio de 2022 (contrastado con el BOE online en julio de 2026, sin modificaciones posteriores).
+- Ley 1/2022, de 13 de abril, de Transparencia y Buen Gobierno de la Comunitat Valenciana (BOE-A-2022-8187): texto consolidado, última modificación 31 de mayo de 2025 (contrastado con el BOE online en julio de 2026; incorpora las reformas de la Ley 8/2022, la Ley 4/2024, el Decreto-ley 7/2024 convalidado como Ley 6/2024 y la Ley 5/2025).
+- Real Decreto 615/2024, de 2 de julio, por el que se aprueba el Estatuto del Consejo de Transparencia y Buen Gobierno (BOE-A-2024-15944), consultado en el BOE online en julio de 2026.
+- Portal de la Transparencia (transparencia.gob.es), Open Government Partnership (opengovpartnership.org) y notas oficiales sobre el V Plan de Gobierno Abierto 2025-2029, consultados en julio de 2026.
