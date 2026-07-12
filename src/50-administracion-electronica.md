@@ -1,61 +1,146 @@
 # Administración electrónica
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+La administración electrónica es el uso de medios electrónicos en la actividad de las Administraciones Públicas, tanto en sus relaciones con la ciudadanía como en su funcionamiento interno. Desde 2015 no es una vía alternativa sino el modo ordinario de funcionamiento del sector público: las Leyes 39/2015 y 40/2015 integraron la tramitación electrónica en el corazón del procedimiento administrativo, y el **Real Decreto 203/2021** las desarrolla reglamentariamente.
 
+## El funcionamiento electrónico del sector público
 
-## Real Decreto 203/2021, de actuación y funcionamiento del sector público por medios electrónicos
+El marco general vigente descansa en dos leyes gemelas de 1 de octubre de 2015: la **Ley 39/2015**, del Procedimiento Administrativo Común de las Administraciones Públicas (relaciones *ad extra* con los interesados), y la **Ley 40/2015**, de Régimen Jurídico del Sector Público (organización y relaciones *ad intra*). Ambas derogaron la **Ley 11/2007**, de acceso electrónico de los ciudadanos a los Servicios Públicos, que había consagrado el derecho a relacionarse electrónicamente con las Administraciones.
 
-Su objetivo es desarrollar y consolidar la administración electrónica, facilitando la relación entre los ciudadanos y las administraciones públicas.
+**Ley 39/2015: texto consolidado a 6 de noviembre de 2024. Ley 40/2015: texto consolidado a 2 de agosto de 2024.**
 
-### Objetivos Principales
+- **Evolución normativa**: Ley 30/1992 (primeras referencias al empleo de medios electrónicos), **Ley 11/2007** (derecho de los ciudadanos a relacionarse electrónicamente) y su desarrollo parcial por el **RD 1671/2009**; Leyes **39/2015 y 40/2015** (la tramitación electrónica como funcionamiento ordinario); **RD 203/2021** (reglamento único de actuación y funcionamiento del sector público por medios electrónicos, que deroga el RD 1671/2009).
+- **Derecho y obligación de relacionarse electrónicamente (art. 14 Ley 39/2015)**: las personas físicas «podrán elegir en todo momento» si se comunican con las Administraciones por medios electrónicos o no, y el medio elegido puede modificarse en cualquier momento (art. 14.1). Están **obligados** en todo caso (art. 14.2):
+    - Las **personas jurídicas**.
+    - Las **entidades sin personalidad jurídica**.
+    - Quienes ejerzan una **actividad profesional de colegiación obligatoria**, para los trámites que realicen en ejercicio de ella (incluidos en todo caso **notarios y registradores** de la propiedad y mercantiles).
+    - Quienes **representen a un interesado obligado** a relacionarse electrónicamente.
+    - Los **empleados públicos** para los trámites que realicen por razón de su condición, en la forma que determine reglamentariamente cada Administración.
+- **Extensión reglamentaria (art. 14.3)**: las Administraciones pueden imponer la relación electrónica a ciertos **colectivos de personas físicas** que, por su capacidad económica, técnica, dedicación profesional u otros motivos, tengan acreditado el acceso y disponibilidad de los medios electrónicos.
+- **Asistencia en el uso de medios electrónicos (art. 12 Ley 39/2015)**: las Administraciones asistirán a los interesados no obligados que lo soliciten, en especial en identificación y firma, presentación en el registro electrónico y obtención de copias auténticas. Si el interesado carece de medios, un **funcionario habilitado** puede identificarse o firmar por él, con su **consentimiento expreso** del que quedará constancia. Cada Administración mantendrá un **registro de funcionarios habilitados**, interoperable e interconectado con los del resto.
+- **Funcionamiento electrónico del sector público (Ley 40/2015, Título preliminar, Capítulo V, arts. 38-46)**: regula la **sede electrónica** (art. 38), el **portal de internet** (art. 39), los sistemas de identificación y firma de las Administraciones (arts. 40-44: sello electrónico, actuación automatizada, firma del personal, entornos cerrados) y el **archivo electrónico de documentos** (art. 46). Se desarrolla en el tema de la Ley 40/2015; sus piezas reglamentarias se ven a continuación.
 
-- **Digitalización de procedimientos**: Impulsa la transformación digital de los procedimientos administrativos.
-- **Accesibilidad y usabilidad**: Garantiza que los servicios electrónicos sean accesibles y fáciles de usar por todos los ciudadanos.
-- **Seguridad jurídica**: Establece un marco normativo claro para el uso de medios electrónicos en el sector público.
-- **Interoperabilidad**: Promueve la interoperabilidad entre sistemas y administraciones para facilitar el intercambio de información.
+## Real Decreto 203/2021, Reglamento de actuación y funcionamiento del sector público por medios electrónicos
 
-### Ámbito de Aplicación
+El **Real Decreto 203/2021, de 30 de marzo**, aprueba el Reglamento de actuación y funcionamiento del sector público por medios electrónicos. Es el desarrollo reglamentario conjunto de las Leyes 39/2015 y 40/2015 «en lo referido a la actuación y el funcionamiento electrónico del sector público» (art. 1.1) y sustituye al RD 1671/2009.
 
-Se aplica a todas las administraciones públicas, incluyendo:
+**Texto consolidado a 2 de abril de 2025.**
 
-- Administración General del Estado.
-- Comunidades Autónomas.
-- Entidades Locales.
-- Sector público institucional.
+### Características y estructura
 
-### Derechos de los Ciudadanos
+- **Aprobación y vigencia**: publicado en el BOE el **31 de marzo de 2021**; entrada en vigor el **2 de abril de 2021** (DF 5.ª). Deroga expresamente el **RD 1671/2009** (disposición derogatoria única).
+- **Ámbito subjetivo (art. 1.2)**: por remisión, el del **art. 2** de las Leyes 39/2015 y 40/2015 (Administraciones Públicas y sector público institucional).
+- **Carácter básico (DF 1.ª)**: se dicta al amparo del **art. 149.1.18.ª CE** (procedimiento administrativo común y bases del régimen jurídico de las AAPP). No obstante, un conjunto amplio de preceptos **solo se aplica en el ámbito estatal** (entre otros, los relativos a la Carpeta Ciudadana, el Registro Electrónico General de la AGE, el Registro de Funcionarios Habilitados y el Registro Electrónico de Apoderamientos de la AGE).
+- **Estructura**: real decreto de artículo único (aprueba el Reglamento anexo), 2 disposiciones transitorias, 1 derogatoria y 5 finales; el Reglamento consta de un **título preliminar y cuatro títulos** (65 artículos) más 10 disposiciones adicionales.
+- **Modificaciones**: la **DT 1.ª** (destrucción de documentos en soporte no electrónico) fue **anulada por sentencia del Tribunal Supremo de 30 de mayo de 2022**; el **RD 255/2025** modificó los arts. 27.1 y 28.1 del Reglamento (atributos de los certificados y de los sistemas de clave concertada).
 
-- **Elegir el canal de comunicación**: Derecho a relacionarse electrónicamente con las administraciones.
-- **No aportar documentos redundantes**: No están obligados a presentar documentos que ya obren en poder de las administraciones.
-- **Acceso a información y servicios**: Derecho a acceder a la información pública y a los servicios electrónicos de forma sencilla.
+### Título preliminar. Disposiciones generales
 
-### Obligaciones de las Administraciones
+El sector público debe respetar en sus actuaciones y relaciones electrónicas los **principios generales del art. 2**:
 
-- **Proporcionar medios electrónicos**: Deben facilitar los canales electrónicos necesarios para la comunicación con los ciudadanos.
-- **Garantizar la seguridad**: Asegurar la protección de datos y la confidencialidad de las comunicaciones.
-- **Transparencia**: Mantener actualizada y accesible la información en las sedes electrónicas.
+- **Neutralidad tecnológica y adaptabilidad** al progreso de las tecnologías: independencia en la elección de las alternativas tecnológicas y libertad para desarrollar e implantar avances en un ámbito de libre mercado; uso de **estándares abiertos** y, complementariamente, de uso generalizado.
+- **Accesibilidad**: igualdad y no discriminación en el acceso, en particular de las personas con discapacidad y de las personas mayores.
+- **Facilidad de uso**: diseño centrado en las personas usuarias, minimizando el conocimiento necesario para usar el servicio.
+- **Interoperabilidad**: capacidad de los sistemas de información de compartir datos y posibilitar el intercambio de información.
+- **Proporcionalidad**: solo se exigirán las garantías y medidas de seguridad adecuadas a la naturaleza y circunstancias de cada trámite.
+- **Personalización y proactividad**: capacidad de las Administraciones para proporcionar servicios precumplimentados y anticiparse a las necesidades de las personas, partiendo del conocimiento adquirido del usuario.
 
-### Identificación y Firma Electrónica
+Completan el título preliminar:
 
-- **Sistemas admitidos**: DNI electrónico, certificados digitales reconocidos, sistemas de clave concertada.
-- **Firma electrónica**: Se establece como medio para garantizar la autenticidad e integridad de los documentos electrónicos.
+- **Derecho y obligación de relacionarse electrónicamente (art. 3)**: reitera los obligados del art. 14.2 de la Ley 39/2015. Las personas físicas no obligadas comunicarán al órgano competente su decisión de relacionarse electrónicamente (o de dejar de hacerlo), y los efectos se producen «a partir del **quinto día hábil** siguiente» a aquel en que el órgano haya tenido constancia. En el ámbito estatal, la obligatoriedad para nuevos colectivos (art. 14.3) se establece por **real decreto del Consejo de Ministros o por orden ministerial**, publicándose en el PAGe y en la sede correspondiente.
+- **Canales de asistencia (art. 4)**: presencial (oficinas de asistencia), portales de internet y sedes electrónicas, redes sociales, telefónico, correo electrónico y cualquier otro que se establezca.
 
-### Registro Electrónico
+### Título I. Portales de internet, Punto de Acceso General electrónico y sedes electrónicas
 
-- **Presentación de documentos**: Permite la recepción de solicitudes, escritos y comunicaciones en formato electrónico.
-- **Anotación de asientos**: Registra la fecha y hora de recepción para el cómputo de plazos.
-- **Accesibilidad**: Disponible las 24 horas todos los días del año.
+Este título distingue tres piezas de presencia electrónica de cada Administración: el portal (información), la sede (trámites con plenas garantías) y el punto de acceso general que agrega ambas.
 
-### Notificaciones Electrónicas
+- **Portal de internet (art. 5)**: punto de acceso electrónico cuya titularidad corresponde a una Administración, organismo o entidad, que permite el acceso a través de internet a la información y, en su caso, a la sede electrónica. En el ámbito estatal su creación exige informe favorable de la Comisión Ministerial de Administración Digital y dominio de segundo nivel **«.gob.es»** (art. 6).
+- **Punto de Acceso General electrónico, PAGe (art. 7)**: todas las Administraciones **contarán con un PAGe**, que facilita el acceso a los servicios, trámites e información de sus órganos y entidades. El PAGe **dispone de una sede electrónica** desde la que se accede a todas las sedes de esa Administración, y puede incluir un área personalizada. El PAGe de la AGE (administracion.gob.es) aloja en su sede la **Dirección Electrónica Habilitada única**.
+- **Carpeta Ciudadana del sector público estatal (art. 8)**: área personalizada del interesado en su relación con el sector público estatal, accesible desde la sede del PAGe de la AGE. Permite el **seguimiento** de sus expedientes, el acceso a sus **notificaciones y comunicaciones**, conocer **qué datos suyos** obran en poder del sector público estatal y obtener **certificaciones administrativas**. Pueden acceder también sus representantes legales y los apoderados generales inscritos en el Registro Electrónico de Apoderamientos.
+- **Sede electrónica (arts. 9-10)**: dirección electrónica disponible para la ciudadanía a través de la cual se realizan «todas las actuaciones y trámites» que requieran la identificación de la Administración o de los interesados. Pueden crearse **sedes electrónicas asociadas** (con consideración de sede a todos los efectos). El acto de creación o supresión se publica en el **boletín oficial** correspondiente y en el directorio del PAGe, y determina el ámbito, la dirección electrónica, el titular y el órgano gestor.
+- **Contenido mínimo de la sede (art. 11.1)**: identificación de la sede y de su titular, acto de creación, información de uso (mapa, protección de datos, accesibilidad), **relación de sistemas de identificación y firma admitidos**, normativa del registro, **fecha y hora oficial y calendario de días inhábiles**, incidencias técnicas con la eventual ampliación de plazos, relación de servicios y trámites disponibles y **relación actualizada de las actuaciones administrativas automatizadas**, cada una con la descripción de su diseño y funcionamiento, los mecanismos de rendición de cuentas y transparencia y los datos usados en su configuración y aprendizaje.
+- **Servicios mínimos de la sede (art. 11.2)**: acceso a los trámites con sus plazos máximos de duración, formulación de **sugerencias y quejas**, mecanismos de reclamación de accesibilidad, **verificación de los certificados de la sede y de los sellos electrónicos**, comprobación de autenticidad e integridad de documentos con **código seguro de verificación**, modelos normalizados y consulta del **directorio geográfico de oficinas de asistencia** en materia de registros.
+- **Responsabilidad (art. 12)**: el titular de la sede responde de la **integridad, veracidad y actualización** de la información y servicios de su competencia; si la sede enlaza a otra, responde el titular de esta última; si aloja procedimientos de otro órgano, responde el titular de la competencia.
+- **Identificación de las sedes (art. 18)**: mediante **certificados cualificados de autenticación de sitio web** o medio equivalente.
 
-- **Obligatoriedad**: Determinados colectivos están obligados a recibir notificaciones por vía electrónica.
-- **Disponibilidad**: Se consideran practicadas en el momento en que el interesado acceda a su contenido.
-- **Rechazo**: Si transcurren 10 días naturales sin acceso, se entiende rechazada la notificación.
+### Título II. Procedimiento administrativo por medios electrónicos
 
-### Interoperabilidad y Seguridad
+Es el título más extenso: disposiciones generales (actuación automatizada y subsanación), identificación y firma, representación, registros y notificaciones. La actuación administrativa automatizada se trata en su propio subtema; la identificación y firma electrónica se desarrollan en el tema correspondiente.
 
-- **Esquema Nacional de Interoperabilidad**: Establece los criterios para asegurar la compatibilidad entre sistemas.
-- **Esquema Nacional de Seguridad**: Define las medidas para proteger la información y los servicios electrónicos.
+- **Régimen de subsanación (art. 14)**: si un obligado presenta en papel, se le requerirá la subsanación con la advertencia de que, de no atenderla en **10 días**, se le tendrá por **desistido** de su solicitud o **decaído** en su derecho al trámite. En solicitudes de iniciación, la **fecha de la subsanación** se considera fecha de presentación de la solicitud. El mismo régimen se aplica a los defectos de formato de los documentos (plazo de 10 días, ampliable **5 días** más cuando la aportación presente dificultades especiales, salvo procedimientos selectivos o de concurrencia competitiva).
+- **Sistemas de identificación de las Administraciones (art. 15.2)**: identificación de sedes, **sello electrónico** basado en certificado cualificado, sistemas de firma para la **actuación administrativa automatizada**, **firma del personal** al servicio de las Administraciones e intercambio de datos en **entornos cerrados de comunicación** (arts. 18-25).
+- **Identificación de los interesados (art. 26)**: certificados cualificados de **firma electrónica**, certificados cualificados de **sello electrónico** y sistemas de **clave concertada** u otros que se consideren válidos (registro previo como usuario y autorización de la **Secretaría General de Administración Digital**, denegable solo por motivos de **seguridad pública** previo informe vinculante de la Secretaría de Estado de Seguridad). La Administración debe garantizar que los dos primeros sistemas puedan usarse en **todo procedimiento**, aunque admita además la clave concertada.
+- **Atributos mínimos de los certificados (arts. 27-28, redacción del RD 255/2025)**: nombre y apellidos y número de **DNI, NIE, Número de Identificación Consular Central o NIF** del titular; en los certificados de representante, también la denominación y NIF de la persona jurídica.
+- **Firma de los interesados (art. 29)**: firma cualificada y avanzada basada en certificados cualificados, sello cualificado y avanzado, y otros sistemas válidos con registro previo; mismas garantías de admisión general que en la identificación.
+- **Funcionario habilitado (arts. 30-31)**: los interesados no obligados que carezcan de medios pueden ser identificados o firmar mediante **personal funcionario habilitado**, previa identificación y **consentimiento expreso** con constancia escrita. En la AGE, el funcionario debe estar inscrito en el **Registro de Funcionarios Habilitados**, en el que constan los habilitados para identificación y firma de interesados, para la **expedición de copias auténticas** y el personal de las **oficinas de asistencia en materia de registros**.
+- **Representación (art. 32)**: puede acreditarse mediante **apoderamiento apud acta** (presencial en las oficinas de asistencia o electrónico en sede), inscripción en el **registro electrónico de apoderamientos**, **certificado cualificado de representante** o **documento público notarial o certificación del Registro Mercantil**. El **Registro Electrónico de Apoderamientos de la AGE** (art. 33) inscribe los poderes generales «apud acta» del art. 6.4.a) de la Ley 39/2015 (que no pueden inscribirse en registros particulares), consta en él el **bastanteo** del poder y **no tiene carácter público**: solo accede el poderdante o apoderado.
+- **Registros electrónicos (art. 37)**: cada Administración dispone de un **Registro Electrónico General**, plenamente interoperable, en el que se asienta todo documento presentado o recibido; los organismos pueden tener registro propio interconectado. Admiten documentos normalizados y cualquier solicitud, escrito o comunicación dirigido a cualquier Administración.
+- **Registro Electrónico General de la AGE (art. 38)**: conjunto agregado de los asientos de las unidades, las anotaciones de las aplicaciones de procedimientos y el servicio electrónico de presentación de solicitudes sin modelo normalizado. Sus anotaciones tienen **plena eficacia y validez para todas las Administraciones Públicas**.
+- **Presentación de documentos (art. 39)**: los documentos en papel se presentan en las **oficinas de asistencia en materia de registros**; una vez digitalizados conforme a las normas técnicas de interoperabilidad, tienen la consideración de **copia electrónica auténtica** y se devuelven al interesado. Si el tamaño excede la capacidad del **Sistema de Interconexión de Registros (SIR)**, la remisión puede sustituirse por la **puesta a disposición** en un repositorio de intercambio de ficheros.
+- **Oficinas de asistencia en materia de registros (art. 40)**: tienen naturaleza de **órgano administrativo**. Funciones: digitalización y anotación de lo presentado, emisión del **recibo** con fecha y hora de presentación, expedición de **copias electrónicas auténticas**, información e **identificación o firma del interesado no obligado** en los trámites habilitados, práctica de notificaciones por **comparecencia espontánea**, comunicación del código de identificación del órgano destinatario e inicio del **apoderamiento apud acta presencial**.
+- **Práctica de las notificaciones electrónicas (art. 42)**: mediante **comparecencia en la sede electrónica**, a través de la **Dirección Electrónica Habilitada única** o por **ambos sistemas**, según disponga cada Administración. Si se usan ambos, los efectos se computan desde el **primer** acceso o rechazo, con sincronización automatizada entre sistemas. La comparecencia **voluntaria** del no obligado y su acceso o rechazo expreso tienen plenos efectos jurídicos. El acuse de recibo contiene el acto notificado, el destinatario, la fecha y hora de puesta a disposición y las del acceso o rechazo. En caso de **sucesión** del interesado, el sucesor debe comunicarla en **15 días hábiles**; si comunica tarde, los defectos de notificación anteriores le son imputables.
+- **Notificaciones del ámbito estatal (art. 42.5)**: **toda notificación** de un emisor estatal se pone a disposición del interesado **a través de la DEHú**, pudiendo notificar además en sede de forma complementaria.
+- **Aviso de puesta a disposición (art. 43)**: se envía al **dispositivo electrónico o correo electrónico** comunicado voluntariamente por el interesado. «La falta de práctica de este aviso, de carácter meramente informativo, **no impedirá que la notificación sea considerada plenamente válida**». Si un obligado no ha facilitado datos de contacto, en los procedimientos **de oficio** la primera notificación se practica **en papel**, advirtiendo de que las siguientes serán electrónicas.
+- **Dirección Electrónica Habilitada única, DEHú (art. 44)**: sistema de información para la notificación electrónica alojado en la sede del PAGe de la AGE. Antes de acceder, se informa al interesado de que el acceso, el rechazo expreso o el transcurso de **10 días naturales** desde la puesta a disposición sin acceder dan por efectuado el trámite de notificación. Ante una **incidencia técnica**, los emisores pueden ampliar el plazo no vencido. La obligación de notificar dentro del plazo máximo se entiende cumplida con la **puesta a disposición** en sede o en la DEHú (art. 45.3).
+
+### Título III. Expediente administrativo electrónico
+
+Regula el documento administrativo electrónico, las copias auténticas y el archivo. El detalle técnico (metadatos, formatos, NTI) corresponde al tema de documento y expediente electrónico.
+
+- **Documento administrativo electrónico (art. 46)**: información de cualquier naturaleza en forma electrónica, archivada en un soporte electrónico según un formato determinado admitido en el ENI, generada, recibida o incorporada por las Administraciones en el ejercicio de funciones sujetas a Derecho administrativo.
+- **Copias auténticas (arts. 47-49)**: se expiden **siempre a partir de un original o de otra copia auténtica** y tienen la **misma validez y eficacia que los originales**. En el ámbito estatal son competentes los órganos emisores del original, los de custodia y archivo, los que prevean sus normas y las oficinas de asistencia; la expedición puede hacerse por **actuación administrativa automatizada** o por funcionario habilitado inscrito en el registro.
+- **Referencia temporal (art. 50)**: todo documento administrativo electrónico lleva asociada una **marca de tiempo** o un **sello electrónico cualificado de tiempo** (este último con intervención de un prestador cualificado); la marca de tiempo se usa cuando la norma no exija sello cualificado.
+- **Expediente electrónico (arts. 51-52)**: su foliado se realiza mediante un **índice electrónico autenticado** que garantiza la integridad y permite la recuperación; un mismo documento puede formar parte de distintos expedientes. El **derecho de acceso** al expediente se entiende satisfecho con su **puesta a disposición** en el PAGe o en la sede electrónica.
+- **Conservación y destrucción (art. 53)**: los documentos en papel no devueltos en el momento de la presentación se conservan a disposición del interesado durante **6 meses** tras su digitalización.
+- **Archivo electrónico único (arts. 54-55)**: las Administraciones deben conservar en soporte electrónico **todos los documentos** de los expedientes y los de valor probatorio creados al margen de un procedimiento. El archivo electrónico único es el **conjunto de sistemas y servicios que sustenta la gestión, custodia y recuperación** de los documentos y expedientes electrónicos **una vez finalizados** los procedimientos, con garantías de autenticidad, conservación, integridad, confidencialidad, disponibilidad y **cadena de custodia** conforme al ENI y al ENS.
+
+### Título IV. Relaciones y colaboración entre Administraciones Públicas
+
+Traslada al plano reglamentario la obligación de relación electrónica entre Administraciones y los servicios compartidos que la hacen posible (los servicios comunes de interoperabilidad se desarrollan en el tema de servicios de interoperabilidad).
+
+- **Relación electrónica obligatoria (art. 56)**: las Administraciones están **obligadas** a relacionarse entre sí y con sus órganos y entidades por medios electrónicos (art. 3.2 de la Ley 40/2015); la obligación alcanza a las entidades de derecho privado vinculadas cuando ejercen potestades administrativas.
+- **Sistema de Interconexión de Registros, SIR (art. 60)**: las interconexiones entre registros de las Administraciones «deberán realizarse a través del SIR», conforme al ENI y su norma técnica.
+- **Transmisiones de datos (art. 61)**: las realizadas mediante consulta a las plataformas de intermediación **tienen la consideración de certificados administrativos**. Cuando el interesado no aporte datos o documentos que ya obren en poder de las Administraciones, el órgano tramitador los **incorporará mediante consulta** a las plataformas de intermediación; solo excepcionalmente se solicitarán por otros medios, conservando la justificación. Toda transmisión se hace a solicitud del órgano tramitador identificando datos, titulares y **finalidad**; el **cesionario** es responsable del correcto acceso y uso. La cesión puede ser **automatizada** (sin intervención directa de empleado público).
+- **Plataformas de intermediación de datos (art. 62)**: dejan constancia de fecha y hora de la transmisión y del procedimiento al que se refiere la consulta; deben ser interoperables entre sí y con la **Plataforma de Intermediación de la AGE** (gestionada por la SGAD), que actúa además como punto de conexión con el sistema técnico de la **pasarela digital única europea** (Reglamento (UE) 2018/1724).
+- **Remisión de expedientes (art. 63)**: la remisión entre Administraciones equivale a la **puesta a disposición** del expediente a través de un nodo de interoperabilidad, mediante dirección electrónica o localizador.
+- **Reutilización de sistemas y aplicaciones (art. 64)**: las Administraciones pondrán a disposición de cualquier otra las aplicaciones de su titularidad y mantendrán **directorios actualizados de aplicaciones reutilizables**, interoperables con el **Directorio general de aplicaciones de la AGE**. Antes de adquirir, desarrollar o mantener una aplicación, deben **consultar dicho directorio general**; las conclusiones de la consulta se incorporan al **expediente de contratación** y la no reutilización de soluciones existentes debe justificarse en términos de eficiencia.
+- **Adhesión a las plataformas de la AGE (art. 65)**: las demás Administraciones pueden usar las plataformas, registros y servicios electrónicos estatales mediante **instrumento de adhesión**, aceptando íntegramente sus condiciones de uso.
+
+## Actuación administrativa automatizada
+
+La actuación administrativa automatizada (AAA) es la forma más avanzada de tramitación electrónica: el acto se produce sin intervención humana directa. Su regulación se reparte entre la Ley 40/2015 (definición y firma) y el RD 203/2021 (régimen de autorización y transparencia).
+
+- **Definición (art. 41.1 Ley 40/2015)**: «cualquier acto o actuación realizada íntegramente a través de medios electrónicos por una Administración Pública en el marco de un procedimiento administrativo y en la que no haya intervenido de forma directa un empleado público».
+- **Requisitos previos (art. 41.2)**: debe establecerse previamente el órgano u órganos competentes para la **definición de las especificaciones, programación, mantenimiento, supervisión y control de calidad y, en su caso, auditoría del sistema de información y de su código fuente**, y se indicará el **órgano responsable a efectos de impugnación**.
+- **Autorización en el ámbito estatal (art. 13 RD 203/2021)**: la determinación de una actuación como automatizada se autoriza por **resolución del titular del órgano competente** por razón de la materia y se **publica en la sede electrónica**. La resolución expresa los **recursos** que procedan, el órgano ante el que presentarlos y su plazo, y establece medidas para salvaguardar los derechos e intereses de los interesados. En las entidades locales se está a la DA 8.ª del RD 128/2018 (funcionarios de habilitación nacional).
+- **Transparencia (art. 11.1.i RD 203/2021)**: las sedes electrónicas publican la **relación actualizada de las AAA**, con la descripción de su **diseño y funcionamiento**, los mecanismos de **rendición de cuentas y transparencia** y los **datos utilizados en su configuración y aprendizaje** (previsión pensada para los sistemas basados en algoritmos e inteligencia artificial).
+- **Sistemas de firma de la AAA (art. 42 Ley 40/2015 y arts. 20-21 RD 203/2021)**: cada Administración puede determinar los supuestos de uso de:
+    - **Sello electrónico** de Administración Pública, órgano, organismo o entidad, basado en certificado electrónico cualificado. La relación de sellos de cada Administración es **pública** y en el ámbito estatal su creación corresponde a la persona titular de la **Subsecretaría** del ministerio (o presidencia/dirección del organismo).
+    - **Código seguro de verificación (CSV)** vinculado a la Administración u órgano, que permite en todo caso comprobar la **integridad** del documento accediendo a la sede electrónica. El CSV es **único por documento** (cualquier modificación genera un documento con CSV distinto), se integra preferentemente en todas las páginas, la verificación en sede es **directa y gratuita** y, en el ámbito estatal, su uso exige resolución de la Subsecretaría **previo informe del Centro Criptológico Nacional y de la SGAD**, con disponibilidad de verificación de **al menos 5 años**.
+- **Ejemplos previstos en el propio Reglamento**: la expedición automatizada de **copias auténticas** (art. 48.2) y las **cesiones de datos automatizadas** entre Administraciones (art. 61.5).
+
+## Simplificación administrativa y reducción de cargas
+
+La administración electrónica es también un instrumento de simplificación: reduce los costes que la burocracia impone a ciudadanos y empresas. La política de reducción de cargas nace del programa europeo de mejora regulatoria y cristalizó en España con la reforma CORA y su manual metodológico.
+
+- **Carga administrativa**: según la Guía Metodológica del RD 1083/2009 (memoria del análisis de impacto normativo), son «aquellas actividades de naturaleza administrativa que deben llevar a cabo las empresas y ciudadanos para cumplir con las obligaciones derivadas de la normativa», incluidas las actividades voluntarias de naturaleza administrativa (solicitud de subvenciones, inscripción en registros voluntarios). Ejemplos frecuentes: solicitud y renovación de **autorizaciones, licencias y permisos**, comunicación de datos y presentación de documentos, conservación de información y acreditación de requisitos.
+- **Simplificación frente a reducción de cargas**: la simplificación revisa y racionaliza el **procedimiento** (trámites, tiempos, órganos); la reducción de cargas disminuye las **obligaciones de información** impuestas a los administrados. Son procesos complementarios que conviene abordar de forma integrada.
+- **Marco institucional**: la **Comisión para la Reforma de las Administraciones Públicas (CORA)**, creada por Acuerdo del Consejo de Ministros de **26 de octubre de 2012** con cuatro subcomisiones (duplicidades, gestión de medios y servicios comunes, **simplificación administrativa** y administración institucional), elevó su informe en junio de 2013. De su propuesta nació el **Manual de Simplificación Administrativa y Reducción de Cargas para la AGE** (septiembre de 2014), del que el Consejo de Ministros tomó conocimiento por Acuerdo de **19 de septiembre de 2014**.
+- **Fases del proceso de simplificación (Manual AGE)**:
+    - **Fase I. Descripción del procedimiento**: normativa, requisitos, organización responsable, desglose y diagramación de la tramitación, medición de tiempos, identificación de cargas y análisis del grado de informatización.
+    - **Fase II. Reingeniería**: cuestionar la **necesidad** del procedimiento, revisar la normativa, racionalizar cargas de trabajo y trámites, sustituir acreditaciones por declaraciones responsables, ajustar tiempos, **fortalecer la gestión electrónica** y reducir cargas.
+    - **Fase III. Implantación y cuantificación de ahorros**: plan de implantación y medición del ahorro para la Administración y para ciudadanos y empresas.
+    - **Fase IV. Evaluación**: seguimiento continuo mediante **indicadores**.
+- **Medición de cargas**: se emplea el **Modelo de Costes Estándar (SCM)**, desarrollado en los Países Bajos y adoptado por la UE, que mide los **costes administrativos** derivados de las obligaciones de información: identifica las actividades administrativas exigidas por la norma y las valora multiplicando el **coste unitario** de cada actividad (precio por tiempo) por su **frecuencia** anual y la población afectada. España aplica una variante simplificada (el **Método simplificado de medición de cargas** de la Guía Metodológica), con tablas estandarizadas de valoración por tipo de trámite.
+- **Instrumentos de simplificación en la normativa vigente**:
+    - **Derecho a no aportar documentos (art. 28 Ley 39/2015)**: los interesados tienen derecho a **no aportar documentos que ya se encuentren en poder de la Administración actuante o hayan sido elaborados por cualquier otra Administración**; la Administración los consulta o recaba **salvo oposición** del interesado (oposición que no cabe en el ejercicio de **potestades sancionadoras o de inspección**). Tampoco se exigirán **originales** salvo excepción normativa. Es el principio *only once*, materializado en las plataformas de intermediación de datos.
+    - **Declaración responsable y comunicación (art. 69 Ley 39/2015)**: la **declaración responsable** es el documento en que el interesado «manifiesta, bajo su responsabilidad, que cumple con los requisitos establecidos en la normativa vigente» para el reconocimiento o ejercicio de un derecho, que dispone de la documentación que lo acredita y que se compromete a mantener su cumplimiento; la **comunicación** es el documento mediante el que el interesado pone en conocimiento de la Administración sus datos y demás requisitos para el inicio de una actividad. Ambas permiten el inicio **desde el día de su presentación**, sin perjuicio de las facultades de comprobación; solo puede exigirse **una de las dos**, no ambas acumulativamente; la inexactitud, falsedad u omisión esencial determina la **imposibilidad de continuar** con la actividad desde que se tenga constancia.
+    - **Servicios proactivos y precumplimentados**: principio de personalización y proactividad (art. 2.f del RD 203/2021).
+    - **Análisis de impacto normativo**: la **Memoria del Análisis de Impacto Normativo (MAIN)** de todo proyecto normativo (RD 931/2017, modificado por la DF 3.ª del propio RD 203/2021) debe evaluar, entre otros extremos, el impacto en **cargas administrativas** y la adecuación al funcionamiento electrónico.
+- En el ámbito valenciano, la simplificación administrativa se regula hoy en el **Decreto 54/2025** y su guía MAIN autonómica (tema de administración electrónica de la GVA).
+
+## Fuentes {.unnumbered .unlisted}
+
+- Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas (texto consolidado, última modificación 6 de noviembre de 2024).
+- Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público (texto consolidado, última modificación 2 de agosto de 2024).
+- Real Decreto 203/2021, de 30 de marzo, por el que se aprueba el Reglamento de actuación y funcionamiento del sector público por medios electrónicos (texto consolidado, última modificación 2 de abril de 2025).
+- Manual de Simplificación Administrativa y Reducción de Cargas para la Administración General del Estado (MINHAP, septiembre de 2014; Acuerdo del Consejo de Ministros de 19 de septiembre de 2014, publicado por Resolución de 7 de octubre de 2014, BOE-A-2014-10263).
