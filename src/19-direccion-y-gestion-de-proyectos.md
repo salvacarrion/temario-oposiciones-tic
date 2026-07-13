@@ -1,636 +1,330 @@
 # Dirección y gestión de proyectos
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+Un **proyecto** es un esfuerzo temporal que se lleva a cabo para crear un producto, servicio o resultado único, con un inicio y un fin definidos y bajo restricciones de alcance, tiempo, coste y calidad. La **gestión (o dirección) de proyectos** consiste en aplicar conocimientos, habilidades, herramientas y técnicas a las actividades del proyecto para cumplir sus objetivos, adaptando el enfoque a las características de cada proyecto. Este tema recorre el marco de referencia del PMI (PMBOK), la metodología **PM²** de la Comisión Europea, la metodología **gvLOGOS** de la Generalitat Valenciana y un caso práctico de planificación con PERT y CPM.
 
+## Fundamentos y áreas de conocimiento (PMBOK)
 
-### Introducción a la Gestión de Proyectos
+El **Project Management Institute (PMI)** es la principal organización mundial dedicada a la dirección de proyectos: establece estándares (la **Guía del PMBOK**, *Project Management Body of Knowledge*) y certifica profesionales (PMP, CAPM). La Guía del PMBOK es un compendio de buenas prácticas reconocidas y la referencia terminológica habitual en los temarios.
 
-Un **proyecto** es una estructura organizacional temporal creada para desarrollar un producto o servicio único (entregable) dentro de limitaciones como tiempo, coste y calidad.
+### Conceptos fundamentales
 
-La **gestión de proyectos** consiste en planificar, organizar, obtener, supervisar y gestionar los recursos y actividades necesarias para cumplir eficaz y eficientemente con los objetivos específicos de cada proyecto. Es fundamental adaptar el enfoque de gestión a las características de cada proyecto.
+- **Proyecto**: esfuerzo **temporal** emprendido para crear un **producto, servicio o resultado único**. Se opone a las *operaciones*, que son trabajo continuo y repetitivo. Un proyecto TI típico abarca desarrollo de software, implantación de aplicaciones, actualizaciones de red, despliegues en la nube, gestión de datos o implantación de servicios TI.
+- **Dirección de proyectos**: aplicación de conocimientos, habilidades, herramientas y técnicas por parte del director de proyecto, en un entorno de incertidumbre y riesgo.
+- **Triple restricción**: el equilibrio entre **alcance, tiempo y coste** determina la calidad del resultado; las visiones ampliadas añaden calidad, riesgo y recursos como restricciones adicionales en competencia.
+- **Interesados (stakeholders)**: personas u organizaciones con capacidad de influir en el proyecto o afectadas por él (directivos, clientes, usuarios, proveedores, reguladores).
+- **Programa**: grupo de proyectos relacionados gestionados de forma coordinada para obtener beneficios que no se lograrían gestionándolos por separado.
+- **Portafolio (cartera)**: colección de proyectos, programas y operaciones gestionados conjuntamente para alcanzar los objetivos estratégicos de la organización.
+- **Oficina de Gestión de Proyectos (PMO)**: unidad que centraliza y coordina la dirección de proyectos. Tipos según su grado de control: **de apoyo** (consultiva), **de control** (exige cumplimiento de marcos y plantillas) y **directiva** (asume la dirección de los proyectos).
+- **PMS y PMIS**: el *Project Management System* es el conjunto de herramientas, técnicas y procedimientos para gestionar proyectos; el *Project Management Information System* es su soporte automatizado e integrado.
+- **OPM y OPM3**: la dirección organizacional de proyectos (OPM) promueve el uso sistemático de la gestión de proyectos para lograr los objetivos estratégicos; **OPM3** es el estándar del PMI para medir y mejorar la madurez OPM de una organización.
+- **Triángulo del Talento del PMI**: las tres áreas de competencia del profesional de proyectos, denominadas actualmente **Ways of Working** (formas de trabajar: enfoques predictivos, ágiles e híbridos), **Power Skills** (habilidades interpersonales y de liderazgo) y **Business Acumen** (visión de negocio). Sustituyen a las denominaciones anteriores (dirección técnica de proyectos, liderazgo y gestión estratégica y de negocio).
 
-## Metodología PM2
+### Ciclo de vida del proyecto
 
-PM2 es una metodología de gestión de proyectos desarrollada por la Comisión Europea. Su objetivo es facilitar a los Directores de Proyecto (DP) la entrega de soluciones y beneficios a sus organizaciones mediante una gestión eficaz durante el ciclo de vida del proyecto. PM2 **proporciona**:
+El ciclo de vida es el conjunto de **fases** por las que pasa un proyecto (cada fase agrupa actividades relacionadas y culmina con uno o más entregables). Según cómo se planifica y entrega el trabajo, se distinguen:
 
-- Una estructura de gobernanza del proyecto.
-- Directrices de procesos y plantillas de artefactos.
-- Pautas para el uso de estos artefactos.
-- Un enfoque orientado a los resultados.
+- **Predictivo (en cascada o tradicional)**: el alcance, el cronograma y el coste se planifican al detalle desde el inicio; los cambios se gestionan de forma controlada.
+- **Iterativo e incremental**: las fases (iteraciones) repiten actividades a medida que mejora el entendimiento del producto, que se entrega por incrementos.
+- **Adaptativo (ágil)**: iteraciones rápidas de duración y coste fijos, con alcance flexible y entregas frecuentes basadas en la retroalimentación.
+- **Híbrido**: combina elementos predictivos y adaptativos; adecuado cuando unas partes del proyecto son estables y otras requieren flexibilidad.
 
-### Pilares de PM2
+### La Guía del PMBOK y sus ediciones
 
-La metodología se estructura en torno a los siguientes elementos:
+- **6.ª edición (2017)**: la última organizada por procesos: **49 procesos** clasificados en **5 grupos de procesos** y **10 áreas de conocimiento**. Sigue siendo la referencia clásica en exámenes.
+- **7.ª edición (2021)**: cambio de enfoque: sustituye los procesos por **12 principios** de la dirección de proyectos y **8 dominios de desempeño**, aplicables a cualquier enfoque de entrega (predictivo, ágil o híbrido).
+- **8.ª edición (noviembre de 2025)**: recombina ambos enfoques: **6 principios**, **7 dominios de desempeño** y **40 procesos** no prescriptivos agrupados en 5 áreas de foco. El examen PMP se alinea con ella desde julio de 2026.
 
-- **Modelo de gobernanza del proyecto**: Define los roles y responsabilidades.
-- **Ciclo de vida del proyecto**: Organiza las fases del proyecto.
-- **Conjunto de procesos**: Describe las actividades de gestión del proyecto.
-- **Conjunto de artefactos del proyecto**: Proporciona plantillas y guías para la documentación.
+### Grupos de procesos y áreas de conocimiento (6.ª edición)
 
-### Ciclo de Vida del Proyecto
+Los **5 grupos de procesos** ordenan la dirección del proyecto en el tiempo:
 
-El ciclo de vida del proyecto en PM2 se divide en cuatro fases principales, cada una con actividades y objetivos específicos:
+- **Inicio** (2 procesos): autorizar formalmente el proyecto o la fase (acta de constitución, identificación de interesados).
+- **Planificación** (24 procesos): definir alcance, cronograma, costes, calidad, recursos, comunicaciones, riesgos, adquisiciones e interesados.
+- **Ejecución** (10 procesos): dirigir y gestionar el trabajo, el conocimiento, el equipo y las comunicaciones.
+- **Monitorización y control** (12 procesos): medir el desempeño frente a la línea base y gestionar los cambios de forma integrada.
+- **Cierre** (1 proceso): cerrar el proyecto o la fase.
 
-- **Fase de Inicio**: Define los resultados deseados, elabora un Caso de Negocio y establece el alcance del proyecto. Las **actividades** incluyen:
-    - Reunión de inicio.
-    - Solicitud de Inicio del Proyecto.
-    - Creación del Caso de Negocio.
-    - Acta de constitución del proyecto.
-- **Fase de Planificación**: Asigna el Equipo Central del Proyecto (ECP), desarrolla el alcance y planifica el trabajo. Las **actividades** principales son:
-    - Reunión de inicio de planificación.
-    - Creación del Manual del proyecto.
-    - Definición de la Matriz de partes interesadas.
-    - Elaboración de planes específicos (de trabajo del proyecto, de aceptación de entregables, de implementación en el negocio, etc.).
-- **Fase de Ejecución**: Coordina la ejecución de los planes y produce los entregables. Es la etapa que requiere mayor cantidad de recursos y supervisión. Las **actividades** son:
-    - Reunión de inicio de ejecución.
-    - Coordinación del proyecto.
-    - Aseguramiento de la calidad.
-    - Elaboración de informes.
-    - Distribución de la información.
-- **Fase de Cierre**: Implica la aceptación formal del proyecto, la elaboración de un Informe final y el cierre administrativo. Se capturan las lecciones aprendidas y recomendaciones para futuros proyectos. Las **actividades** incluyen:
-    - Reunión de revisión de fin de proyecto.
-    - Lecciones aprendidas y recomendaciones post-proyecto
-    - Informe de fin de proyecto.
-    - Cierre administrativo.
+Las **10 áreas de conocimiento** agrupan los procesos por disciplina:
 
-### Seguimiento y Control (Transversal)
+| Área de conocimiento | Qué cubre |
+| --- | --- |
+| **Integración** | Acta de constitución, plan para la dirección del proyecto, control integrado de cambios, cierre |
+| **Alcance** | Recopilar requisitos, definir el alcance, crear la EDT/WBS, validar y controlar el alcance |
+| **Cronograma** | Definir y secuenciar actividades, estimar duraciones, desarrollar y controlar el cronograma |
+| **Costes** | Estimar costes, determinar el presupuesto, controlar los costes |
+| **Calidad** | Planificar, gestionar y controlar la calidad |
+| **Recursos** | Estimar, adquirir y controlar recursos; desarrollar y dirigir al equipo |
+| **Comunicaciones** | Planificar, gestionar y monitorizar las comunicaciones |
+| **Riesgos** | Identificar riesgos, análisis cualitativo y cuantitativo, planificar e implementar respuestas |
+| **Adquisiciones** | Planificar, efectuar y controlar las adquisiciones |
+| **Interesados** | Identificar a los interesados y planificar, gestionar y monitorizar su involucramiento |
 
-Este proceso supervisa todas las actividades de gestión y ejecución del proyecto, abarcando el seguimiento del progreso, la medición del avance, la gestión de cambios, la identificación de riesgos y la toma de acciones correctivas. Las **actividades** incluyen:
+En la 6.ª edición, «Cronograma» y «Recursos» sustituyen a las áreas «Tiempo» y «Recursos Humanos» de ediciones anteriores. La matriz completa cruza áreas y grupos:
 
-- Seguimiento del progreso del proyecto.
-- Control del cronograma y de los costes.
-- Gestión de las partes interesadas, requisitos, cambios, riesgos, incidencias y decisiones, calidad, partes interesadas, aceptación de entregables, transición, implementación en el negocio, y externalización.
+![Matriz de procesos de la Guía del PMBOK (6.ª edición): 49 procesos en 5 grupos y 10 áreas de conocimiento](media/image3.jpeg){width=100%}
 
-**\*Puertas de fase:** Cada fase del proyecto culmina con una revisión y aprobación, conocidas como “puertas de fase”.
+### PMBOK 7: principios y dominios de desempeño
 
-### Roles y Organización del Proyecto
+Los **12 principios** de la 7.ª edición: ser un administrador diligente y respetuoso (*stewardship*), crear un entorno de equipo colaborativo, involucrar eficazmente a los interesados, enfocarse en el valor, reconocer y responder a las interacciones del sistema, demostrar liderazgo, adaptar el enfoque al contexto (*tailoring*), incorporar la calidad en procesos y entregables, navegar la complejidad, optimizar las respuestas a los riesgos, adoptar la adaptabilidad y la resiliencia, y facilitar el cambio para lograr el estado futuro previsto.
 
-PM2 estructura los roles del proyecto en varias capas de responsabilidad:
+Los **8 dominios de desempeño**: interesados, equipo, enfoque de desarrollo y ciclo de vida, planificación, trabajo del proyecto, entrega, medición e incertidumbre.
 
-- **Capa de gobernanza**: Establece la visión y la estrategia.
-- **Capa rectora**: Ofrece la dirección y orientación general.
-- **Capa de dirección**: Asegura la propiedad del Caso de Negocio.
-- **Capa de gestión**: Supervisa el día a día del proyecto.
-- **Capa de ejecución**: Realiza el trabajo del proyecto.
+## Metodología PM²
 
-**Matriz de Asignación de Responsabilidades** (RAM o RASCI): Clarifica las funciones de cada participante, asignando roles de Responsable, Aprobador, Soporte, Consultado e Informado para las distintas tareas y decisiones del proyecto.
+PM² es la metodología de gestión de proyectos desarrollada por la **Comisión Europea** (Centro de Excelencia en PM², **CoEPM²**). Es abierta y gratuita (licencia CC BY), utilizable por cualquier organización, y está pensada para facilitar a los directores de proyecto la entrega de soluciones y beneficios durante todo el ciclo de vida. La versión vigente es la **Guía PM² v3.1** (diciembre de 2023; edición española de 2024). PM² proporciona:
+
+- Una estructura de **gobernanza** del proyecto (roles y responsabilidades).
+- Directrices de **procesos** y plantillas de **artefactos**, con pautas para su uso.
+- Un conjunto de **mentalidades** (el Enfoque PM²) y una orientación a resultados.
+
+### La Casa de PM²
+
+La metodología se apoya en **cuatro pilares**:
+
+- **Modelo de gobernanza del proyecto**: los roles y responsabilidades.
+- **Ciclo de vida del proyecto**: las fases del proyecto.
+- **Conjunto de procesos**: las actividades de gestión del proyecto.
+- **Conjunto de artefactos**: las plantillas de documentación y sus guías.
+
+El **Enfoque PM²** (*PM² Mindsets*) es el aglutinante que mantiene unidas las prácticas: actitudes y comportamientos comunes de los equipos PM². Entre ellos: aplicar las mejores prácticas recordando que las metodologías sirven a los proyectos (y no al revés), orientarse a resultados y al valor de los entregables más allá del cumplimiento de los planes, promover una cultura de colaboración, comunicación clara y rendición de cuentas, asignar los roles a las personas más adecuadas, gestionar activamente las lecciones aprendidas y compartir el conocimiento.
+
+### Ciclo de vida y puertas de fase
+
+El ciclo de vida PM² tiene **cuatro fases secuenciales y no solapadas**, con un tipo de actividad predominante en cada una (aunque las actividades pueden extenderse a fases contiguas), más el **Seguimiento y Control** como actividad transversal:
+
+| Fase | Descripción | Agente clave |
+| --- | --- | --- |
+| **1. Inicio** | Define los resultados deseados, crea el Caso de Negocio y define el alcance | Propietario del Proyecto (PP) |
+| **2. Planificación** | Asigna el Equipo Central del Proyecto, desarrolla el alcance y planifica el trabajo | Director de Proyecto (DP) |
+| **3. Ejecución** | Coordina la ejecución de los planes y produce los entregables | Equipo Central del Proyecto (ECP) |
+| **4. Cierre** | Coordina la aceptación formal, informa del desempeño, captura las lecciones aprendidas y cierra administrativamente | Partes interesadas |
+| **Seguimiento y Control** (transversal) | Supervisa todo el trabajo: mide el progreso, gestiona cambios, riesgos e incidencias y aplica acciones correctivas | Director de Proyecto (DP) |
+
+Al final de una fase, el proyecto pasa por un punto de revisión y aprobación llamado **puerta de fase**, que asegura que las personas adecuadas lo revisan antes de continuar. PM² define **tres puertas**:
+
+- **LpP (Listo para Planificación)**, *Ready for Planning (RfP)*: al final de la Fase de Inicio.
+- **LpE (Listo para Ejecución)**, *Ready for Executing (RfE)*: al final de la Fase de Planificación.
+- **LpC (Listo para Cierre)**, *Ready for Closing (RfC)*: al final de la Fase de Ejecución.
+
+### Actividades y artefactos por fase
+
+- **Fase de Inicio**: reunión de inicio, **Solicitud de Inicio del Proyecto** (formaliza la petición y el contexto), **Caso de Negocio** (justificación y requisitos presupuestarios) y **Acta de Constitución del Proyecto** (alcance de alto nivel; base para la puerta LpP).
+- **Fase de Planificación**: reunión de lanzamiento de la planificación, **Manual del Proyecto** (define el enfoque de gestión), **Matriz de Partes Interesadas**, **Plan de Trabajo del Proyecto** (desglose del trabajo, esfuerzo y costes, cronograma) y otros planes específicos (aceptación de entregables, transición, implementación en el negocio, externalización).
+- **Fase de Ejecución**: reunión de lanzamiento de la ejecución, coordinación del proyecto, aseguramiento de la calidad, elaboración de informes y distribución de la información; el equipo produce los entregables y el Propietario del Proyecto los acepta.
+- **Fase de Cierre**: reunión de revisión de fin de proyecto, lecciones aprendidas y recomendaciones post-proyecto, **Informe de Fin de Proyecto** y cierre administrativo.
+
+### Gobernanza: capas y roles
+
+PM² organiza los roles en capas de responsabilidad. Solo hay un equipo de proyecto, formado por las personas de las capas de Dirección, Gestión y Ejecución:
+
+| Capa | Función | Roles |
+| --- | --- | --- |
+| **Gobernanza** | Visión y estrategia de la organización; prioridades, inversiones y recursos | **Órgano de Gobernanza Pertinente (OGP)**: aprueba el proyecto y lo dota de fondos; gestiona la cartera |
+| **Rectora** | Dirección y orientación general del proyecto | **Comité de Dirección del Proyecto (CDP)**: presidido por el PP; principal órgano de decisión y resolución de incidencias |
+| **Dirección** | Abandera el proyecto y se apropia del Caso de Negocio; moviliza recursos | **Propietario del Proyecto (PP)** (cliente, parte solicitante) y **Proveedor de Soluciones (PS)** (responsable de los entregables, parte proveedora) |
+| **Gestión** | Día a día del proyecto: organiza, supervisa y controla el trabajo | **Responsable de Negocio (RN)** y **Director de Proyecto (DP)** |
+| **Ejecución** | Realiza el trabajo: produce los entregables y los implanta | **Grupo de Implementación en el Negocio (GIN)** y **Equipo Central del Proyecto (ECP)** |
+
+El **CDP** está compuesto al menos por los cuatro roles de las capas de Dirección y Gestión (PP, PS, RN, DP), con equilibrio entre parte solicitante y proveedora, y puede incorporar roles opcionales: representantes de usuarios, director de proyecto del contratista, oficina de arquitectura TI, oficina de soporte a proyectos, garantía de calidad, gestión documental, protección de datos o seguridad de la información.
+
+### Matriz de asignación de responsabilidades (RAM o RASCI)
+
+La guía documenta la asignación de responsabilidades de cada artefacto con una tabla **RASCI**:
+
+| Letra | Rol | Significado |
+| --- | --- | --- |
+| **R** | Responsable | Hace el trabajo; solo hay una persona responsable por tarea |
+| **A** | Aprobador | Rinde cuentas de la correcta y completa realización; solo una por tarea |
+| **S** | Soporte | Trabaja con el responsable ayudando a completar la tarea |
+| **C** | Consultado | Se solicita su opinión; comunicación bidireccional |
+| **I** | Informado | Se le mantiene al corriente del progreso |
+
+PM² cuenta además con una extensión ágil (**PM² Ágil**) para proyectos con entrega iterativa, que se trata junto con el resto de marcos ágiles en el tema correspondiente.
 
 ## Metodología gvLOGOS
 
-gvLOGOS es la metodología desarrollada por la Dirección General de Tecnologías de la Información y las Comunicaciones (DGTIC) para la gestión y desarrollo de proyectos y servicios TIC en la Generalitat Valenciana. Se enfoca en definir procesos y métodos de trabajo necesarios para la gestión de proyectos, servicios, incidencias y cambios, cubriendo desde la recepción de la demanda hasta la entrega final. La metodología toma como base ITIL e ISO 20000 para gestión de servicios y PMI para la gestión de proyectos.
-
-### Modelo Integral de Gestión de Calidad TIC de la DGTIC
+gvLOGOS es la metodología desarrollada por la **Dirección General de Tecnologías de la Información y las Comunicaciones (DGTIC)** para la gestión de los proyectos y servicios TIC de la **Generalitat Valenciana**. Forma parte del modelo integral de gestión de calidad TIC de la DGTIC: promueve una gestión unificada de la demanda y una gestión estructurada de proyectos, servicios, incidencias y cambios, desde la recepción de la demanda hasta la entrega, incorporando de forma transversal la **seguridad**, la **calidad** y la **planificación**. Toma como base **ITIL** e **ISO/IEC 20000** para la gestión de servicios y los marcos **PMBOK 7** y **PM²** para la gestión de proyectos.
 
-gvLOGOS forma parte del modelo integral de calidad TIC de la DGTIC, que promueve una gestión unificada de la demanda de productos y servicios TIC, así como una gestión estructurada de los proyectos, mejorando la eficiencia en la administración de recursos.
-
-### Subsistemas y Procesos de gvLOGOS
+### Estructura de gvLOGOS
 
-La metodología se estructura en **tres subsistemas** principales, con **dos procesos transversales**:
+En su versión vigente, la metodología se organiza en **tres cadenas de valor** con dos procesos **transversales** (calidad y seguridad) integrados en todas ellas:
 
-- **Subsistemas (3)**
-    1. ![Screenshot 2023-09-05 at 22.33.59.png](media/image1.png)**Subsistema de Gestión de la Demanda**: Incluye la gestión de diversas solicitudes y servicios:
-        1. **gvLOGOS-ent**: Gestión de Entradas.
-        2. **gvLOGOS-inc**: Gestión de Incidencias.
-        3. **gvLOGOS-ser**: Gestión de Peticiones de Servicio.
-        4. **gvLOGOS-cam**: Gestión de Cambios.
-        5. **gvLOGOS-pro**: Gestión de Proyectos.
-    2. **Subsistema de Gestión de la Calidad**:
-        1. **gvLOGOS-qua**: Asegura la calidad en todas las fases del proyecto y servicio.
-    3. **Subsistema de Gestión de la Seguridad**:
-        1. **gvLOGOS-seg**: Gestión de la seguridad aplicada a productos y servicios TIC.
-- **Procesos transversales (4)**:
-    1. **gvLOGOS-gedes**: Gestión de Despliegues.
-    2. **gvLOGOS-plan**: Gestión del Plan de Proyectos.
-    3. **gvLOGOS-agile:** Gestión Agile
-    4. **gvLOGOS-con:** Gestión de Proveedores
+| Ámbito | Proceso | Objeto |
+| --- | --- | --- |
+| **Gestión de proyectos** | gvLOGOS-pro | Gestión de proyectos |
+| | gvLOGOS-agile | Gestión ágil |
+| **Gestión de servicios** | gvLOGOS-inc | Gestión de incidencias |
+| | gvLOGOS-ser | Gestión de peticiones de servicio |
+| | gvLOGOS-problema | Gestión de problemas |
+| | gvLOGOS-cam | Gestión de cambios |
+| | gvLOGOS-con | Gestión de proveedores |
+| **Gestión de entregas** | gvLOGOS-gedes | Gestión de despliegues |
+| **Transversales** | gvLOGOS-qua / gvLOGOS-seg | Calidad y seguridad, integradas en la cadena de valor |
 
-### Herramientas de gvLOGOS
+Las versiones anteriores de la metodología se organizaban en subsistemas (gestión de la demanda, con un proceso de entrada gvLOGOS-ent que derivaba a incidencias, peticiones, cambios o proyectos; calidad; y seguridad) más procesos transversales como gvLOGOS-plan (plan de proyectos); esa estructura pervive en parte de la documentación y materiales de formación.
 
-Para una ejecución efectiva, gvLOGOS utiliza varias herramientas:
+La **PMO DGTIC** (oficina de gestión de proyectos, adscrita al Servicio de Tecnología y Calidad de las TIC) promueve la cultura de proyectos, actúa transversalmente y ofrece soporte continuo: **todos los proyectos nuevos deben notificarse a la PMO** para su categorización y para determinar el tipo de seguimiento.
 
-- **JIRA:** Gestión de incidencias y solicitudes.
-- **gvEstima:** Estimación de esfuerzos en desarrollo.
-- **HP-PPM:** Herramienta de gestión de proyectos.
-- **Confluence:** Espacio colaborativo para compartir conocimientos.
+### gvLOGOS-pro: el proceso de gestión de proyectos
 
-### Roles en la Metodología gvLOGOS
+El proceso **gvLOGOS-pro** (versión vigente **4.1**, aprobado en julio de 2024) detalla las directrices de gestión de proyectos de la DGTIC para facilitar su control, homogeneidad y alineamiento estratégico. Es aplicable a proyectos de cualquier tipología: prestación de servicios, software, formación, innovación (I+D+i, BI, IA), procesos, consultoría, comunicaciones, sistemas y ciberseguridad.
 
-- **Responsable funcional/Usuario experto:** Define la funcionalidad de la aplicación.
-- **Grupo de asignación:** Atiende, diagnostica y resuelve incidencias.
-- **Gestor de proyecto:** Supervisa el desarrollo del proyecto.
-- **Comité de decisión:** Aprueba recursos y propuestas.
-- **Oficina de calidad:** Realiza validaciones.
-- **Gestor de entregas:** Monitorea la implementación.
+Terminología y enfoques (alineados con PMBOK 7): proyecto, programa, portafolio, hito y riesgo se definen como en el PMI, y el gestor decide el **enfoque** del proyecto: **predictivo** (cascada), **adaptativo** (ágil) o **híbrido**.
 
-### gvLOGOS-pro: Ciclo de Gestión de Proyectos
+- **Roles**:
+    - **Usuario**: propone la idea o necesidad y registra el proyecto; detalla los requisitos a alto nivel.
+    - **Gestor de proyecto**: responsable de la gestión; planifica, coordina, supervisa, involucra a los interesados y decide el enfoque metodológico. Puede ser interno o externo (en proyectos con proveedor coexisten gestor interno y externo).
+    - **Equipo de especialistas**: ejecuta las tareas y colabora en la finalización.
+    - **Aprobador**: valida requisitos, entregables y el propio proyecto; decide si se ejecuta y cuándo. Incluye las figuras de responsable funcional, aprobador DGTIC y patrocinador.
+    - **Interesados**: personas o entidades externas con interés directo o indirecto (usuarios finales, proveedores, reguladores).
+- **Ciclo de vida en tres fases**, independiente de la tipología:
+    1. **Lanzamiento**: registro del proyecto en la herramienta corporativa, asignación del gestor (con escalado a proveedor si procede) y cumplimentación del **Documento de Proyecto** (objetivos, alcance, presupuesto, cronograma, hitos y entregas, riesgos, problemas y dependencias, con vista Gantt); se solicita la aprobación y el aprobador decide el paso a ejecución o devuelve el proyecto para ajustes. Los costes de recursos son bajos (planificación y preparación).
+    2. **Ejecución**: realización de las tareas planificadas, registro del avance (estimado frente a real, para detectar desviaciones) y entrega de tareas conforme se completan; los cambios se canalizan por **gvLOGOS-cam**. El aprobador revisa cada entrega: si la acepta y es la última, se elabora el **Acta de Cierre**; si la rechaza por cambio de requisitos, el proyecto vuelve a lanzamiento. Los costes alcanzan su punto máximo.
+    3. **Cierre**: se completa el **Acta de Cierre** (coste real frente a estimado, fechas reales frente a previstas, desviaciones y lecciones aprendidas) y el aprobador la revisa; aceptada, el proyecto se cierra y toda la documentación se remite a la **PMO DGTIC** para análisis y archivo.
+- **Gestión en Jira**: para reducir burocracia, la versión vigente sustituye gran parte de los documentos por **campos estructurados en Jira** (frontal digital): el Documento de Proyecto (descripción, riesgos con gravedad alta/media/baja y mitigación por aceptación o transferencia, hitos, coste estimado sin IVA, estimación de esfuerzo y fechas) y el Acta de Cierre (costes y fechas previstos frente a reales, fecha de entrega del ANS, hitos revisados y lecciones aprendidas). Los documentos extensos clásicos (TOMREQ, PLAPRO) pueden seguir anexándose a criterio del gestor.
 
-El ciclo de gestión de proyectos en gvLOGOS se divide en **cuatro fases**:
+### Flujo documental clásico de gvLOGOS
 
-1. **Fase de Verificación de la Solicitud:** Se revisa y valida la solicitud entrante a través de gvLOGOS-ent.
-    - **Roles implicados:** Supervisor de la solicitud y Solicitante.
-2. **Fase de Propuesta:** Gestión detallada de la propuesta del proyecto.
-    - **Etapas:** (documentos)
-1. **TOMREQ (TOMa de REQuisitos):** El Gestor del Proyecto realiza la toma de requisitos del solicitante o responsable funcional.
-2. **VAREQ (VAlidación de REQuisitos):** La Oficina de Calidad valida los requisitos recogidos.
-3. **CORACE (CORreo de ACEptación):** El Gestor del Proyecto envía el correo de aceptación de requisitos al responsable funcional o usuario experto. Si estos son aceptados, el “TOMREQ” se convierten en “Contrato”.
-4. **IMPAPRO (IMPacto PROyecto):** El Gestor del Proyecto elabora el documento de impacto de la solución. Antes IMPAEV.
-5. **ANCOBE (ANÁlisis COste-BEneficio):** El Gestor del Proyecto rellena el documento de análisis coste-beneficio del proyecto.
-6. **VACOBE (VAlidación del análisis COste-BEneficio):** La Oficina de Calidad valida el análisis coste-beneficio. Tras esta validación, el comité de decisión decide si el proyecto se llevará a cabo o no.
-    - **Roles implicados:** Gestor del Proyecto, Oficina de Calidad, Solicitante, Supervisor de la Solicitud, Comité de Decisión y Gestor de Entregas.
-1. **Fase de Proyecto:** Desarrollo y gestión del proyecto basado en los requisitos y la planificación establecida.
-    - **Etapas:** (documentos)
-1. **PLAPRO (PLAn del PROyecto):** El Gestor del Proyecto elabora el plan del proyecto, que incluye tareas asignadas, recursos, análisis de riesgos, problemas potenciales, etc.
-2. **VAPRO (VAlidación del Plan del PROyecto):** La Oficina de Calidad valida el plan del proyecto antes de iniciar su desarrollo.
-    - **Desarrollo:** Se ejecutan las fases de análisis, diseño y desarrollo conforme al PLAPRO y los requisitos validados.
-3. **ACTACI (ACTa de CIerre):** Se formaliza el cierre del proyecto mediante una reunión entre el responsable de entrada y el responsable funcional. Este documento es validado por la Oficina de Calidad.
-    - **Roles implicados:** Oficina de Calidad, Gestor del Proyecto, Supervisor de la Solicitud y Gestor de Entregas.
-1. **Fase de Cierre:** Cierre formal de la petición y finalización administrativa del proyecto.
-    - **Roles implicados:** Gestor de Facturación, Oficina de Calidad y Gestor del Proyecto.
+Las versiones anteriores del proceso, todavía presentes en materiales de formación, estructuraban la gestión en **cuatro fases** (verificación de la solicitud, propuesta, proyecto y cierre) con un flujo de documentos validados por la **Oficina de Calidad** en cada paso. Sus siglas siguen siendo de uso común:
 
-### Otros elementos de control y documentación
+![Flujo de las fases de propuesta y proyecto en versiones anteriores de gvLOGOS-pro](media/image2.png){width=100%}
 
-![Screenshot 2023-09-25 at 22.12.11.png](media/image2.png)gvLOGOS utiliza documentos y actas para asegurar la trazabilidad y control en todas las fases del proyecto, tales como el **ACTACO** (Acta de seguimiento del contrato), el **ACTAAR** (Acta de Arranque), **ACTAFU** (Acta de Reunión Funcional), **ASI** (Análisis Funcional), **DSI** (Diseño Técnico), **DECIDE** (Toma de Decisión), **IMPACO** (Impacto Contrato), **CONFIE** (Configuración de entornos), **PLAPRU** (Plan de pruebas), **ANCOBE2** (Análisis Coste-Beneficio 2)
+| Sigla | Documento | Quién lo elabora o valida |
+| --- | --- | --- |
+| **TOMREQ** | Toma de requisitos | Gestor del proyecto, con el solicitante o responsable funcional |
+| **VAREQ** | Validación de requisitos | Oficina de Calidad |
+| **CORACE** | Correo de aceptación de requisitos | Gestor del proyecto; aceptados los requisitos, el TOMREQ se convierte en «contrato» |
+| **IMPAPRO** | Impacto de la solución (antes IMPAEV) | Gestor del proyecto |
+| **ANCOBE** | Análisis coste-beneficio | Gestor del proyecto |
+| **VACOBE** | Validación del análisis coste-beneficio | Oficina de Calidad; después el **Comité de Decisión** aprueba o rechaza el proyecto |
+| **PLAPRO** | Plan del proyecto (tareas, recursos, riesgos) | Gestor del proyecto |
+| **VAPRO** | Validación del plan del proyecto | Oficina de Calidad |
+| **ACTACI** | Acta de cierre | Reunión entre responsable de entrada y responsable funcional; valida la Oficina de Calidad |
 
-### gvLOGOS-con: Gestión de Contratos (Proveedores)
+Otros documentos y actas de control: **ACTAAR** (acta de arranque), **ACTACO** (acta de seguimiento del contrato), **ACTAFU** (acta de reunión funcional), **ASI** (análisis funcional), **DSI** (diseño técnico), **DECIDE** (toma de decisión), **IMPACO** (impacto en contrato), **CONFIE** (configuración de entornos), **PLAPRU** (plan de pruebas) y **ANCOBE2** (análisis coste-beneficio revisado).
 
-Este módulo se centra en la gestión eficiente de los proveedores en los proyectos y servicios TIC de la Generalitat Valenciana, asegurando un control adecuado durante todas las fases del contrato.
+### gvLOGOS-agile: gestión ágil
 
-### Fases de la Gestión de Proveedores
+gvLOGOS-agile adapta los principios ágiles al entorno de la Generalitat, priorizando flexibilidad, eficiencia y colaboración. Parte de los **cuatro valores del Manifiesto Ágil**: individuos e interacciones sobre procesos y herramientas; software que funciona sobre documentación exhaustiva; colaboración con el cliente sobre negociación contractual; y respuesta al cambio sobre el seguimiento estricto de un plan.
 
-- **Incorporación de Contratos**\ En esta fase se definen aspectos clave como el Acuerdo de Nivel de Servicio (**ANS**), las penalidades, la gestión de interesados y el proceso de facturación.
-- **Seguimiento de Contratos**\ Incluye la gestión de la facturación, resolución de conflictos, ajustes necesarios y posibles prórrogas del contrato.
-- **Finalización de Contratos**\ Se lleva a cabo la conclusión formal de los contratos, asegurando que se cumplan todos los requisitos y obligaciones establecidos.
+**Scrum** es el marco principal dentro de gvLOGOS-agile (el detalle de Scrum y del escalado ágil se desarrolla en su propio tema):
 
-### Documento ANS
+- **Roles**: **Product Owner** (prioriza el producto y su valor), **Scrum Master** (facilita el marco y elimina impedimentos) y **desarrolladores** (entrega incremental del producto).
+- **Artefactos**: **Product Backlog** (lista priorizada de necesidades), **Sprint Backlog** (trabajo del sprint) e **Incremento** (resultado funcional del sprint).
+- **Eventos** (duraciones máximas de la Guía de Scrum 2020, para un sprint de un mes): *Sprint Planning* (**8 horas**), *Daily Scrum* (**15 minutos** diarios), *Sprint Review* (**4 horas**) y *Sprint Retrospective* (**3 horas**).
+- **Gestión del backlog**: creación (Product Owner y equipo), priorización (valor y urgencia), estimación (tiempo y esfuerzo), definición (clarificación de requisitos) y refinamiento continuo.
+- **Elementos del backlog**: **tema** (objetivo general), **épica** (agrupación de funcionalidades), **historia de usuario** («como [usuario], quiero [función] para [beneficio]») y **subtareas** técnicas.
+- **MVP (producto mínimo viable)**: se prioriza entregar una versión básica funcional para validar la viabilidad y reducir riesgos.
+- **Técnicas de priorización**: **MoSCoW** (Must, Should, Could, Won't), **matriz de Eisenhower** (importancia frente a urgencia) y **modelo Kano** (satisfacción del usuario: requisitos básicos, de desempeño y entusiasmantes).
+- **Escalado ágil**: **SoS** (Scrum of Scrums, coordinación entre equipos), **SAFe** (integración estratégica y operativa) y **LeSS y Nexus** (varios equipos sobre un mismo producto).
+- **Objetivos y resultados clave (OKR)**: marco para alinear objetivos estratégicos con resultados medibles; los objetivos se formulan **SMART** (específicos, medibles, alcanzables, relevantes y temporales).
 
-El ANS (Acuerdo de Nivel de Servicio) es el pilar fundamental para regular la relación con los proveedores.\ Incluye:
+### gvLOGOS-con: gestión de proveedores
 
-- **Condiciones del acuerdo**: Detalla los compromisos asumidos por ambas partes.
-- **Funcionalidad**: Describe las características del servicio o producto a entregar.
-- **Medición**: Define los indicadores para evaluar el cumplimiento.
-- **Calendario y horario de atención**: Especifica la disponibilidad requerida del servicio.
-- **Reducciones**: Establece penalizaciones por incumplimientos.
+Gestiona la relación con los proveedores de proyectos y servicios TIC durante todas las fases del contrato:
 
-### Tipos de ANS
+- **Incorporación de contratos**: se definen el **Acuerdo de Nivel de Servicio (ANS)**, las penalidades, la gestión de interesados y el proceso de facturación.
+- **Seguimiento de contratos**: facturación, resolución de conflictos, ajustes y prórrogas.
+- **Finalización de contratos**: conclusión formal verificando el cumplimiento de requisitos y obligaciones.
 
-- **Calidad de Producto (CPD)**\ Relacionado con el cumplimiento de especificaciones del producto.
-- **Calidad de Proceso (CPC)**\ Asegura que los procesos se ejecutan conforme a lo definido.
-- **Calidad de Servicio (CSV)**\ Orientado a garantizar la calidad del servicio ofrecido.
+El **ANS** es el pilar que regula la relación con el proveedor. Incluye las condiciones del acuerdo, la funcionalidad a entregar, los indicadores de medición, el calendario y horario de atención y las **reducciones** (penalizaciones por incumplimiento). Se distinguen ANS de **calidad de producto**, de **calidad de proceso** y de **calidad de servicio**, con mediciones por tiempo (plazos), por fechas clave, por campo informado (entregas defectuosas) o por registro de incumplimientos. El proceso se apoya en cuatro pilares heredados de ITIL: procesos (prácticas), calidad, cliente e independencia (gestión imparcial del proveedor).
 
-### Tipos de mediciones en los ANS
+### ITIL en la gestión de servicios gvLOGOS
 
-- **Tiempo**: Cumplimiento de plazos.
-- **Fechas específicas**: Eventos clave en el contrato.
-- **Campo informado**: Identificación de entregas defectuosas.
-- **Registro de proyecto ANS**: Documentación de incumplimientos detectados.
+La parte de servicios de gvLOGOS se apoya en **ITIL 4** (el marco se desarrolla en su propio tema), cuyas **prácticas** se agrupan en tres bloques: **generales de gestión** (estrategia, riesgos, mejora continua), **de gestión de servicios** (incidentes, problemas, cambios, peticiones, niveles de servicio, configuración, *service desk*) y **técnicas** (por ejemplo, gestión de plataformas en la nube). Los flujos típicos que gvLOGOS toma de estas prácticas siguen un ciclo genérico de registro, diagnóstico, aprobación, implementación y cierre:
 
-### Pilares de ITIL aplicados a gvLOGOS-con
+- **Gestión de incidentes**: identificación y registro, investigación y diagnóstico, resolución y cierre.
+- **Gestión de problemas**: identificación y registro, categorización y priorización, investigación y diagnóstico, resolución, revisión y cierre.
+- **Gestión de cambios**: solicitud y registro, revisión y autorización, construcción y pruebas, aprobación del despliegue, implementación, revisión y cierre.
+- **Gestión de peticiones de servicio**: solicitud y registro, aprobación, implementación, revisión y cierre.
+- **Gestión de los ANS**: definición, implementación y monitorización de resultados.
 
-- **Procesos (prácticas):** Basados en la gestión estructurada de servicios.
-- **Calidad:** Estándares elevados en todas las fases del contrato.
-- **Cliente:** Enfoque centrado en satisfacer las necesidades del cliente.
-- **Independencia:** Gestión imparcial y objetiva de los proveedores.
+### gvLOGOS-gedes: gestión de despliegues
 
-### ITIL v4 en gvLOGOS
+Homogeneiza y normaliza los procesos de entrega y despliegue de aplicaciones: coordina a los actores, asegura controles de calidad y consolida el catálogo de aplicaciones y el conocimiento sobre ellas.
 
-ITIL v4 introduce un enfoque basado en la **cadena de valor**, estructurando actividades y componentes para maximizar el impacto positivo en la organización. Las prácticas se dividen en:
+- **Fases**: **preparación** (el gestor de entregas solicita la preparación de los entornos), **desarrollo** (primeras iteraciones de pruebas), **preproducción** (despliegue y pruebas de aceptación; si fallan se activa el plan de reversión) y **producción** (despliegue final tras validar las pruebas).
+- **Componentes**: entornos de desarrollo, preproducción y producción; informes (VADESA, pruebas funcionales, garantía); versionado con el esquema **Nombre_MAJOR.minor.patch**; tipos de pruebas (unitarias, integración, regresión, funcionales, extremo a extremo); y plan de reversión (pasos para restaurar la base de datos y desplegar versiones anteriores).
+- **Unidades de entrega por entorno**: a desarrollo, alta en CATI, repositorio actualizado, código fuente y documentación; a preproducción, informe de pruebas unitarias, análisis estático, especificaciones de pruebas funcionales y plan de reversión; a producción, informe de pruebas funcionales y documentos finales.
 
-- **Prácticas generales de gestión**: Incluyen estrategia, gestión de riesgos y mejora continua.
-- **Prácticas de gestión de servicios**: Diseño, transición, operación del servicio y **Service Desk**.
-    - Ejemplos: Gestión de incidentes, cambios, problemas, peticiones de servicio, niveles de servicio y configuración del servicio.
-- **Prácticas técnicas**: Como la implementación de modelos de servicios en la nube.
+### Calidad y pruebas del software en gvLOGOS
 
-**Ciclo de vida ITIL:** Registro, Diagnostico, Aprobación, Implementación, y Cierre
+El control de calidad del software entregado se apoya en el modelo **ISO/IEC 25010** (familia SQuaRE), que define **8 características** de calidad del producto: adecuación funcional, eficiencia de desempeño, compatibilidad, usabilidad, fiabilidad, seguridad, mantenibilidad y portabilidad (la revisión de 2023 amplía el modelo a nueve características; se detalla en el tema de calidad del software).
 
-- **Gestión de incidentes:** Identificación y registro, Investigación y diagnóstico, Resolución, Cierre
-- **Gestión de cambios:** Solicitud y registro, Revisión y autorización de la construcción, Construcción y pruebas, Aprobación del despliegue, Implementación del cambio, Revisión y cierre
-- **Gestión de problemas:** Identificación y registro, categorización y priorización, investigación y diagnóstico, Resolución, Revisión y cierre.
-- **Gestión de peticiones de servicio:** Solicitud y registro, Aprobación, Implementación, Revisión y cierre
-- **Gestión de ANS:** Definición de los ANS, Implementación de los ANS, y monitorización de resultados
+Las pruebas (desarrolladas en su propio tema) se organizan en:
 
-### gvLOGOS-agile: Metodología Agile de la Generalitat
+- **Pruebas funcionales** (unitarias, integración, regresión, aceptación, extremo a extremo) y **no funcionales** (rendimiento, carga, estrés, volumen, seguridad).
+- **Niveles de prueba** y responsables: componentes (equipo de programación), integración (programación y oficina de test), sistema (negocio y oficina de test), aceptación (usuarios y oficina de test) e implantación (equipo de operaciones).
+- **Proceso de pruebas**: planificación (alcance y objetivos), preparación (diseño de casos), ejecución y cierre (informes). Entregables: plan de test, casos de test, registro de defectos e informe de resultados.
 
-La metodología **gvLOGOS-agile** adapta los principios del enfoque Agile al entorno de la Generalitat Valenciana, priorizando flexibilidad, eficiencia y colaboración en la gestión de proyectos.
+### Herramientas corporativas
 
-### Valores principales de Agile
-
-- **Individuos e interacciones** por encima de procesos y herramientas.
-- **Software que funciona** por encima de documentación exhaustiva.
-- **Colaboración con el cliente** por encima de negociación contractual.
-- **Respuesta al cambio** frente al seguimiento estricto de un plan.
-
-### Scrum: Principios de gvLOGOS-agile
-
-Scrum es la metodología principal dentro de gvLOGOS-agile, estructurada en roles, artefactos y eventos clave.
-
-### Roles en Scrum
-
-- **Scrum Master:** Facilita la metodología y elimina impedimentos.
-- **Product Owner:** Define las prioridades del producto y su valor para el cliente.
-- **Equipo de desarrollo:** Responsable de la entrega incremental del producto.
-
-### Artefactos de Scrum
-
-- **Product backlog:** Lista priorizada de tareas o necesidades del producto.
-- **Sprint backlog:** Trabajo que el equipo realizará en un sprint específico.
-- **Incremento:** Resultado funcional entregado al final de un sprint.
-
-### Gestión del backlog
-
-Los elementos del backlog se gestionan en los siguientes pasos:
-
-1. **Creación:** Definida por el Product Owner y el equipo.
-2. **Priorización:** Según el valor y la urgencia del elemento.
-3. **Estimación:** Tiempo y esfuerzo necesario para completar el trabajo.
-4. **Definición:** Clarificación de los requisitos.
-5. **Refinamiento:** Ajustes continuos por parte del equipo.
-
-### Elementos del backlog
-
-- **Tema:** Objetivo general del proyecto, como "Mejorar métricas de una aplicación".
-- **Épica:** Agrupación de funcionalidades relacionadas (e.g., "Integración con GPS").
-- **Historia de usuario:** Descripción específica de una necesidad, e.g., “Como [usuario], quiero [ver mi recorrido en bici] para [mejorar mis rutas]”.
-- **Subtareas:** Actividades técnicas derivadas de la historia, como "Conectar API de Google Maps".
-
-### Eventos de Scrum
-
-- **Reunión de planificación:** (1 hora/semana) Se define el objetivo del sprint y las tareas asignadas.
-- **Reunión diaria:** (15 minutos/día) Coordina al equipo para asegurar el progreso.
-- **Revisión del sprint:** (2-3 horas) Al final del sprint, se evalúa el incremento realizado.
-- **Retrospectiva:** (1-3 horas) Reflexión sobre el proceso para mejoras futuras.
-
-### Escalado Agile
-
-En proyectos complejos, gvLOGOS-agile utiliza enfoques de escalado como:
-
-- **SoS (Scrum of Scrums):** Coordinación entre múltiples equipos Scrum.
-- **SAFe (Scaled Agile Framework):** Integración estratégica y operativa.
-- **Nexus y LeSS:** Optimización para entornos con varios equipos.
-
-### MVP (Minimum Viable Product)
-
-Se prioriza la entrega de un **Producto Mínimo Viable**, reduciendo riesgos al lanzar una versión básica funcional para validar su viabilidad.
-
-### Técnicas de priorización de requisitos
-
-- **Método MoSCoW:** Clasifica elementos como Must, Should, Could, Won’t.
-- **Matriz de Eisenhower:** Evalúa tareas según su importancia y urgencia.
-- **Modelo Kano:** Priorización basada en la satisfacción del usuario (requeridos, deseados, emocionantes, indiferentes).
-
-### Gestión por Objetivos (MBO) y Metodología OKR
-
-Se utiliza como marco para alinear los objetivos estratégicos de gvLOGOS-con con resultados concretos.
-
-- **Objetivos SMART**:
-    - **Específicos**
-    - **Medibles**
-    - **Alcanzables**
-    - **Relevantes**
-    - **Temporales**
-- **Resultados Clave**: Indicadores cuantificables que permiten evaluar el progreso y éxito de los objetivos.
-
-### gvLOGOS-gedes: Gestión de Despliegues
-
-### Beneficios de gvLOGOS-gedes
-
-Esta metodología garantiza la homogeneización y normalización de los procesos de entrega y despliegue, facilitando la coordinación de los actores involucrados y asegurando controles de calidad. Además, consolida un catálogo de aplicaciones y proporciona conocimiento sobre las mismas y sus sistemas relacionados.
-
-### Fases:
-
-- **Preparación:** El gestor de entregas solicita la preparación de los entornos de trabajo.
-- **Desarrollo:** Se realizan las primeras iteraciones de pruebas.
-- **Preproducción:** Se despliega el producto y se ejecutan pruebas de aceptación. Si no son correctas, se activa el plan de reversión.
-- **Producción:** El producto final se despliega tras validar y aceptar las pruebas realizadas.
-
-### Componentes:
-
-- **Entornos:** Desarrollo, preproducción y producción.
-- **Informes:** Informe VADESA, de pruebas funcionales y/o de garantía.
-- **Versionado:** Se sigue el esquema “Nombre_MAJOR.minor.patch”
-- **Tipos de pruebas:** Unitarias, integración, regresión, funcionales y end-to-end.
-- **Plan de reversión:** Incluye pasos específicos para restaurar la base de datos, desplegar versiones anteriores, entre otros.
-
-### Unidades de entrega:
-
-- **Desarrollo:** Alta en CATI, repositorio actualizado, código fuente y documentos necesarios.
-- **Preproducción:** Informe de pruebas unitarias, análisis estático, especificaciones de pruebas funcionales y plan de reversión.
-- **Producción:** Informe de pruebas funcionales y documentos finales.
-
-### Herramientas utilizadas:
-
-- **CATI:** Para el alta de activos software.
-- **CONFIE:** Para la configuración de entornos.
-- **Subversión:** Gestión de documentación técnica, tareas y auditorías.
-- **Nexus:** Repositorio de dependencias y artefactos.
-- **Jenkins:** Automatización de compilación y entrega.
-    - **jenkins-qua:** Construcción de aplicaciones.
-    - **jenkins-sis:** Despliegue de aplicaciones.
-    - **Tipos de jobs:** Integración continua, entrega y despliegue, análisis de código.
-- **Condesa:** Control de despliegues de aplicaciones específicas.
-- **Sonar:** Herramienta para análisis estático y generación de informes.
-
-### Modelo de Calidad del Software ISO/IEC 25010
-
-La calidad del software se define como el grado en que un producto satisface las necesidades de los usuarios. Este modelo incluye características esenciales para evaluar y asegurar la calidad del software desarrollado.
-
-### Características principales:
-
-- **Adecuación funcional:** Cumple los requisitos especificados.
-- **Eficiencia de desempeño:** Optimización de recursos.
-- **Compatibilidad:** Interoperabilidad entre sistemas.
-- **Usabilidad:** Facilidad de uso.
-- **Fiabilidad:** Continuidad operativa y tolerancia a fallos.
-- **Seguridad:** Protección contra accesos no autorizados.
-- **Mantenibilidad:** Facilidad para corregir, mejorar y adaptar el software.
-- **Portabilidad:** Capacidad de adaptación a diferentes entornos.
-
-### Testing y niveles de pruebas:
-
-- **Pruebas funcionales:** Validan que el software cumple con los requisitos especificados.
-    - Ejemplos: Unitarias, integración, regresión, aceptación, end-to-end.
-- **Pruebas no funcionales:** Evalúan aspectos como rendimiento, carga, estrés, volumen y seguridad.
-
-### Niveles de pruebas:
-
-- **Componentes:** Realizadas por el equipo de programación.
-- **Integración:** Verificadas por el equipo de programación y la Oficina de test.
-- **Sistemas:** Gestionadas por el equipo de negocio y la Oficina de test.
-- **Aceptación:** Validación final por los usuarios y la Oficina de test.
-- **Implantación:** Ejecutadas por el equipo de operaciones.
-
-### Proceso de pruebas:
-
-- **Planificación:** Se define el alcance y los objetivos.
-- **Preparación:** Diseño de casos de prueba.
-- **Ejecución:** Realización de pruebas según los planes establecidos.
-- **Cierre:** Generación de informes finales.
-
-### Entregables clave:
-
-- Plan de test.
-- Casos de test.
-- Registro de defectos.
-- Informe de resultados.
-
-### Estructura Común de Subversión
-
-- **Carpetas**:
-    - **app:** Archivos de la aplicación.
-    - **Trunk:** Rama de desarrollo principal.
-    - **doc:** Documentación dividida en secciones como requisitos, gestión, desarrollo, lanzamiento y auditorías.
-    - **Fuentes:** Archivos de configuración (bbdd, confie, etc.).
-    - **Tag:** Versiones marcadas.
-    - **Branch:** Ramas alternativas de desarrollo.
-- **Nomenclatura de Documentos**: Carpetas en minúsculas y documentos en MAYÚSCULAS.
-
-**ITI.Framekwork:** Marco de referencia
-
-### Herramientas de la metodologías gvLOGOS
-
-### CATI: Repositorio de Activos Software de la DGTIC
-
-CATI es el **repositorio de activos software** de la DGTIC, considerado la "CMDB software" de la Generalitat Valenciana. Se utiliza para gestionar datos, propiedades y relaciones entre diferentes sistemas. Además, permite identificar los responsables técnicos, funcionales o departamentales de cada **Componente Informático (CI)** y asignar el nivel de seguridad correspondiente.
-
-### Roles en CATI
-
-- **Administrador**: Responsable de la gestión general del sistema.
-- **Técnico DGTIC**: Accede en modo consulta.
-- **Responsable Técnico**: Actualiza los datos de los componentes informáticos.
-- **Responsable de Calidad**: Garantiza que se cumplan los estándares establecidos.
-- **Coordinador**: Supervisa las tareas relacionadas con el CI.
-- **Jefe de Servicio**: Da la autorización final de los cambios o solicitudes.
-
-### Tareas Básicas sobre un CI
-
-- **Solicitud de alta de un CI**: Se completa un formulario que incluye información como:
-    - Tipo de activo.
-    - Fecha.
-    - Acrónimo y nombre.
-    - Conselleria responsable.
-    - Responsables funcionales y técnicos.
-    - Categoría, área, marco y grupo de asignación.
-    - Otros datos relevantes.\ Tras completarlo, el formulario se envía al portafirmas para que el jefe de servicio lo valide.
-- **Mantenimiento del CI**: Actualización de datos o ajustes según necesidades.
-- **Solicitud de consumo de servicios web (PAI)**: Gestión del uso de servicios asociados al CI.
-
-### GV_CESTA
-
-GV_CESTA es el equivalente de CATI para activos **hardware**. Gestiona elementos físicos relacionados con el ecosistema TIC y está dividido en los siguientes módulos:
-
-- **Mantenimiento**.
-- **Servicio**.
-- **Recursos**.
-- **Aplicaciones CATI**.
-
-### gvLOGIN: Sistema Corporativo de Autenticación, Autorización y Auditoría (SSO)
-
-gvLOGIN es el sistema corporativo que centraliza la **autenticación**, **autorización** (opcional) y **auditoría** de los accesos a los sistemas informáticos de la Generalitat Valenciana. Su arquitectura permite **SSO (Single Sign-On)**, optimizando el acceso a los sistemas mediante un único inicio de sesión.
-
-### Fases de gvLOGIN
-
-- **Autenticación**: Validación de la identidad del usuario mediante credenciales.
-- **Autorización (opcional)**: Determina los permisos del usuario para acceder a recursos específicos.
-- **Post-Procesamiento (opcional)**: Etapa final para realizar configuraciones adicionales según los permisos asignados.
-
-### Sistemas Integrados en gvLOGIN
-
-- **gvCLAU**: Sistema utilizado en la fase de autorización. Ofrece una gestión integral de accesos mediante un repositorio único de usuarios y gestión de permisos.
-- **gvCREDENCIALS**: Permite aceptar o rechazar permisos asociados a los usuarios según las políticas establecidas.
-- **CADENAT**: Herramienta para la gestión de contraseñas, permitiendo cambios de manera segura y eficiente.
-
-## Metodología PMBOK
-
-El **Project Management Institute (PMI)** es la principal organización mundial dedicada a la dirección de proyectos. Se encarga de:
-
-- **Establecer los estándares** de la dirección de proyectos.
-- **Certificar a profesionales** en este ámbito.
-
-### Guía PMBOK
-
-La **Guía PMBOK (Project Management Body of Knowledge)** es un compendio de buenas prácticas reconocidas en dirección de proyectos. Define **47 procesos** clasificados en **5 grupos** y **10 áreas de conocimiento**:
-
-- **Grupos de procesos**:
-    - Inicio.
-    - Planificación.
-    - Ejecución.
-    - Monitorización y Control.
-    - Finalización.
-- **Áreas de conocimiento**:
-    - Integración.
-    - Alcance.
-    - Tiempo.
-    - Costos.
-    - Calidad.
-    - Recursos Humanos.
-    - Comunicaciones.
-    - Riesgos.
-    - Adquisiciones.
-    - Interesados.
-
-### Definición de Proyecto
-
-Según el PMBOK, un **proyecto** es un **esfuerzo temporal** llevado a cabo para crear un **producto, servicio y/o resultado singular**. En el ámbito tecnológico, un **proyecto TI** incluye la supervisión de:
-
-- Desarrollo de software.
-- Instalaciones de hardware.
-- Actualizaciones de red.
-- Despliegues de computación en nube y virtualización.
-- Gestión de datos y análisis de negocios.
-- Implementación de servicios de TI.
-
-### Dirección de Proyectos
-
-La **dirección de proyectos** es la aplicación de **conocimientos, habilidades, herramientas y técnicas** por parte del director de proyecto en un ambiente de **incertidumbre y riesgo**. Las competencias clave son:
-
-- **Conocimiento**.
-- **Rendimiento**.
-- **Comportamiento**.
-
-**Grupos de dirección de proyectos**:Inicio, Planificación, Ejecución, Supervisión y Control, y Cierre.
-
-### Gestión de un Proyecto
-
-Implica la **administración de los recursos asignados** para llevar el proyecto a término. La **triple restricción** del éxito de un proyecto comprende:
-
-- **Visión restringida**:
-    - **Alcance**.
-    - **Tiempo**.
-    - **Coste**.
-- **Visión expandida**:
-    - **Calidad**.
-    - **Riesgo**.
-    - **Eficiencia**.
-
-### Stakeholders (Interesados)
-
-Son los **interesados con capacidad de influencia** en el desarrollo del proyecto, incluyendo:
-
-- **Directivos**.
-- **Clientes**.
-- **Usuarios afectados**.
-
-### Triángulo del Talento del PMI
-
-Enfatiza tres áreas clave:
-
-- **Dirección Técnica y de Proyectos**.
-- **Liderazgo**.
-- **Gestión Estratégica y de Negocios**.
-
-### Valor de Negocio
-
-Se refiere al **valor total de la empresa**, sumando todos los elementos **tangibles e intangibles**.
-
-### Project Based Organization (PBO)
-
-La mayoría de las empresas actuales son **Organizaciones Orientadas a Proyectos (PBO)**, donde las actividades se gestionan como proyectos.
-
-### Elementos de la Dirección de Proyectos
-
-- **Plan Estratégico**: Define los objetivos a corto, medio y largo plazo, así como los recursos e inversiones necesarios.
-- **Gestión del Portafolio**: Administración de la **cartera de proyectos** de una determinada área.
-- **Dirección de Programa o Megaproyecto**: Incluye varios proyectos y operaciones relacionados que contribuyen a un mismo resultado definido en los objetivos estratégicos.
-- **Oficina de Gestión de Proyectos (PMO)**: Unidad que centraliza y coordina la dirección de proyectos. Supervisa la dirección de proyectos, programas o una combinación de ambos. Tipos de PMO:
-    - **De Apoyo**.
-    - **De Control**.
-    - **De Dirección**.
-- **Sistema de Gestión de Proyectos (PMS)**: Conjunto de herramientas, técnicas, recursos y procedimientos para gestionar proyectos.
-- **Sistema de Información de la Gestión de Proyectos (PMIS)**: Conjunto estandarizado de herramientas automatizadas integradas en un sistema digital.
-- **Organizational Project Management (OPM)**: Modelo que promueve el uso sistemático de la dirección de proyectos para lograr objetivos estratégicos.
-- **Organizational Project Management Maturity Model (OPM3)**: Estándar del PMI para determinar y mejorar el grado de madurez OPM de una organización.
-
-### Ciclo de Vida del Proyecto
-
-Es el **conjunto de fases\*** por las que pasa un proyecto. Tipos de ciclos de vida:
-
-- **Predictivo**: El proyecto se planifica completamente desde el inicio.
-- **Iterativo e Incremental**: Las fases (iteraciones) repiten actividades a medida que aumenta el entendimiento del producto.
-- **Adaptativo (Ágil)**: Similar al iterativo e incremental, pero con iteraciones más rápidas y de **duración y coste fijos**.
-
-**\*Fases del proyecto:** Conjunto de actividades relacionadas que culmina con la finalización de uno o más **entregables**. Ejemplos: **Iniciales, Intermedias, y Finales**.
-
-### Documentos Principales de la Gestión de Proyectos
-
-- **Plan de Dirección del Proyecto (PDP)**: Establece las **metas, métodos y métricas**.
-- **Registros del Proyecto**: Reflejan las **decisiones tomadas**.
-- **Documentación del Proyecto**: Incluye el PDP, registros y otros documentos.
-
-### Procesos de Gestión
-
-Están orientados a **realizar y mantener actualizados los planes de gestión** y a **producir los entregables** del proyecto.
-
-### Procesos Directivos
-
-Los **procesos directivos** (o de dirección de proyectos) se enfocan en **coordinar todo el trabajo del proyecto**, incluyendo los procesos productivos, bajo la supervisión del director de proyecto y/o el equipo de dirección. Características:
-
-- **Comunes a todos los proyectos**.
-- Clasificados en un **Grupo de Procesos** y un **Área de Conocimiento**.
-
-**Grupos de Procesos**: Inicio, Planificación, Ejecución, Supervisión y Control, y Cierre.
-
-![Tabla de procesos (fuente PMBOK v5).jpg](media/image3.jpeg)
+- **Jira**: frontal digital de gestión de proyectos y servicios (incidencias, solicitudes y, en gvLOGOS-pro v4.1, el Documento de Proyecto y el Acta de Cierre como campos estructurados).
+- **Confluence**: espacio colaborativo de documentación y conocimiento.
+- **gvEstima**: estimación de esfuerzos de desarrollo.
+- **CATI**: **repositorio de activos software** de la DGTIC (la «CMDB software» de la Generalitat). Gestiona datos, propiedades y relaciones de cada **componente informático (CI)**, sus responsables técnicos, funcionales y departamentales y su nivel de seguridad. Roles: administrador, técnico DGTIC (consulta), responsable técnico (actualiza los CI), responsable de calidad, coordinador y jefe de servicio (autorización final). Tareas básicas sobre un CI: solicitud de alta (formulario con tipo de activo, acrónimo y nombre, conselleria responsable, responsables funcionales y técnicos, categoría y grupo de asignación, que se envía al portafirmas para validación del jefe de servicio), mantenimiento y solicitud de consumo de servicios web de la PAI.
+- **GV_CESTA**: equivalente de CATI para activos **hardware**, con módulos de mantenimiento, servicio, recursos y aplicaciones CATI.
+- **Entrega y despliegue**: **CONFIE** (configuración de entornos), **Subversion** (control de versiones y documentación técnica, con estructura normalizada de carpetas: trunk, branches, tags, doc y fuentes), **Nexus** (repositorio de dependencias y artefactos), **Jenkins** (automatización de construcción y despliegue, con instancias jenkins-qua y jenkins-sis y jobs de integración continua, entrega y análisis de código), **Sonar** (análisis estático) y **Condesa** (control de despliegues).
+- **gvLOGIN**: sistema corporativo de **autenticación, autorización y auditoría** con **SSO** (inicio de sesión único) para los sistemas de la Generalitat. Fases: autenticación (validación de credenciales), autorización opcional (permisos sobre recursos) y post-procesamiento opcional. Se integra con **gvCLAU** (gestión de accesos con repositorio único de usuarios y permisos), **gvCREDENCIALS** (aceptación o rechazo de permisos según políticas) y **CADENAT** (gestión segura de contraseñas).
 
 ## Caso práctico: PERT y CPM
 
-El objetivo principal de un ejercicio práctico de **PERT** (Program Evaluation and Review Technique) y **CPM** (Critical Path Method) es construir un diagrama que represente visualmente las relaciones y dependencias entre actividades de un proyecto, y determinar la **ruta crítica**, es decir, la secuencia de actividades que define la duración mínima total del proyecto.
+**PERT** (*Program Evaluation and Review Technique*) y **CPM** (*Critical Path Method*) son técnicas de planificación que representan el proyecto como un grafo de actividades con dependencias y determinan la **ruta crítica**: la secuencia de actividades que fija la **duración mínima total** del proyecto. Se diferencian en el tratamiento de las duraciones:
 
-### Elementos básicos de un ejercicio típico
+- **CPM** es determinista: cada actividad tiene una duración única conocida.
+- **PERT** es probabilista: cada actividad se estima con tres valores (optimista *a*, más probable *m* y pesimista *b*) y se opera con la **duración esperada** `te = (a + 4m + b) / 6` y la desviación típica `s = (b - a) / 6`.
 
-El ejercicio suele presentar una tabla que incluye:
+### Método de resolución
 
-- **Actividades**: Tareas o procesos del proyecto identificados mediante letras (A, B, C…).
-- **Duración**: Tiempo estimado para completar cada actividad.
-- **Precedencia**: Relación entre actividades, indicando cuáles deben completarse antes de que otra comience.
+1. **Construir el grafo** a partir de la tabla de actividades, duraciones y precedencias.
+2. **Pasada hacia adelante**: calcular para cada actividad el inicio y fin más tempranos (**ES**, *early start*; **EF** = ES + duración). El ES de una actividad es el mayor EF de sus predecesoras. El mayor EF final es la **duración del proyecto**.
+3. **Pasada hacia atrás**: partiendo de la duración total, calcular el fin y el inicio más tardíos (**LF**, *late finish*; **LS** = LF - duración). El LF de una actividad es el menor LS de sus sucesoras.
+4. **Holgura total** de cada actividad: `H = LS - ES = LF - EF`. Las actividades con **holgura 0** forman la **ruta crítica**: cualquier retraso en ellas retrasa el proyecto.
 
-### Ejemplo de tabla típica
+### Enunciado
 
-|               |              |                  |
-| :-----------: | :----------: | :--------------: |
-| **Actividad** | **Duración** | **Predecesoras** |
-|       A       |      10      |                  |
-|       B       |      8       |                  |
-|       C       |      5       |        B         |
-|       D       |      4       |       A, B       |
-|       E       |      12      |                  |
-|       F       |      6       |        E         |
-|       G       |      7       |       A, E       |
-|       H       |      9       |        E         |
-|       I       |      8       |       C, D       |
+| Actividad | Duración | Predecesoras |
+| :---: | :---: | :---: |
+| A | 10 | |
+| B | 8 | |
+| C | 5 | B |
+| D | 4 | A, B |
+| E | 12 | |
+| F | 6 | E |
+| G | 7 | A, E |
+| H | 9 | E |
+| I | 8 | C, D |
 
-### Solución
+### Resolución
 
-*(Fuente: <https://www.diagramapertcpm.online> + Corrección)*
+Aplicando las pasadas hacia adelante y hacia atrás:
 
-![](media/image4.png)
+| Actividad | ES | EF | LS | LF | Holgura | ¿Crítica? |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| A | 0 | 10 | 0 | 10 | **0** | Sí |
+| B | 0 | 8 | 1 | 9 | 1 | No |
+| C | 8 | 13 | 9 | 14 | 1 | No |
+| D | 10 | 14 | 10 | 14 | **0** | Sí |
+| E | 0 | 12 | 1 | 13 | 1 | No |
+| F | 12 | 18 | 16 | 22 | 10 | No |
+| G | 12 | 19 | 15 | 22 | 3 | No |
+| H | 12 | 21 | 13 | 22 | 1 | No |
+| I | 14 | 22 | 14 | 22 | **0** | Sí |
 
-**Ruta crítica (CPM):** Inicio → A → D → I → Final
+![](media/image4.png){width=100%}
 
-### Nodo final
+- **Ruta crítica**: Inicio → **A → D → I** → Fin.
+- **Duración del proyecto**: **22** unidades de tiempo.
+- El nodo final del diagrama resume el resultado (notación: tiempo más temprano, holgura y tiempo más tardío):
 
-<table style="width:18%;">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: center;"><strong>22</strong></th>
-<th style="text-align: center;"><strong>0</strong></th>
-<th style="text-align: center;"><strong>22</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="3" style="text-align: center;"><strong>FIN</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>22</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><strong>22</strong></td>
-</tr>
-</tbody>
-</table>
+| Más temprano | Holgura | Más tardío |
+| :---: | :---: | :---: |
+| 22 | 0 | 22 |
+
+## Fuentes {.unnumbered .unlisted}
+
+- Project Management Institute: *Guía del PMBOK*, 6.ª edición (2017) y 7.ª edición (2021); *PMBOK Guide*, 8.ª edición (noviembre de 2025). Triángulo del Talento del PMI (pmi.org, consulta de julio de 2026).
+- Comisión Europea, Centro de Excelencia en PM² (CoEPM²): *Metodología de Gestión de Proyectos PM², Guía 3.1* (diciembre de 2023; edición española, Oficina de Publicaciones de la UE, 2024).
+- DGTIC, Generalitat Valenciana: *Proceso de Gestión de Proyectos (gvLOGOS-pro)*, versión 4.1 (aprobado el 11 de julio de 2024; revisión de 16 de enero de 2026).
+- Schwaber, K. y Sutherland, J.: *La Guía de Scrum* (noviembre de 2020), para los eventos y roles de Scrum.
+- ISO/IEC 25010:2011 (SQuaRE), modelo de calidad del producto software.

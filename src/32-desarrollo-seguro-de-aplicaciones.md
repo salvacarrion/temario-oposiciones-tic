@@ -1,426 +1,152 @@
 # Desarrollo seguro de aplicaciones
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+La seguridad de una aplicación no puede añadirse al final: debe integrarse en todas las fases del ciclo de vida del software. El desarrollo seguro combina un proceso (el ciclo de desarrollo seguro), unos marcos de referencia (ENS y guías CCN, proyectos OWASP, catálogos MITRE) y unas técnicas de verificación (análisis estático y dinámico, pruebas de intrusión) que permiten prevenir, detectar y corregir vulnerabilidades antes de que lleguen a producción.
 
-
-## Proceso de desarrollo seguro
-
-El **proceso de desarrollo seguro** se enfoca en la creación de sistemas y aplicaciones robustos que integren medidas de seguridad desde el inicio y a lo largo de todo el ciclo de vida del desarrollo. Este proceso es fundamental para garantizar la protección de los datos y el cumplimiento normativo en el entorno tecnológico actual.
-
-### Pilares de la seguridad
+## El ciclo de desarrollo seguro y las buenas prácticas del CCN
 
-- **Red segmentada** con restricciones de acceso adecuadas, minimizando el riesgo de movimientos laterales en caso de incidentes.
-- **Sistemas correctamente configurados y bastionados**, eliminando servicios innecesarios y reforzando configuraciones para reducir vulnerabilidades.
-- **Aplicaciones desarrolladas de forma segura**, considerando directrices de seguridad y utilizando herramientas y metodologías probadas.
+El **ciclo de desarrollo seguro** (SSDLC, *Secure Software Development Life Cycle*) incorpora actividades de seguridad en cada fase del ciclo de vida, en lugar de tratarla como una comprobación final. La idea rectora es el desplazamiento a la izquierda (*shift left*): cuanto antes se detecta un defecto de seguridad, menor es su coste de corrección. Se apoya en dos principios generales:
 
-### Desarrollo seguro de aplicaciones
+- **Seguridad desde el diseño (*security by design*)**: la seguridad es un requisito desde la concepción del sistema, no un parche posterior.
+- **Seguridad por defecto (*security by default*)**: la configuración inicial del producto debe ser la más restrictiva, de modo que el sistema sea seguro sin intervención del usuario.
 
-El desarrollo seguro abarca distintas áreas críticas para garantizar la seguridad de las aplicaciones:
+**Actividades de seguridad por fase**:
 
-- **Seguridad del proceso de desarrollo**:
-    - Alineación con la política de seguridad de la organización.
-    - Especificación de los requisitos de seguridad desde las primeras etapas.
-    - Gestión rigurosa de la documentación y control de cambios.
-    - Mantenimiento continuo y revisión de actualizaciones de seguridad.
-- **Análisis de riesgos**:
-    - **Modelado de amenazas**: Identificación y evaluación de amenazas potenciales.
-    - **Catálogo de amenazas**: Revisión exhaustiva de escenarios de riesgo conocidos.
-- **Requisitos legales de las aplicaciones**:
-    - Revisión anual de las normativas aplicables para asegurar el cumplimiento de leyes y regulaciones.
-- **Directrices**: de diseño, despliegue, programación y auditoria.
+- **Requisitos**: especificación de requisitos de seguridad junto a los funcionales; identificación de requisitos legales (protección de datos, ENS); casos de abuso.
+- **Diseño**: modelado de amenazas, revisión de la arquitectura y reducción de la superficie de ataque.
+- **Implementación**: normas de codificación segura, revisión de código entre pares y control de las dependencias de terceros.
+- **Verificación**: análisis SAST/DAST, análisis de composición y pruebas de intrusión (ver el último apartado).
+- **Despliegue**: configuración segura y bastionado de la plataforma; separación de entornos; procedimiento estandarizado de puesta en producción.
+- **Mantenimiento**: gestión de vulnerabilidades, aplicación de parches, revisiones periódicas y retirada segura.
 
-### Directrices de desarrollo seguro
+**Modelado de amenazas**: identificación y evaluación sistemática de las amenazas sobre el diseño del sistema, para decidir contramedidas antes de programar. El modelo de referencia es **STRIDE** (Microsoft), que cataloga seis tipos de amenaza y la propiedad de seguridad que vulnera cada uno:
 
-### Directrices de diseño
+| Amenaza | Propiedad vulnerada |
+| --- | --- |
+| *Spoofing* (suplantación) | Autenticidad |
+| *Tampering* (manipulación) | Integridad |
+| *Repudiation* (repudio) | No repudio |
+| *Information disclosure* (revelación) | Confidencialidad |
+| *Denial of service* (denegación de servicio) | Disponibilidad |
+| *Elevation of privilege* (elevación de privilegios) | Autorización |
 
-- **Principio de mínimo privilegio**: Otorgar solo los permisos necesarios.
-- **Separación de responsabilidades**: Evitar acumulación de funciones críticas en una misma entidad.
-- **Defensa en profundidad**: Implementar múltiples capas de seguridad.
-- **Fallo seguro**: Garantizar que los sistemas fallen de manera controlada.
-- **Economía de mecanismos**: Diseñar soluciones simples para minimizar riesgos.
-- **Mediación completa**: Validar todas las solicitudes.
-- **Diseño abierto**: Basar la seguridad en principios robustos y transparentes, no en el secretismo.
-- **Mecanismo menos común**: Utilizar componentes compartidos con precaución.
-- **Aceptabilidad psicológica**: Diseñar sistemas fáciles de usar para fomentar su adopción.
-- **Eslabón más débil**: Fortalecer los puntos vulnerables del sistema.
-- **Aprovechar componentes existentes**: Utilizar soluciones probadas y seguras.
+Para priorizar las amenazas identificadas se usan modelos de puntuación como **DREAD** (daño, reproducibilidad, explotabilidad, usuarios afectados, descubribilidad).
 
-### Directrices de despliegue
+**Principios de diseño seguro** (formulados por Saltzer y Schroeder, 1975, y ampliados por la práctica):
 
-- Utilizar un **procedimiento estandarizado** para garantizar que todas las configuraciones y pruebas de seguridad estén en orden.
+- **Mínimo privilegio**: otorgar solo los permisos imprescindibles para cada función.
+- **Separación de funciones**: evitar que una misma entidad acumule funciones críticas.
+- **Defensa en profundidad**: superponer múltiples capas de seguridad independientes.
+- **Fallo seguro**: ante un error, el sistema debe quedar en estado seguro (denegar por defecto).
+- **Economía de mecanismo**: diseños simples y pequeños son más fáciles de verificar.
+- **Mediación completa**: validar todas las solicitudes de acceso, sin excepciones.
+- **Diseño abierto**: la seguridad no debe depender del secreto del diseño (principio de Kerckhoffs).
+- **Mínimo mecanismo común**: minimizar los componentes compartidos entre usuarios.
+- **Aceptabilidad psicológica**: los mecanismos de seguridad deben ser usables o se eludirán.
+- **Eslabón más débil**: la seguridad del conjunto es la de su punto más vulnerable.
+- **Reutilización de componentes probados**: preferir soluciones contrastadas a desarrollos propios.
 
-### Directrices de programación
+**Marcos de referencia del desarrollo seguro**:
 
-- Definir **requisitos de seguridad claros**.
-- Aprovechar **frameworks y librerías de seguridad** reconocidas.
-- Implementar un **acceso seguro a bases de datos** y validar todas las entradas.
-- **Codificar y escapar los datos** para prevenir vulnerabilidades.
-- Reforzar los controles de acceso y proteger los datos continuamente.
-- Implementar **monitorización de seguridad** y manejar errores de manera controlada.
+- **NIST SSDF** (*Secure Software Development Framework*, SP 800-218 v1.1, 2022): prácticas agrupadas en preparar la organización, proteger el software, producir software bien asegurado y responder a las vulnerabilidades.
+- **Microsoft SDL** (*Security Development Lifecycle*): pionero de los SSDLC corporativos.
+- **OWASP SAMM** (*Software Assurance Maturity Model*, v2, 2020): modelo de madurez para evaluar y mejorar el proceso de desarrollo seguro de una organización.
 
-### Directrices de auditoría
+### El desarrollo seguro en el ENS (RD 311/2022)
 
-- Realizar auditorías durante el desarrollo y de manera periódica para detectar problemas de seguridad.
+**Texto consolidado a 6 de noviembre de 2024.**
 
-## Seguridad en entornos web y aplicaciones
+En el sector público, las buenas prácticas de desarrollo seguro son obligación normativa: el Anexo II del **Real Decreto 311/2022** (Esquema Nacional de Seguridad) las recoge en el grupo de medidas de protección de las aplicaciones informáticas (**mp.sw**), y el CCN las desarrolla en sus guías de la serie **CCN-STIC 800**, en particular la **CCN-STIC 812, Seguridad en entornos y aplicaciones web** (ed. junio 2023, adaptada al RD 311/2022).
 
-Los entornos web y aplicaciones deben seguir estándares reconocidos para garantizar la seguridad:
+- **mp.sw.1 Desarrollo de aplicaciones**: no aplica en categoría **BÁSICA**; en **MEDIA** y **ALTA** se exige con los refuerzos **R1 a R4**. Requisito base: el desarrollo se realizará sobre un **sistema diferente y separado del de producción**, sin herramientas ni datos de desarrollo en producción, ni datos de producción en desarrollo. Refuerzos:
+    - **R1 Mínimo privilegio**: las aplicaciones accederán solo a los recursos imprescindibles y con los privilegios indispensables.
+    - **R2 Metodología de desarrollo seguro**: aplicar una metodología reconocida que considere la seguridad en todo el ciclo de vida, incluya normas de programación segura (control de asignación y liberación de memoria, desbordamiento), trate los datos de prueba y permita la inspección del código fuente.
+    - **R3 Seguridad desde el diseño**: los mecanismos de identificación y autenticación, la protección de la información tratada y las pistas de auditoría serán parte integral del diseño.
+    - **R4 Datos de pruebas**: preferiblemente no se probará con datos reales; si es necesario, se garantizará su nivel de seguridad.
+    - **R5 Lista de componentes software**: relación formal y actualizada de los componentes de terceros (identificación, fabricante y versión), con histórico por versiones. Es el equivalente ENS del SBOM.
+- **mp.sw.2 Aceptación y puesta en servicio**: aplica desde categoría **BÁSICA** (MEDIA y ALTA añaden **R1**). Antes de pasar a producción se comprobará que se cumplen los **criterios de aceptación en materia de seguridad** y que no se deteriora la seguridad de otros componentes del servicio. Refuerzos: **R1**, pruebas en un entorno aislado (preproducción); **R2**, auditoría de código fuente.
 
-- **Normas y organismos**:
-    - **ISO 27000**, estándares internacionales de seguridad.
-    - **SANS Software Security Institute**, enfoque en la seguridad del software.
-    - **OWASP**, estándares para aplicaciones web.
-    - **NIST**, directrices y prácticas de ciberseguridad.
-- **MITRE**:
-    - **MITRE Pre-Att&k**: Base de conocimiento de tácticas y técnicas previas al ataque.
-    - **CVE (Common Vulnerabilities & Exposures)**: Listado de vulnerabilidades conocidas, como el **CVE-2021-44228 (log4shell)**.
-    - **CWE (Common Weakness Enumeration)**: Tipos de vulnerabilidades, como **CWE-89 (SQL injection)**.
+## Seguridad en aplicaciones web: OWASP
 
-### Estrategia de seguridad
+**OWASP** (*Open Worldwide Application Security Project*) es una fundación sin ánimo de lucro dedicada a mejorar la seguridad del software. Sus proyectos son la referencia de facto en seguridad de aplicaciones web: el **Top 10** (concienciación sobre riesgos), la **WSTG** (guía de pruebas), el **ASVS** (estándar de verificación), **SAMM** (madurez del proceso) y herramientas como **ZAP**.
 
-- **Formación** continua del personal en seguridad.
-- Implementación de **sistemas y redes seguras**.
-- Uso de **Web Firewall Applications (WAF)** para proteger aplicaciones web.
-- Desarrollo de **código seguro** siguiendo mejores prácticas.
+### OWASP Top 10:2025
 
-### Análisis de seguridad
+El **OWASP Top 10** es la lista de consenso de los riesgos de seguridad más críticos en aplicaciones web, elaborada a partir de datos de pruebas reales y encuestas a la comunidad. La edición vigente es el **Top 10:2025** (la octava, publicada entre noviembre de 2025 y enero de 2026), que sustituye a la de 2021:
 
-- **Técnicas de análisis**:
-    - **SAST (Static Application Security Testing)**: Análisis estático del código fuente.
-    - **DAST (Dynamic Application Security Testing)**: Análisis dinámico durante la ejecución.
-    - **SCA (Software Composition Analysis)**: Evaluación de bibliotecas y dependencias externas.
-    - **Pentesting**: Simulación de ataques para detectar vulnerabilidades.
-- Herramientas:
-    - **SonarQube** (caja blanca).
-    - **Acunetix** (caja negra).
+| Código | Riesgo | Idea clave |
+| --- | --- | --- |
+| **A01:2025** | *Broken Access Control* | Fallos en la autorización (acceso a recursos ajenos, elevación de privilegios). Repite como 1.er puesto y absorbe la antigua SSRF. |
+| **A02:2025** | *Security Misconfiguration* | Configuraciones inseguras, valores por defecto, servicios innecesarios. Sube del 5.º al 2.º puesto. |
+| **A03:2025** | *Software Supply Chain Failures* | Nueva: compromisos de la cadena de suministro (dependencias, sistemas de *build*, distribución). Amplía la antigua «componentes vulnerables y obsoletos». |
+| **A04:2025** | *Cryptographic Failures* | Criptografía ausente, débil o mal aplicada que expone datos sensibles. |
+| **A05:2025** | *Injection* | Datos no confiables interpretados como código: SQL, LDAP, comandos del sistema; incluye XSS desde 2021. |
+| **A06:2025** | *Insecure Design* | Fallos de diseño y arquitectura, no de implementación. |
+| **A07:2025** | *Authentication Failures* | Autenticación y gestión de credenciales deficientes (renombrada). |
+| **A08:2025** | *Software or Data Integrity Failures* | No verificar la integridad de código, actualizaciones o datos (deserialización insegura). |
+| **A09:2025** | *Security Logging & Alerting Failures* | Registro y, sobre todo, alertado insuficientes para detectar y responder a ataques (renombrada). |
+| **A10:2025** | *Mishandling of Exceptional Conditions* | Nueva: tratamiento indebido de errores y condiciones anómalas, errores lógicos, fallo en abierto (*fail open*). |
 
-### Validación de aplicaciones
+**Principales ataques a aplicaciones web** que materializan estos riesgos:
 
-- **Pruebas funcionales**:
-    - **Test de integración**: Verificar que los componentes trabajen en conjunto.
-    - **Test de regresión**: Detectar errores tras cambios en el código.
-    - **Test de aceptación**: Comprobar que se cumplen los requisitos del cliente.
-- **Pruebas no funcionales**:
-    - **Test de rendimiento**: Evaluar la velocidad y eficiencia.
-    - **Test de recuperación**: Medir la capacidad de respuesta tras fallos.
-    - **Test de escalabilidad**: Analizar el comportamiento ante incrementos de carga.
-    - **Test de seguridad**: Identificar y remediar vulnerabilidades.
+- **Inyección SQL**: inserción de sentencias SQL a través de entradas no validadas, con acceso o manipulación de la base de datos.
+- **Cross-site scripting (XSS)**: inyección de scripts que se ejecutan en el navegador de la víctima; variantes reflejada, almacenada y basada en DOM.
+- **Cross-site request forgery (CSRF)**: el atacante induce al navegador autenticado de la víctima a ejecutar acciones no deseadas.
+- **Secuestro de sesión (*session hijacking*)**: obtención del identificador de sesión de la víctima; la variante *session fixation* fija de antemano la sesión que la víctima usará.
+- **Server-side request forgery (SSRF)**: se fuerza al servidor a realizar peticiones a destinos internos no previstos.
+- **Desbordamiento de búfer (*buffer overflow*)**: escritura fuera de los límites de memoria reservada que puede alterar el flujo del programa y ejecutar código malicioso (*shellcode*); propio de código nativo.
 
-## Seguridad y protección de redes de comunicaciones
+### La guía de pruebas WSTG
 
-**Seguridad de redes**: Consiste en las políticas y prácticas adoptadas para prevenir y supervisar el acceso no autorizado, el uso indebido, la modificación o la denegación de una red informática y sus recursos accesibles.
+La **OWASP Web Security Testing Guide (WSTG) v4.2** (diciembre de 2020) es el marco de referencia para planificar y ejecutar pruebas de seguridad de aplicaciones y servicios web. Distingue dos fases:
 
-**Autenticación**: Puede llevarse a cabo mediante:
+- **Pruebas pasivas**: se examina el funcionamiento y la lógica de la aplicación (navegación, documentación, respuestas) para comprender su superficie de ataque, sin atacarla.
+- **Pruebas activas**: se ejecutan las pruebas propiamente dichas sobre los vectores identificados.
 
-- **1-factor**: Basada en lo que el usuario sabe (contraseña).
-- **2-factores**: Basada en lo que el usuario tiene (SMS).
-- **3-factores**: Basada en lo que el usuario es (huella dactilar).
+Las pruebas activas se organizan en **12 categorías** (más de **100 pruebas**, con identificadores del tipo WSTG-INFO-01): recopilación de información (INFO), gestión de la configuración y el despliegue (CONF), gestión de identidades (IDNT), autenticación (ATHN), autorización (ATHZ), gestión de sesiones (SESS), validación de entradas (INPV), tratamiento de errores (ERRH), criptografía débil (CRYP), lógica de negocio (BUSL), lado del cliente (CLNT) y pruebas de API (APIT, nueva en la v4.2).
 
-**Cortafuegos**: Se encargan de aplicar las políticas de acceso.
+### ASVS y WAF
 
-**Dimensiones de seguridad**: Incluyen confidencialidad, disponibilidad e integridad.
+- **OWASP ASVS** (*Application Security Verification Standard*, v5.0.0, mayo de 2025): estándar de requisitos verificables de seguridad de aplicaciones (unos 350 requisitos en 17 capítulos), con **tres niveles de verificación** (L1 a L3) según la criticidad de la aplicación. Sirve como base contractual y de auditoría: el Top 10 conciencia, el ASVS verifica.
+- **WAF (*Web Application Firewall*)**: cortafuegos de capa de aplicación que filtra el tráfico HTTP/HTTPS frente a ataques web conocidos (inyección, XSS). Es una medida complementaria: mitiga, pero no sustituye al desarrollo seguro.
 
-**Honeypot**: Es una herramienta de seguridad informática dispuesta en una red o sistema para atraer posibles ataques informáticos. Facilita la detección de ataques y la obtención de información sobre el mismo y el atacante.
+## Marcos MITRE: CVE y CWE
 
-**Honeynet**: Tipo especial de honeypot de alta interacción que actúa sobre una red completa. Está diseñado para ser atacado y recabar información detallada sobre los atacantes.
+La corporación **MITRE** mantiene los catálogos públicos que dan a la comunidad un lenguaje común para identificar vulnerabilidades, debilidades y comportamientos de los atacantes. Son la base de la gestión de vulnerabilidades y de las herramientas de análisis.
 
-**Sistema de detección de intrusos (IDS, Intrusion Detection System)**: Proceso o dispositivo activo que analiza la actividad del sistema y de la red para identificar accesos no autorizados y actividades maliciosas.
+- **CVE (*Common Vulnerabilities and Exposures*)**: registro público de vulnerabilidades concretas de productos, cada una con un identificador único **CVE-AAAA-NNNNN** asignado por las entidades autorizadas (**CNA**, *CVE Numbering Authorities*). Ejemplo: **CVE-2021-44228** (*Log4Shell*, ejecución remota de código en la librería Log4j). La **NVD** (*National Vulnerability Database*, del NIST) enriquece cada registro con métricas de severidad y referencias.
+- **CVSS (*Common Vulnerability Scoring System*)**: métrica estándar de severidad de vulnerabilidades, mantenida por **FIRST** (no por MITRE); versión vigente **CVSS v4.0** (2023). Puntúa de 0 a 10: **baja** (0,1-3,9), **media** (4,0-6,9), **alta** (7,0-8,9) y **crítica** (9,0-10,0).
+- **CWE (*Common Weakness Enumeration*)**: catálogo de los **tipos** de debilidad del software (la causa raíz, no el caso concreto): **CWE-89** (inyección SQL), **CWE-79** (XSS), **CWE-787** (escritura fuera de límites). Cada CVE se clasifica según el CWE que lo origina.
+- **CWE Top 25**: lista anual (MITRE con CISA) de las debilidades más peligrosas. La edición **2025** (diciembre de 2025, sobre 39 080 registros CVE) encabezada por **CWE-79 (XSS)**, **CWE-89 (inyección SQL)**, **CWE-352 (CSRF)**, CWE-862 (falta de autorización) y CWE-787 (escritura fuera de límites).
+- **CAPEC** (*Common Attack Pattern Enumeration and Classification*): catálogo de patrones de ataque conocidos, complementario del CWE.
+- **MITRE ATT&CK**: base de conocimiento de **tácticas y técnicas** de adversarios observadas en el mundo real, organizada en matrices (Enterprise, Mobile, ICS); se usa para modelar amenazas, evaluar defensas y clasificar incidentes. La antigua matriz **PRE-ATT&CK se retiró en octubre de 2020**: su ámbito se integró en la matriz Enterprise como las tácticas de reconocimiento (*Reconnaissance*) y desarrollo de recursos (*Resource Development*).
 
-**Tipos de IDS**:
+## Técnicas de análisis: SAST, DAST y pruebas de intrusión
 
-- **NIDS (Network-Based Intrusion Detection System)**: Supervisan la actividad de la red, analizando tanto el tráfico entrante como el saliente.
-- **HIDS (Host-Based Intrusion Detection System)**: Supervisan la actividad de un sistema específico. Realizan chequeo de la integridad de ficheros, detección de rootkits y monitorización de logs.
+La verificación de la seguridad combina análisis automatizados, integrados en el ciclo de desarrollo, con pruebas manuales especializadas. En un enfoque **DevSecOps**, los análisis se ejecutan de forma continua en el *pipeline* de integración y entrega (véase el tema de control de versiones, integración continua y DevOps).
 
-**Sistemas de Prevención de Intrusiones (IPS)**: Detectan y bloquean intentos de intrusión, transmisiones de código malicioso o amenazas en la red, sin afectar el rendimiento del sistema. Detectan anomalías a nivel del sistema operativo.
+| Técnica | Qué analiza | Enfoque | Herramientas |
+| --- | --- | --- | --- |
+| **SAST** (*Static Application Security Testing*) | El código fuente, *bytecode* o binario, sin ejecutarlo | Caja blanca; desde las primeras fases | SonarQube, Fortify |
+| **DAST** (*Dynamic Application Security Testing*) | La aplicación en ejecución, desde el exterior | Caja negra; sobre entornos de prueba | OWASP ZAP, Burp Suite, Acunetix |
+| **IAST** (*Interactive Application Security Testing*) | La aplicación instrumentada desde dentro, durante las pruebas funcionales | Caja gris | Contrast Security |
+| **SCA** (*Software Composition Analysis*) | Las dependencias de terceros: CVE conocidos y licencias | Continuo | OWASP Dependency-Check, Dependency-Track |
 
-**Tipos de IPS**:
+- **SBOM (*Software Bill of Materials*)**: inventario formal de los componentes de un software (formatos estándar **SPDX** y **CycloneDX**). Es el insumo del análisis SCA y responde tanto al riesgo de cadena de suministro (A03:2025) como al refuerzo R5 de mp.sw.1 del ENS.
+- **RASP (*Runtime Application Self-Protection*)**: protección embebida en la propia aplicación que detecta y bloquea ataques en tiempo de ejecución.
 
-- **NIPS (Network-based Intrusion Prevention System)**.
-- **WIPS (Wireless Intrusion Prevention System)**.
-- **NBA (Network Behavior Analysis)**.
-- **HIPS (Host-based Intrusion Prevention System)**.
+**Pruebas de intrusión (*pentesting*)**: simulación controlada y autorizada de ataques reales para descubrir y explotar vulnerabilidades, evaluando su impacto efectivo.
 
-### Vulnerabilidades
+- **Enfoques según la información disponible**: **caja negra** (sin información previa, como un atacante externo), **caja gris** (información parcial, por ejemplo credenciales de usuario) y **caja blanca** (acceso completo a código y arquitectura).
+- **Fases habituales**: reconocimiento, enumeración y análisis de vulnerabilidades, explotación, post-explotación y elaboración del informe.
+- **Metodologías**: la **WSTG** para aplicaciones web; PTES y OSSTMM como marcos generales de pruebas de intrusión.
+- **Informe de resultados** (estructura de la WSTG): **informe ejecutivo** (visión no técnica de los resultados), **informe de pruebas** (alcance, pruebas realizadas y limitaciones) e **informe de hallazgos** (problemas encontrados, evidencias y recomendaciones de mitigación).
 
-- **Personal interno**.
-- **Entidades externas**.
-- **Fast Growth and Overuse**.
-- **Fallback attacks / Downgrade attacks**: Ataque criptográfico que degrada el modo de operación seguro (por ejemplo, una conexión encriptada) a un modo menos seguro (texto sin cifrar) para mantener la retrocompatibilidad.
-- **Eavesdropping**: Escucha no autorizada de conversaciones o comunicaciones sin el consentimiento de las partes.
-- **Replay Attacks**: Repetición malintencionada de una transmisión de datos válida.
-- **Insertion attacks**: Cuando el IDS es menos estricto que el sistema final.
-- **Fragmentation attacks**: Ataque que utiliza la fragmentación de datagramas para producir un Denegación de Servicio (DoS).
-- **Buffer overflows**: Error de software que permite la escritura de datos fuera del buffer, con la posibilidad de alterar el flujo del programa y ejecutar código malicioso.
-    - **Shellcode**: Código ejecutable preparado para obtener privilegios sobre un programa vulnerable.
-- **XSS attacks (Cross-Site Scripting)**: Permite a un atacante inyectar código en páginas web visitadas por el usuario (JavaScript, VBScript).
-- **Man-in-the-middle**: El atacante adquiere la capacidad de leer, insertar y modificar datos en la comunicación entre dos partes.
-- **Session hijacking**: Obtención de acceso no autorizado a información o servicios mediante el secuestro de una sesión.
-    - **Session fixation**: El atacante fija una sesión específica en el navegador de la víctima.
-    - **Replay session**: Reutilización de una sesión.
-- **Spoofing attacks**: Falsificación de datos para suplantar la identidad de otra entidad.
-- **Convert channels (Canal encubierto)**: Canal usado para transferir información de manera no prevista por los desarrolladores del sistema.
-- **Smurf attack (ataque pitufo)**: Ataque de denegación de servicio mediante mensajes de ping broadcast con spoofing para inundar el sistema objetivo.
-- **Denial of Service (DoS)**: Causar la inaccesibilidad de un servicio o recurso para usuarios legítimos, mediante el consumo de ancho de banda o sobrecarga de los recursos del sistema.
-    - **Distributed Denial of Service (DDoS)**
-- **Malware**: Software malicioso diseñado para realizar acciones dañinas en el sistema de manera intencionada y sin el conocimiento del usuario.
+## Fuentes {.unnumbered .unlisted}
 
-### Redes privadas virtuales (VPN)
-
-Tecnología que extiende de forma segura una red local (LAN) sobre una red pública o no controlada, como Internet. Permite que los dispositivos en la red envíen y reciban datos de redes compartidas o públicas como si fueran redes privadas, manteniendo la seguridad y las políticas de gestión de una red privada.
-
-**Características básicas de una VPN**:
-
-- Autenticación y autorización.
-- Integridad.
-- Confidencialidad/Privacidad.
-- No repudio.
-- Control de acceso.
-- Auditoría y registro de actividades.
-- Calidad del servicio.
-
-**Requisitos básicos de una VPN**:
-
-- **Identificación de usuario**: Usuario y contraseña.
-- **Cifrado de datos**: Con cifrado simétrico (DES, 3DES o AES). Se destaca el algoritmo SEAL, más rápido.
-- **Administración de claves**.
-
-**Tipos de VPN**:
-
-- **VPN de acceso remoto**: Conexión de usuarios desde ubicaciones remotas a la red de la empresa mediante Internet.
-- **VPN punto a punto**: Conexión de oficinas remotas con la sede de la organización.
-- **Tunneling**: Encapsulación de un protocolo de red sobre otro, creando un "túnel" en la red.
-- **VPN over WAN**: Variante del tipo "acceso remoto" que utiliza la red WAN de la empresa en lugar de Internet.
-
-**Tipos de conexión en VPN**:
-
-- **Conexión de acceso remoto**.
-- **Conexión VPN router a router**.
-- **Conexión VPN firewall a firewall**.
-- **VPN en entornos móviles**.
-
-**Dispositivos VPN**:
-
-- **Enrutador VPN**: Enrutador con software de cliente VPN.
-- **Concentrador VPN**: Dispositivo que permite a múltiples usuarios acceder remotamente a la red a través de túneles VPN cifrados. Puede gestionar miles de conexiones simultáneas.
-
-### Control de accesos
-
-Enfoque de seguridad en redes que unifica las tecnologías de seguridad en equipos finales, usuarios y refuerza la seguridad de acceso a la red.
-
-**Control de acceso informático**: Consiste en la autenticación, autorización de acceso y auditoría.
-
-- **Autenticación/Identificación**: "¿Quién puede entrar al sistema?"
-- **Autorización**: "¿Qué puede hacer el sujeto?"
-- **Aprobación del acceso**: Definición de políticas de autorizaciones.
-- **Auditoría/Rendición de cuentas**: "¿Qué ha hecho el sujeto?"
-
-### Sistemas cortafuegos
-
-Parte de un sistema o red diseñado para bloquear el acceso no autorizado y permitir las comunicaciones autorizadas.
-
-**Tipos de cortafuegos**:
-
-- **Nivel de aplicación de pasarela**: Seguridad para aplicaciones específicas (FTP, Telnet, P2P).
-- **Circuito a nivel de pasarela**: Seguridad cuando se establece una conexión TCP o UDP.
-- **Cortafuegos de capa de red o de filtrado de paquetes**: Funciona a nivel de red, inspeccionando direcciones IP y paquetes IP.
-- **Cortafuegos de capa de aplicación (Application Firewall)**: Filtra comunicaciones adaptadas a protocolos de aplicación (ej.: URL).
-- **Cortafuegos personal**: Filtra las comunicaciones entre el ordenador y la red.
-
-**Capa de trabajo de los cortafuegos**:
-
-- **Cortafuegos a nivel de red**: Examina los paquetes IP para decidir si deben pasar o no.
-- **Cortafuegos a nivel de circuito**: Examina la información TCP para verificar que la sesión es legítima.
-- **Cortafuegos a nivel de aplicación**: Utiliza software de servidor Proxy.
-
-**Topologías de cortafuegos**:
-
-- **Bastion Host**: Firewall en una instalación específica.
-- **Screening Router**: Encaminador con filtrado.
-- **Dual-Homed Host**: Host con doble conexión.
-- **Screened Host**: Filtrado a nivel de host.
-- **Screened Subnet**: Filtrado a nivel de subred.
-
-**Traducción de direcciones de red (NAT)**: Oculta la verdadera dirección de la computadora conectada a la red.
-
-**Políticas del cortafuegos**:
-
-- **Política restrictiva**: Deniega todo el tráfico, excepto el explícitamente permitido.
-- **Política permisiva**: Permite todo el tráfico, excepto el explícitamente denegado.
-
-## Medidas de protección
-
-La implementación de medidas de protección en el ámbito informático garantiza la seguridad de las infraestructuras, equipos, comunicaciones, información y servicios, mitigando riesgos asociados a incidentes internos y externos. Estas medidas se agrupan en diversas áreas fundamentales que se desarrollan a continuación.
-
-### Protección de las instalaciones e infraestructuras
-
-Las instalaciones deben cumplir estándares de seguridad que minimicen riesgos físicos y fortuitos:
-
-- **Áreas separadas y con control de acceso**: Se delimitarán zonas diferenciadas para prevenir accesos no autorizados mediante sistemas de control y registro de entradas y salidas.
-- **Identificación de personas**: Será obligatorio un sistema que identifique a todas las personas con acceso a las instalaciones.
-- **Acondicionamiento de locales**: Se controlarán factores como la **humedad**, la **temperatura** y otros riesgos ambientales.
-- **Energía eléctrica**: Habrá tomas de energía adecuadas y suministro de emergencia para garantizar continuidad operativa ante cortes de electricidad.
-- **Protección frente a incendios**: Se seguirán normas específicas de la normativa industrial en materia de prevención y respuesta.
-- **Protección frente a inundaciones**: Las instalaciones deben contar con medidas de protección para evitar daños por agua, como sistemas de drenaje o ubicación elevada de equipos sensibles.
-- **Registro de entradas y salidas del equipamiento**: Se llevará un **registro pormenorizado** que garantice la trazabilidad de los movimientos de equipamiento.
-
-### Gestión del personal
-
-- **Concienciación**: El personal debe conocer las **normativas de seguridad**, los **procedimientos de actuación frente a incidentes** y las formas de identificarlos y reportarlos.
-- **Formación**: Se proporcionará formación regular para actualizar conocimientos en seguridad.
-
-### Protección de los equipos
-
-- **Puesto de trabajo despejado**: Mantener los puestos libres de elementos innecesarios y guardar materiales sensibles en lugares cerrados y seguros.
-- **Bloqueo del puesto de trabajo**: Los equipos deben bloquearse tras periodos de inactividad y cerrarse las sesiones al finalizar su uso.
-- **Protección de dispositivos portátiles**: Los dispositivos deberán:
-    - Estar inventariados.
-    - Contar con gestión centralizada.
-    - Restringir el acceso a información fuera de la red corporativa.
-    - No contener claves de acceso remoto.
-    - Incluir cifrado de disco para proteger la información.
-
-### Protección de las comunicaciones
-
-- **Perímetro seguro**: Uso de sistemas de protección perimetral que autoricen únicamente flujos necesarios.
-- **Protección de la confidencialidad**:
-    - Uso de **VPNs** en comunicaciones externas.
-    - Algoritmos cifrados autorizados por el CCN.
-    - VPNs implementadas por hardware.
-    - Productos certificados para cifrado de información.
-    - Todas las comunicaciones deberán cifrarse.
-- **Protección de la integridad y la autenticidad**:
-    - Uso de mecanismos de **autenticación e identificación** aprobados.
-    - Prevención de ataques mediante algoritmos autorizados y productos certificados.
-- **Separación de flujos de información en red**:
-    - Tráfico segregado según funciones: usuarios, servicios y administración.
-    - Segmentación lógica básica (VLANs) y avanzada (VPNs).
-    - Segmentación física y monitorización de puntos de interconexión.
-
-### Protección de soportes de información
-
-- **Marcado de soportes**: Los soportes deben indicar claramente el nivel de seguridad de la información que contienen y emplear marcas de agua.
-- **Criptografía**:
-    - Garantizar la **confidencialidad** e **integridad** mediante algoritmos autorizados.
-    - Usar productos certificados por el CCN.
-    - Realizar copias de seguridad cifradas según los requisitos del CCN.
-- **Custodia**: Los soportes se custodiarán con diligencia y respetando las condiciones de mantenimiento recomendadas por el fabricante.
-- **Transporte**: Se registrarán las entradas y salidas de los soportes, empleando mecanismos criptográficos para su protección y una adecuada gestión de claves.
-- **Borrado y destrucción**: Se utilizarán métodos de borrado seguro según el CCN y productos certificados.
-
-### Protección de las aplicaciones informáticas
-
-- **Desarrollo de aplicaciones**:
-    - Los entornos de desarrollo deben estar separados del de producción.
-    - Aplicar principios de **mínimo privilegio** y una **metodología de desarrollo seguro**.
-    - Diseñar con seguridad desde la concepción.
-    - Usar datos de prueba y una lista de componentes de software controlada.
-- **Aceptación y puesta en servicio**:
-    - Comprobación de los criterios de aceptación y no deterioro de la seguridad.
-    - Realizar pruebas en entornos aislados y auditorías del código fuente.
-
-### Protección de la información
-
-- **Datos personales**: Cumplir con los requisitos establecidos en la normativa de protección de datos.
-- **Calificación de la información**: Definir responsables y garantizar la clasificación adecuada de la información.
-- **Firma electrónica**:
-    - Emplear **firmas autorizadas** y certificados cualificados con algoritmos aprobados.
-    - Usar productos certificados para la validación de la firma electrónica avanzada.
-- **Sellos de tiempo**: Renovar regularmente los sellos cualificados cuando se requiera evidencia temporal.
-- **Limpieza de documentos**: Eliminar campos ocultos, metadatos o comentarios en documentos.
-- **Copias de seguridad**:
-    - Deben permitir la recuperación completa y estar sujetas a procedimientos documentados que definan frecuencia, lugar y acceso.
-    - Realizar pruebas regulares de recuperación y almacenar copias en lugares alternativos.
-
-### Protección de los servicios
-
-- **Protección del correo electrónico**:
-    - Cifrar cuerpo de mensajes y anexos.
-    - Proteger las conexiones y encaminar mensajes de manera segura.
-    - Implementar sistemas contra spam, código dañino y applets.
-- **Protección de servicios y aplicaciones web**:
-    - Prevenir intentos de escalado de privilegios y ataques XSS.
-    - Realizar auditorías de seguridad avanzadas y proteger las cachés.
-- **Protección de la navegación web**:
-    - Implementar normativas de uso y formar al personal en navegación segura.
-    - Usar listas blancas de destinos permitidos y monitorizar registros de navegación.
-- **Protección frente a la denegación del servicio**:
-    - Sistemas con capacidad suficiente para resistir ataques.
-    - Tecnologías de detección y reacción ante ataques conocidos.
-    - Procedimientos para evitar ataques propios o errores de configuración.
-
-## OWASP 4.0 (Open Web Application Security Project)
-
-OWASP es una iniciativa libre y sin ánimo de lucro que busca promover la seguridad en el software, enfocándose principalmente en aplicaciones web. Este proyecto se organiza en función del estado de madurez del desarrollo, y sus etapas incluyen:
-
-- **Definición**: Revisión de requerimientos.
-- **Diseño**: Revisión de arquitectura, diseño, y modelos UML.
-- **Desarrollo**: Revisión de código, pruebas unitarias y de sistema.
-- **Despliegue**: Pruebas de penetración, revisiones de configuración y pruebas adicionales.
-- **Mantenimiento**: Realización de “health checks”, revisiones operacionales y pruebas de regresión.
-
-### Pruebas de seguridad
-
-Las pruebas de seguridad en OWASP se dividen en dos fases principales:
-
-- **Pasiva**: Se examina el funcionamiento de la aplicación para comprender su lógica operativa e identificar posibles vulnerabilidades.
-- **Activa**: Se realizan pruebas específicas en base a los vectores de ataque identificados en la fase pasiva.
-
-Estas pruebas están organizadas en **11 categorías**, con un total de **91 puntos de control**. Las categorías **incluyen**:
-
-Recopilación de información, gestión de configuración y despliegue, gestión de identidades, autenticación, autorización, gestión de sesiones, validación de entrada, tratamiento de errores, criptografía, lógica empresarial y pruebas en el lado del cliente. Ejemplos de puntos de control son pruebas de métodos HTTP, pruebas de inyección SQL y chequeos de integridad.
-
-### Informe de resultados de la auditoría
-
-El informe de auditoría en OWASP se estructura en tres secciones:
-
-- **Informe ejecutivo**: Proporciona una visión clara y no técnica de los resultados.
-- **Informe de pruebas**: Describe en detalle las pruebas, el alcance y limitaciones de cada test.
-- **Informe de hallazgos**: Presenta los problemas encontrados junto con recomendaciones para mitigarlos.
-
-### Top riesgos de seguridad en OWASP
-
-Algunos de los principales riesgos de seguridad en aplicaciones web son: inyección (SQL, LDAP), ruptura de autenticación y secuestro de sesión, cross-site scripting (XSS), referencias a objetos no seguras, configuración de seguridad insuficiente, exposición de datos sensibles, falta de control en el nivel de acceso, cross-site request forgery (CSRF), componentes con vulnerabilidades conocidas y redirecciones no validadas.
-
-### Seguridad de los servicios en nube
-
-Para asegurar servicios en la nube, se recomienda un decálogo de medidas:
-
-Determinar la categoría del sistema según el ENS, elaborar una declaración de aplicabilidad, realizar un análisis de riesgos, acogerse a un perfil de cumplimiento específico, establecer condiciones contractuales antes de la contratación, detallar aspectos específicos en las condiciones contractuales, supervisar el cumplimiento de requisitos legales por el CSP, realizar un seguimiento de los acuerdos de nivel de servicio (SLA), planificar revisiones periódicas de la información del CSP y desarrollar normativa de seguridad específica para usuarios de la nube.
-
-### Herramientas de seguridad
-
-Las herramientas de seguridad se clasifican en:
-
-- **Herramientas de auditoría**
-- **Herramientas de protección** (ej., IDS, IPS, IDS/IPS como Tripwire, OSSEC)
-- **Herramientas de detección**
-- **Herramientas de reacción**
-
-### Sistema de detección de intrusos (IDS)
-
-Un IDS analiza la actividad en sistemas y redes en busca de entradas no autorizadas o actividades maliciosas. Los IDS se dividen en:
-
-- **NIDS** (Network-Based Intrusion Detection System): Analizan el tráfico de red en tiempo real, buscando ataques DoS, escaneo de puertos e intentos de intrusión, entre otros.
-- **HIDS** (Host-Based Intrusion Detection System): Analizan actividades de un host en busca de anomalías que sugieran posibles amenazas.
-
-### Sistemas de Prevención de Intrusiones (IPS)
-
-Los IPS detectan y bloquean intentos de intrusión y amenazas sin afectar el rendimiento. Las características de un IPS incluyen:
-
-- **Detección basada en anomalías**: Identificación, registro y bloqueo de actividad maliciosa.
-- **Actualización automática** de bases de firmas.
-- **Detección basada en políticas**: Los administradores pueden declarar detalladamente qué actividades son aceptables. Los IPS protegen contra gusanos, spyware, DoS/DDoS, inyección SQL y otros ataques.
-
-Los IPS incluyen diferentes tipos:
-
-- **NIPS**: Basado en la red, buscan tráfico sospechoso en la red.
-- **WIPS**: Basado en redes inalámbricas, buscan tráfico sospechoso en la red inalámbrica.
-- **NBA**: Analizan comportamientos anómalos en la red, como ciertos tipos de malware y ataques de denegación de servicio.
-- **HIPS**: Detectan actividades sospechosas en hosts individuales.
-
-### AntiDDoS
-
-Los sistemas AntiDDoS están diseñados para proteger servidores y redes contra ataques de denegación de servicio (DoS).
+- Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (texto consolidado, última modificación 6 de noviembre de 2024), Anexo II, medidas mp.sw.
+- OWASP Top 10:2025 (owasp.org/Top10/2025, consultado el 13 de julio de 2026).
+- OWASP Web Security Testing Guide v4.2 (diciembre de 2020).
+- OWASP Application Security Verification Standard v5.0.0 (mayo de 2025).
+- CCN-STIC 812, Seguridad en entornos y aplicaciones web (ed. junio 2023); referenciada por edición, verificada en ccn-cert.cni.es en julio de 2026.
+- MITRE: cve.org, cwe.mitre.org (CWE Top 25, ed. diciembre de 2025) y attack.mitre.org, consultados el 13 de julio de 2026.
+- NIST SP 800-218, Secure Software Development Framework v1.1 (febrero de 2022).

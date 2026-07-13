@@ -74,7 +74,7 @@ nav:
 - Bloque II — Sociedad digital y gestión TIC:
   - '⚠️ Tema 16: La sociedad digital': 16-sociedad-digital.md
   - '⚠️ Tema 18: La gestión de los servicios TIC': 18-gestion-de-los-servicios-tic.md
-  - '⚠️ Tema 19: Dirección y gestión de proyectos': 19-direccion-y-gestion-de-proyectos.md
+  - 'Tema 19: Dirección y gestión de proyectos': 19-direccion-y-gestion-de-proyectos.md
   - '⚠️ Tema 20: Análisis de procesos': 20-analisis-de-procesos.md
   - '⚠️ Tema 21: Metodologías ágiles y escalado ágil': 21-metodologias-agiles-y-escalado-agil.md
 - Bloque III — Ingeniería del software:
@@ -88,7 +88,7 @@ nav:
   - 'Tema 29: Esquema Nacional de Seguridad (Real Decreto 311/2022)': 29-esquema-nacional-de-seguridad.md
   - '⚠️ Tema 30: Análisis y gestión de riesgos': 30-analisis-y-gestion-de-riesgos.md
   - '⚠️ Tema 31: Gestión de ciberincidentes': 31-gestion-de-ciberincidentes.md
-  - '⚠️ Tema 32: Desarrollo seguro de aplicaciones': 32-desarrollo-seguro-de-aplicaciones.md
+  - 'Tema 32: Desarrollo seguro de aplicaciones': 32-desarrollo-seguro-de-aplicaciones.md
 - Bloque V — Datos, IA y tecnologías emergentes:
   - 'Tema 34: Inteligencia artificial': 34-inteligencia-artificial.md
   - 'Tema 35: Ética y regulación de la inteligencia artificial': 35-etica-regulacion-inteligencia-artificial.md
@@ -99,15 +99,15 @@ nav:
   - '⚠️ Tema 41: Automatización robótica de procesos (RPA)': 41-automatizacion-robotica-de-procesos.md
   - '⚠️ Tema 42: Blockchain y otras tecnologías emergentes': 42-blockchain-y-otras-tecnologias-emergentes.md
 - Bloque VI — Sistemas e infraestructuras:
-  - '⚠️ Tema 43: Centros de proceso de datos': 43-centros-de-proceso-de-datos.md
+  - 'Tema 43: Centros de proceso de datos': 43-centros-de-proceso-de-datos.md
   - '⚠️ Tema 44: Virtualización y contenedores': 44-virtualizacion-y-contenedores.md
   - '⚠️ Tema 45: Sistemas de almacenamiento': 45-sistemas-de-almacenamiento.md
-  - '⚠️ Tema 47: Computación en la nube y de altas prestaciones': 47-computacion-en-la-nube-y-altas-prestaciones.md
+  - 'Tema 47: Computación en la nube y de altas prestaciones': 47-computacion-en-la-nube-y-altas-prestaciones.md
   - '⚠️ Tema 48: Puesto de trabajo TIC': 48-puesto-de-trabajo-tic.md
 - Bloque VII — Protección de datos y administración electrónica:
   - 'Tema 49: Protección de datos personales': 49-proteccion-de-datos-personales.md
   - 'Tema 50: Administración electrónica': 50-administracion-electronica.md
-  - '⚠️ Tema 51: Documento y expediente electrónico. Gestión documental': 51-documento-y-expediente-electronico.md
+  - 'Tema 51: Documento y expediente electrónico. Gestión documental': 51-documento-y-expediente-electronico.md
 - Bloque VIII — Desarrollo web y de aplicaciones:
   - '⚠️ Tema 52: Arquitecturas de desarrollo web': 52-arquitecturas-de-desarrollo-web.md
   - '⚠️ Tema 53: Tecnologías web': 53-tecnologias-web.md
@@ -124,14 +124,14 @@ nav:
   - '⚠️ Tema 63: Infraestructuras de datos espaciales': 63-infraestructuras-de-datos-espaciales.md
 - Bloque X — Redes y comunicaciones:
   - '⚠️ Tema 64: Modelos OSI y TCP/IP': 64-modelos-osi-y-tcp-ip.md
-  - '⚠️ Tema 65: Protocolos de comunicaciones': 65-protocolos-de-comunicaciones.md
-  - '⚠️ Tema 66: Redes de computadores': 66-redes-de-computadores.md
+  - 'Tema 65: Protocolos de comunicaciones': 65-protocolos-de-comunicaciones.md
+  - 'Tema 66: Redes de computadores': 66-redes-de-computadores.md
   - '⚠️ Tema 68: Virtualización de redes': 68-virtualizacion-de-redes.md
   - '⚠️ Tema 70: Redes de emergencia': 70-redes-de-emergencia.md
   - '⚠️ Tema 71: Redes inalámbricas y 5G': 71-redes-inalambricas-y-5g.md
   - '⚠️ Tema 72: Internet de las cosas y redes de sensores': 72-internet-de-las-cosas-y-redes-de-sensores.md
   - '⚠️ Tema 73: Ciudades inteligentes': 73-ciudades-inteligentes.md
-  - '⚠️ Tema 74: Seguridad en las comunicaciones': 74-seguridad-en-las-comunicaciones.md
+  - 'Tema 74: Seguridad en las comunicaciones': 74-seguridad-en-las-comunicaciones.md
 - Bloque XI — Administración de la Generalitat:
   - 'Tema 75: La agenda digital valenciana': 75-agenda-digital-valenciana.md
   - 'Tema 76: Seguridad de la información en la Generalitat': 76-seguridad-de-la-informacion-en-la-generalitat.md

@@ -1,181 +1,177 @@
 # Redes de computadores
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+Una red de computadores es un conjunto de equipos (nodos) interconectados mediante dispositivos físicos y software que intercambian datos a través de impulsos eléctricos, ondas electromagnéticas u otros medios, con el fin de compartir información, recursos y servicios. Este tema cubre los elementos y clasificaciones de las redes, las redes de área local (Ethernet, VLAN, DMZ), las redes de área extensa y el direccionamiento IP con su caso práctico. Los protocolos de cada capa se estudian en el tema 65, las redes inalámbricas en el 71 y la seguridad de red en el 74.
 
+## Componentes, topologías y dispositivos de interconexión
 
-## Red de computadores: Componentes, Categorías, dispositivos,…
+Toda red combina una **capa física** (los elementos tangibles: tarjetas de red, cables, antenas) y una **capa lógica** (las normas y protocolos que proporcionan los servicios de comunicación).
 
-Una red de computadores es un conjunto de equipos, conocidos como nodos, y software conectados entre sí mediante dispositivos físicos que transmiten y reciben datos a través de impulsos eléctricos, ondas electromagnéticas u otros medios. Su finalidad es compartir información, recursos y ofrecer servicios entre los dispositivos conectados.
+- **Elementos de la comunicación**: **emisor** (envía el mensaje), **mensaje** (la información a transmitir), **medio** (el canal por el que viaja) y **receptor** (quien lo recibe).
+- **Componentes básicos de la red**:
+    - **Hardware**: los dispositivos físicos (equipos, switches, routers, servidores, cableado).
+    - **Software**: los programas que gestionan la comunicación y el flujo de datos.
+    - **Protocolos**: las reglas que permiten entenderse a dispositivos de distintos fabricantes (tema 65).
 
-### Categorías de una red
+### Dispositivos de interconexión
 
-- **Capa física**: Incluye los elementos tangibles utilizados por un equipo para comunicarse con otros dentro de la red, como tarjetas de red, cables y antenas.
-- **Capa lógica**: Establece normas y protocolos que permiten proporcionar servicios de comunicación entre dispositivos.
+Cada dispositivo opera en una capa del modelo OSI (tema 64), lo que determina qué información usa para reenviar el tráfico:
 
-### Componentes de una red (i)
-
-- **Emisor**: Dispositivo que envía el mensaje.
-- **Mensaje**: Información que se desea transmitir.
-- **Medio**: Canal a través del cual se transmite el mensaje.
-- **Receptor**: Dispositivo que recibe el mensaje.
-
-### Componentes básicos de las redes (ii)
-
-- **Hardware**: Dispositivos físicos que conforman la red, como routers, switches y servidores.
-- **Software**: Programas y aplicaciones que gestionan la comunicación y el flujo de datos en la red.
-- **Protocolos**: Conjuntos de reglas que permiten la comunicación eficiente y segura entre dispositivos de diferentes fabricantes.
-
-### Dispositivos de red
-
-- **Conmutador de red (switch)**: Interconecta dos o más hosts, pasando datos de un segmento a otro según la dirección MAC de destino de las tramas, y elimina la conexión una vez finalizada.
-- **Enrutador (router)**: Interconecta redes con distintos prefijos en sus direcciones IP, estableciendo la mejor ruta para que cada paquete de datos llegue a su destino.
-- **Puente de red (bridge)**: Interconecta segmentos de red transfiriendo datos de una red a otra basándose en la dirección física de destino de cada paquete.
-- **Puente de red y enrutador (brouter)**: Combina las funciones de un puente de red y un enrutador, permitiendo interconectar redes y segmentar el tráfico.
-- **Punto de acceso inalámbrico (Wireless Access Point, WAP)**: Dispositivo que interconecta equipos de comunicación inalámbricos para formar una red inalámbrica que conecta dispositivos móviles o tarjetas de red inalámbricas.
+| Dispositivo | Capa OSI | Función |
+| --- | --- | --- |
+| **Repetidor / hub** | **1** (física) | Regenera o replica la señal por todos los puertos; un único dominio de colisión. En desuso |
+| **Puente (bridge)** | **2** (enlace) | Interconecta segmentos de red reenviando tramas según la MAC de destino |
+| **Conmutador (switch)** | **2** (enlace) | Puente multipuerto: aprende las MAC en una tabla y reenvía cada trama solo por el puerto del destino; cada puerto es un dominio de colisión independiente |
+| **Enrutador (router)** | **3** (red) | Interconecta redes con distintos prefijos IP y elige la mejor ruta para cada paquete; separa dominios de difusión |
+| **Pasarela (gateway)** | Hasta la **7** | Traduce entre protocolos o arquitecturas distintas |
+| **Punto de acceso (WAP)** | 2 | Conecta dispositivos inalámbricos a la red cableada |
 
 ### Clasificación de las redes por alcance
 
-- **Red de área personal (Personal Area Network, PAN)**: Red utilizada para la comunicación entre dispositivos cercanos a una persona, como smartphones y relojes inteligentes.
-- **Red inalámbrica de área personal (Wireless Personal Area Network, WPAN)**: Similar a la PAN pero inalámbrica, permite la comunicación entre dispositivos cercanos al punto de acceso, generalmente en un rango de pocos metros (ejemplo: Bluetooth).
-- **Red de área local (Local Area Network, LAN)**: Red que se limita a un área geográfica pequeña, como una habitación, un edificio o una nave industrial.
-- **Red de área local inalámbrica (Wireless Local Area Network, WLAN)**: Sistema de comunicación de datos inalámbrico que utiliza tecnología de radiofrecuencia para conectar dispositivos dentro de un área local.
-- **Red de área de campus (Campus Area Network, CAN)**: Red de alta velocidad que conecta redes LAN en un área geográfica limitada, como un campus universitario o un parque tecnológico.
-- **Red de área metropolitana (Metropolitan Area Network, MAN)**: Red de alta velocidad que cubre un área geográfica más extensa que una CAN, como una ciudad o un conjunto de edificios públicos.
-- **Red de área amplia (Wide Area Network, WAN)**: Red que se extiende sobre un área geográfica extensa, utilizando medios como satélites, cables interoceánicos, Internet o fibras ópticas públicas.
+- **PAN (Personal Area Network)**: comunicación entre dispositivos cercanos a una persona (smartphone, reloj); su variante inalámbrica es la **WPAN** (p. ej. Bluetooth).
+- **LAN (Local Area Network)**: área geográfica pequeña (una sala, un edificio); su variante inalámbrica es la **WLAN** (Wi-Fi, tema 71).
+- **CAN (Campus Area Network)**: interconecta las LAN de un campus o parque tecnológico.
+- **MAN (Metropolitan Area Network)**: red de alta velocidad de ámbito urbano (una ciudad, una red de edificios públicos).
+- **WAN (Wide Area Network)**: área geográfica extensa, usando enlaces de operador, cables submarinos o satélites; Internet es la WAN global.
 
-### Clasificación de las redes por topología de red
+### Clasificación de las redes por topología
 
-- **Red en bus (lineal)**: Se caracteriza por tener un único canal de comunicaciones al cual se conectan todos los dispositivos. Es sencilla y económica, pero si el canal falla, toda la red se interrumpe.
-- **Red en anillo (ring)**: Cada estación está conectada a la siguiente y la última está conectada a la primera, formando un círculo cerrado. Los datos circulan en una dirección y cada nodo actúa como repetidor.
-- **Red en estrella (star)**: Todas las estaciones están conectadas directamente a un punto central, generalmente un switch o hub, y las ![](media/image77.png)comunicaciones se realizan a través de este. Es fácil de administrar y escalar.
-- **Red en malla (mesh)**: Cada nodo está conectado a todos los demás, proporcionando múltiples rutas para la transmisión de datos. Ofrece alta redundancia y fiabilidad.
-- **Red en árbol (tree)**: Los nodos están organizados en forma jerárquica, similar a la estructura de un árbol, combinando características de las topologías en estrella y bus.
-- **Red híbrida o mixta**: Combinación de dos o más topologías de red mencionadas anteriormente, adaptándose a necesidades específicas.
+- **Bus (lineal)**: un único canal compartido al que se conectan todos los nodos; sencilla y económica, pero el fallo del canal interrumpe toda la red.
+- **Anillo (ring)**: cada estación se conecta a la siguiente y la última a la primera; los datos circulan en un sentido y cada nodo repite la señal. El **doble anillo** añade redundancia.
+- **Estrella (star)**: todas las estaciones se conectan a un punto central (switch); fácil de administrar y escalar, es la topología habitual de las LAN actuales.
+- **Malla (mesh)**: cada nodo se conecta a varios (malla parcial) o a todos los demás (malla completa o totalmente conexa); máxima redundancia y fiabilidad.
+- **Árbol (tree)**: jerarquía de nodos que combina estrella y bus.
+- **Híbrida o mixta**: combinación de las anteriores según las necesidades.
 
-### Clasificación de las redes por direccionalidad de datos
+![Topologías de red: bus, estrella, mixta, anillo, doble anillo, árbol, malla y totalmente conexa](media/image77.png){width=60%}
 
-- **Simplex (unidireccional)**: La comunicación se realiza en un solo sentido; un dispositivo transmite y otro recibe, como en las transmisiones de radio.
-- **Half-duplex (semidúplex)**: La comunicación es bidireccional pero no simultánea; los dispositivos pueden transmitir y recibir, pero no al mismo tiempo, como en el uso de walkie-talkies.
-- **Full-duplex (dúplex)**: La comunicación es bidireccional y simultánea; ambos dispositivos pueden transmitir y recibir al mismo tiempo, como en una conversación telefónica.
+### Clasificación de las redes por direccionalidad
+
+- **Simplex (unidireccional)**: un dispositivo transmite y otro recibe (radiodifusión).
+- **Half-duplex (semidúplex)**: bidireccional pero no simultánea (walkie-talkie).
+- **Full-duplex (dúplex)**: bidireccional y simultánea (telefonía, Ethernet conmutada).
 
 ### Clasificación de las redes por medios de transmisión
 
 - **Medios guiados**:
-    - **Cable de par trenzado**: Consiste en pares de cables entrelazados para reducir la interferencia electromagnética. Se utiliza comúnmente en redes LAN.
-    - **Cable coaxial**: Cable con un conductor interno rodeado por un aislante y una malla conductora que sirve como blindaje. Fue popular en redes Ethernet antiguas.
-    - **Fibra óptica**: Utiliza hilos de vidrio o plástico para transmitir datos en forma de pulsos de luz, ofreciendo altas velocidades y mayor inmunidad a interferencias.
-- **Medios no guiados**:
-    - **Red por radio**: Utiliza ondas de radio para la transmisión inalámbrica de datos, como en redes Wi-Fi.
-    - **Red por infrarrojos**: Emplea luz infrarroja para la comunicación entre dispositivos en línea de visión directa, aunque es susceptible a interferencias y obstrucciones.
-    - **Red por microondas**: Utiliza señales de microondas para la transmisión de datos a largas distancias, incluyendo enlaces satelitales.
+    - **Par trenzado**: pares de hilos entrelazados para reducir interferencias; el cableado habitual de las LAN (categorías 5e, 6, 6A).
+    - **Cable coaxial**: conductor central con malla de blindaje; usado en las Ethernet antiguas y en las redes de cable (HFC).
+    - **Fibra óptica**: transmite pulsos de luz por hilos de vidrio; máxima velocidad y alcance, inmune a interferencias electromagnéticas.
+- **Medios no guiados**: **radio** (Wi-Fi, telefonía móvil), **infrarrojos** (línea de visión directa) y **microondas** (radioenlaces y satélites).
 
-## Redes de Área Extensa (WAN)
+## Redes de área local: VLAN y DMZ
 
-Las redes de área extensa (WAN, *Wide Area Network*) son redes de computadoras que interconectan múltiples redes de ámbito geográfico menor, como redes de área local (LAN), permitiendo la comunicación entre dispositivos que no se encuentran en la misma ubicación física. Las WAN son esenciales para conectar sucursales de empresas, instituciones gubernamentales y para el funcionamiento global de internet. Pueden ser privadas, diseñadas y gestionadas por organizaciones, o públicas, administradas por proveedores de servicios de internet (ISP).
+Las LAN actuales son casi universalmente redes **Ethernet conmutadas** en topología de estrella, segmentadas de forma lógica mediante VLAN y protegidas con zonas perimetrales (DMZ).
 
-La mayoría de los enlaces WAN son **enlaces punto a punto**, conectando directamente dos ubicaciones específicas. Esto facilita una comunicación directa y constante entre los puntos finales.
+### Ethernet (IEEE 802.3)
+
+- Tecnología estándar de las redes de área local cableadas, normalizada como **IEEE 802.3**.
+- **Direcciones MAC de 48 bits**: identificador físico de cada tarjeta, grabado por el fabricante (los primeros 24 bits, OUI, identifican al fabricante).
+- **Método de acceso clásico: CSMA/CD** (*Carrier Sense Multiple Access with Collision Detection*): escuchar antes de transmitir y detectar colisiones en el medio compartido. Hoy es historia: en las redes **conmutadas full-duplex** cada puerto del switch es un enlace dedicado sin colisiones.
+- **Velocidades**: **10 Mbps** (Ethernet), **100 Mbps** (Fast Ethernet), **1 Gbps** (Gigabit), **10 Gbps**, y **25/40/100 Gbps** en centros de datos y troncales.
+- **Dominios**: el **switch** separa dominios de **colisión** (uno por puerto); el **router**, y también las VLAN, separan dominios de **difusión** (broadcast).
+
+### VLAN (IEEE 802.1Q)
+
+- Una **VLAN** (*Virtual LAN*) divide lógicamente un mismo switch (o conjunto de switches) en varias redes independientes: los equipos de VLAN distintas no se comunican entre sí aunque compartan la electrónica física.
+- **Etiquetado 802.1Q**: inserta en la trama Ethernet una etiqueta de **4 bytes** cuyo identificador de VLAN (**VLAN ID, 12 bits**) admite hasta **4094 VLAN**.
+- **Tipos de asignación**: **estática o por puerto** (cada puerto pertenece a una VLAN) o **dinámica** (según la MAC o la autenticación del equipo, p. ej. con 802.1X, tema 74).
+- **Tipos de enlaces**: de **acceso** (transportan una sola VLAN, hacia los equipos) y **troncales (trunk)** (transportan varias VLAN etiquetadas entre switches; la **VLAN nativa** viaja sin etiquetar).
+- **Comunicación entre VLAN**: requiere un dispositivo de capa 3: un router (*router-on-a-stick*) o un **switch de capa 3**.
+- **Ventajas**: segmentación y seguridad (aísla departamentos, invitados, VoIP), dominios de difusión más pequeños y flexibilidad (mover un usuario de red sin recablear).
+
+### DMZ (zona desmilitarizada)
+
+- Segmento de red intermedio entre la red interna y el exterior donde se ubican los **servicios expuestos a Internet** (web, correo, DNS público).
+- **Arquitectura**: entre dos cortafuegos (uno frente a Internet y otro frente a la red interna) o en una **tercera interfaz** de un mismo cortafuegos.
+- **Principio**: desde la DMZ **no se permite iniciar conexiones hacia la red interna**; si un servidor expuesto se ve comprometido, el atacante no alcanza la red corporativa. Las arquitecturas de cortafuegos se desarrollan en el tema 74.
+- Las LAN inalámbricas (**WLAN**, familia IEEE 802.11/Wi-Fi) se estudian en el tema 71, y su seguridad en el 74.
+
+## Redes de área extensa (WAN)
+
+Las redes de área extensa interconectan redes de ámbito menor (LAN, MAN) a través de grandes distancias, permitiendo la comunicación entre sedes y el acceso global a Internet. Pueden ser **privadas** (contratadas por la organización a un operador) o **públicas** (la propia Internet, a través de un ISP). La mayoría de los enlaces WAN son **punto a punto** entre dos ubicaciones.
 
 ### Infraestructura de una WAN
 
-- **Equipamiento local del cliente (CPE)**: Dispositivos y cables ubicados en las instalaciones del cliente que se conectan a la red del proveedor.
-- **Equipo de comunicación de datos (DCE)**: Dispositivos que proporcionan la interfaz entre el CPE y la red del proveedor, como módems y multiplexores.
-- **Equipo terminal de datos (DTE)**: Dispositivos del cliente que generan y consumen datos, como computadoras y routers.
-- **Punto de demarcación**: Límite físico que separa las responsabilidades de mantenimiento entre el cliente y el proveedor de servicios.
-- **Bucle local**: Conexión física que une el CPE con la central del proveedor.
-- **Centralita de comunicaciones**: Instalación del proveedor donde se gestionan las conexiones y el tráfico de datos.
-- **Red interurbana**: Infraestructura que conecta diferentes áreas geográficas, facilitando la comunicación a larga distancia.
+- **Equipamiento local del cliente (CPE)**: dispositivos y cableado en las instalaciones del cliente.
+- **DTE (equipo terminal de datos)**: los equipos del cliente que generan y consumen los datos (routers, ordenadores).
+- **DCE (equipo de comunicación de datos)**: la interfaz con la red del proveedor (módems, unidades CSU/DSU).
+- **Punto de demarcación**: límite físico que separa la responsabilidad del cliente y la del operador.
+- **Bucle local (última milla)**: la conexión física entre el CPE y la central del proveedor.
+- **Central del operador (CO)** y **red troncal**: las instalaciones y enlaces interurbanos del proveedor.
 
-### Tipos de Redes WAN
+### Técnicas de conmutación
 
-- **Conmutación de circuitos**: Establece un circuito dedicado entre las terminales de los usuarios antes de la transmisión de datos. Este circuito permanece reservado durante toda la comunicación. Ejemplo: la red telefónica tradicional.
-- **Conmutación de paquetes**: Los datos se dividen en paquetes que se envían a través de una red compartida. Cada paquete puede tomar rutas diferentes y se reensambla en el destino. Ejemplo: internet.
-- **Conmutación de mensajes**: Los mensajes completos se transmiten de nodo en nodo, almacenándose temporalmente en cada uno antes de ser reenviados. Este método es menos común en la actualidad.
+- **Conmutación de circuitos**: se establece y reserva un circuito dedicado durante toda la comunicación (red telefónica tradicional).
+- **Conmutación de paquetes**: los datos se dividen en paquetes que comparten la red y pueden seguir rutas distintas; se reensamblan en destino (Internet).
+- **Conmutación de mensajes**: cada nodo almacena y reenvía el mensaje completo (*store and forward*); en desuso.
 
-### Tipos de conexiones a una WAN
+### Tecnologías de acceso y transporte WAN
 
-### 1. Conexiones de un Suscriptor a una WAN
+- **Líneas dedicadas**: enlaces punto a punto permanentes y exclusivos, con ancho de banda garantizado. Sus protocolos de enlace clásicos son:
+    - **PPP (Point-to-Point Protocol)**: multiprotocolo, con autenticación **PAP** (contraseña en claro) o **CHAP** (desafío-respuesta), compresión y detección de errores.
+    - **HDLC (High-Level Data Link Control)**: protocolo orientado a bits para enlaces síncronos, con control de flujo y de errores; base de muchos protocolos de enlace posteriores (incluido PPP).
+- **MPLS (Multiprotocol Label Switching)**: conmuta los paquetes según **etiquetas** cortas asignadas en el ingreso a la red, en lugar de consultar la dirección IP en cada salto (se le llama de «capa 2,5»). Es la base de las **VPN de nivel 3** de operador que interconectan sedes, con ingeniería de tráfico y calidad de servicio.
+- **Ethernet WAN (metro Ethernet)**: extiende Ethernet sobre la fibra del operador para enlaces metropolitanos de alta velocidad.
+- **Banda ancha sobre el bucle local**: **DSL** (sobre el par de cobre telefónico), **cable** (sobre la red HFC de televisión, estándar DOCSIS) y **FTTH** (fibra hasta el hogar, con redes ópticas pasivas GPON), hoy la tecnología dominante en España.
+- **Acceso inalámbrico**: **VSAT** (terminales de satélite, para zonas remotas) y **datos móviles** 4G/5G, incluido el acceso fijo inalámbrico (las generaciones móviles se estudian en el tema 71).
+- **SD-WAN**: gestión centralizada por software de múltiples enlaces WAN (MPLS, fibra, 4G/5G), seleccionando el camino según la aplicación (se estudia en el tema 68).
+- **Tecnologías legadas**, hoy retiradas o residuales pero preguntables:
 
-- **Línea dedicada**: Conexión punto a punto permanente y exclusiva entre dos puntos. Ofrece alta fiabilidad y seguridad.
-    - **Protocolos asociados**: PPP (Point-to-Point Protocol), HDLC (High-Level Data Link Control), SDLC (Synchronous Data Link Control), HNAS.
-- **Conmutación de circuitos**: Se establece un circuito dedicado temporal para cada sesión de comunicación.
-    - **Protocolos asociados**: PPP, ISDN (Integrated Services Digital Network).
-- **Conmutación de paquetes**: Los datos se transmiten en paquetes a través de enlaces compartidos.
-    - **Protocolos con estado**: X.25, Frame Relay.
-    - **Protocolos sin estado**: IPv4, IPv6.
-- **Conmutación de celdas**: Similar a la conmutación de paquetes, pero utiliza celdas de longitud fija.
-    - **Protocolo asociado**: ATM (Asynchronous Transfer Mode).
-- **Internet**: Utiliza la infraestructura global de internet para la transmisión de datos.
-    - **Protocolos asociados**: VPN (Virtual Private Network), DSL (Digital Subscriber Line), módem por cable, conexiones inalámbricas.
+| Tecnología | Características | Conmutación |
+| --- | --- | --- |
+| **Dial-up** | Acceso telefónico con módem analógico, máx. 56 kbps | Circuitos |
+| **RDSI (ISDN)** | Voz y datos digitales sobre la línea telefónica (2B+D: 2×64 + 16 kbps) | Circuitos |
+| **X.25** | Circuitos virtuales con corrección de errores salto a salto; lenta pero robusta; abarca las capas **1 a 3** | Paquetes |
+| **Frame Relay** | Sucesora de X.25, menor sobrecarga; cada circuito virtual se identifica por un **DLCI** local; capa de enlace | Paquetes |
+| **ATM** | **Celdas de tamaño fijo de 53 bytes** (48 de datos + 5 de cabecera) sobre canales y trayectos virtuales; pensada para voz, vídeo y datos | Celdas |
+| **WiMAX (802.16)** | Acceso inalámbrico metropolitano de banda ancha; desplazada por 4G/5G | Paquetes |
 
-### 2. Conexiones a la WAN con Medios Guiados
+## Direccionamiento IP y subredes
 
-- **Líneas dedicadas**: Para conexiones permanentes que requieren alta disponibilidad y ancho de banda garantizado.
-- **Acceso telefónico (dial-up)**: Utiliza líneas telefónicas analógicas; es lento y se usa cuando no hay otras opciones disponibles.
-- **RDSI (Red Digital de Servicios Integrados)**: Permite la transmisión digital de voz y datos a través de líneas telefónicas tradicionales.
-- **Frame Relay**: Tecnología de capa 2 que ofrece conmutación rápida de paquetes para interconectar LANs distantes.
-- **ATM (Modo de Transferencia Asíncrona)**: Transmite datos en celdas de tamaño fijo, adecuado para voz, vídeo y datos.
-- **WAN Ethernet**: Utiliza estándares Ethernet avanzados sobre fibra óptica para conexiones de alta velocidad.
-- **MPLS (Conmutación de Etiquetas Multiprotocolo)**: Dirige datos basándose en etiquetas cortas en lugar de direcciones IP, mejorando la eficiencia.
-- **WAN DSL**: Utiliza líneas telefónicas de cobre para proporcionar acceso a internet de banda ancha.
-- **Cable**: Usa la infraestructura de televisión por cable para ofrecer servicios de internet.
-- **Fibra óptica**: Ofrece las velocidades más altas y es inmune a las interferencias electromagnéticas.
+Una dirección IPv4 son **32 bits** divididos en dos partes: la que identifica la **red** y la que identifica el **host** dentro de ella. La **máscara de red** marca esa frontera: sus bits a 1 señalan la parte de red (255.255.255.0 o, en notación de prefijo, **/24**).
 
-### 3. Conexiones a la WAN de Manera Inalámbrica
+- **Clases de direcciones** (direccionamiento con clase, hoy sustituido por CIDR pero aún preguntable):
 
-- **VSAT (Very Small Aperture Terminal)**: Utiliza comunicaciones satelitales para crear una WAN privada, ideal para áreas remotas.
-- **Tecnologías inalámbricas**:
-    - **Wi-Fi Municipal**: Redes inalámbricas que brindan acceso a internet en áreas urbanas extensas.
-    - **WiMAX**: Ofrece acceso inalámbrico de banda ancha en un radio amplio, similar a la cobertura celular.
-    - **Datos móviles**: Tecnologías celulares como 3G, 4G/LTE y 5G que permiten acceso a internet móvil de alta velocidad.
+| Clase | Primer octeto | Máscara por defecto | Uso |
+| --- | --- | --- | --- |
+| **A** | 1-126 (empieza por 0) | 255.0.0.0 (**/8**) | Redes enormes: 126 redes de **16,7 millones** de hosts |
+| **B** | 128-191 (empieza por 10) | 255.255.0.0 (**/16**) | Redes medianas: 16 384 redes de **65 534** hosts |
+| **C** | 192-223 (empieza por 110) | 255.255.255.0 (**/24**) | Redes pequeñas: 2 millones de redes de **254** hosts |
+| **D** | 224-239 | (no aplica) | **Multicast** |
+| **E** | 240-255 | (no aplica) | Experimental |
 
-### Telefonía Móvil y Nuevas Tecnologías
+- **Direcciones especiales**:
+    - **Dirección de red**: todos los bits de host a 0; identifica la subred y no es asignable.
+    - **Dirección de broadcast**: todos los bits de host a 1; difusión a toda la subred.
+    - **Loopback**: la red 127.0.0.0/8 (típicamente **127.0.0.1**) apunta al propio equipo (por eso la clase A llega a 126).
+    - **APIPA (link-local)**: 169.254.0.0/16, autoasignada cuando falla DHCP.
+    - **Direcciones privadas (RFC 1918)**, no enrutables en Internet: **10.0.0.0/8**, **172.16.0.0/12** y **192.168.0.0/16**.
+- **CIDR (Classless Inter-Domain Routing)**: elimina las clases y permite prefijos de cualquier longitud (/n = número de bits de red), lo que aprovecha mejor el espacio y permite **agregar rutas** (superredes). **VLSM** aplica la misma idea dentro de una organización: subredes de distinto tamaño según las necesidades de cada segmento.
+- **Subnetting**: tomar prestados **n bits** de la parte de host crea **2^n subredes**; con **h** bits de host restantes, cada subred tiene **2^h - 2** direcciones útiles (se descuentan la de red y la de broadcast).
+- **NAT/PAT**: la traducción de direcciones de red permite que una red privada salga a Internet con una o pocas IP públicas; **PAT** (NAT con sobrecarga) multiplexa muchas conexiones sobre una sola IP distinguiéndolas por el puerto. Ha sido el gran paliativo del agotamiento de IPv4.
+- **Direccionamiento IPv6** (tema 65): prefijos habituales **/64** por subred; direcciones **link-local** (fe80::/10, autoconfiguradas en cada interfaz), **ULA** (fc00::/7, el equivalente a las privadas), **unicast globales** (2000::/3) y **multicast** (ff00::/8); no existe el broadcast.
 
-La telefonía móvil ha evolucionado desde servicios básicos de voz hasta ofrecer conexiones de datos de alta velocidad:
+## Caso práctico: cálculo de subredes
 
-- **3G**: Introdujo servicios de datos más rápidos, permitiendo navegación web y aplicaciones básicas.
-- **4G/LTE (Long Term Evolution)**: Mejoró significativamente las velocidades de datos, habilitando streaming de vídeo y aplicaciones en tiempo real.
-- **5G**: Proporciona velocidades ultra rápidas, baja latencia y capacidad para una gran cantidad de dispositivos, impulsando el Internet de las Cosas (IoT) y aplicaciones avanzadas como realidad aumentada.
+**Enunciado**: dividir la red **192.168.48.0** con máscara **255.255.255.0** en **4 subredes**.
 
-### Nuevos Protocolos
+- **Bits necesarios**: para obtener 4 subredes se aplica **2^n ≥ 4**, de donde **n = 2**: se toman **2 bits** prestados de la parte de host.
+- **Nueva máscara**: la original es **/24** (255.255.255.0); al añadir 2 bits de subred pasa a **/26**, es decir, **255.255.255.192** (los dos primeros bits del último octeto a 1: 11000000 en binario = 192).
+- **Direcciones por subred**: quedan **8 - 2 = 6 bits** de host, luego cada subred tiene **2^6 = 64** direcciones.
+- **Direcciones útiles por subred**: de esas 64 se reservan 2 (la dirección de red y la de broadcast): **62 hosts** por subred.
+- **Rangos resultantes** (las subredes van de 64 en 64):
 
-La innovación en tecnologías WAN ha dado lugar a nuevos protocolos:
+| Subred | Rango | Hosts útiles | Broadcast |
+| --- | --- | --- | --- |
+| 1 | 192.168.48.**0** - 63 | .1 a .62 | .63 |
+| 2 | 192.168.48.**64** - 127 | .65 a .126 | .127 |
+| 3 | 192.168.48.**128** - 191 | .129 a .190 | .191 |
+| 4 | 192.168.48.**192** - 255 | .193 a .254 | .255 |
 
-- **IPv6**: Expande el espacio de direcciones IP, mejora la seguridad y la eficiencia enrutamiento.
-- **MPLS**: Mejora la velocidad y gestión del tráfico en redes complejas mediante la utilización de etiquetas.
-- **VPN**: Permite crear conexiones seguras a través de redes públicas, utilizando protocolos como IPsec o SSL/TLS.
+La primera dirección de cada rango (.0, .64, .128, .192) es la de identificación de la subred y la última (.63, .127, .191, .255) la de broadcast: ninguna de las dos se asigna a hosts.
 
-### Protocolos
+## Fuentes {.unnumbered .unlisted}
 
-| Protocolo   | Funcionamiento                                                                                                                                                                                                                   | Topología                                                | Capa OSI        |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------- |
-| Frame Relay | Cada circuito virtual está identificado de forma única por un DLCI local, lo que permite distinguir que enrutador está conectado a cada interfaz.                                                                                | Hub-and-spoke (estrella), Malla completa, malla parcial. | Enlace de datos |
-| ATM         | La información es transmitida en forma de paquetes cortos llamados celdas ATM. Longitud constante. Las cuales pueden ser encaminadas individualmente mediante el uso de los denominados canales virtuales y trayectos virtuales. | Malla completa, Punto a punto.                           | Enlace de datos |
-| X.25        | Está orientada a la conexión y trabaja con circuitos virtuales conmutados y permanentes, estas redes están obsoletas para algunos propósitos por su velocidad.                                                                   | Punto a punto                                            | Capa de red     |
-
-## Caso práctico: Cálculo de subredes
-
-Para dividir una red en subredes, se utilizan cálculos basados en el número de bits reservados para la identificación de redes y hosts.
-
-**Ejemplo**: Dividir la red **192.169.48.0** con máscara **255.255.255.0** en **4 subredes**.
-
-- **Número de subredes requeridas**: Necesitamos dividir la red en 4 subredes. Por lo que para determinar cuántos bits adicionales se necesitan, usamos la fórmula **2^n**, donde **n** es el número de bits.
-    - En este caso, **2^n = 4**, lo que implica que **n = 2**. Es decir, debemos tomar **2 bits adicionales** de la parte destinada a los hosts.
-- **Actualización de la máscara de subred**: La máscara original es **/24** (32-8) o **255.255.255.0**. Por ende, al añadir 2 bits para las subredes, la nueva máscara se convierte en **/26** o **255.255.255.192** (los **dos primeros bits** del último octeto son “1”s, lo que equivale a **11**000000 en binario).
-- **Número total de direcciones por subred:** Con la nueva máscara **/26**, quedan **(8 – 2) = 6** bits para identificar hosts dentro de cada subred. Así que el número total de direcciones por subred sería **2^6 = 64**
-- **Direcciones utilizables por subred**: De las **64** direcciones de cada subred, **2** están reservadas: Una para la dirección de red y otra para la de broadcast. Por tanto, el número de direcciones de host disponibles por subred es: **64 - 2 = 62**
-- **Rangos de direcciones por subred:** (rangos de las 4 subredes)
-    - **Subred 1:** 192.169.48.0 a 192.169.48.63
-        - **Direcciones utilizables:** 192.169.48.1 a 192.169.48.62
-    - **Subred 2**: 192.169.48.64 a 192.169.48.127
-        - **Direcciones utilizables:** 192.169.48.65 a 192.169.48.126
-    - **Subred 3:** 192.169.48.128 a 192.169.48.191
-        - **Direcciones utilizables:** 192.169.48.129 a 192.169.48.190
-    - **Subred 4:** 192.169.48.192 a 192.169.48.255
-        - **Direcciones utilizables:** 192.169.48.193 a 192.169.48.254
-
-**Nota:** La primera dirección (\*.0, \*.64, \*.128, \*.192) y la última (\*.63, \*.127, \*.191, \*.255), no son utilizables porque son la de identificación y la de broadcast, respectivamente
-
--
+- IEEE 802.3 (Ethernet) e IEEE 802.1Q (VLAN).
+- RFC 950 (subredes, 1985), RFC 1918 (direccionamiento privado, 1996) y RFC 4632 (CIDR, 2006), IETF.
+- RFC 1661 (PPP, 1994) y RFC 3031 (arquitectura MPLS, 2001), IETF.
