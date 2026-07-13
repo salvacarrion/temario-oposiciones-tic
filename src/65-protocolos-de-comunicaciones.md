@@ -1,375 +1,274 @@
 # Protocolos de comunicaciones
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+Un protocolo de comunicaciones es el conjunto de reglas que permite a dos sistemas intercambiar datos de forma ordenada: define los formatos de los mensajes, la secuencia de intercambio y el tratamiento de errores. Este tema recorre los protocolos de la pila TCP/IP (tema 64) de abajo arriba: la capa de internet (IPv4, IPv6, ICMP, ARP), la capa de transporte (TCP y UDP, con TLS) y la capa de aplicación (DNS, HTTP, SMTP, FTP, DHCP y SSH). Los protocolos de la capa de enlace (Ethernet, PPP, HDLC) se tratan en el tema 66, y las redes inalámbricas en el 71.
 
+Tabla resumen de los puertos más preguntables (los puertos identifican la aplicación dentro del host):
 
-**Protocolos de comunicaciones según el Modelo TCP/IP**: Aplicación, Transporte, Internet y Enlace de Datos.
+| Protocolo | Puerto(s) | Transporte |
+| --- | --- | --- |
+| FTP | **20** (datos) y **21** (control) | TCP |
+| SSH (y SFTP/SCP) | **22** | TCP |
+| TELNET | **23** | TCP |
+| SMTP | **25** (entre servidores), **587** (envío), **465** (SMTPS) | TCP |
+| DNS | **53** | UDP y TCP |
+| DHCP | **67** (servidor) y **68** (cliente) | UDP |
+| TFTP | **69** | UDP |
+| HTTP | **80** | TCP |
+| POP3 | **110** (con TLS: **995**) | TCP |
+| NTP | **123** | UDP |
+| IMAP | **143** (con TLS: **993**) | TCP |
+| SNMP | **161** (agente) y **162** (traps) | UDP |
+| HTTPS | **443** | TCP (HTTP/3: UDP/QUIC) |
 
-## Protocolos de la Capa de Aplicación
+## Capa de internet: IPv4, IPv6, ICMP y ARP
 
-### DNS (Domain Name System)
-
-- Sistema de nomenclatura jerárquico y descentralizado para dispositivos conectados a redes IP, como Internet o redes privadas.
-- Utiliza una **base de datos distribuida y jerárquica** que almacena información asociada a nombres de dominio.
-- Generalmente emplea el protocolo **UDP** para sus comunicaciones.
-- **Componentes:**
-    - **Clientes Fase 1:** Navegadores web u otras aplicaciones que solicitan resoluciones de nombres.
-    - **Servidores DNS:** Resuelven nombres de dominio o propagan solicitudes a otros servidores.
-    - **Zonas de Autoridad:** Espacios de nombres del que es responsable un servidor DNS (ejemplo: **.com**, **.org**, **.es**).
-- **Nombres de Dominio:**
-    - **FQDN (Fully Qualified Domain Name):** Nombre de dominio completo, como **[www.ejemplo.com](http://www.ejemplo.com).**, resuelto de derecha a izquierda.
-    - **Componentes de Dominio de 3 Niveles:**
-        - **3er Nivel:** Subdominio o hostname (ejemplo: **www**).
-        - **2do Nivel:** Nombre de organización (ejemplo: **ejemplo**).
-        - **1er Nivel/TLD (Top-Level Domain):** Dominio de nivel superior (ejemplo: **com**, **org**, **es**).
-    - **Subdominios:** Delegaciones de subsecciones de un dominio, como **www.support.ejemplo.org**.
-    - **Longitud máxima del nombre de dominio:** **255 caracteres**.
-    - **IPs:** Resuelven de izquierda a derecha
-- **Servidores Raíz (root server):** Hay **13 servidores raíz** designados ([A-M].root-servers.net), con múltiples réplicas globales.
-- **Tipos de Servidores DNS:**
-    - **Primarios o Maestros:** Almacenan datos originales de una zona y son **autoritarios**.
-    - **Secundarios o Esclavos:** Réplicas de los servidores primarios.
-    - **Locales o Caché:** Almacenan respuestas recientes para agilizar futuras resoluciones.
-- **Tipos de Resolución de Nombres de Dominio:**
-    - **Recursiva:** El servidor DNS realiza todas las consultas necesarias para resolver un nombre y devuelve la respuesta final al cliente.
-        - **Caso:** De host a DNS local.
-    - **Iterativa:** El servidor DNS proporciona la mejor respuesta que tiene (quizás una referencia a otro servidor) y el cliente continúa la búsqueda.
-        - ![](media/image71.png)**Caso:** De DNS local a otros servidores.
-- **Tipos de Registros DNS:**
-    - **A (Address):** Dirección IPv4.
-    - **AAAA (Address):** Dirección IPv6.
-    - **CNAME (Canonical Name):** Nombre canónico; alias de otro nombre de dominio.
-    - **NS (Name Server):** Servidor de nombres autoritario para el dominio.
-    - **MX (Mail Exchange):** Intercambio de correo; servidores de correo del dominio.
-    - **PTR (Pointer):** Registro inverso; traduce direcciones IP a nombres de dominio.
-    - **SOA (Start-of-Authority):** Inicio de autoridad; información sobre el servidor DNS primario de la zona.
-    - **SRV (Service Record(:** Registro de servicio; especifica servicios disponibles.
-    - **ANY:** Solicita toda la información disponible para un nombre de dominio.
-    - **TXT:** Contiene texto informativo o descriptivo.
-
-### HTTP (Hypertext Transfer Protocol)
-
-- Protocolo de comunicación que permite la transferencia de información en la **World Wide Web**.
-- **Puertos Estándar:** **80** para HTTP y **443** para HTTPS.
-- **HTTP Inseguro:** Transmite datos en **texto plano**, susceptible a ataques como **man-in-the-middle** y **eavesdropping**.
-- **HTTPS:** Utiliza **TLS** para crear un canal cifrado y seguro.
-- **Sin Estado (Stateless):** Cada petición es independiente y no mantiene contexto con peticiones anteriores.
-- **Códigos de Respuesta HTTP:**
-    - **1xx (Informativos):** La solicitud ha sido recibida y se está procesando.
-    - **2xx (Éxito):** La solicitud se ha recibido, entendido y aceptado correctamente.
-    - **3xx (Redirección):** Se requiere acción adicional para completar la solicitud.
-    - **4xx (Errores del Cliente):** La solicitud contiene sintaxis incorrecta o no puede ser cumplida.
-    - **5xx (Errores del Servidor):** El servidor falló al cumplir una solicitud aparentemente válida.
-- **Métodos de Petición:**
-    - **GET:** Solicita representación de un recurso; no debe tener efectos secundarios.
-    - **HEAD:** Igual que GET pero sin el cuerpo de la respuesta.
-    - **POST:** Envía datos al servidor, posiblemente cambiando su estado.
-    - **PUT:** Reemplaza todas las representaciones actuales del recurso destino.
-    - **DELETE:** Elimina el recurso especificado.
-    - **CONNECT:** Establece un túnel hacia el servidor identificado.
-    - **OPTIONS:** Describe las opciones de comunicación para el recurso.
-    - **TRACE:** Realiza una prueba de bucle de retorno de mensaje.
-    - **PATCH:** Aplica modificaciones parciales a un recurso.
-
-### HTTP (Hypertext Transfer Protocol)
-
-HTTP + SSL/TLS, en puerto 443
-
-### SMTP (Simple Mail Transfer Protocol)
-
-- Protocolo utilizado para el intercambio de mensajes de correo electrónico entre computadoras.
-- **No define** cómo almacenar o presentar el correo al destinatario.
-- **Puertos Estándar:** **25** (servidor a servidor) y **587** (cliente a servidor).
-- **Con Estado (Stateful):** Mantiene la conexión durante la sesión de correo.
-- **Comandos Populares:**
-    - **HELO/EHLO**
-    - **MAIL FROM:**
-    - **RCPT TO:**
-    - **DATA**
-    - **QUIT**
-- **Finalización del Mensaje:** Se envía con **"."** seguido de **\<CRLF>.\<CRLF>**.
-- **Seguridad:** No ofrece cifrado por defecto; se recomienda usar **SMTPS** para comunicaciones seguras.
-- **Postfix:** Agente de transferencia de correo ampliamente utilizado en sistemas UNIX.
-
-### FTP (File Transfer Protocol)
-
-- Protocolo de red diseñado para la **transferencia de archivos** entre sistemas conectados a una red **TCP** (Transmission Control Protocol), basado en la arquitectura cliente-servidor.
-- **Características:**
-    - Diseñado para priorizar **velocidad** sobre **seguridad**.
-    - **Intercambio en texto plano:** Las credenciales y los datos se transmiten sin cifrar, lo que lo hace vulnerable a ataques.
-    - **Bidireccional:** Permite tanto subir como descargar archivos.
-    - Compatible con múltiples sistemas operativos y ampliamente utilizado para el intercambio de archivos en redes locales y remotas.
-- **Puertos Utilizados:**
-    - **Puerto de Datos (20/TCP):** Utilizado para transferir los datos reales.
-    - **Puerto de Control (21/TCP):** Gestiona los comandos y respuestas entre cliente y servidor.
-- **Modos de Conexión del Cliente FTP:**
-    - **Activo (PORT):**
-        - El cliente informa al servidor el puerto al que debe conectarse enviando un comando **PORT**.
-        - El servidor inicia la conexión hacia el puerto especificado por el cliente.
-        - **Inseguro:** Este método es vulnerable en redes protegidas con firewalls.
-    - **Pasivo (PASV):**
-        - El cliente solicita al servidor un puerto disponible mediante el comando **PASV**.
-        - El servidor informa al cliente del puerto al que debe conectarse, y el cliente inicia la conexión.
-        - **Más seguro y compatible** con firewalls.
-- **Códigos de Respuesta FTP:** Se componen de tres dígitos y tienen el siguiente significado:
-    - **1xx:** Respuesta informativa o acción en proceso.
-    - **2xx:** Acción completada con éxito.
-    - **3xx:** Se necesita más información o acción adicional para completar la solicitud.
-    - **4xx:** Error temporal; la acción puede reintentarse más tarde.
-    - **5xx:** Error permanente; la acción no puede completarse.
-- **Comandos FTP Populares:**
-    - **USER \<nombre>:** Proporciona el nombre de usuario para la autenticación.
-    - **PASS \<contraseña>:** Proporciona la contraseña para la autenticación.
-    - **LIST:** Lista los archivos y directorios en el servidor.
-    - **RETR \<archivo>:** Descarga un archivo del servidor al cliente.
-    - **STOR \<archivo>:** Sube un archivo desde el cliente al servidor.
-    - **QUIT:** Finaliza la sesión FTP.
-- **Ejemplo de Acceso FTP:** ftp://\<usuario>:\<contraseña>@\<servidor ftp>/\<ruta>
-- **Implementaciones:**
-    - **vsftpd (Very Secure FTP Daemon):** Servidor FTP seguro y rápido para sistemas UNIX y Linux.
-
-### TELNET (Teletype Network)
-
-- Protocolo que permite acceder y gestionar remotamente dispositivos como si se estuviera localmente.
-- **Puerto Estándar:** **23**.
-- **Problemas de Seguridad:** Transmite credenciales y datos en **texto plano**.
-- **En Desuso:** Reemplazado por **SSH** debido a sus mejoras en seguridad.
-
-### Otros Protocolos de la Capa de Aplicación
-
-- **TFTP (Trivial File Transfer Protocol):** Servicio simple y sin conexión que utiliza **UDP** para transferir archivos.
-- **NFS (Network File System):** Protocolos desarrollados por Sun Microsystems para acceder a sistemas de archivos remotos.
-- **POP (Post Office Protocol):** Protocolo para recuperar correo electrónico de un servidor remoto; **descarga los mensajes** al cliente.
-- **IMAP (Internet Message Access Protocol):** Permite gestionar y **manipular mensajes directamente en el servidor**, manteniendo sincronización entre múltiples dispositivos.
-
-## Protocolos de la Capa de Transporte
-
-### UDP (User Datagram Protocol)
-
-- Protocolo que permite el envío de **datagramas** sin necesidad de establecer previamente una conexión.
-- **Características:**
-    - **No orientado a conexión (Stateless):** No guarda información de estado entre mensajes.
-    - **Sin confirmación ni garantías:** No incluye mecanismos de control de flujo, retransmisión ni confirmaciones (ACK).
-    - **Eficiente pero menos fiable.**
-- **Usos Comunes:**
-    - Protocolos como **DHCP**, **BOOTP**, **DNS**.
-    - Aplicaciones en tiempo real como **streaming de video/audio**.
-- **Cabecera UDP:**
-    - ![Screen Shot 2021-06-22 at 02.08.43.png](media/image72.png)Mínimo de **8 bytes** (64 bits), lo que lo hace ligero y rápido.
-
-### TCP (Transmission Control Protocol)
-
-- Protocolo que garantiza una **comunicación confiable**, asegurando que los datos lleguen sin errores y en el mismo orden en que fueron enviados.
-- **Orientado a conexión (Stateful):** Establece, mantiene y cierra conexiones.
-- **Características:**
-    - **Reordenación de Segmentos:** Asegura que los datos se ensamblen correctamente.
-    - **Control de Flujo:** Ajusta dinámicamente la tasa de transmisión de datos según las capacidades del receptor.
-    - **Mecanismos de Control de Congestión:** Previene la saturación de la red.
-- ![](media/image73.png)**Funcionamiento:**
-    - **Establecimiento de Conexión (Three-way Handshake):**
-        1. **SYN:** El cliente solicita una conexión.
-        2. **SYN-ACK:** El servidor responde aceptando la conexión.
-        3. **ACK:** El cliente confirma y puede iniciar el intercambio de datos.
-    - **Transferencia de Datos:** Mecanismos clave:
-        - **Número de Secuencia:** Identifica y ordena los segmentos TCP.
-        - **Checksum:** Verifica la integridad de los datos.
-        - **Ventanas Deslizantes (Sliding Windows):** Controla el flujo de datos, ajustándose al tamaño del buffer del receptor.
-    - **Control de Congestión:**
-        - **Slow Start (Inicio Lento):** Comienza con una pequeña cantidad de datos y aumenta gradualmente.
-        - **Congestion Avoidance (Evitación de Congestión):** Ajusta la ventana para evitar saturar la red.
-        - **Fast Retransmit (Retransmisión Rápida):** Detecta pérdidas de paquetes y retransmite rápidamente.
-        - ![](media/image74.png)**Fast Recovery (Recuperación Rápida):** Continúa la transmisión sin iniciar un nuevo Slow Start.
-    - **Terminación de Conexión (Four-way Handshake):**
-        1. **FIN:** Una parte solicita cerrar la conexión.
-        2. **ACK + FIN:** La otra parte responde y confirma el cierre.
-        3. **ACK:** Confirmación final del cierre.
-
-### TLS (Transport Layer Security)
-
-- Protocolo criptográfico que garantiza **comunicaciones seguras** sobre redes como Internet.
-- **Sucesor de SSL (Secure Sockets Layer).**
-- **Características:**
-    - Utiliza **criptografía asimétrica** (certificados X.509, estándar UIT-T) **para autenticar a las partes**.
-    - Después, emplea **cifrado simétrico para la comunicación**, asegurando mayor velocidad.
-    - \***Nota:** Habitualmente, solo el servidor es autenticado. Es decir, se garantiza su identidad, mientras que el cliente se mantiene sin autenticar.
-- **Fases de Operación:**
-    - **Negociación de Algoritmos:** Cliente y servidor acuerdan los métodos criptográficos a usar.
-        - **Cifrado Asimétrico (Clave pública):** RSA, Diffie-Hellman, DSA,…
-        - **Cifrado Simétrico:** AES, DES, Triple DES, RC4,…
-        - **Funciones Hash:** MD5, SHA-1, SHA-256,…
-    - **Intercambio de Claves Públicas:** Garantiza que ambas partes compartan una clave secreta común.
-    - **Autenticación Basada en Certificados:** Verifica la identidad de las partes.
-    - **Cifrado del Tráfico:** Utiliza cifrado simétrico para proteger los datos transmitidos.
-
-**\*Clases de Protocolos a Nivel de Transporte**
-
-- **Clase 0 (TP0, Transport Protocol Class 0):**
-    - La clase más simple.
-    - Soporta una conexión de transporte por cada conexión de red.
-    - Fragmenta datos para transmisión y los ensambla en el receptor.
-- **Clase 1 (TP1, Transport Protocol Class 1):**
-    - Introduce mecanismos básicos de recuperación de errores.
-- **Clase 2 (TP2, Transport Protocol Class 2):**
-    - Permite multiplexar múltiples conexiones de transporte en una única conexión de red.
-    - Puede incluir control de flujo.
-- **Clase 3 (TP3, Transport Protocol Class 3):**
-    - Soporta recuperación tras desconexiones o reinicios de la red.
-- **Clase 4 (TP4, Transport Protocol Class 4):**
-    - Introduce mecanismos avanzados de detección de errores.
-    - Diseñado para redes de calidad de servicio tipo **C**, con tasas de error altas.
-
-## Protocolos de la Capa de Internet
+La capa de internet encamina los paquetes desde el host origen hasta el destino a través de redes interconectadas. Su protocolo central es IP, un servicio no orientado a conexión y de entrega no garantizada (*best effort*): la fiabilidad, si se necesita, la aportan las capas superiores.
 
 ### IPv4 (Internet Protocol version 4)
 
-- Protocolo utilizado para entregar paquetes desde un host de origen a un host de destino basándose únicamente en direcciones IP contenidas en los encabezados de los paquetes.
-- **Direcciones:** Utiliza direcciones de **32 bits**.
-- **Protocolo No Orientado a Conexión:** No establece una ruta fija; cada paquete puede seguir un camino diferente.
-- **Incluye Checksums de Cabecera:** Verifica únicamente la integridad de la cabecera, no de los datos.
-- **Cabecera IPv4:** Mínimo de **20 bytes**.
-    - **Versión (4 bits):** Indica IPv4 (**0100** en binario).
-    - **Tamaño de Cabecera / Internet Header Length (IHL) (4 bits):** Tamaño en múltiplos de 32 bits. Mínimo: 5 palabras (160 bits = 20 bytes).
-    - **Tipo de Servicio (8 bits):** Define la calidad del servicio (prioridades, rutinas...).
-    - **Longitud Total (16 bits):** Tamaño total del paquete en octetos. Valor mínimo: **576 bytes** (64B cabecera + 512B datos).
-    - **Identificación (16 bits):** Identificador único del datagrama, usado para fragmentación.
-    - **Flags (3 bits):** Indicadores de fragmentación.
-    - **Offset de Fragmento (13 bits):** Orden de fragmentos dentro del datagrama original, en múltiplos de 64 bits.
-    - **TTL (Time to Live, 8 bits):** Máximo número de saltos permitidos antes de descartar el paquete. Valores típicos: **64 o 128**.
-    - **Protocolo (8 bits):** Indica el protocolo de la capa superior (ejemplo: TCP, UDP, ICMP).
-    - **Checksum (16 bits):** Verifica la integridad de la cabecera.
-    - **Dirección IP Origen y Destino (32 bits cada una).**
+- **Direcciones de 32 bits** (2^32, unos 4300 millones), en notación decimal punteada (p. ej. 192.0.2.33). El direccionamiento (clases, CIDR, subredes) se estudia en el tema 66.
+- **No orientado a conexión**: cada datagrama se encamina de forma independiente; pueden perderse, duplicarse o llegar desordenados.
+- **Checksum solo de cabecera**: verifica la integridad de la cabecera, no de los datos.
+- **Fragmentación**: los routers pueden fragmentar los datagramas que excedan la **MTU** del enlace; el reensamblado se hace solo en el destino. Todo host debe aceptar datagramas de al menos **576 bytes**.
+- **Cabecera IPv4**: longitud variable, de **20 bytes** (sin opciones) a **60 bytes**. Campos:
+    - **Versión (4 bits)**: 0100 en binario (4).
+    - **IHL, tamaño de cabecera (4 bits)**: en palabras de 32 bits; mínimo 5 (20 bytes).
+    - **Tipo de servicio (8 bits)**: hoy campo **DSCP/ECN**, para calidad de servicio.
+    - **Longitud total (16 bits)**: tamaño del datagrama en octetos, cabecera incluida; mínimo **20**, máximo **65 535**.
+    - **Identificación (16 bits)**: identifica los fragmentos de un mismo datagrama.
+    - **Flags (3 bits)**: control de fragmentación (DF *don't fragment*, MF *more fragments*).
+    - **Offset de fragmento (13 bits)**: posición del fragmento, en unidades de 8 bytes.
+    - **TTL (8 bits)**: saltos máximos antes de descartar el paquete; cada router lo decrementa. Valores iniciales típicos: **64 o 128**.
+    - **Protocolo (8 bits)**: protocolo de la capa superior (**1** ICMP, **6** TCP, **17** UDP).
+    - **Checksum de cabecera (16 bits)**.
+    - **Direcciones origen y destino (32 bits cada una)**, más opciones y relleno.
 
-![Screen Shot 2021-06-21 at 23.58.43.png](media/image75.png)
+![Formato de la cabecera IPv4](media/image75.png)
 
 ### IPv6 (Internet Protocol version 6)
 
-- Protocolo diseñado para reemplazar a IPv4 con direcciones de **128 bits**, ofreciendo mejoras significativas en escalabilidad, seguridad y eficiencia.
-- **No Compatible Directamente con IPv4:** Sin embargo, es compatible con el resto de protocolos de red.
-- **Fragmentación:** Se realiza únicamente en el **nodo origen**; los routers no fragmentan paquetes en tránsito.
-- **Ventajas de IPv6:**
-    - **Espacio de Direcciones Más Amplio:** Capaz de asignar direcciones únicas a una cantidad masiva de dispositivos.
-    - **Seguridad Integrada:** Soporte obligatorio de **IPSec** para autenticar y cifrar comunicaciones.
-    - **Encabezado Simplificado:** Reduce la sobrecarga del enrutamiento al usar solo **8 campos**, frente a los **12 campos** de IPv4.
-    - **Autoconfiguración de Direcciones:** A través de **SLAAC** (Stateless Address Autoconfiguration) y mensajes de descubrimiento de routers.
-    - **Capacidad de Etiquetado de Flujo:** Permite a los paquetes con un mismo flujo recibir tratamiento especial en la red, como prioridad para video en tiempo real.
-    - **Soporte Mejorado para Multicast y Anycast:**
-        - **Multicast (1-n):** Envío a múltiples destinos en un grupo definido.
-        - **Anycast (1-k):** Envío al miembro más cercano de un grupo.
-        - **Unicast (1-1):** Comunicación con un único host.
-    - **IPv6 Móvil (MIPv6):** Facilita que dispositivos móviles cambien de red sin necesidad de cambiar su dirección IP.
-- **Cabecera IPv6:** Mínimo de **40 bytes**, diseñada para ser más eficiente que la de IPv4.
-    - **Campos de la Cabecera IPv6:**
-        - **Versión (4 bits):** Indica IPv6 (**0110** en binario).
-        - **Clase de Tráfico (8 bits):** Define la prioridad del paquete.
-        - **Etiqueta de Flujo (20 bits):** Identifica flujos para un tratamiento especial.
-        - **Longitud del Campo de Datos (16 bits):** Tamaño del payload del paquete.
-        - **Cabecera Siguiente (8 bits):** Especifica el tipo de cabecera o protocolo que sigue.
-        - **Límite de Saltos/TTL (8 bits):** Similar al TTL de IPv4, indica el número máximo de saltos permitidos.
-        - **Dirección IP Origen (128 bits):** Dirección del remitente.
-        - **Dirección IP Destino (128 bits):** Dirección del destinatario.
-- **Notación de Direcciones IPv6:**
-    - **Formato Estándar: 8 grupos de 4 dígitos hexadecimales** separados por dos puntos, como **2001:0db8:85a3:0000:0000:8a2e:0370:7334**.
-    - **Optimización de Notación:**
-        - Los ceros iniciales de un grupo pueden omitirse, por ejemplo: **0123** → **123**.
-        - Grupos consecutivos de ceros pueden reemplazarse por **"::"**, pero este reemplazo solo puede usarse una vez por dirección.
-        - Ejemplo compactado: **2001:db8::8a2e:370:7334**.
-    - **Compatibilidad con IPv4:** Direcciones IPv4 pueden representarse dentro de IPv6 como **::192.0.2.33**.
-- **Funciones Clave:**
-    - **Encabezados Más Simples:** Menor procesamiento por parte de los routers.
-    - **Soporte Obligatorio de Seguridad:** IPSec como parte estándar.
-    - **Capacidad Multicast y Anycast:** Optimizaciones para comunicaciones grupales.
+Diseñado para sustituir a IPv4 ante el agotamiento de sus direcciones, con **direcciones de 128 bits** y una cabecera simplificada. No es directamente compatible con IPv4: ambos conviven mediante mecanismos de transición.
 
-![Screen Shot 2022-09-08 at 01.28.29.png](media/image76.png)
+- **Ventajas frente a IPv4**:
+    - **Espacio de direcciones** prácticamente ilimitado (2^128).
+    - **Cabecera fija de 40 bytes** con solo **8 campos** (la de IPv4 tiene 12-14 y longitud variable): menos proceso en los routers. Las opciones van en **cabeceras de extensión** encadenadas.
+    - **Sin fragmentación en tránsito**: solo fragmenta el nodo origen (con descubrimiento de la MTU del camino); los routers descartan y avisan por ICMPv6.
+    - **Autoconfiguración**: **SLAAC** (*Stateless Address Autoconfiguration*) a partir de los anuncios de router, además de DHCPv6.
+    - **Seguridad**: soporte nativo de **IPsec** (obligatorio en la especificación original, recomendado desde el RFC 8200).
+    - **Etiqueta de flujo**: permite dar tratamiento diferenciado a los paquetes de un mismo flujo (p. ej. vídeo en tiempo real).
+    - **Sin broadcast**: solo **unicast** (1 a 1), **multicast** (1 a n) y **anycast** (1 al miembro más cercano de un grupo).
+    - **Movilidad (MIPv6)**: los dispositivos conservan su dirección al cambiar de red.
+- **Cabecera IPv6** (40 bytes fijos):
+    - **Versión (4 bits)**: 0110 en binario (6).
+    - **Clase de tráfico (8 bits)**: prioridad (equivale al DSCP de IPv4).
+    - **Etiqueta de flujo (20 bits)**.
+    - **Longitud del campo de datos (16 bits)**: tamaño del payload.
+    - **Cabecera siguiente (8 bits)**: cabecera de extensión o protocolo superior.
+    - **Límite de saltos (8 bits)**: equivale al TTL.
+    - **Direcciones origen y destino (128 bits cada una)**.
+- **Notación**: **8 grupos de 4 dígitos hexadecimales** separados por dos puntos (2001:0db8:85a3:0000:0000:8a2e:0370:7334). Se pueden omitir los ceros iniciales de cada grupo y comprimir **una sola vez** grupos consecutivos de ceros con «::» (2001:db8::8a2e:370:7334). Las direcciones IPv4 se representan en IPv6 como *IPv4-mapped*: **::ffff:192.0.2.33**.
+- **Transición IPv4/IPv6**: **doble pila** (el host habla ambos protocolos), **túneles** (IPv6 encapsulado en IPv4, p. ej. 6in4) y **traducción** (NAT64/DNS64).
 
-### ARP (Address Resolution Protocol)
-
-- Protocolo utilizado para mapear direcciones IP a direcciones MAC en una red local.
-- **Funcionamiento:**
-    - **Solicitud ARP (ARP Request):** Mensaje broadcast preguntando por la dirección MAC asociada a una IP específica.
-    - **Respuesta ARP (ARP Reply):** Mensaje unicast enviado por el dispositivo con la dirección MAC correspondiente.
-
-### DHCP (Dynamic Host Configuration Protocol)
-
-- Protocolo que asigna dinámicamente direcciones IP y otros parámetros de configuración de red a dispositivos.
-- **Funciones:**
-    - Asignación de direcciones IP.
-    - Configuración de máscara de subred, gateway predeterminado y servidores DNS.
-- **Métodos de Asignación IP:**
-    - **Manual (Estática):** Admin asigna una IP fija a un dispositivo.
-    - **Automática:** Asigna una IP permanente la primera vez que el dispositivo se conecta.
-    - **Dinámica:** Direcciones temporales asignadas por un rango predefinido.
-- **Proceso DHCP:**
-    1. **DHCP Discover:** El cliente envía un mensaje broadcast buscando servidores DHCP.
-    2. **DHCP Offer:** Los servidores responden ofreciendo configuración.
-    3. **DHCP Request:** El cliente selecciona una oferta y la solicita.
-    4. **DHCP Acknowledge:** El servidor confirma y proporciona la configuración.
+![Formato de la cabecera IPv6](media/image76.png)
 
 ### ICMP (Internet Control Message Protocol)
 
-- Protocolo para enviar mensajes de error, diagnóstico y control en redes.
-- **Entrega No Garantizada:** Los mensajes pueden perderse.
-- **Usos Comunes:**
-    - Diagnóstico de red (**ping**, **traceroute**).
-    - Notificación de errores (host inaccesible, TTL expirado, etc.).
-- **Cabecera ICMP:**
-    - **Tipo:** Indica el tipo de mensaje ICMP
-        - **Ejemplo:** Echo Request, Echo Reply
-    - **Código:** Proporciona detalles adicionales sobre el tipo de mensaje.
-    - **Checksum:** Verifica la integridad del mensaje.
-    - **Datos Opcionales:** Información adicional relevante.
+- Protocolo auxiliar de IP para mensajes de **error, diagnóstico y control** (protocolo IP número 1). Sus mensajes también pueden perderse (viajan sobre IP).
+- **Tipos de mensaje** más relevantes:
 
-### Otros Protocolos de la Capa de Red
+| Tipo | Mensaje | Uso |
+| --- | --- | --- |
+| **0** | Echo reply | respuesta a ping |
+| **3** | Destino inaccesible | red/host/puerto inalcanzable |
+| **5** | Redirect | indica una ruta mejor |
+| **8** | Echo request | solicitud de ping |
+| **11** | Tiempo excedido | TTL agotado (lo usa traceroute) |
 
-- **RARP (Reverse Address Resolution Protocol):** Realiza la función inversa de ARP, obteniendo la dirección IP asociada a una dirección MAC.
-- **IGMP (Internet Group Management Protocol):** Gestiona la pertenencia a grupos multicast, facilitando la multidifusión en redes IP.
+- **Herramientas**: **ping** (echo request/reply, tipos 8 y 0) comprueba la conectividad; **traceroute** descubre la ruta enviando paquetes con TTL creciente y recogiendo los mensajes de tipo 11 de cada salto.
+- **ICMPv6** (RFC 4443): versión para IPv6; además de errores y diagnóstico, integra el descubrimiento de vecinos (**NDP**) y la gestión de grupos multicast (MLD).
 
-**\*Tipos de Redes Según Calidad de Servicio**
+### ARP (Address Resolution Protocol) y NDP
 
-- **Tipo A:** Baja tasa de errores no detectados y baja tasa de errores detectados pero no corregidos.
-- **Tipo B:** Baja tasa de errores no detectados, pero alta tasa de errores detectados no corregidos.
-- **Tipo C:** Tasa de errores inaceptablemente alta.
+- **ARP** resuelve direcciones IP en direcciones **MAC** dentro de una red local (IPv4):
+    - **ARP Request**: el emisor pregunta en **broadcast** «¿quién tiene esta IP?».
+    - **ARP Reply**: el propietario responde en **unicast** con su MAC.
+    - Las asociaciones se guardan en la **caché ARP** para no repetir la consulta.
+    - **ARP gratuito**: un host anuncia su propia asociación IP-MAC (p. ej. al arrancar), útil para detectar direcciones duplicadas.
+- **NDP (Neighbor Discovery Protocol)**, RFC 4861: sustituye a ARP en **IPv6**, usando mensajes ICMPv6 (*Neighbor Solicitation/Advertisement* y *Router Solicitation/Advertisement*). Además de resolver direcciones, descubre routers y prefijos (base de SLAAC) y detecta direcciones duplicadas (DAD).
+- **Otros protocolos de la capa**:
+    - **RARP**: la función inversa de ARP (MAC a IP); obsoleto, sustituido por DHCP.
+    - **IGMP**: gestión de la pertenencia a grupos **multicast** en IPv4.
 
-## Protocolos de la Capa de Enlace
+## Capa de transporte: TCP y UDP
 
-### Ethernet
+La capa de transporte proporciona comunicación extremo a extremo entre procesos, identificados por **puertos** (16 bits): **0-1023** bien conocidos, **1024-49151** registrados y **49152-65535** dinámicos o efímeros. La combinación IP + puerto forma un **socket**. Ofrece dos servicios: fiable y orientado a conexión (TCP) o ligero y sin conexión (UDP).
 
-- Tecnología estándar para redes de área local (**LAN**).
-- **Estándar IEEE 802.3**.
-- **Direcciones MAC:** Utiliza direcciones físicas de **48 bits** para identificar dispositivos en la red.
-- **Método de Acceso:** **CSMA/CD** (Carrier Sense Multiple Access with Collision Detection).
-- **Velocidades Comunes:** **10 Mbps**, **100 Mbps** (Fast Ethernet), **1 Gbps** (Gigabit Ethernet), **10 Gbps** (10 Gigabit Ethernet).
+### TCP (Transmission Control Protocol)
 
-### Wi-Fi (IEEE 802.11)
+- Servicio de **flujo de bytes fiable y ordenado**: garantiza que los datos llegan sin errores, sin duplicados y en el orden de envío. Especificación consolidada en el RFC 9293 (2022).
+- **Orientado a conexión (stateful)**: establece, mantiene y cierra conexiones.
+- **Cabecera de 20 bytes** como mínimo (frente a los 8 de UDP), con números de secuencia y confirmación, ventana y **flags**: SYN (sincronizar), ACK (confirmar), FIN (cerrar), RST (abortar), PSH y URG.
+- **Establecimiento de conexión** en tres pasos (*three-way handshake*):
+    1. **SYN**: el cliente solicita la conexión (número de secuencia inicial x).
+    2. **SYN-ACK**: el servidor acepta (secuencia y, confirma x+1).
+    3. **ACK**: el cliente confirma; puede empezar el intercambio de datos.
 
-- Estándar para redes inalámbricas de área local.
-- **Frecuencias:** **2.4 GHz** y **5 GHz**.
-- **Modos de Operación:**
-    - **Infraestructura:** Comunicación a través de un punto de acceso (**AP**).
-    - **Ad-Hoc:** Comunicación directa entre dispositivos sin necesidad de AP.
-- **Seguridad:** Protocolos como **WEP**, **WPA**, **WPA2**, **WPA3**.
+![Establecimiento de conexión TCP en tres pasos](media/image73.png)
 
-### PPP (Point-to-Point Protocol)
+- **Transferencia de datos**:
+    - **Números de secuencia**: identifican y ordenan los bytes transmitidos.
+    - **Confirmaciones (ACK) y retransmisión**: lo no confirmado a tiempo se reenvía.
+    - **Checksum**: verifica la integridad de cabecera y datos.
+    - **Ventana deslizante (control de flujo)**: el receptor anuncia cuántos bytes puede aceptar, y el emisor se ajusta a ese límite.
+- **Control de congestión**: evita saturar la red ajustando la ventana de congestión:
+    - **Slow start**: comienza con una ventana pequeña y la duplica en cada ida y vuelta.
+    - **Congestion avoidance**: superado un umbral, el crecimiento pasa a ser lineal.
+    - **Fast retransmit**: ante tres ACK duplicados retransmite sin esperar al temporizador.
+    - **Fast recovery**: tras la retransmisión rápida continúa sin volver a slow start.
+- **Cierre de conexión** en cuatro pasos (*four-way handshake*): cada sentido se cierra por separado (**FIN**, **ACK**, **FIN**, **ACK**), lo que permite el cierre a medias (*half-close*) mientras el otro extremo termina de enviar.
 
-- Protocolo para establecer una conexión directa entre dos nodos de red.
-- **Usos Comunes:** Conexiones de acceso telefónico, enlaces seriales y comunicaciones entre routers.
-- **Características:**
-    - **Autenticación:** Soporta **PAP** (Password Authentication Protocol) y **CHAP** (Challenge Handshake Authentication Protocol).
-    - **Compresión de Datos:** Opcional para optimizar el uso del enlace.
-    - **Detección de Errores:** Proporciona mecanismos básicos para garantizar la integridad.
+![Cierre de conexión TCP en cuatro pasos](media/image74.png)
 
-### HDLC (High-Level Data Link Control)
+### UDP (User Datagram Protocol)
 
-- Protocolo orientado a bits para enlaces sincrónicos.
-- **Características:**
-    - **Control de Flujo y Errores:** Utiliza técnicas de verificación y retransmisión.
-    - **Operación en Modo Normal y Asincrónico:** Adaptable a diferentes tipos de enlaces.
+- Envío de **datagramas** sin establecer conexión previa (RFC 768).
+- **Características**:
+    - **No orientado a conexión (stateless)**: no guarda estado entre mensajes.
+    - **Sin garantías**: no hay confirmaciones, retransmisiones ni control de flujo o congestión; la entrega y el orden no están asegurados.
+    - **Ligero y rápido**: cabecera fija de **8 bytes** (puerto origen, puerto destino, longitud y checksum).
+- **Usos**: consultas DNS, DHCP, streaming de audio y vídeo, VoIP, juegos en línea y, en general, tráfico en tiempo real donde retransmitir llega tarde. Sobre UDP se construye **QUIC**, el transporte de HTTP/3.
 
-### Frame Relay
+![Cabecera UDP](media/image72.png)
 
-- Tecnología de conmutación de paquetes para interconectar redes LAN y crear redes WAN.
-- **Características:**
-    - **Eficiencia:** Menor sobrecarga en comparación con X.25.
-    - **Calidad de Servicio (QoS):** Soporta diferentes niveles de servicio.
+### TLS (Transport Layer Security)
+
+- Protocolo criptográfico que proporciona **confidencialidad, integridad y autenticación** a las comunicaciones sobre TCP. Es el sucesor de **SSL** (Secure Sockets Layer), hoy prohibido por inseguro.
+- **Versiones**: vigentes **TLS 1.2** (RFC 5246, 2008) y **TLS 1.3** (RFC 8446, 2018); SSL 2.0/3.0 y TLS 1.0/1.1 están formalmente deprecadas (RFC 8996, 2021).
+- **Funcionamiento (handshake)**:
+    - **Negociación**: cliente y servidor acuerdan versión y suite criptográfica.
+    - **Intercambio de claves**: acuerdo de una clave de sesión, típicamente con **ECDHE** (Diffie-Hellman efímero, que aporta secreto hacia adelante o *forward secrecy*).
+    - **Autenticación** con certificados **X.509**: habitualmente solo se autentica el servidor; en **TLS mutuo (mTLS)** también el cliente presenta certificado.
+    - **Cifrado del tráfico**: con criptografía simétrica autenticada (**AES-GCM**, **ChaCha20-Poly1305**), mucho más rápida que la asimétrica.
+- **TLS 1.3** simplifica el handshake (**1 RTT**, y 0-RTT al reanudar sesiones) y elimina los algoritmos débiles (RSA estático, RC4, 3DES, SHA-1, modos CBC).
+
+### Clases de transporte OSI (TP0-TP4)
+
+El modelo OSI (ISO/IEC 8073, UIT-T X.224) define cinco clases de protocolo de transporte según la calidad de la red subyacente: **tipo A** (fiable), **tipo B** (errores señalizados pero no corregidos) y **tipo C** (no fiable, tasa de error inaceptable).
+
+| Clase | Características | Red |
+| --- | --- | --- |
+| **TP0** | La más simple: solo fragmentación y reensamblado | A |
+| **TP1** | Añade recuperación básica de errores | B |
+| **TP2** | Multiplexa varias conexiones de transporte sobre una de red; control de flujo | A |
+| **TP3** | Combina TP1 y TP2 (recuperación + multiplexación) | B |
+| **TP4** | Detección y recuperación completas de errores; equivale a TCP | C |
+
+## Capa de aplicación: DNS, HTTP, SMTP, FTP, DHCP y SSH
+
+La capa de aplicación agrupa los protocolos con los que trabajan directamente los programas de usuario y los servicios de red. Cada uno usa TCP o UDP a través de sus puertos asignados (tabla de la introducción).
+
+### DNS (Domain Name System)
+
+- Sistema de nombres **jerárquico y descentralizado** que traduce nombres de dominio en direcciones IP (y a la inversa), sobre una **base de datos distribuida** en zonas.
+- **Puerto 53**: **UDP** para las consultas habituales y **TCP** para las transferencias de zona y las respuestas grandes. Variantes cifradas: **DoT** (DNS over TLS, TCP 853) y **DoH** (DNS over HTTPS, 443).
+- **Espacio de nombres**:
+    - **FQDN** (*Fully Qualified Domain Name*): nombre completo (www.ejemplo.es.), que se resuelve de derecha a izquierda: raíz, **TLD** o dominio de primer nivel (genéricos como .com y .org, territoriales como .es), dominio de segundo nivel (ejemplo) y subdominios o hosts (www).
+    - **Límites**: 255 octetos por nombre completo y **63** por etiqueta.
+    - Los **subdominios** pueden delegarse a otros servidores (www.support.ejemplo.org).
+- **Servidores raíz**: **13 identidades** ([A-M].root-servers.net), replicadas globalmente mediante anycast.
+- **Tipos de servidores DNS**:
+    - **Autoritativos**: responden con los datos originales de sus zonas de autoridad. El **primario (maestro)** mantiene la copia original; los **secundarios (esclavos)** la replican por transferencia de zona.
+    - **Recursivos o caché (resolvers)**: resuelven por encargo de los clientes y guardan las respuestas durante su **TTL**.
+    - **Reenviadores (forwarders)**: delegan las consultas en otro servidor recursivo.
+- **Tipos de resolución**:
+    - **Recursiva**: el servidor asume la resolución completa y devuelve la respuesta final (caso típico: del host a su DNS local).
+    - **Iterativa**: el servidor devuelve la mejor referencia que conoce y el solicitante continúa (caso típico: del DNS local hacia raíz, TLD y autoritativos).
+
+![Resolución DNS recursiva e iterativa](media/image71.png)
+
+- **Registros DNS** principales:
+    - **A** / **AAAA**: dirección IPv4 / IPv6.
+    - **CNAME**: alias de otro nombre (nombre canónico).
+    - **NS**: servidor de nombres autoritativo de la zona.
+    - **MX**: servidores de correo del dominio, con prioridad.
+    - **PTR**: resolución inversa (IP a nombre).
+    - **SOA**: parámetros de la zona y su servidor primario (inicio de autoridad).
+    - **SRV**: localización de servicios; **TXT**: texto libre (SPF, verificaciones).
+- **DNSSEC**: extensión que **firma criptográficamente** los registros para garantizar su autenticidad e integridad (no cifra: no da confidencialidad).
+
+### HTTP (Hypertext Transfer Protocol)
+
+- Protocolo de **petición-respuesta** para la transferencia de recursos en la web; **puerto 80**.
+- **Sin estado (stateless)**: cada petición es independiente; el estado de sesión se añade en la aplicación (cookies, tokens).
+- **Métodos de petición**: **GET** (obtener un recurso, sin efectos secundarios), **HEAD** (como GET sin cuerpo), **POST** (enviar datos), **PUT** (reemplazar el recurso), **DELETE** (eliminarlo), **PATCH** (modificación parcial), **OPTIONS** (capacidades disponibles), **CONNECT** (establecer un túnel) y **TRACE** (eco de la petición).
+- **Códigos de estado**:
+    - **1xx** informativos; **2xx** éxito (**200** OK, **201** Created).
+    - **3xx** redirección (**301** permanente, **302** temporal, **304** Not Modified).
+    - **4xx** error del cliente (**400** Bad Request, **401** Unauthorized, **403** Forbidden, **404** Not Found).
+    - **5xx** error del servidor (**500** Internal Server Error, **503** Service Unavailable).
+- **Versiones**:
+    - **HTTP/1.1** (1997; hoy RFC 9112): protocolo de texto, conexiones persistentes.
+    - **HTTP/2** (2015; RFC 9113): binario, **multiplexa** varias peticiones sobre una conexión y comprime cabeceras (HPACK).
+    - **HTTP/3** (2022; RFC 9114): funciona sobre **QUIC (UDP)**, integra TLS 1.3 y elimina el bloqueo de cabeza de línea de TCP.
+- **HTTPS**: HTTP sobre **TLS**, **puerto 443**. Frente al HTTP plano (susceptible de escuchas y ataques *man-in-the-middle*), cifra el canal y autentica al servidor. Es el estándar de facto: los navegadores marcan como «no seguro» el HTTP sin cifrar.
+
+### SMTP (Simple Mail Transfer Protocol)
+
+- Protocolo de **envío** de correo electrónico, entre servidores y del cliente a su servidor de salida. No define cómo almacenar ni leer el correo (eso corresponde a POP/IMAP).
+- **Puertos**: **25** (entre servidores), **587** (envío autenticado desde el cliente, con STARTTLS) y **465** (SMTPS, TLS implícito).
+- **Con estado (stateful)**: la sesión mantiene un diálogo de comandos: **HELO/EHLO** (saludo), **MAIL FROM** (remitente), **RCPT TO** (destinatario), **DATA** (contenido) y **QUIT**. El mensaje termina con una línea que contiene solo un punto (\<CRLF>.\<CRLF>).
+- **Recepción del correo**:
+    - **POP3** (puerto **110**; con TLS, **995**): descarga los mensajes al cliente y normalmente los borra del servidor.
+    - **IMAP** (puerto **143**; con TLS, **993**): gestiona los mensajes **en el servidor**, con carpetas y sincronización entre múltiples dispositivos.
+
+### FTP (File Transfer Protocol)
+
+- Protocolo clásico de **transferencia de archivos** cliente-servidor sobre TCP, bidireccional (subida y descarga).
+- **Dos conexiones**: **control por el puerto 21** (comandos y respuestas) y **datos por el 20** (o un puerto negociado).
+- **Modos de conexión de datos**:
+    - **Activo (PORT)**: el cliente indica su puerto y el **servidor inicia** la conexión de datos; problemático tras cortafuegos y NAT.
+    - **Pasivo (PASV)**: el servidor indica un puerto y el **cliente inicia** la conexión; es el modo compatible con cortafuegos.
+- **Inseguro por diseño**: credenciales y datos viajan en **texto plano**.
+- **Comandos** habituales: USER y PASS (autenticación), LIST (listar), RETR (descargar), STOR (subir), QUIT. **Códigos de respuesta** de tres dígitos: 1xx en proceso, 2xx éxito, 3xx falta información, 4xx error temporal, 5xx error permanente.
+- **Variantes seguras**:
+    - **FTPS**: FTP sobre TLS (puerto **990** en modo implícito).
+    - **SFTP**: transferencia de archivos como subsistema de **SSH** (puerto **22**); es un protocolo distinto de FTP, no FTP cifrado.
+
+### DHCP (Dynamic Host Configuration Protocol)
+
+- Asigna dinámicamente la **configuración de red** de los equipos: dirección IP, máscara, puerta de enlace, servidores DNS y otras opciones. Funciona sobre **UDP 67 (servidor) / 68 (cliente)**.
+- **Métodos de asignación**:
+    - **Manual (estática)**: IP fija reservada a una MAC concreta.
+    - **Automática**: IP permanente asignada la primera vez.
+    - **Dinámica**: IP temporal de un rango, en régimen de **concesión (lease)** renovable.
+- **Proceso en cuatro pasos (DORA)**:
+    1. **Discover**: el cliente busca servidores en broadcast.
+    2. **Offer**: los servidores ofrecen una configuración.
+    3. **Request**: el cliente solicita la oferta elegida.
+    4. **Acknowledge**: el servidor confirma y entrega la concesión.
+- **Agente de retransmisión (DHCP relay)**: reenvía las peticiones broadcast a un servidor situado en otra subred, para centralizar el servicio.
+- **En IPv6**: **DHCPv6**, que convive con la autoconfiguración SLAAC.
+
+### SSH (Secure Shell)
+
+- Protocolo de **acceso remoto seguro** sobre un canal cifrado; **puerto TCP 22**. Versión vigente: **SSH-2** (RFC 4251 a 4254).
+- **Arquitectura en tres subprotocolos**:
+    - **Transporte**: cifrado, integridad y autenticación del **servidor** (claves de host).
+    - **Autenticación de usuario**: por **contraseña** o por **clave pública** (la recomendada), entre otros métodos.
+    - **Conexión**: multiplexa varios canales (sesiones, reenvíos) sobre el mismo túnel.
+- **Servicios**: terminal remota, transferencia de archivos (**SFTP** y **SCP**), **túneles y reenvío de puertos** (local, remoto y dinámico tipo SOCKS) y reenvío X11.
+- Sustituye a **TELNET** (puerto **23**): terminal remota en **texto plano**, en desuso por transmitir las credenciales sin cifrar (igual que rlogin/rsh).
+
+### Otros protocolos de la capa de aplicación
+
+- **TFTP** (*Trivial File Transfer Protocol*), UDP **69**: transferencia simple de archivos sin autenticación; usado en arranque por red (PXE) y carga de firmware.
+- **NFS** (*Network File System*): acceso a sistemas de archivos remotos como si fueran locales, originario de Sun Microsystems.
+- **NTP** (*Network Time Protocol*), UDP **123**: sincronización horaria jerárquica (estratos).
+- **SNMP** (*Simple Network Management Protocol*), UDP **161/162**: gestión y monitorización de dispositivos de red (se estudia en el tema 68).
+
+## Fuentes {.unnumbered .unlisted}
+
+- RFC 791 (IPv4, 1981), RFC 8200 (IPv6, 2017), RFC 792 (ICMP, 1981), RFC 4443 (ICMPv6, 2006), RFC 826 (ARP, 1982) y RFC 4861 (NDP, 2007), IETF.
+- RFC 9293 (TCP, 2022), RFC 768 (UDP, 1980), RFC 8446 (TLS 1.3, 2018) y RFC 8996 (deprecación de TLS 1.0/1.1, 2021), IETF.
+- RFC 1034/1035 (DNS, 1987), RFC 9110-9114 (HTTP/1.1, HTTP/2 y HTTP/3, 2022), RFC 5321 (SMTP, 2008), RFC 959 (FTP, 1985), RFC 2131 (DHCP, 1997) y RFC 4251-4254 (SSH-2, 2006), IETF.
+- ISO/IEC 8073 / UIT-T X.224 (clases de transporte OSI).

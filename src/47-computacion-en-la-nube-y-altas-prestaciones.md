@@ -1,154 +1,125 @@
 # Computación en la nube y de altas prestaciones
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+La agregación de recursos de computación ha seguido dos caminos complementarios: el de las **altas prestaciones** (clústeres, grids y supercomputadores, orientados a maximizar la capacidad de cálculo) y el de la **computación en la nube** (orientada a consumir recursos como un servicio elástico y de pago por uso).
 
+## Clúster, grid y computación de altas prestaciones (HPC)
 
-## Cluster computing, Grid computing, Cloud computing
+- **Clúster**: grupo de ordenadores (nodos) interconectados mediante una red de alta velocidad que funciona como un único sistema, coordinado por un software de gestión. Los nodos suelen ser homogéneos y estar en la misma ubicación física. Según su finalidad se distinguen:
+    - **Clúster de alto rendimiento (HPC)**: paraleliza el cálculo entre los nodos para resolver problemas de cómputo intensivo.
+    - **Clúster de alta disponibilidad (HA)**: nodos redundantes que asumen el servicio si otro falla (failover), eliminando puntos únicos de fallo.
+    - **Clúster de balanceo de carga**: reparte las peticiones entre los nodos para escalar el servicio y absorber picos de demanda.
+- **Grid computing (computación en malla)**: conecta recursos heterogéneos y **distribuidos geográficamente**, pertenecientes a organizaciones distintas y sin control centralizado, mediante un middleware que reparte los trabajos entre los nodos disponibles. Es el modelo de las «organizaciones virtuales» científicas: el **WLCG** (Worldwide LHC Computing Grid, la malla del CERN) o los proyectos de computación voluntaria sobre **BOINC**.
+- **De la malla a la nube**: la nube toma del grid la agregación de recursos distribuidos y le añade la **virtualización** (tema 44), el autoservicio y el pago por uso, consolidando los recursos en grandes centros de datos de proveedor.
 
-### Clúster
+| Aspecto | Clúster | Grid | Nube |
+| --- | --- | --- | --- |
+| Idea básica | Agregación de recursos | Compartición de recursos distribuidos | Consolidación de recursos como servicio |
+| Nodos | Homogéneos, misma ubicación | Heterogéneos, distribuidos geográficamente | Heterogéneos, la ubicación no importa |
+| Control | Centralizado | Descentralizado (multi-organización) | Del proveedor (autoservicio del cliente) |
+| Ejecución de trabajos | Planificada por el gestor del clúster | El middleware asigna subtrabajos a nodos libres | Autogestionada, bajo demanda |
+| Virtualización | No es esencial | No es esencial | Es la tecnología clave |
+| Modelo típico de uso | Cálculo paralelo, alta disponibilidad | Ciencia distribuida (física, bioinformática) | Servicios TI de propósito general (IaaS, PaaS, SaaS) |
+| Acceso a Internet | No requerido | Requerido | Requerido |
 
-Un clúster es un grupo de ordenadores interconectados mediante una red de alta velocidad que funciona como un único sistema. Cada nodo, o equipo individual, realiza la misma tarea, controlada y planificada por software especializado. Este enfoque potencia la **paralelización de tareas**, optimizando el rendimiento y la eficiencia en el procesamiento de datos.
+### Computación de altas prestaciones (HPC)
 
-### Grid Computing
+La computación de altas prestaciones (*High Performance Computing*) agrega capacidad de cálculo para resolver problemas inabordables por sistemas convencionales: simulación numérica, predicción meteorológica y climática, genómica, dinámica de fluidos o entrenamiento de modelos de inteligencia artificial. Su rendimiento se mide en **FLOPS** (operaciones de coma flotante por segundo).
 
-La **computación en malla** o grid computing conecta múltiples clústeres entre sí, donde los recursos no están sujetos a un control centralizado. Cada nodo puede realizar tareas diferentes, lo que promueve la **distribución de tareas** y garantiza la **escalabilidad**. Este modelo permite un comportamiento dinámico y un dimensionamiento en tiempo real, siendo ideal para atender productividades sostenidas.
+- **Arquitectura actual**: clústeres masivamente paralelos de miles de nodos, cada vez más **heterogéneos** (CPU + aceleradores GPU), con redes de interconexión de baja latencia (InfiniBand), sistemas de ficheros paralelos (Lustre, IBM Storage Scale/GPFS) y gestores de colas de trabajos (Slurm).
+- **Programación paralela**: **MPI** (paso de mensajes entre nodos, memoria distribuida), **OpenMP** (memoria compartida dentro del nodo) y modelos para GPU (CUDA, OpenCL).
+- **Escalas**: tras el terascale (10^12 FLOPS) y el petascale (10^15, alcanzado en 2008), la barrera actual es el **exascale** (10^18 FLOPS), superada por primera vez en **2022** por el sistema Frontier (EE. UU.).
+- **TOP500**: lista de referencia de los 500 supercomputadores más potentes, actualizada **cada junio y noviembre** con el benchmark **HPL (LINPACK)**, que da el rendimiento sostenido (**Rmax**) frente al pico teórico (Rpeak). La complementan la **Green500** (eficiencia energética, FLOPS/vatio) y el benchmark HPCG. En la lista de junio de 2025, el número 1 es **El Capitan** (LLNL, EE. UU.), con un Rmax de **1,742 exaflops**, y los tres primeros puestos son sistemas exascale estadounidenses (El Capitan, Frontier y Aurora).
+- **EuroHPC JU** (Empresa Común Europea de Informática de Alto Rendimiento, creada en 2018): financia y opera la red europea de supercomputación: los sistemas pre-exascale **LUMI** (Finlandia), **Leonardo** (Italia) y **MareNostrum 5** (España), y **JUPITER** (Forschungszentrum Jülich, Alemania), el **primer exascale europeo**, inaugurado en 2025.
+- **España**: el **Barcelona Supercomputing Center (BSC-CNS)** opera **MareNostrum 5**, con un rendimiento pico de unos **314 petaflops**; la **Red Española de Supercomputación (RES)**, ICTS coordinada por el BSC, da acceso competitivo a los supercomputadores españoles (MareNostrum, Finisterrae del CESGA, Picasso, Tirant de la Universitat de València, entre otros).
 
-### Virtualización
+## La nube: definición y modelos de despliegue
 
-La virtualización es una tecnología que permite la creación de recursos virtuales, facilitando la distribución de la carga de trabajo de manera más sencilla que en la computación grid. Al combinar grid computing con virtualización, se obtiene el **cloud computing**, que ofrece mayores niveles de eficiencia y flexibilidad en la gestión de recursos.
+Según la definición de referencia del **NIST (SP 800-145, 2011)**, la computación en la nube es un modelo que habilita el **acceso ubicuo y bajo demanda, a través de la red, a un conjunto compartido de recursos de computación configurables** (redes, servidores, almacenamiento, aplicaciones y servicios) que pueden aprovisionarse y liberarse rápidamente con un esfuerzo mínimo de gestión o de interacción con el proveedor.
 
-### Cloud Computing
+El NIST enumera **cinco características esenciales**:
 
-La computación en la nube (Cloud Computing) es un paradigma que proporciona acceso a recursos y servicios informáticos bajo demanda a través de internet, eliminando la necesidad de gestión activa por parte del usuario. Este modelo destaca por su **flexibilidad, escalabilidad, elasticidad, autoservicio, abstracción y acceso sin restricciones,** adaptándose a las necesidades cambiantes de las organizaciones con un modelo de **pago por uso.**
+- **Autoservicio bajo demanda**: el cliente aprovisiona recursos por sí mismo, sin intervención humana del proveedor.
+- **Amplio acceso a través de la red**: los servicios se consumen por mecanismos estándar desde cualquier tipo de cliente.
+- **Agrupación de recursos (resource pooling)**: los recursos del proveedor se comparten entre múltiples clientes (multitenencia) y se asignan dinámicamente.
+- **Elasticidad rápida**: los recursos se amplían o reducen con agilidad, incluso automáticamente, dando apariencia de capacidad ilimitada.
+- **Servicio medido**: el uso se monitoriza, controla y factura de forma transparente (**pago por uso**).
 
-### Ventajas del Cloud Computing
+Sus ventajas e inconvenientes principales:
 
-- **Económicas**: Reducción de costes de mantenimiento y flexibilidad en la inversión.
-- **Tecnológicas**: Facilita el despliegue e implantación, mejora la seguridad y elasticidad, delegación de responsabilidades y mayor respeto al medio ambiente.
-- **Organizativas**: Disminuye la dimensión y orientación del departamento de TI, requiere de personal menos cualificado, ofrece oportunidades de cambio y promueve la estandarización.
+- **Ventajas**: sin inversión inicial en infraestructura (el gasto pasa de CAPEX a OPEX), despliegue rápido, elasticidad ante picos de demanda, actualizaciones y mantenimiento delegados en el proveedor, y foco de la organización en su negocio.
+- **Inconvenientes**: dependencia del proveedor (*lock-in*) y de la conectividad, riesgos de seguridad, privacidad y cumplimiento normativo (localización y jurisdicción de los datos), costes crecientes si no se gobierna el consumo y acuerdos de nivel de servicio (SLA) que hay que negociar y vigilar.
 
-### Desventajas del Cloud Computing
+### Modelos de despliegue
 
-- **Económicas**: Los costes pueden incrementarse si no se gestionan adecuadamente.
-- **Tecnológicas**: Mayores riesgos y vulnerabilidades al trasladar información a una red pública, falta de privacidad y cobertura legal, ausencia de control ante incidentes informáticos, falta de estandarización y problemas de interoperabilidad. Acuerdos de nivel de servicio (SLA) mal definidos y reticencia al cambio.
-- **Organizativas**: Centralización excesiva y dependencia del proveedor, lo que puede limitar la libertad y creatividad.
+El NIST define **cuatro modelos de despliegue**:
 
-### Tabla comparativa de modelos de computación
+- **Nube pública**: la infraestructura es del proveedor y se ofrece abiertamente a cualquier cliente. Evita inversiones y ofrece máxima elasticidad, a cambio de menor control sobre la infraestructura y de depender del contrato y del SLA en materia de seguridad y disponibilidad.
+- **Nube privada**: la infraestructura se dedica en exclusiva a una organización, en sus propias instalaciones (*on-premise*) u hospedada por un tercero. Máximo control y privacidad de los datos, a cambio de mayor inversión y menor escalabilidad.
+- **Nube comunitaria**: infraestructura compartida por una comunidad de organizaciones con requisitos comunes (por ejemplo, administraciones públicas), que permite especializarla en esos requisitos.
+- **Nube híbrida**: combina dos o más de las anteriores, manteniendo lo sensible en la nube privada y aprovechando la pública para lo demás; exige gestionar y conectar ambos entornos.
 
-| Aspecto                      | Cluster Computing                                                                                                             | Grid Computing                                                                                                | Cloud Computing                                                                                      |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Idea básica                  | Agregación de recursos.                                                                                                       | Segregación de recursos.                                                                                      | Consolidación de recursos.                                                                           |
-| Procesos en ejecución        | Los mismos procesos se ejecutan en todos los equipos del cluster al mismo tiempo.                                             | El trabajo se divide en subtrabajos, cada uno asignado a una CPU libre para que se ejecuten concurrentemente. | Depende de la provisión del servicio. Qué equipo ofrece un servicio y lo proporciona a los clientes. |
-| Sistema operativo            | Todos los nodos deben ejecutar el mismo sistema operativo.                                                                    | No hay restricciones sobre el sistema operativo.                                                              | No hay restricciones sobre el sistema operativo.                                                     |
-| Ejecución de trabajos (Jobs) | La ejecución depende de la programación de los trabajos. Los trabajos esperan hasta que se les asigne un tiempo de ejecución. | La ejecución es escalable de manera que un trabajo puede moverse a un procesador (nodo) libre.                | Autogestionado.                                                                                      |
-| Apropiado para apps          | Tareas en cascada. Si una tarea depende de otra.                                                                              | No es adecuado para tareas en cascada.                                                                        | Provisión de servicios bajo demanda.                                                                 |
-| Ubicación de los nodos       | Físicamente en la misma ubicación.                                                                                            | Distribuidos geográficamente por todo el mundo.                                                               | La ubicación no importa.                                                                             |
-| Homo/Heterogeneidad          | Homogéneo.                                                                                                                    | Heterogéneo.                                                                                                  | Heterogéneo.                                                                                         |
-| Virtualización               | Ninguna.                                                                                                                      | Ninguna.                                                                                                      | La virtualización es clave.                                                                          |
-| Transparencia                | Sí.                                                                                                                           | Sí.                                                                                                           | Sí.                                                                                                  |
-| Seguridad                    | Alta.                                                                                                                         | Alta, pero no alcanza el nivel de Cluster Computing.                                                          | Menor que ambos tipos.                                                                               |
-| Interoperabilidad            | Sí.                                                                                                                           | Sí.                                                                                                           | No.                                                                                                  |
-| Dominios de aplicación       | Sector industrial, centros de investigación, salud y centros que ofrecen servicios a nivel nacional.                          | Sector industrial, centros de investigación, salud y centros que ofrecen servicios a nivel nacional.          | Banca, seguros, predicción meteorológica, exploración espacial, negocios, IaaS, PaaS, SaaS.          |
-| Implementación               | Fácil.                                                                                                                        | Difícil.                                                                                                      | Difícil - debe ser realizada por el host.                                                            |
-| Gestión                      | Fácil.                                                                                                                        | Difícil.                                                                                                      | Difícil.                                                                                             |
-| Gestión de recursos          | Centralizada (localmente).                                                                                                    | Distribuida.                                                                                                  | Tanto centralizada como distribuida.                                                                 |
-| Internet                     | No se requiere acceso a Internet.                                                                                             | Requerido.                                                                                                    | Requerido.                                                                                           |
+## Modelos de servicio: IaaS, PaaS, SaaS
 
-## Tipos de Nubes
+Los modelos de servicio se distinguen por el **nivel de abstracción** que ofrecen y por el reparto de responsabilidades entre proveedor y cliente.
 
-### Nube Pública
+- **IaaS (Infrastructure as a Service)**: el proveedor ofrece la infraestructura básica (capacidad de proceso, almacenamiento y red) de forma elástica; el cliente gestiona el sistema operativo y todo lo superior. Es el modelo de mayor control y flexibilidad. Ejemplos: **Amazon EC2**, Google Compute Engine, Azure Virtual Machines.
+- **PaaS (Platform as a Service)**: el proveedor ofrece una plataforma completa para desarrollar, probar, desplegar y mantener aplicaciones (entorno de ejecución, middleware, bases de datos), y el cliente se centra solo en su aplicación. Ejemplos: **Google App Engine**, AWS Elastic Beanstalk, Azure App Service, Heroku, Red Hat OpenShift.
+- **SaaS (Software as a Service)**: el proveedor ofrece la aplicación final, accesible desde un cliente ligero (normalmente el navegador), y gestiona todo lo demás. Ejemplos: correo web, **Microsoft 365**, Google Workspace, Salesforce, Dropbox.
 
-Los servicios ofrecidos están en entornos públicos no propietarios, abiertos al público y gestionados por proveedores externos.
+Reparto de responsabilidades (modelo de **responsabilidad compartida**):
 
-- **Características**: Abiertas al público y gestionadas por los proveedores.
-- **Ventajas**: Evita grandes inversiones en equipos y mantenimiento, proporciona flexibilidad y garantías de privacidad, seguridad y disponibilidad.
-- **Desventajas**: Dependencia de los servicios en línea y del acceso a través de internet.
+| Capa | IaaS | PaaS | SaaS |
+| --- | :---: | :---: | :---: |
+| Aplicaciones | Cliente | Cliente | Proveedor |
+| Entorno de ejecución y middleware | Cliente | Proveedor | Proveedor |
+| Sistema operativo | Cliente | Proveedor | Proveedor |
+| Virtualización, servidores, almacenamiento y red | Proveedor | Proveedor | Proveedor |
 
-### Nube Privada
+Los **datos, su clasificación y el control de accesos son siempre responsabilidad del cliente**, sea cual sea el modelo.
 
-Los servicios y datos son propiedad de una organización específica, ofreciendo privacidad de datos y gestión personalizada.
+Otros modelos derivados (**XaaS**, «todo como servicio»):
 
-- **Características**: Privacidad de datos y gestión localizada.
-- **Ventajas**: Mayor seguridad y privacidad de los datos, gestión personalizada.
-- **Desventajas**: Mayor inversión en personal, equipos y mantenimiento, menor escalabilidad y posible disminución de la seguridad por gestión no especializada.
+- **FaaS (Function as a Service)**: ejecución de funciones dirigida por eventos, base del serverless (ver tendencias).
+- **CaaS (Containers as a Service)**: contenedores y su orquestación gestionados por el proveedor (tema 44).
+- **DBaaS, DRaaS...**: bases de datos gestionadas, recuperación ante desastres y otros servicios especializados.
+- **Almacenamiento en la nube**: se ofrece en tres tipos: **de bloques** (discos para máquinas virtuales), **de ficheros** (carpetas compartidas) y **de objetos**, el modelo nativo de la nube por su escalabilidad (Amazon S3, Azure Blob Storage).
 
-### Nube Híbrida
+## Centro de datos definido por software (SDDC)
 
-Combina servicios de nubes públicas y privadas, permitiendo aprovechar las ventajas de ambas.
+El SDDC (*Software-Defined Data Center*) es la arquitectura en la que **todos los elementos de la infraestructura (computación, red, almacenamiento y seguridad) se virtualizan y se entregan como servicio**, con la gestión del centro completamente automatizada por software. Es la base tecnológica de la nube privada y de los grandes proveedores cloud.
 
-- **Características**: Privacidad de datos y menor coste.
-- **Ventajas**: Menor inversión inicial, mantenimiento del control y privacidad de los datos, y beneficios de las nubes públicas.
-- **Desventajas**: Requiere el mantenimiento de dos nubes diferentes.
+Sus pilares:
 
-### Nube de Comunidad
+- **Computación virtualizada**: hipervisores que abstraen los servidores físicos (tema 44).
+- **Redes definidas por software (SDN)**: separan el plano de control del plano de datos y permiten crear y configurar redes por software (tema 68).
+- **Almacenamiento definido por software (SDS)**: abstrae el almacenamiento del hardware y lo agrega en pools gestionados por políticas.
+- **Capa de gestión y automatización**: orquestación, autoservicio e **infraestructura como código**, que aplican políticas de forma consistente en todo el centro.
 
-Servicios compartidos en una comunidad cerrada de entidades con objetivos comunes, como organizaciones gubernamentales.
+La **infraestructura hiperconvergente (HCI)** es su materialización comercial más habitual (tema 43). Ventajas: agilidad en la provisión, consistencia de la configuración y eficiencia operativa; retos: complejidad de la implantación inicial, necesidad de personal especializado y consideraciones de seguridad y cumplimiento.
 
-- **Características**: Infraestructura compartida por varias organizaciones.
-- **Ventajas**: Permite crear una nube especializada según los requisitos de las organizaciones.
-- **Desventajas**: Variables según las necesidades y acuerdos entre las entidades.
+## Tendencias: serverless y edge computing
 
-## Aspectos varios de la computación en la Nube
+- **Serverless computing**: el proveedor asume por completo el aprovisionamiento, el escalado y la administración de los servidores; el cliente paga **solo por la ejecución real** de su código, no por capacidad reservada. Su modelo principal es el **FaaS**: el código se empaqueta en funciones que se ejecutan como respuesta a eventos, con escalado automático (incluso a cero instancias). Ejemplos: AWS Lambda, Azure Functions, Google Cloud Functions.
+    - **Ventajas**: coste proporcional al uso, sin administración de infraestructura, escalado inmediato.
+    - **Inconvenientes**: latencia de arranque en frío, límites de tiempo y memoria por ejecución y fuerte dependencia del proveedor.
+- **Edge computing (computación en el borde)**: lleva el procesamiento y el almacenamiento **cerca de donde se generan los datos**, en lugar de depender solo de centros de datos remotos: reduce la **latencia** y el consumo de ancho de banda, y es clave para IoT, el análisis en tiempo real y las redes 5G (temas 71 y 72). El **fog computing** es la capa intermedia que conecta el borde con la nube, y los micro-CPD su soporte físico (tema 43).
+- **Multicloud y nube híbrida**: combinación de varios proveedores y de nube propia para evitar la dependencia de un único proveedor y cumplir requisitos de soberanía del dato; su reto es la gestión y la seguridad unificadas de entornos heterogéneos.
 
-### Almacenamiento en la Nube
+## La nube en las administraciones públicas
 
-Modelo de servicio donde los datos generados se almacenan, administran y respaldan de forma remota en servidores gestionados por un proveedor. Los tipos de almacenamiento en la nube incluyen:
+El uso de servicios en la nube por el sector público está condicionado por el **Esquema Nacional de Seguridad (RD 311/2022**, tema 29), que le dedica una medida específica del Anexo II:
 
-- **Público**
-- **Privado**
-- **Híbrido**
+- **op.nub.1 (Protección de servicios en la nube)**: los sistemas que suministren un servicio en la nube a organismos del sector público deberán cumplir las medidas de seguridad **en función del modelo de servicio (SaaS, PaaS, IaaS)** definidas en las guías CCN-STIC de aplicación. Cuando se utilicen servicios de terceros, sus sistemas deberán ser **conformes con el ENS** o cumplir una guía CCN-STIC con requisitos de auditoría de pruebas de penetración, transparencia, cifrado y gestión de claves y **jurisdicción de los datos**.
+    - **Refuerzo R1** (categorías media y alta): los servicios deberán estar **certificados** bajo una metodología reconocida por el Organismo de Certificación del Esquema Nacional de Evaluación y Certificación de la Seguridad de las TI.
+    - **Refuerzo R2** (categoría alta): configuración conforme a las guías CCN-STIC de configuración de seguridad específicas, para usuario y proveedor.
+- **Conformidad exigible en la contratación**: los proveedores deben poder exhibir la **Declaración de Conformidad** con el ENS (sistemas de categoría básica) o la **Certificación de Conformidad** (categorías media y alta), también respecto de los sistemas del proveedor final cuando se contrata a través de intermediarios.
+- **CCN-STIC 823, «Utilización de servicios en la nube»** (edición de diciembre de 2019, revisada en septiembre de 2020; anterior al RD 311/2022): guía del CCN con los riesgos, el clausulado contractual y los SLA, y un **decálogo de recomendaciones** que sintetiza el proceso: categorizar el sistema y elaborar la declaración de aplicabilidad, realizar el análisis de riesgos, acogerse a un perfil de cumplimiento específico si procede, fijar las condiciones contractuales antes de contratar (en pliegos: servicio, registros de actividad, gestión de incidentes, copias de seguridad y finalización del servicio), supervisar el cumplimiento del proveedor (CSP), hacer seguimiento periódico de los **SLA** y de la información del servicio, y aprobar una normativa de seguridad específica para los usuarios de la nube.
+- **Nube de la Administración**: la AEAD ofrece a las AAPP servicios de nube privada/comunitaria sobre la Red SARA (nubeSARA), que se estudian con los servicios comunes de interoperabilidad (tema 59).
 
-### Software On-Premise vs Off-Premise
+## Fuentes {.unnumbered .unlisted}
 
-- **Software On-Premise**: Software instalado localmente en los servidores de la organización.
-- **Software Off-Premise**: Software alojado en la nube (SaaS), gestionado por un proveedor externo.
-
-### Serverless Computing
-
-El **serverless computing** es un modelo donde las empresas pagan solo por el uso efectivo de los recursos informáticos, permitiendo reducir costes y mejorar la eficiencia. El proveedor asume la responsabilidad de ejecutar, escalar y administrar los servidores necesarios para ejecutar el código de las aplicaciones, sin que el usuario tenga que preocuparse por la infraestructura subyacente ni por la demanda de carga de trabajo.
-
-- **Características**: Pago por tiempo de ejecución del código y recursos utilizados.
-
-### Edge Computing
-
-La **computación en el borde** o edge computing busca llevar el procesamiento de datos lo más cerca posible del usuario o del lugar donde se generan los datos, reduciendo la latencia y mejorando la velocidad de procesamiento.
-
-- **Beneficios**: Reducción de latencia y ancho de banda necesarios, ideal para aplicaciones que requieren respuestas rápidas o en tiempo real.
-
-### Contenedores, Orquestación y Microservicios
-
-- **Contenedores**: Permiten empaquetar y distribuir aplicaciones de manera rápida y sencilla, aislando el software en entornos independientes.
-- **Orquestación**: Gestión automatizada de contenedores en la nube, facilitando su implementación y escalado.
-- **Microservicios**: Enfoque de desarrollo de aplicaciones basado en crear pequeños servicios independientes que pueden integrarse y escalarse de manera eficiente.
-
-## Infraestructuras, Plataformas y Software como Servicio (IaaS, PaaS, SaaS)
-
-### Tipos de Servicio en el Cloud Computing
-
-### Software as a Service (SaaS)
-
-Modelo donde el proveedor ofrece aplicaciones a través de internet. El usuario accede a estas aplicaciones mediante una conexión web, sin necesidad de instalar nada localmente. El proveedor se encarga de toda la gestión y mantenimiento del software.
-
-- **Características**: No requiere conocimientos técnicos, pero implica pérdida de control sobre seguridad y privacidad. Se accede mediante un "thin-client" como un navegador web.
-- **Ejemplos**: Correo electrónico, CRM, plataformas colaborativas como Slack, GitHub, Google Drive, Dropbox o Salesforce.
-
-### Platform as a Service (PaaS)
-
-El proveedor ofrece una plataforma para desarrollar, probar, ejecutar y mantener aplicaciones. El usuario no se preocupa por la infraestructura necesaria, enfocándose únicamente en el desarrollo de la aplicación. El proveedor gestiona y actualiza la infraestructura.
-
-- **Ejemplos**: Microsoft Azure, Google App Engine, Amazon Web Services (AWS).
-
-### Infrastructure as a Service (IaaS)
-
-Permite a las organizaciones adaptar sus recursos de procesamiento y almacenamiento de manera elástica y eficiente, pagando solo por lo que utilizan. El proveedor ofrece servicios de infraestructura como almacenamiento, procesamiento y redes, encargándose de su gestión y mantenimiento.
-
-- **Ejemplos**: GoGrid, Amazon EC2 (Elastic Compute Cloud), Google Compute Engine.
-
-### Comparación entre IaaS, PaaS y SaaS
-
-- **Nivel de Control**: IaaS ofrece el mayor control sobre los recursos de TI, seguido por PaaS y luego SaaS.
-- **Responsabilidades de Gestión**: En IaaS, el cliente gestiona sistemas operativos y aplicaciones; en PaaS, se enfoca en las aplicaciones; en SaaS, el proveedor gestiona todo.
-- **Flexibilidad**: IaaS proporciona la máxima flexibilidad para personalizar entornos; PaaS equilibra flexibilidad y facilidad de uso; SaaS ofrece soluciones estándar listas para usar.
+- NIST Special Publication 800-145, The NIST Definition of Cloud Computing (septiembre de 2011).
+- Real Decreto 311/2022, por el que se regula el Esquema Nacional de Seguridad (texto consolidado, última modificación 6 de noviembre de 2024): Anexo II, medida op.nub.1.
+- CCN-STIC 823, Utilización de servicios en la nube (edición diciembre de 2019, revisión septiembre de 2020).
+- TOP500 (lista de junio de 2025; se actualiza cada junio y noviembre) y EuroHPC JU.
+- Portales del BSC-CNS y de la Red Española de Supercomputación (RES).
