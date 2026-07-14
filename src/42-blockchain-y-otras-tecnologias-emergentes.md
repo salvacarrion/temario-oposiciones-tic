@@ -1,122 +1,107 @@
 # Blockchain y otras tecnologías emergentes
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+Blockchain permite registrar transacciones y activos de forma compartida e inalterable sin depender de un intermediario central: la confianza la aporta la propia tecnología. Este tema cubre sus fundamentos y funcionamiento, los tipos de redes y los contratos inteligentes, las organizaciones descentralizadas y los casos de uso en la Administración, y cierra con una panorámica breve de la realidad extendida y los metaversos.
 
+## Blockchain: fundamentos y funcionamiento
 
-## Tecnología blockchain, funcionamiento, tipos, estructura y aplicaciones
+**Blockchain** (cadena de bloques) es una tecnología de **libro mayor distribuido** (*Distributed Ledger Technology*, DLT) que mantiene una base de datos compartida, descentralizada e inalterable entre participantes que no necesitan confiar entre sí: la confianza la aportan la criptografía y el consenso de la red, no una autoridad central.
 
-**Tecnología que permite la creación de una base de datos distribuida y descentralizada** de forma segura. Su funcionamiento se basa en bloques de información que están encadenados entre sí, proporcionando una mayor **seguridad, transparencia y confiabilidad** en las transacciones que se realizan.
+Sus elementos principales:
 
-De manera más técnica, **blockchain** se define como un **libro mayor compartido e inalterable** que facilita el registro y seguimiento de transacciones, así como de activos dentro de una red de negocio. Este sistema es crucial para garantizar la confianza en redes distribuidas.
+- **Libro mayor distribuido**: todos los nodos de la red guardan una copia del registro completo de transacciones; ninguna entidad lo controla en exclusiva.
+- **Registros inalterables (inmutabilidad)**: una transacción registrada no puede modificarse ni eliminarse; un error se corrige añadiendo una nueva transacción, y ambas quedan visibles, lo que refuerza la transparencia.
+- **Criptografía**: cada participante posee un par de claves con el que firma sus transacciones; las funciones hash garantizan la integridad de los datos.
+- **Consenso**: el mecanismo por el que los nodos acuerdan qué bloque se añade a la cadena.
 
-### Elementos principales de Blockchain
+El **funcionamiento** sigue una secuencia:
 
-- **Tecnología de libro mayor distribuido**: Todos los participantes de la red tienen acceso a una copia del libro mayor, que contiene un registro inalterable de todas las transacciones. Este enfoque asegura que todos los nodos de la red posean la misma información y evita manipulaciones.
-- **Registros inalterables**: Una vez que una transacción se graba en el libro mayor, no puede ser alterada ni eliminada. Si se comete un error en una transacción, en lugar de modificarla, se añade una nueva transacción para corregir el error. Ambas transacciones permanecen visibles, lo que incrementa la **transparencia**.
-- **Contratos inteligentes**: Son conjuntos de reglas almacenadas dentro de la blockchain que se ejecutan automáticamente cuando se cumplen ciertas condiciones. Los contratos inteligentes aceleran las transacciones al eliminar intermediarios y permitir procesos más eficientes.
+- Las transacciones se firman electrónicamente por el emisor y se difunden a la red.
+- Los nodos las agrupan en **bloques**. Cada bloque contiene los datos de las transacciones, su propio **hash** (identificador único generado criptográficamente) y el **hash del bloque anterior**, que encadena los bloques entre sí.
+- Las transacciones del bloque se resumen en un **árbol de Merkle**: cada transacción es un nodo hoja con su hash, los hashes se combinan por pares en nodos intermedios y el proceso continúa hasta un único hash final, la **raíz de Merkle**. Así se puede verificar la integridad de una transacción comparando unos pocos hashes, sin revisar todo el bloque.
+- Alterar un bloque cambia su hash e invalida todos los posteriores: manipular la cadena exigiría rehacerla y ganar el consenso de la red, lo que resulta inviable en redes grandes.
 
-### Funcionamiento de Blockchain
+Los **mecanismos de consenso** determinan quién valida y con qué coste:
 
-El proceso de blockchain puede describirse como una serie de pasos encadenados:
+- **Prueba de trabajo** (*Proof of Work*, PoW): los mineros compiten por resolver un problema criptográfico costoso; quien lo logra propone el bloque y recibe una recompensa. Es el mecanismo de **Bitcoin**: muy seguro, pero de **alto consumo energético** y capacidad limitada.
+- **Prueba de participación** (*Proof of Stake*, PoS): los validadores se seleccionan en función de las monedas que depositan como garantía (*stake*) y pierden parte de ella si actúan deshonestamente. **Ethereum migró de PoW a PoS en 2022** (*The Merge*), recortando su consumo energético en más del **99 %**.
+- **Consensos permisionados**: en redes con validadores identificados se usan algoritmos de tolerancia a fallos bizantinos (BFT y variantes), rápidos y sin minería.
+- **Ataque del 51 %**: quien controle la mayoría del poder de cómputo (PoW) o de la participación (PoS) podría reescribir la parte reciente de la cadena; es la principal amenaza teórica, relevante sobre todo en redes públicas pequeñas.
 
-- Cada transacción que se realiza se registra como un **bloque de datos**.
-- Cada bloque está enlazado al bloque anterior y al posterior, formando una cadena continua de datos.
-- Esta cadena es **irreversible**, lo que refuerza la confianza y la seguridad de la red. A medida que se añaden bloques, la información almacenada se vuelve más robusta contra alteraciones.
+En conjunto, blockchain ofrece **confianza sin intermediarios**, integridad, transparencia, trazabilidad y disponibilidad (no hay punto único de fallo), además de automatización mediante contratos inteligentes. Sus **limitaciones**: el llamado trilema entre escalabilidad, seguridad y descentralización (mejorar dos suele sacrificar la tercera), un rendimiento muy inferior al de una base de datos convencional, el coste energético del PoW y el encaje difícil de la inmutabilidad con el derecho de supresión del RGPD. Si existe una autoridad de confianza natural, una base de datos tradicional suele ser la solución adecuada.
 
-### Beneficios de Blockchain
+## Tipos de redes y smart contracts
 
-Blockchain ofrece tres beneficios fundamentales:
+Según quién puede participar, las redes son **abiertas** (*permissionless*: cualquiera lee y valida) o **permisionadas** (*permissioned*: el acceso y la validación requieren autorización). Sobre esa base se distinguen cuatro tipos:
 
-- **Mayor confianza**: Los participantes de la red pueden estar seguros de que la información es precisa y no ha sido manipulada.
-- **Mayor seguridad**: Gracias a los registros inalterables y la criptografía, las transacciones están protegidas frente a accesos no autorizados.
-- **Mayor eficiencia**: Al eliminar intermediarios y optimizar procesos mediante contratos inteligentes, se reducen tiempos y costos.
+| Tipo | Acceso y validación | Ejemplos |
+| --- | --- | --- |
+| Públicas | Abiertas a cualquiera; validación descentralizada entre miles de nodos anónimos | Bitcoin, Ethereum |
+| Privadas | Una sola organización controla el acceso y la validación | Redes internas corporativas |
+| De consorcio (federadas) | Varias organizaciones identificadas comparten la gobernanza y validan | Alastria, EBSI |
+| Híbridas | Combinan una parte restringida con otra pública | Datos privados con anclaje de pruebas en una red pública |
 
-### Tipos de redes blockchain
+- **Públicas**: máxima descentralización y transparencia; a cambio, alto coste computacional (PoW), poca privacidad (todo es visible) y rendimiento limitado.
+- **Privadas**: eficientes y con control de acceso, pero de descentralización limitada: existe riesgo de concentración del poder en el administrador.
+- **De consorcio**: equilibrio entre confianza y eficiencia; es el modelo habitual en banca y Administraciones, donde los participantes están identificados.
+- **Híbridas**: útiles cuando conviene mantener datos privados y publicar pruebas verificables de ellos.
 
-- **Redes públicas**: Estas redes están abiertas a cualquier persona que quiera participar. En este tipo de redes, la validación de transacciones es realizada por cualquier nodo de la red, lo que fomenta la descentralización.
-    - **Desventajas**:
-        - Requieren una **gran potencia computacional** debido al proceso de consenso distribuido, como el mecanismo de prueba de trabajo (PoW).
-        - Las transacciones tienen **poca privacidad**, ya que toda la información es visible para los nodos participantes.
-        - La seguridad puede ser débil si no hay suficiente participación o si un atacante controla una gran parte de la red.
-- **Redes privadas**: Están restringidas a un grupo reducido de participantes, quienes tienen permiso para acceder y validar las transacciones. Funcionan como una red **P2P descentralizada**, pero con acceso limitado.
-    - **Desventajas**:
-        - Una sola organización administra la red, lo que significa que la descentralización está limitada.
-        - Existe un **riesgo de centralización del poder**, lo que puede generar problemas de confianza si los administradores no son imparciales.
-- **Redes híbridas**: Combinan las características de las redes públicas y privadas. Permiten una **validación flexible** que puede ser tanto abierta como restringida según las necesidades de la red.
-    - Este enfoque híbrido es especialmente útil para organizaciones que necesitan mantener ciertos datos privados mientras comparten otros de forma pública para incrementar la transparencia.
+Los **contratos inteligentes** (*smart contracts*) son programas almacenados en la propia blockchain que se ejecutan automáticamente cuando se cumplen las condiciones pactadas, sin intermediarios:
 
-### Estructura de datos en Blockchain
+- **Ethereum** los popularizó (2015) con su máquina virtual (**EVM**) y el lenguaje **Solidity**; las plataformas permisionadas empresariales (Hyperledger Fabric, Besu) también los soportan.
+- **Aplicaciones**: pagos condicionados, garantías y depósitos, automatización de acuerdos entre múltiples partes.
+- **Riesgos**: un error de programación es explotable y difícil de revertir (el caso **The DAO, 2016**, acabó bifurcando Ethereum) y dependen de **oráculos** (fuentes externas de datos) cuya fiabilidad hay que garantizar.
+- **Tokens**: activos digitales emitidos mediante contratos inteligentes; pueden ser **fungibles** (intercambiables entre sí, como las criptomonedas; estándar ERC-20) o **no fungibles** (**NFT**, únicos e indivisibles; estándar ERC-721), usados para representar activos digitales o físicos.
+- **dApps**: aplicaciones descentralizadas cuya lógica de negocio reside en contratos inteligentes.
 
-- **Árboles de Merkle**: Son estructuras de datos jerárquicas que permiten organizar y verificar grandes cantidades de información de manera eficiente. Los árboles de Merkle funcionan de la siguiente manera:
-    - Las transacciones individuales se representan como **nodos hoja** en el árbol.
-    - Cada nodo hoja se codifica con un hash único (una función criptográfica que comprime los datos de la transacción en una secuencia fija de caracteres).
-    - Los hashes de los nodos hoja se agrupan en pares y se combinan en un nuevo hash, formando los **nodos intermedios**.
-    - Este proceso de combinación continúa hasta que se llega a un único hash final en la raíz, llamado **raíz de Merkle**.
-        - Permite verificar la integridad de las transacciones de forma rápida, ya que solo es necesario comparar los hashes relacionados, sin tener que revisar cada transacción individual. Esta eficiencia es especialmente valiosa en redes con gran volumen de datos.
-- **Cadena de bloques**: Cada bloque en la blockchain contiene tres componentes principales:
-    - **Datos de las transacciones**: Información específica de las transacciones que se registran en ese bloque.
-    - **Hash del bloque actual**: Un identificador único que representa todo el contenido del bloque, generado mediante funciones criptográficas.
-    - **Hash del bloque anterior**: Vincula el bloque actual con el anterior, creando la continuidad de la cadena. Este enlace garantiza que cualquier cambio en un bloque afectará a todos los bloques posteriores, reforzando la inmutabilidad de la cadena.
-- **Funciones hash criptográficas**: Son esenciales en blockchain, ya que permiten:
-    - Resumir grandes cantidades de datos en un hash único y fijo.
-    - Detectar cualquier alteración en los datos, ya que incluso un pequeño cambio genera un hash completamente diferente.
-    - Garantizar la integridad de los datos y la confianza entre participantes.
+## Organizaciones descentralizadas (DAO) y casos de uso en la Administración
 
-### Aplicabilidad del Blockchain
+Una **DAO** (*Decentralized Autonomous Organization*, organización autónoma descentralizada) es una organización cuyas reglas de funcionamiento están codificadas en contratos inteligentes sobre una blockchain, sin autoridad central:
 
-La **tecnología blockchain** es una herramienta innovadora que permite gestionar y registrar información de manera segura, inmutable y descentralizada, eliminando la necesidad de intermediarios y fortaleciendo la confianza en los sistemas. Se aplica en una amplia gama de áreas, entre las que destacan:
+- **Autonomía**: opera automáticamente según las reglas preestablecidas.
+- **Transparencia**: toda su actividad es visible y verificable en la cadena.
+- **Decisión colectiva**: los miembros votan las propuestas, habitualmente con *tokens* de gobernanza.
+- **Inmutabilidad**: las reglas son difíciles de alterar una vez desplegadas, lo que da confianza pero resta flexibilidad.
+- **Retos**: la mayoría de ordenamientos no les reconoce personalidad jurídica, con lo que la responsabilidad de sus actos y la jurisdicción aplicable siguen siendo cuestiones abiertas.
 
-- **Validación de transacciones financieras**: Blockchain garantiza la integridad, trazabilidad y transparencia en las operaciones financieras, reduciendo riesgos de fraude.
-- **Registro de propiedad**: Facilita la inscripción segura de bienes y derechos, evitando conflictos y aumentando la transparencia.
-- **Identificación digital**: Proporciona sistemas más seguros para verificar identidades, mejorando la protección contra el robo de datos y el fraude de identidad.
-- **Gestión de contratos inteligentes**: Automatiza el cumplimiento de acuerdos mediante **smart contracts**, que se ejecutan automáticamente al cumplirse las condiciones establecidas.
-- **Trazabilidad en cadenas de suministro**: Permite rastrear el origen y movimiento de bienes, asegurando calidad, autenticidad y cumplimiento normativo.
+El **marco regulatorio europeo** de los criptoactivos ya existe y conviene conocerlo:
 
-## Organizaciones descentralizadas (OD)
+- **Reglamento (UE) 2023/1114 (MiCA**, *Markets in Crypto-Assets*): primer marco integral de la UE sobre criptoactivos; regula a los emisores y a los proveedores de servicios (custodia, intercambio) y es **plenamente aplicable desde el 30 de diciembre de 2024**. En España supervisan la **CNMV** y el **Banco de España**.
+- **Reglamento (UE) 2022/858**: régimen piloto para infraestructuras de mercado basadas en DLT (negociación y liquidación de instrumentos financieros tokenizados).
+- **Reglamento (UE) 2024/1183 (eIDAS 2)**: incorpora los **libros mayores electrónicos** como nuevo servicio de confianza y crea la **Cartera Europea de Identidad Digital** (EUDI Wallet), punto de convergencia con la identidad basada en blockchain (tema 61).
 
-Las **organizaciones descentralizadas (OD)** constituyen un modelo de gobernanza donde no existe una autoridad central. Las decisiones son tomadas de forma colectiva mediante **procesos de consenso**, lo que fomenta una participación democrática y la transparencia en todas las operaciones. Estas organizaciones se estructuran en torno a principios como la igualdad, la descentralización y la autogestión, siendo ideales para comunidades con intereses compartidos.
+**Casos de uso en la Administración**:
 
-### DAO (Decentralized Autonomous Organization)
+- **Identidad digital**: identidad autosoberana (*Self-Sovereign Identity*, SSI) con **credenciales verificables** (estándar del W3C): el ciudadano custodia sus credenciales y el verificador comprueba su autenticidad contra la cadena, sin consultar al emisor; converge con la EUDI Wallet.
+- **Trazabilidad**: notarización de documentos y evidencias (huella con sellado de tiempo), seguimiento de ayudas y fondos, cadenas de suministro (alimentaria, farmacéutica).
+- **Contratación pública**: registro inmutable de ofertas, aperturas y adjudicaciones para reforzar la integridad y la transparencia de las licitaciones.
+- **Voto electrónico**: registro verificable y anónimo del voto; existen pilotos, pero persisten retos de secreto del sufragio y verificabilidad de extremo a extremo.
+- **Educación**: emisión y verificación transfronteriza de títulos y diplomas, caso de uso insignia de EBSI; en España lo trabaja la red **Blue** (Blockchain de Universidades Españolas).
 
-Una **DAO (Organización Autónoma Descentralizada)** es una forma avanzada de organización descentralizada basada en reglas codificadas en **contratos inteligentes** que operan sobre blockchain. Las DAOs destacan por:
+**Redes institucionales**:
 
-- **Autonomía**: Funcionan automáticamente según las reglas preestablecidas, sin intervención humana directa.
-- **Transparencia**: Toda la actividad es visible y verificable en el blockchain.
-- **Toma de decisiones colectiva**: Los miembros participan mediante votaciones digitales, asegurando que las decisiones reflejen los intereses del grupo.
-- **Inmutabilidad**: Una vez establecidas, las reglas son difíciles de alterar, aumentando la confianza en el sistema.
+- **Alastria** (2017): consorcio español sin ánimo de lucro, pionero mundial como red nacional permisionada multisectorial; red semipública sujeta a la regulación española, pensada para que sus socios desarrollen servicios con eficacia jurídica.
+- **EBSI** (*European Blockchain Services Infrastructure*): infraestructura permisionada de la **European Blockchain Partnership** (Comisión Europea y Estados miembros, **2018**), con nodos distribuidos por los Estados y casos de uso de credenciales educativas, identidad y trazabilidad documental. Desde **mayo de 2024** su gobernanza se transfiere al consorcio **EUROPEUM-EDIC** (del que **España** es miembro) para llevarla a producción; el proyecto de expansión EBSI-NE, liderado por la **Agencia Estatal de Administración Digital**, amplió la red hasta **59 nodos**, y la infraestructura evoluciona hacia un libro mayor electrónico certificable como servicio de confianza cualificado conforme a eIDAS 2.
+- **ISBE** (Infraestructura de Servicios Blockchain de España): iniciativa nacional de servicios blockchain, en despliegue desde **2025**.
 
-### Gobernanza
+## Realidad extendida y metaversos
 
-La **gobernanza** en el contexto de las OD y DAOs se refiere a los procesos y normas que definen cómo se toman las decisiones dentro de estas estructuras descentralizadas. Existen dos principales enfoques:
+La **realidad extendida** (*eXtended Reality*, XR) agrupa las tecnologías que combinan entorno físico y digital en distintos grados:
 
-- **Descentralizado**: Las decisiones son discutidas y acordadas colectivamente por los miembros, sin intermediarios.
-- **Descentralizado y autónomo**: La gobernanza está totalmente automatizada mediante contratos inteligentes, lo que garantiza eficiencia y evita manipulaciones externas.\ Este modelo plantea ventajas significativas en términos de transparencia, pero también desafíos al integrar los intereses de todos los participantes de forma justa.
+- **Realidad virtual (RV)**: inmersión completa en un entorno digital mediante visores; el usuario deja de ver el mundo real.
+- **Realidad aumentada (RA)**: superpone información digital sobre el mundo real, a través del móvil o de gafas.
+- **Realidad mixta (RM)**: los objetos digitales se anclan al entorno real e interactúan con él.
+- **Dispositivos y estándares**: visores autónomos (Meta Quest, Apple Vision Pro, lanzado en **2024**) y el estándar abierto **OpenXR** (Khronos Group) para la interoperabilidad entre aplicaciones y dispositivos.
 
-### Aspectos legales y fiscales sobre Blockchain
+El **metaverso** designa la evolución hacia espacios virtuales tridimensionales, persistentes e interoperables donde los usuarios interactúan mediante avatares; combina XR con blockchain (activos digitales, NFT) y con los **gemelos digitales**, réplicas virtuales de objetos o sistemas reales sincronizadas con sus datos (los gemelos urbanos se tratan en el tema 73).
 
-El uso de blockchain y la descentralización en OD y DAOs presentan retos complejos en el ámbito legal y fiscal:
+- **Marco europeo**: la Comisión adoptó en **julio de 2023** su estrategia sobre **Web 4.0 y mundos virtuales** (COM(2023) 442), para orientar esta transición conforme a los valores y derechos de la UE.
+- **Aplicaciones en el sector público**: formación inmersiva (sanitaria, emergencias, seguridad), planificación urbana participativa sobre gemelos digitales, atención ciudadana en entornos virtuales, turismo y patrimonio cultural.
+- **Perspectiva**: tras el pico de expectativas de 2021-2022, el foco de la industria se desplazó hacia la IA generativa; la XR avanza de forma más gradual, ligada a casos de uso concretos.
 
-- **Responsabilidad**: En estructuras descentralizadas, determinar quién es responsable de las acciones o transacciones puede ser complicado, lo que dificulta la aplicación de regulaciones tradicionales.
-- **Jurisdicción**: Al operar en redes globales, es difícil identificar bajo qué leyes se rigen las actividades.
-- **Implicaciones fiscales**: Las transacciones en blockchain, especialmente aquellas que usan criptomonedas, presentan desafíos para la fiscalización debido a su anonimato y la falta de intermediarios. Esto requiere nuevos enfoques legislativos.
+## Fuentes {.unnumbered .unlisted}
 
-### Blue (Blockchain Universidades Españolas)
-
-La red **Blue**, impulsada por universidades españolas, tiene como objetivo principal promover la innovación y la formación en blockchain. Esta colaboración entre universidades y empresas busca:
-
-- Potenciar la **colaboración en proyectos innovadores** relacionados con blockchain.
-- Formar profesionales especializados en tecnología blockchain, adaptados a las demandas del mercado laboral.
-- Desarrollar aplicaciones prácticas como la **verificación de identidad**, **gestión de diplomas académicos** y la **trazabilidad de documentos**.
-
-### EBSI (European Blockchain Services Infrastructure)
-
-La **EBSI**, promovida por la Comisión Europea, es una iniciativa clave para integrar la tecnología blockchain en sectores públicos y privados en la Unión Europea. Sus áreas de aplicación incluyen:
-
-- **Verificación de identidad digital**: Ofrece soluciones seguras y confiables para la identificación y autenticación de ciudadanos.
-- **Gestión de diplomas**: Facilita el intercambio transfronterizo de títulos académicos, garantizando su validez y autenticidad.
-- **Seguridad social**: Mejora la eficiencia y transparencia en la gestión de servicios sociales mediante registros inmutables y trazables.
-- **Trazabilidad documental**: Simplifica la gestión administrativa asegurando que los documentos sean auténticos y verificables.
-- **Sostenibilidad**: Promueve el uso de blockchain para rastrear y garantizar prácticas sostenibles en distintos sectores.
+- Nakamoto, S.: *Bitcoin: A Peer-to-Peer Electronic Cash System*, 2008.
+- Reglamento (UE) 2023/1114 (MiCA, DOUE 9 de junio de 2023; aplicable en su totalidad desde el 30 de diciembre de 2024); Reglamento (UE) 2022/858 (régimen piloto DLT); Reglamento (UE) 2024/1183 (eIDAS 2, DOUE 30 de abril de 2024).
+- Comisión Europea: EBSI y EUROPEUM-EDIC (digital-strategy.ec.europa.eu y Digital Building Blocks), consultado en julio de 2026.
+- Comunicación de la Comisión «Una iniciativa de la UE sobre la Web 4.0 y los mundos virtuales», COM(2023) 442, 11 de julio de 2023.
+- Documentación de Ethereum (ethereum.org) y de Alastria (alastria.io), consultada en julio de 2026.
