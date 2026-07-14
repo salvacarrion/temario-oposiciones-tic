@@ -1,117 +1,101 @@
 # Gestión de ciberincidentes
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+Un ciberincidente es un suceso que afecta (o puede afectar) a la seguridad de las redes y sistemas de información. La gestión de ciberincidentes es el conjunto ordenado de acciones para prevenir su ocurrencia en lo posible y, cuando ocurren, restaurar los niveles normales de operación lo antes posible. Es la continuación natural del análisis de riesgos (tema 30): el incidente es el riesgo materializado. El marco institucional de la ciberseguridad española se estudia en el tema 28.
 
+## Ciclo de gestión de ciberincidentes
 
-## Gestión de ciberincidentes
+En el sector público la gestión de ciberincidentes está regulada por el ENS y desarrollada por las guías del CCN:
 
-### Fases: Preparación, Identificación, Contención, Mitigación, Recuperación y Actuaciones Post-Incidente
+- **Real Decreto 311/2022 (ENS)**. **Texto consolidado a 6 de noviembre de 2024.**
+    - **Art. 8. Prevención, detección, respuesta y conservación** (principio básico): la seguridad del sistema contempla la prevención (que puede incorporar disuasión y reducción de la superficie de exposición), la detección (descubrir la presencia del ciberincidente) y la respuesta en tiempo oportuno (restaurar la información y los servicios afectados).
+    - **Art. 33. Capacidad de respuesta a incidentes de seguridad**: el CCN articula la respuesta en torno al **CCN-CERT**; las entidades del sector público **notificarán al CCN los incidentes con impacto significativo**, conforme a la **ITS de Notificación de Incidentes de Seguridad**; el CCN ejerce la **coordinación nacional de la respuesta técnica** de los CSIRT del sector público; tras un incidente, el CCN-CERT determina técnicamente el **riesgo de reconexión** del sistema afectado. Las organizaciones privadas que presten servicios a entidades públicas notifican al **INCIBE-CERT**, que lo pone inmediatamente en conocimiento del CCN-CERT (art. 33.7).
+    - **Art. 34**: servicios del CCN-CERT al sector público, empezando por el soporte y la coordinación para el tratamiento de vulnerabilidades y la resolución de incidentes.
+    - **Medida op.exp.7 Gestión de incidentes** (marco operacional): exige un **proceso integral** frente a los incidentes, con criterios de clasificación y escalado de la notificación, y respeto al RGPD y la LOPDGDD cuando afecten a datos personales. Refuerzos: **R1** ventanilla única de notificación al CCN-CERT (categorías MEDIA y ALTA), **R2** detección y respuesta (medidas urgentes, recursos para investigar, informar a los responsables afectados y prevenir la repetición), **R3** reconfiguración dinámica ante ataques (categoría ALTA) y **R4** prevención y respuesta automáticas.
+    - **Medida op.exp.9 Registro de la gestión de incidentes**: en todas las categorías se registran los reportes inicial, intermedio y final, las actuaciones de emergencia y las evidencias que puedan dirimirse en un ámbito jurisdiccional; el análisis de los incidentes revisa los eventos auditables.
+- **Guías**: la **CCN-STIC 817, Gestión de Ciberincidentes en el ENS** (ed. abril 2020, la vigente, alineada con la Guía Nacional) y la **Guía Nacional de Notificación y Gestión de Ciberincidentes**, aprobada por el **Consejo Nacional de Ciberseguridad el 21 de febrero de 2020**, que unifica taxonomía, niveles y ventanilla única para todos los ámbitos (público, privado, infraestructuras críticas y defensa). Las obligaciones de los operadores de servicios esenciales (RD-ley 12/2018) se tratan en el tema 28.
 
-La gestión de ciberincidentes implica un ciclo de vida estructurado en varias fases esenciales:
+La gestión de un ciberincidente sigue un ciclo de **seis fases** (Guía Nacional):
 
-### 1. Preparación
+- **Preparación**: estar listos antes de que ocurra, sobre tres pilares: **personas, procedimientos y tecnología**. Incluye la información de contacto actualizada, políticas y procedimientos al día (gestión de incidentes, evidencias, análisis forense, recuperación), herramientas, formación del **equipo de respuesta a ciberincidentes (ERC)**, el **análisis de riesgos** con su plan de tratamiento (tema 30) y la ejecución de **ciberejercicios**.
+- **Identificación**: detectar el incidente con la menor dilación posible mediante monitorización de redes, sistemas y aplicaciones (no todo evento o alerta es un incidente). Los indicios provienen de dos fuentes:
+    - **Precursores**: indicios de que un incidente puede ocurrir en el futuro (resultados de un escáner de vulnerabilidades en los logs, anuncio de un nuevo exploit, amenazas explícitas de un grupo organizado).
+    - **Indicadores**: indicios de que un incidente está ocurriendo o ya ha ocurrido (alertas del sensor de intrusión o del antivirus, intentos de login fallidos reiterados desde sistemas desconocidos, cambios de configuración no previstos, desviaciones inusuales del tráfico).
+- **Contención**: máxima prioridad tras la identificación: evitar la propagación a otros sistemas y la extracción de información. En esta fase se realiza el **triaje**: clasificar y priorizar el incidente según su tipo y la criticidad de la información y sistemas afectados.
+- **Mitigación**: eliminar la causa. Según el tipo de incidente: identificar y eliminar el software del atacante (a menudo la mayor garantía es el replataformado completo de la máquina), recuperar la última copia de seguridad limpia e identificar los servicios legítimos utilizados durante el ataque.
+- **Recuperación**: devolver la operación a su estado normal, sin precipitarse en la puesta en producción y con un periodo de monitorización reforzada de los sistemas afectados.
+- **Actuaciones post-incidente**: las **lecciones aprendidas**: análisis de la causa raíz y de los costes, informe de cierre con las medidas preventivas recomendadas y mejora del propio proceso de gestión.
 
-Después de realizar un análisis de riesgos, se identifican y despliegan medidas de seguridad específicas. En esta fase, se forma un Equipo de Respuesta a Ciberincidentes (ERC), dotado de herramientas y recursos necesarios para actuar. La preparación incluye también el desarrollo de políticas de seguridad y la formación continua del personal para que todos conozcan los protocolos de respuesta.
+La **recolección y custodia de evidencias** atraviesa todo el ciclo: conviene empezar el acopio en cuanto se detecta el incidente y obtener una instantánea del sistema atacado antes de manipularlo (trabajando después sobre copias). Debe mantenerse un registro detallado (identificación de equipos, quién ha manejado cada evidencia, fecha y hora de cada tratamiento y ubicación de custodia) conforme a normas aprobadas por el organismo, considerando la persecución del delito, la retención de datos y el coste de la custodia; la evidencia con posible recorrido judicial exige asesoramiento legal especializado (op.exp.9.2).
 
-### 2. Identificación
+## Taxonomía, peligrosidad y notificación
 
-La fase de identificación engloba la detección, análisis y notificación de brechas de seguridad. Este proceso implica monitorear constantemente el entorno para detectar signos de posibles incidentes. Los elementos clave en esta fase son:
+La Guía Nacional y la CCN-STIC 817 comparten una **taxonomía de diez categorías** de ciberincidentes:
 
-- **Precursores**: Indicios de que un incidente podría ocurrir en el futuro, tales como escaneos de puertos, anuncios de nuevos exploits o amenazas inminentes.
-- **Indicadores**: Señales de que un incidente ya ha ocurrido o está en curso, incluyendo alertas de antivirus, desbordamientos de memoria (overflows) o tráfico inusual.
+| Clasificación | Tipos de incidente (ejemplos) |
+| --- | --- |
+| **Contenido abusivo** | Spam, delito de odio, contenido sexual o violento inadecuado |
+| **Contenido dañino** | Sistema infectado, servidor de mando y control (C&C), distribución o configuración de malware |
+| **Obtención de información** | Escaneo de redes, análisis de paquetes (*sniffing*), ingeniería social |
+| **Intento de intrusión** | Explotación de vulnerabilidades conocidas (CVE), intento de vulneración de credenciales (fuerza bruta), ataque desconocido |
+| **Intrusión** | Compromiso de cuenta (con o sin privilegios), compromiso de aplicaciones (inyección SQL), robo (intrusión física) |
+| **Disponibilidad** | DoS y DDoS, mala configuración, sabotaje, interrupciones externas |
+| **Compromiso de la información** | Acceso o modificación no autorizados de información, pérdida de datos |
+| **Fraude** | Uso no autorizado de recursos, derechos de autor, suplantación, *phishing* |
+| **Vulnerable** | Criptografía débil, amplificador DDoS, servicios con acceso potencial no deseado, revelación de información, sistema vulnerable |
+| **Otros** | Todo lo demás; incluye las **APT** (amenazas persistentes avanzadas: ataques dirigidos, sofisticados y persistentes) |
 
-### 3,4,5. Contención, Mitigación y Recuperación
+- **Nivel de peligrosidad**: amenaza potencial que supondría la materialización del incidente; se determina por la tipología de la amenaza y su comportamiento, en **cinco niveles**: **BAJO, MEDIO, ALTO, MUY ALTO y CRÍTICO**. La guía asigna cada tipo a un nivel: las **APT** son CRÍTICO; la distribución o configuración de malware, el robo, el sabotaje y las interrupciones, MUY ALTO; el sistema infectado, el C&C, los compromisos de aplicaciones o de cuentas con privilegios, el DoS/DDoS, los accesos y modificaciones no autorizados y el *phishing*, ALTO; la ingeniería social, la explotación de vulnerabilidades conocidas o la suplantación, MEDIO; el spam, el escaneo y el *sniffing*, BAJO. Si un suceso encaja en más de un tipo, se asigna al de **mayor peligrosidad**.
+- **Nivel de impacto**: consecuencias que el incidente ha tenido en las funciones de la organización, sus activos o los individuos afectados; se evalúa en **seis niveles** (los cinco anteriores más **SIN IMPACTO**) con criterios como la afectación a la Seguridad Nacional o ciudadana, a infraestructuras críticas o a sistemas clasificados, el porcentaje de sistemas afectados, la interrupción del servicio, el esfuerzo de resolución, las pérdidas económicas (en % del PIB), la extensión geográfica y los daños reputacionales. Umbrales orientativos por nivel:
 
-Estas fases consisten en:
+| Nivel | Sistemas afectados | Interrupción del servicio | Resolución | Otros criterios |
+| --- | --- | --- | --- | --- |
+| CRÍTICO | >90 % | >24 h y >50 % de usuarios | >100 jornadas-persona | Seguridad Nacional, infraestructura crítica, sistemas SECRETO |
+| MUY ALTO | >75 % | >8 h y >35 % de usuarios | 30-100 jornadas-persona | Servicio esencial, sistemas RESERVADO |
+| ALTO | >50 % | >1 h y >10 % de usuarios | 5-30 jornadas-persona | Daños reputacionales de difícil reparación |
+| MEDIO | >20 % | >5 % de usuarios | 1-5 jornadas-persona | Eco mediático apreciable |
+| BAJO | Afectación puntual | Interrupción de un servicio | <1 jornada-persona | Daños puntuales sin eco mediático |
 
-- **Contención**: Limitar la propagación del incidente para evitar mayores daños. Se aíslan los sistemas comprometidos y se aplican medidas temporales para contener el daño.
-- **Mitigación**: Eliminar o neutralizar el incidente. Puede implicar la eliminación de malware, parches de seguridad y restauración de configuraciones.
-- **Recuperación**: Restaurar el funcionamiento normal de los sistemas afectados, asegurando que no existan vulnerabilidades residuales que permitan recurrencias del incidente.
+La **notificación es obligatoria** para los incidentes de nivel **ALTO, MUY ALTO o CRÍTICO** (de peligrosidad o de impacto). En el sector público (ámbito ENS) se notifica al **CCN-CERT**; el sistema de **ventanilla única** de la Guía Nacional evita notificaciones múltiples: el afectado notifica solo a su **CSIRT de referencia**, que la traslada a quien corresponda (al **CNPIC** si afecta a una infraestructura crítica, a la **AEPD** si afecta a datos personales, al **ESPDEF-CERT** si afecta a la Defensa Nacional, a la autoridad competente NIS en su caso).
 
-### 6. Actuaciones Post-Incidente
+- **Ventana temporal de reporte**: la **notificación inicial** es **inmediata** en los tres niveles obligatorios; para nivel CRÍTICO, la intermedia a las **24/48 horas** y la final a los **20 días**; para MUY ALTO, intermedia a las **72 horas** y final a los **40 días**. Los tiempos de intermedia y final se cuentan desde la inicial.
+- **Estados y cierre**: el incidente permanece **abierto** desde la notificación hasta su cierre; se cierra como resuelto (con o sin respuesta del organismo), sin impacto, falso positivo o sin resolución. Los sistemas de alerta temprana cierran automáticamente los incidentes **sin respuesta** a los **120/90/45/30/21 días naturales** (CRÍTICO/MUY ALTO/ALTO/MEDIO/BAJO), enviando recordatorios previos.
+- **LUCIA** (Listado Unificado de Coordinación de Incidentes y Amenazas): herramienta de tickets del CCN-CERT para los organismos del ámbito del ENS; documenta el desarrollo del ciberincidente (detección, contención, erradicación y recuperación), usa la taxonomía y los niveles de la guía y sincroniza los incidentes de cada organismo con el CCN-CERT. Se alimenta también de los **sistemas de alerta temprana** del CCN-CERT: **SAT-SARA** (red SARA), **SAT-INET** (salidas a internet) y **SAT-ICS** (sistemas de control industrial). Anualmente cada organización remite al CCN-CERT un **resumen anual** de sus ciberincidentes.
+- **Métricas e indicadores** (Anexo A de la CCN-STIC 817), para evaluar la implantación, eficacia y eficiencia del proceso:
 
-Tras resolver el ciberincidente, se realiza un análisis detallado para comprender su causa raíz y los costos asociados. Se redacta un informe exhaustivo que incluye las medidas preventivas recomendadas para evitar incidentes similares en el futuro. La recolección y custodia de evidencias durante esta fase es fundamental para posibles acciones legales y para apoyar el análisis posterior.
+| Métrica | Indicador | Objetivo |
+| --- | --- | --- |
+| **M1** implantación | Alcance del sistema de gestión (servicios bajo control) | 100 % |
+| **M2/M3** resolución | Tiempo de cierre T(50) y T(90) de incidentes de impacto alto/medio | Resolución inmediata |
+| **M4** recursos | Horas dedicadas a incidentes / horas contratadas de seguridad TIC | <20 % |
+| **M5** gestión | Incidentes cerrados sin respuesta / total notificados | <10 % |
+| **M6** gestión | Ídem, solo de peligrosidad MUY ALTA o CRÍTICA | 0 % |
 
-### Amenazas y Vectores de Ataque
+## CERT y CSIRT: CCN-CERT, INCIBE-CERT
 
-Las amenazas a la seguridad pueden provenir de diversas fuentes y tomar múltiples formas. La "Guía Nacional de Notificación y Gestión de Ciberincidentes" ofrece un glosario detallado que clasifica los diferentes tipos de amenazas y vectores de ataque, incluidos malware, ataques de denegación de servicio (DDoS), ingeniería social y explotación de vulnerabilidades.
+Un **CSIRT** (*Computer Security Incident Response Team*) es un equipo de respuesta a incidentes de seguridad informática: previene, detecta, responde y coordina, y presta a su comunidad servicios de alerta temprana, avisos de vulnerabilidades, análisis y formación. **CERT** es el término histórico equivalente (marca registrada de la Universidad Carnegie Mellon, cuyo uso se licencia). La capacidad pública española de respuesta se articula en los **CSIRT de referencia** (Guía Nacional, RD-ley 12/2018 y art. 33 del ENS):
 
-### Clasificación de Ciberincidentes
+- **CCN-CERT** (Centro Criptológico Nacional, CNI): comunidad de referencia en el **sector público** (estatal, autonómico y local) y los sistemas con información clasificada. Ejerce la **coordinación nacional de la respuesta técnica** en los supuestos de especial gravedad y presta el soporte del art. 34 del ENS (tratamiento de vulnerabilidades y resolución de incidentes, con la máxima celeridad).
+- **INCIBE-CERT** (INCIBE): referencia para la **ciudadanía y el sector privado**; presta también los servicios de respuesta a las instituciones afiliadas a **RedIRIS** (red académica y de investigación), en coordinación con el CCN-CERT para los organismos públicos. Para los incidentes de operadores críticos se opera conjuntamente con el CNPIC.
+- **ESPDEF-CERT** (**Mando Conjunto del Ciberespacio, MCCE**): redes y sistemas de las Fuerzas Armadas y las que afecten a la **Defensa Nacional**, en apoyo de los operadores con incidencia en ella.
+- **CNPIC** (Centro Nacional de Protección de Infraestructuras y Ciberseguridad, Ministerio del Interior): autoridad competente para los operadores críticos; su **Oficina de Coordinación de Ciberseguridad (OCC)** canaliza la coordinación cuando un operador esencial designado crítico sufre un incidente (art. 33.3 del ENS).
 
-Los ciberincidentes se clasifican según el tipo y la naturaleza del ataque:
+El detalle institucional de estos organismos y el catálogo de soluciones del CCN-CERT (GLORIA, REYES, INES, los SAT o la propia LUCIA) se desarrollan en el tema 28; el **CSIRT-CV** de la Generalitat, en el tema 76.
 
-- **Categorías**: Contenido abusivo, dañino, obtención de información, intento de intrusión, disponibilidad, compromiso de información, fraude, vulnerabilidad y otros.
-- **Tipos específicos**: Spam, delitos de odio, contenido sexual explícito, escaneo de redes, ingeniería social, explotación de vulnerabilidades, ataques DDoS, mala configuración, sabotaje, entre otros.
+## Operación de la seguridad: SOC, SIEM, EDR
 
-### Factores a Valorar en la Clasificación de Incidentes
+La gestión de incidentes descansa sobre una operación de seguridad continua. El ENS la recoge en el marco operacional de **monitorización del sistema (op.mon)**: detección de intrusión (**op.mon.1**), sistema de métricas (**op.mon.2**) y vigilancia (**op.mon.3**).
 
-- **Tipo de amenaza**: Código dañino, intrusiones, fraude, etc.
-- **Origen de la amenaza**: Puede ser interna o externa.
-- **Categoría de seguridad** de los sistemas afectados, basada en su criticidad y confidencialidad.
-- **Perfil de los usuarios afectados**: Según su posición en la estructura organizativa y sus privilegios de acceso a información sensible o confidencial.
-- **Número y tipología de sistemas afectados**: Es decir, la extensión y naturaleza de los sistemas comprometidos.
-- **Impacto del ciberincidente** sobre la operativa de la organización.
-- **Requerimientos legales y regulatorios** que podrían implicar responsabilidades específicas o acciones obligatorias.
+- **SOC (*Security Operations Center*)**: centro de operaciones de seguridad; unidad (propia o externalizada) que **monitoriza en continuo (24x7)** la infraestructura, hace el **triaje de alertas** en niveles escalonados de analista (N1 filtrado, N2 investigación, N3 análisis avanzado y *threat hunting*), gestiona vulnerabilidades y ejecuta la primera respuesta. El SOC vigila en continuo; el CSIRT/ERC responde al incidente declarado (en la práctica suelen integrarse). En el ámbito valenciano, el **CSIRT-CV** ejerce este papel para la Generalitat (tema 76).
+- **SIEM (*Security Information and Event Management*)**: plataforma que **agrega y correlaciona en tiempo real** los eventos y logs de múltiples fuentes (red, sistemas, aplicaciones, seguridad perimetral), genera alertas, cuadros de mando e informes, y conserva los registros para el análisis forense y el cumplimiento (medida **op.exp.8**, registro de la actividad). Es la herramienta central del SOC; en el sector público, **GLORIA** (CCN) cumple esta función (tema 28).
+- **EDR (*Endpoint Detection and Response*)**: agente en el puesto y el servidor que recoge telemetría de comportamiento, **detecta anomalías** (no solo firmas, superando al antivirus tradicional) y permite **responder a distancia**: aislar el equipo de la red, terminar procesos o revertir cambios. El **XDR** extiende la detección y correlación al correo, la red, la identidad y la nube.
+- **SOAR (*Security Orchestration, Automation and Response*)**: orquesta las herramientas anteriores y **automatiza mediante playbooks** las respuestas repetitivas (enriquecer alertas, bloquear indicadores, abrir tickets), en línea con el refuerzo **op.exp.7 R4** (prevención y respuesta automáticas) del ENS.
+- **Inteligencia de amenazas (CTI)**: consumo y compartición de **indicadores de compromiso (IOC)** (hashes, direcciones IP, dominios) y de tácticas, técnicas y procedimientos (TTP, catalogados en MITRE ATT&CK, tema 32). En el sector público se comparte a través de **REYES** (tema 28). Sobre ella se apoya el ***threat hunting***: búsqueda proactiva de amenazas no detectadas por las alertas.
 
-### Detección de Ciberincidentes
+Las tecnologías de protección de red que alimentan esta operación (cortafuegos, IDS/IPS, honeypots) se estudian en el tema 74.
 
-La detección puede basarse en **precursores** o **indicadores**:
+## Fuentes {.unnumbered .unlisted}
 
-- **Precursor**: Señales de que un incidente podría ocurrir en el futuro.
-    - **Ejemplos:** Escaneo de puertos, Anuncios de nuevos exploits o amenazas conocidas.
-- **Indicador**: Evidencias de que un incidente está ocurriendo o ya ha ocurrido.
-    - **Ejemplos:** Alertas del antivirus, Tráfico de red inusual, Overflows y comportamientos anómalos en sistemas o aplicaciones.
-
-### Peligrosidad de los Ciberincidentes
-
-La peligrosidad se clasifica en cinco niveles: BAJO, MEDIO, ALTO, MUY ALTO y CRÍTICO, y su nivel de impacto se evalúa según el Esquema Nacional de Seguridad (ENS).
-
-### Seguimiento por parte del CCN-CERT
-
-El seguimiento de incidentes de seguridad en España se realiza mediante la herramienta LUCIA, que permite coordinar y monitorizar los ciberincidentes. La notificación al CCN-CERT es obligatoria en casos de incidentes de peligrosidad ALTA, MUY ALTA o CRÍTICA.
-
-### Métricas para la Gestión de Incidentes
-
-Existen varias métricas para evaluar la efectividad en la resolución de ciberincidentes:
-
-- **Métricas de implantación, resolución y recursos**.
-- **Métricas específicas de gestión de incidentes**, como la **M5** y **M6**:
-    - **M5**: Estado de cierre de incidentes. Método: Número de incidentes cerrados sin respuesta / Total notificados.
-    - **M6**: Estado de cierre de incidentes con peligrosidad MUY ALTA/CRÍTICA. Método: Número de incidentes cerrados sin respuesta / Total notificados.
-
-### Recolección y Custodia de Evidencias
-
-Es esencial para la resolución de incidentes y su validez legal. La recolección cuidadosa de evidencias permite apoyar tanto las acciones de respuesta como la posible persecución judicial del responsable del incidente.
-
-### LUCIA: Herramienta de Coordinación de Incidentes y Amenazas
-
-LUCIA (Listado Unificado de Coordinación de Incidentes y Amenazas) es una herramienta de gestión de tickets que permite a los organismos del ámbito del ENS gestionar sus ciberincidentes. Facilita la integración y sincronización de los incidentes registrados con el CCN-CERT, permitiendo una consolidación y coordinación en el Nodo de Coordinación del CCN-CERT.
-
-**Nota:** Estudiar las “novias” del ENS (ej.: CARMEN, CLARA, CLAUDIA, IRIS, LUCIA,...)
-
-### Funciones de un CERT/CSIRT
-
-Los equipos de respuesta ante emergencias informáticas (CERT, por sus siglas en inglés, o CSIRT) son responsables de dar soporte en la gestión de ciberincidentes:
-
-- **CCN-CERT**: Es el CERT del Centro Criptológico Nacional, parte del Centro Nacional de Inteligencia (CNI).
-- **INCIBE-CERT**: Está gestionado por el Instituto Nacional de Ciberseguridad de España.
-- **CNPIC**: Forma parte del Centro Nacional de Protección de Infraestructuras y Ciberseguridad.
-- **ESP-DEF-CERT**: Pertenece al Mando Conjunto de Ciberdefensa.
-
-### Metodología de Reporte
-
-El sistema de reporte se organiza mediante una **ventanilla única** que sigue los siguientes pasos:
-
-1. **Notificación inicial** al CERT/CSIRT de referencia.
-2. **Sincronización** con el organismo receptor o la autoridad competente.
-3. **Inicio de la investigación** interna.
-4. **Notificación completa** mediante el formulario específico.
-5. **Investigación policial o judicial** si se considera necesario.
-
-### Tipos de Seguridad: Activa y Pasiva
-
-- **Seguridad Activa**: Medidas que buscan evitar la ocurrencia de un ataque, tales como contraseñas seguras, encriptación de datos, antivirus actualizados, auditorías de seguridad y formación continua del personal.
-- **Seguridad Pasiva**: Acciones que mitigan los efectos de un ataque una vez que ha ocurrido, como copias de seguridad, uso de servicios en la nube, hardware resistente a fallos y particiones lógicas del disco duro.
+- Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (texto consolidado, última modificación 6 de noviembre de 2024), arts. 8, 33 y 34 y Anexo II (op.exp.7, op.exp.8, op.exp.9, op.mon).
+- Resolución de 13 de abril de 2018, de la Secretaría de Estado de Función Pública, por la que se aprueba la Instrucción Técnica de Seguridad de Notificación de Incidentes de Seguridad.
+- CCN-STIC 817, Esquema Nacional de Seguridad. Gestión de Ciberincidentes (ed. abril 2020; edición vigente a julio de 2026).
+- Guía Nacional de Notificación y Gestión de Ciberincidentes, aprobada por el Consejo Nacional de Ciberseguridad el 21 de febrero de 2020.
