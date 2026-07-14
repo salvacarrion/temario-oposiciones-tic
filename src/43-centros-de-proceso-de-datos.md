@@ -32,6 +32,13 @@ Los requisitos generales de un CPD son:
 
 El diseño lógico planifica cómo se conectan y organizan los servidores, el almacenamiento y la electrónica de red dentro del centro.
 
+- **Cableado estructurado (TIA-942)**: el estándar organiza el CPD en áreas de distribución unidas por cableado troncal y horizontal:
+    - **Sala de entrada (entrance room)**: llegada de los operadores de telecomunicaciones y punto de demarcación.
+    - **MDA (área de distribución principal)**: centro del cableado troncal; aloja los routers y switches de núcleo (al menos una por CPD).
+    - **IDA (intermedia)**: nivel opcional de agregación en CPD grandes o multiedificio.
+    - **HDA (horizontal)**: origen del cableado horizontal; aloja los switches de acceso.
+    - **ZDA (de zona)**: punto de consolidación opcional entre la HDA y los equipos.
+    - **EDA (de equipos)**: los racks con los servidores, el almacenamiento y la electrónica final.
 - **Topologías de cableado**:
     - **Top of the Rack (ToR)**: un switch en la parte superior de cada rack; acorta el cableado y facilita el crecimiento rack a rack.
     - **End of the Row (EoR)**: switches concentrados al final de cada fila de racks; centraliza la gestión a costa de más cableado horizontal.
@@ -74,6 +81,10 @@ La climatización mantiene las condiciones ambientales dentro de los rangos de o
 - **Tecnologías de refrigeración**: expansión directa (condensación por aire o por agua/glicol), agua enfriada, condensación por torre de refrigeración y **free-cooling** (aprovecha el aire o el agua exteriores fríos, con gran ahorro energético).
 - **Distribución del aire**: insuflación por el suelo técnico, insuflación superior, sistemas por desplazamiento (convección natural de abajo arriba) y rejillas frontales al rack.
 - **Pasillo frío / pasillo caliente**: los racks se enfrentan para alinear las tomas de aire frío y las expulsiones de aire caliente en pasillos separados; el **confinamiento** (barrera física) de uno de los pasillos evita la mezcla de aire y optimiza la eficiencia.
+- **Refrigeración líquida**: el aire deja de ser suficiente a partir de **20-30 kW por rack**, densidades habituales en los racks con GPU. Modalidades:
+    - **Intercambiador de puerta trasera (rear-door)**: radiador agua-aire en la puerta del rack; transición sencilla desde el aire (hasta ~40-50 kW por rack).
+    - **Direct-to-chip**: placas frías líquidas sobre CPU y GPU, alimentadas por una **CDU** (unidad de distribución de refrigerante); captura el **70-80 %** del calor y el resto se disipa por aire.
+    - **Inmersión**: los servidores se sumergen en un líquido dieléctrico (monofásica o bifásica); máxima densidad, pero mayor cambio operativo.
 
 ### Racks y equipamiento TIC
 
@@ -98,7 +109,13 @@ En las administraciones públicas el marco de referencia es el **Esquema Naciona
 | **mp.if.6** Protección frente a inundaciones | Protección frente a incidentes causados por el agua | Dimensión D (no aplica en nivel bajo) |
 | **mp.if.7** Registro de entrada y salida de equipamiento | Registro pormenorizado de todo movimiento de equipamiento esencial, con la persona que lo autoriza | Todas las categorías |
 
-Las «instalaciones alternativas» del ENS de 2010 ya no forman parte de mp.if: la disponibilidad de **medios alternativos** es hoy la medida **op.cont.4** (continuidad del servicio, exigible en el nivel alto).
+Las «instalaciones alternativas» del ENS de 2010 ya no forman parte de mp.if: la disponibilidad de **medios alternativos** es hoy la medida **op.cont.4** (continuidad del servicio, exigible en el nivel alto). Cuando se dispone de un centro de respaldo, se clasifica según su grado de preparación:
+
+- **Centro espejo (mirror)**: réplica activa y sincronizada del CPD principal (activo-activo); recuperación inmediata, coste máximo.
+- **Sala caliente (hot site)**: equipada y con los datos replicados; operativa en horas.
+- **Sala templada (warm site)**: equipamiento parcial; exige restaurar las copias (días).
+- **Sala fría (cold site)**: solo el local acondicionado (energía y climatización); hay que instalar el equipamiento (semanas).
+- **Alternativas**: acuerdos recíprocos entre organizaciones y recuperación en la nube (DRaaS).
 
 ## Disponibilidad y estándares: TIER, TIA-942 y EN 50600
 
@@ -147,25 +164,122 @@ La HCI es uno de los pilares del centro de datos definido por software (SDDC), q
 - **Tendencias**:
     - **Edge computing y micro-CPD**: procesamiento cerca de donde se generan los datos, que descentraliza la infraestructura (se desarrolla en el tema 47).
     - **CPD modulares y prefabricados**: bloques estandarizados, incluso en contenedor, de despliegue rápido.
-    - **Alta densidad e inteligencia artificial**: los aceleradores (GPU) multiplican la potencia por rack y generalizan la **refrigeración líquida** (direct-to-chip y por inmersión).
+    - **Alta densidad e inteligencia artificial**: los aceleradores (GPU) multiplican la potencia por rack y generalizan la refrigeración líquida; el **suministro eléctrico** pasa a ser el principal factor limitante de los nuevos CPD de IA (la potencia disponible y los plazos de conexión a la red condicionan dónde y cuándo se construyen).
     - **Nube híbrida**: el CPD propio convive con servicios de nube pública; el reto operativo actual es la gestión unificada de ambos entornos.
 
-## Caso práctico: diseño de un CPD
+## Caso práctico 1: diseño de un CPD
 
-**Enunciado**: una administración autonómica quiere consolidar sus servicios (sede electrónica, registro, gestión de expedientes) en un CPD propio. Los sistemas se han categorizado como de **categoría media** del ENS, con nivel medio en disponibilidad, y se exige poder realizar mantenimientos sin parada de servicio.
+**Enunciado**: una administración autonómica quiere consolidar en un CPD propio los servicios que hoy reparte entre varias salas técnicas envejecidas (sede electrónica, registro electrónico, gestión de expedientes y plataformas internas). Los sistemas están categorizados como de **categoría media** del ENS, con **nivel medio** en disponibilidad, y se exige poder realizar los mantenimientos programados sin parada de servicio.
 
-**Resolución por pasos**:
+Datos de partida:
 
-1. **Requisitos y dimensionamiento**: inventario de servicios y sistemas, potencia TI prevista con margen de crecimiento y requisitos derivados de la categorización ENS (en nivel medio de disponibilidad aplican mp.if.4 con refuerzo R1 y mp.if.6).
-2. **Nivel de disponibilidad objetivo**: se adopta el equivalente a **Tier III** (mantenimiento concurrente): redundancia **N+1** y dos líneas de distribución con una activa, que permiten mantener sin interrumpir el servicio (disponibilidad orientativa del 99,982 %).
-3. **Diseño físico**: emplazamiento discreto y sin riesgos naturales relevantes; sala técnica en una sola planta con suelo técnico; racks en pasillos frío/caliente con confinamiento; climatización N+1 con free-cooling; doble acometida eléctrica, SAI on-line de doble conversión y grupo electrógeno con autonomía de combustible de 48-72 horas.
-4. **Protección contra incendios e inundaciones**: detección precoz por aspiración, extinción por gas inerte y detección de líquidos bajo el suelo técnico (mp.if.5 y mp.if.6).
-5. **Seguridad física (mp.if)**: área separada con control de acceso por tarjeta y registro de entradas y salidas (mp.if.1 y mp.if.2), videovigilancia, racks con cerradura y registro de entrada y salida de equipamiento con autorización (mp.if.7).
-6. **Red**: arquitectura spine-leaf con switches ToR redundantes, doble salida WAN con operadores distintos y conexión a la Red SARA para los servicios interadministrativos (tema 59).
+- **Carga TI**: **40 racks** con una densidad media de **5 kW por rack**, con previsión de crecimiento del **25 %** a cinco años.
+- **PUE objetivo**: **1,4**.
+- Doble acometida eléctrica disponible en la parcela y espacio exterior para grupo electrógeno.
+- Necesidad de conexión a la **Red SARA** para los servicios interadministrativos.
+
+**Se pide**:
+
+- a) Justificar la solución de infraestructura (CPD propio, housing o nube) y el nivel de disponibilidad objetivo.
+- b) Dimensionar la instalación eléctrica y la climatización.
+- c) Describir el diseño físico y las instalaciones de protección.
+- d) Relacionar las medidas de seguridad física con el ENS.
+- e) Diseñar la red del CPD.
+- f) Plantear la continuidad del servicio y la operación.
+
+**Resolución**:
+
+**a) Solución de infraestructura y nivel de disponibilidad**
+
+- **CPD propio frente a alternativas**: el housing (alquiler de espacio en un CPD ajeno) y la nube pública con servicios certificados ENS de categoría media son opciones válidas, pero la consolidación de un parque estable de servicios, el control directo de las instalaciones y la soberanía del dato justifican el CPD propio; se adopta una estrategia **híbrida**, reservando la nube para cargas elásticas y para el respaldo (apartado f).
+- **Nivel objetivo: Tier III** (equivalente a **Rated 3** de TIA-942 y clase de disponibilidad 3 de EN 50600): el requisito de mantener sin parar exige **mantenimiento concurrente**, que Tier II no ofrece (una sola línea de distribución); Tier IV (tolerante a fallos) duplicaría la inversión (2N, dos líneas activas, compartimentación) sin un requisito que lo justifique. Disponibilidad orientativa: **99,982 %** (parada máxima de **1,57 h/año**).
+
+**b) Dimensionamiento eléctrico y térmico**
+
+- **Potencia TI**: 40 racks × 5 kW = **200 kW**; con el crecimiento del 25 %, se diseña para **250 kW**.
+- **Potencia total de la instalación**: con PUE 1,4, 250 × 1,4 = **350 kW**. La demanda TI (250 kW) queda por debajo de los **500 kW**, por lo que no aplica la obligación de comunicación del **Reglamento Delegado (UE) 2024/1364**.
+- **SAI**: on-line de doble conversión en configuración **N+1** por línea de distribución (dos líneas, una activa). Carga TI de 250 kW con factor de potencia 0,9 ≈ **280 kVA**: por ejemplo, tres módulos de 140 kVA (dos necesarios más uno de reserva). Autonomía de **10-15 minutos**, suficiente para cubrir el arranque del grupo y sus reintentos.
+- **Grupo electrógeno**: cubre la demanda total (350 kW) con margen (en torno a **500 kVA**) y autonomía de combustible de **48-72 horas**, con contrato de repostaje prioritario.
+- **Climatización**: la potencia frigorífica iguala aproximadamente la carga TI: **250 kW** en configuración **N+1** (por ejemplo, cuatro unidades de 85 kW, tres necesarias más una), con **free-cooling** para acercarse al PUE objetivo. A 5 kW por rack basta la refrigeración por aire con pasillos confinados (la refrigeración líquida solo se plantea a partir de 20-30 kW por rack).
+- **Distribución**: doble acometida, cuadros duplicados y **PDU duales** por rack, con cada equipo alimentado desde las dos líneas.
+
+**c) Diseño físico e instalaciones de protección**
+
+- **Emplazamiento y sala**: edificio discreto, sin riesgos naturales relevantes; instalación en una sola planta con **suelo técnico** y compartimentación en salas (TIC, energía, telecomunicaciones y operación).
+- **Distribución del aire**: racks enfrentados en **pasillo frío / pasillo caliente**, con confinamiento del pasillo frío e insuflación por el suelo técnico; sobrepresión y filtrado contra el polvo.
+- **Incendios**: detección precoz por **aspiración**, central de señalización con acciones automáticas (parada de clima, cierre de compuertas) y extinción por **gas inerte** (IG-55 o IG-541, inocuo para personas y equipos).
+- **Agua**: detección de líquidos bajo el suelo técnico y trazado de las canalizaciones fuera de la vertical de la sala.
+
+**d) Seguridad física y cumplimiento del ENS (familia mp.if, categoría media)**
+
+- **mp.if.1**: la sala TIC es un área separada, específica y con acceso solo por las entradas previstas.
+- **mp.if.2**: control de acceso por tarjeta con registro de entradas y salidas (fecha y hora).
+- **mp.if.3**: temperatura y humedad monitorizadas dentro de los rangos ASHRAE; cableado protegido y etiquetado.
+- **mp.if.4**: el suministro queda garantizado por el SAI y el grupo; en nivel medio de disponibilidad aplica el refuerzo **R1** (suministro de emergencia para la terminación ordenada de los procesos), cubierto por la autonomía del SAI.
+- **mp.if.5**: la protección contra incendios del apartado c) cumple la normativa industrial de aplicación.
+- **mp.if.6**: detección de inundaciones (exigible al ser nivel medio en disponibilidad).
+- **mp.if.7**: registro pormenorizado de entrada y salida de equipamiento, con la persona que lo autoriza.
+- **Complementos**: videovigilancia (CCTV), racks con cerradura electrónica y normas de operación para el personal y las visitas.
+
+**e) Red del CPD**
+
+- **Arquitectura spine-leaf** con switches **ToR** redundantes en cada rack y enlaces agregados a dos leaf, adecuada al tráfico este-oeste de la virtualización.
+- **Perímetro**: cortafuegos redundantes en alta disponibilidad y balanceadores de carga para los servicios web de la sede.
+- **Conectividad exterior**: doble salida WAN con **dos operadores** distintos y rutas físicas separadas; conexión a la **Red SARA** (tema 59).
+- **Segmentación**: DMZ para sede y registro, zona interna para expedientes y plataformas, y red de gestión fuera de banda (IPMI/Redfish, consolas KVM sobre IP).
+
+**f) Continuidad del servicio y operación**
+
+- **Análisis de impacto (op.cont.1)**, exigible en nivel medio de disponibilidad: identifica los servicios críticos y fija objetivos de recuperación, por ejemplo **RTO de 4 horas** y **RPO de 1 hora** para la sede y el registro.
+- **Copias de seguridad (mp.info.6)**: regla **3-2-1** (tres copias, dos soportes distintos, una fuera del CPD), con la copia externa en otro edificio o en nube certificada ENS.
+- **Respaldo**: los medios alternativos (op.cont.4) solo son exigibles en nivel alto, pero se recomienda replicar los servicios críticos en la nube híbrida del apartado a) para reducir el RTO.
+- **Operación**: **DCIM** para monitorizar energía, climatización, ocupación de racks e inventario; gestión remota fuera de banda; seguimiento mensual del **PUE** frente al objetivo de 1,4 y **auditoría ENS bienal** (obligatoria en categoría media).
+
+## Caso práctico 2: ampliación para cargas de inteligencia artificial
+
+**Enunciado**: dos años después de la puesta en marcha del CPD del caso 1, la administración quiere desplegar una plataforma de IA generativa: un asistente interno para los empleados públicos y la tramitación asistida de expedientes con modelos de lenguaje (LLM) sobre documentación propia. Por soberanía del dato, la inferencia debe ejecutarse en las instalaciones propias. El piloto dimensionado por el área de sistemas consta de **8 servidores de 8 GPU**, con un consumo aproximado de **10 kW por servidor** (**80 kW** TI adicionales).
+
+**Se pide**:
+
+- a) Definir la estrategia de despliegue (qué se ejecuta en el CPD y qué en la nube).
+- b) Ubicar la nueva carga: densidad por rack y solución de refrigeración.
+- c) Evaluar el impacto sobre la instalación eléctrica y el cumplimiento normativo.
+- d) Adaptar la red, el almacenamiento y la operación.
+
+**Resolución**:
+
+**a) Estrategia de despliegue**
+
+- **Entrenamiento desde cero**: descartado; exige decenas de miles de GPU y solo está al alcance de los grandes proveedores. Se parte de **modelos fundacionales** ya entrenados.
+- **Ajuste fino (fine-tuning) y experimentación**: en **nube con servicios certificados ENS** de categoría media: es una carga puntual e intensiva en la que el pago por uso evita inmovilizar inversión.
+- **Inferencia**: en el **CPD propio**: es una carga continua y predecible, procesa documentación interna (soberanía del dato) y su coste es estable frente al pago por consumo. Las arquitecturas de computación (HPC, nube) se desarrollan en el tema 47.
+
+**b) Densidad y refrigeración**
+
+- **Densidad**: con 4 servidores por rack, la ampliación cabe en **2 racks** de **40 kW por rack** (frente a los 5 kW del resto de la sala), fuera del alcance de la refrigeración por aire (límite práctico de 20-30 kW por rack).
+- **Solución**: zona dedicada con **direct-to-chip**: placas frías en GPU y CPU alimentadas por una **CDU en N+1** conectada al circuito de agua enfriada; el 20-30 % del calor restante lo asume el aire de la sala. Se descartan el intercambiador de puerta trasera (a 40 kW queda al límite, sin margen de crecimiento) y la inmersión (cambio operativo excesivo para un piloto).
+- **Peso**: un rack de GPU cargado supera los **1.000 kg**; se verifica la carga admisible del suelo técnico y, si es preciso, la zona se apoya directamente sobre el forjado.
+
+**c) Impacto eléctrico y cumplimiento normativo**
+
+La electricidad es hoy el principal cuello de botella de la IA: antes de adquirir las GPU hay que asegurar que la instalación (y la red eléctrica que la alimenta) puede soportarlas. Se reverifica toda la cadena:
+
+- **Acometida**: se comprueba con la distribuidora la potencia contratada y la disponible en la zona (en los grandes CPD de IA, los **plazos de conexión a la red eléctrica** son ya el factor que decide dónde se construye).
+- **Carga TI**: 250 + 80 = **330 kW**.
+- **SAI**: los 280 kVA del caso 1 no cubren la nueva carga (330 kW / 0,9 ≈ **367 kVA**): se añaden módulos manteniendo la configuración **N+1** y las dos líneas de distribución (la ampliación conserva el Tier III).
+- **Grupo electrógeno**: la demanda total sube a unos **445 kW** (los 350 kW previos más la zona GPU, que opera con un PUE parcial de ~1,2 gracias al líquido); el grupo de 500 kVA (~400 kW) se queda corto y se instala un **segundo grupo en paralelo**.
+- **Umbral normativo**: la demanda TI (330 kW) sigue por debajo de los **500 kW**, por lo que continúa sin aplicar el **Reglamento Delegado (UE) 2024/1364**; el cálculo se repetirá en cada ampliación.
+- **PUE global**: mejora ligeramente (hacia **~1,35**), porque la zona líquida es más eficiente que la media de la sala.
+
+**d) Red, almacenamiento y operación**
+
+- **Red**: fabric dedicado para el tráfico este-oeste entre GPU (**Ethernet de 200/400 Gb/s con RoCE** o InfiniBand), separado de la red spine-leaf de producción, a la que la plataforma se conecta como un servicio más.
+- **Almacenamiento**: cabina **NVMe** de alto rendimiento para los modelos y la documentación indexada que consultan.
+- **Operación**: el **DCIM** incorpora la telemetría del circuito líquido (caudal, temperatura, detección de fugas) y el **PUE parcial** de la zona GPU; el registro de entrada del nuevo equipamiento cumple **mp.if.7**.
 
 ## Fuentes {.unnumbered .unlisted}
 
-- Real Decreto 311/2022, por el que se regula el Esquema Nacional de Seguridad (texto consolidado, última modificación 6 de noviembre de 2024): Anexo II, medidas mp.if y op.cont.
+- Real Decreto 311/2022, por el que se regula el Esquema Nacional de Seguridad (texto consolidado, última modificación 6 de noviembre de 2024): Anexo II, medidas mp.if, op.cont y mp.info.
 - Uptime Institute, Tier Standard: Topology (niveles Tier I-IV).
 - ANSI/TIA-942-C, Telecommunications Infrastructure Standard for Data Centers (mayo de 2024).
 - Serie EN 50600 (CENELEC) e ISO/IEC 22237; ISO/IEC 30134-2 y EN 50600-4-2 (PUE).
