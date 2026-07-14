@@ -1,169 +1,167 @@
 # Programación
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+## Programación orientada a objetos
 
+La **programación orientada a objetos (POO)** es un paradigma que organiza el software en torno a **objetos**: unidades que combinan **datos** (atributos) y **comportamiento** (métodos) y que colaboran entre sí enviándose mensajes. Es el paradigma dominante en el software de gestión y el que asumen lenguajes como Java, C#, Python o TypeScript.
 
-## Programación Orientada a Objetos (POO)
+- **Clase**: define las características comunes de un tipo de objetos: sus atributos y sus métodos. Es la plantilla.
+- **Objeto**: instancia concreta de una clase, con identidad propia y residente en memoria.
+- **Características de todo objeto**: **identidad** (lo distingue de cualquier otro, aunque tengan el mismo estado), **estado** (los valores de sus atributos en un momento dado) y **comportamiento** (las operaciones que sabe realizar).
 
-La Programación Orientada a Objetos (POO) es un paradigma de programación que organiza el software en torno a **objetos**, los cuales representan entidades del mundo real o conceptual. Cada objeto contiene **datos** (atributos) y **comportamientos** (métodos), interactuando con otros objetos para resolver problemas de software.
+**Los cuatro pilares de la POO**:
 
-.
+- **Abstracción**: quedarse con las características esenciales del concepto que se modela e ignorar los detalles irrelevantes para el contexto.
+- **Encapsulación**: reunir datos y comportamiento en la misma unidad y **ocultar la información** interna: el objeto solo se manipula a través de su **interfaz** pública, lo que evita cambios de estado inesperados y efectos colaterales.
+- **Herencia**: las subclases heredan atributos y métodos de su superclase, especializándolos o extendiéndolos; organiza las clases en jerarquías y habilita la reutilización.
+- **Polimorfismo**: un mismo mensaje produce comportamientos distintos según el objeto que lo recibe.
 
-### Diseño Orientado a Objetos (DOO)
+**Tipos de polimorfismo**:
 
-Es un enfoque de diseño de software que modela un sistema como un conjunto de objetos que interactúan. Este diseño se fundamenta en tres **principios básicos**:
+- **De sobrecarga** (*overloading*, polimorfismo ad hoc): varios métodos con el mismo nombre y distinta **signatura** (nombre + tipos de parámetros; el tipo de retorno no forma parte de ella) conviven en una clase, y se selecciona uno u otro según los argumentos. Ejemplo: el operador «+» suma números y concatena cadenas.
+- **Paramétrico** (genéricos o plantillas): el código se escribe para un **tipo genérico** y funciona con cualquier tipo concreto sin repetirlo: `List<T>` en Java o C#, `template` en C++.
+- **De inclusión o subtipado** (*overriding*): una subclase **redefine** un método de su superclase con la misma signatura, y la llamada se resuelve en ejecución según el tipo real del objeto: ante `pieza.mover()`, un alfil y un caballo se mueven cada uno a su manera.
 
-- **Abstracción**: Identificación de las características esenciales de un objeto, ignorando los detalles irrelevantes para el contexto.
-- **Modularidad**: División del sistema en componentes independientes y reutilizables.
-- **Ocultamiento de Información**: Garantiza que los detalles internos de un objeto queden protegidos, interactuando a través de interfaces claramente definidas.
+**Modularidad**: subdividir la aplicación en módulos pequeños e independientes, buscando siempre **bajo acoplamiento** (poca interdependencia entre módulos) y **alta cohesión** (los elementos de cada módulo están funcionalmente relacionados y persiguen un mismo fin).
 
-### Características Principales
+**Modificadores de acceso** (esquema de Java, similar en C# o C++):
 
-- **Abstracción**: Denota las características esenciales de un objeto, permitiendo enfocarse en lo relevante y omitir detalles innecesarios.
-- **Encapsulamiento**: Reúne todos los elementos que pertenecen a una entidad al mismo nivel de abstracción, protegiendo los datos y comportamientos internos del objeto.
-- **Ocultamiento de Información**: Cada objeto expone una **interfaz** para interactuar con otros, evitando que puedan cambiar su estado interno de manera inesperada y eliminando efectos secundarios.
-- **Polimorfismo**: Permite que métodos con el mismo nombre tengan comportamientos diferentes según el objeto que los invoque.
+- **public**: visible desde cualquier clase.
+- **protected**: visible en la propia clase y sus subclases.
+- **default** (*package-private*, sin modificador): visible solo dentro del mismo paquete.
+- **private**: visible únicamente dentro de la propia clase.
 
-### Tipos de Polimorfismo
+**Interfaces y clases abstractas**:
 
-- **Polimorfismo de Sobrecarga (Overloading)**: Métodos con el mismo nombre pero diferentes parámetros dentro de la misma clase. El método se selecciona automáticamente según los tipos de datos suministrados.
-    - **Ejemplo:** 1 + 2, "hello" + "world" (operaciones distintas pero comparten el operador “+”)
-- **Polimorfismo Paramétrico (Polimorfismo de Plantillas)**: Funciones genéricas que funcionan con cualquier tipo de datos.
-    - **Ejemplo:** “**object.draw()**” puede referirse a “**square.draw()**” o “**circle.draw()**”, dependiendo del objeto.
-    - **Function Signature**: Identifica a la función mediante su nombre y argumentos (no incluye el tipo de retorno).
-- **Polimorfismo de Inclusión, de Redefición o Subtipado (Override)**: Una subclase redefine un método existente en la superclase con los mismos argumentos.
-    - **Ejemplo:** “**piece.move()**” implementado en “**bishop.move()**” y “**knight.move()**”
-- **Herencia**: Organiza y facilita el polimorfismo y el encapsulamiento, permitiendo que las subclases hereden atributos y métodos de las superclases.
+- **Interfaz**: contrato que declara qué operaciones ofrece un tipo, sin implementarlas; una clase puede implementar varias. Programar «contra interfaces» reduce el acoplamiento.
+- **Clase abstracta**: clase que no puede instanciarse, pensada para ser heredada; puede mezclar métodos implementados y abstractos.
+- **Composición frente a herencia**: la herencia acopla fuertemente la subclase a la superclase; la recomendación clásica es **favorecer la composición** (construir objetos que contienen otros objetos) y reservar la herencia para verdaderas relaciones «es un».
 
-### Modularidad
+**Principios SOLID** (recopilados por Robert C. Martin): cinco principios de diseño de clases:
 
-Es la propiedad que permite subdividir una aplicación en partes independientes más pequeñas, buscando un **bajo acoplamiento** y una **alta cohesión**.
+- **S. Responsabilidad única** (*Single Responsibility*): cada clase debe tener una sola razón para cambiar.
+- **O. Abierto/cerrado** (*Open/Closed*): abierta a la extensión, cerrada a la modificación.
+- **L. Sustitución de Liskov**: cualquier subclase debe poder usarse donde se espera su superclase sin romper el programa.
+- **I. Segregación de interfaces**: mejor varias interfaces específicas que una general que obligue a implementar lo que no se usa.
+- **D. Inversión de dependencias**: depender de abstracciones, no de implementaciones concretas (es la base de la inyección de dependencias).
 
-- **Acoplamiento**: Evalúa la interdependencia entre módulos. Lo ideal es tener módulos **poco acoplados** (independientes).
-- **Cohesión**: Mide la conexión funcional entre elementos de un módulo. Se busca módulos **fuertemente cohesionados** que operen eficazmente entre sí.
+## Patrones de diseño
 
-### Accesibilidad de Miembros (Modificadores de Acceso)
+Un **patrón de diseño** es una solución reutilizable y probada a un problema recurrente de diseño, descrita de forma independiente del lenguaje. El catálogo de referencia son los **23 patrones GoF** (por *Gang of Four*: **Gamma, Helm, Johnson y Vlissides**, *Design Patterns*, **1994**), organizados en tres categorías.
 
-- **public**: El campo o método es visible desde cualquier clase.
-- **protected**: Visible en la clase donde se define y en sus subclases, incluso si están en paquetes diferentes.
-- **default (package-protected / friendly):** Visible solo dentro del mismo paquete.
-- **private**: Visible únicamente dentro de la clase donde se define.
+**Patrones creacionales** (cómo crear objetos):
 
-### Objetos y Clases
+- **Abstract Factory**: interfaz para crear **familias** de objetos relacionados sin especificar sus clases concretas.
+- **Builder**: separa la construcción de un objeto complejo de su representación, construyéndolo paso a paso.
+- **Factory Method**: delega en las subclases la decisión de qué clase concreta instanciar.
+- **Prototype**: crea objetos nuevos **clonando** una instancia existente.
+- **Singleton**: garantiza **una única instancia** de una clase con un punto de acceso global.
 
-- **Clase**: Define las características de un objeto, incluyendo propiedades (atributos) y métodos (comportamientos).
-- **Objeto**: Instancia concreta de una clase que reside en memoria y puede ser referenciada por un identificador.
+**Patrones estructurales** (cómo componer clases y objetos):
 
-### Características Fundamentales de los Objetos
+- **Adapter**: hace compatibles interfaces que no lo son, envolviendo una en otra.
+- **Bridge**: desacopla una abstracción de su implementación para que evolucionen por separado.
+- **Composite**: estructura los objetos en árboles parte-todo y permite tratar igual al objeto simple y al compuesto.
+- **Decorator**: añade responsabilidades a un objeto **dinámicamente**, sin modificar su clase.
+- **Facade**: ofrece una interfaz unificada y simple sobre un subsistema complejo.
+- **Flyweight**: comparte el estado común de multitud de objetos similares para ahorrar memoria.
+- **Proxy**: un representante controla el acceso a otro objeto (remoto, costoso o protegido).
 
-- **Identidad ("nombre")**: Propiedad que distingue a un objeto de otros.
-- **Estado ("valores")**: Conjunto de atributos y sus valores en un momento dado.
-- **Comportamiento ("métodos")**: Operaciones que el objeto puede realizar o respuestas a mensajes de otros objetos.
+**Patrones de comportamiento** (cómo interactúan y se reparten responsabilidades):
 
-### Patrones y Antipatrones
+- **Chain of Responsibility**: la petición recorre una cadena de receptores hasta que uno la atiende.
+- **Command**: encapsula una orden como objeto, lo que permite encolarla, registrarla o deshacerla.
+- **Interpreter**: define una gramática y un intérprete para evaluar sentencias de un lenguaje.
+- **Iterator**: acceso secuencial a los elementos de una colección sin exponer su estructura interna.
+- **Mediator**: centraliza en un objeto la comunicación entre un conjunto de objetos, que dejan de conocerse entre sí.
+- **Memento**: captura el estado interno de un objeto para poder restaurarlo, sin violar su encapsulación.
+- **Observer**: dependencia uno-a-muchos: cuando el sujeto cambia, notifica automáticamente a sus observadores.
+- **State**: el objeto cambia de comportamiento cuando cambia su estado interno.
+- **Strategy**: familia de algoritmos intercambiables encapsulados tras una misma interfaz.
+- **Template Method**: define en la superclase el esqueleto de un algoritmo y deja pasos concretos a las subclases.
+- **Visitor**: añade operaciones nuevas a una jerarquía de objetos sin modificar sus clases.
 
-- **Patrones**: Soluciones reutilizables para problemas comunes en diseño de software.
-- **Antipatrones**: Prácticas contraproducentes que deben evitarse por sus consecuencias negativas conocidas.
+Aparte del catálogo GoF están los **patrones arquitectónicos**, que operan a nivel de aplicación: **MVC** (modelo-vista-controlador) y sus variantes MVP y MVVM (temas 52 y 55), la arquitectura en capas o los microservicios (tema 56).
 
-### Patrones de Diseño Orientado a Objetos
+**Antipatrones** (Brown et al., *AntiPatterns*, **1998**): prácticas recurrentes y contraproducentes que conviene reconocer:
 
-### 1. Patrones Creacionales
+- **God Object (Todopoderoso)**: un objeto que sabe o hace demasiado y del que depende todo.
+- **The Blob**: clases gigantes con decenas de atributos y métodos, difíciles de mantener y probar.
+- **Lava Flow**: código muerto o experimental que nadie se atreve a tocar y se fosiliza en el sistema.
+- **Poltergeists**: clases efímeras que solo invocan métodos de otras sin aportar funcionalidad.
+- **Golden Hammer**: aplicar la tecnología o patrón favorito a cualquier problema («para un martillo, todo son clavos»).
+- **Spaghetti Code**: código sin estructura, con flujos enmarañados, incomprensible y frágil.
+- **Cut & Paste Programming**: reutilizar copiando código, multiplicando la redundancia y los errores.
 
-- **Factoría Abstracta (Abstract Factory o Kit)**: Define una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas.
-- **Factory Method (Fábrica de Objetos)**: Centraliza en una clase la creación de objetos de subtipos específicos, ocultando al usuario los detalles de instanciación.
-- **Prototype (Prototipo)**: Crea nuevos objetos clonando una instancia existente.
-- **Singleton**: Garantiza que una clase tenga **una única instancia** y proporciona un punto de acceso global a ella.
+## Lenguajes y ecosistemas: visión general
 
-### 2. Patrones Estructurales
+Los lenguajes se caracterizan por unas pocas dimensiones que conviene dominar:
 
-- **Adapter (Adaptador)**: Permite que clases con interfaces incompatibles trabajen juntas mediante una interfaz común.
-- **Bridge (Puente)**: Desacopla una abstracción de su implementación, permitiendo modificarlas independientemente.
-- **Composite**: Compone objetos en estructuras de árbol para representar jerarquías parte-todo, permitiendo tratar objetos individuales y compuestos de manera uniforme.
-- **Contenedor**: Objeto que **contiene** otros objetos.
-- **Decorator (Decorador)**: Añade dinámicamente funcionalidades a un objeto sin modificar su estructura original.
-- **Facade (Fachada)**: Proporciona una interfaz unificada y simplificada para un conjunto de interfaces más complejas.
-- **Flyweight (Peso Ligero)**: Reduce la redundancia de objetos similares compartiendo su estado común para ahorrar memoria y mejorar rendimiento.
-- **Proxy**: Ofrece un sustituto o representante de otro objeto para controlar el acceso a este.
+- **Ejecución**: **compilados** a código máquina (C, C++, Go, Rust), **interpretados** (Python, JavaScript) o **híbridos**: compilados a un código intermedio (*bytecode*) que ejecuta una máquina virtual (Java, C#).
+- **Tipado**: **estático** (los tipos se comprueban en compilación: Java, C#, TypeScript) frente a **dinámico** (en ejecución: Python, JavaScript); y fuerte frente a débil según se toleren conversiones implícitas.
+- **Gestión de memoria**: manual (C/C++), con **recolector de basura** (*garbage collector*: Java, C#, Python, JavaScript) o con propiedad verificada en compilación (Rust).
+- **Paradigmas**: los lenguajes generalistas actuales son **multiparadigma**: combinan orientación a objetos, programación funcional (funciones de orden superior, inmutabilidad) e imperativa.
 
-### 3. Patrones de Comportamiento
+**Java** (1995, hoy de Oracle; ediciones OpenJDK libres):
 
-- **Chain of Responsibility (Cadena de Responsabilidades)**: Pasa una petición a lo largo de una cadena de objetos receptores hasta que uno la maneja.
-- **Command (Comando)**: Encapsula una solicitud como un objeto, permitiendo parametrizar clientes con diferentes solicitudes y encolar o registrar solicitudes.
-- **Functor**: Objeto que actúa como una función o método, permitiendo tratar funciones como objetos de primera clase.
-- **Interpreter (Intérprete)**: Define una representación para la gramática de un lenguaje y un intérprete que usa dicha representación para interpretar sentencias en el lenguaje.
-- **Iterator (Iterador)**: Proporciona un modo de acceder secuencialmente a los elementos de un objeto agregado sin exponer su representación interna.
-- **Memento**: Permite capturar y externalizar el estado interno de un objeto sin violar la encapsulación, para poder restaurarlo posteriormente.
-- **MVC (Modelo Vista Controlador)**: Separa la aplicación en tres componentes interrelacionados:
-    - **Modelo**: Gestiona los datos y la lógica de negocio.
-    - **Vista**: Presenta la información al usuario.
-    - **Controlador**: Maneja la interacción del usuario y actualiza el modelo y la vista.
-- **Mediator (Mediador)**: Define un objeto que encapsula cómo interactúan un conjunto de objetos, promoviendo un acoplamiento débil.
-- **Observer (Observador)**: Establece una dependencia uno a muchos entre objetos, de manera que cuando uno cambia de estado, notifica automáticamente a sus dependientes.
-- **State (Estado)**: Permite a un objeto alterar su comportamiento cuando su estado interno cambia.
-- **Strategy (Estrategia)**: Define una familia de algoritmos, encapsula cada uno y los hace intercambiables según las necesidades del cliente.
+- **Modelo**: compila a **bytecode** que ejecuta la **JVM** («*write once, run anywhere*»); tipado estático, orientación a objetos con genéricos y rasgos funcionales (lambdas, *streams*).
+- **Versionado**: una versión cada **6 meses** y una **LTS cada dos años**: Java 8, 11, 17, **21 (sep-2023)** y **25 (sep-2025)**.
+- **Ecosistema**: construcción con Maven/Gradle, framework **Spring/Spring Boot** (tema 52); otros lenguajes sobre la JVM: **Kotlin** (tema 55), Scala.
+- **Uso**: el estándar del software corporativo y de las administraciones públicas.
 
-### 4. Otros “patrones”
+**Python** (1991, Python Software Foundation):
 
-- **Inmutable**: Objeto creado con un estado fijo que no puede cambiar durante su ciclo de vida.
-- **De Primera Clase**: Objeto que puede ser utilizado sin restricciones, como pasarlo como parámetro, asignarlo a variables o retornarlo en funciones.
-- **Metaobjeto**: Objeto que define el comportamiento y características de otros objetos, similar a una clase pero puede ser un objeto en sí mismo.
+- **Modelo**: interpretado (implementación de referencia CPython), **tipado dinámico** fuerte, sintaxis por indentación, multiparadigma; admite anotaciones de tipos opcionales verificables con herramientas externas.
+- **Versionado**: una versión anual cada octubre (3.13 en 2024, **3.14 en oct-2025**); **Python 2 quedó sin soporte el 1 de enero de 2020**.
+- **Ecosistema**: paquetes con **pip** desde el repositorio **PyPI**, entornos virtuales; dominio absoluto en **ciencia de datos e IA** (NumPy, pandas, PyTorch, tema 34); web con Django y FastAPI (tema 52); scripting y automatización de sistemas.
+- **Uso**: primer lenguaje de los índices de popularidad y lengua franca del análisis de datos.
 
-### Antipatrones de Diseño
+**JavaScript y TypeScript**: el lenguaje de la web en navegador y, con **Node.js**, también en servidor; TypeScript le añade tipado estático. Tratados en el tema 53.
 
-- **Todopoderoso**: Objeto que "sabe demasiado o hace demasiado", centralizando excesiva funcionalidad y creando dependencia.
-- **The Blob ("Clases Gigantes")**: Clases con muchos atributos u operaciones, difíciles de mantener, reutilizar y probar, rompiendo las ventajas de la POO.
-- **Lava Flow ("Código Muerto")**: Código no óptimo entregado antes de estar terminado o suficientemente probado, que no puede ser modificado una vez expuesto.
-- **Poltergeists ("Clases Fantasma")**: Objetos de ciclo de vida corto cuya única función es invocar métodos de otros objetos sin aportar funcionalidad real.
-- **Golden Hammer ("Para un martillo, todo son clavos")**: Uso inapropiado de una tecnología o patrón para resolver cualquier problema, incluso cuando no es adecuado.
-- **Spaghetti Code ("Código Espagueti")**: Código mal estructurado con excesivos **if** o **switch**, dificultando su comprensión y mantenimiento.
-- **Cut & Paste Programming ("Cortar y Pegar Código")**: Reutilización de código mediante copia directa, lo que puede generar redundancia y errores difíciles de rastrear.
+| | Java | Python | JavaScript/TypeScript |
+| --- | --- | --- | --- |
+| Ejecución | Bytecode en JVM | Interpretado | Interpretado/JIT (motor V8) |
+| Tipado | Estático | Dinámico (hints opcionales) | Dinámico / estático con TS |
+| Memoria | Garbage collector | Garbage collector | Garbage collector |
+| Gestor de paquetes | Maven/Gradle | pip (PyPI) | npm |
+| Dominio típico | Corporativo, AAPP | Datos, IA, scripting | Web, full-stack |
 
-## Programación Low-Code y No-Code
+**Otros lenguajes relevantes**: **C#** (Microsoft, plataforma .NET, primo directo de Java), **C y C++** (sistemas, rendimiento extremo, código nativo), **Go** (Google, 2009: simplicidad y concurrencia, común en infraestructura cloud: Docker y Kubernetes están escritos en Go) y **Rust** (seguridad de memoria sin recolector de basura; adoptado en el kernel de Linux y Android para código crítico).
 
-### Programación No-Code
+## Programación low-code y no-code
 
-Técnica diseñada para que usuarios con conocimientos básicos de programación puedan desarrollar aplicaciones y soluciones de software. Este enfoque se basa en el uso de **interfaces visuales** y una mínima cantidad de código, lo que **reduce la complejidad** del desarrollo y permite que los usuarios se concentren en la **solución de problemas** y la **definición de requisitos funcionales**.
+Son enfoques de desarrollo sobre **plataformas visuales** que reducen (o eliminan) el código a escribir, para acelerar la entrega y abrir el desarrollo a perfiles no técnicos. Conviene distinguirlos:
 
-Su audiencia principal son personas con **nociones básicas** de programación, quienes pueden aprovechar estas herramientas para crear soluciones personalizadas sin la necesidad de ser programadores profesionales.
+- **Low-code**: desarrollo sobre interfaces visuales y componentes preconstruidos, con **algo de código** para la lógica compleja o las integraciones. Destinatario: desarrolladores (más productividad) y perfiles semitécnicos.
+- **No-code**: creación de aplicaciones **sin escribir código**, combinando bloques preconfigurados mediante arrastrar y soltar. Destinatario: usuarios de negocio sin experiencia en programación.
+- **Citizen developer** (desarrollador ciudadano): empleado no informático que construye aplicaciones para su unidad con estas plataformas, idealmente bajo el gobierno y la supervisión del departamento TIC.
 
-### Programación No-Code
+**Plataformas representativas**:
 
-Permite la creación de aplicaciones y soluciones de software sin escribir código en absoluto. Se basa en **plataformas intuitivas** que ofrecen **bloques de construcción preconfigurados** y componentes reutilizables que los usuarios pueden combinar mediante herramientas de arrastrar y soltar.
+- **Microsoft Power Platform** (Power Apps, Power Automate): la más extendida en entornos corporativos, integrada con Microsoft 365.
+- **Google AppSheet**: aplicaciones móviles y web sobre hojas de cálculo y fuentes de datos.
+- **OutSystems y Mendix**: low-code empresarial para aplicaciones completas.
+- **Zapier y Make**: automatización no-code de flujos entre servicios en la nube.
+- **Airtable** (bases de datos colaborativas) y **WordPress** (creación de sitios web sin programar).
 
-Está dirigida a personas **sin experiencia previa en programación**, democratizando el acceso al desarrollo de software y fomentando la creatividad en usuarios sin conocimientos técnicos.
+**Ventajas**:
 
-### Plataformas más conocidas
+- **Velocidad**: prototipos y aplicaciones sencillas en días, no meses.
+- **Autonomía** de las unidades de negocio y descarga del departamento TIC.
+- **Ahorro** en desarrollos pequeños y **colaboración** entre perfiles técnicos y funcionales.
+- **Estandarización**: la plataforma resuelve infraestructura, despliegue y parte de la seguridad.
 
-Algunas de las plataformas más utilizadas en estos enfoques son:
+**Desventajas y riesgos**:
 
-- **WordPress**, popular para la creación de sitios web.
-- **Honeycode**, para el desarrollo de aplicaciones.
-- **AppSheet**, centrada en la construcción de aplicaciones móviles y web.
-- **PowerApps**, que permite la integración con el ecosistema de Microsoft.
-- **Figma**, orientada al diseño y prototipado de interfaces web y aplicaciones.
+- **Restricciones funcionales**: cuando el requisito se sale del catálogo de bloques, la plataforma se queda corta.
+- **Dependencia del proveedor** (*vendor lock-in*): la aplicación no es portable y queda atada a licencias y precios de la plataforma.
+- ***Shadow IT***: proliferación de aplicaciones fuera del control del departamento TIC, con riesgos de seguridad, protección de datos y mantenimiento sin dueño.
+- **Escalabilidad y rendimiento** limitados para sistemas críticos o de gran volumen.
 
-Estas herramientas se han consolidado como opciones líderes debido a su facilidad de uso y capacidad de adaptación a diferentes casos de uso.
+La frontera actual es el **desarrollo asistido por IA generativa** (GitHub Copilot y asistentes similares), que genera código desde lenguaje natural: no elimina al programador, pero desplaza su trabajo hacia la especificación, la revisión y las pruebas.
 
-### Ventajas
+## Fuentes {.unnumbered .unlisted}
 
-Las principales ventajas de la programación Low-Code y No-Code incluyen:
-
-- **Agilidad**: Permite crear aplicaciones en menos tiempo.
-- **Autonomía**: Usuarios no técnicos pueden desarrollar sin depender de programadores.
-- **Ahorro**: Reduce costes al minimizar la necesidad de desarrolladores especializados.
-- **Colaboración**: Fomenta el trabajo conjunto entre departamentos técnicos y no técnicos.
-- **Facilidad de uso**: Interfaces intuitivas accesibles para usuarios con poca o ninguna formación.
-- **Velocidad de desarrollo**: Ideal para prototipos o aplicaciones que deben desarrollarse rápidamente.
-- **Mayor eficiencia**: Automatiza tareas repetitivas y simplifica el desarrollo.
-
-### Desventajas
-
-A pesar de sus ventajas, estos enfoques presentan **limitaciones** que deben considerarse:
-
-- **Restricciones funcionales**: Las aplicaciones creadas pueden carecer de flexibilidad o funcionalidades avanzadas.
-- **Dependencia de la herramienta**: Los usuarios quedan atados a las capacidades y licencias de la plataforma utilizada.
-- **Conocimientos técnicos limitados**: Puede dificultar la personalización profunda o la resolución de problemas complejos.
-- **Problemas de seguridad**: Algunas plataformas pueden no cumplir con estándares robustos de seguridad, exponiendo riesgos en aplicaciones críticas.
+- E. Gamma, R. Helm, R. Johnson y J. Vlissides, *Design Patterns: Elements of Reusable Object-Oriented Software*, Addison-Wesley, 1994.
+- W. Brown, R. Malveau, H. McCormick y T. Mowbray, *AntiPatterns: Refactoring Software, Architectures, and Projects in Crisis*, Wiley, 1998.
+- R. C. Martin, *Agile Software Development: Principles, Patterns, and Practices*, Prentice Hall, 2002 (principios SOLID).
+- Documentación oficial de Java (Oracle/OpenJDK), Python (PSF) y Microsoft Power Platform (consulta: julio de 2026).
