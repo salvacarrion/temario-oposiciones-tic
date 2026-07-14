@@ -1,503 +1,222 @@
 # SOA, servicios web y microservicios
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+## La arquitectura orientada a servicios (SOA); el ESB
 
+La **arquitectura orientada a servicios (SOA)** es un estilo de diseño que organiza la funcionalidad de los sistemas en **servicios** reutilizables, accesibles a través de interfaces estandarizadas e independientes de la plataforma. Surgió a principios de los 2000 para integrar los sistemas heterogéneos de las grandes organizaciones alineándolos con sus procesos de negocio.
 
-## La arquitectura orientada a servicios (SOA)
+- **Objetivos**: **agilidad** (componer soluciones nuevas a partir de servicios existentes), **reutilización** (cada funcionalidad se construye una vez) y **federación** (sistemas heterogéneos cooperando bajo normas comunes).
+- **Principios del diseño de servicios**: contrato estandarizado, **bajo acoplamiento**, **abstracción** (el servicio es una caja negra), reutilización, autonomía, **ausencia de estado**, capacidad de **descubrimiento** y capacidad de **composición** en procesos mayores.
+- **Elementos de un servicio**: la **lógica** (implementación), la **descripción o contrato** (qué hace y bajo qué condiciones) y la **interfaz** (punto de acceso para invocarlo).
+- **El triángulo SOA**: el **proveedor** publica la descripción del servicio en un **registro**; el **consumidor** lo descubre allí y se enlaza con el proveedor para invocarlo (publicar, descubrir, enlazar).
+- **Interoperabilidad del mensaje**: **sintáctica** (formato común de los mensajes) y **semántica** (significado compartido de los datos).
 
-La **Arquitectura Orientada a Servicios (SOA)** es un estilo de diseño que organiza la funcionalidad de un sistema en **pequeñas partes reutilizables llamadas "servicios"**, diseñadas para ser accesibles a través de **interfaces estandarizadas (APIs)**. Sus objetivos principales incluyen:
+**Arquitectura de capas de referencia**: el modelo de referencia organiza un sistema SOA en capas **horizontales** (funcionales, de abajo arriba) atravesadas por capas **verticales** (transversales a todas):
 
-- **Agilidad**: Facilitar la planificación e implementación de soluciones empresariales.
-- **Reutilización**: Maximizar el aprovechamiento de recursos.
-- **Federación**: Unificación de criterios empresariales.
+- **Horizontales**: 1) **sistemas operacionales** (aplicaciones existentes, bases de datos); 2) **componentes de servicio** (desvinculan el servicio de la tecnología subyacente); 3) **servicios**, simples o compuestos; 4) **procesos de negocio** (composición de servicios con un objetivo empresarial); 5) **consumidores** (presentación y acceso).
+- **Verticales**: **integración** (conectividad entre capas), **calidad de servicio** (seguridad, rendimiento, disponibilidad), **información** (modelo de datos común) y **gobierno** (normas de diseño, ciclo de vida y catálogo de servicios).
 
-**Características clave de SOA**:
+**Ciclo de vida de un servicio**: análisis del inventario de servicios, modelado, diseño del contrato, diseño de la lógica, implementación, pruebas, publicación en el registro, monitorización y mejora continua.
 
-- **Interoperabilidad**: Los servicios deben ser compatibles entre distintas plataformas.
-- **Capacidad descriptiva**: Cada servicio debe tener una definición clara.
-- **Reutilización**: Los servicios pueden integrarse en diferentes aplicaciones.
-- **Descubrimiento**: Los consumidores pueden localizar servicios en un registro.
-- **Composición**: Integración en procesos más complejos.
-- **Auto-contenido**: Funcionan sin dependencias externas innecesarias.
-- **Gestionabilidad**: Control eficiente para monitorización y actualización.
+**Composición de servicios**: dos estilos de coordinación:
 
-**Relación entre proveedor y consumidor**:
+- **Orquestación**: un elemento central (el orquestador) controla el flujo e invoca a los servicios en el orden debido; es el modelo de **WS-BPEL**. Máximo control, pero dependencia del coordinador.
+- **Coreografía**: no hay control central; cada servicio conoce las reglas de la interacción y reacciona a los mensajes o eventos de los demás. Más escalable y desacoplada, más difícil de seguir de extremo a extremo.
 
-- Se basa en **contratos** que definen las características del servicio.
-- Implica el intercambio de mensajes con:
-    - **Interoperabilidad sintáctica**: Uniformidad en el formato.
-    - **Interoperabilidad semántica**: Claridad en el significado.
+**El bus de servicios empresarial (ESB)**: es la infraestructura de integración característica de SOA: un middleware por el que circulan los mensajes entre consumidores y proveedores, en lugar de conexiones punto a punto.
 
-**Principios de la relación proveedor-consumidor**:
+- **Funciones**: **enrutado** inteligente de mensajes (por contenido, por reglas), **transformación** de formatos y modelos de datos, **conversión de protocolos** (SOAP, REST, colas de mensajes, ficheros), mediación entre versiones de servicios, seguridad centralizada, registro y monitorización.
+- **Productos de referencia**: Mule (MuleSoft), WSO2, IBM App Connect Enterprise (heredero de WebSphere ESB), Oracle Service Bus, Apache Camel como framework de integración.
+- **Balance**: el ESB desacopla e integra lo heterogéneo, pero tiende a concentrar lógica de negocio y a convertirse en cuello de botella técnico y organizativo. La reacción a ese modelo («tuberías inteligentes») es uno de los orígenes de los microservicios.
 
-1. **Independencia de dominios**: Pueden pertenecer al mismo sistema o a diferentes.
-2. **Independencia de plataformas**: Los servicios se tratan como **cajas negras**.
-3. **Independencia de protocolos**: Transformación de mensajes según el formato necesario.
+## Servicios web y estándares: SOAP, WSDL y UDDI
 
-Cada servicio consta de **tres elementos**:
+Los servicios web son la materialización clásica de SOA. Según el **W3C**, un servicio web es «un sistema software diseñado para soportar la interacción máquina a máquina a través de una red de forma interoperable», con una interfaz descrita en formato procesable (**WSDL**) e invocable mediante mensajes **SOAP**, típicamente XML sobre **HTTP**. La pila clásica se completa con **UDDI** para el descubrimiento y las extensiones **WS-\***.
 
-- **Lógica**: Identificación única del servicio.
-- **Descripción**: Definición de su funcionalidad.
-- **Interfaz**: Punto de acceso para su uso.
+**SOAP**: protocolo de mensajería basado en XML (originalmente «Simple Object Access Protocol»; desde la versión **1.2**, Recomendación W3C, el nombre ya no es un acrónimo).
 
-Los servicios se registran en un **repositorio**, donde los consumidores pueden descubrirlos para su integración.
-
-### Modelo de Referencia SOA y Arquitectura de Capas
-
-El **Modelo de Referencia SOA** es independiente de la implementación y organiza los sistemas en una **arquitectura de capas**.
-
-- **Capas verticales** (funcionales):
-    1. **Operatividad**: Bases de datos, sistemas de monitorización, sistemas industriales, etc.
-    2. **Componentes**: Desvinculación del servicio respecto a la tecnología.
-    3. **Servicios**: Clasificados como simples o complejos.
-    4. **Procesos de negocio**: Coordinación de tareas con un objetivo empresarial.
-    5. **Consumidor**: Punto de visualización o acceso a los servicios.
-- **Capas horizontales** (transversales):
-    1. **Integración**: Conectividad entre servicios.
-    2. **Calidad de Servicio (QoS)**: Requisitos no funcionales, como seguridad, rendimiento y escalabilidad.
-    3. **Información**: Representación y tratamiento de datos.
-    4. **Gobierno**: Normas para el diseño, desarrollo y mantenimiento de los servicios.
-
-### Ciclo de Vida del Servicio SOA
-
-El desarrollo de un servicio SOA sigue un ciclo estructurado que incluye:
-
-1. **Análisis de inventario**: Identificación de necesidades.
-2. **Modelado del servicio**: Estructuración y definición.
-3. **Diseño del contrato**: Especificación de interfaces y acuerdos.
-4. **Diseño de la lógica**: Detalles técnicos del servicio.
-5. **Desarrollo o implementación**: Creación técnica del servicio.
-6. **Pruebas**: Validación de requisitos funcionales y no funcionales.
-7. **Publicación**: Registro en repositorios accesibles.
-8. **Monitorización**: Evaluación del rendimiento y uso.
-9. **Mejora continua**: Actualización y optimización del servicio.
-
-En la planificación estratégica de servicios, las **fases clave** son:
-
-- **Acuerdo de usuario**: Definición de contratos.
-- **Servicio**: Descripción detallada.
-- **Interfaz**: Especificación de mensajes.
-- **Implementación**: Desarrollo y mantenimiento.
-
-### Estilos de Composición de Tareas en SOA
-
-SOA permite la ejecución de tareas, definidas como **acciones atómicas** realizadas por actores humanos. Existen varios estilos para coordinar estas tareas:
-
-1. **Orquestación**: Un elemento externo controla el flujo de tareas.
-2. **Coreografía**: Relaciones predefinidas entre tareas, sin un control central.
-3. **Colaboración**: Ejecución independiente con relaciones puntuales entre tareas.
-
-### Servicios Web y Tecnologías Asociadas
-
-Los **Servicios Web (WS)** son una tecnología clave en SOA, que utiliza estándares para facilitar la integración y la interoperabilidad entre aplicaciones.
-
-**Definición según el W3C**: Un servicio web es un sistema software diseñado para soportar la interacción máquina-a-máquina a través de una red de forma interoperable. Sus características clave incluyen:
-
-- **Interfaz estándar**: Definida en **WSDL**.
-- **Mensajería estructurada**: Basada en **SOAP**.
-- **Transporte**: Generalmente **HTTP**, con serialización en **XML**.
-
-**Estándares y herramientas utilizadas en los servicios web**:
-
-1. **SOAP**: Protocolo para el intercambio de mensajes.
-2. **WSDL**: Lenguaje para la descripción de interfaces.
-3. **UDDI**: Registro para descubrimiento de servicios.
-4. **REST**: Alternativa ligera basada en HTTP.
-5. **\*WS- (Web Services Extensions):** Seguridad, transacciones y confiabilidad.
-6. **WS-BPEL**: Orquestación y coreografía de servicios.
-
-**Principios de diseño de servicios web**:
-
-- **Contrato de servicios estandarizados**: Interfaces bien definidas.
-- **Desacoplamiento**: Reducción de dependencias entre sistemas.
-- **Abstracción**: Ocultación de detalles internos.
-- **Reutilización**: Uso eficiente de recursos.
-- **Sin estado**: Los servicios no mantienen datos entre peticiones.
-- **Granularidad**: Nivel adecuado de detalle.
-- **Transparencia de ubicación**: El usuario no necesita conocer la localización física del servicio.
-
-## Servicios web y estándares
-
-### Arquitectura de Servicios Web (SOA)
-
-La Arquitectura Orientada a Servicios (SOA) es un diseño de software que promueve la reutilización de componentes mediante interfaces de servicios que se comunican a través de una red utilizando un lenguaje común. Esto permite que diferentes aplicaciones interactúen y compartan datos de manera interoperable.
-
-### Servicios Web
-
-Un servicio web es una tecnología que utiliza un conjunto de protocolos y estándares para intercambiar datos entre aplicaciones.
-
-- **Definición del W3C:** *"Un servicio web es un sistema software diseñado para soportar la interacción máquina-a-máquina, a través de una red, de forma interoperable. Cuenta con una interfaz descrita en un formato procesable por un equipo informático (específicamente en WSDL), a través de la que es posible interactuar con el mismo mediante el intercambio de mensajes SOAP, típicamente transmitidos usando serialización XML sobre HTTP conjuntamente con otros estándares web."*
-
-### Estándares Empleados en Servicios Web
-
-Los servicios web hacen uso de diversos estándares para garantizar la interoperabilidad y comunicación efectiva entre aplicaciones:
-
-- **XML** (eXtensible Markup Language)
-- **SOAP** (Simple Object Access Protocol)
-- **WSDL** (Web Services Description Language)
-- **UDDI** (Universal Description, Discovery and Integration)
-- **REST**
-- **WS-\*** (Conjunto de protocolos de servicios web)
-
-### SOAP (Simple Object Access Protocol)
-
-SOAP es un protocolo estándar que define cómo dos objetos en diferentes procesos pueden comunicarse mediante el intercambio de datos en formato XML. Confía en protocolos de aplicación como HTTP o SMTP para su funcionamiento y es **stateless** (no mantiene estado entre peticiones). Puede servir como la capa base de una "pila de protocolos de servicios web".
-
-### Características Principales de SOAP
-
-- **Extensibilidad**: Permite añadir funcionalidades adicionales como seguridad (WS-Security) y direccionamiento (WS-Addressing).
-- **Neutralidad**: Puede operar sobre cualquier protocolo de transporte como HTTP, SMTP, TCP o UDP.
-- **Independencia**: Es compatible con cualquier modelo de programación.
-
-### Estructura de un Mensaje SOAP
-
-Un mensaje SOAP es un documento XML con una estructura definida:
-
-- **Envelope** (Obligatorio): Identifica al mensaje como un mensaje SOAP y encapsula toda la información.
-- **Header** (Opcional): Mecanismo de extensión que permite enviar información sobre cómo debe ser procesado el mensaje.
-- **Body** (Obligatorio): Contiene la información relativa a la llamada y la respuesta.
-- **Fault**: Bloque que incluye información sobre errores ocurridos durante el procesamiento del mensaje.
-
-### Propiedades del Mensaje SOAP
-
-- **Bien Formado**: Todas las etiquetas deben estar correctamente abiertas y cerradas en el orden adecuado.
-- **Válido**: Debe cumplir con la estructura y sintaxis definidas en su DTD o esquema XML.
-
-### Ejemplo de Mensaje SOAP
+- **Propiedades**: **neutral al transporte** (HTTP es lo habitual; también SMTP o colas de mensajes), **extensible** mediante el Header (seguridad, direccionamiento, fiabilidad) e **independiente** del lenguaje y modelo de programación; sin estado entre peticiones.
+- **Estructura del mensaje** (documento XML): **Envelope** (raíz obligatoria que identifica el mensaje como SOAP), **Header** (opcional, información de procesamiento y extensiones), **Body** (obligatorio, la carga útil de la llamada o respuesta) y **Fault** (bloque dentro del Body con la información de error).
 
 ```xml
-<?xml version='1.0' ?>
-<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+<?xml version="1.0"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
   <env:Header>...</env:Header>
   <env:Body>...</env:Body>
 </env:Envelope>
 ```
 
-### Modelo de Procesado SOAP
+- **Modelo de procesado**: el mensaje recorre una ruta (*message path*) desde el **emisor inicial**, a través de **intermediarios** que pueden procesar partes del Header, hasta el **receptor último**, que procesa el Body.
+- **MTOM**: mecanismo del W3C para transmitir eficientemente contenido binario en mensajes SOAP, evitando el sobrecoste de la codificación base64.
 
-SOAP define un sistema distribuido con diferentes nodos que pueden asumir varios roles:
+**WSDL (Web Services Description Language)**: lenguaje XML que describe el contrato del servicio: qué operaciones ofrece, con qué mensajes y tipos de datos, sobre qué protocolo y en qué dirección.
 
-- **SOAP Sender**: Nodo que transmite un mensaje SOAP.
-- **SOAP Receiver**: Nodo que recibe y procesa un mensaje SOAP.
-- **Initial SOAP Sender**: Emisor original del mensaje.
-- **SOAP Intermediary**: Nodo que actúa como receptor y emisor, procesando parcialmente el mensaje.
-- **Ultimate SOAP Receiver**: Destino final responsable de procesar completamente el mensaje.
-- **SOAP Message Path**: Ruta que sigue el mensaje a través de los nodos SOAP.
+- **Estructura (WSDL 1.1)**: **types** (tipos de datos, normalmente XML Schema), **message** (mensajes intercambiados), **portType** (las operaciones abstractas), **binding** (protocolo y formato concretos) y **service**/**port** (dirección del punto de acceso).
+- **Versiones**: la **1.1** (2001) es la usada en la práctica; la **2.0** (Recomendación W3C de 2007) renombró portType a **interface** y port a **endpoint**, y añadió un binding HTTP pensado para servicios tipo REST que apenas tuvo adopción.
+- **Patrones de intercambio de mensajes**: petición-respuesta (el habitual), solo entrada (*one-way*), solo salida (*notification*) y salida-entrada (*solicit-response*).
 
-### REST (Representational State Transfer)
+**UDDI (Universal Description, Discovery and Integration)**: estándar OASIS de registro para publicar y descubrir servicios web.
 
-REST es un estilo de arquitectura de software que describe una interfaz uniforme entre componentes desacoplados en Internet, siguiendo una arquitectura Cliente-Servidor. Aunque no es un estándar en sí mismo, las implementaciones **RESTful** utilizan estándares como HTTP, URI, JSON y XML.
+- **Contenido del registro**: **páginas blancas** (identificación y contacto de la organización), **páginas amarillas** (clasificación por taxonomías sectoriales) y **páginas verdes** (información técnica de los servicios).
+- **Tipos de registro**: públicos y privados (corporativos).
+- **Estado actual**: el registro público mundial (UDDI Business Registry, operado por IBM, Microsoft y SAP) **cerró en 2006**; UDDI quedó relegado a registros corporativos y hoy el descubrimiento se resuelve con catálogos y portales de APIs (tema 40).
 
-### Principios de REST
+**Extensiones WS-\***: especificaciones que añaden capacidades empresariales sobre SOAP, generalmente mediante el Header:
 
-- **Arquitectura Cliente-Servidor**
-- **Stateless**: Ausencia de estado en las comunicaciones.
-- **Uso de Caché**: Opcional, para mejorar el rendimiento.
-- **Sistema por Capas**: El cliente solo interactúa con la capa inmediata.
-- **Interfaz Uniforme**: Uso consistente de métodos y recursos.
+- **WS-Security**: integridad, cifrado y tokens de seguridad en el mensaje (no solo en el transporte).
+- **WS-Policy** (requisitos y capacidades del servicio), **WS-Trust** (emisión de tokens), **WS-ReliableMessaging** (entrega garantizada) y **WS-AtomicTransaction** (transacciones distribuidas).
+- **WS-BPEL** (OASIS): lenguaje de orquestación de procesos de negocio sobre servicios web.
+- **WS-I Basic Profile**: perfil de interoperabilidad que restringe las opciones de SOAP/WSDL para garantizar la compatibilidad entre plataformas (la organización WS-I se integró en OASIS en 2010).
 
-### Aspectos Básicos de REST
+Los servicios web SOAP sobreviven sobre todo en la integración corporativa y en las administraciones públicas (por ejemplo, la intermediación de datos SCSP, temas 58 y 59); el desarrollo nuevo de APIs es mayoritariamente REST.
 
-- **URI (Uniform Resource Identifier)**: Identifica de forma única los recursos en la red (e.g., http://api.example.com/).
-- **Métodos HTTP Estándar**:
-    - **GET**: Solicita un recurso específico.
-    - **POST**: Envía datos para ser procesados por el recurso identificado.
-    - **PUT**: Actualiza o crea un recurso en el servidor.
-    - **DELETE**: Elimina el recurso especificado.
-    - **OPTIONS**: Recupera los métodos HTTP soportados por el servidor para una URL.
-    - **HEAD**: Obtiene la cabecera HTTP sin el cuerpo.
-- **Tipos de Medio (MIME Types)**: Identificadores para formatos de archivo transmitidos por Internet (e.g., application/json, text/html).
+## Servicios REST
 
-### Clasificación de Métodos HTTP
+**REST (Representational State Transfer)** es un **estilo arquitectónico**, no un protocolo ni un estándar, definido por **Roy Fielding** en su tesis doctoral (**2000**) a partir de los principios que hicieron escalar la web. Una API es «RESTful» si cumple sus restricciones apoyándose en los estándares existentes: HTTP, URI, JSON/XML.
 
-- **Métodos Seguros**: No modifican recursos (e.g., **GET**).
-- **Métodos Inseguros**: Pueden modificar recursos (e.g., **POST**, **DELETE**).
-- **Métodos Idempotentes**: El resultado es el mismo sin importar cuántas veces se ejecuten (e.g., **GET**, **PUT**, **DELETE**).
+**Las seis restricciones**:
 
-### Códigos de Respuesta HTTP Comunes
+- **Cliente-servidor**: separación de interfaz y datos.
+- **Sin estado**: cada petición contiene toda la información necesaria; el servidor no guarda sesión.
+- **Cacheable**: las respuestas declaran si pueden cachearse.
+- **Interfaz uniforme**: identificación de recursos por URI, manipulación mediante representaciones, mensajes autodescriptivos e hipermedia (HATEOAS).
+- **Sistema en capas**: el cliente solo ve la capa inmediata (caches, proxies y pasarelas son transparentes).
+- **Código bajo demanda** (opcional): el servidor puede enviar código ejecutable al cliente.
 
-- **200 OK**
-- **201 Created**
-- **400 Bad Request**
-- **401 Unauthorized**
-- **404 Not Found**
-- **405 Method Not Allowed**
-- **409 Conflict**
-- **500 Internal Server Error**
+**Conceptos básicos**:
 
-### Caching en REST
+- **Recurso**: toda entidad expuesta (un expediente, un ciudadano), identificada por una **URI** estable (`/expedientes/123`).
+- **Representación**: el estado del recurso serializado (JSON es lo habitual); la **negociación de contenido** usa las cabeceras `Accept` y `Content-Type` (tipos MIME como `application/json`).
+- **Métodos HTTP** con semántica estándar. **Seguro**: no modifica el recurso; **idempotente**: repetirlo produce el mismo resultado:
 
-- **Headers relevantes**: Date, Last-Modified, Cache-Control, Expires, Age.
+| Método | Uso | Seguro | Idempotente |
+| --- | --- | --- | --- |
+| GET | Leer un recurso | Sí | Sí |
+| HEAD | Solo cabeceras | Sí | Sí |
+| OPTIONS | Métodos soportados | Sí | Sí |
+| POST | Crear o procesar | No | No |
+| PUT | Crear o sustituir completo | No | Sí |
+| PATCH | Modificación parcial | No | No |
+| DELETE | Eliminar | No | Sí |
 
-### SOAP vs. REST
+- **Códigos de estado**: **200** OK, **201** Created, **204** No Content; **301** Moved Permanently, **304** Not Modified; **400** Bad Request, **401** Unauthorized, **403** Forbidden, **404** Not Found, **409** Conflict, **429** Too Many Requests; **500** Internal Server Error, **503** Service Unavailable.
+- **Caché**: cabeceras `Cache-Control` y `Expires`, y validadores `ETag`/`If-None-Match` y `Last-Modified` (el 304 evita retransmitir).
+- **HATEOAS** (*Hypermedia as the Engine of Application State*): las respuestas incluyen enlaces a las acciones posibles, de modo que el cliente navega la API como hipertexto sin conocer las URIs de antemano.
+- **Modelo de madurez de Richardson**: nivel 0 (HTTP como túnel RPC), nivel 1 (recursos con URI), nivel 2 (verbos HTTP y códigos de estado: lo habitual en la práctica) y nivel 3 (HATEOAS).
+- **Documentación**: el contrato de una API REST se describe con **OpenAPI** (tratada, junto con la gestión y seguridad de APIs, en el tema 40).
 
-- **SOAP**: Protocolo orientado a servicios que utiliza XML para el intercambio de mensajes.
-- **REST**: Arquitectura orientada a recursos que aprovecha las características de HTTP y utiliza diversos formatos (XML, JSON).
+**SOAP frente a REST**:
 
-### Descripción y Descubrimiento de Servicios
-
-Los servicios pueden ser descritos mediante documentos que detallan su funcionalidad, parámetros de entrada y salida, y cómo invocarlos. Esto facilita su descubrimiento y uso por parte de otras aplicaciones.
-
-### Estándares de Descripción y Descubrimiento
-
-- **WSDL (Web Services Description Language)**: Lenguaje basado en XML para describir servicios web y sus interfaces.
-- **UDDI (Universal Description, Discovery and Integration)**: Estándar para publicar y descubrir información sobre servicios web.
-- **OpenAPI**: Especificación para describir y documentar APIs RESTful.
-
-### WSDL (Web Services Description Language)
-
-WSDL es un estándar que permite describir servicios web y APIs. Aunque se utiliza principalmente con SOAP, también soporta servicios RESTful. Especifica la interfaz abstracta y los detalles necesarios para interactuar con el servicio.
-
-### Estructura de WSDL
-
-- **types**: Define los tipos de datos (usualmente usando XML Schema).
-- **message**: Contiene la información para realizar operaciones.
-- **portType**/**interface**: Define las operaciones que el servicio ofrece y los mensajes utilizados.
-- **binding**: Especifica los detalles de protocolo y formato de datos para cada operación.
-- **service**: Agrupa endpoints relacionados.
-- **endpoint**/**port**: Define la dirección donde el servicio está disponible.
-
-### Patrones de Mensaje en WSDL
-
-- **One-way**: Solo entrada.
-- **Notification**: Solo salida.
-- **Solicit-response**: Salida seguida de entrada (el orden es importante).
-- **Request-response**: Entrada seguida de salida.
-
-### UDDI (Universal Description, Discovery and Integration)
-
-UDDI es un estándar basado en XML para publicar y descubrir información sobre servicios web y otras APIs. Aunque ha perdido popularidad frente a WSDL y OpenAPI, proporciona un catálogo de negocios que facilita el registro y búsqueda de servicios.
-
-### Componentes de UDDI
-
-- **Páginas Blancas**: Información básica de contacto y dirección.
-- **Páginas Amarillas**: Categorización industrial basada en taxonomías estándar.
-- **Páginas Verdes**: Información técnica detallada sobre los servicios web.
-
-### Tipos de Registro en UDDI
-
-- **Públicos**: Accesibles a cualquier usuario.
-- **Privados**: Implementados dentro de organizaciones, a menudo detrás de cortafuegos.
-
-**Protocolos de Servicios Web (WS-\*)**
-
-El conjunto **WS-\*** abarca una serie de protocolos y estándares que permiten el intercambio de datos en Internet entre aplicaciones, independientemente del lenguaje o plataforma. Algunos de los protocolos más comunes incluyen:
-
-- **WS-Policy**
-- **WS-Security**
-- **WS-Trust**
-- **WS-SecureConversation**
-- **WS-Reliable Messaging**
-- **WS-AtomicTransactions**
-
-Estos protocolos abordan aspectos como seguridad, confiabilidad y transacciones en servicios web.
-
-### WS-I (Web Services Interoperability Organization)
-
-La **WS-I** es una organización dedicada a promover la interoperabilidad de servicios web entre diferentes plataformas, sistemas operativos y lenguajes de programación. Su **WS-I Basic Profile** es un conjunto de especificaciones que garantiza la compatibilidad entre implementaciones de servicios web.
-
-### Formatos Comunes: XML y JSON
-
-- **XML**: Lenguaje de marcado extensible utilizado para representar y transmitir datos de forma estructurada. Es ampliamente empleado en aplicaciones empresariales para el intercambio de información.
-- **JSON**: Formato de intercambio de datos ligero y fácil de leer, basado en JavaScript. Es común en aplicaciones web modernas y es compatible con la mayoría de los lenguajes de programación.
-
-### MTOM (Message Transmission Optimization Mechanism)
-
-MTOM es un mecanismo definido por el W3C para optimizar la transmisión de datos binarios codificados en base64 entre servicios web. Permite una transferencia más eficiente al evitar el sobrecoste asociado con la codificación base64 en mensajes SOAP.
+| | SOAP | REST |
+| --- | --- | --- |
+| Naturaleza | Protocolo (estándar W3C) | Estilo arquitectónico |
+| Formato | Solo XML | Cualquiera; JSON de facto |
+| Contrato | WSDL | OpenAPI |
+| Estado | Sin estado (con extensiones WS) | Sin estado por definición |
+| Seguridad | WS-Security (a nivel de mensaje) | HTTPS + OAuth 2.0/JWT (transporte y token) |
+| Transporte | HTTP, SMTP, colas | HTTP exclusivamente |
+| Uso típico | Integración corporativa, AAPP, transacciones | APIs web y móviles, servicios públicos de datos |
 
 ## Arquitectura de microservicios
 
-La arquitectura de microservicios es un enfoque de diseño de software basado en la construcción de aplicaciones mediante la composición de pequeños servicios **independientes** que interactúan a través de **APIs** y suelen contar con almacenamiento propio. Cada microservicio es responsable de una funcionalidad específica del sistema, lo que permite su despliegue, escalado y mantenimiento de forma autónoma. Este modelo es una evolución de la arquitectura orientada a servicios (SOA), con un diseño **descentralizado y distribuido**.
+La arquitectura de microservicios construye una aplicación como un conjunto de **servicios pequeños e independientes**, cada uno ejecutándose en su propio proceso, comunicados por mecanismos ligeros (HTTP/REST o mensajería) y **desplegables por separado**. El término se consolidó con el artículo de **James Lewis y Martin Fowler (2014)**. Es heredera de SOA, pero rechaza el bus central: «**extremos inteligentes, tuberías bobas**»: la lógica vive en los servicios y el canal solo transporta mensajes.
 
-Los **beneficios** de esta arquitectura incluyen:
+**Características** (según Lewis y Fowler):
 
-- **Modularidad**, que facilita el desarrollo y mantenimiento.
-- **Escalabilidad**, ya que los servicios se escalan de manera independiente.
-- **Versatilidad** en la implementación tecnológica.
-- **Rapidez de actuación** al aislar los cambios.
-- **Mantenimiento más simple y económico**.
-- **Agilidad** para responder a las necesidades del negocio.
+- **Componentes como servicios**: la unidad de composición es el servicio desplegable, no la biblioteca.
+- **Organización por capacidades de negocio**: cada servicio cubre una función de negocio completa (interfaz, lógica y datos), con equipos multidisciplinares responsables de extremo a extremo (ley de Conway).
+- **Productos, no proyectos**: el equipo que construye el servicio lo opera durante toda su vida.
+- **Gobierno descentralizado**: cada servicio puede usar el lenguaje y la tecnología que mejor le convenga.
+- **Datos descentralizados**: cada servicio es dueño de su **base de datos**; la coherencia entre servicios es **eventual**.
+- **Automatización de infraestructura**: integración y despliegue continuos (CI/CD), infraestructura como código.
+- **Diseño para el fallo**: se asume que las llamadas remotas fallarán y se diseña para degradarse con elegancia.
+- **Diseño evolutivo**: los servicios se sustituyen y recomponen sin parar el sistema.
 
-Sin embargo, también presenta **desventajas**:
+**Beneficios**: despliegue independiente (ciclos de entrega cortos), **escalado selectivo** (solo el servicio que lo necesita), aislamiento de fallos, libertad tecnológica y equipos autónomos.
 
-- **Consumo elevado de memoria**.
-- **Alta complejidad en la gestión** del sistema.
-- **Requiere perfiles especializados** de desarrolladores.
-- **Dificultad en las pruebas**, dado el número de servicios involucrados.
-- **Falta de uniformidad** entre servicios.
-- **Coste elevado de implementación inicial**.
+**Inconvenientes**: complejidad de **sistema distribuido** (latencia de red, fallos parciales, versionado de contratos), **consistencia eventual** (no hay transacciones globales), pruebas de integración y depuración difíciles, y una operación exigente que requiere madurez en automatización y monitorización. Para sistemas pequeños o equipos reducidos, el monolito (bien modularizado) sigue siendo una opción legítima.
 
-### Características de la arquitectura de microservicios
+**Patrones habituales**:
 
-- Los componentes son **servicios independientes**.
-- Se organiza en torno a las **funcionalidades del negocio**, integrando elementos como interfaces de usuario, persistencia de datos e interoperabilidad en cada servicio.
-- Fomenta una mentalidad de **productos, no proyectos**, lo que implica que los equipos son responsables de los servicios durante todo su ciclo de vida.
-- Sigue el principio de **extremos inteligentes, tuberías bobas**, lo que asegura bajo acoplamiento y alta cohesión.
-- **Gobierno descentralizado**, permitiendo el uso de diferentes lenguajes y tecnologías según las necesidades de cada servicio.
-- Gestión de datos también **descentralizada**, garantizando mayor independencia entre servicios.
-- Diseño **tolerante a fallos**, incluyendo mecanismos como:
-    - **Tiempos de espera máximos**, que realizan reintentos o encolan solicitudes fallidas.
-    - **Disyuntores**, que actúan como “interruptores” para evitar sobrecargar el sistema al desconectar servicios cuando se alcanzan umbrales de fallos.
-    - **Compartimentos estancos**, que aíslan fallos para evitar que afecten al sistema completo.
-- Automatización de infraestructura mediante **CI/CD** (Integración y Despliegue Continuo).
-- Fomenta un **diseño evolutivo**, adaptándose a las necesidades del negocio y las mejoras tecnológicas.
+- **API Gateway**: punto de entrada único para los clientes: enruta, autentica, limita el tráfico y agrega respuestas de varios servicios.
+- **Descubrimiento de servicios**: las instancias se registran dinámicamente y los clientes las localizan por nombre (Consul, Eureka; en Kubernetes, el DNS interno).
+- **Base de datos por servicio** y **saga**: las transacciones que cruzan servicios se descomponen en una secuencia de transacciones locales con acciones compensatorias.
+- **Tolerancia a fallos**: tiempos de espera y reintentos con límite, **cortocircuito** (*circuit breaker*: deja de llamar a un servicio que falla hasta que se recupere) y **compartimentos estancos** (*bulkhead*: aislar recursos para que un fallo no arrastre al resto).
+- **Comunicación por eventos**: los servicios publican eventos en un broker (Kafka, RabbitMQ) y los interesados se suscriben (coreografía), en lugar de encadenar llamadas síncronas.
+- **Observabilidad**: logs centralizados, métricas y **trazabilidad distribuida** de cada petición a través de los servicios (OpenTelemetry como estándar).
 
-### Integración de servicios
-
-Existen diferentes enfoques para coordinar los microservicios, dependiendo de las necesidades del sistema:
-
-- **Orquestación**: Un servicio centralizado actúa como **orquestador**, controlando la ejecución de los demás servicios. Es útil para garantizar un mayor control y seguimiento, aunque puede generar una dependencia excesiva del orquestador y aumentar la complejidad del sistema.
-- **Coreografía**: Los servicios interactúan de manera más **autónoma**, reduciendo la dependencia centralizada y mejorando la escalabilidad. Sin embargo, este enfoque puede requerir una mayor coordinación y ser más difícil de implementar.
-- **Colaboración**: Los servicios trabajan de manera **informal**, sin una estructura rígida de coordinación. Esto ofrece mayor flexibilidad, pero implica tolerar cierta incertidumbre en los flujos de trabajo y puede ser complejo de gestionar.
-
-### Soluciones para microservicios
-
-Los microservicios suelen desplegarse en contenedores (por ejemplo, **Docker**) para garantizar su portabilidad y capacidad de ejecución en cualquier máquina o servidor. Esto facilita el despliegue y ofrece beneficios como:
-
-- Mayor **flexibilidad** en la asignación de recursos.
-- Mejor **disponibilidad** del sistema.
-- Incremento en la **tolerancia a fallos**.
+**Despliegue y ecosistema**: los microservicios se empaquetan en **contenedores** (Docker) y se operan con orquestadores (**Kubernetes**) (tema 44); frameworks típicos: **Spring Boot/Spring Cloud** (Java), NestJS (Node.js), FastAPI (Python). Una **service mesh** (Istio, Linkerd) saca de las aplicaciones la comunicación segura (mTLS), el enrutado y la observabilidad, y los presta como infraestructura.
 
 ## Formatos de intercambio: XML y JSON
 
-### JSON (JavaScript Object Notation)
+**XML (eXtensible Markup Language)**: metalenguaje del **W3C** (Recomendación de 1998) derivado de **SGML**, que permite definir lenguajes de marcado para estructurar e intercambiar información de forma legible e independiente de la plataforma.
 
-Es un formato abierto ampliamente utilizado para el intercambio de datos. Aunque originalmente es un subconjunto de la notación literal de objetos de JavaScript, su adopción masiva lo ha consolidado como un **formato independiente del lenguaje**. JSON se posiciona como una alternativa a XML, pero es habitual encontrar aplicaciones que combinan ambos formatos.
-
-JSON destaca por su simplicidad, ya que es mucho más sencillo desarrollar un **parser** (analizador sintáctico) para JSON que para XML. Los tipos de datos admitidos en JSON incluyen **números, cadenas de texto, valores booleanos, null, arrays** y **objetos** (estructuras similares a diccionarios en otros lenguajes).
-
-### Modelos de procesamiento de JSON
-
-- **Modelo de objeto**: Todo el contenido del JSON se carga en memoria como un árbol de datos, permitiendo una manipulación completa pero consumiendo más memoria.
-- **Modelo de flujo**: Los datos se procesan de forma secuencial en bloques, lo que resulta más eficiente en memoria pero limita la accesibilidad directa al JSON completo.
-
-### Conversión de JSON a objetos del lenguaje
-
-Una práctica común en lenguajes como JavaScript es convertir estructuras JSON en objetos nativos. Sin embargo, es importante evitar el uso de **eval()** debido a los riesgos de seguridad que implica, ya que eval ejecuta directamente el código. En su lugar, se recomienda usar **Function()**, que permite generar una función que solo se ejecutará bajo control explícito del usuario.
-
-### Validación de JSON
-
-- **Validación sintáctica**: Verifica que el JSON esté correctamente formado según las reglas del formato, como el uso de comillas, comas, y delimitadores adecuados.
-- **Validación semántica**: Comprueba que el JSON sea válido respecto a un esquema predefinido. Un esquema especifica la **gramática, estructura, contenido y significado** esperado, y puede definir modelos como “Persona”, “Automóvil” o “Usuario”.
-
-### MIME type de JSON
-
-El **MIME type** asociado a JSON es **application/json**, y es esencial especificarlo al intercambiar datos a través de HTTP para garantizar el correcto reconocimiento del formato.
-
-### Manipulación de JSON en JavaScript
-
-JavaScript ofrece métodos nativos para trabajar con JSON:
-
-- **JSON.stringify()**: Convierte un objeto o estructura de datos en una cadena JSON.
-- **JSON.parse()**: Transforma una cadena JSON válida en un objeto JavaScript.
-
-### XML (eXtensible Markup Language)
-
-XML (eXtensible Markup Language) es un metalenguaje desarrollado por el **World Wide Web Consortium (W3C)** que permite definir lenguajes de marcas para **almacenar datos en forma legible** y facilitar el intercambio de información estructurada entre diferentes plataformas. Deriva del **SGML (Standard Generalized Markup Language)** y permite definir gramáticas específicas para estructurar grandes documentos.
-
-### Partes de un documento XML
-
-- **Prólogo** (opcional): Describe información como la versión XML y el tipo de documento. Ejemplo:
-
-> \<?xml version="1.0" encoding="UTF-8"?> > > \<!DOCTYPE Edit_Mensaje SYSTEM "Edit_Mensaje.dtd">
-
-- **Cuerpo** (obligatorio): Contiene un único **elemento raíz**. Ejemplo: \<Edit_Mensaje> [...] \</Edit_Mensaje>
-- **Elementos**: Pueden incluir caracteres alfanuméricos, puntos (.), guiones (-) y barras bajas (\_).\ Ejemplo: \<queso>\</queso>
-- **Atributos**: Proporcionan características adicionales a los elementos.\ Ejemplo: \<Estudiante Mario="come croquetas" tipo="talento"> [...] \</Estudiante>
-- **Entidades predefinidas**: Representan caracteres especiales. Ejemplos:\ \&amp; → &, \&lt; → \<
-- **Secciones CDATA**: Permiten usar caracteres sin interpretarlos como marcado XML.\ Ejemplo: \<!\[CDATA[contenido especial: áéíóúñ&]\]>
-- **Comentarios**: No pueden aparecer antes de la declaración XML.\ Ejemplo: \<!-- Mi comentario -->
-
-### Documentos XML bien formados y válidos
-
-- **Bien formados (well-formed)**: Cumplen las definiciones básicas de formato, como:
-    - Estructuras anidadas y elementos cerrados correctamente.
-    - Un único elemento raíz.
-    - Sensibilidad a mayúsculas y minúsculas (case sensitive).
-    - Uso consistente de comillas simples o dobles.
-- **Válidos**: Además de estar bien formados, se ajustan a un esquema (**XSD**) o una definición de tipo de documento (**DTD**).
-
-### Definición de tipo de documento (DTD)
-
-El **DTD** define elementos, atributos y entidades permitidos, así como sus combinaciones. Incluye:
-
-- **Declaraciones tipo elemento**: Qué elementos son válidos.
-- **Modelos de contenido**: Especifican subelementos permitidos y su orden.
-- **Listas de atributos**: Atributos posibles para los elementos.
-- **Entidades**: Pueden ser internas, externas, analizadas o no analizadas.
-- **Espacios de nombres (namespaces)**: Separan semánticamente elementos dentro de un documento.
-
-Ejemplo de **DTD interno**:
+- **Partes de un documento**: el **prólogo** opcional (declaración y, en su caso, DOCTYPE) y el **cuerpo**, con un **único elemento raíz**:
 
 ```xml
-<!DOCTYPE note [
-  <!ELEMENT note (to,from,heading,body)>
-  <!ELEMENT to (#PCDATA)>
-  <!ELEMENT from (#PCDATA)>
-  <!ELEMENT heading (#PCDATA)>
-  <!ELEMENT body (#PCDATA)>
-]>
-<note>
-  <to>Tove</to>
-  <from>Jani</from>
-  <heading>Reminder</heading>
-  <body>Don't forget me this weekend</body>
-</note>
+<?xml version="1.0" encoding="UTF-8"?>
+<expediente id="2026-001">
+  <interesado>María Pérez</interesado>
+  <estado>abierto</estado>
+</expediente>
 ```
 
-### XML Schema (XSD)
+- **Componentes**: **elementos** (etiquetas anidadas), **atributos** (pares nombre-valor en la etiqueta), **entidades predefinidas** para caracteres reservados (`&amp;`, `&lt;`, `&gt;`, `&quot;`, `&apos;`), secciones **CDATA** (texto que el analizador no interpreta como marcado) y **comentarios** (`<!-- ... -->`, nunca antes de la declaración).
+- **Bien formado frente a válido**: un documento es **bien formado** si respeta la sintaxis (elementos correctamente anidados y cerrados, un solo elemento raíz, sensible a mayúsculas, atributos entrecomillados); es **válido** si además se ajusta a una gramática definida en un **DTD** o un esquema **XSD**.
+- **DTD (Document Type Definition)**: sintaxis propia (no XML) que declara los elementos permitidos, sus modelos de contenido (subelementos y orden), las listas de atributos y las entidades:
 
-Los **esquemas XML (XSD)** son similares a los DTD, pero con diferencias clave:
+```xml
+<!DOCTYPE nota [
+  <!ELEMENT nota (para, de, asunto, cuerpo)>
+  <!ELEMENT para (#PCDATA)>
+  <!ELEMENT de (#PCDATA)>
+  <!ELEMENT asunto (#PCDATA)>
+  <!ELEMENT cuerpo (#PCDATA)>
+]>
+```
 
-- Utilizan la sintaxis de XML.
-- Permiten especificar **tipos de datos**.
-- Son **extensibles**.
-
-Ejemplo de esquema XSD:
+- **XSD (XML Schema)**: alternativa moderna al DTD: se escribe **en sintaxis XML**, soporta **tipos de datos** (primitivos como string, boolean, decimal, dateTime; derivados como integer o ID) y es extensible:
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="contact">
+  <xs:element name="contacto">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="name" type="xs:string" />
-        <xs:element name="company" type="xs:string" />
-        <xs:element name="phone" type="xs:int" />
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="telefono" type="xs:integer"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>
 ```
 
-### Parseadores de XML: DOM y SAX
+- **Espacios de nombres** (*namespaces*, atributo `xmlns`): desambiguan elementos de vocabularios distintos en un mismo documento.
+- **Procesamiento**: **DOM** (carga el documento completo en memoria como árbol de nodos: permite navegar y modificar, a costa de memoria; para documentos pequeños o edición) frente a **SAX** (lectura **secuencial por eventos** sin cargar el documento: para ficheros grandes procesados una vez). Se complementan con **XPath** (localizar nodos mediante expresiones) y **XSLT** (transformar XML en otros formatos).
 
-- **DOM (Document Object Model)**:
-    - Carga toda la estructura en memoria como un árbol de nodos.
-    - Permite **editar documentos** y **navegar entre nodos**.
-    - Consumo elevado de memoria, ideal para documentos pequeños o manipulaciones frecuentes.
-    - **Usos recomendados:**
-        - Crear o modificar documentos XML.
-        - Procesar múltiples veces un documento.
-- **SAX (API Simple para XML)**:
-    - Procesa el documento de forma **secuencial** mediante eventos (inicio/fin de documento, etiquetas, etc.).
-    - No carga el documento completo en memoria, ideal para **archivos grandes**.
-    - **Usos recomendados:**
-        - Procesar documentos grandes una sola vez.
-        - Capturar eventos específicos.
+**JSON (JavaScript Object Notation)**: formato ligero de intercambio de datos, definido en el **RFC 8259** y en **ECMA-404**. Nació como subconjunto de la notación de objetos de JavaScript y hoy es **independiente del lenguaje** y el formato de facto de las APIs web.
 
-### Tipos de datos en XML
+- **Tipos de datos**: **objetos** (pares clave-valor entre llaves), **arrays**, cadenas (siempre con comillas dobles), números, `true`/`false` y `null`. No admite comentarios.
+- **Tipo MIME**: **application/json**.
+- **En JavaScript**: `JSON.parse()` convierte texto JSON en objetos y `JSON.stringify()` serializa objetos a JSON. Nunca debe evaluarse texto JSON recibido como código (`eval`): es un riesgo de inyección.
+- **JSON Schema**: vocabulario para validar documentos JSON contra un esquema (estructura, tipos, campos obligatorios), análogo al papel del XSD en XML.
+- **Modelos de procesado**: de **objeto** (todo el documento en memoria) y de **flujo** (*streaming*, secuencial, eficiente para volúmenes grandes).
 
-- **Primitivos**: Ejemplos: string, boolean, decimal, dateTime.
-- **Derivados**: Ejemplos: normalizedString, ID, integer (derivado de decimal).
+**Comparación y uso**:
 
-### Building blocks de XML
+| | XML | JSON |
+| --- | --- | --- |
+| Verbosidad | Alta (etiquetas de apertura y cierre) | Baja |
+| Validación | DTD, XSD (maduros) | JSON Schema |
+| Atributos y namespaces | Sí | No |
+| Comentarios | Sí | No |
+| Procesado en JavaScript | Vía DOM/parsers | Nativo (JSON.parse) |
+| Uso típico | Documentos, integración corporativa, firma electrónica (XAdES, facturae) | APIs REST, configuración, web y móvil |
 
-- **Attributes**: \<element myattribute="value">\</element>
-- **Predefined entities**: \&lt;, \&gt;, \&amp;, \&quot;, \&apos;
-- **PCDATA**: Texto dentro de etiquetas que **será parseado**.
-- **CDATA**: Texto dentro de etiquetas que **no será parseado**.
-- **Elements**: \<element>\</element>
-- **DTD**: Define estructuras válidas para un documento.
+Otros formatos de intercambio: **YAML** (configuración legible, superconjunto de JSON) y **Protocol Buffers** (binario y tipado, usado por gRPC, tema 52).
+
+## Fuentes {.unnumbered .unlisted}
+
+- W3C: SOAP 1.2 (Recomendación, 2.ª ed., 27 de abril de 2007), WSDL 1.1 (Nota, 15 de marzo de 2001), WSDL 2.0 (Recomendación, 26 de junio de 2007), XML 1.0 (5.ª ed., 26 de noviembre de 2008), Web Services Glossary (Nota, 11 de febrero de 2004), MTOM (Recomendación, 25 de enero de 2005).
+- OASIS: UDDI v3.0.2 (2004), WS-BPEL 2.0 (abril de 2007), WS-Security 1.1.
+- R. T. Fielding, *Architectural Styles and the Design of Network-based Software Architectures*, tesis doctoral, UC Irvine, 2000 (cap. 5: REST).
+- J. Lewis y M. Fowler, «Microservices», martinfowler.com, marzo de 2014.
+- RFC 8259 (JSON, diciembre de 2017) y ECMA-404 (2.ª ed., diciembre de 2017); JSON Schema (especificación 2020-12).
