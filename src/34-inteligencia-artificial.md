@@ -70,12 +70,35 @@ Arquitecturas y capacidades actuales:
 
 - **Mixture-of-Experts (MoE)**: la red se divide en "expertos" y cada token activa solo unos pocos; se obtiene la capacidad de un modelo enorme con el coste de inferencia de uno mediano (DeepSeek-V3: **671.000 M** de parámetros totales, ~**37.000 M** activos por token).
 - **Modelos multimodales**: procesan y generan texto, imagen y audio de forma nativa. Habilitan el **procesamiento inteligente de documentos** (IDP): extracción automática de datos de facturas, formularios y expedientes combinando visión y lenguaje. Fuera del lenguaje, la generación de imagen y vídeo se apoya en **modelos de difusión** (antes, GAN).
-- **Modelos de razonamiento**: generan cadenas de razonamiento intermedias antes de responder, dedicando más computación a los problemas difíciles (*test-time compute*). Abren un segundo eje de escalado: además de entrenar modelos mayores, dejarles "pensar" más en inferencia.
 - **Ventana de contexto**: cantidad de tokens que el modelo maneja en una consulta. Ha pasado de ~**2.000** tokens (GPT-3, 2020) a **128.000-1.000.000+** en los modelos actuales: caben expedientes completos, bases de código o libros enteros.
 
 Las **leyes de escalado** (Kaplan et al., 2020) mostraron que el rendimiento mejora de forma predecible al aumentar parámetros, datos y computación; el estudio **Chinchilla** (2022) las refinó: para un presupuesto dado conviene entrenar modelos más pequeños con más datos (~**20 tokens por parámetro**). El preentrenamiento puro muestra hoy rendimientos decrecientes, y la frontera se ha desplazado al post-entrenamiento, el razonamiento en inferencia y los agentes.
 
 Por último, el mercado se divide entre modelos **de pesos abiertos** (Llama, Mistral, Qwen, DeepSeek), descargables y ejecutables en infraestructura propia, y modelos **cerrados** servidos por API (GPT, Claude, Gemini). Pesos abiertos no equivale a *open source*: rara vez se publican los datos y la receta de entrenamiento. La dimensión de **soberanía tecnológica** es creciente: en España, la iniciativa pública **ALIA** (Gobierno de España y Barcelona Supercomputing Center, sobre el superordenador MareNostrum 5) desarrolla modelos abiertos entrenados en castellano y lenguas cooficiales.
+
+## Modelos de razonamiento y panorama actual
+
+La última generación de modelos añade un ingrediente nuevo: antes de responder, el modelo "piensa". Genera una cadena de razonamiento interna en la que planifica, prueba enfoques, se verifica y se corrige, y solo después emite la respuesta visible. Ese bucle de pensamiento no se programa: se entrena.
+
+- **Cadena de pensamiento (*chain-of-thought*)**: razonar paso a paso por escrito antes de dar la respuesta final. Se descubrió como técnica de *prompting* (Wei et al., 2022): pedir al modelo que muestre sus pasos mejora drásticamente el rendimiento en problemas complejos. Hoy es un comportamiento entrenado y en gran parte interno.
+- **Recompensas verificables (RLVR)**: el razonamiento se entrena con aprendizaje por refuerzo sobre problemas cuya solución puede comprobarse automáticamente (matemáticas con resultado exacto, código que pasa pruebas): el modelo explora estrategias y se refuerzan las cadenas que conducen a la respuesta correcta, sin necesidad de anotadores humanos. Lo estrenó **o1** (OpenAI, **2024**); **DeepSeek-R1** (**enero de 2025**) publicó la receta con pesos abiertos y demostró que era reproducible a una fracción del coste.
+- **Presupuesto de pensamiento (*thinking budget*)**: la computación dedicada a razonar es configurable: más tokens de pensamiento mejoran los problemas difíciles a cambio de latencia y coste (*test-time compute*). Es el segundo eje de escalado: además de entrenar modelos mayores, dejarles pensar más en inferencia. Los modelos actuales son híbridos: deciden (o se les indica) cuánto pensar según la dificultad.
+- **Benchmarks**: los clásicos (MMLU) están saturados por los modelos de frontera; las referencias actuales son **SWE-bench Verified** (resolver *issues* reales de GitHub), **GPQA Diamond** (ciencia de nivel de doctorado), **HLE** (*Humanity's Last Exam*, conocimiento experto multidisciplinar) y **ARC-AGI-2** (razonamiento abstracto).
+
+En cuanto al panorama concreto (foto a **mediados de 2026**; el ritmo de reemplazo es de meses), conviene saber que desde GPT-4 los laboratorios cerrados no publican el número de parámetros de sus modelos: para **GPT-4** la estimación filtrada (nunca confirmada) fue de **~1,8 billones** con arquitectura MoE, y la escala de los modelos abiertos actuales es coherente con esa cifra. Todos los modelos de frontera son hoy MoE, razonadores y multimodales, con contextos de **1-2 millones** de tokens.
+
+| Modelo | Laboratorio | Pesos | Parámetros (totales / activos) |
+| --- | --- | --- | --- |
+| GPT-5.5 | OpenAI | Cerrados | No publicados |
+| Gemini 3.1 Pro | Google | Cerrados | No publicados |
+| Claude Fable 5 / Opus 4.8 | Anthropic | Cerrados | No publicados |
+| Grok 4 | xAI | Cerrados | No publicados |
+| DeepSeek V4 | DeepSeek | Abiertos | ~1.600.000 M / ~49.000 M |
+| Kimi K2 | Moonshot AI | Abiertos | 1.000.000 M / 32.000 M |
+| Llama 4 Maverick | Meta | Abiertos | 400.000 M / 17.000 M |
+| Qwen3-235B | Alibaba | Abiertos | 235.000 M / 22.000 M |
+
+La lección estable (los nombres caducan; las tendencias no): la arquitectura dominante es MoE, el razonamiento en inferencia es el segundo eje de escalado, los pesos abiertos siguen a la frontera cerrada con 6-12 meses de retraso y una fracción del coste, y la competición se ha desplazado del modelo aislado al sistema completo (herramientas, agentes, integración).
 
 ## Infraestructura, consumo y costes
 
@@ -132,16 +155,28 @@ Igual de importante es saber qué **no** funciona: el *fine-tuning* especializa 
 
 ## Agentes de IA
 
-Un agente es un modelo de lenguaje que opera en bucle: razona sobre un objetivo, actúa mediante herramientas, observa el resultado y decide el siguiente paso, iterando hasta completar la tarea. Supone el salto del "modelo que responde" al "sistema que trabaja", y es el patrón dominante desde 2025. Sus componentes:
+Un agente es un modelo de lenguaje que opera en bucle sobre un objetivo: no responde y termina, sino que trabaja hasta completar la tarea. Supone el salto del "modelo que responde" al "sistema que trabaja", y es el patrón dominante desde 2025.
 
-- **Modelo**: el motor de razonamiento y planificación.
-- **Herramientas** (*tool use / function calling*): buscar, leer y escribir ficheros, ejecutar comandos y código, consultar APIs y bases de datos. El **Model Context Protocol (MCP)**, estándar abierto publicado por Anthropic en **2024** y adoptado de forma transversal, normaliza cómo se conectan modelos, herramientas y fuentes de datos.
-- **Contexto y memoria**: instrucciones del sistema, historial de trabajo y conocimiento persistente entre sesiones.
+- **Bucle agéntico**: razonar sobre el estado de la tarea → planificar el siguiente paso → actuar mediante una herramienta → observar el resultado → reflexionar y corregir el plan; y vuelta a empezar hasta completar el objetivo o escalarlo a un humano. Lo formalizó el patrón **ReAct** (Yao et al., **2022**): intercalar trazas de razonamiento y acciones funciona mejor que razonar o actuar por separado.
+
+Sus componentes:
+
+- **Modelo**: el motor de razonamiento y planificación; los modelos de razonamiento del apartado anterior son su base natural.
+- **Herramientas** (*tool use / function calling*): buscar, leer y escribir ficheros, ejecutar comandos y código, consultar APIs y bases de datos. El **Model Context Protocol (MCP)**, estándar abierto publicado por Anthropic en **2024** y adoptado de forma transversal, normaliza cómo se conectan modelos, herramientas y fuentes de datos; su complemento **A2A** (*Agent2Agent*, Google, **2025**, cedido a la Linux Foundation) normaliza la comunicación entre agentes de distintos proveedores.
+- **Contexto y memoria**: la ventana de contexto es la memoria de trabajo (instrucciones, historial de acciones y observaciones). Como es finita, los agentes de sesiones largas la compactan (resumen del trabajo hecho) y mantienen memoria persistente fuera de ella (ficheros de notas, bases vectoriales) que releen entre sesiones.
 - **Entorno**: el espacio sobre el que actúa, típicamente un repositorio de ficheros versionado.
 
-El ejemplo de referencia de la categoría es **Claude Code** (Anthropic), un agente que opera en el terminal: explora un repositorio, edita ficheros, ejecuta comandos y pruebas, usa git y verifica su propio trabajo. Aunque nació para programar, su alcance real es mayor: cualquier corpus de trabajo estructurado como texto plano y versionado (código, pero también contratos, expedientes, libros, temarios de estudio o bases documentales) se convierte en un espacio de trabajo agéntico. Sobre un repositorio bien estructurado, un agente puede mantener la coherencia entre cientos de documentos (terminología, referencias cruzadas, estilo), normalizar datos heterogéneos, contrastar cada afirmación contra las fuentes de verdad del propio repositorio y generar índices o resúmenes; el mantenimiento de un temario de oposiciones versionado en git, contrastado contra los textos consolidados del BOE, es un ejemplo natural. La clave del rendimiento no es solo el modelo, sino la **estructura del repositorio**: convenciones documentadas, fuentes de verdad explícitas y verificaciones automatizables que el agente pueda ejecutar.
+Patrones de diseño (Anthropic, "Building Effective Agents", **2024**); la regla práctica es usar la solución más simple que funcione:
 
-Los agentes introducen un riesgo de seguridad específico: la **inyección de instrucciones** (*prompt injection*). Un contenido no confiable que el agente procesa (una página web, un correo, un documento adjunto) puede contener instrucciones maliciosas que el modelo ejecute como si vinieran del usuario legítimo. Las defensas son arquitectónicas, no solo de modelo: mínimo privilegio en las herramientas, aislamiento (*sandboxing*), aprobación humana para acciones destructivas o con efectos externos, separación entre instrucciones y datos, y trazabilidad completa de las acciones. En sistemas complejos se emplean además arquitecturas **multiagente**: un orquestador descompone el trabajo y lo delega en subagentes especializados con permisos acotados.
+- ***Workflows***: cuando el problema es predecible, el LLM ocupa pasos fijos de un flujo predefinido: encadenamiento de *prompts*, enrutado, paralelización, orquestador-trabajadores y evaluador-optimizador.
+- **Agente autónomo**: el modelo dirige su propio proceso; se reserva para tareas abiertas donde no puede preverse el número de pasos.
+- **Multiagente**: un orquestador descompone el trabajo y lo delega en subagentes especializados con permisos y contexto acotados.
+
+El ejemplo de referencia de la categoría es **Claude Code** (Anthropic), un agente de terminal: explora un repositorio, edita ficheros, ejecuta comandos y pruebas, usa git y verifica su propio trabajo. Aunque nació para programar, cualquier corpus de trabajo estructurado como texto plano y versionado (código, pero también contratos, expedientes o temarios) se convierte en un espacio de trabajo agéntico; el rendimiento depende tanto de la estructura del repositorio (convenciones documentadas, fuentes de verdad explícitas, verificaciones automatizables) como del modelo.
+
+La **evaluación** de agentes no puntúa respuestas, sino tareas completadas de principio a fin: **SWE-bench Verified** (resolver *issues* reales de GitHub), **GAIA** (asistencia general con herramientas y web) y **OSWorld** (manejar un ordenador por su interfaz gráfica) son las referencias.
+
+Los agentes introducen un riesgo de seguridad específico: la **inyección de instrucciones** (*prompt injection*). Un contenido no confiable que el agente procesa (una página web, un correo, un documento adjunto) puede contener instrucciones maliciosas que el modelo ejecute como si vinieran del usuario legítimo. Las defensas son arquitectónicas, no solo de modelo: mínimo privilegio en las herramientas, aislamiento (*sandboxing*), aprobación humana para acciones destructivas o con efectos externos, separación entre instrucciones y datos, y trazabilidad completa de las acciones.
 
 ## IA distribuida y federada
 
@@ -169,9 +204,15 @@ Bajo esta etiqueta conviven dos ideas complementarias: sistemas de múltiples ag
 - Vaswani et al., "Attention Is All You Need" (2017): arquitectura Transformer.
 - Kaplan et al., "Scaling Laws for Neural Language Models" (2020) y Hoffmann et al., "Training Compute-Optimal Large Language Models" (Chinchilla, 2022).
 - Sutton, R., "The Bitter Lesson" (2019).
+- Wei et al., "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" (2022).
+- DeepSeek-AI, "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" (2025).
+- Panorama de modelos: anuncios y fichas técnicas de los laboratorios, consultados en julio de 2026; estimaciones de parámetros de modelos cerrados según Epoch AI, base de datos "Notable AI Models".
 - Kalai et al. (OpenAI), "Why Language Models Hallucinate" (2025).
 - Agencia Internacional de la Energía (IEA), informe "Energy and AI" (abril de 2025): consumo eléctrico de los centros de datos.
 - Google, "Measuring the Environmental Impact of Delivering AI at Google Scale" (agosto de 2025): energía y agua por consulta.
 - McMahan et al. (Google), "Communication-Efficient Learning of Deep Networks from Decentralized Data" (2017): aprendizaje federado.
+- Yao et al., "ReAct: Synergizing Reasoning and Acting in Language Models" (2022).
+- Anthropic, "Building Effective Agents" (diciembre de 2024).
 - Model Context Protocol, especificación abierta (Anthropic, 2024): modelcontextprotocol.io.
+- Protocolo Agent2Agent (A2A), especificación abierta (Google / Linux Foundation, 2025).
 - Gobierno de España / BSC-CNS, iniciativa ALIA: alia.gob.es.

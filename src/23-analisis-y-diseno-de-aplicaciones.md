@@ -1,229 +1,218 @@
 # Análisis y diseño de aplicaciones
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+El análisis y el diseño son las etapas del desarrollo que transforman las necesidades del usuario en una especificación construible: el análisis define qué debe hacer el sistema y el diseño cómo lo hará. Este tema repasa el ciclo de vida del software y sus modelos, la ingeniería de requisitos, las dos técnicas principales de captura funcional (casos de uso e historias de usuario) y el prototipado y diseño.
 
+## Ciclo de vida del software y sus modelos
 
-## Análisis y diseño de aplicaciones
+El **ciclo de vida del software** es el conjunto de etapas por las que pasa un sistema de información desde su concepción hasta su retirada. El estándar **ISO/IEC/IEEE 12207:2017** normaliza los procesos del ciclo de vida (procesos de acuerdo, organizativos, de gestión y técnicos); a efectos de examen, lo esencial son las etapas clásicas y los modelos que las organizan.
 
-El análisis y diseño de aplicaciones son etapas fundamentales dentro del desarrollo de sistemas de información. Estas tareas aseguran que el software cumpla con los requisitos definidos, sea funcional y esté preparado para ser implementado de manera efectiva.
+### Etapas del ciclo de vida
 
-### Ciclo de Vida de un Sistema de Información (CVSI)
-
-El **ciclo de vida de un sistema de información (CVSI)** describe las etapas necesarias para el desarrollo, implementación y mantenimiento de un sistema. Estas etapas son:
-
-- **Estudio de factibilidad:** Se analizan los beneficios, costos y soluciones de implantar un nuevo sistema de información, evaluando su viabilidad técnica, económica y operativa.
-- **Análisis de requisitos:** Se identifican, especifican y documentan los requisitos funcionales y no funcionales del sistema para garantizar que satisfagan las necesidades del usuario.
-- **Diseño:** Se desarrollan representaciones detalladas de las características del sistema, incluyendo diagramas, arquitecturas y especificaciones, para guiar su implementación de manera efectiva.
-- **Desarrollo/Implementación:** Se lleva a cabo la programación del sistema, transformando el diseño en código funcional.
-- **Pruebas:** Se ejecutan para identificar errores y verificar que el sistema cumple con los requisitos especificados.
-- **Instalación:** Incluye la planificación del entorno de hardware y software, la configuración del sistema y su despliegue en producción.
-- **Mantenimiento:** Consiste en mantener el sistema operativo y actualizado durante su vida útil para garantizar su rendimiento y fiabilidad.
-
-### Tipos de pruebas
-
-- **Prueba unitaria:** Evalúa módulos o programas individuales a partir de casos específicos para garantizar que cada componente funcione de manera aislada.
-- **Prueba de integración:** Verifica la correcta interacción entre dos o más componentes que intercambian información.
-- **Pruebas de sistema:** Se realizan en un entorno controlado, distinto al de desarrollo, por personal especializado, y validan el sistema completo.
-- **Pruebas de recuperación:** Determinan la capacidad del sistema para recuperarse de fallos de hardware o software.
-- **Pruebas de seguridad:** Confirman que el sistema incluye los controles necesarios para evitar brechas de seguridad.
-- **Pruebas de estrés:** Simulan condiciones extremas para evaluar el rendimiento del sistema ante altas cargas de trabajo.
-- **Pruebas de volumen:** Analizan el impacto de grandes cantidades de datos o usuarios concurrentes y determinan el volumen máximo soportado.
-- **Pruebas de rendimiento:** Comparan el desempeño del sistema con otras soluciones similares.
-- **Prueba de aceptación final:** Realizada tras la implantación, busca garantizar la calidad técnica y funcional del sistema, evaluando si cumple con los requisitos establecidos.
+- **Estudio de viabilidad (factibilidad)**: analiza beneficios, costes y alternativas de implantar el sistema, evaluando su viabilidad **técnica, económica y operativa**.
+- **Análisis de requisitos**: identifica, especifica y documenta los requisitos funcionales y no funcionales que debe satisfacer el sistema.
+- **Diseño**: elabora la arquitectura y las especificaciones detalladas (módulos, datos, interfaces) que guían la construcción.
+- **Desarrollo (implementación)**: transforma el diseño en código funcional.
+- **Pruebas**: verifican que el sistema cumple los requisitos y detectan defectos antes de la entrega. Los niveles, tipos y técnicas de prueba se estudian en el tema 27.
+- **Implantación**: prepara el entorno de hardware y software, configura el sistema y lo despliega en producción.
+- **Mantenimiento**: conserva el sistema operativo y actualizado durante su vida útil. Es la etapa más larga del ciclo y suele concentrar la mayor parte del coste total del sistema.
 
 ### Tipos de mantenimiento
 
-- **Mantenimiento correctivo:** Elimina defectos detectados durante el uso del sistema.
-- **Mantenimiento adaptativo:** Realiza ajustes para adaptarse a cambios en el entorno externo, como nuevas normativas o tecnologías.
-- **Mantenimiento perfectivo:** Añade nuevas funcionalidades para mejorar el sistema.
+El estándar **ISO/IEC/IEEE 14764:2022** distingue **cuatro tipos** de mantenimiento:
 
-### Modelos del ciclo de vida o Modelos de Desarrollo de Software
+- **Correctivo**: elimina defectos detectados durante el uso del sistema.
+- **Preventivo**: corrige defectos latentes antes de que se manifiesten como fallos.
+- **Adaptativo**: ajusta el sistema a cambios de su entorno (normativa, plataformas, tecnología).
+- **Perfectivo**: mejora o añade funcionalidad y atributos de calidad.
 
-Los modelos del ciclo de vida organizan las etapas del desarrollo de un sistema. Entre los principales modelos se encuentran:
+Correctivo y preventivo constituyen el mantenimiento de **corrección**; adaptativo y perfectivo, el de **evolución**.
 
-### 1. Ciclo de Vida Clásico o Modelo en Cascada
+### Modelos de ciclo de vida
 
-Es un enfoque **secuencial y sistemático** donde cada etapa del desarrollo se completa antes de iniciar la siguiente.
+Los modelos de ciclo de vida (o modelos de proceso) organizan las etapas anteriores en el tiempo:
 
-- **Etapas:** Estudio de factibilidad o planificación, análisis de requisitos, diseño, desarrollo, pruebas y mantenimiento.
-- **Ventajas:** Proporciona un desarrollo ordenado y estructurado, siendo adecuado para proyectos con requisitos bien definidos.
-- **Inconvenientes:** La validación con el usuario final ocurre solo tras el desarrollo completo, lo que puede resultar en problemas si los requisitos iniciales estaban mal definidos.
+- **Cascada (clásico)**: enfoque **secuencial**: cada etapa se completa antes de iniciar la siguiente.
+    - *Ventajas*: desarrollo ordenado, fácil de planificar y documentar; adecuado para proyectos con requisitos estables y bien definidos.
+    - *Inconvenientes*: el usuario no valida hasta el final; los errores de requisitos se descubren tarde y son caros de corregir.
+- **Modelo en V**: variante de la cascada que asocia a cada fase de definición su nivel de prueba: requisitos con las **pruebas de aceptación**, análisis del sistema con las **pruebas de sistema**, diseño arquitectónico con las **pruebas de integración** y diseño detallado con las **pruebas unitarias**. Hace explícitas la verificación y la validación desde el inicio del proyecto.
+- **Prototipado**: enfoque **iterativo** que construye versiones preliminares del sistema para validar los requisitos con el usuario.
+    - *Ventajas*: reduce el riesgo de fracaso en productos poco conocidos; aclara requisitos ambiguos.
+    - *Inconvenientes*: el usuario puede confundir el prototipo con el producto final y consolidar aspectos no óptimos.
+- **Iterativo e incremental**: divide el producto en porciones que se desarrollan en ciclos repetidos.
+    - *Iterativo*: produce versiones sucesivas completas que se refinan (v0.1, v0.2, v0.3…).
+    - *Incremental*: entrega bloques de funcionalidad que se van sumando (incremento 1, 2, 3…).
+- **Espiral (Boehm, 1988)**: modelo **dirigido por el riesgo** que combina iteración y prototipado. Cada vuelta de la espiral recorre **cuatro cuadrantes**: (1) determinar objetivos y restricciones, (2) evaluar alternativas e identificar y resolver **riesgos**, (3) desarrollar y verificar, y (4) planificar la siguiente iteración. La dimensión radial representa el coste acumulado.
+    - *Ventajas*: permite determinar la viabilidad en fases tempranas; integra el análisis de riesgos en el propio proceso.
+    - *Inconvenientes*: complejo de gestionar; exige experiencia en evaluación de riesgos.
+- **Ágil**: familia de enfoques iterativos ligeros basados en el **Manifiesto Ágil (2001)** y sus cuatro valores: individuos e interacciones, software funcionando, colaboración con el cliente y respuesta al cambio. Prima la entrega frecuente de valor y admite requisitos evolutivos. Scrum, Kanban, XP y el escalado ágil se estudian en el tema 21.
 
-### 2. Desarrollo de prototipos
+## Análisis de requisitos: técnicas y gestión
 
-Se basa en un enfoque **iterativo** que permite validar los requisitos mediante prototipos o versiones preliminares del sistema.
+La **ingeniería de requisitos** es el proceso de descubrir, especificar, validar y gestionar los requisitos de un sistema. Un **requisito** es una condición o capacidad que el sistema debe cumplir para satisfacer una necesidad del cliente, del usuario o de una norma.
 
-- **Ventajas:** Reduce el riesgo de fracaso y facilita la definición de requisitos para productos poco conocidos.
-- **Inconvenientes:** Los usuarios pueden confundir el prototipo con el sistema definitivo, consolidando aspectos no óptimos.
+Los requisitos se clasifican en **dos tipos principales**:
 
-### 3. Modelo en espiral
+- **Funcionales**: definen las funciones y comportamientos concretos del sistema (qué hace); se capturan típicamente como casos de uso o historias de usuario.
+- **No funcionales**: definen atributos de calidad y restricciones (cómo lo hace): rendimiento, seguridad, usabilidad, disponibilidad, portabilidad… Las características de calidad se estudian con ISO/IEC 25010 en el tema 25.
 
-Divide el proyecto en subproyectos iterativos que aportan funcionalidad incremental al sistema final, integrando una mejora constante y validación con el usuario.
+Por nivel de abstracción se distinguen los **requisitos de negocio** (objetivos de la organización), los **de usuario** (tareas que el usuario debe poder realizar) y los **de sistema** (especificación detallada y verificable).
 
-- **Ventajas:** Permite determinar la viabilidad técnica del proyecto en fases tempranas y mejora la comunicación con los usuarios.
-- **Inconvenientes:** No se mencionan desventajas específicas.
+### El proceso de ingeniería de requisitos
 
-### 4. Desarrollo iterativo e incremental
+- **Estudio de viabilidad**: evalúa si el proyecto es factible en términos de tecnología, coste y recursos.
+- **Elicitación (obtención) y análisis**: recolecta los requisitos de los interesados y resuelve conflictos, solapes y ambigüedades.
+- **Especificación**: documenta los requisitos de forma precisa y verificable (la ERS).
+- **Validación**: confirma con el cliente que los requisitos reflejan sus necesidades reales.
+- **Gestión de requisitos**: actividad transversal que controla los cambios y la trazabilidad durante todo el proyecto.
 
-Este modelo combina iteración e incremento, desarrollando pequeñas secciones del sistema que crecen en funcionalidad y complejidad.
+### Técnicas de elicitación
 
-- **Iterativo:** Proporciona una visión global con versiones sucesivas (v0.1, v0.2, v0.3...).
-- **Incremental:** Añade funcionalidades en etapas progresivas (1, 2, 3...).
+- **Entrevistas**: abiertas (exploratorias) o estructuradas (guion cerrado); la técnica más habitual.
+- **Talleres de trabajo (workshops, JAD)**: sesiones conjuntas de usuarios y analistas para acordar requisitos en grupo.
+- **Cuestionarios y encuestas**: recogen información de muchos usuarios a bajo coste.
+- **Observación (etnografía)**: el analista observa el trabajo real del usuario en su contexto; descubre requisitos implícitos.
+- **Análisis de documentación**: normativa, procedimientos, sistemas existentes.
+- **Prototipos**: versiones preliminares que provocan realimentación temprana.
+- **Escenarios y casos de uso**: descripciones de interacciones concretas con el sistema.
+- **Tormenta de ideas (brainstorming)**: generación libre de ideas al inicio, útil con requisitos difusos.
 
-### 5. Desarrollo ágil
+### La especificación de requisitos (ERS)
 
-Se fundamenta en enfoques iterativos, pero con un enfoque más **ligero y centrado en las personas**, fomentando la flexibilidad y la colaboración constante entre los desarrolladores y los usuarios. Este modelo destaca por su capacidad para adaptarse a cambios de requisitos y su énfasis en la entrega rápida de valor.
+La **especificación de requisitos del software (ERS)** es el documento que describe de forma completa el comportamiento externo del sistema, separando la funcionalidad de la implementación. El estándar de referencia es **ISO/IEC/IEEE 29148:2018**, que sustituyó al clásico **IEEE 830-1998** (del que procede la lista de características). Todo requisito (y la ERS en conjunto) debe ser:
 
-## Análisis de Requisitos
+- **Correcto y necesario**: refleja una necesidad real.
+- **Inequívoco**: admite una sola interpretación.
+- **Completo**: no faltan requisitos ni casos por definir.
+- **Consistente**: sin contradicciones internas.
+- **Priorizado**: ordenado por importancia y estabilidad.
+- **Verificable**: existe un método de prueba finito y objetivo para comprobarlo.
+- **Modificable**: puede cambiarse de forma controlada sin afectar al resto.
+- **Trazable**: su origen y sus productos derivados pueden seguirse en ambos sentidos.
 
-El análisis de requisitos es un proceso fundamental en el desarrollo de software que tiene como objetivo definir y comprender las necesidades y expectativas de los clientes y usuarios finales. Este proceso incluye técnicas específicas para la captura, especificación, análisis y validación de los requisitos necesarios para construir un sistema eficaz y ajustado a las necesidades del cliente.
+### Gestión de requisitos
 
-### Requerimientos
+- **Línea base**: conjunto de requisitos revisado y aprobado que sirve de referencia contractual; solo cambia mediante control formal.
+- **Trazabilidad**: la **matriz de trazabilidad** enlaza cada requisito con su origen (interesado, norma) y con los elementos que lo materializan (diseño, código, pruebas), en ambos sentidos.
+- **Control de cambios**: procedimiento formal de solicitud, evaluación de impacto, aprobación e incorporación de cambios sobre la línea base.
+- **Priorización**: la técnica **MoSCoW** clasifica los requisitos en *Must have* (imprescindible), *Should have* (importante), *Could have* (deseable) y *Won't have* (descartado por ahora).
+- **Herramientas**: IBM DOORS, Jira, Azure DevOps, hojas de trazabilidad.
 
-Los requerimientos especifican lo que el sistema debe hacer (requisitos funcionales) y cómo debe comportarse en términos de atributos no funcionales como rendimiento, seguridad o portabilidad.
+## Casos de uso e historias de usuario
 
-Existen **dos tipos principales** de requisitos:
+Los casos de uso y las historias de usuario son las dos técnicas principales para capturar **requisitos funcionales**: los primeros proceden del mundo del Proceso Unificado y UML; las segundas, de las metodologías ágiles.
 
-- **Funcionales**: Definen las funciones y comportamientos específicos del sistema, como los casos de uso.
-- **No funcionales**: Definen atributos del sistema, como rendimiento y seguridad.
+### Casos de uso
 
-### Captura de Requerimientos
+Un **caso de uso** describe una secuencia de interacciones entre el sistema y sus actores que produce un **resultado de valor observable** para un actor. Cada caso de uso se centra en una única **meta o tarea** y se redacta en el lenguaje del dominio, sin tecnicismos, en colaboración con el cliente.
 
-El proceso de captura de requerimientos tiene como objetivo comprender las expectativas de los clientes y usuarios. A través de entrevistas, reuniones y otros métodos de toma de datos, se busca construir una visión clara de lo que el sistema debe lograr.
+- **Actor**: rol externo que interactúa con el sistema (persona, otro sistema u organización). El actor **primario** inicia el caso de uso y obtiene el valor; el **secundario** da soporte (por ejemplo, un sistema externo de notificaciones).
+- **Relaciones** del diagrama de casos de uso (UML 2.5.1):
+    - **Asociación**: vincula un actor con los casos de uso en que participa.
+    - **Inclusión (include)**: el caso base incorpora **siempre** el comportamiento del caso incluido; factoriza pasos comunes a varios casos.
+    - **Extensión (extend)**: el caso extensor añade comportamiento **opcional o condicional** al caso base; la flecha discontinua apunta del extensor al base.
+    - **Generalización**: herencia entre actores o entre casos de uso (el hijo hereda y especializa el comportamiento del padre).
+- **Niveles de estructuración**: del **diagrama de contexto** (límites del sistema y su entorno) se pasa al **diagrama inicial** (principales casos de uso) y de ahí al **modelo de casos de uso** completo (relaciones y descripciones detalladas).
+- **Plantilla de descripción**: título, actores implicados, resumen, **precondiciones** (qué debe cumplirse antes), **postcondiciones** (estado resultante), relaciones (incluye, extiende, hereda de) y **flujo de eventos actor-sistema**, con flujo principal, flujos alternativos y excepciones.
 
-### Procesos en la Ingeniería de Requisitos
+### Historias de usuario
 
-El proceso de ingeniería de requisitos abarca varias etapas:
+Una **historia de usuario** es una descripción breve de una funcionalidad contada desde la perspectiva de quien la necesita, con el formato: **«Como [rol], quiero [funcionalidad] para [beneficio]»**. No pretende ser una especificación completa, sino un recordatorio para conversar.
 
-- **Estudio de viabilidad**: Evalúa si el proyecto es factible en términos de tecnología, costo y recursos.
-- **Obtención y análisis de requerimientos**: Recolecta los requisitos y evalúa su viabilidad y claridad.
-- **Especificación de requerimientos**: Documenta los requisitos de forma precisa y verificable.
-- **Validación**: Confirma que los requisitos cumplen las expectativas del cliente.
+- **Las 3 C** (Ron Jeffries): **tarjeta** (*card*: la frase breve), **conversación** (*conversation*: el detalle se acuerda hablando justo a tiempo) y **confirmación** (*confirmation*: los criterios de aceptación).
+- **Criterios INVEST** (Bill Wake, 2003) de una buena historia: **I**ndependiente, **N**egociable, **V**aliosa, **E**stimable, pequeña (**S**mall) y verificable (**T**estable).
+- **Criterios de aceptación**: condiciones verificables que debe cumplir la historia para darse por terminada; es habitual el formato **Dado-Cuando-Entonces** (*Given-When-Then*, sintaxis Gherkin), que sirve de base a las pruebas de aceptación automatizadas.
+- **Épicas**: historias demasiado grandes para una iteración, que se descomponen en historias más pequeñas; todas viven en el *product backlog* priorizado.
 
-### Especificación de Requerimientos (ERS)
+### Comparación
 
-La especificación de requisitos (ERS) es un documento detallado que describe el comportamiento completo del sistema. Contiene:
+| Aspecto | Casos de uso | Historias de usuario |
+| --- | --- | --- |
+| Origen | Jacobson (OOSE, 1992); Proceso Unificado y UML | Metodologías ágiles (XP, Scrum) |
+| Nivel de detalle | Completo por adelantado (flujos, excepciones) | Mínimo; se detalla en conversación justo a tiempo |
+| Forma | Documento estructurado y diagrama UML | Frase breve más criterios de aceptación |
+| Alcance | Meta completa de un actor | Incremento pequeño de valor |
+| Uso típico | Requisitos estables, contratos, sistemas complejos | Backlog evolutivo, entregas iterativas |
 
-- **Casos de uso**: Detallan las interacciones entre el usuario y el sistema.
-- **Descripción verificable**: El ERS debe ser completo, preciso y verificable, separando funcionalidad de implementación.
+## Prototipado y diseño
 
-### Características de los Requisitos
+Validados los requisitos, el prototipado permite explorar la solución con el usuario antes de construirla, y el diseño transforma la especificación en una estructura técnica realizable.
 
-Los requisitos deben cumplir ciertas características según el estándar IEEE 830-1998:
+### Prototipado
 
-- **Correctos**: El software debe cumplir con los requisitos.
-- **Consistentes**: No debe haber contradicciones entre los requisitos.
-- **Completos**: Todos los requisitos necesarios están documentados.
-- **Inequívocos**: Deben estar redactados de forma clara.
-- **Trazables**: Deben poder seguirse y verificarse a lo largo del proceso de desarrollo.
-- **Priorizables**: Los requisitos se ordenan por su importancia.
-- **Modificables**: Pueden actualizarse fácilmente.
-- **Verificables**: Debe existir un método de prueba para cada requisito.
+- **Según su destino**:
+    - **Desechable** (*throwaway*): se construye rápido para aclarar requisitos y se descarta; no debe pasar a producción.
+    - **Evolutivo**: se refina iterativamente hasta convertirse en el producto final.
+- **Según su fidelidad**:
+    - **Baja fidelidad**: esbozos en papel o esquemas simples; baratos y rápidos de cambiar.
+    - **Alta fidelidad**: apariencia e interacción casi finales; útiles para validar la experiencia de uso.
+- **Artefactos habituales**: **sketch** (esbozo a mano), **wireframe** (estructura de pantalla sin estilo visual), **mockup** (diseño visual estático) y **prototipo interactivo** (navegable, sin lógica real).
+- **Riesgos**: generar expectativas irreales de avance, confundir el prototipo con el producto y promocionar a producción código de prototipo sin calidad suficiente.
 
-### Dimensiones de los Requisitos
+### Diseño del software
 
-- **Ambientales**: Aspectos como el entorno de ejecución.
-- **Interfaces**: Definen las interacciones del sistema.
-- **Factores Humanos**: Consideraciones relacionadas con la usabilidad.
-- **Funcionalidad**: Acciones específicas que el sistema debe realizar.
-- **Seguridad**: Requisitos para proteger la información.
+El diseño se aborda en dos niveles complementarios:
 
-## Modelo de Casos de Uso
+- **Diseño arquitectónico (alto nivel)**: descompone el sistema en componentes o subsistemas y define sus interfaces; selecciona el estilo arquitectónico (capas, cliente-servidor, microservicios; ver tema 52) y las tecnologías.
+- **Diseño detallado (bajo nivel)**: define estructuras de datos, clases, algoritmos e interfaces internas de cada módulo; se modela habitualmente con UML (ver tema 24).
 
-Los casos de uso son herramientas fundamentales para capturar los **requisitos funcionales** de un sistema, especificando las **interacciones** entre el usuario y el sistema. Representan acciones específicas realizadas por el sistema y se detallan a través de un **flujo de eventos** que describe cómo los usuarios y otros sistemas interactúan con él.
+Dimensiones del diseño según Pressman: diseño **de datos**, **arquitectónico**, **de interfaz** y **procedimental** (a nivel de componentes).
 
-### Estructura de un Caso de Uso:
+Principios de un buen diseño:
 
-- **Caso de uso**: Describe una función específica que realiza el sistema.
-- **Actor**: Representa al usuario o sistema que interactúa con el caso de uso.
-- **Subsistemas**: Unidades independientes que forman parte del sistema general.
-- **Relaciones**: Enlaces entre casos de uso y actores que especifican cómo interactúan.
+- **Abstracción**: trabajar en cada nivel con los conceptos relevantes, ocultando el detalle inferior.
+- **Modularidad**: dividir el sistema en módulos con responsabilidad única y bien delimitada.
+- **Alta cohesión y bajo acoplamiento**: cada módulo hace una sola cosa completa (cohesión) y depende lo mínimo de los demás (acoplamiento).
+- **Ocultación de información** (Parnas): cada módulo esconde sus decisiones internas tras una interfaz estable.
+- **Separación de intereses** (*separation of concerns*): aspectos distintos (presentación, negocio, datos) en elementos distintos.
 
-### Niveles de estructuración de casos de uso
+## Caso práctico: diagramas de casos de uso y de actividades
 
-1. **Diagrama de contexto**: Define los límites del sistema e identifica su entorno.
-2. **Diagrama inicial**: Detalla el diagrama de contexto, incluyendo los principales casos de uso y funcionalidades clave.
-3. **Modelo de casos de uso**: Profundiza en las interacciones entre actores y sistemas, mostrando las relaciones y detalles específicos.
+### Enunciado
 
-### Plantillas de descripción de casos de uso
+La Generalitat Valenciana quiere implantar un **sistema de gestión de una biblioteca digital** para su red de bibliotecas públicas. El sistema debe permitir a los usuarios registrarse, buscar libros, reservarlos y leerlos en línea o descargarlos si la licencia lo permite. Los bibliotecarios deben poder añadir nuevos libros, gestionar reservas y generar y descargar informes de uso.
 
-Para uniformar la documentación, se utiliza una plantilla estructurada que incluye:
+Requisitos funcionales:
 
-- **Título del caso de uso**.
-- **Actores** implicados.
-- **Resumen**: Breve descripción del propósito del caso de uso.
-- **Precondiciones**: Condiciones que deben cumplirse antes de ejecutar el caso de uso.
-- **Postcondiciones**: Resultados esperados tras la ejecución del caso de uso.
-- **Relaciones**: Como "Incluye", "Entiende", o "Hereda de".
-- **Flujo de eventos Actor-Sistema**: Pasos detallados que describen la interacción entre el actor y el sistema.
+- **Usuarios**: registrarse con nombre de usuario y contraseña; buscar libros por título, autor, género o palabras clave; reservar libros para leerlos en línea o descargarlos; cancelar una reserva; ver el historial de lecturas y las reservas activas.
+- **Bibliotecarios**: añadir libros con sus metadatos (título, autor, género, licencia); eliminar libros no disponibles; gestionar reservas (aprobarlas o rechazarlas); generar y descargar informes de uso.
+- **Sistema**: enviar notificaciones por correo electrónico al confirmar o cancelar reservas; mantener un registro de actividad para auditorías.
 
-### Normas de aplicación de casos de uso
+Se pide: (1) el diagrama de casos de uso con actores y relaciones, y (2) el diagrama de actividades del proceso «Reserva de un libro».
 
-El lenguaje empleado debe evitar tecnicismos y enfocarse en trabajar en colaboración con los clientes. Cada caso de uso se centra en una única **meta o tarea**, describiendo las características del sistema de forma clara y accesible.
+### Solución: diagrama de casos de uso
 
-## Caso práctico: Diagrama de Casos de Uso y de Actividades
+- **Actores**: *Usuario* y *Bibliotecario* (primarios) y *Sistema de correo electrónico* (secundario: sistema externo que da soporte a las notificaciones).
+- **Casos de uso**: Registrar usuario, Buscar libro, Reservar/cancelar libro, Leer/descargar libro y Ver historial (Usuario); Añadir/borrar libros, Gestionar reservas y Generar informe (Bibliotecario); Notificar reserva/cancelación y Registrar actividad (soporte).
+- **Relaciones**:
+    - **Asociación**: el Usuario con sus cinco casos de uso; el Bibliotecario con Añadir/borrar libros, Gestionar reservas y Generar informe; el Sistema de correo electrónico con Notificar reserva/cancelación y Registrar actividad.
+    - **Inclusión**: «Gestionar reservas» incluye «Generar informe», que a su vez incluye «Descargar informe»: comportamiento que se ejecuta siempre como parte del caso base.
+    - **Extensión**: «Notificar reserva/cancelación» extiende «Reservar/cancelar libro»: solo se ejecuta cuando la reserva llega a confirmarse o cancelarse (flecha discontinua del extensor al caso base).
 
-### Contexto
+![](media/image21.png)
 
-La Generalitat Valenciana quiere implementar un **sistema de gestión de una biblioteca digital** para su red de bibliotecas públicas. El sistema debe permitir a los usuarios registrarse, buscar libros, reservarlos y leerlos en línea o descargarlos si la licencia lo permite. Además, los bibliotecarios deben poder añadir nuevos libros, gestionar reservas, generar informes de uso y descargarlos.
+### Solución: diagrama de actividades
 
-### Requisitos Funcionales
+El flujo del proceso «Reserva de un libro» es el siguiente:
 
-1. **Usuarios**:
-    - Registrarse en el sistema con un nombre de usuario y contraseña.
-    - Buscar libros por título, autor, género o palabras clave.
-    - Reservar libros para leer en línea o descargarlos si es posible.
-    - Cancelar una reserva.
-    - Ver el historial de libros leídos y reservas activas.
-2. **Bibliotecarios**:
-    - Añadir nuevos libros al sistema con metadatos como título, autor, género y licencia.
-    - Eliminar libros que ya no están disponibles.
-    - Gestionar reservas, aprobándolas o rechazándolas.
-    - Generar y descargar informes de uso, como los libros más populares.
-3. **Sistema**:
-    - Enviar notificaciones por correo electrónico para confirmar reservas o avisar de próximas expiraciones.
-    - Mantener un registro de actividades para auditorías.
-
-### Actividad Práctica
-
-1. **Crea un Diagrama de Casos de Uso** mostrando las relaciones entre actores y casos de uso clave.
-2. **Dibuja un Diagrama de Actividades** para el flujo del proceso de "Reserva de un libro".
-
-### Solución: (Faltan cosas)
-
-### 1. Diagrama de Casos de Uso
-
-### Elementos clave:
-
-- **Actores:** Usuario, Bibliotecario, Sistema de Correo Electrónico.
-- **Casos de uso:** Registrar usuario, Buscar libro, Leer libro, Descargar libro, Reservar libro, Gestionar reservas, Generar informe.
-
-### Relaciones:
-
-- **Asociación:** Usuario → Registrase, Buscar libro, Reservar/cancelar libro, Leer/Descargar libro, Ver historial
-- **Extensión:** Reservar/Cancelar libro ← Notificar reserva/cancelación
-- **Inclusión:** Gestionar reservas → Generar informe → Descargar informe
-
-> ![](media/image21.png)
-
-### 2. Diagrama de Actividades de Flujo
-
-### Ejemplo de proceso: Reserva de un libro
-
-1. El usuario busca un libro.
-2. El sistema muestra los resultados de búsqueda.
-3. El usuario selecciona un libro y solicita la reserva.
-4. El sistema verifica la disponibilidad y la licencia.
+1. El usuario busca un libro y el sistema muestra los resultados.
+2. El usuario selecciona un libro y solicita la reserva.
+3. El sistema verifica la disponibilidad y la licencia (**nodo de decisión**).
     - Si el libro está disponible, se confirma la reserva y se notifica al usuario.
-    - Si no está disponible, se rechaza la solicitud.
-5. El sistema actualiza el estado del libro y el registro de reservas.
+    - Si no lo está, se rechaza la solicitud.
+4. El sistema actualiza el estado del libro y el registro de reservas.
 
-### Elementos clave:
-
-- **Actividades:** Buscar libro, Solicitar reserva, Verificar disponibilidad, Confirmar reserva, Notificar usuario.
-- **Decisiones:** Libro disponible (Sí/No).
+En notación UML completa, el diagrama incorpora además un **nodo inicial** (círculo relleno), un **nodo final** (círculo con borde), guardas entre corchetes en cada rama de la decisión («[disponible]», «[no disponible]») y, opcionalmente, **calles** (*swimlanes*) que reparten las actividades entre usuario y sistema. La figura muestra la versión simplificada del flujo:
 
 ![](media/image22.png)
+
+## Fuentes {.unnumbered .unlisted}
+
+- ISO/IEC/IEEE 12207:2017, *Systems and software engineering. Software life cycle processes*.
+- ISO/IEC/IEEE 29148:2018, *Requirements engineering* (sustituye a IEEE 830-1998, origen de las características de la ERS).
+- ISO/IEC/IEEE 14764:2022, *Software engineering. Software life cycle processes. Maintenance*.
+- OMG, *Unified Modeling Language* (UML) 2.5.1, diciembre de 2017.
+- Boehm, B., «A Spiral Model of Software Development and Enhancement», *IEEE Computer*, 1988.
+- Beck, K. *et al.*, *Manifiesto por el Desarrollo Ágil de Software*, 2001.
+- Cohn, M., *User Stories Applied*, Addison-Wesley, 2004; Wake, B., criterios INVEST, 2003.
+- Sommerville, I., *Software Engineering*, 10.ª ed., Pearson, 2016.
+- Pressman, R. y Maxim, B., *Software Engineering: A Practitioner's Approach*, 9.ª ed., McGraw-Hill, 2020.

@@ -1,319 +1,273 @@
 # Gestión de datos corporativos y Big Data
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+## Almacén de datos (data warehouse) y OLAP
 
+Los sistemas de información operacionales generan datos continuamente, pero esos datos, dispersos y detallados, no sirven directamente para decidir. Los sistemas de información analíticos los integran y agregan para apoyar la toma de decisiones en los niveles **estratégico** (alta dirección), **táctico** y **operativo**.
 
-## Gestión de Datos Corporativos
+- **Fuentes de información**: bases de datos corporativas (relacionales, espaciales, temporales, documentales, multimedia), webs y redes sociales, fuentes abiertas (**OSINT**) y dispositivos del **internet de las cosas (IoT)**.
 
-La gestión de datos corporativos es fundamental en cualquier organización. Los sistemas de información están compuestos por **hardware** (subsistema físico), **software** (subsistema lógico), **datos**, **métodos o procedimientos**, y **personas**.
+### El almacén de datos (data warehouse)
 
-Estos elementos apoyan tres **niveles de decisión** organizacional:
+Según la definición clásica de **Inmon**, un data warehouse es una colección de datos **orientada a un tema, integrada, no volátil y variable en el tiempo**, que sirve de apoyo a la toma de decisiones:
 
-- **Alta dirección**: Enfocada en decisiones estratégicas.
-- **Dirección táctica**: Implementa y supervisa las estrategias.
-- **Nivel operativo**: Alinea las operaciones diarias con los objetivos tácticos.
+- **Orientada a un tema**: se organiza en torno a los asuntos de la organización (clientes, ventas), no a las aplicaciones que los producen.
+- **Integrada**: unifica datos de fuentes heterogéneas con formatos y codificaciones consistentes.
+- **No volátil**: los datos se cargan y se consultan; no se modifican ni borran en la operación normal.
+- **Variable en el tiempo (historiada)**: conserva el histórico para analizar tendencias y evolución.
 
-### Fuentes de Información
+Conceptos asociados:
 
-Las organizaciones utilizan diversas fuentes de información para la toma de decisiones:
+- **Datamart**: subconjunto del almacén centrado en un área de negocio o departamento (usuarios limitados, ámbito específico, función de apoyo). Suele estructurarse en esquema de estrella.
+- **Enfoques de construcción**:
+    - **Inmon (top-down)**: primero se construye el almacén corporativo normalizado y de él derivan los datamarts.
+    - **Kimball (bottom-up)**: se construyen datamarts dimensionales que se integran mediante dimensiones conformadas (arquitectura de bus).
 
-- **Bases de datos corporativas**: Pueden ser relacionales, espaciales, temporales, documentales o multimedia.
-- **Webs y redes sociales**: Análisis de opiniones y preferencias de usuarios.
-- **Fuentes OSINT** (Open Source Intelligence): Datos de fuentes abiertas.
-- **Internet de las Cosas (IoT)**: Dispositivos autónomos que recopilan y transmiten datos a través de internet.
+### El modelo multidimensional
 
-### Almacén de Datos (Data Warehouse)
+Los datos analíticos se organizan como un **hipercubo**:
 
-Un **data warehouse** es una colección integrada y no volátil de datos orientada a un ámbito específico. Su estructura facilita la toma de decisiones a través del almacenamiento de **datamarts**, los cuales modelan hechos, atributos y dimensiones.
+- **Hechos**: los conceptos de interés que se analizan (ventas, matrículas, ingresos).
+- **Medidas**: los aspectos cuantificables de cada hecho (importe, unidades).
+- **Dimensiones**: las perspectivas de análisis (tiempo, lugar, producto), con **jerarquías** de agregación (día, mes, año).
 
-- **Modelo Multidimensional (Hipercubo)**:
-    - **Hechos**: Datos o conceptos de interés (ej.: ventas, personal).
-    - **Atributos**: Aspectos medibles de los hechos (ej.: importe, cantidad).
-    - **Dimensiones**: Detalles vinculados a los hechos (ej.: tiempo, lugar).
-- **Tipos de Modelos**:
-    - **Estrella**: Un hecho central rodeado por dimensiones.
-    - **Estrella Simple**: Permite un único camino de agregación.
-    - ![](media/image59.png)**Copo de Nieve**: Permite múltiples caminos de agregación.
+Su implementación sobre bases relacionales sigue tres esquemas:
 
-### Datamart
+- **Estrella**: una tabla de hechos central rodeada de tablas de dimensiones desnormalizadas. Simple y eficiente en consulta.
+- **Copo de nieve**: las dimensiones se normalizan en varias tablas; ahorra espacio a costa de más composiciones (join) y peor rendimiento.
+- **Constelación**: varias tablas de hechos comparten tablas de dimensiones.
 
-Un **datamart** es un almacén de datos específico, centrado en un área de negocio. **Estructurado** en forma de estrella, facilita la consulta y el análisis de datos para un departamento específico.
+![Esquema en estrella: la tabla de hechos de ventas rodeada de las dimensiones producto, almacén, tiempo, promoción y cliente](media/image59.png){width=85%}
 
-**Características**:
+### OLTP y OLAP
 
-- Usuarios limitados.
-- Enfoque en un área específica.
-- Función de apoyo.
+| Característica | OLTP (procesamiento transaccional) | OLAP (procesamiento analítico) |
+| --- | --- | --- |
+| Finalidad | Operación diaria (transacciones) | Análisis y toma de decisiones |
+| Operaciones | Lecturas y escrituras cortas y frecuentes | Consultas complejas, casi solo lectura |
+| Datos | Detallados, normalizados, actuales | Agregados, multidimensionales, históricos |
+| Modelo | Relacional normalizado (3FN) | Cubos y esquemas en estrella |
+| Usuarios | Muchos usuarios operativos | Analistas y dirección |
 
-### Data Lake
+- **Operadores OLAP**:
+    - **Drill-down**: desagrega a mayor nivel de detalle (de año a mes).
+    - **Roll-up**: agrega subiendo por la jerarquía de la dimensión.
+    - **Slice**: filtra por un valor de una dimensión (una «rebanada» del cubo).
+    - **Dice**: filtra por valores de varias dimensiones (un subcubo).
+    - **Pivot**: rota los ejes de análisis para reorientar la vista.
+- **Implementaciones**:
+    - **ROLAP**: el cubo se simula sobre una base de datos relacional.
+    - **MOLAP**: estructuras multidimensionales nativas con agregados precalculados.
+    - **HOLAP**: híbrido de las dos anteriores.
 
-Un **data lake** es un almacén **no estructurado** de **información en bruto**, accesible y centralizado. Puede contener datos estructurados, semiestructurados (JSON, CSV), no estructurados (emails, tweets) y binarios (fotos, videos). Herramientas como **Apache Hadoop** son esenciales para la gestión de data lakes.
+### Herramientas de explotación
 
-### Arquitecturas OLTP y OLAP
+- **Sistemas de información ejecutiva (EIS)** y **cuadros de mando integral (CMI)**: seguimiento de indicadores clave (KPI) para la dirección.
+- **Plataformas de inteligencia de negocio (business intelligence, BI)**: informes, cuadros de mando interactivos y análisis autoservicio (Power BI, Tableau, Qlik Sense).
+- **Minería de datos**: descubrimiento de patrones ocultos (sección propia más adelante).
 
-- **OLTP (On-Line Transaction Processing)**: Procesamiento transaccional en tiempo real, optimizado para **transacciones** con bases de datos relacionales, con datos detallados y normalizados.
-- **OLAP (On-Line Analytical Processing)**: Procesamiento analítico orientado a consultas complejas para apoyar la toma de decisiones mediante cubos OLAP.
+## Procesos ETL, data lake y espacios de compartición
 
-**Operadores OLAP**:
+### Los procesos ETL
 
-- **Drill**: Desglosa datos por dimensiones.
-- **Roll**: Agrega datos por dimensiones.
-- **Slice & Dice**: Selecciona y proyecta datos en nuevas vistas.
-- **Pivot**: Reorienta dimensiones para recalcular celdas.
+Los procesos **ETL** (*Extract, Transform, Load*) alimentan el almacén de datos desde los sistemas de origen:
 
-**Implementaciones OLAP**:
+- **Extracción**: obtención de los datos en bruto de las fuentes (bases operacionales, ficheros, APIs).
+- **Transformación**: limpieza (duplicados, errores, valores faltantes), normalización de formatos y codificaciones, integración y cálculo de agregados.
+- **Carga**: volcado al data warehouse o a los datamarts, inicial o incremental.
 
-- **ROLAP (Relational OLAP)**: Construido sobre bases de datos relacionales.
-- **MOLAP (Multidimensional OLAP)**: Basado en estructuras multidimensionales.
-- **HOLAP (Hybrid OLAP)**: Combina ROLAP y MOLAP.
+Elementos de apoyo:
 
-### Esquemas ROLAP
+- **ELT**: variante actual en la que los datos se cargan en bruto y se transforman dentro de la plataforma de destino, aprovechando la potencia de los almacenes en la nube (BigQuery, Snowflake, Redshift).
+- **Metadatos**: documentan el origen, la estructura, las transformaciones y el linaje de los datos; su catalogación es una función central de la gobernanza del dato (tema 38).
+- **Middleware**: capa de interoperabilidad entre plataformas heterogéneas.
 
-- **Estrella**: Contiene una tabla de hechos central rodeada de tablas de dimensiones, diseñada para simplicidad y eficiencia.
-- **Copo de Nieve**: Implementa dimensiones con múltiples tablas, optimizando espacio pero reduciendo rendimiento.
+### Data lake y lakehouse
 
-### Elementos de un Almacén de Datos
+- **Data lake**: repositorio centralizado que almacena grandes volúmenes de datos **en bruto, en su formato original** (estructurados, semiestructurados y no estructurados), aplicando el esquema al leer (*schema-on-read*). Nació ligado a Hadoop/HDFS y hoy se implementa sobre todo en almacenamiento de objetos en la nube (Amazon S3, Azure Data Lake Storage).
+    - Sin catálogo, calidad ni gobernanza degenera en un **data swamp** (pantano de datos): información imposible de localizar e interpretar.
+- **Data lakehouse**: arquitectura que añade al data lake capacidades de almacén de datos (transacciones ACID, esquemas, rendimiento SQL) mediante formatos de tabla abiertos: **Delta Lake**, **Apache Iceberg**, Apache Hudi.
 
-- **Metadatos**: Documentan tablas, columnas y tipos de datos.
-- **Middleware**: Permite la interoperabilidad en plataformas heterogéneas.
-- **ETL (Extraction, Transformation & Load)**:
-    - **Extracción**: Obtención de datos en bruto.
-    - **Transformación**: Limpieza y estructuración de datos.
-    - **Carga**: Creación y llenado de datamarts con información depurada.
+### Espacios de compartición de datos
 
-### Herramientas de Explotación de Datos
+La estrategia europea de datos (2020) impulsa la creación de **espacios comunes europeos de datos** sectoriales (salud, movilidad, energía, agricultura, administración pública), en los que organizaciones públicas y privadas comparten datos de forma soberana, interoperable y conforme a reglas comunes.
 
-- **Sistemas de Información Ejecutiva (EIS)**: Monitoreo de variables clave.
-- **Dashboard o Cuadro de Mando Integral (CMI)**: Reportes y análisis interactivos.
-- **Minería de Datos**: Descubrimiento de patrones en grandes volúmenes de datos.
+- **Reglamento (UE) 2022/868, de Gobernanza de Datos (DGA)**, aplicable desde el **24 de septiembre de 2023**: regula la reutilización de datos protegidos del sector público, los **servicios de intermediación de datos** y la **cesión altruista de datos**.
+- **Reglamento (UE) 2023/2854, de Datos (Data Act)**, aplicable en lo esencial desde el **12 de septiembre de 2025**: normas armonizadas de acceso y uso justo de los datos generados por productos conectados (IoT) y facilidades para cambiar de proveedor de nube.
+- **Gaia-X**: iniciativa europea de infraestructura federada de datos y nube, soporte técnico de la soberanía del dato en los espacios de datos.
 
-## Big Data
+## Big Data: el ecosistema Hadoop/Spark
 
-Big Data es un término que describe conjuntos de datos demasiado grandes y complejos para ser procesados por métodos tradicionales. Su gestión se centra en las **5 V's**:
+**Big Data** designa los conjuntos de datos cuyo volumen, velocidad o variedad superan la capacidad de las herramientas tradicionales de almacenamiento y procesamiento. El término se caracterizó con las **3 V** (Laney, 2001) y hoy se manejan habitualmente **5 V**:
 
-- **Volumen**: Cantidades masivas de datos.
-- **Velocidad**: Procesamiento y análisis en tiempo real.
-- **Variedad**: Diversidad de formatos y fuentes.
-- **Veracidad**: Fiabilidad de los datos.
-- **Valor**: Conocimiento obtenido de los datos.
+- **Volumen**: cantidades masivas de datos.
+- **Velocidad**: generación y procesamiento continuos, incluso en tiempo real.
+- **Variedad**: heterogeneidad de formatos y fuentes.
+- **Veracidad**: fiabilidad y calidad del dato.
+- **Valor**: conocimiento útil extraído de los datos.
 
-### Infraestructura de Almacenamiento
+El almacenamiento se apoya en las bases de datos **NoSQL** (clave-valor, documentales, columnares y de grafos), tratadas en el tema 36. En cuanto al procesamiento:
 
-**Bases de Datos NoSQL**:
+- **Batch (por lotes)**: grandes volúmenes con latencia alta (MapReduce, Spark).
+- **Streaming (en flujo)**: procesamiento continuo casi en tiempo real (Kafka, Flink, Spark Structured Streaming).
+- **Híbrido**: arquitectura **Lambda** (capa batch más capa de velocidad más capa de servicio) y arquitectura **Kappa** (todo se trata como flujo, con un único pipeline).
 
-- No requieren estructuras fijas.
-- No soportan operaciones JOIN.
-- No garantizan completamente ACID.
-- Escalan horizontalmente.
+### Apache Hadoop
 
-**Tipos de NoSQL**:
+Marco de código abierto para el almacenamiento y procesamiento distribuidos de grandes volúmenes de datos en clústeres de hardware convencional, con escalado horizontal y tolerancia a fallos. Su núcleo:
 
-- **Orientadas a Documentos**: Almacenan datos en JSON o XML (ejemplo: MongoDB).
-- **Almacenes Clave/Valor**: Pares clave-valor (ejemplo: Redis).
-- **Organizadas por Columnas**: Datos en columnas (ejemplo: Cassandra).
-- **Basadas en Grafos**: Estructuradas en nodos y relaciones (ejemplo: Neo4j).
+- **HDFS**: sistema de ficheros distribuido; divide los ficheros en bloques grandes replicados en varios nodos.
+- **YARN**: gestor de recursos y planificador de los trabajos del clúster.
+- **MapReduce**: modelo de programación paralela en dos fases (map y reduce) con almacenamiento intermedio en disco.
 
-### Infraestructura de Procesamiento
+Sobre ese núcleo creció un ecosistema:
 
-Dependiendo de la necesidad de procesamiento:
+- **Hive**: consultas tipo SQL (HiveQL) sobre datos en HDFS.
+- **Pig**: lenguaje de flujos de datos (Pig Latin).
+- **HBase**: base de datos NoSQL columnar sobre HDFS.
+- **Sqoop** y **Flume**: ingesta desde bases de datos relacionales y de flujos de eventos y logs.
+- **ZooKeeper**: coordinación de servicios distribuidos.
+- **Oozie**: planificación de flujos de trabajo.
 
-- **Procesamiento Batch**: Ideal para grandes volúmenes de datos con herramientas como HDFS y MapReduce.
-- **Procesamiento Streaming**: Para flujos continuos de datos en tiempo real, usando Apache Kafka y Storm.
-- **Procesamiento Híbrido**: Combina batch y streaming, con arquitecturas como Lambda y Kappa.
+### Apache Spark
 
-### Ecosistema Apache Hadoop
+Motor de procesamiento distribuido **en memoria**, muy superior a MapReduce en cargas iterativas e interactivas. Es un proyecto independiente de Hadoop, aunque puede ejecutarse sobre YARN y leer de HDFS.
 
-Hadoop es un marco de trabajo de código abierto para aplicaciones distribuidas que gestionan grandes volúmenes de datos.
+- **Modelo de programación**: RDD y las APIs de alto nivel DataFrame y Dataset, con soporte de Scala, Java, Python, R y SQL.
+- **Módulos**: **Spark SQL**, **Structured Streaming**, **MLlib** (aprendizaje automático, sucesor de facto de Mahout) y **GraphX** (grafos).
+- **Complementos habituales**: **Apache Kafka** (plataforma distribuida de eventos con publicación-suscripción) y **Apache Flink** (procesamiento nativo de flujos con baja latencia).
 
-**Componentes Principales**:
+## Minería de datos
 
-- **HDFS**: Sistema de archivos distribuido.
-- **MapReduce**: Modelo de programación para computación paralela.
-- **YARN**: Gestor de recursos.
-- **Spark**: Procesamiento de datos en memoria.
-- **Pig y Hive**: Procesamiento basado en consultas.
-- **HBase**: Base de datos NoSQL.
-- **Mahout y Spark MLlib**: Algoritmos de machine learning.
-- **Zookeeper**: Gestión de clústeres.
-- **Oozie**: Planificación de trabajos.
+La **minería de datos** es el proceso de extraer conocimiento útil, comprensible y previamente desconocido a partir de grandes volúmenes de datos. Ese conocimiento (patrones, tendencias, relaciones ocultas) apoya la toma de decisiones estratégicas de la organización.
 
-## Minería de Datos
+### El modelo CRISP-DM
 
-La **Minería de Datos** es el proceso de extraer conocimiento útil, comprensible y previamente desconocido a partir de grandes volúmenes de datos almacenados en diversos formatos. Este conocimiento permite identificar patrones, tendencias y relaciones ocultas que pueden ser cruciales para la toma de decisiones estratégicas en una organización.
+**CRISP-DM** (*CRoss Industry Standard Process for Data Mining*, versión 1.0, 2000) es el modelo de proceso estándar más utilizado para estructurar proyectos de minería de datos. Consta de **seis fases** interrelacionadas y no estrictamente secuenciales:
 
-### Modelo CRISP-DM
+1. **Comprensión del negocio**: objetivos y requisitos desde la perspectiva empresarial; dónde puede aportar valor la minería.
+2. **Comprensión de los datos**: exploración de los datos disponibles para evaluar su calidad, relevancia y adecuación.
+3. **Preparación de los datos**: recopilación, limpieza, integración y transformación para construir el conjunto de datos final.
+4. **Modelado**: selección y aplicación de las técnicas, ajustando sus parámetros.
+5. **Evaluación**: valoración de los modelos, técnica y de negocio, frente a los objetivos iniciales.
+6. **Despliegue (distribución)**: el conocimiento se integra en los procesos de decisión de la organización.
 
-El **CRISP-DM** (CRoss Industry Standard Process for Data Mining): Es el modelo estándar más utilizado para estructurar proyectos de minería de datos. Este modelo abierto y flexible consta de seis fases interrelacionadas:
+### Tareas y tipología de problemas
 
-- **Fase 1 - Comprensión del negocio**: Se profundiza en los objetivos y requisitos desde una perspectiva empresarial, identificando problemas y oportunidades donde la minería de datos puede aportar valor.
-- **Fase 2 - Comprensión de los datos**: Se exploran y analizan los datos disponibles para evaluar su calidad, relevancia y adecuación a los objetivos planteados, afinando así los objetivos iniciales.
-- **Fase 3 - Preparación de los datos**: Implica la recopilación, limpieza, integración y transformación de los datos para construir el conjunto de datos final que se utilizará en la fase de modelado.
-- **Fase 4 - Modelado**: Se seleccionan y aplican algoritmos y técnicas de modelado adecuados, ajustando sus parámetros para optimizar el rendimiento de los modelos.
-- **Fase 5 - Evaluación**: Se evalúan los modelos construidos no solo desde una perspectiva técnica (precisión, error, etc.), sino también en términos de su aportación al negocio y cumplimiento de los objetivos iniciales.
-- **Fase 6 - Distribución**: El conocimiento obtenido se presenta y distribuye en la organización, integrándolo en los procesos de toma de decisiones y asegurando su adopción efectiva.
+- **Tareas predictivas**: predicen valores o categorías a partir de datos históricos etiquetados.
+    - **Clasificación (multiclase)**: asignar una etiqueta de clase a cada instancia.
+    - **Categorización (multietiqueta)**: asignar varias etiquetas a cada instancia.
+    - **Priorización (ordenación)**: ordenar instancias según un criterio.
+    - **Regresión**: predecir valores numéricos continuos.
+- **Tareas descriptivas**: descubren patrones en datos no etiquetados.
+    - **Agrupamiento (clustering)**: agrupar instancias similares sin categorías predefinidas.
+    - **Correlación**: identificar relaciones significativas entre variables.
+    - **Reglas de asociación**: descubrir co-ocurrencias frecuentes entre variables.
+    - **Detección de anomalías**: identificar instancias que se desvían del comportamiento normal.
 
-### Tareas y Tipología de Problemas
+### Preparación de los datos
 
-- **Predictivas**: Buscan predecir valores o categorías futuras basándose en datos históricos etiquetados. Incluyen:
-    - **Clasificación (multiclase / multi-class)**: Asignar una etiqueta de clase a instancias basándose en características predictoras.
-    - **Categorización (multietiqueta / multi-label)**: Asignar múltiples etiquetas a cada instancia.
-    - **Priorización (ordenación)**: Ordenar instancias según una métrica o criterio específico.
-    - **Regresión**: Predecir valores numéricos continuos.
-- **Descriptivas**: Pretenden descubrir patrones y relaciones en datos no etiquetados, proporcionando una comprensión más profunda del conjunto de datos. Incluyen:
-    - **Agrupamiento (clustering)**: Agrupar instancias similares sin predefinir categorías.
-    - **Correlación**: Identificar relaciones significativas entre variables.
-    - **Reglas de asociación**: Descubrir relaciones frecuentes entre variables en grandes bases de datos.
-    - **Detección de anomalías**: Identificar instancias que se desvían significativamente del comportamiento normal.
+- **Extracción de características**: cada instancia se representa como un vector de atributos relevantes para el análisis.
+- **Técnicas habituales**:
+    - **Discretización**: convertir atributos numéricos continuos en categorías (binning).
+    - **Numerización**: transformar atributos categóricos en representaciones numéricas (codificación one-hot).
+    - **Valores faltantes**: imputación o eliminación de instancias incompletas.
+    - **Reducción de dimensionalidad**: reducir el número de variables conservando la información relevante (análisis de componentes principales o PCA, autoencoders, selección por ganancia de información).
 
-### Modelos de Representación y Preparación de Datos
+### Técnicas de modelado
 
-- **Extracción de características**: Cada objeto o instancia se representa como un vector de características (atributos) que capturan información relevante para el análisis.
-- **Técnicas de preparación**:
-    - **Discretización**: Convertir atributos numéricos continuos en categorías discretas (por ejemplo, mediante binning).
-    - **Numerización**: Transformar atributos categóricos nominales en representaciones numéricas (como codificación one-hot).
-    - **Gestión de valores faltantes**: Imputación de datos o eliminación de instancias incompletas para manejar la ausencia de valores.
-    - **Reducción de dimensionalidad**: Simplificar el conjunto de datos reduciendo el número de variables, manteniendo la mayor cantidad posible de información relevante. Técnicas como Análisis de Componentes Principales (PCA), autoencoders o selección basada en ganancia de información.
+- **Aprendizaje perezoso (lazy learning)**: no construye un modelo explícito; generaliza en el momento de predecir.
+    - **k-NN (k vecinos más cercanos)**: clasifica según las clases de los vecinos más próximos en el espacio de características.
+- **Aprendizaje anticipativo (eager learning)**: construye un modelo durante el entrenamiento.
+    - **Métodos bayesianos**: predicen la clase más probable a partir de probabilidades.
+    - **Árboles de decisión**: reglas en forma de árbol, interpretables.
+    - **Redes neuronales**: capturan relaciones complejas (base del aprendizaje profundo, tema 34).
+    - **Máquinas de vectores de soporte (SVM)**: buscan el hiperplano que mejor separa las clases.
+    - **Algoritmos evolutivos**: optimizan soluciones imitando la evolución biológica.
+- **Ensembles (meta-clasificadores)**: combinan varios modelos para ganar precisión y robustez.
+    - **Bagging**: modelos entrenados en submuestras aleatorias cuyas predicciones se promedian (Random Forest).
+    - **Boosting**: modelos secuenciales donde cada uno corrige los errores del anterior.
+    - **Stacking**: un modelo de nivel superior aprende a combinar las predicciones de los demás.
 
-### Técnicas de Modelado
-
-- **Aprendizaje Perezoso (Lazy Learning)**: Los algoritmos retrasan la generalización hasta el momento de la predicción. No construyen un modelo explícito durante el entrenamiento. Ejemplo:
-    - **K-NN (K-Nearest Neighbors)**: Clasifica una instancia basándose en las clases de sus vecinos más cercanos en el espacio de características.
-- **Aprendizaje Anticipativo (Eager Learning)**: Los algoritmos construyen un modelo generalizado durante el entrenamiento, que se utiliza para realizar predicciones futuras. Incluye:
-    - **Métodos bayesianos**: Utilizan probabilidades para predecir la clase más probable.
-    - **Árboles de decisión**: Modelos en forma de árbol que representan decisiones y sus posibles consecuencias.
-    - **Redes neuronales**: Modelos inspirados en la estructura del cerebro humano, capaces de capturar relaciones complejas.
-    - **Máquinas de vectores de soporte (SVM)**: Algoritmos que buscan el hiperplano que mejor separa las clases en el espacio de características.
-    - **Algoritmos evolutivos**: Utilizan principios de evolución biológica para optimizar soluciones.
-- **Ensembles o Meta-Clasificadores**: Combinan múltiples modelos para mejorar la precisión y robustez de las predicciones. Estrategias comunes:
-    - **Bagging**: Entrenar múltiples modelos en subconjuntos aleatorios del conjunto de datos y promediar sus predicciones.
-    - **Boosting**: Construir secuencialmente modelos donde cada uno corrige los errores del anterior.
-    - **Stacking**: Combinar las predicciones de varios modelos utilizando un modelo de nivel superior que aprende cómo combinar mejor estas predicciones.
-
-### Evaluación de Modelos
+### Evaluación de modelos
 
 - **Modos de evaluación**:
-    - **Split (División simple)**: Separar los datos en conjuntos de entrenamiento y prueba (por ejemplo, 70% y 30%).
-    - **Validación Cruzada (k-fold)**: Dividir los datos en k subconjuntos; entrenar y probar el modelo k veces, cada vez con un subconjunto diferente como prueba.
-    - **Leave-One-Out (LOOCV)**: Caso especial de validación cruzada donde k es igual al número de instancias; cada instancia se usa una vez como prueba.
-    - **Bootstrap**: Muestreo con reemplazo para crear múltiples conjuntos de entrenamiento y evaluar la variabilidad del modelo.
-- **Matriz de confusión**: Es una tabla que resume el rendimiento del modelo en términos de verdaderos positivos (TP), verdaderos negativos (TN), falsos positivos (FP) y falsos negativos (FN).
+    - **División simple (split)**: separar entrenamiento y prueba (por ejemplo, 70 %-30 %).
+    - **Validación cruzada (k-fold)**: k particiones; se entrena y prueba k veces rotando la partición de prueba.
+    - **Leave-One-Out (LOOCV)**: caso extremo con k igual al número de instancias.
+    - **Bootstrap**: muestreo con reemplazo para estimar la variabilidad del modelo.
+- **Matriz de confusión**: resume el rendimiento de un clasificador:
 
-|                   | **Predicción Positiva** | **Predicción Negativa** |
+|                   | **Predicción positiva** | **Predicción negativa** |
 | ----------------- | :---------------------: | :---------------------: |
-| **Real Positiva** | Verdadero Positivo (TP) |   Falso Negativo (FN)   |
-| **Real Negativa** |   Falso Positivo (FP)   | Verdadero Negativo (TN) |
+| **Real positiva** | Verdadero positivo (TP) |   Falso negativo (FN)   |
+| **Real negativa** |   Falso positivo (FP)   | Verdadero negativo (TN) |
 
-- **Medidas clave: (Principales)**
-    - **Accuracy (Precisión general):** Proporción de predicciones correctas en relación con el total de predicciones.
-        - **Fórmula:** (TP + TN) / (TP + TN + FP + FN)
-    - **Precision (Precisión o Valor Predictivo Positivo [PV+]):** Indica la proporción de predicciones positivas que son correctas.
-        - **Fórmula:** TP / (TP + FP)
-    - **Recall (Exhaustividad, Sensibilidad o True Positive Rate [TPR]):** Mide la capacidad del modelo para identificar correctamente los casos positivos.
-        - **Fórmula**: TP / (TP + FN)
-    - **F-Score (F1):** Media armónica de la precisión y la exhaustividad, equilibrando estas dos métricas.
-        - **Fórmula:** 2 * (Precision * Recall) / (Precision + Recall)
-- **Medidas clave: (Principales 2)**
-    - **True Positive Rate (TPR) o Sensibilidad:** Proporción de casos positivos correctamente identificados por el modelo, también conocida como Recall.
-        - **Fórmula:** TP / (TP + FN)
-    - **False Positive Rate (FPR) o Tasa de Falsos Positivos:** Proporción de casos negativos que el modelo clasifica incorrectamente como positivos.
-        - **Fórmula:** FP / (FP + TN)
-    - **False Negative Rate (FNR) o Tasa de Falsos Negativos:** Proporción de casos positivos que el modelo no detecta (clasifica como negativos).
-        - **Fórmula:** FN / (TP + FN)
-    - **True Negative Rate (TNR) o Especificidad:** Proporción de casos negativos que el modelo clasifica correctamente como negativos.
-        - **Fórmula:** TN / (TN + FP)
-- **Otras métricas:** Hay más métricas de estas pero con el mareo de nombres que hay, suficiente. (Nota: Ojo con las traducciones!)
-    - **Ver tabla:** <https://es.wikipedia.org/wiki/Curva_ROC>
-- **Curva ROC (Receiver Operating Characteristic):** Muestra el rendimiento de un clasificador binario comparando la Tasa de Verdaderos Positivos (Recall) y la Tasa de Falsos Positivos para distintos umbrales.
-    - Permite visualizar cómo el modelo equilibra estos dos aspectos al variar el umbral de decisión.
-    - Una curva que se acerca al vértice superior izquierdo indica un mejor rendimiento.
-- **Área Bajo la Curva (AUC - Area Under the Curve):** Métrica que cuantifica el rendimiento general del modelo en la Curva ROC.
-    - Un AUC de 1 representa un modelo perfecto, mientras que un AUC de 0.5 indica un modelo sin capacidad de clasificación (aleatorio).
-    - Cuanto mayor sea el AUC, mejor será la capacidad del modelo para separar las clases correctamente.
-- **Evaluación de modelos de regresión**: Se utilizan métricas como:
-    - **MSE (Mean Squared Error)**: Promedio de los cuadrados de los errores.
-    - **RMSE (Root Mean Squared Error)**: Raíz cuadrada del MSE, proporciona una medida en las mismas unidades que la variable objetivo.
-    - **MAE (Mean Absolute Error)**: Promedio de los valores absolutos de los errores.
-    - **RSE (Residual Standard Error)**: Medida de la calidad de un modelo de regresión.
-    - **Coeficiente de correlación de Pearson (r)**: Indica la fuerza y dirección de la relación lineal entre dos variables.
-- **Evaluación de modelos de agrupamiento**: Se pueden utilizar medidas como:
-    - **Verosimilitud (Likelihood)**: Evalúa qué tan probable es que los datos se generen a partir del modelo propuesto.
-    - **Índice de Silueta (Silhouette)**: Mide qué tan similar es una instancia a su propio cluster en comparación con otros clusters.
-    - **Coeficiente de Dunn**: Evalúa la compacidad y separación de los clusters.
-- **Evaluación de modelos de reglas de asociación**:
-    - **Soporte (Cobertura)**: Proporción de instancias donde la regla es aplicable.
-    - **Confianza**: Probabilidad de que la consecuencia de la regla sea cierta cuando la antecedente es cierta.
-    - **Lift**: Medida de la importancia de una regla, calculada como la razón entre la confianza de la regla y la probabilidad de la consecuencia.
+- **Métricas de clasificación** (cuidado con las traducciones: *accuracy* es la **exactitud**, aunque a menudo se traduce mal como «precisión», que corresponde a *precision*):
 
-**Diferencias entre Verosimilitud y Probabilidad**:
+| Métrica | Traducción | Fórmula | Qué mide |
+| --- | --- | --- | --- |
+| **Accuracy** | Exactitud | (TP + TN) / total | Proporción global de aciertos |
+| **Precision** | Precisión (valor predictivo positivo) | TP / (TP + FP) | Cuántos positivos predichos son correctos |
+| **Recall (TPR)** | Exhaustividad o sensibilidad | TP / (TP + FN) | Cuántos positivos reales se detectan |
+| **Specificity (TNR)** | Especificidad | TN / (TN + FP) | Cuántos negativos reales se detectan |
+| **FPR** | Tasa de falsos positivos | FP / (FP + TN) | Negativos clasificados como positivos |
+| **FNR** | Tasa de falsos negativos | FN / (TP + FN) | Positivos no detectados |
+| **F-score (F1)** | Valor F | 2·(P·R) / (P + R) | Media armónica de precisión y exhaustividad |
 
-- **Probabilidad**: Mide la posibilidad de que ocurra un evento dado un modelo o distribución conocida.
-- **Verosimilitud (Likelihood)**: Mide qué tan bien un modelo explica un conjunto de datos observado. En modelado estadístico, se utiliza para estimar parámetros que maximizan la verosimilitud de observar los datos dados.
+- **Curva ROC** (*Receiver Operating Characteristic*): representa la tasa de verdaderos positivos frente a la de falsos positivos al variar el umbral de decisión; cuanto más se acerca al vértice superior izquierdo, mejor el clasificador.
+- **AUC** (*Area Under the Curve*): área bajo la curva ROC; **1** es el clasificador perfecto y **0,5** el aleatorio.
+- **Modelos de regresión**: **MSE** (error cuadrático medio), **RMSE** (su raíz, en las unidades de la variable), **MAE** (error absoluto medio) y coeficiente de correlación de **Pearson (r)**.
+- **Modelos de agrupamiento**: **verosimilitud** (qué tan bien explica el modelo los datos observados, a diferencia de la probabilidad, que mide la posibilidad de un evento dado el modelo), **índice de silueta** (similitud de cada instancia con su propio clúster frente a los demás) y **coeficiente de Dunn** (compacidad y separación de los clústeres).
+- **Reglas de asociación**: **soporte** (proporción de instancias donde aplica la regla), **confianza** (probabilidad de la consecuencia cuando se da el antecedente) y **lift** (confianza de la regla frente a la probabilidad base de la consecuencia).
 
-### Difusión y Estándares
+### Difusión y estándares
 
-La **explicabilidad** de los modelos es crucial para su adopción en entornos empresariales. Modelos interpretables facilitan la confianza y comprensión por parte de los usuarios finales y stakeholders.
+La **explicabilidad** de los modelos es clave para su adopción: los modelos interpretables generan confianza en usuarios y responsables. Para intercambiar modelos entre herramientas existen estándares:
 
-El **PMML (Predictive Model Markup Language)** es un estándar basado en XML que permite definir y compartir modelos de minería de datos entre diferentes herramientas y plataformas. Al proporcionar un formato común, facilita la integración de modelos en sistemas de producción sin necesidad de reimplementarlos, acelerando su despliegue y uso efectivo en la organización.
-
-## Tabla de nomenclaturas comunes
-
-| Término en Inglés   | Término en Español           | Definición                                                                        |
-| ------------------- | ---------------------------- | --------------------------------------------------------------------------------- |
-| Accuracy            | Precisión                    | Proporción de predicciones correctas.                                             |
-| Precision           | Valor Predictivo Positivo    | Proporción de verdaderos positivos entre todos los positivos predichos.           |
-| Recall              | Sensibilidad o Exhaustividad | Proporción de verdaderos positivos detectados sobre el total de positivos reales. |
-| Specificity         | Especificidad                | Proporción de verdaderos negativos detectados sobre el total de negativos reales. |
-| F-Score             | Puntaje F                    | Media armónica de la precisión y la exhaustividad.                                |
-| True Positive (TP)  | Verdadero Positivo           | Instancias correctamente predichas como positivas.                                |
-| True Negative (TN)  | Verdadero Negativo           | Instancias correctamente predichas como negativas.                                |
-| False Positive (FP) | Falso Positivo               | Instancias incorrectamente predichas como positivas.                              |
-| False Negative (FN) | Falso Negativo               | Instancias incorrectamente predichas como negativas.                              |
-
-### Fuentes:
-
-<https://es.wikipedia.org/wiki/Curva_ROC>
+- **PMML** (*Predictive Model Markup Language*, Data Mining Group, versión 4.4 de 2019): formato XML para definir y compartir modelos de minería de datos entre plataformas sin reimplementarlos.
+- **ONNX** (*Open Neural Network Exchange*): formato abierto actual de intercambio de modelos de aprendizaje automático, en especial redes neuronales.
 
 ## Caso práctico: clasificación
 
-### Caso práctico 1: Clasificador para Detección de Cáncer
+### Planteamiento
 
-Supón un clasificador que detecta cáncer (sí/no) con un **accuracy del 99%**. Si la tasa de personas con cáncer es muy baja, un clasificador que siempre predice "no" puede obtener este alto accuracy al fallar en identificar los casos positivos.
+Se evalúa un sistema de detección de cáncer sobre **1000 pacientes**, de los que solo **10** están realmente enfermos (clase muy desbalanceada: 10 positivos, 990 negativos). Se comparan dos clasificadores:
 
-Por otro lado, un clasificador con un **recall del 99%** detecta casi todos los casos de cáncer, pero puede tener falsos positivos altos, lo que implica realizar pruebas innecesarias.
+- **Clasificador A**: predice siempre «no cáncer».
+- **Clasificador B**: detecta a 9 de los 10 enfermos, pero marca como positivos a 20 pacientes sanos.
 
-Un clasificador con **precisión del 99%** se enfoca en minimizar falsos positivos, asegurando que la mayoría de diagnósticos positivos son correctos. Este ejemplo ilustra cómo las métricas deben seleccionarse en función de la importancia de identificar verdaderos positivos o reducir falsos positivos.
+### Resolución
 
-### Caso práctico 2: Clasificador para Detección de Cáncer (con cálculo)
+**Clasificador A**: TP = 0, TN = 990, FP = 0, FN = 10.
 
-Imaginemos un clasificador para detectar cáncer en un conjunto de datos con 1,000 pacientes, donde solo 10 realmente tienen cáncer. Esto significa que hay **10 casos positivos** y **990 casos negativos**.
+- **Accuracy** = (0 + 990) / 1000 = **99 %**
+- **Recall** = 0 / (0 + 10) = **0 %**
+- **Precision** = no detecta ningún positivo (**0 %**)
 
-Supongamos que evaluamos dos clasificadores en este conjunto de datos:
+Pese a su exactitud del 99 %, el modelo es inútil: no identifica ni un solo caso de cáncer. El accuracy engaña porque la clase mayoritaria domina el resultado.
 
-1. **Clasificador con alto “Accuracy” pero bajo “Precision” y “Recall”**\ Este clasificador ciego predice que TODOS los pacientes NO tienen cáncer. Así, tendría una precisión general (accuracy) alta debido al bajo número de casos positivos:
-    - **TP (Verdaderos Positivos)**: 0 (no identificó ningún caso positivo correctamente)
-    - **TN (Verdaderos Negativos)**: 990
-    - **FP (Falsos Positivos)**: 0
-    - **FN (Falsos Negativos)**: 10 (falló en detectar todos los casos de cáncer)
+**Clasificador B**: TP = 9, TN = 970, FP = 20, FN = 1.
 
-**Cálculo de métricas**:
+- **Accuracy** = (9 + 970) / 1000 = **97,9 %**
+- **Precision** = 9 / (9 + 20) = 9 / 29 = **31 %**
+- **Recall** = 9 / (9 + 1) = **90 %**
 
-- **Accuracy** = (TP + TN) / (TP + TN + FP + FN)\ = (0 + 990) / (0 + 990 + 0 + 10)\ = 990 / 1000\ = 0.99 o **99%**
+| Métrica | Clasificador A | Clasificador B |
+| --- | --- | --- |
+| Accuracy | 99 % | 97,9 % |
+| Precision | 0 % | 31 % |
+| Recall | 0 % | 90 % |
 
-Aunque el **accuracy es del 99%**, este modelo es poco útil para detectar cáncer, ya que **no identifica ningún caso positivo** (0% recall y precisión).
+### Conclusión
 
-1. **Clasificador con alto “Recall” pero menor “Precision”**\ Otro clasificador se centra en identificar todos los casos de cáncer, aunque genere algunos falsos positivos. Este clasificador detecta 9 de los 10 pacientes con cáncer, pero también clasifica erróneamente a 20 pacientes sanos como positivos.
-    - **TP (Verdaderos Positivos)**: 9
-    - **TN (Verdaderos Negativos)**: 970
-    - **FP (Falsos Positivos)**: 20
-    - **FN (Falsos Negativos)**: 1
+Con clases desbalanceadas, el accuracy no es una métrica fiable: el clasificador B es claramente mejor pese a tener menor exactitud. La métrica debe elegirse según el coste de cada tipo de error: **recall** alto cuando no detectar un positivo es grave (cribados médicos), **precisión** alta cuando el falso positivo es costoso (pruebas invasivas innecesarias). El **F1** equilibra ambas cuando interesan las dos.
 
-**Cálculo de métricas**:
+## Fuentes {.unnumbered .unlisted}
 
-- **Accuracy** = (TP + TN) / (TP + TN + FP + FN)\ = (9 + 970) / (9 + 970 + 20 + 1)\ = 979 / 1000\ = 0.979 o **97.9%**
-- **Precision** = TP / (TP + FP)\ = 9 / (9 + 20)\ = 9 / 29\ = 0.31 o **31%**
-- **Recall** = TP / (TP + FN)\ = 9 / (9 + 1)\ = 9 / 10\ = 0.9 o **90%**
-
-Aunque el **accuracy** es del 97.9%, similar al primer clasificador, este modelo es más efectivo en la detección de casos positivos gracias a un **recall del 90%**, capturando casi todos los casos de cáncer. Sin embargo, su **precisión es baja** (31%), lo que significa que solo el 31% de los diagnósticos positivos son realmente correctos.
+- W. H. Inmon, *Building the Data Warehouse*, 4.ª ed., Wiley, 2005.
+- R. Kimball y M. Ross, *The Data Warehouse Toolkit*, 3.ª ed., Wiley, 2013.
+- D. Laney, *3D Data Management: Controlling Data Volume, Velocity and Variety*, META Group, 2001.
+- P. Chapman et al., *CRISP-DM 1.0: Step-by-step data mining guide*, SPSS, 2000.
+- Documentación oficial de los proyectos Apache Hadoop y Apache Spark (Apache Software Foundation).
+- Data Mining Group, *PMML 4.4*, 2019.
+- Reglamento (UE) 2022/868, de Gobernanza de Datos (DOUE 3-jun-2022, aplicable desde el 24-sep-2023) y Reglamento (UE) 2023/2854, de Datos (DOUE 22-dic-2023, aplicable en lo esencial desde el 12-sep-2025), verificados en EUR-Lex en julio de 2026.
