@@ -1,120 +1,171 @@
 # Virtualización y contenedores
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+## Virtualización e hipervisores
 
+La virtualización es la técnica que permite abstraer un recurso físico (servidor, almacenamiento, red, escritorio) y presentarlo como uno o varios recursos lógicos independientes mediante una capa de software. Es la base de la consolidación de servidores, del centro de datos definido por software (tema 47) y de la computación en la nube.
 
-## Virtualización
+- **Ventajas**: consolidación de servidores y ahorro de costes (menos máquinas físicas, menor consumo energético), aislamiento entre entornos, agilidad de aprovisionamiento, escalabilidad, alta disponibilidad y recuperación ante desastres (una máquina virtual son ficheros: se copia, se migra y se restaura), entornos de prueba baratos.
+- **Inconvenientes**: cierta sobrecarga de rendimiento (hoy mínima gracias a la asistencia hardware), el host físico como punto único de fallo si no se trabaja en clúster, y complejidad añadida de gestión y licenciamiento.
 
-La virtualización es una técnica que permite abstraer un recurso físico en uno virtual mediante software.
+### Conceptos y funciones de plataforma
 
-Entre sus **ventajas** destacan la independencia, escalabilidad, alta disponibilidad, flexibilidad, seguridad, agilidad, protección del medio ambiente y ahorro de costes. Como **desventaja**, puede presentar un mayor consumo de recursos y un rendimiento ligeramente inferior, aunque en la actualidad este impacto es mínimo.
+Terminología y capacidades comunes a las plataformas de virtualización empresariales (vSphere, Hyper-V, KVM/Proxmox):
 
-### Funciones comunes:
+- **Host o anfitrión**: máquina física sobre la que se ejecuta el hipervisor.
+- **Guest o invitado**: cada máquina virtual (VM) que se ejecuta sobre el anfitrión, con su propio sistema operativo.
+- **Máquina virtual como ficheros**: una VM se materializa en un fichero de configuración más uno o varios discos virtuales alojados en un *datastore*.
+- **Operaciones en caliente**: añadir CPU, memoria o disco a una VM encendida, sin parada de servicio.
+- **Snapshot**: foto del estado de una VM (disco y, opcionalmente, memoria) a la que poder volver; útil antes de cambios arriesgados, no sustituye a la copia de seguridad.
+- **Migración en caliente**: mover una VM en ejecución de un host a otro sin cortar el servicio (**vMotion** en VMware, **Live Migration** en Hyper-V y KVM).
+- **Balanceo dinámico de carga**: redistribución automática de las VM entre los hosts del clúster según su carga (**DRS** en VMware).
+- **Alta disponibilidad (HA)**: si cae un host, sus VM se rearrancan automáticamente en el resto del clúster.
+- **Sobresuscripción (overcommit)**: asignar entre todas las VM más recursos virtuales que los físicos disponibles, confiando en que no los usen a la vez; en memoria se apoya en técnicas como el **ballooning** (el hipervisor reclama memoria poco usada de unas VM para dársela a otras).
+- **Thin provisioning**: los discos virtuales solo ocupan el espacio realmente escrito, no el tamaño nominal asignado.
 
-- **Operaciones en caliente**: Realizar operaciones sin necesidad de apagar la máquina.
-- **Migración de máquinas virtuales entre servidores físicos**.
-- **Distribución de carga en tiempo real**: Permite optimizar el uso de recursos.
+### Tipos de virtualización
 
-**Tipos de virtualización**:
+- **Virtualización de servidores**: ejecutar varias máquinas virtuales sobre un mismo host físico.
+    - **Virtualización completa (nativa)**: el hipervisor presenta un hardware virtual completo y el sistema operativo invitado se ejecuta sin modificar. Hoy se apoya en la **virtualización asistida por hardware**: extensiones del procesador **Intel VT-x** y **AMD-V** (estándar en cualquier CPU actual), traducción de direcciones en hardware (**EPT/RVI**) y virtualización de E/S (**VT-d/AMD-Vi**, **SR-IOV**).
+    - **Paravirtualización**: el sistema operativo invitado se modifica para colaborar con el hipervisor, sustituyendo las instrucciones privilegiadas por llamadas a su API (**hypercalls**). Gana rendimiento a costa de exigir kernels adaptados. El ejemplo clásico es **Xen** en modo PV; hoy la técnica pervive sobre todo en los drivers paravirtualizados (**virtio** en KVM, VMware Tools, servicios de integración de Hyper-V).
+    - **Virtualización a nivel de sistema operativo**: un único kernel anfitrión ejecuta varios espacios de usuario aislados, los **contenedores** (LXC, Docker, *jails* de FreeBSD, zonas de Solaris). No hay hipervisor ni sistema operativo invitado completo (se desarrolla en la sección siguiente).
+- **Virtualización de escritorio (VDI)**: el escritorio del usuario se ejecuta como VM en el CPD y se accede a él por red desde cualquier dispositivo; escritorios persistentes o no persistentes. Se desarrolla en el tema 48.
+- **Virtualización de aplicaciones**: la aplicación se empaqueta y ejecuta aislada del sistema operativo donde corre, eliminando conflictos de librerías (Citrix Virtual Apps, VMware ThinApp).
+- **Virtualización del almacenamiento**: presenta el almacenamiento físico como volúmenes lógicos independientes de los dispositivos (tema 45).
+- **Virtualización de red**: crea redes lógicas independientes de la topología física; su evolución son las redes definidas por software, SDN y NFV (tema 68).
+- **Virtualización del CPD (SDDC)**: cómputo, red y almacenamiento virtualizados y orquestados por software (temas 43 y 47).
+- **Emulación**: reproducir por software una arquitectura hardware completa distinta de la real (procesador incluido), lo que permite ejecutar binarios de otra plataforma a costa de un gran coste de rendimiento. Ejemplos: **QEMU** (en modo emulación), Bochs, MAME. Wine no es un emulador sino una capa de compatibilidad (reimplementa las API de Windows sobre Linux).
 
-- **Virtualización de servidores**: Permite ejecutar varias máquinas virtuales en un solo host físico.
-    - **Virtualización completa, de hardware o nativa**: Utiliza un software llamado **hipervisor** capaz de crear y gestionar máquinas virtuales que emulan varios hosts aislados en un único servidor físico.
-        - **Host/Anfitrión**: Máquina física donde está el hipervisor.
-        - **Invitado/Guest**: Máquinas virtuales.
-        - Consiste en un fichero de configuración y un fichero de datastore que simula el disco duro virtual.
-    - **Virtualización parcial o paravirtualización**: Ofrece mayor rendimiento pero requiere sistemas operativos adaptados para realizar llamadas directas al hardware físico.
-        - Las llamadas, conocidas como **hypercalls**, se realizan mediante el API del hipervisor.
-        - Las operaciones se envían directamente al hardware físico en lugar de ejecutarse en la capa de virtualización.
-        - **Ejemplos:** VMware ESXi, Citrix XenServer, Microsoft Hyper-V.
-- **Virtualización de sistema operativo**: Permite ejecutar un sistema operativo dentro de otro, tomando parte de los recursos del sistema operativo anfitrión.
-    - **Ejemplos:** VMware Workstation, Oracle VirtualBox, Parallels Desktop, Microsoft Virtual PC.
-- **Virtualización de escritorio o puesto de trabajo** (*Virtual Desktop Infrastructure* - **VDI**): Permite ejecutar un escritorio virtual en un servidor y acceder a él desde cualquier dispositivo.
-    - **Características**:
-        - Independiza el escritorio que utiliza el usuario del hardware que usa para su acceso.
-        - El escritorio se ejecuta remotamente en un servidor, incluyendo el disco duro.
-        - Requiere conexión de red.
-        - Permite gran flexibilidad y ahorro de costes.
-    - **Tipos de escritorios**:
-        - **Estático/Dinámico:**
-            - **Estático**: Cada usuario se conecta siempre a la misma máquina virtual.
-            - **Dinámico**: Se crea una nueva máquina virtual para cada usuario que se conecta.
-        - **Persistente / No-Persistente:**
-            - **Persistente**: Los cambios se conservan al reiniciar la máquina.
-            - **No persistente**: Los cambios no se conservan al reiniciar la máquina.
-- **Virtualización de aplicaciones**: Permite ejecutar aplicaciones en diferentes sistemas operativos o plataformas sin tener que instalarlas de manera nativa.
-    - Independiza las aplicaciones del entorno donde se ejecutan, eliminando problemas de incompatibilidad de librerías con otras aplicaciones o el propio sistema operativo.
-    - **Ejemplos:** Citrix XenApp, Microsoft App-V, VMware Horizon.
-- **Virtualización del almacenamiento**: Permite crear múltiples volúmenes lógicos a partir de un espacio de almacenamiento físico.
-    - **Mecanismos de implementación**: SAN (*Storage Area Network*) y NAS (*Network Attached Storage*).
-- **Virtualización de red**: Permite crear múltiples redes lógicas a partir de una red física.
-- **Virtualización de centros de datos**: Permite virtualizar servidores junto con dispositivos de almacenamiento, redes y otros equipos de infraestructura.
-    - Incluye virtualización de cómputo, de red, de almacenamiento y orquestación.
+### El hipervisor
 
-### Otras formas de virtualización:
+El hipervisor o monitor de máquina virtual (VMM) es el software que crea, ejecuta y gestiona las máquinas virtuales, repartiendo entre ellas los recursos físicos del host y manteniéndolas aisladas entre sí.
 
-- **Emulación**: Permite ejecutar programas en una plataforma diferente de aquella para la cual fueron escritos originalmente, imitando o suplantando vía software la arquitectura y recursos completos (procesador, memoria, conjunto de instrucciones, comunicaciones).
-    - Es muy lenta.
-    - **Ejemplos:** Bochs, MAME, QEMU, Microsoft Virtual PC y Wine.
-- **Simulación**: Reproduce el comportamiento del programa.
+- **Tipo 1 (bare metal o nativo)**: se ejecuta directamente sobre el hardware, sin sistema operativo anfitrión. Máximo rendimiento y seguridad; es el habitual en el CPD.
+    - **Ejemplos**: VMware **ESXi** (núcleo de la plataforma vSphere), Microsoft **Hyper-V**, **KVM** (integrado en el kernel Linux; base de Proxmox VE, oVirt y OpenStack) y **Xen** (base de XenServer 8, antes Citrix Hypervisor, y de XCP-ng).
+- **Tipo 2 (hosted o alojado)**: se ejecuta como una aplicación sobre un sistema operativo anfitrión con el que comparte recursos. Más sencillo de instalar y usar; orientado a escritorio, pruebas y desarrollo.
+    - **Ejemplos**: VMware Workstation/Fusion, Oracle **VirtualBox**, Parallels Desktop, QEMU.
+- **El caso KVM**: la frontera entre tipos es difusa. KVM se carga como un módulo sobre un Linux ya instalado (parecería tipo 2), pero convierte al propio kernel en hipervisor con acceso directo al hardware, por lo que se clasifica como **tipo 1**.
 
-### Hypervisor
+## Contenedores: Docker
 
-El **hipervisor** (o monitor de máquina virtual) es el software encargado de crear y gestionar máquinas virtuales. Actúa como una capa de virtualización de hardware que permite utilizar, al mismo tiempo, diferentes sistemas operativos en una misma computadora.
+Los contenedores son virtualización a nivel de sistema operativo: empaquetan una aplicación con todas sus dependencias (binarios, librerías, configuración) en una unidad ligera y portable que se ejecuta aislada pero **compartiendo el kernel del anfitrión**. Garantizan que la aplicación se comporte igual en desarrollo, pruebas y producción, y son la unidad de despliegue natural de los microservicios (tema 56).
 
-### Tipos de hipervisores:
+- **Base tecnológica (kernel Linux)**:
+    - **Namespaces**: dan a cada contenedor una vista privada del sistema: procesos (pid), red (net), sistema de ficheros (mnt), nombre de máquina (uts), comunicación entre procesos (ipc) y usuarios (user).
+    - **cgroups** (*control groups*): limitan y contabilizan los recursos que consume cada contenedor (CPU, memoria, E/S).
+    - **Refuerzo de seguridad**: *capabilities*, seccomp y AppArmor/SELinux restringen lo que el contenedor puede pedirle al kernel.
+- **Contenedor frente a máquina virtual**: al compartir kernel, el aislamiento del contenedor es menor que el de una VM (es pregunta habitual):
 
-- **Hipervisor Tipo 1 (Nativo, Unhosted o Bare Metal)**: Se ejecutan directamente en el hardware del host físico y tienen acceso directo a los recursos de la máquina.
-    - Son muy rápidos y eficientes en el uso de recursos, pero requieren hardware especialmente diseñado para soportarlos.
-    - **Ejemplos:** Kernel-based Virtual Machine (**KVM**), Microsoft Hyper-V, VMware ESXi, Oracle VM Server.
-- **Hipervisor Tipo 2 (Hosted)**: Se ejecutan en un sistema operativo existente y comparten los recursos del host físico con el sistema operativo anfitrión.
-    - Son más fáciles de instalar y usar, pero menos eficientes en el uso de recursos y menos seguros que los hipervisores de tipo 1.
-    - **Ejemplos:** VMware Workstation, Parallels Desktop, VirtualBox, VMware Player, QEMU, Bhyve.
-- **Hipervisor Tipo Híbrido**: Combinan características de los hipervisores de tipo 1 y tipo 2. Se ejecutan en el hardware del host físico pero requieren un sistema operativo anfitrión para funcionar.
-    - El hipervisor interactúa directamente con el hardware en algunas ocasiones y utiliza servicios del sistema operativo anfitrión en otras.
-    - **Ejemplos:** Microsoft Virtual PC y Microsoft Virtual Server 2005 R2.
+| Aspecto | Máquina virtual | Contenedor |
+| --- | --- | --- |
+| Aislamiento | Hardware virtual y SO completo por VM (fuerte) | Procesos que comparten el kernel del host (más débil) |
+| Tamaño | Gigabytes (SO invitado completo) | Megabytes (aplicación y dependencias) |
+| Arranque | Minutos | Segundos o menos |
+| Densidad por host | Decenas | Cientos |
+| Sistema operativo | Cualquiera, distinto del host incluso | Ligado al kernel del host |
+| Sobrecarga | Hipervisor + SO invitado | Mínima |
 
-## Contenedores Docker
+### Docker
 
-Herramientas de virtualización a nivel de sistema operativo que permiten ejecutar aplicaciones de manera aislada y portátil en cualquier entorno. Gracias a su diseño, los contenedores aseguran que las aplicaciones sean consistentes en diferentes entornos, desde el desarrollo hasta la producción.
+Docker (2013) popularizó los contenedores al estandarizar el formato de imagen y simplificar su construcción y distribución. Tiene arquitectura cliente-servidor.
 
-### Componentes
+- **Arquitectura**:
+    - **Cliente `docker`**: interfaz de línea de comandos que habla con el demonio a través de su API REST.
+    - **Docker Engine (`dockerd`)**: demonio que construye imágenes y gestiona contenedores, redes y volúmenes. Desde **Docker Engine 29** (2026) usa por defecto el almacén de imágenes de containerd.
+    - **containerd**: runtime de alto nivel que gestiona el ciclo de vida de los contenedores; delega la creación efectiva en **runc**, el runtime de bajo nivel de referencia.
+- **Componentes**:
+    - **Imagen**: plantilla inmutable de solo lectura, construida por **capas** reutilizables; se define en un **Dockerfile**.
+    - **Contenedor**: instancia en ejecución de una imagen, a la que se añade una capa superior de escritura efímera.
+    - **Registro (registry)**: repositorio para almacenar y distribuir imágenes: **Docker Hub** es el público de referencia; en entornos corporativos se usan registros privados (Harbor, GitLab Container Registry).
+    - **Docker Compose**: define y ejecuta aplicaciones multicontenedor descritas en un fichero YAML (`compose.yaml`), típicamente para desarrollo y entornos pequeños.
+    - **Docker Swarm**: orquestador propio de Docker, más sencillo que Kubernetes pero de uso minoritario.
+- **Estándares OCI** (*Open Container Initiative*, Linux Foundation, **2015**): garantizan que imágenes y runtimes sean interoperables entre herramientas (Docker, Podman, Kubernetes):
+    - **runtime-spec** (v1.3.0, 2024): cómo ejecutar un contenedor ya desempaquetado.
+    - **image-spec** (v1.1.1, 2025): formato de la imagen y sus capas.
+    - **distribution-spec** (v1.1.1, 2025): API de los registros para subir y bajar imágenes.
+    - Gracias a OCI existen alternativas compatibles como **Podman** (sin demonio y *rootless*, orientado a seguridad) o CRI-O.
 
-- **Imágenes Docker**: Son plantillas que contienen todo lo necesario para ejecutar una aplicación, incluyendo el código fuente, librerías, configuraciones, entre otros elementos necesarios.
-    - Se generan a partir de un archivo **Dockerfile**, que especifica paso a paso las instrucciones para construir la imagen.
-- **Contenedores Docker**: Representan instancias ejecutables de una imagen.
-    - Un contenedor puede contener una única aplicación o varias aplicaciones que operen conjuntamente.
-    - Los contenedores están **aislados** entre sí, lo que significa que no tienen acceso ni a los recursos del sistema anfitrión ni a otros contenedores. Esto garantiza un alto nivel de seguridad y portabilidad.
-- **Docker Engine**: Es el motor que gestiona y ejecuta tanto contenedores como imágenes. Actúa como el núcleo operativo de Docker.
-- **Docker Registry**: Es un repositorio utilizado para almacenar y distribuir imágenes Docker.
-    - Ejemplo: **Docker Hub**, que es el registro más utilizado y permite a los usuarios subir, descargar y compartir imágenes con facilidad.
-- **\*Docker Machine**: Herramienta para instalar Docker Engine en máquinas virtuales o físicas y gestionarlas desde una única interfaz.
-- **\*Docker Compose**: Permite definir y ejecutar aplicaciones multicontenedor. Los servicios se describen en un archivo YAML, facilitando su configuración y despliegue.
-- **\*Docker Swarm**: Es una herramienta de **orquestación de contenedores** que permite implementar y gestionar aplicaciones en contenedores a escala.
-    - Aunque es más sencilla que Kubernetes, su funcionalidad es menos avanzada y su uso es menos extendido.
+Ejemplo de Dockerfile mínimo:
 
-## Plataforma de Kubernetes
+```dockerfile
+FROM python:3.13-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+EXPOSE 8000
+CMD ["python", "app.py"]
+```
 
-Plataforma open-source diseñada para la **orquestación de contenedores**. Se utiliza para **automatizar** la implementación, escalado y administración de aplicaciones en contenedores, siendo una de las herramientas más robustas y populares en este ámbito.
+- **Comandos básicos**: `docker build -t miapp:1.0 .` (construir la imagen), `docker run -d -p 80:8000 miapp:1.0` (ejecutar publicando el puerto), `docker ps` (contenedores activos), `docker images`, `docker pull` / `docker push` (bajar/subir del registro), `docker logs` y `docker exec -it <id> bash` (entrar en un contenedor).
 
-### Componentes de Kubernetes
+## Orquestación: Kubernetes
 
-- **Nodos**: Son los servidores que ejecutan los contenedores. Cada nodo cuenta con un agente llamado **kubelet**, que se encarga de gestionar los contenedores en el nodo.
-- **Clúster**: Agrupación de nodos que trabajan de manera conjunta para ejecutar aplicaciones.
-- **Master**: Es el conjunto de componentes encargados de controlar y administrar el clúster.
-    - Incluye el **controlador**, que supervisa el estado del clúster y toma decisiones sobre su gestión.
-    - Otros componentes clave son el **API Server**, que actúa como intermediario para la comunicación, y el **Scheduler** (Planificador), responsable de asignar las tareas a los nodos.
-- **Pods (Cápsulas)**: Son las unidades básicas de ejecución en Kubernetes. Pueden contener uno o más contenedores junto con los recursos compartidos que necesitan.
-- **Deployments**: Permiten desplegar y gestionar aplicaciones dentro del clúster. Ofrecen mecanismos para el escalado y actualizaciones de las aplicaciones.
-- **Services**: Proveen un punto de acceso a las aplicaciones a través de una dirección IP y un puerto específico, facilitando la conectividad entre los componentes.
+Cuando se pasa de unos pocos contenedores a decenas o cientos repartidos en varios servidores, hace falta un **orquestador**: software que automatiza su despliegue, escalado, red, balanceo y autorreparación. **Kubernetes** (K8s), creado por Google a partir de su sistema interno Borg y donado a la **CNCF** (*Cloud Native Computing Foundation*) en **2015**, es el estándar de facto; publica **tres versiones al año** (vigente: **v1.36**, abril de 2026).
 
-### Funcionamiento de Kubernetes
+### Arquitectura del clúster
 
-El funcionamiento de Kubernetes se centra en la creación y gestión de **pods** y **deployments** para ejecutar aplicaciones en el clúster.
+Un clúster de Kubernetes se compone de un plano de control y un conjunto de nodos de trabajo. La denominación «master» está retirada del proyecto: hoy se habla de **plano de control** (*control plane*).
 
-- El usuario define un **deployment**, especificando el número de réplicas necesarias y los nodos donde deben ejecutarse.
-- El **Scheduler** asigna las réplicas a los nodos disponibles, mientras que el **Controlador** asegura que se mantenga el número deseado de réplicas activas.
-- En caso de fallo de un nodo o de un pod, Kubernetes crea automáticamente nuevos pods para cumplir con el estado deseado.
-- Los **Services** permiten la conexión a las aplicaciones mediante direcciones IP y puertos definidos, ofreciendo un acceso consistente incluso en escenarios de escalado o fallos.
+- **Plano de control**:
+    - **kube-apiserver**: puerta de entrada del clúster; expone la API REST con la que interactúan usuarios, componentes y controladores.
+    - **etcd**: almacén clave-valor distribuido y consistente donde se guarda todo el estado del clúster.
+    - **kube-scheduler**: decide en qué nodo se ejecuta cada pod según recursos disponibles y restricciones (afinidad, *taints*).
+    - **kube-controller-manager**: ejecuta los bucles de control que reconcilian el estado real con el declarado.
+- **Nodos de trabajo**:
+    - **kubelet**: agente de cada nodo; garantiza que los contenedores de sus pods estén en ejecución y sanos.
+    - **kube-proxy**: mantiene las reglas de red que hacen funcionar los Services.
+    - **Runtime de contenedores**: containerd o CRI-O, integrados mediante la interfaz **CRI** (*Container Runtime Interface*); el soporte directo de Docker (dockershim) se eliminó en la **v1.24**.
+- **Modelo declarativo**: el estado deseado se describe en manifiestos YAML y los controladores lo reconcilian de forma continua: si un pod muere se recrea, si cae un nodo sus pods se reprograman en otros.
+
+### Objetos principales
+
+- **Pod**: unidad mínima de despliegue: uno o más contenedores que comparten red (IP) y almacenamiento.
+- **ReplicaSet**: mantiene en ejecución un número fijo de réplicas de un pod.
+- **Deployment**: gestiona ReplicaSets y aporta despliegue declarativo, actualización continua (*rolling update*) y vuelta atrás (*rollback*); es el objeto habitual para aplicaciones sin estado.
+- **StatefulSet**: para aplicaciones con estado (bases de datos): da a cada réplica identidad y almacenamiento estables.
+- **DaemonSet**: asegura una copia del pod en cada nodo (agentes de monitorización, logs).
+- **Job y CronJob**: tareas que se ejecutan hasta terminar, puntuales o planificadas.
+- **Service**: IP virtual y nombre DNS estables para acceder a un conjunto de pods; tipos **ClusterIP** (interno), **NodePort** (puerto fijo en cada nodo) y **LoadBalancer** (balanceador externo, típico en nube).
+- **Ingress**: enrutamiento HTTP/HTTPS de entrada al clúster por host y ruta, con terminación TLS; requiere un controlador. El controlador Ingress NGINX se retiró en marzo de 2026 y el proyecto evoluciona hacia la **Gateway API**.
+- **ConfigMap y Secret**: configuración y credenciales desacopladas de la imagen del contenedor.
+- **Namespace**: partición lógica del clúster para separar equipos o entornos.
+- **PersistentVolume (PV) y PersistentVolumeClaim (PVC)**: volumen de almacenamiento persistente y solicitud que hace de él una aplicación.
+
+Ejemplo de manifiesto (Deployment con 3 réplicas):
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: miapp
+  template:
+    metadata:
+      labels:
+        app: miapp
+    spec:
+      containers:
+        - name: miapp
+          image: miapp:1.0
+          ports:
+            - containerPort: 8000
+```
+
+- **Comandos básicos**: `kubectl apply -f deployment.yaml` (aplicar un manifiesto), `kubectl get pods` (estado), `kubectl scale deployment miapp --replicas=5` (escalar), `kubectl rollout undo deployment/miapp` (rollback), `kubectl logs` y `kubectl describe` (diagnóstico).
+
+### Ecosistema y distribuciones
+
+- **Helm**: gestor de paquetes de Kubernetes; los *charts* empaquetan y versionan conjuntos de manifiestos parametrizables.
+- **Autoescalado**: **HPA** (horizontal: más pods según carga), **VPA** (vertical: más CPU/memoria por pod) y Cluster Autoscaler (más nodos).
+- **Distribuciones empresariales**: Red Hat **OpenShift** (muy extendida en administraciones públicas), SUSE Rancher y **k3s** (ligera, para edge), VMware Tanzu.
+- **Servicios gestionados en nube**: Amazon **EKS**, Microsoft **AKS** y Google **GKE**: el proveedor opera el plano de control y el cliente gestiona las cargas.
+
+## Fuentes {.unnumbered .unlisted}
+
+- Documentación oficial de Docker, docs.docker.com (Docker Engine 29), consulta de julio de 2026.
+- Documentación oficial de Kubernetes, kubernetes.io (v1.36, abril de 2026), consulta de julio de 2026.
+- Especificaciones OCI (opencontainers.org): runtime-spec v1.3.0 (noviembre de 2024), image-spec v1.1.1 (marzo de 2025) y distribution-spec v1.1.1 (enero de 2025).

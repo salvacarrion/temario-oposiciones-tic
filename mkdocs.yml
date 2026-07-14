@@ -78,11 +78,11 @@ nav:
   - '⚠️ Tema 20: Análisis de procesos': 20-analisis-de-procesos.md
   - '⚠️ Tema 21: Metodologías ágiles y escalado ágil': 21-metodologias-agiles-y-escalado-agil.md
 - Bloque III — Ingeniería del software:
-  - '⚠️ Tema 23: Análisis y diseño de aplicaciones': 23-analisis-y-diseno-de-aplicaciones.md
+  - 'Tema 23: Análisis y diseño de aplicaciones': 23-analisis-y-diseno-de-aplicaciones.md
   - 'Tema 24: Proceso unificado y UML': 24-proceso-unificado-y-uml.md
-  - '⚠️ Tema 25: Calidad del software': 25-calidad-del-software.md
-  - '⚠️ Tema 26: Control de versiones, integración continua y DevOps': 26-control-de-versiones-integracion-continua-y-devops.md
-  - '⚠️ Tema 27: Testeo de software': 27-testeo-de-software.md
+  - 'Tema 25: Calidad del software': 25-calidad-del-software.md
+  - 'Tema 26: Control de versiones, integración continua y DevOps': 26-control-de-versiones-integracion-continua-y-devops.md
+  - 'Tema 27: Testeo de software': 27-testeo-de-software.md
 - Bloque IV — Seguridad de la información:
   - 'Tema 28: Ciberseguridad': 28-ciberseguridad.md
   - 'Tema 29: Esquema Nacional de Seguridad (Real Decreto 311/2022)': 29-esquema-nacional-de-seguridad.md
@@ -92,18 +92,18 @@ nav:
 - Bloque V — Datos, IA y tecnologías emergentes:
   - 'Tema 34: Inteligencia artificial': 34-inteligencia-artificial.md
   - 'Tema 35: Ética y regulación de la inteligencia artificial': 35-etica-regulacion-inteligencia-artificial.md
-  - '⚠️ Tema 36: Bases de datos': 36-bases-de-datos.md
-  - '⚠️ Tema 37: Gestión de datos corporativos y Big Data': 37-gestion-de-datos-corporativos-y-big-data.md
-  - '⚠️ Tema 38: Gobernanza del dato': 38-gobernanza-del-dato.md
+  - 'Tema 36: Bases de datos': 36-bases-de-datos.md
+  - 'Tema 37: Gestión de datos corporativos y Big Data': 37-gestion-de-datos-corporativos-y-big-data.md
+  - 'Tema 38: Gobernanza del dato': 38-gobernanza-del-dato.md
   - 'Tema 40: APIs y apificación': 40-apis-y-apificacion.md
   - 'Tema 41: Automatización robótica de procesos (RPA)': 41-automatizacion-robotica-de-procesos.md
   - 'Tema 42: Blockchain y otras tecnologías emergentes': 42-blockchain-y-otras-tecnologias-emergentes.md
 - Bloque VI — Sistemas e infraestructuras:
   - 'Tema 43: Centros de proceso de datos': 43-centros-de-proceso-de-datos.md
-  - '⚠️ Tema 44: Virtualización y contenedores': 44-virtualizacion-y-contenedores.md
-  - '⚠️ Tema 45: Sistemas de almacenamiento': 45-sistemas-de-almacenamiento.md
+  - 'Tema 44: Virtualización y contenedores': 44-virtualizacion-y-contenedores.md
+  - 'Tema 45: Sistemas de almacenamiento': 45-sistemas-de-almacenamiento.md
   - 'Tema 47: Computación en la nube y de altas prestaciones': 47-computacion-en-la-nube-y-altas-prestaciones.md
-  - '⚠️ Tema 48: Puesto de trabajo TIC': 48-puesto-de-trabajo-tic.md
+  - 'Tema 48: Puesto de trabajo TIC': 48-puesto-de-trabajo-tic.md
 - Bloque VII — Protección de datos y administración electrónica:
   - 'Tema 49: Protección de datos personales': 49-proteccion-de-datos-personales.md
   - 'Tema 50: Administración electrónica': 50-administracion-electronica.md

@@ -1,180 +1,164 @@
 # Calidad del software
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
-
+La calidad del software es el grado en que un producto cumple los requisitos especificados y las necesidades de sus usuarios. Este tema repasa el aseguramiento de la calidad (del proceso y del producto), la familia de normas **ISO/IEC 25000 (SQuaRE)** con sus 8 características de calidad, las métricas con que se mide y un caso práctico de complejidad ciclomática.
 
 ## Aseguramiento de la calidad del software
 
-El aseguramiento de la calidad del software es un conjunto de procedimientos y normas que garantizan que el desarrollo y los productos de software cumplan con los niveles de calidad establecidos. Este proceso busca minimizar errores y asegurar que el software entregado se ajuste a las especificaciones y necesidades del cliente, garantizando su correcto funcionamiento y fiabilidad.
+Según el vocabulario de **ISO 9000:2015**, la calidad es el «grado en el que un conjunto de características inherentes de un objeto cumple con los requisitos». Aplicada al software, tiene una doble vertiente: la **calidad del proceso** (cómo se desarrolla) y la **calidad del producto** (qué se obtiene), bajo la premisa de que un buen proceso hace más probable un buen producto.
 
-### Marco de Trabajo y Normativa
+La gestión de la calidad se articula en **tres niveles**:
 
-El aseguramiento de calidad se apoya en estándares y normativas, como **ISO 9000**, que define principios para la gestión y control de calidad en proyectos de software. Estos estándares ayudan a establecer un marco de trabajo que guía la evaluación de calidad, la auditoría, la seguridad y la eficiencia del software.
+- **Gestión de la calidad**: define la política de calidad, los objetivos y las responsabilidades en la organización; se documenta en el **plan de calidad** del proyecto (estándares aplicables, revisiones y auditorías previstas, métricas y responsables).
+- **Aseguramiento de la calidad (QA)**: conjunto de actividades **planificadas y sistemáticas** para dar confianza en que el proceso y el producto cumplen los requisitos; es **preventivo** y se orienta al proceso.
+- **Control de la calidad (QC)**: verificación de productos de trabajo concretos contra sus requisitos; es **detectivo** y se orienta al producto.
 
-### Departamentos de Calidad
+Dos matices preguntables: la certificación (por ejemplo, **ISO 9001**) se otorga al **sistema de gestión** de la organización, no al software en sí; y la calidad percibida la juzga en última instancia el usuario según su experiencia y necesidades. En la organización, estas funciones se reparten entre las oficinas de calidad, las oficinas de proyectos (PMO) y los equipos de QA.
 
-Los departamentos de calidad incluyen oficinas técnicas, oficinas de proyectos y oficinas de gestión de proyectos (PMO), además de los equipos de aseguramiento de calidad (QA). Cada uno tiene roles específicos en el control y supervisión de calidad a lo largo del ciclo de vida del desarrollo del software.
+### Verificación y validación
 
-### Evaluación del Proyecto
+La verificación y la validación (V&V) son el núcleo del aseguramiento:
 
-En la evaluación del proyecto, se consideran múltiples factores para asegurar un desarrollo de calidad:
+- **Verificación**: ¿estamos construyendo el producto **correctamente**? Comprueba la conformidad de cada producto de trabajo con su especificación. Usa sobre todo **técnicas estáticas** (no ejecutan el código): revisiones técnicas y de gestión (detectan errores en fases tempranas), **inspecciones** (revisión formal con roles y lista de comprobación, método de Fagan), *walkthroughs* y análisis estático.
+- **Validación**: ¿estamos construyendo el producto **correcto**? Comprueba que el software satisface las necesidades reales del usuario. Usa **técnicas dinámicas**: las pruebas, que se estudian en el tema 27.
+- **Auditorías**: evaluación **independiente** del cumplimiento de procesos, estándares y procedimientos (verificación del cumplimiento normativo).
 
-- **Facilidad de auditoría**: Que permita una revisión clara y precisa.
-- **Consistencia y Completitud**: Todos los elementos deben estar bien definidos y ser coherentes.
-- **Estandarización y Exactitud**: Cumplir con las normas establecidas para facilitar el control y la precisión.
-- **Tolerancia a errores y Seguridad**: Proveer de mecanismos que minimicen errores y riesgos de seguridad.
+### Calidad del proceso: ISO 9001, CMMI y SPICE
 
-### Plan de Calidad: Principios
+- **ISO 9001:2015**: norma certificable de sistemas de gestión de la calidad, genérica para cualquier organización.
+- **CMMI** (*Capability Maturity Model Integration*, hoy de ISACA; versión vigente **CMMI V3.0, 2023**): modelo de madurez de procesos con **cinco niveles**:
+    1. **Inicial**: procesos impredecibles y reactivos.
+    2. **Gestionado**: procesos planificados y controlados por proyecto.
+    3. **Definido**: procesos estándar de la organización, proactivos.
+    4. **Gestionado cuantitativamente**: procesos medidos y controlados estadísticamente.
+    5. **En optimización**: mejora continua basada en datos.
+- **ISO/IEC 330xx (SPICE)**: familia sucesora de ISO/IEC 15504 para la **evaluación de la capacidad de los procesos** de software, con niveles de capacidad de 0 (incompleto) a 5 (innovador).
 
-El plan de calidad se estructura en torno a tres principios:
+### Modelos clásicos de calidad del producto
 
-- **Gestión de la Calidad**: Involucra políticas de calidad y asignación de responsabilidades.
-- **Aseguramiento de la Calidad**: Conjunto de actividades planificadas para garantizar que el software cumple con los requisitos.
-- **Control de la Calidad**: Actividades para verificar el cumplimiento de los requisitos de calidad mediante la evaluación de procesos y productos.
+Antes de SQuaRE, la calidad del producto se estructuró en modelos jerárquicos de factores y criterios:
 
-### Actividades y Métodos de Aseguramiento de la Calidad
+- **McCall (1977)**: **11 factores** agrupados en tres ejes: operación del producto (corrección, fiabilidad, eficiencia, integridad, usabilidad), revisión (mantenibilidad, flexibilidad, capacidad de prueba) y transición (portabilidad, reusabilidad, interoperabilidad).
+- **Boehm (1978)**: árbol de características orientado a la utilidad general, la mantenibilidad y la portabilidad.
+- **ISO/IEC 9126** (1991, revisada en 2001): seis características (funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad, portabilidad); es el antecedente directo de la ISO/IEC 25010, que la sustituyó.
 
-- **Revisiones Técnicas y de Gestión**: Evaluaciones para detectar errores en las fases tempranas.
-- **Inspección (Verificación)**: Revisión detallada de los productos de trabajo para asegurar que cumplan los requisitos.
-- **Pruebas (Validación)**: Validación mediante pruebas funcionales y no funcionales.
-- **Auditorías (Cumplimiento)**: Evaluación independiente para asegurar que se sigan los procesos y estándares de calidad.
+## Familia ISO/IEC 25000 (SQuaRE): las 8 características de calidad
 
-### Principios de los Sistemas de Calidad
+La familia **ISO/IEC 25000**, conocida como **SQuaRE** (*System and Software Quality Requirements and Evaluation*), proporciona el marco común para especificar los requisitos de calidad del producto de software y evaluarla. Sustituye a las antiguas ISO/IEC 9126 (modelo de calidad) e ISO/IEC 14598 (evaluación).
 
-Los sistemas de calidad en software se basan en los siguientes principios:
+### Divisiones de la familia
 
-- **Enfoque en el cliente**: La calidad se define en función de las necesidades del cliente.
-- **Compromiso organizacional**: Todos los miembros de la organización son responsables de la calidad.
-- **Medición y Mejora Continua**: Seguimiento y análisis continuo para mejorar los procesos de desarrollo.
-- **Comunicación y Reconocimiento**: Transparencia en la comunicación de políticas de calidad y reconocimiento de logros.
+- **ISO/IEC 2500n. División de gestión de calidad**: términos, definiciones y guía de la familia (25000) y planificación y gestión de la evaluación (25001).
+- **ISO/IEC 2501n. División de modelo de calidad**: modelos de calidad del producto (**25010**), de los datos (**25012**), de la calidad en uso (**25019:2023**) y su extensión para sistemas de inteligencia artificial (**25059:2023**).
+- **ISO/IEC 2502n. División de medición de calidad**: modelo de referencia de medición y medidas de calidad en uso (25022), del producto (25023) y de los datos (25024).
+- **ISO/IEC 2503n. División de requisitos de calidad**: especificación de requisitos de calidad (**25030**).
+- **ISO/IEC 2504n. División de evaluación de calidad**: proceso de evaluación (**25040**) y guías asociadas.
+- **ISO/IEC 25050-25099**: extensiones, como la 25051 (requisitos de calidad de producto software comercial, RUSP/COTS).
 
-### Tipos de Mantenimiento de Software
+### ISO/IEC 25010: las 8 características de calidad del producto
 
-Existen diferentes tipos de mantenimiento, cada uno con un objetivo específico:
+La edición clásica, **ISO/IEC 25010:2011**, define el modelo de calidad del producto con **8 características** y sus subcaracterísticas:
 
-- **Correctivo**: Corregir defectos y errores encontrados en el software.
-- **Evolutivo**: Implementar cambios para añadir nuevas funcionalidades.
-- **Adaptativo**: Modificar el software para adaptarse a nuevos entornos o plataformas.
-- **Perfectivo**: Optimizar el rendimiento o mejorar la usabilidad del software.
+| Característica | Subcaracterísticas |
+| --- | --- |
+| **Adecuación funcional** | Completitud, corrección y pertinencia funcional |
+| **Eficiencia de desempeño** | Comportamiento temporal, utilización de recursos, capacidad |
+| **Compatibilidad** | Coexistencia, interoperabilidad |
+| **Usabilidad** | Inteligibilidad, aprendizabilidad, operabilidad, protección frente a errores de usuario, estética de la interfaz, accesibilidad |
+| **Fiabilidad** | Madurez, disponibilidad, tolerancia a fallos, capacidad de recuperación |
+| **Seguridad** | Confidencialidad, integridad, no repudio, responsabilidad, autenticidad |
+| **Mantenibilidad** | Modularidad, reusabilidad, analizabilidad, modificabilidad, capacidad de ser probado |
+| **Portabilidad** | Adaptabilidad, facilidad de instalación, capacidad de ser reemplazado |
 
-### Métricas de Calidad
+La misma edición define además el modelo de **calidad en uso**, con cinco características: efectividad, eficiencia, satisfacción, ausencia de riesgo y cobertura de contexto.
 
-Las métricas de calidad permiten evaluar aspectos clave del software:
+Dos actualizaciones a tener presentes:
 
-- **Medidas**: Indicadores cuantitativos de atributos como tamaño y capacidad.
-- **Métricas**: Indicadores específicos de la calidad del proceso, producto o proyecto.
-- **Indicadores**: Combinaciones de métricas que ofrecen una visión general del estado de calidad.
+- La revisión **ISO/IEC 25010:2023** pasa el modelo del producto a **9 características**: renombra usabilidad como **capacidad de interacción** (*interaction capability*) y portabilidad como **flexibilidad** (que incorpora la **escalabilidad** como subcaracterística), y añade la **seguridad física** (*safety*, ausencia de daño a personas o al entorno). La calidad en uso se traslada a la norma **ISO/IEC 25019:2023**. El modelo de 8 características de 2011 sigue siendo el más citado en exámenes.
+- La **ISO/IEC 25059:2023** extiende el modelo a los **sistemas de inteligencia artificial**, con aspectos como la adaptabilidad funcional, la transparencia o la capacidad de intervención del usuario.
 
-**Tipos de métricas**:
+### ISO/IEC 25012: calidad de datos
 
-- **Orientadas al tamaño**: Como líneas de código (LoC) o personas-mes.
-- **Orientadas a la función**: Basadas en la complejidad del problema.
-- **Orientadas a la productividad**: Enfocadas en el proceso de desarrollo.
+Define **15 características** de calidad de los datos en **tres grupos**:
 
-### Tipos de Pruebas de Software
+- **Inherentes (5)**: exactitud, completitud, consistencia, credibilidad y actualidad.
+- **Inherentes y dependientes del sistema (7)**: accesibilidad, conformidad, confidencialidad, eficiencia, precisión, trazabilidad y comprensibilidad.
+- **Dependientes del sistema (3)**: disponibilidad, portabilidad y recuperabilidad.
 
-El aseguramiento de calidad incluye pruebas para validar y verificar el funcionamiento del software:
+### ISO/IEC 25040: proceso de evaluación
 
-- **Pruebas Funcionales**: Aseguran que el software cumpla con los requisitos especificados, como pruebas unitarias, de integración, de regresión y de aceptación.
-- **Pruebas No Funcionales**: Evalúan atributos no relacionados directamente con la funcionalidad, como rendimiento, carga y estrés.
+La ISO/IEC 25040 (edición de 2011, revisada en 2024 como marco de evaluación de la calidad) describe el proceso de evaluación en **cinco actividades**:
 
-### Deuda Técnica y Métricas de Complejidad
+1. **Establecer los requisitos de la evaluación**: propósito, características a evaluar y rigor.
+2. **Especificar la evaluación**: medidas, criterios de decisión y umbrales.
+3. **Diseñar la evaluación**: plan de evaluación (actividades, recursos, calendario).
+4. **Ejecutar la evaluación**: aplicar las medidas y los criterios.
+5. **Concluir la evaluación**: informe de resultados y realimentación al proceso.
 
-La deuda técnica es el esfuerzo futuro necesario para solucionar problemas introducidos durante el desarrollo por urgencias u otras limitaciones. Existen métricas específicas para evaluar la complejidad del software, como:
+## Métricas y evaluación de la calidad
 
-- **Complejidad ciclomática**: Mide la cantidad de caminos independientes en el código.
-- **Índice de mantenibilidad**: Evalúa la facilidad de mantenimiento del software.
-- **Cobertura de código**: Proporción de código ejecutado durante las pruebas.
+Medir es la base de la mejora: sin métricas no puede evaluarse si el producto o el proceso alcanzan los niveles de calidad exigidos. Conviene distinguir tres conceptos:
 
-### Notas Relevantes sobre la Calidad
+- **Medida**: valor de un atributo obtenido por medición directa (por ejemplo, 12.000 líneas de código).
+- **Métrica**: relación entre medidas que caracteriza un atributo (defectos por KLOC).
+- **Indicador**: métrica o combinación de métricas con un criterio de interpretación que permite tomar decisiones (tendencia de la densidad de defectos por versión).
 
-Es importante recordar que la calidad del software es difícil de medir de forma absoluta debido a su naturaleza. La certificación de calidad se otorga a los procesos de desarrollo, no al software en sí. En última instancia, el usuario final percibe la calidad del software según su experiencia y sus necesidades.
+Según su objeto, las métricas son **de producto** (atributos del software), **de proceso** (eficacia del desarrollo: densidad de defectos, eficiencia de eliminación) o **de proyecto** (esfuerzo, coste, plazos).
 
-## Familia ISO/IEC 25000 (SQuaRE)
+### Métricas de tamaño y de función
 
-La familia de normas ISO/IEC 25000, también conocida como SQuaRE (System and Software Quality Requirements and Evaluation), tiene como objetivo proporcionar un marco de trabajo común para evaluar la calidad de los productos de software. Estas normas abarcan desde la especificación de requisitos de calidad hasta la evaluación de dicha calidad, facilitando su aplicación en diversas áreas del desarrollo de software.
+- **Orientadas al tamaño**: usan las **líneas de código (LOC/KLOC)** como base (defectos/KLOC, coste/KLOC). Simples de obtener, pero dependen del lenguaje y penalizan el código conciso.
+- **Orientadas a la función**: los **puntos de función** (Albrecht, **1979**; método IFPUG, normalizado como ISO/IEC 20926) miden el **tamaño funcional** desde los requisitos, con independencia del lenguaje. Se cuentan **cinco componentes**: entradas externas, salidas externas, consultas externas, ficheros lógicos internos y ficheros de interfaz externos; cada uno se pondera por complejidad (simple, media, alta) y el total se ajusta con **14 características generales del sistema** (factor de ajuste de ±35 %). Permiten estimar esfuerzo y productividad (PF por persona-mes) en fases tempranas.
 
-### Objetivos de ISO/IEC 25000
+### Métricas de complejidad y mantenimiento
 
-Las normas ISO/IEC 25000 están diseñadas para:
-
-- **Especificación de requisitos de calidad**: Determinar los atributos de calidad necesarios para el software.
-- **Evaluación de la calidad del software**: Proveer herramientas para medir y analizar la calidad del producto de software.
-
-### Divisiones de las Normas ISO/IEC 25000
-
-Las normas se dividen en varias categorías, cada una enfocada en un aspecto específico de la calidad del software:
-
-- **División de Gestión de Calidad (ISO/IEC 2500n)**: Define los modelos, términos y definiciones comunes utilizados en la familia 25000.
-- **División de Modelo de Calidad (ISO/IEC 2501n)**: Contiene modelos detallados para evaluar la calidad interna, externa y en uso del software.
-    - **ISO/IEC 25010**: Proporciona un modelo de calidad para productos de software y su calidad en uso.
-    - **ISO/IEC 25012**: Modelo de calidad de datos para evaluar datos estructurados en sistemas de información.
-- **División de Medición de Calidad (ISO/IEC 2502n)**: Proporciona un modelo de referencia y definiciones de métricas para la calidad.
-- **División de Requisitos de Calidad (ISO/IEC 2503n)**: Ayuda en la especificación de requisitos de calidad.
-    - **ISO/IEC 25030**: Contiene recomendaciones para la especificación de requisitos de calidad.
-- **División de Evaluación de Calidad (ISO/IEC 2504n)**: Proporciona guías y modelos para la evaluación del software.
-    - **ISO/IEC 25040**: Modelo de referencia para la evaluación, que incluye las entradas, restricciones y recursos necesarios para el proceso.
-
-### ISO/IEC 25010: Modelo de Calidad del Software
-
-La norma ISO/IEC 25010 define un modelo de calidad que identifica las características a evaluar en un producto de software. Estas características son:
-
-- **Adecuación Funcional**: Capacidad para cumplir con la funcionalidad acordada.
-    - Completitud funcional, Corrección funcional y Pertinencia funcional.
-- **Eficiencia de desempeño**: Uso de recursos de manera óptima.
-    - Comportamiento temporal, Utilización de recursos y Capacidad.
-- **Compatibilidad**: Capacidad para funcionar en conjunto con otros sistemas.
-    - Coexistencia e Interoperabilidad.
-- **Usabilidad**: Facilidad de uso y comprensión del software.
-    - Reconocibilidad, Aprendizabilidad, Operabilidad, Estética de la interfaz de usuario, Accesibilidad.
-- **Fiabilidad**: Capacidad para mantener un funcionamiento correcto.
-    - Madurez, Disponibilidad, Tolerancia a fallos y Capacidad de recuperación.
-- **Seguridad**: Protección contra accesos no autorizados.
-    - Confidencialidad, Integridad, No repudio, Responsabilidad, Autenticidad.
-- **Mantenibilidad**: Facilidad para realizar cambios y adaptaciones.
-    - Modularidad, Reusabilidad, Analizabilidad, Modificabilidad, Capacidad para ser probado.
-- **Portabilidad**: Capacidad para ser transferido y usado en otros entornos.
-    - Adaptabilidad, Capacidad para ser instalado, Capacidad para ser reemplazado.
-
-Además, la **ISO/IEC 25059** extiende este modelo para considerar aspectos específicos de la Inteligencia Artificial, como la Adaptabilidad Funcional y la Intervenibilidad.
-
-### ISO/IEC 25012: Modelo de Calidad de Datos
-
-La norma ISO/IEC 25012 define las características de calidad que deben tener los datos en un sistema de información. Estas características se agrupan en dos categorías:
-
-- **Calidad de Datos Inherente**: Grado en que los datos poseen cualidades intrínsecas.
-    - Exactitud, Completitud, Consistencia, Credibilidad, Actualidad.
-- **Calidad de Datos Dependiente del Sistema**: Grado en que el sistema mantiene la calidad de los datos.
-    - Disponibilidad, Portabilidad, Recuperabilidad.
-
-### ISO/IEC 25040: Proceso de Evaluación del Software
-
-La norma ISO/IEC 25040 describe el proceso de evaluación de software, que consta de cinco actividades:
-
-1. **Establecer los requisitos de la evaluación**: Definir qué aspectos del software se evaluarán.
-2. **Especificar la evaluación**: Detallar los criterios y métodos de evaluación.
-3. **Diseñar la evaluación**: Preparar el plan de evaluación.
-4. **Ejecutar la evaluación**: Realizar las pruebas y análisis correspondientes.
-5. **Concluir la evaluación**: Documentar los resultados y conclusiones.
+- **Complejidad ciclomática** (McCabe, **1976**): número de caminos linealmente independientes del flujo de control (ver caso práctico).
+- **Métricas de Halstead (1977)**: derivan del recuento de operadores y operandos el volumen, la dificultad y el esfuerzo del programa.
+- **Cobertura de código**: proporción del código ejercitada por las pruebas (por sentencias, ramas o caminos).
+- **Índice de mantenibilidad**: combina Halstead, complejidad ciclomática y LOC en un valor único de facilidad de mantenimiento.
+- **Deuda técnica**: coste futuro de corregir los atajos tomados durante el desarrollo (metáfora de Ward Cunningham). Se gestiona de forma continua con herramientas de análisis estático como **SonarQube**, que calculan el ratio de deuda técnica y la calificación del proyecto.
 
 ## Caso práctico: cálculo de la complejidad ciclomática
 
-El **cálculo de la complejidad ciclomática** mide la complejidad de un programa basándose en el número de caminos linealmente independientes en su flujo de control. Esto ayuda a evaluar la calidad, mantenibilidad y facilidad de pruebas del código. Se realiza en los siguientes pasos:
+La **complejidad ciclomática V(G)** mide el número de caminos linealmente independientes del grafo de flujo de control de un programa, y equivale al número mínimo de casos de prueba necesarios para cubrir todas sus ramas (*basis path testing*). McCabe recomendó mantenerla **por debajo de 10** por módulo.
 
-1. **Representar el programa como un grafo de flujo de control**:
-    - Los nodos (nodes) representan bloques de código secuenciales (instrucciones o declaraciones).
-    - Las aristas (edges) representan los flujos de control entre esos bloques (saltos, bucles, condiciones, etc.).
-2. **Aplicar la fórmula de McCabe**:\ La complejidad ciclomática V(G) se calcula como:
+**Enunciado**: calcular la complejidad ciclomática del siguiente método:
 
-> **V(G) = E – N + 2** > > **Donde:**
+```java
+public String clasificar(boolean urgente, int dias, boolean recurrido) {
+    String tipo;
+    if (urgente && dias > 30) {
+        tipo = "prioritario";
+    } else if (recurrido) {
+        tipo = "recurso";
+    } else {
+        tipo = "ordinario";
+    }
+    return tipo;
+}
+```
 
-1. E: Número de aristas (líneas que conectan nodos).
-2. N: Número de nodos (bloques de código).
-1. **Alternativamente, usar el número de regiones**:\ Contar el número de **regiones cerradas** (incluyendo la región externa) del grafo. Este número es igual a la complejidad ciclomática.
-2. **Interpretar el resultado**:
-    - V(G)=1: Código sin bifurcaciones (secuencial).
-    - V(G)> 1: Cada incremento representa un camino independiente adicional.
-    - Complejidades mayores a 10 suelen considerarse difíciles de mantener y ![](media/image42.png)probar.
+**Paso 1. Construir el grafo de flujo de control**: los **nodos** son bloques de código secuenciales y las **aristas**, los flujos de control entre ellos. El método tiene **7 nodos**: evaluación de `urgente` (N1), evaluación de `dias > 30` (N2, solo se alcanza si `urgente` es cierto, por el cortocircuito del operador `&&`), asignación «prioritario» (N3), evaluación de `recurrido` (N4), asignación «recurso» (N5), asignación «ordinario» (N6) y el `return` final (N7). Las **9 aristas** son: N1→N2, N1→N4, N2→N3, N2→N4, N3→N7, N4→N5, N4→N6, N5→N7 y N6→N7.
+
+**Paso 2. Calcular V(G) por los tres métodos** (deben coincidir):
+
+- **Por aristas y nodos**: V(G) = E − N + 2 = 9 − 7 + 2 = **4**.
+- **Por nodos predicado**: V(G) = P + 1 = 3 + 1 = **4**. Los nodos de decisión son las condiciones `urgente`, `dias > 30` y `recurrido`: cada operando de una condición compuesta con `&&` o `||` cuenta como decisión propia.
+- **Por regiones**: el grafo plano encierra 3 regiones internas que, sumadas a la región exterior, dan **4**.
+
+**Paso 3. Interpretar el resultado**: V(G) = 4 exige un mínimo de **4 casos de prueba** para cubrir los caminos independientes: (1) urgente con más de 30 días (prioritario), (2) urgente con 30 días o menos y recurrido (recurso), (3) no urgente y recurrido (recurso) y (4) no urgente y no recurrido (ordinario). El valor queda en la franja de riesgo bajo:
+
+| V(G) | Valoración |
+| --- | --- |
+| **1-10** | Programa simple, riesgo bajo |
+| **11-20** | Complejidad moderada |
+| **21-50** | Programa complejo, riesgo alto |
+| **> 50** | Prácticamente intestable, riesgo muy alto |
+
+## Fuentes {.unnumbered .unlisted}
+
+- ISO/IEC 25000:2014, *Guide to SQuaRE*; ISO/IEC 25010:2011 y su revisión 25010:2023 (modelo de calidad del producto); ISO/IEC 25019:2023 (calidad en uso); ISO/IEC 25012:2008 (calidad de datos); ISO/IEC 25040:2011, revisada en 2024 (evaluación); ISO/IEC 25059:2023 (sistemas de IA).
+- ISO 9000:2015 e ISO 9001:2015, sistemas de gestión de la calidad.
+- CMMI V3.0, ISACA, 2023; ISO/IEC 33001:2015 (SPICE).
+- McCabe, T., «A Complexity Measure», *IEEE Transactions on Software Engineering*, 1976.
+- Albrecht, A., «Measuring Application Development Productivity», IBM, 1979; IFPUG, ISO/IEC 20926:2009.
+- Pressman, R. y Maxim, B., *Software Engineering: A Practitioner's Approach*, 9.ª ed., McGraw-Hill, 2020.

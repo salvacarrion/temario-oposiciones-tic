@@ -1,88 +1,167 @@
 # Testeo de software
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
-
+Las pruebas de software evalúan la calidad del producto y encuentran defectos antes de que lleguen a producción. El marco de referencia de este tema es el programa de estudio **ISTQB CTFL v4.0** (*Certified Tester Foundation Level*, 2023), el estándar de facto de la disciplina, que reformuló principios, niveles y técnicas respecto a la versión 3.1.
 
 ## Fundamentos del testeo (ISTQB)
 
-El testeo de software es una disciplina crítica dentro del desarrollo de software que permite identificar defectos y verificar que el software cumple con los requisitos establecidos. Según los fundamentos de ISTQB (International Software Testing Qualifications Board), el testeo de software ayuda a validar la funcionalidad del sistema y a mejorar la calidad general del producto antes de su implementación en entornos productivos.
+Probar no es solo ejecutar el software: es un **proceso** que incluye actividades estáticas (revisiones, análisis) y dinámicas (ejecución), con objetivos que van más allá de encontrar defectos: evaluar productos de trabajo, dar confianza en el nivel de calidad, reducir el riesgo y aportar información para decidir. La prueba es una forma de control de calidad (QC); el aseguramiento (QA) se orienta al proceso (ver tema 25).
 
-### Errores, Defectos y Fallos
+### Error, defecto y fallo
 
-En el proceso de testeo, se distingue entre errores, defectos y fallos:
+- **Error (equivocación)**: acción humana que produce un resultado incorrecto.
+- **Defecto**: imperfección en un producto de trabajo (código, requisitos, diseño), resultado de un error.
+- **Fallo**: comportamiento incorrecto observable del sistema en ejecución, provocado por un defecto (no todo defecto llega a manifestarse como fallo).
+- **Causa raíz**: motivo último que originó el error; su análisis permite prevenir defectos similares.
 
-- **Error (equivocación)**: Es la acción humana que conduce a un problema en el código o diseño.
-- **Defecto**: Es el resultado de un error en el código, una imperfección que puede causar un fallo.
-- **Fallo**: Es el comportamiento incorrecto del sistema al ejecutar el defecto, evidenciando la presencia de un problema en el software.
+### Los 7 principios de la prueba (CTFL 4.0)
 
-### Los 7 Principios de la Prueba
+1. **La prueba muestra la presencia de defectos, no su ausencia**: aunque no se encuentren defectos, no queda demostrada la corrección del sistema.
+2. **La prueba exhaustiva es imposible**: en lugar de probarlo todo, se usan técnicas, priorización y prueba basada en el riesgo para concentrar el esfuerzo.
+3. **La prueba temprana ahorra tiempo y dinero**: los defectos eliminados pronto no se propagan; estáticas y dinámicas deben empezar lo antes posible.
+4. **Los defectos se agrupan**: unos pocos componentes concentran la mayoría de los defectos (principio de Pareto); es una entrada clave de la prueba basada en el riesgo.
+5. **Las pruebas se desgastan**: repetidas muchas veces pierden eficacia para detectar defectos nuevos y hay que modificarlas (la versión 3.1 lo llamaba «paradoja del pesticida»); la excepción útil es la regresión automatizada.
+6. **La prueba depende del contexto**: no hay un enfoque universal.
+7. **Falacia de la ausencia de defectos**: probar todos los requisitos y corregir lo encontrado no garantiza un sistema que satisfaga a los usuarios; además de verificación hace falta validación.
 
-1. **La prueba muestra la presencia de defectos, no su ausencia**.
-2. **La prueba exhaustiva es imposible**: No se pueden cubrir todos los casos posibles.
-3. **La prueba temprana ahorra tiempo y dinero**: Detectar defectos en etapas tempranas reduce los costos.
-4. **Los defectos se agrupan**: La mayoría de los defectos suelen concentrarse en ciertas áreas del software.
-5. **Paradoja del pesticida**: Repetir siempre las mismas pruebas reduce su efectividad; es necesario actualizar las pruebas para detectar nuevos defectos.
-6. **La prueba depende del contexto**: Las pruebas varían según el tipo de software.
-7. **La ausencia de errores es una falacia**: Un sistema sin defectos puede ser inutilizable si no cumple con los requisitos.
+### Actividades del proceso de prueba
 
-### Roles en el Proceso de Revisión
+- **Planificación**: definir los objetivos y el enfoque dentro de las restricciones del contexto.
+- **Monitorización y control**: comparar el avance real con el plan y tomar las medidas necesarias.
+- **Análisis**: responde a «¿qué probar?»; identifica y prioriza las **condiciones de prueba** a partir de la base de prueba y de los riesgos.
+- **Diseño**: responde a «¿cómo probar?»; elabora los **casos de prueba**, identifica los elementos de cobertura y define datos y entorno de prueba.
+- **Implementación**: prepara el *testware* (procedimientos, guiones, datos) y monta el entorno.
+- **Ejecución**: correr las pruebas, comparar resultados reales y esperados y registrar las anomalías.
+- **Compleción**: informe final, archivo del testware y lecciones aprendidas.
 
-El proceso de revisión, que busca detectar defectos sin ejecutar el software, involucra diferentes roles:
+### Roles, equipo e independencia
 
-- **Autor**: Persona que ha creado el código o documento revisado.
-- **Dirección**: Supervisa la efectividad del proceso.
-- **Facilitador**: Coordina el proceso de revisión.
-- **Líder de revisión**: Responsable de la planificación y ejecución de la revisión.
+- El programa 4.0 define **dos roles**: el **rol de gestión de prueba** (responsable del proceso y del equipo: planificación, monitorización y control, compleción) y el **rol de prueba** (vertiente de ingeniería: análisis, diseño, implementación y ejecución). Una misma persona puede asumir ambos.
+- **Enfoque de equipo completo**: la calidad es responsabilidad compartida de todo el equipo, no solo de los probadores.
+- **Independencia de la prueba**: grados crecientes (el propio autor, un compañero, un equipo de prueba independiente, probadores externos). Más independencia detecta más defectos por evitar el sesgo del autor, pero un equipo aislado puede perder colaboración y visión del producto.
 
-### Niveles de Prueba
+## Las pruebas en el ciclo de vida: roles, niveles y tipos
 
-Los niveles de prueba son conjuntos de actividades de testeo organizadas de manera estructurada:
+El ciclo de vida de desarrollo condiciona cómo, cuándo y quién prueba. Como buena práctica, **a cada actividad de desarrollo le corresponde una actividad de prueba**, y el análisis y diseño de las pruebas de cada nivel comienza en la fase de desarrollo equivalente.
 
-- **Prueba de Componente**: Evalúa unidades individuales del sistema, como funciones o métodos, de forma aislada.
-- **Prueba de Integración**: Verifica la interacción entre componentes, asegurando que funcionen correctamente juntos.
-- **Prueba de Sistema**: Prueba el sistema completo para validar su comportamiento general y las tareas de usuario.
-- **Prueba de Aceptación**: Valida que el sistema cumple con los requisitos del cliente y se espera que funcione correctamente.
-- **Prueba Alfa**: Realizada por clientes en las instalaciones del desarrollador, con este último como observador.
-- **Prueba Beta**: Realizada por clientes en sus propias instalaciones para obtener una retroalimentación del uso real.
-- **Otras pruebas:** Pruebas de aceptación de usuario, de aceptación operativa, de aceptación contractual y de regulación, y pruebas alfa y beta (pre-releases).
+### La prueba en el ciclo de vida de desarrollo
 
-### Tipos de Pruebas de Software
+- **Desplazamiento a la izquierda (*shift-left*)**: iniciar las pruebas cuanto antes: revisar los requisitos, análisis estático en el IDE y en CI, pruebas escritas antes que el código.
+- **La prueba como impulsor del desarrollo**: **TDD** (desarrollo guiado por prueba, a nivel de componente), **ATDD/DGPA** (guiado por la prueba de aceptación, desde los criterios de aceptación) y **BDD** (guiado por el comportamiento, con escenarios *Given-When-Then*).
+- **DevOps y prueba**: el pipeline CI/CD ejecuta las pruebas automatizadas en cada cambio (ver tema 26): retroalimentación rápida y regresión constante, a cambio del esfuerzo de definir y mantener la automatización.
+- **Retrospectivas**: al cerrar cada iteración o hito se analizan éxitos y mejoras del propio proceso de prueba.
 
-- **Pruebas Funcionales**: Validan que el sistema realice las funciones para las que fue diseñado.
-- **Pruebas No Funcionales**: Evalúan características como rendimiento, usabilidad, eficiencia y seguridad.
-- **Pruebas de Caja Blanca**: Basadas en el conocimiento de la estructura interna del software; permiten verificar la funcionalidad mediante pruebas directas del código.
-- **Pruebas de Caja Negra**: Se realizan sin conocer la estructura interna, evaluando la respuesta del software a diferentes entradas.
-- **Pruebas Asociadas al Cambio**:
-    - **Pruebas de Confirmación**: Confirman que un defecto ha sido solucionado.
-    - **Pruebas de Regresión**: Verifican que nuevas funcionalidades o cambios no introduzcan defectos en áreas previamente correctas.
+### Niveles de prueba
 
-### Pruebas Dinámicas y Estáticas
+El CTFL 4.0 define **cinco niveles** (la 3.1 no separaba las dos integraciones):
 
-- **Pruebas Dinámicas**: Evalúan el comportamiento del software ejecutándolo; incluyen pruebas de caja blanca, caja negra, etc.
-- **Pruebas Estáticas**: Analizan el código o documentos sin ejecutarlos, como revisiones manuales o análisis estáticos automatizados.
+- **Prueba de componente (unitaria)**: componentes aislados; requiere arneses o marcos de prueba unitaria (xUnit); la realizan normalmente los desarrolladores en su entorno.
+- **Prueba de integración de componentes**: interfaces e interacciones entre componentes; depende de la estrategia de integración (**ascendente, descendente o big-bang**).
+- **Prueba de sistema**: comportamiento y capacidades del sistema completo, extremo a extremo, funcional y no funcional; suele hacerla un equipo independiente contra las especificaciones del sistema.
+- **Prueba de integración de sistemas**: interfaces con otros sistemas y servicios externos; exige entornos similares al de operación.
+- **Prueba de aceptación**: validación y preparación para el despliegue: el sistema satisface las necesidades del negocio. Sus formas principales son la **prueba de aceptación de usuario (PAU)**, la **de aceptación operativa**, la **contractual y de regulación** y las pruebas **alfa** (en las instalaciones del desarrollador) y **beta** (en las de los usuarios).
 
-### Técnicas de Pruebas
+Los niveles se distinguen por su objeto, sus objetivos, su base de prueba, los defectos típicos que detectan y las responsabilidades.
 
-Las técnicas de pruebas buscan definir las condiciones y los casos de prueba para garantizar una cobertura exhaustiva:
+### Tipos de prueba
 
-**Pruebas de Caja Negra**:
+- **Prueba funcional**: evalúa «qué» hace el sistema (completitud, corrección y pertinencia funcional).
+- **Prueba no funcional**: evalúa «lo bien que se comporta»: las características de calidad de **ISO/IEC 25010** (eficiencia de desempeño, compatibilidad, usabilidad, fiabilidad, seguridad, mantenibilidad, portabilidad; ver tema 25).
+- **Prueba de caja negra**: se basa en la especificación, sin conocer la estructura interna.
+- **Prueba de caja blanca**: se basa en la estructura interna (cobertura de código).
+- **Pruebas asociadas al cambio**: la **prueba de confirmación** verifica que un defecto se corrigió; la **prueba de regresión**, que el cambio no ha roto nada existente (candidata prioritaria a la automatización).
+- **Prueba de mantenimiento**: sobre sistemas en producción tras cambios correctivos o evolutivos; su alcance lo determina el **análisis de impacto**.
 
-- **Partición de Equivalencia**: Divide el conjunto de datos en clases que deben dar el mismo resultado.
-- **Análisis de Valores Frontera (AVF)**: Evaluación de los valores límites de cada partición.
-- **Prueba de Tabla de Decisión**: Ayuda a documentar reglas complejas de negocio.
-- **Prueba de Transición de Estado**: Verifica secuencias de estados en el sistema, como los diferentes niveles de un menú.
-- **Prueba de Caso de Uso**: Basada en los requisitos funcionales, enfocada en las interacciones esperadas.
+### Prueba estática y revisiones
 
-**Pruebas de Caja Blanca**:
+La **prueba estática** examina productos de trabajo sin ejecutarlos (revisiones y análisis estático) y encuentra defectos pronto y a bajo coste; complementa a la dinámica. El proceso de revisión (detallado en **ISO/IEC 20246**) comprende planificación, inicio, revisión individual, comunicación y análisis, y corrección e informe.
 
-- **Cobertura de Sentencia**: Evalúa cada sentencia en el código para garantizar que ha sido ejecutada al menos una vez.
-- **Cobertura de Decisión**: Verifica que todas las decisiones (condiciones) posibles en el código se evalúen.
+- **Roles en las revisiones**: **gestor** (decide qué se revisa y aporta recursos), **autor** (crea y corrige el producto), **moderador o facilitador** (asegura reuniones eficaces y un entorno seguro), **escriba** (registra anomalías y decisiones), **revisor** (realiza la revisión) y **líder de la revisión** (responsabilidad general: participantes, cuándo y dónde).
+- **Tipos de revisión**, de menor a mayor formalidad:
+    - **Revisión informal**: sin proceso definido ni salida documentada; busca detectar anomalías.
+    - **Revisión guiada (*walkthrough*)**: dirigida por el **autor**; sirve para educar, lograr consenso y detectar anomalías.
+    - **Revisión técnica**: revisores técnicamente cualificados dirigidos por un **moderador**; busca consenso y decisiones sobre problemas técnicos.
+    - **Inspección**: la más formal, sigue el proceso completo y busca el máximo de anomalías; recopila métricas para mejorar el proceso; el **autor no puede actuar como revisor ni escriba**.
 
-**Pruebas Basadas en la Experiencia**:
+## Técnicas de prueba
 
-- **Predicción de Errores**: Basada en la experiencia previa de los evaluadores.
-- **Prueba Exploratoria**: Los evaluadores exploran el software sin un caso de prueba predefinido.
-- **Prueba Basada en Listas de Comprobación**: Usa listas para verificar que se cumplen ciertos criterios.
+Las técnicas ayudan a derivar condiciones y casos de prueba con una cobertura medible. El CTFL 4.0 las agrupa en tres familias más los enfoques colaborativos (la «prueba de caso de uso» de la 3.1 desapareció del programa).
+
+### Técnicas de caja negra
+
+- **Partición de equivalencia**: dividir los datos en clases que el sistema trata igual (particiones válidas e inválidas) y probar **un valor de cada partición**.
+- **Análisis del valor frontera (AVF)**: probar los **límites** de las particiones ordenadas, donde se concentran los defectos (variantes de 2 y 3 valores por frontera).
+- **Prueba de tabla de decisión**: tabular combinaciones de condiciones y sus acciones; adecuada para reglas de negocio complejas.
+- **Prueba de transición de estado**: modelar estados, eventos y transiciones; cobertura de todos los estados o de todas las transiciones válidas.
+
+### Técnicas de caja blanca
+
+- **Prueba de sentencia y cobertura de sentencia**: porcentaje de sentencias ejecutadas por las pruebas.
+- **Prueba de rama y cobertura de rama**: porcentaje de ramas (condicionales e incondicionales) ejecutadas; el **100 % de cobertura de rama subsume el 100 % de sentencia**. (El programa 3.1 hablaba de «cobertura de decisión».)
+- Su valor: detectan defectos en código que la especificación no cubre y miden objetivamente lo probado.
+
+### Técnicas basadas en la experiencia
+
+- **Predicción de errores**: anticipar las equivocaciones típicas del desarrollador (listas de defectos frecuentes, *fault attacks*).
+- **Prueba exploratoria**: diseñar, ejecutar y aprender simultáneamente, a menudo en sesiones con objetivos (*session-based testing*); útil con especificaciones pobres o presión de tiempo.
+- **Prueba basada en lista de comprobación**: verificar condiciones recogidas en una checklist mantenida por el equipo.
+
+### Enfoques basados en la colaboración
+
+Novedad del 4.0: la calidad se construye en colaboración con negocio y desarrollo, no solo se verifica:
+
+- **Redacción colaborativa de historias de usuario**: las 3 C y los criterios INVEST (ver tema 23).
+- **Criterios de aceptación**: en formato escenario (**Given-When-Then**) u orientados a reglas; son la base de prueba de la historia.
+- **Desarrollo guiado por la prueba de aceptación (DGPA/ATDD)**: los casos de prueba de aceptación se escriben **antes** de desarrollar, a partir de los criterios de aceptación.
+
+## Gestión y automatización de las pruebas
+
+### Plan de prueba y criterios de entrada y salida
+
+El **plan de prueba** documenta objetivos, alcance, contexto, supuestos y restricciones, implicados, comunicación, gestión del riesgo, enfoque, presupuesto y calendario.
+
+- **Criterios de entrada**: precondiciones para empezar una actividad (recursos disponibles, material de prueba, calidad inicial mínima: por ejemplo, pruebas de humo pasadas). En ágil, **Definición de Preparado** (*Definition of Ready*).
+- **Criterios de salida**: qué debe lograrse para dar la actividad por completada (cobertura alcanzada, defectos sin resolver por debajo del umbral, pruebas planificadas ejecutadas). En ágil, **Definición de Hecho** (*Definition of Done*). Agotar tiempo o presupuesto puede ser un criterio de salida válido si los implicados aceptan el riesgo.
+
+### Estimación y priorización
+
+- **Cuatro técnicas de estimación** del esfuerzo de prueba: **basada en proporciones** (ratios históricos de la organización, p. ej. desarrollo:prueba 3:2), **extrapolación** (medidas de las primeras iteraciones del propio proyecto), **Delphi de banda ancha** (iteración de expertos; su variante ágil es el **póker de planificación**) y **estimación de tres puntos** (optimista a, más probable m y pesimista b: E = (a + 4m + b) / 6).
+- **Priorización de casos de prueba**: **basada en el riesgo**, **en la cobertura** o **en los requisitos**, condicionada siempre por las dependencias entre casos y la disponibilidad de recursos.
+
+### Pirámide y cuadrantes de prueba
+
+- **Pirámide de prueba** (Cohn, 2009): las capas bajas contienen pruebas pequeñas, aisladas y rápidas (**unitarias**: muchas), las intermedias pruebas de **servicio/integración** y la cúspide pocas pruebas de **extremo a extremo/interfaz** lentas y complejas. Guía el reparto del esfuerzo de automatización.
+- **Cuadrantes de prueba** (Marick; Crispin y Gregory): cruzan dos ejes (orientación a negocio o a tecnología; apoyar al equipo o criticar el producto):
+    - **Q1** (tecnología, apoya al equipo): componente e integración de componentes; automatizadas en CI.
+    - **Q2** (negocio, apoya al equipo): funcionales, historias de usuario, API, prototipos; manuales o automatizadas.
+    - **Q3** (negocio, critica el producto): exploratoria, usabilidad, PAU; normalmente manuales.
+    - **Q4** (tecnología, critica el producto): no funcionales salvo usabilidad, y pruebas de humo; automatizadas.
+
+### Riesgos y gestión de defectos
+
+- El **riesgo** combina la probabilidad de un suceso adverso y su impacto. Los **riesgos de proyecto** afectan a la gestión (plazos, recursos, personas); los **riesgos de producto**, a la calidad (funcionalidad ausente, rendimiento pobre). La **prueba basada en el riesgo** usa el análisis del riesgo de producto para decidir dónde y con qué rigor probar.
+- La **gestión de defectos** define el flujo de cada anomalía desde el descubrimiento hasta el cierre: registrar, analizar y clasificar, decidir la respuesta (corregir, aplazar, rechazar) y cerrar. Un **informe de defecto** típico incluye: identificador único, título, fecha y autor, objeto y entorno de prueba, contexto, descripción que permita reproducirlo, **resultados esperado y real**, **severidad** (impacto) y **prioridad** (urgencia de corrección), estado y referencias (plantillas en **ISO/IEC/IEEE 29119-3**).
+- La monitorización se apoya en métricas de avance (casos ejecutados y pasados), cobertura, defectos (densidad, encontrados frente a corregidos) y riesgo residual, comunicadas en informes de avance y en el **informe de compleción** final.
+
+### Herramientas y automatización
+
+El programa agrupa las herramientas de apoyo en: gestión (pruebas, defectos, configuración), prueba estática, diseño e implementación de pruebas, **ejecución y cobertura**, pruebas no funcionales, DevOps (CI/CD), colaboración y escalado de entornos (máquinas virtuales, contenedores). Ejemplos habituales: **JUnit** (unitarias en Java), **Selenium** y **Playwright** (interfaz web), **Postman** (API), **JMeter** (rendimiento) y **SonarQube** (análisis estático), integradas en el pipeline (ver tema 26).
+
+Una prueba unitaria con JUnit 5 sobre el método `clasificar` del caso práctico del tema 25:
+
+```java
+@Test
+void expedienteNoUrgenteNiRecurridoEsOrdinario() {
+    Clasificador c = new Clasificador();
+    assertEquals("ordinario", c.clasificar(false, 10, false));
+}
+```
+
+- **Ventajas de la automatización**: reduce el trabajo manual repetitivo y los errores humanos (consistencia y repetibilidad), aporta medidas objetivas (cobertura), acelera la retroalimentación (detección más temprana, menor *time-to-market*) y libera a los probadores para diseñar pruebas nuevas y más profundas.
+- **Riesgos**: expectativas poco realistas, subestimar el coste de introducir la herramienta y mantener los guiones, automatizar cuando lo manual es más apropiado, confiar en exceso en la herramienta (sin pensamiento crítico), dependencia del proveedor o abandono del proyecto de código abierto e incompatibilidades con la plataforma.
+
+## Fuentes {.unnumbered .unlisted}
+
+- ISTQB, *Probador Certificado del ISTQB. Programa de Estudio. Nivel Básico (CTFL) v4.0*, 21 de abril de 2023; traducción oficial al español del SSTQB.
+- ISO/IEC 20246 (revisiones de productos de trabajo) e ISO/IEC/IEEE 29119-3 (documentación de pruebas), citados donde el programa remite a ellos.
+- Cohn, M., *Succeeding with Agile*, Addison-Wesley, 2009 (pirámide de prueba).
+- Crispin, L. y Gregory, J., *Agile Testing*, Addison-Wesley, 2008 (cuadrantes de prueba, sobre Marick, 2003).
