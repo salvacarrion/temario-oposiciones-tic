@@ -1,151 +1,127 @@
 # Modelos OSI y TCP/IP
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+Los modelos de referencia organizan las funciones de una red en capas, de modo que un problema complejo (llevar datos de una aplicación a otra a través de medios y tecnologías heterogéneos) se descompone en problemas menores y bien delimitados. Este tema cubre los conceptos de la arquitectura en capas, el modelo de referencia OSI, el modelo TCP/IP y la comparativa entre ambos. Los protocolos de cada capa se estudian en el tema 65, y los dispositivos y tecnologías de red en el 66.
 
+## La arquitectura en capas: conceptos básicos
 
-## Modelo de Referencia OSI (Open Systems Interconnection)
+Para reducir la complejidad del diseño, las redes se estructuran como una pila de capas, cada una construida sobre la inferior: cada capa ofrece servicios a la capa superior ocultando los detalles de cómo los implementa. Esta modularidad permite sustituir o evolucionar una capa sin afectar al resto y hace posible que interoperen equipos de distintos fabricantes.
 
-El Modelo OSI es un marco de referencia lógico y conceptual diseñado para estandarizar y normalizar la interconexión de sistemas abiertos, facilitando la compatibilidad entre diferentes tecnologías de red. Creado en 1980 por la **ISO** (International Organization for Standardization), **no es un modelo de red** específico **ni define protocolos concretos**, pero sí establece las funcionalidades que deben cumplir los protocolos de comunicación para lograr un estándar común.
+- **Servicio**: conjunto de operaciones que una capa ofrece a la capa inmediatamente superior. Define *qué* hace la capa, no *cómo* lo hace.
+- **Interfaz**: frontera entre dos capas adyacentes de un mismo sistema; define las operaciones y servicios accesibles desde arriba. En terminología OSI, el servicio se accede a través de los **puntos de acceso al servicio (SAP)**.
+- **Protocolo**: conjunto de reglas que gobierna el formato y el significado de los mensajes que intercambian las **entidades pares** (entidades de la misma capa en máquinas distintas). Define *cómo* se presta el servicio.
+- **Comunicación virtual y real**: las entidades pares «conversan» lógicamente mediante su protocolo, pero los datos reales descienden por la pila del emisor, cruzan el medio físico y ascienden por la pila del receptor.
+- **Primitivas de servicio**: OSI define cuatro: **request** (petición), **indication** (indicación), **response** (respuesta) y **confirm** (confirmación). Un servicio **confirmado** usa las cuatro; uno **no confirmado**, solo petición e indicación.
+- **Servicio orientado a conexión**: con fases de establecimiento, transferencia y liberación; los datos llegan en orden por el «circuito» acordado (modelo del teléfono).
+- **Servicio no orientado a conexión (datagrama)**: cada mensaje viaja de forma independiente, con la dirección de destino completa (modelo del correo postal).
 
-### Arquitectura del Modelo OSI: 7 Capas ("FER Tiene Su Pipi Amarillo")
+### Encapsulamiento y unidades de datos
 
-El modelo se compone de siete capas jerárquicas, cada una encargada de funciones específicas en el proceso de comunicación:
+En el emisor, cada capa recibe los datos de la capa superior y les añade su propia información de control en una cabecera (la capa de enlace añade además una cola); en el receptor, cada capa retira la cabecera de su nivel y entrega el resto hacia arriba. Este proceso se llama **encapsulamiento** (y su inverso, **desencapsulamiento**).
 
-- **Capa 7: Aplicación**
-    - **Responsabilidad**: Proporcionar servicios de red directamente a las aplicaciones del usuario.
-    - **Función**: Facilitar APIs de alto nivel para actividades como compartir recursos, acceso remoto a archivos y servicios de correo electrónico.
-    - **Unidad de Datos**: Datos.
-- **Capa 6: Presentación**
-    - **Responsabilidad**: Transformar y adaptar el formato de los datos para asegurar que la información enviada por la capa de aplicación de un sistema sea entendible por la capa de aplicación de otro.
-    - **Función**: Gestionar la codificación de caracteres, compresión de datos y cifrado/descifrado para la seguridad y eficiencia de la información.
-    - **Unidad de Datos**: Datos.
-- **Capa 5: Sesión**
-    - **Responsabilidad**: Establecer, mantener y finalizar sesiones de comunicación entre aplicaciones en diferentes dispositivos.
-    - **Función**: Manejar el diálogo entre sistemas, controlando quién transmite y durante cuánto tiempo.
-    - **Características Adicionales**:
-        - **Control del Diálogo**: Define si la comunicación es bidireccional simultánea (**full-duplex**) o alternada (**half-duplex**).
-        - **Agrupamiento**: Permite organizar el flujo de datos en unidades lógicas o transacciones.
-        - **Recuperación**: Implementa puntos de comprobación para reiniciar la comunicación desde el último punto válido en caso de fallo.
-    - **Unidad de Datos**: Datos.
-- **Capa 4: Transporte**
-    - **Responsabilidad**: Proporcionar una transferencia de datos confiable y transparente entre extremos, ajustándose a los requisitos de calidad de servicio.
-    - **Función**: Realizar la segmentación y reensamblado de datos, control de flujo, detección y corrección de errores, y multiplexación de conexiones.
-    - **Unidad de Datos**: Segmento o Datagrama.
-    - **Tipos de Servicios**:
-        - **Conmutación de Datagramas (Stateless)**: Cada paquete es independiente y se enruta individualmente.
-        - **Circuitos Virtuales (Stateful)**: Se establece una ruta predefinida por la que todos los paquetes transitan en orden.
-- **Capa 3: Red**
-    - **Responsabilidad**: Determinar cómo se enrutan los datos desde el origen hasta el destino a través de múltiples nodos.
-    - **Función**: Gestionar el direccionamiento lógico, el enrutamiento y el control de congestión en la red.
-    - **Unidad de Datos**: Paquete.
-- **Capa 2: Enlace (de Datos)**
-    - **Responsabilidad**: Proporcionar transferencia de datos libre de errores entre dos nodos conectados físicamente.
-    - **Función**: Encapsular paquetes en tramas, gestionar direcciones físicas (**MAC**), detección y corrección de errores a nivel de enlace.
-    - **Unidad de Datos**: Trama.
-- **Capa 1: Física**
-    - **Responsabilidad**: Definir las características eléctricas, mecánicas y funcionales para activar, mantener y desactivar conexiones físicas.
-    - **Función**: Transmitir bits individuales a través de un medio físico, incluyendo aspectos como voltajes, sincronización y velocidades de transmisión.
-    - **Unidad de Datos**: Bits.
+- **SDU (Service Data Unit)**: los datos que una capa recibe de la superior para transmitir.
+- **PDU (Protocol Data Unit)**: la unidad que una capa intercambia con su entidad par; se forma añadiendo la información de control propia (PCI) a la SDU.
 
-## Modelo TCP/IP o Internet Protocol Suite
+Cada capa da un nombre propio a su PDU, y esa denominación es preguntable:
 
-El Modelo TCP/IP es un conjunto de protocolos de comunicación fundamentales para Internet y redes similares. Desarrollado en 1973 por **DARPA** (Defense Advanced Research Projects Agency), precede al Modelo OSI y define protocolos específicos para la comunicación en red, estableciendo estándares prácticos que permiten la interoperabilidad entre sistemas heterogéneos.
+| Capa | Unidad de datos (PDU) |
+| --- | --- |
+| Aplicación, presentación y sesión | Datos |
+| Transporte | **Segmento** (TCP) o **datagrama** (UDP) |
+| Red | **Paquete** |
+| Enlace de datos | **Trama** |
+| Física | **Bits** |
 
-### Arquitectura del Modelo TCP/IP: 4 Capas ("Ana Toca Iguanas Eléctricas")
+## El modelo de referencia OSI
 
-El modelo consta de cuatro capas, cada una con roles definidos:
+El modelo de interconexión de sistemas abiertos (OSI, *Open Systems Interconnection*) es un marco conceptual que estandariza las funciones de comunicación en **siete capas** para que sistemas de distintos fabricantes puedan interoperar. La **ISO** inició los trabajos en 1977 y publicó la norma en **1984** como **ISO 7498**, revisada como **ISO/IEC 7498-1:1994** (equivalente a la recomendación **UIT-T X.200**). **No es una arquitectura de red ni define protocolos concretos**: establece qué funciones corresponden a cada capa. Los protocolos OSI apenas llegaron a desplegarse (las clases de transporte TP0-TP4 se ven en el tema 65), pero el modelo pervive como vocabulario de referencia del sector.
 
-- **Capa de Aplicación**
-    - **Función**: Proporcionar servicios de red a las aplicaciones del usuario final.
-    - **Protocolos Comunes**:
-        - **HTTP (HyperText Transfer Protocol)**: Transferencia de documentos web.
-        - **FTP (File Transfer Protocol)**: Transferencia de archivos entre sistemas.
-        - **DNS (Domain Name System)**: Resolución de nombres de dominio.
-        - **SMTP (Simple Mail Transfer Protocol)**, **POP (Post Office Protocol)**, **IMAP (Internet Message Access Protocol)**: Servicios de correo electrónico.
-        - **Telnet**: Acceso remoto a servidores.
-- **Capa de Transporte**
-    - **Función**: Proporcionar comunicación de extremo a extremo y control de flujo.
-    - **Protocolos**:
-        - **TCP (Transmission Control Protocol)**: Protocolo orientado a conexión que garantiza la entrega confiable de datos.
-        - **UDP (User Datagram Protocol)**: Protocolo sin conexión que permite el envío rápido de datagramas sin garantizar su entrega.
-        - **TLS (Transport Layer Security)**: Protocolo de seguridad para comunicaciones cifradas.
-- **Capa de Internet**
-    - **Función**: Encargada del direccionamiento y enrutamiento de paquetes entre redes.
-    - **Características**:
-        - Los paquetes pueden seguir rutas diferentes entre origen y destino.
-        - No se garantiza la entrega en orden ni la integridad de los datos; estas funciones son manejadas por capas superiores si es necesario.
-    - **Protocolos**:
-        - **IP (Internet Protocol)**: Proporciona direccionamiento lógico y enrutamiento de paquetes.
-        - **ICMP (Internet Control Message Protocol)**: Utilizado para mensajes de control y diagnóstico.
-        - **ARP (Address Resolution Protocol)**: Resuelve direcciones IP a direcciones MAC.
-        - **RARP (Reverse ARP)**: Resuelve direcciones MAC a direcciones IP.
-- **Capa de Enlace (de Datos) o Acceso a la Red**
-    - **Función**: Gestionar la transmisión física de datos en el medio de comunicación de la red.
-    - **Protocolos y Tecnologías**:
-        - **Ethernet**, **Fast Ethernet**: Estándares para redes de área local (**LAN**).
-        - **Token Ring**, **Token Bus**: Tecnologías de acceso al medio basadas en paso de testigo.
-        - **FDDI (Fiber Distributed Data Interface)**: Tecnología para redes de alta velocidad usando fibra óptica.
-        - **X.25**, **Frame Relay**, **ATM (Asynchronous Transfer Mode)**: Tecnologías para redes de área amplia (**WAN**).
+### Las siete capas
+
+De abajo arriba (iniciales F-E-R-T-S-P-A; mnemotecnia clásica en inglés: «Please Do Not Throw Sausage Pizza Away»):
+
+- **Capa 1: física**
+    - **Responsabilidad**: transmitir los bits en bruto a través del medio de comunicación.
+    - **Funciones**: define las características **mecánicas, eléctricas, funcionales y de procedimiento** de la conexión: voltajes, duración de un bit, conectores, sincronización, velocidades de transmisión y modos símplex/semidúplex/dúplex.
+- **Capa 2: enlace de datos**
+    - **Responsabilidad**: transferencia libre de errores entre dos nodos **adyacentes** (conectados al mismo enlace).
+    - **Funciones**: encapsular los paquetes en **tramas** y delimitarlas, direccionamiento **físico (MAC)**, detección y corrección de errores del enlace, control de flujo entre nodos y control de acceso al medio compartido.
+    - En las redes IEEE 802 se subdivide en dos subcapas: **LLC** (control de enlace lógico) y **MAC** (control de acceso al medio).
+- **Capa 3: red**
+    - **Responsabilidad**: encaminar los paquetes desde el origen hasta el destino a través de múltiples nodos intermedios.
+    - **Funciones**: direccionamiento **lógico**, **encaminamiento** (*routing*) y control de la congestión.
+    - **Tipos de servicio**: de **datagramas** (cada paquete se encamina de forma independiente, sin estado) o de **circuitos virtuales** (se establece una ruta por la que transitan todos los paquetes en orden, con estado).
+- **Capa 4: transporte**
+    - **Responsabilidad**: primera capa **extremo a extremo**: comunica el origen con el destino final, no con los nodos intermedios, con la calidad de servicio requerida.
+    - **Funciones**: segmentación y reensamblado, control de flujo y de errores extremo a extremo y multiplexación de conexiones. El servicio puede ser orientado a conexión o sin conexión; OSI define **cinco clases de protocolo (TP0 a TP4)** según la fiabilidad de la red subyacente (tema 65).
+- **Capa 5: sesión**
+    - **Responsabilidad**: establecer, mantener y finalizar sesiones de comunicación entre aplicaciones.
+    - **Funciones**: **control del diálogo** (quién transmite y cuándo: dúplex o semidúplex), **agrupamiento** del flujo en unidades lógicas o transacciones y **recuperación** mediante puntos de comprobación (*checkpoints*) que permiten reanudar la comunicación tras un fallo desde el último punto válido.
+- **Capa 6: presentación**
+    - **Responsabilidad**: la sintaxis y la semántica de la información transmitida, para que sistemas con representaciones internas distintas se entiendan.
+    - **Funciones**: representación común de los datos (notación **ASN.1**), conversión de códigos de caracteres, **compresión** y **cifrado**.
+- **Capa 7: aplicación**
+    - **Responsabilidad**: proporcionar servicios de red directamente a las aplicaciones del usuario.
+    - **Funciones**: protocolos de alto nivel para correo electrónico, transferencia de ficheros, terminal virtual o acceso a recursos remotos.
+
+## El modelo TCP/IP
+
+El modelo TCP/IP (*Internet protocol suite*) es la arquitectura de protocolos sobre la que funciona Internet. Nació en la red **ARPANET** de **DARPA**: Cerf y Kahn publicaron su diseño en **1974** («A Protocol for Packet Network Intercommunication»); el protocolo se separó después en TCP e IP (cuyas versiones 4 definen los **RFC 791 y 793, de 1981**) y ARPANET migró a TCP/IP el **1 de enero de 1983**. El modelo de **cuatro capas** quedó formalizado en los **RFC 1122 y 1123 (1989)**. A diferencia de OSI, aquí **los protocolos precedieron al modelo**: TCP/IP describe una pila real ya construida.
+
+### Las cuatro capas
+
+- **Capa de acceso a la red (enlace)**
+    - **Función**: conectar el equipo con su red física.
+    - TCP/IP **no la especifica**: se apoya en las tecnologías de red existentes (**Ethernet**, **Wi-Fi IEEE 802.11**, **PPP**; históricamente también Token Ring, FDDI, X.25, Frame Relay o ATM, hoy legadas: tema 66). IP es agnóstico del medio («IP sobre cualquier cosa»).
+- **Capa de internet**
+    - **Función**: encaminar **datagramas** entre redes, de forma **no orientada a conexión** y de **mejor esfuerzo** (*best effort*): los paquetes pueden seguir rutas distintas y no se garantiza la entrega, el orden ni la integridad (esas garantías, si se necesitan, las aporta el transporte).
+    - **Protocolos**: **IP** (IPv4/IPv6, direccionamiento lógico y encaminamiento), **ICMP** (mensajes de control y diagnóstico) y **ARP** (resolución de direcciones IP a MAC, en la frontera con el enlace). Su predecesor inverso RARP quedó obsoleto, sustituido por BOOTP y después DHCP.
+- **Capa de transporte**
+    - **Función**: comunicación extremo a extremo entre procesos.
+    - **Protocolos**: **TCP** (orientado a conexión, fiable, con control de flujo y de congestión) y **UDP** (sin conexión, no fiable, de mínima sobrecarga). Sobre ellos se apoyan **TLS** (cifrado sobre TCP) y **QUIC** (transporte cifrado sobre UDP).
+- **Capa de aplicación**
+    - **Función**: servicios al usuario final; absorbe las funciones de las capas de sesión y presentación de OSI.
+    - **Protocolos**: **HTTP**, **DNS**, **SMTP**, **FTP**, **DHCP**, **SSH**, **SNMP**… (se estudian en el tema 65).
+
+Un principio de diseño célebre de esta pila es el **principio de robustez** (RFC 1122, atribuido a Jon Postel): «sé conservador en lo que envías y liberal en lo que aceptas».
 
 ## Comparativa entre modelos
 
-<table style="width:100%;">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 24%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: center;">Modelo OSI</th>
-<th style="text-align: center;">Modelo TCP/IP</th>
-<th style="text-align: center;">Protocol Data Unit</th>
-<th style="text-align: center;">Protocolos</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Capa de Aplicación</td>
-<td rowspan="3">Capa de Aplicación</td>
-<td>Datos</td>
-<td>HTTP, FTP, DNS, SMPT, Telnet..</td>
-</tr>
-<tr>
-<td>Capa de Presentación</td>
-<td>Datos</td>
-<td>*SSL, TLS, MPEG, JPEG,…</td>
-</tr>
-<tr>
-<td>Capa de Sesión</td>
-<td>Datos</td>
-<td>*RPC, SCP, NetBIOS, PPTP, Sockets</td>
-</tr>
-<tr>
-<td>Cada de Transporte</td>
-<td>Capa de Transporte</td>
-<td>Segmento o Datagrama</td>
-<td>TCP, UDP, TLS</td>
-</tr>
-<tr>
-<td>Capa de Red</td>
-<td>Capa de Internet</td>
-<td>Paquete</td>
-<td>IP, IPSec, ICMP, Router</td>
-</tr>
-<tr>
-<td>Capa de Enlace (de Datos)</td>
-<td rowspan="2">Capa de Enlace o Acceso a la Red</td>
-<td>Trama</td>
-<td>Ethernet, PPP, Switch, Bridge</td>
-</tr>
-<tr>
-<td>Capa Física</td>
-<td>Bit, Baudios</td>
-<td>Cables, Fibra, Repeaters, Hub,…</td>
-</tr>
-</tbody>
-</table>
+Ambos modelos comparten la idea esencial: una pila de capas independientes, con funciones parecidas en las capas comunes y un transporte extremo a extremo. Difieren en el número de capas, en la filosofía de diseño y en su éxito práctico.
+
+### Correspondencia entre capas
+
+| Modelo OSI | Modelo TCP/IP | Unidad de datos | Protocolos y estándares |
+| --- | --- | --- | --- |
+| 7. Aplicación | Aplicación | Datos | HTTP, FTP, DNS, SMTP, SSH, SNMP |
+| 6. Presentación | Aplicación | Datos | TLS (cifrado), MIME, ASN.1, JPEG |
+| 5. Sesión | Aplicación | Datos | RPC, NetBIOS, *sockets* |
+| 4. Transporte | Transporte | Segmento (TCP) o datagrama (UDP) | TCP, UDP, QUIC |
+| 3. Red | Internet | Paquete | IP, ICMP, IPsec |
+| 2. Enlace de datos | Acceso a la red | Trama | Ethernet (802.3), Wi-Fi (802.11), PPP |
+| 1. Física | Acceso a la red | Bits | Especificaciones del medio: cobre, fibra, radio |
+
+### Diferencias clave
+
+- **Número de capas: 7 frente a 4**. TCP/IP funde la física y el enlace en el acceso a la red, y absorbe la sesión y la presentación en la aplicación.
+- **Filosofía**: OSI es **prescriptivo** (el modelo se definió antes que sus protocolos y aspira a ser general); TCP/IP es **descriptivo** (documenta una pila ya construida y no sirve para describir otras redes).
+- **Rigor conceptual**: OSI distingue con claridad **servicio, interfaz y protocolo**; TCP/IP no separa estos conceptos.
+- **Tipos de servicio**: en la capa de red OSI contempla datagramas y circuitos virtuales, pero en transporte solo servicio orientado a conexión; TCP/IP ofrece solo datagramas en internet (IP) y ambos tipos en transporte (TCP y UDP), la combinación que se impuso.
+- **Resultado práctico**: los protocolos OSI fracasaron comercialmente y la pila TCP/IP domina Internet; el modelo OSI sobrevive como marco de referencia y vocabulario común («un switch es un dispositivo de capa 2»).
+
+### Críticas y modelo híbrido
+
+Las críticas clásicas (Tanenbaum) resumen por qué ninguno de los dos modelos es perfecto:
+
+- **A OSI**: llegó en mal momento (TCP/IP ya estaba implantado cuando aparecieron sus protocolos), con mala tecnología (las capas de sesión y presentación casi vacías, las de enlace y red sobrecargadas) y con implementaciones iniciales lentas y pesadas.
+- **A TCP/IP**: no distingue servicio, interfaz y protocolo; no es un modelo general; y la capa de acceso a la red es más una interfaz que una capa verdadera, pues no separa la física del enlace.
+
+Por ello, la docencia y la práctica profesional usan un **modelo híbrido de cinco capas** (física, enlace, red, transporte y aplicación), el de los libros de texto de referencia (Tanenbaum; Kurose y Ross). La estructura de los temas 65 y 66 responde a este modelo.
+
+## Fuentes {.unnumbered .unlisted}
+
+- ISO/IEC 7498-1:1994 (equivalente a UIT-T X.200): modelo de referencia OSI (primera edición: ISO 7498:1984).
+- RFC 1122 y RFC 1123 (octubre de 1989): requisitos de los hosts de Internet; definen las cuatro capas del modelo TCP/IP.
+- RFC 791, *Internet Protocol* (septiembre de 1981); RFC 9293, *Transmission Control Protocol* (agosto de 2022).
+- V. Cerf y R. Kahn, «A Protocol for Packet Network Intercommunication», *IEEE Transactions on Communications* (mayo de 1974).
+- A. Tanenbaum, N. Feamster y D. Wetherall, *Computer Networks*, 6.ª ed., Pearson, 2021.
+- J. Kurose y K. Ross, *Computer Networking: A Top-Down Approach*, 8.ª ed., Pearson, 2021.
