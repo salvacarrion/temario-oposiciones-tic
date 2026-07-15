@@ -76,7 +76,7 @@ nav:
   - 'Tema 18: La gestión de los servicios TIC': 18-gestion-de-los-servicios-tic.md
   - 'Tema 19: Dirección y gestión de proyectos': 19-direccion-y-gestion-de-proyectos.md
   - 'Tema 20: Análisis de procesos': 20-analisis-de-procesos.md
-  - '⚠️ Tema 21: Metodologías ágiles y escalado ágil': 21-metodologias-agiles-y-escalado-agil.md
+  - 'Tema 21: Metodologías ágiles y escalado ágil': 21-metodologias-agiles-y-escalado-agil.md
 - Bloque III — Ingeniería del software:
   - 'Tema 23: Análisis y diseño de aplicaciones': 23-analisis-y-diseno-de-aplicaciones.md
   - 'Tema 24: Proceso unificado y UML': 24-proceso-unificado-y-uml.md
@@ -127,10 +127,10 @@ nav:
   - 'Tema 65: Protocolos de comunicaciones': 65-protocolos-de-comunicaciones.md
   - 'Tema 66: Redes de computadores': 66-redes-de-computadores.md
   - 'Tema 68: Virtualización de redes': 68-virtualizacion-de-redes.md
-  - '⚠️ Tema 70: Redes de emergencia': 70-redes-de-emergencia.md
-  - '⚠️ Tema 71: Redes inalámbricas y 5G': 71-redes-inalambricas-y-5g.md
-  - '⚠️ Tema 72: Internet de las cosas y redes de sensores': 72-internet-de-las-cosas-y-redes-de-sensores.md
-  - '⚠️ Tema 73: Ciudades inteligentes': 73-ciudades-inteligentes.md
+  - 'Tema 70: Redes de emergencia': 70-redes-de-emergencia.md
+  - 'Tema 71: Redes inalámbricas y 5G': 71-redes-inalambricas-y-5g.md
+  - 'Tema 72: Internet de las cosas y redes de sensores': 72-internet-de-las-cosas-y-redes-de-sensores.md
+  - 'Tema 73: Ciudades inteligentes': 73-ciudades-inteligentes.md
   - 'Tema 74: Seguridad en las comunicaciones': 74-seguridad-en-las-comunicaciones.md
 - Bloque XI — Administración de la Generalitat:
   - 'Tema 75: La agenda digital valenciana': 75-agenda-digital-valenciana.md
