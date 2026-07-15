@@ -1,275 +1,121 @@
 # Redes inalámbricas y 5G
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+Las redes inalámbricas conectan nodos mediante ondas electromagnéticas, sin cableado, y son la base de la movilidad: desde la red local de una oficina (Wi-Fi) hasta la cobertura nacional de la telefonía móvil (5G). Este tema cubre la familia IEEE 802.11, las generaciones de telefonía móvil con el 5G en detalle y otras tecnologías de transmisión inalámbrica. Los dispositivos y el direccionamiento de red se estudian en el tema 66, las redes de emergencia en el 70, las redes IoT de corto y largo alcance (Bluetooth, LPWAN) en el 72 y la seguridad inalámbrica (WEP/WPA/WPA3, 802.1X) en el 74.
 
+## Wi-Fi: la familia IEEE 802.11
 
-## Redes inalámbricas
+Las redes inalámbricas se clasifican por su alcance, en paralelo a las redes cableadas (PAN/LAN/MAN/WAN):
 
-Las redes inalámbricas permiten la conexión de nodos mediante ondas electromagnéticas, eliminando la necesidad de una red cableada. Son esenciales en entornos donde la movilidad y la flexibilidad son prioritarias.
+| Tipo | Alcance típico | Tecnologías |
+| --- | --- | --- |
+| **WPAN** (área personal) | 10-100 m | Bluetooth, ZigBee, NFC, RFID (tema 72) |
+| **WLAN** (área local) | ~100 m | **Wi-Fi (IEEE 802.11)** |
+| **WMAN** (área metropolitana) | 1-50 km | WiMAX (IEEE 802.16, hoy legado) |
+| **WWAN** (área extensa) | regional/global | Telefonía móvil (2G-5G), satélite |
 
-### Tipos de redes inalámbricas por alcance
+Dentro del proyecto **IEEE 802** (estándares de redes de área local y metropolitana), los grupos de trabajo relevantes son: **802.1** (puentes, VLAN 802.1Q y autenticación 802.1X: temas 66 y 74), **802.3** (Ethernet cableada), **802.11** (WLAN, la base de Wi-Fi), **802.15** (WPAN: Bluetooth en 802.15.1, ZigBee sobre 802.15.4) y **802.16** (WMAN: WiMAX). La marca **Wi-Fi** la otorga la **Wi-Fi Alliance**, que certifica la interoperabilidad de los equipos 802.11.
 
-- **WPAN (Wireless Personal Area Network)**\ Red para la comunicación entre dispositivos cercanos al punto de acceso.
-    - **Ejemplos**: Bluetooth (2-6 Mbits; 2.4-5 GHz; 5-20 m), RFID, NFC, ZigBee.
-    - **Alcance**: 10-100 m.
-- **WLAN (Wireless Local Area Network)**\ Red de comunicación para distancias cortas basada en ondas de radio o infrarrojas.
-    - **Ejemplos**: Wi-Fi (802.11) → (+600 Mbits; 2.4-5 GHz; 50-250 m).
-    - **Alcance**: 100 m-1 km.
-- **WMAN (Wireless Metropolitan Area Network)**\ Red de banda ancha para cubrir áreas geográficas extensas.
-    - **Ejemplos**: WiMAX (+70 Mbits; 2-11 GHz; 50 km).
-    - **Alcance**: 1-50 km.
-- **WWAN (Wireless Wide Area Network)**\ Red que utiliza tecnologías de comunicación móvil.
-    - **Ejemplos**: 2G, 3G, 4G LTE, 5G, WiMAX, UMTS, GPRS, EDGE, CDMA2000, GSM, CDPD, Mobitex, HSPA.
-    - **Alcance**: Hasta 100 km.
+- **Arquitectura 802.11**:
+    - **Estación (STA)**: cualquier dispositivo con interfaz 802.11.
+    - **Punto de acceso (AP)**: hace de puente entre el medio radio y la red cableada.
+    - **BSS (Basic Service Set)**: grupo de estaciones que se comunican entre sí; puede ser **independiente** (ad hoc, sin AP) o de **infraestructura** (a través de un AP).
+    - **ESS (Extended Service Set)**: unión de varios BSS interconectados por un **sistema de distribución (DS)**, normalmente la LAN cableada; permite la **itinerancia (roaming)** de las estaciones entre AP sin perder la conexión.
+    - **SSID**: nombre lógico de la red que comparten los AP de un mismo ESS.
+- **Acceso al medio**: **CSMA/CA** (acceso múltiple con escucha de portadora y **prevención de colisiones**): la estación escucha el canal, espera un tiempo aleatorio (*backoff*) y transmite; el receptor confirma con **ACK**. Como una estación no puede detectar colisiones mientras transmite (a diferencia del CSMA/CD de Ethernet), se previenen con el intercambio opcional **RTS/CTS**, que además mitiga el problema del **nodo oculto**. El medio es compartido y semidúplex.
+- **Bandas de frecuencia**: **2,4 GHz** (banda ISM, 13 canales en Europa, solo 3 sin solape: mayor alcance, más interferencias), **5 GHz** (más canales y anchura, menor alcance) y **6 GHz** (5945-6425 MHz en Europa, abierta para Wi-Fi 6E/7).
 
-![Screen Shot 2022-09-09 at 01.22.10.png](media/image78.png)
+Las generaciones comerciales de Wi-Fi (numeradas por la Wi-Fi Alliance desde 2018) y sus estándares IEEE:
 
-### Tipos de redes inalámbricas por el rango de frecuencias
+| Generación | Estándar IEEE | Año | Bandas (GHz) | Velocidad máxima teórica |
+| --- | --- | --- | --- | --- |
+| (legado) | 802.11 | 1997 | 2,4 | 2 Mbps |
+| (Wi-Fi 1) | 802.11b | 1999 | 2,4 | 11 Mbps |
+| (Wi-Fi 2) | 802.11a | 1999 | 5 | 54 Mbps |
+| (Wi-Fi 3) | 802.11g | 2003 | 2,4 | 54 Mbps |
+| **Wi-Fi 4** | **802.11n** | 2009 | 2,4/5 | 600 Mbps |
+| **Wi-Fi 5** | **802.11ac** | 2013 | 5 | 6,9 Gbps |
+| **Wi-Fi 6 / 6E** | **802.11ax** | 2021 | 2,4/5 (+**6** en 6E) | 9,6 Gbps |
+| **Wi-Fi 7** | **802.11be** | 2024 | 2,4/5/6 | ~**46 Gbps** |
 
-- **Microondas terrestres**: Utilizan antenas parabólicas (∅ 3 m) que requieren alineación para conexiones punto-a-punto.
-- **Microondas por satélite**: Enlazan estaciones terrestres (base) con un satélite.
-    - **Señal ascendente**: Emitida por la estación terrestre.
-    - **Señal descendente**: Retransmitida por el satélite en otra banda de frecuencia.
-- **Infrarrojos**: Utilizan transmisores y receptores que modulan luz infrarroja no coherente.
+- **Wi-Fi 4 (802.11n)**: introduce **MIMO** (varias antenas y flujos espaciales), canales de 40 MHz y agregación de tramas.
+- **Wi-Fi 5 (802.11ac)**: solo 5 GHz, canales de 80/160 MHz, modulación 256-QAM y MU-MIMO descendente (varios usuarios a la vez).
+- **Wi-Fi 6 (802.11ax)**: diseñada para la **eficiencia en entornos densos** más que para la velocidad punta: **OFDMA** (subdivide cada canal entre varios usuarios), MU-MIMO ascendente y descendente, 1024-QAM, coloración de BSS (reduce interferencias entre redes vecinas) y **TWT (Target Wake Time)**, que agenda las transmisiones para ahorrar batería en dispositivos IoT. La certificación exige **WPA3**. **Wi-Fi 6E** extiende lo anterior a la banda de **6 GHz**.
+- **Wi-Fi 7 (802.11be, *Extremely High Throughput*)**: certificación desde enero de **2024** (estándar IEEE 802.11be-2024, publicado en julio de 2025): canales de **320 MHz**, 4096-QAM y **MLO (Multi-Link Operation)**, que agrega varias bandas simultáneamente; hasta ~**46 Gbps** teóricos y latencias bajas orientadas a realidad virtual/aumentada y juego en red.
+- **Wi-Fi 8 (802.11bn, *Ultra High Reliability*)**: en desarrollo, prevista para **2028**; prioriza la fiabilidad (latencia estable, continuidad en movilidad) sobre el aumento de velocidad.
+- **Seguridad**: la enmienda **802.11i** (2004) introdujo WPA2 en sustitución del WEP original, y **802.11w** (2009) protegió las tramas de gestión; el estándar actual de cifrado es **WPA3** (2018). Se desarrollan en el tema 74.
 
-### Estándares IEEE 802
+## Generaciones de telefonía móvil y redes 5G
 
-- **IEEE 802.1 (LAN, MAN, WAN)**
-    - **802.1D:** Puentes MAC.
-    - **802.1Q:** VLANs.
-    - **802.1X:** Control de acceso a la red basado en puertos (autenticación).
-- **IEEE 802.2 (LLC)**: Control lógico de enlace (LLC).
-- **IEEE 802.3 (Ethernet)**: Redes Ethernet cableadas.
-- **IEEE 802.11 (WLAN)**: Redes Ethernet inalámbricas
-    - **Ejemplo:** WiFi (+600 Mbits; 2.4-5 GHz; 50-250 m).
-    - **Estándares**:
-        - **a**: 5 GHz.
-        - **n**: Estándar actual (2.4/5GHz)
-        - **Superior a “n”**: 6GHz
-- **IEEE 802.15 (WPAN)**: Redes de área personal inalámbricas
-    - **Ejemplo:** Bluetooth (50 Mbits; 2.4 GHz; 0.5-100 m)
-- **IEEE 802.16 (WMAN)**: Redes metropolitanas inalámbricas
-    - **Ejemplo**: WiMAX
+La telefonía móvil ha evolucionado por generaciones, aproximadamente una por década, desde la voz analógica hasta la plataforma de conectividad universal que es el 5G:
 
-### Conceptos generales IEEE 802.11
+| Generación | Década | Tecnologías | Acceso radio | Aporta |
+| --- | --- | --- | --- | --- |
+| **1G** | 1980 | NMT, AMPS, TACS | FDMA (analógico) | Voz analógica, sin datos |
+| **2G** | 1990 | **GSM**, GPRS (2.5G), EDGE | TDMA sobre FDMA | Voz digital, **SMS**, itinerancia; primeros datos (GPRS ~114 kbps, EDGE ~384 kbps) |
+| **3G** | 2000 | **UMTS** (W-CDMA), HSPA/HSPA+ | CDMA | Datos móviles e internet (hasta 42 Mbps con HSPA+) |
+| **4G** | 2010 | **LTE**, LTE-Advanced | OFDMA | Banda ancha móvil **todo IP** (100 Mbps a 1 Gbps) |
+| **5G** | 2020 | **5G NR** (3GPP Rel-15, 2018) | OFDMA con numerología escalable | Banda ancha extrema, latencia de 1 ms, IoT masivo |
 
-- **Estaciones**: Dispositivos con interfaz de red.
-- **Medio**: Radiofrecuencias o infrarrojos.
-- **Punto de acceso (AP)**:
-    - Funciona como un puente, conectando redes con niveles de enlace similares o distintos.
-    - Realiza conversiones de tramas.
-- **Sistema de distribución**:
-    - Proporciona movilidad entre APs.
-    - Controla la ubicación de las estaciones para enviar tramas correctamente.
-- **Conjunto de Servicio Básico (BSS)**: Grupo de estaciones intercomunicadas.
-    - **Independientes**: Comunicación directa entre estaciones.
-    - **Infraestructura**: Comunicación a través de un punto de acceso.
-- **Conjunto de Servicio Extendido (ESS)**: Unión de varios BSS.
-- **Área de servicio básico**:
-    - Define la capacidad de movilidad entre terminales cambiando de BSS.
-    - La transición es correcta dentro del mismo ESS.
-- **Límites de la red**:
-    - Difusos debido al solapamiento de diferentes BSS.
+La quinta generación (**5G**) no es solo más velocidad: se define para tres familias de casos de uso muy distintas y evoluciona mediante *releases* del **3GPP**, el consorcio que la normaliza (junto a la UIT, que fija los requisitos **IMT-2020**, y el ETSI). Se la describe como «la quinta generación para las personas y la primera para las máquinas».
 
-<table>
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 19%" />
-<col style="width: 20%" />
-<col style="width: 19%" />
-<col style="width: 19%" />
-</colgroup>
-<thead>
-<tr>
-<th>Generation</th>
-<th>IEEE Standard</th>
-<th><p>Maximum Linkrate</p>
-<p>(Mbit/s)</p></th>
-<th>Adopted</th>
-<th>Radio Frequency (GHz)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Wi‑Fi 7</td>
-<td>802.11be</td>
-<td>40000</td>
-<td>2024</td>
-<td>2.4/5/6</td>
-</tr>
-<tr>
-<td>Wi‑Fi 6E</td>
-<td rowspan="2">802.11ax</td>
-<td rowspan="2">600 - 9608</td>
-<td>2020</td>
-<td>2.4/5/6</td>
-</tr>
-<tr>
-<td>Wi‑Fi 6</td>
-<td>2019</td>
-<td>2.4/5</td>
-</tr>
-<tr>
-<td>Wi‑Fi 5</td>
-<td>802.11ac</td>
-<td>433 - 6933</td>
-<td>2014</td>
-<td>5</td>
-</tr>
-<tr>
-<td>Wi‑Fi 4</td>
-<td>802.11n</td>
-<td>72 - 600</td>
-<td>2008</td>
-<td>2.4/5</td>
-</tr>
-<tr>
-<td>(Wi-Fi 3*)</td>
-<td>802.11g</td>
-<td>6 - 54</td>
-<td>2003</td>
-<td>2.4</td>
-</tr>
-<tr>
-<td>(Wi-Fi 2*)</td>
-<td>802.11a</td>
-<td>6 - 54</td>
-<td>1999</td>
-<td>5</td>
-</tr>
-<tr>
-<td>(Wi-Fi 1*)</td>
-<td>802.11b</td>
-<td>1 - 11</td>
-<td>1999</td>
-<td>2.4</td>
-</tr>
-<tr>
-<td>(Wi-Fi 0*)</td>
-<td>802.11</td>
-<td>1 - 2</td>
-<td>1997</td>
-<td>2.4</td>
-</tr>
-</tbody>
-</table>
+- **Características básicas (requisitos IMT-2020)**:
+    - **Velocidad máxima**: **20 Gbps** de bajada y **10 Gbps** de subida.
+    - **Latencia**: hasta **1 ms**.
+    - **Disponibilidad**: **99,999 %**.
+    - **Densidad de tráfico**: hasta **10 Tb/s por km²**.
+    - **Densidad de dispositivos**: hasta **1 millón por km²** (IoT masivo), con baterías de hasta **10 años**.
+    - **Eficiencia energética**: reducción del **90 %** del consumo respecto a 4G.
+- **Bandas de frecuencia** («bandas pioneras» en Europa, ya asignadas en España):
+    - **700 MHz** (694-790 MHz): grandes coberturas rurales y penetración en interiores.
+    - **3,5 GHz** (3,4-3,8 GHz): banda principal, equilibrio entre capacidad y cobertura.
+    - **26 GHz** (24,25-27,5 GHz): ondas milimétricas para máxima capacidad en zonas densas y despliegues localizados.
+    - El estándar las agrupa en **FR1** (bandas bajas y medias, hasta 7,125 GHz) y **FR2** (milimétricas, desde 24,25 GHz).
+- **Tipos de comunicaciones**:
+    - **eMBB (*enhanced Mobile Broadband*)**: banda ancha móvil mejorada, alta velocidad en movilidad (vídeo 4K/8K, RV).
+    - **URLLC (*Ultra-Reliable Low-Latency Communications*)**: comunicaciones críticas con latencia de 1-10 ms y fiabilidad del 99,999 % (vehículo conectado, cirugía remota, industria).
+    - **mMTC (*massive Machine Type Communications*)**: IoT masivo de bajo coste y consumo, hasta 1 millón de nodos por km².
+- **Modos de despliegue**:
+    - **5G NSA (*Non Stand Alone*)**: primer paso de la migración: acceso radio 5G con **núcleo (core) 4G**; el plano de control va por 4G y los datos de usuario por 5G. Aprovecha la inversión 4G existente.
+    - **5G DSS (*Dynamic Spectrum Sharing*)**: variante transitoria que comparte dinámicamente una frecuencia 4G para cursar tráfico 5G; despliegue casi inmediato a costa de menores prestaciones.
+    - **5G SA (*Stand Alone*)**: la red 5G completa (acceso y núcleo 5G); habilita toda la capacidad: latencia mínima, *network slicing* y millones de dispositivos.
+- **Tecnologías habilitadoras**:
+    - **Network slicing (segmentación de red)**: crea redes virtuales sobre la misma red física, cada una con niveles de servicio a medida (latencia, velocidad, seguridad) para casos de uso distintos; se apoya en SDN/NFV (tema 68) y requiere 5G SA.
+    - **MIMO masivo y beamforming**: antenas activas con decenas o centenares de elementos que combinan multiplexación espacial (varios flujos simultáneos) y conformación del haz (dirigir la energía hacia cada usuario, «siguiéndolo» y reduciendo interferencias).
+    - **MEC (*Multi-access Edge Computing*)**: acerca el procesado y las aplicaciones al borde de la red (junto a los nodos radio), evitando el viaje a nubes centralizadas y logrando las latencias de milisegundos de los servicios en tiempo real (V2X, industria, *smart cities*).
+- **Evolución por releases del 3GPP**:
+    - **Release 15 (2018)**: primera especificación 5G NR.
+    - **Releases 16-17**: URLLC industrial, dispositivos IoT simplificados (**RedCap**) y comunicaciones por satélite (**NTN**).
+    - **Release 18 (congelada en junio de 2024)**: inaugura **5G-Advanced**, con IA/ML nativos en la red, eficiencia energética y realidad extendida; la Release 19 (2025) la completa.
+    - **6G**: la UIT ya ha fijado el marco **IMT-2030** (Recomendación UIT-R M.2160, noviembre de 2023); el 3GPP prevé las primeras especificaciones 6G en la **Release 21**, hacia **2030**.
+- **Marco español**:
+    - **Ley 11/2022, General de Telecomunicaciones**: transpone el Código Europeo de Comunicaciones Electrónicas (Directiva (UE) 2018/1972).
+    - **RD-ley 7/2022**, de requisitos de seguridad de redes y servicios 5G, desarrollado por el **RD 443/2024**, que aprueba el **Esquema Nacional de Seguridad de redes y servicios 5G (ENS5G)**: análisis nacional de riesgos, obligaciones para operadores y tratamiento de los proveedores de alto riesgo.
+    - **Plan de Recuperación (Componente 15**, ~4.000 M€): financia la extensión de banda ancha ultrarrápida y 5G mediante los programas **UNICO** (banda ancha, 5G redes, sectorial 5G, I+D 6G), con despliegue en corredores de transporte y núcleos de población intermedios.
 
-| Enmienda       | Fecha de publicación | Descripción                                                                                                                                             |
-| -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 802.11i | 2004                 | Agrega mecanismos de **identificación y encriptación de datos** (WPA), para reemplazar el algoritmo WEP original del estándar 802.11 que está obsoleto. |
-| 802.11w | 2009                 | **Aumenta la seguridad** de los marcos de gestión.                                                                                                      |
+## Otras tecnologías de transmisión
 
-## Redes 5G
+Además de Wi-Fi y de la telefonía móvil, otras tecnologías inalámbricas cubren nichos específicos de alcance, consumo o entorno:
 
-La quinta generación de comunicaciones móviles (5G) se caracteriza por su capacidad para ofrecer **mayor velocidad**, **menor latencia** y **mayor capacidad de conectividad**. No es una tecnología estática, ya que evoluciona mediante la publicación de nuevas “releases”. Esta red inalámbrica se adapta a diversos casos de uso, proporcionando soluciones especializadas según el tipo de conexión.
+- **Comunicaciones por satélite**: enlazan estaciones terrestres a través de un satélite (señal ascendente hacia el satélite y descendente hacia tierra, en bandas distintas). Por órbita:
+    - **GEO (geoestacionaria, ~36.000 km)**: el satélite parece fijo; TV por satélite y VSAT, pero latencia alta (~600 ms ida y vuelta).
+    - **MEO (órbita media)**: navegación por satélite (GPS, **Galileo**) y algunas constelaciones de datos.
+    - **LEO (órbita baja, <2.000 km)**: latencias de 20-50 ms; las **megaconstelaciones** de banda ancha (**Starlink**, OneWeb, Kuiper) dan cobertura global y respaldo en catástrofes (tema 70).
+    - **IRIS²** (Reglamento (UE) **2023/588**): la constelación europea de **conectividad segura** (~290 satélites multiórbita), orientada a comunicaciones gubernamentales resilientes; operativa prevista hacia **2030**.
+- **Radioenlaces de microondas terrestres**: enlaces punto a punto con antenas parabólicas alineadas (requieren visión directa); se usan como *backhaul* de operadores y para unir sedes donde no llega la fibra.
+- **Comunicaciones ópticas inalámbricas**: los infrarrojos clásicos (IrDA) han desaparecido del mercado; su relevo es **LiFi** (comunicación por luz visible o infrarroja), estandarizado como **IEEE 802.11bb (2023)**: inmune a interferencias radio y confinado físicamente a la sala, útil en entornos sensibles (hospitales, industria, defensa).
+- **WiMAX (IEEE 802.16)**: banda ancha inalámbrica metropolitana (hasta ~70 Mbps y decenas de km); perdió frente a LTE y la fibra y hoy es una tecnología **legado**, residual en accesos rurales.
 
-### Características básicas de las redes 5G
+Como síntesis, las tecnologías inalámbricas se ordenan en un cuadrante alcance-consumo; las redes de baja potencia (cuadrante inferior derecho) se estudian en el tema 72:
 
-- **Velocidad máxima**: 20 Gbps de bajada y 10 Gbps de subida.
-- **Latencia**: 1 ms.
-- **Disponibilidad**: 99,999%.
-- **Capacidad de volumen de datos**: Hasta 10 TB/s por km².
-- **Dispositivos conectados**: Soporta hasta 1 millón de dispositivos por km².
-- **Eficiencia energética**: 90% más eficiente que 4G.
+| | Poco alcance | Mucho alcance |
+| --- | --- | --- |
+| **Bajo consumo** | Bluetooth/BLE, ZigBee, Z-Wave, NFC | **LPWAN**: LoRaWAN, Sigfox, NB-IoT, LTE-M (tema 72) |
+| **Alto consumo** | Wi-Fi | Telefonía móvil (3G/4G/5G), satélite |
 
-### Bandas de frecuencia utilizadas
+## Fuentes {.unnumbered .unlisted}
 
-- **Banda de 700 MHz** (694-790 MHz): Ideal para amplias coberturas rurales.
-- **Banda de 3,5 GHz** (3,4-3,8 GHz): Banda principal para ofrecer altas velocidades.
-- **Banda de 26 GHz** (24,25-27,5 GHz): Proporciona capacidades para zonas densamente pobladas.
-
-### Tipos de comunicaciones en 5G
-
-- **Banda ancha móvil mejorada (eMBB / Enhanced Mobile Broadband)**: Alta tasa de transmisión de datos en movilidad (10-20 Gbps de bajada, 1-10 Gbps de subida).
-- **Comunicaciones de baja latencia y alta fiabilidad (URLLC / Ultra-Reliable Low-Latency Communications)**: Comunicaciones críticas con latencia de 1-10 ms y fiabilidad del 99,999%.
-- **Comunicaciones masivas para IoT (mMTC /** **Massive Machine Type Communications)**: Orientadas a dispositivos de bajo coste y bajo consumo, con capacidad para conectar hasta 1 millón de nodos por km².
-
-### Multi-access Edge Computing (MEC)
-
-Permite la ejecución de aplicaciones en los bordes de la red, reduciendo la latencia y mejorando la eficiencia al procesar los datos más cerca de donde se generan.
-
-### Organizaciones de normalización del 5G
-
-- **3GPP**: Asociación del Proyecto de 3ª Generación.
-- **ETSI**: Instituto Europeo de Normas de Telecomunicaciones.
-- **UIT-T**: Sector de Normalización de las Telecomunicaciones de la UIT.
-- **IETF**: Grupo de Trabajo de Ingeniería de Internet.
-- **IEEE**: Instituto de Ingenieros Eléctricos y Electrónicos.
-
-### Tecnología básica de redes 5G
-
-- Uso de **bandas de alta y ultra alta frecuencia**.
-- Empleo de técnicas avanzadas de modulación y codificación para mejorar la eficiencia de transmisión.
-- Utilización de tecnologías de multiplexación como **FDMA**, **TDMA** y **CDMA** para transmitir múltiples señales simultáneamente.
-
-### Aplicaciones del 5G
-
-- **Industria 4.0**: Automatización y robótica avanzada.
-- **Agricultura de precisión**: Uso de UAVs para aplicación en tiempo real de fitosanitarios.
-- **Ingeniería y construcción**: Modelos digitales de proyectos.
-- **Infraestructuras digitales**: Smart Cities.
-- **Control de fronteras**: Sistemas de defensa y seguridad avanzados.
-- **Sector audiovisual**: Producción y distribución de contenidos con alta conectividad.
-- **Ciencia aplicada**: Aplicaciones en metaversos e Internet de los sentidos (IoS).
-
-### Programa de Universalización de Infraestructuras Digitales para la Cohesión (UNICO)
-
-Este programa fomenta la universalización del acceso a la banda ancha ultra rápida y la extensión del 5G mediante convocatorias específicas.\ Los principales subprogramas son:
-
-- **UNICO-Banda Ancha**
-- **UNICO-Servicios Públicos**
-- **UNICO-Industria y Empresas**
-- **UNICO-Bono Social**
-- **UNICO-Edificios**
-- **UNICO 5G I+D**
-- **UNICO 5G Redes – Pasivas y Backhaul Fibra Óptica**
-- **UNICO-Bono Pyme**
-- **UNICO-Demanda Rural**
-- **UNICO I+D 6G**
-- **UNICO Sectorial 5G**
-
-### Programa UNICO-Banda Ancha
-
-El objetivo principal es facilitar el despliegue de infraestructuras de banda ancha de muy alta velocidad mediante ayudas dirigidas a operadores de telecomunicaciones.
-
-### Características
-
-- Servicios de velocidad simétrica entre **300 Mbps y 1 Gbps**.
-
-### Actuaciones
-
-- **UNICO Banda Ancha Acceso**: Proporcionar velocidades de 300 Mbps (actualizables a 1 Gbps) en zonas sin cobertura.
-- **UNICO Banda Ancha Interconexión terrestre**: Ampliar la conectividad a 1 Gbps para entidades públicas, centros educativos, redes de investigación y defensa.
-- **UNICO Banda Ancha Interconexión submarina**: Incrementar la capacidad en cables submarinos para instituciones públicas y redes de defensa.
-
-### Objetivos
-
-- Garantizar el acceso universal a internet de alta velocidad para todos los hogares y empresas en España.
-- Impulsar la competitividad y el desarrollo económico.
-- Desplegar infraestructuras avanzadas como fibra óptica y tecnologías móviles de última generación (5G).
-
-## Tecnologías de transmisión
-
-| Poco consumo  | Bluetooth, z-wave, zigbee | LoRaWAN, SIGFOX, NB-IoT |
-| ------------- | ------------------------- | ----------------------- |
-| Mucho consumo | WiFi                      | 3G, 4G, 5G              |
-|               | **Poco alcance**          | **Mucho alcance**       |
-
-|                              | SIGFOX                                                                             | LoRaWAN                                                  | NB-IoT                          | WiFi                            | 5G                                                                    |
-| ---------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------- | ------------------------------- | --------------------------------------------------------------------- |
-| Tipo                         | Propietaria                                                                        | Abierta                                                  | Estándar (3GPP)                 | Estándar (IEEE)                 | Estándar (3GPP)                                                       |
-| Espectro                     | No licenciado                                                                      | No licenciado                                            | Licenciado                      | Licenciado                      | Licenciado                                                            |
-| Ancho de banda               | 100Hz                                                                              | 125kHz                                                   | 125kHz                          | 2.4; 5GHz                       | 700Mhz; 3.5Ghz; 26Ghz                                                 |
-| Throughput                   | 600bps                                                                             | 50kbps                                                   | 60kbps                          | 1-3Gbps                         | 20Gbps                                                                |
-| Latencia                     | 2s - 10min                                                                         | 1s - 2min                                                | 1.6s - 10s                      | \<1ms                           | 1ms                                                                   |
-| Cobertura                    | Urbano: 3-10km  Campo: 30-50km                                                     | Urbano: 2-5km  Campo: 15km                               | Urbano: 2km  Campo: 15km        | 50m-100m                        | 100m-20km                                                             |
-| Vida batería                 | 15 años                                                                            | 15 años                                                  | 10 años                         | Horas                           | Horas-Días                                                            |
-| Bidireccionalidad            | Sí (limitado)                                                                      | Sí                                                       | Sí                              | Sí                              | Sí                                                                    |
-| Robustez                     | Alta                                                                               | Alta                                                     | Alta                            | Media                           | Alta                                                                  |
-| Capacidad                    | 1M/nodo                                                                            | 40k/nodo                                                 | 200k/nodo                       | >250/dispositivo                | 1M/Km2                                                                |
-| Consumo                      | Bajo (25mW)                                                                        | Bajo (10mW - 50mW)                                       | Bajo (5mW - 50mW)               | Alto                            | Medio-Alto                                                            |
-| Resistencia a interferencias | Media                                                                              | Alta (espectro ensanchado)                               | Alta                            | Media                           | Alta                                                                  |
-| Consideraciones              | Ancho de banda limitado, red propietaria, no sirve para transmisión en tiempo real | Tecnología abierta y flexible, no sirve para tiempo real | Se integra con la redes móviles | Uso común en hogares y oficinas | Alta velocidad, capacidad y baja latencia, pero mayor consumo y coste |
+- AUTELSI, informes *5G: Introducción y Tecnología* y *5G: Casos de uso y habilitadores* (junio de 2022), en `references/08-redes/`.
+- IEEE 802.11ax-2021, 802.11be-2024 (publicado en julio de 2025) y 802.11bb-2023; certificaciones y generaciones de la Wi-Fi Alliance (consulta julio 2026).
+- 3GPP (Releases 15 a 19; 5G-Advanced) y UIT-R: requisitos IMT-2020 y Recomendación UIT-R M.2160 (IMT-2030, noviembre de 2023), contrastados online en julio de 2026.
+- Ley 11/2022, de 28 de junio, General de Telecomunicaciones; RD-ley 7/2022, de 29 de marzo; RD 443/2024, de 30 de abril (ENS5G), todos en BOE.
+- Reglamento (UE) 2023/588 (programa de conectividad segura de la Unión, IRIS²).

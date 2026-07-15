@@ -1,201 +1,122 @@
 # Redes de emergencia
 
-!!! warning "Tema pendiente de revisión"
-    Este tema **no ha sido revisado** ni actualizado. Su contenido puede estar
-    incompleto, desactualizado o contener errores. Úsalo con precaución y
-    contrástalo siempre con fuentes oficiales.
+Las redes de emergencia son las redes de comunicaciones móviles que utilizan los servicios de protección ciudadana (policía, bomberos, urgencias sanitarias, protección civil) para coordinar sus operativos. Deben funcionar precisamente cuando las redes comerciales fallan o se saturan, por lo que se diseñan con requisitos propios de disponibilidad, prioridad y seguridad. Este tema cubre el concepto y los requisitos de estas redes, el estándar TETRA que domina su despliegue en Europa y la red COMDES de la Generalitat. Las redes móviles comerciales (4G/5G) se estudian en el tema 71 y la seguridad de las comunicaciones en el 74.
 
+## Redes de emergencia y misión crítica
 
-## Redes de emergencia
+En la terminología de la UIT estas redes se engloban en el concepto **PPDR (Public Protection and Disaster Relief)**: radiocomunicaciones para la **protección pública** (mantenimiento del orden, protección de vidas y bienes en situaciones cotidianas) y el **socorro en caso de catástrofe** (perturbaciones graves de origen natural o humano). Sus objetivos y requisitos se recogen en el **Informe UIT-R M.2033 (2003)**. Se habla también de comunicaciones de **misión crítica**: aquellas cuyo fallo pone en riesgo vidas humanas o la operación esencial de una organización.
 
-Las **redes de emergencia**, o **PPDR (Public Protection & Disaster Recovery),** son sistemas de comunicación diseñados para ser utilizados en situaciones de emergencia o crisis.
+- **Conceptos básicos**:
+    - **PMR (Private/Professional Mobile Radio)**: categoría general de redes de radio móviles privadas para **grupos cerrados de usuarios**, independientes de las redes públicas de telefonía. Es el marco en el que se encuadran las redes de emergencia (también las de transporte, industria o grandes eventos).
+    - **PMR convencional**: a cada grupo se le asigna un canal fijo; cobertura limitada, ampliable con repetidores.
+    - **Trunking (acceso troncalizado)**: técnica en la que los canales forman un conjunto común que el sistema **asigna dinámicamente** a cada comunicación y libera al terminar. Optimiza el uso del espectro y multiplica la capacidad. Existió trunking analógico (estándar **MPT 1327**, hoy obsoleto) y existe trunking digital (TETRA, TETRAPOL, DMR, APCO P25).
+    - **Operativa característica**: comunicación semidúplex pulsando para hablar (**PTT, push-to-talk**), organizada en **llamadas de grupo** con establecimiento casi instantáneo.
 
-**Definición:** *"Conjunto de nodos y enlaces que proporcionan conexiones entre dos o más puntos definidos para intercambiar información, ya sea mediante un canal de voz, vídeo y/o datos, con el objeto de gestionar operaciones de socorro o alertar catástrofes".*
+- **Requisitos de una red de emergencia**:
+    - **Tratamiento prioritario del tráfico**: niveles de prioridad y capacidad de desalojar comunicaciones menos urgentes (*preemption*); la llamada de emergencia tiene prioridad máxima.
+    - **Alta disponibilidad y resiliencia**: redundancia de equipos y caminos, autonomía energética de las estaciones y restablecimiento rápido del servicio tras un fallo o catástrofe.
+    - **Independencia de las redes comerciales**: infraestructura propia que sigue operativa cuando la telefonía móvil se satura o cae.
+    - **Seguridad y confidencialidad**: autenticación de terminales y usuarios, cifrado de las comunicaciones, protección frente a escuchas e interferencias.
+    - **Cobertura ubicua**: alcance en todo el territorio de responsabilidad, incluidas zonas despobladas sin interés comercial.
+    - **Comunicación de grupo y modo directo**: llamadas de grupo entre flotas y comunicación terminal a terminal sin infraestructura cuando la red no está disponible.
+    - **Interoperabilidad**: entre cuerpos distintos (policía, bomberos, sanitarios) y con otras redes públicas y privadas.
 
-### Objetivo:
+### Tecnologías de radio empleadas
 
-Garantizar la comunicación efectiva entre los diferentes servicios de emergencia, como bomberos, policías y servicios médicos.
+En Europa las redes PPDR se han construido sobre sistemas de radio troncalizada digital, que sustituyeron a las redes analógicas y al trunking analógico. Las dos tecnologías dominantes son estas:
 
-### Conceptos Clave
+- **TETRA (Terrestrial Trunked Radio)**: estándar **abierto** del **ETSI** para radio troncalizada digital; el más extendido en Europa para emergencias, transporte e industria. Se desarrolla en el siguiente subtema.
+- **TETRAPOL**: tecnología de radio digital **propietaria** (especificación PAS publicada por el foro Tetrapol, origen Matra/Airbus), anterior a TETRA. Acceso **FDMA** con canales de **12,5 kHz**, banda 380-400 MHz, voz digital cifrada y datos de baja velocidad. La usan redes policiales como **SIRDEE** en España o RUBIS (Gendarmería francesa).
+- **Otras**: **DMR** (ETSI, orientado a uso comercial) y **APCO P25** (mercado norteamericano de seguridad pública).
+- **LTE/5G**: las redes móviles comerciales ofrecen banda ancha pero carecen por sí solas de los atributos de misión crítica (prioridad, resiliencia, cobertura dedicada); se incorporan mediante los estándares de misión crítica del 3GPP y soluciones híbridas (ver más abajo).
 
-- **Redes PMR (Private Mobile Radio):** Son redes de comunicaciones privadas que utilizan dispositivos móviles equipados con esta tecnología.
-    - Estas redes no están conectadas a la red pública y han sido ampliamente utilizadas en entornos de emergencia, aunque son consideradas una tecnología más antigua.
-- **Trunking:** Es un sistema moderno de comunicación bidireccional por radio que permite a múltiples usuarios compartir frecuencias de comunicación de forma eficiente.
-    - Este enfoque optimiza el uso del espectro de radiofrecuencia, proporcionando mayor capacidad y flexibilidad en comparación con las redes PMR tradicionales.
+### Redes de emergencia en España
 
-### Características principales:
+- **SIRDEE (Sistema de Radiocomunicaciones Digitales de Emergencia del Estado)**: red nacional de radio troncalizada digital basada en **TETRAPOL**, operada con Telefónica para las **Fuerzas y Cuerpos de Seguridad del Estado** (Policía Nacional y Guardia Civil). En **2024** el Ministerio del Interior inició su **migración a banda ancha LTE** para incorporar imagen y vídeo a las comunicaciones grupales.
+- **REMER (Red Radio de Emergencia)**: red complementaria de la **Dirección General de Protección Civil y Emergencias** (Ministerio del Interior), formada por unos **7.000 radioaficionados voluntarios**.
+- **RENEM (Red Nacional de Emergencias)**: «sistema de sistemas» coordinado por la **UME (Unidad Militar de Emergencias)**, del Ministerio de Defensa, que integra los sistemas de información y telecomunicaciones de la AGE, las comunidades autónomas y operadores de infraestructuras críticas. Se apoya en redes terrestres (Red SARA, RedIRIS, WAN PG, Internet) y satelitales (**SPAINSAT**, XTAR-EU y redes civiles).
+- **COMDES**: la red TETRA de la Generalitat Valenciana (tercer subtema).
+- **ES-Alert**: no es una red PPDR, sino el sistema de **alertas a la población** de Protección Civil: envía avisos geolocalizados por **difusión celular** (*cell broadcast*) a todos los móviles presentes en la zona afectada, sobre las redes comerciales y sin registro previo. Implanta el **art. 110** del Código Europeo de Comunicaciones Electrónicas (Directiva (UE) 2018/1972); se probó en toda España en otoño de **2022** y se utilizó masivamente en la **DANA de octubre de 2024**.
 
-- **Uso privado y seguro:** Acceso restringido a usuarios autorizados, garantizando la confidencialidad y seguridad de las comunicaciones.
-- **Alta disponibilidad y resistencia:** Diseñadas para operar en condiciones adversas, asegurando el restablecimiento rápido del servicio en caso de fallo.
-- **Independencia de redes comerciales:** Funcionan de manera autónoma respecto a las redes públicas para asegurar operatividad en situaciones críticas.
-- **Interoperabilidad y trato prioritario:** Capaces de establecer comunicaciones prioritarias y garantizar la interoperabilidad entre las subredes que las conforman.
+### Evolución a la banda ancha de misión crítica
 
-### Requisitos mínimos:
+Las redes troncalizadas resuelven la voz crítica pero ofrecen datos de banda estrecha (kbit/s), insuficientes para vídeo, cartografía o telemetría masiva. La evolución del sector combina la fiabilidad de las redes PMR con la capacidad de las redes 4G/5G:
 
-- **Tratamiento prioritario del tráfico:** Identificación y gestión preferente del tráfico de emergencia.
-- **Seguridad y confidencialidad:** Protección contra accesos no autorizados, manipulaciones e intercepciones.
-- **Restablecimiento rápido:** Capacidad para reanudar el servicio eficientemente tras una interrupción.
-- **Conectividad amplia:** Integración con otras redes para proporcionar cobertura extensa, incluso a nivel internacional.
-- **Compatibilidad y movilidad:** Infraestructuras compatibles que faciliten el transporte y despliegue en diferentes ubicaciones.
-- **Cobertura ubicua:** Alcance en grandes zonas geográficas para asegurar comunicación en cualquier lugar.
-- **Resistencia a catástrofes:** Diseño robusto para mantener operatividad frente a desastres.
-- **Transmisión de voz de calidad:** Comunicaciones claras y sin interferencias.
-- **Ancho de banda adaptable:** Capacidad elástica para ajustarse a las necesidades en situaciones de emergencia.
-- **Fiabilidad y disponibilidad:** Alto grado de confianza en el desempeño continuo del servicio.
+- **Estándares 3GPP de misión crítica (MCX)**: trasladan los servicios PMR a LTE/5G con calidad garantizada: **MCPTT** (*Mission Critical Push-To-Talk*, **Release 13, 2016**), **MCVideo** y **MCData** (**Release 14, 2017**). Incluyen prioridad y *preemption*, llamadas de grupo, modo directo entre terminales (ProSe/*sidelink*) y funcionamiento aislado de estaciones base (IOPS).
+- **Espectro**: la CEPT ha armonizado en Europa opciones de espectro para PPDR de banda ancha en las bandas de **700 MHz** y 400 MHz (Decisión ECC/DEC(16)02).
+- **Soluciones híbridas**: en la transición conviven TETRA/TETRAPOL para la voz crítica y LTE/5G para los datos de banda ancha, ya sea sobre redes dedicadas o sobre redes comerciales con acuerdos de prioridad (MVNO de misión crítica). Son ejemplos la migración de SIRDEE y los proyectos europeos de itinerancia PPDR (BroadWay/BroadEU.Net).
+- **Retos**: mantener la resiliencia y la cobertura de las redes dedicadas, garantizar la interoperabilidad con lo existente y financiar el espectro y el despliegue.
 
-### Interfaces de las Redes de Emergencia
+## El estándar TETRA
 
-Para garantizar la interoperabilidad y funcionalidad de los sistemas, las redes de emergencia utilizan varias interfaces específicas, cada una con un propósito determinado:
+**TETRA (Terrestrial Trunked Radio)** es el estándar abierto de radio móvil digital troncalizada del **ETSI**, publicado en **1995** (familia **EN 300 392** para voz y datos, EN 300 396 para el modo directo). Es la tecnología de referencia de las redes de emergencia europeas y también se usa en transporte, aeropuertos, industria y grandes eventos.
 
-- **Radio-Aire (AI)**: Enlace entre los dispositivos terminales y las estaciones base mediante señales de radiofrecuencia.
-- **Modo Directo (DMO)**: Permite la comunicación directa entre terminales sin necesidad de infraestructura intermedia.
-- **Hombre-Máquina (MMI)**: Interfaz que conecta al usuario con el dispositivo, facilitando la interacción.
-- **Equipo Periférico (PEI)**: Conexión con dispositivos externos, como impresoras, escáneres o accesorios.
-- **Estación de Línea (RDI)**: Establece la comunicación con estaciones de línea fija.
-- **Pasarela**: Enlace entre diferentes redes o sistemas para garantizar la interoperabilidad.
-- **Inter-Sistema (ISI)**: Conexión entre redes de diferentes jurisdicciones o tecnologías.
-- **Gestión de Red (NMI)**: Interfaz utilizada para la configuración, supervisión y mantenimiento de la red.
+- **Características técnicas**:
+    - **Banda de frecuencias**: en Europa, la banda armonizada **380-400 MHz** se reserva a los servicios de emergencia y seguridad (en España, 380-385/390-395 MHz). El uso de bandas más bajas que la telefonía móvil da **mayor alcance por estación** y abarata la cobertura de grandes territorios.
+    - **Acceso al medio**: **TDMA de 4 intervalos** de tiempo por portadora de **25 kHz** (cuatro comunicaciones simultáneas por canal), con modulación π/4-DQPSK.
+    - **Voz y datos (V+D)**: voz digital, mensajes de estado, servicio de datos cortos (**SDS**) y datos en modo paquete; **7,2 kbit/s** por intervalo, hasta **28,8 kbit/s** agregando los 4 intervalos.
+    - **Llamadas**: individuales (semidúplex o dúplex), de **grupo**, de difusión y de **emergencia** con prioridad máxima; establecimiento de llamada en menos de **300 ms**.
+    - **Baja saturación**: red dimensionada y gestionada para mantener capacidad en picos de demanda.
+- **Arquitectura**:
+    - **SwMI (Switching and Management Infrastructure)**: la infraestructura de conmutación y gestión de la red (el «emplazamiento maestro»: centro de gestión y conmutación).
+    - **Estaciones base**: emplazamientos remotos que dan la cobertura radio.
+    - **Terminales**: portátiles, móviles vehiculares y fijos, más los puestos de despacho (*dispatchers*) de las salas de control.
+- **Interfaces normalizadas** (garantizan la interoperabilidad multifabricante):
+    - **AI (Air Interface)**: interfaz radio entre terminales y estaciones base.
+    - **DMO**: interfaz radio de modo directo entre terminales.
+    - **ISI (Inter-System Interface)**: interconexión entre redes TETRA distintas (de diferentes operadores o fabricantes).
+    - **PEI (Peripheral Equipment Interface)**: conexión de equipos periféricos y aplicaciones de datos al terminal.
+    - **MMI (Man-Machine Interface)**: interacción del usuario con el terminal.
+    - **Otras**: interfaz de estación de línea (puestos de despacho por línea fija), pasarelas hacia otras redes (telefonía, IP) e interfaz de **gestión de red (NMI)**.
+- **Modos de operación**:
+    - **TMO (Trunked Mode Operation)**: modo troncalizado normal, a través de la infraestructura; transporta voz y datos (V+D).
+    - **DMO (Direct Mode Operation)**: comunicación **directa terminal a terminal** sin infraestructura, tipo walkie-talkie; esencial cuando no hay cobertura (interiores, subsuelo, caída de la red). Admite repetidores DMO y pasarelas DMO-TMO.
+    - **PDO (Packet Data Optimized)**: variante solo datos definida en el estándar original, sin despliegue comercial relevante.
+- **Seguridad**:
+    - **Autenticación mutua** entre terminal e infraestructura.
+    - **Cifrado de la interfaz aire** con claves estáticas o dinámicas, y **cifrado extremo a extremo** opcional para usuarios de alta seguridad.
+    - **Inhabilitación remota** de terminales robados o perdidos (deshabilitación temporal o permanente).
+- **TEDS (TETRA Enhanced Data Service)**: la evolución de datos del estándar (TETRA **release 2**, 2005): canales de 25 a 150 kHz y modulaciones de mayor orden (hasta 64-QAM) que elevan la velocidad a **centenares de kbit/s** (hasta ~500 kbit/s). Aun así queda lejos de la banda ancha, lo que empuja las soluciones híbridas con LTE/5G del subtema anterior.
 
-### Modos de Operación
+La comparación entre las dos tecnologías troncalizadas europeas es materia habitual de examen:
 
-- **Circuito/V+D/Troncalizado (TMO)**: Este modo combina la transmisión de voz y datos (V+D) de manera simultánea, garantizando comunicaciones rápidas y efectivas en situaciones críticas.
-- **Modo Directo (DMO)**: Ofrece comunicación directa entre dos o más terminales o estaciones sin necesidad de utilizar infraestructura de red. Es ideal para situaciones donde la red centralizada no está disponible.
-- **Paquetes Optimizados (PDO)**: Es un modo de operación en circuito diseñado para transmitir únicamente paquetes de datos. Esto optimiza el uso del ancho de banda y mejora la eficiencia de la red.
+| | TETRA | TETRAPOL |
+| --- | --- | --- |
+| Estándar | **Abierto (ETSI, EN 300 392)** | **Propietario** (especificación PAS) |
+| Acceso al medio | **TDMA, 4 ranuras por 25 kHz** | **FDMA, canales de 12,5 kHz** |
+| Servicios | Voz y datos (SDS, paquete), TEDS | Voz digital y datos de baja velocidad |
+| Seguridad | Autenticación, cifrado aire y extremo a extremo | Autenticación, cifrado aire y extremo a extremo |
+| Ejemplos | **COMDES**, redes autonómicas, metro y aeropuertos | **SIRDEE**, RUBIS (Francia) |
 
-### Tecnologías utilizadas en telecomunicaciones de emergencia: Redes de radio
+## La red COMDES
 
-En las telecomunicaciones de emergencia se emplean principalmente redes de radio, esenciales para asegurar comunicaciones fiables cuando otras infraestructuras pueden fallar.
+**COMDES (Comunicaciones Móviles Digitales de Emergencias y Seguridad)** es la red corporativa de radio móvil digital de la **Generalitat Valenciana**, basada en el estándar **TETRA**, que da servicio a las organizaciones y flotas de prevención, rescate, emergencias y seguridad que operan en la Comunitat Valenciana. Es un **entorno multimarca**: admite cualquier terminal homologado compatible con TETRA, para voz (fija, portátil y móvil) y datos (sensorización, telemetría).
 
-### Tipos de redes de radio en Europa:
+- **Funcionamiento**:
+    - Cada flota opera como una **red privada virtual** dentro de la infraestructura común: organiza sus propios grupos de comunicación con independencia del resto.
+    - Existen **grupos comunes** intra e interflotas que articulan la operativa **local, comarcal y autonómica** y la coordinación entre cuerpos distintos.
+- **Infraestructura** (datos oficiales, consulta julio 2026):
+    - **206 estaciones base**, con cobertura territorial superior al **98 %** y poblacional superior al **99,5 %**.
+    - Capacidad para más de **1.534 comunicaciones simultáneas** de voz y datos.
+    - Más de **280 radioenlaces** para el transporte del tráfico, con diseño redundante de caminos.
+    - **2 estaciones base móviles** con conectividad vía **satélite**, desplegables donde se necesite reforzar o reponer cobertura.
+    - Integra más de **17.700 usuarios** de **360 flotas**: urgencias sanitarias, prevención de incendios forestales, el servicio **112CV**, bomberos provinciales y municipales, policía de la Generalitat, policías locales y protección civil de **289 ayuntamientos**.
+- **Servicios a las flotas**:
+    - Llamadas individuales y de grupo, con configuración **dinámica** de grupos intra e interflotas.
+    - **Autenticación de terminales y cifrado** de las comunicaciones.
+    - Mensajes de texto (SDS) y **posicionamiento GPS** de los terminales.
+    - Comunicaciones de datos con aplicaciones en terminales y servicios centrales.
+    - Comunicaciones de voz y datos con redes externas públicas y privadas.
+- **Organización**:
+    - **Operador de red**: **ISTEC** (Infraestructures i Serveis de Telecomunicacions i Certificació, SAU), la empresa pública de telecomunicaciones de la Generalitat, que asumió la gestión de COMDES por **encargo del Consell** (octubre de 2025 a septiembre de 2027; anteriormente la gestionaba directamente la DGTIC). Le corresponden la planificación, gestión y supervisión técnica, operativa y administrativa de la red.
+    - **Usuarios**: las flotas hacen la gestión operativa y usan la red como apoyo a sus servicios; incluyen los servicios de intervención (sanitarios, bomberos, protección civil), los de seguridad (policías) y el **Centro de Coordinación de Emergencias** de la Generalitat, que elabora los protocolos de comunicaciones.
+    - **Proveedores externos**: empresas contratadas para el mantenimiento de la infraestructura, el suministro de terminales y las plataformas conectadas (como el 112).
 
-- **Redes analógicas:** Tienen cobertura limitada y requieren repetidores para ampliar su alcance. Presentan limitaciones en calidad y seguridad.
-- **Redes con sistema de acceso troncalizado (Trunking):** Ofrecen servicios de intercomunicación de voz y/o datos para grupos cerrados de usuarios mediante redes independientes de las públicas.
-    - **Trunking analógico:** Tecnología obsoleta reemplazada por sistemas digitales.
-    - **Trunking digital:** Mejora la calidad de audio, reduce interferencias y permite funcionalidades avanzadas como llamadas en grupo e integración de sistemas de localización.
+## Fuentes {.unnumbered .unlisted}
 
-### Tecnologías de radio digitales usadas en Europa:
-
-- **TETRA (Terrestrial Trunked Radio):** Sistema de radio trunking digital que conecta múltiples puntos y bases de radio, formando redes extensas que pueden cubrir países enteros.
-    - **Características:**
-        - Protocolo abierto.
-        - Transmisión de voz y datos (mensajes de estado, datos cortos y datos en modo paquete).
-        - Utiliza multiplexación por división de tiempo (TDMA) con 4 canales en 25 kHz.
-        - Operable en España en la banda de 380-400 MHz para servicios de seguridad y emergencia.
-    - **Constituido por:**
-        - **Emplazamiento Maestro:** Centro de Gestión y Conmutación
-        - **Emplazamientos Remotos:** Bases de Cobertura Radio
-- **TETRAPOL:** Tecnología europea de radiocomunicaciones digitales adaptada a usuarios profesionales de redes privadas de radio (PMR).
-    - **Características:**
-        - Funciona en la banda de 380-400 MHz.
-        - Cifrado de extremo a extremo, ofreciendo mayor seguridad que TETRA.
-        - Protocolo propietario.
-- **LTE (Long Term Evolution):** Soporta un amplio rango de frecuencias y proporciona alto rendimiento a altas velocidades, alcanzando tasas de transferencia superiores a 100 Mbps.
-    - **Limitaciones:**
-        - Menor resiliencia para comunicaciones críticas.
-        - Uso en soluciones mixtas (LTE-TETRA) en proyectos puntuales.
-
-### Redes de Comunicaciones de Emergencias de ámbito estatal y autonómico
-
-- **SIRDEE (Sistema de Radiocomunicaciones Digitales de Emergencia del Estado):** Red nacional de radio trunking digital basada en TETRAPOL para las Fuerzas y Cuerpos de Seguridad del Estado.
-- **REMER (Red Radio de Emergencia):** Complementaria de la Dirección General de Protección Civil y Emergencias, formada por alrededor de 7.000 radioaficionados.
-- **COMDES (Comunicaciones Móviles Digitales de Emergencias y Seguridad de la Comunitat Valenciana):** Red de la Generalitat basada en tecnología TETRA, que ofrece servicios a organizaciones y flotas de emergencias y seguridad en la comunidad.
-- **RENEM (Red Nacional de Emergencias):** "Sistema de Sistemas de Información y Telecomunicaciones" que integra sistemas de la Administración General del Estado, Comunidades Autónomas y corporaciones privadas de infraestructuras críticas.
-    - **Infraestructura:** Utiliza redes terrestres (Red Iris, Red Sara, WAN PG, Internet) y satelitales (SPAINSAT, XTAR-EU y redes civiles).
-
-## Red COMDES (Comunicaciones Móviles Digitales de Emergencias y Seguridad de la Comunitat Valenciana)
-
-La Red COMDES es la infraestructura de telecomunicaciones que la Generalitat ofrece a organizaciones y flotas de prevención, rescate, emergencias y seguridad en la Comunidad Valenciana.
-
-### Funcionamiento:
-
-- Opera como una red privada virtual para cada flota.
-- Permite intercomunicación mediante grupos de comunicación comunes para facilitar la operativa local, comarcal y autonómica.
-
-### Infraestructura:
-
-- **193 estaciones base** que cubren el 98% del territorio y el 99,5% de la población.
-- **Capacidad para más de 1.445 comunicaciones** de voz y datos simultáneas.
-- **Interconexión con otras redes** públicas y privadas de voz y datos.
-
-### Servicios ofrecidos:
-
-- Llamadas individuales y de grupo.
-- Configuración dinámica de grupos de comunicación intra e inter flotas.
-- Autenticación de terminales y encriptación de comunicaciones.
-- Envío de mensajes de texto y posicionamiento GPS.
-- Comunicaciones de datos y aplicaciones instalables en terminales y servicios centrales.
-- Comunicaciones de voz y datos con redes externas.
-
-### Organización:
-
-- **Operador de red:**
-    - **Funciones:** Planificación, gestión y supervisión técnica, operativa y administrativa de la red.
-    - **Entidad responsable:** Dirección General de Tecnologías de la Información y las Comunicaciones.
-- **Usuarios:**
-    - **Funciones:** Gestión operativa y uso de la red como apoyo a sus servicios.
-    - **Incluye:**
-        - Servicios de intervención: Sanitarios, bomberos, protección civil.
-        - Servicios de seguridad: Policías locales y nacionales.
-        - Centro de Coordinación de Emergencias de la Comunidad Valenciana: Elabora protocolos y organiza comunicaciones.
-- **Proveedores externos:**
-    - **Funciones:** Mantenimiento de equipamiento y servicios relacionados.
-    - **Incluye:** Empresas contratadas por el operador de red o usuarios para mantenimiento, suministro de terminales, plataformas externas (ej.: 112) y aplicaciones.
-
-## Estándar TETRA (Terrestrial Trunked Radio)
-
-El estándar TETRA es un sistema de comunicación digital móvil desarrollado para redes de emergencia y servicios críticos, mejorando la calidad y seguridad respecto a sistemas analógicos.
-
-### Características:
-
-- **Frecuencia utilizada:** 380-400 MHz.
-- **Cobertura extendida:** Usa bandas más bajas que GSM para mayor alcance.
-- **Infraestructura independiente:** Separada de redes de telefonía móvil, asegurando operatividad en situaciones donde estas pueden fallar.
-- **Modo directo (terminal a terminal):** Comunicación sin necesidad de infraestructura intermedia.
-- **Calidad de sonido superior a GSM:** Comunicaciones claras y sin interferencias.
-- **Modos de comunicación:** Semidúplex (como radios) y dúplex (como teléfonos).
-- **Baja saturación:** Menor riesgo de congestión, garantizando capacidad en alta demanda.
-- **Comunicaciones grupales:** Facilita coordinación entre múltiples usuarios.
-
-### Arquitectura del sistema TETRA:
-
-- **Terminales móviles:** Dispositivos de usuario final para comunicación en la red.
-- **Estaciones base:** Transmiten y reciben señales de terminales, cubriendo áreas específicas.
-- **Sistema de control:** Gestiona la red, llamadas y acceso.
-- **Sistema de red:** Conectividad entre componentes, asegurando interoperabilidad.
-
-### Servicios ofrecidos por TETRA:
-
-- **Servicios de voz y datos:** Comunicación eficiente y segura.
-- **Llamadas individuales y grupales:** Flexibilidad en comunicaciones.
-- **Mensajes de texto y estado:** Información rápida y discreta.
-- **Servicios de localización y seguimiento:** Integración GPS para posicionamiento.
-- **Acceso a bases de datos y sistemas de información:** Información en tiempo real.
-
-### Seguridad en TETRA:
-
-- **Encriptación de comunicaciones:** Protege contra escuchas no autorizadas.
-- **Autenticación de usuarios:** Asegura acceso exclusivo a usuarios autorizados.
-- **Protección contra ataques:** Prevención y detección de intrusiones o interferencias.
-
-### Aplicaciones de TETRA:
-
-- **Servicios de emergencia:** Coordinación en policías, bomberos y servicios médicos.
-- **Empresas y eventos masivos:** Comunicación interna en corporaciones y gestión de eventos.
-- **Transporte y logística:** Comunicación en transporte público y gestión de flotas.
-
-### Evolución y tendencias para servicios de datos en banda ancha
-
-La creciente demanda de datos en tiempo real en servicios de emergencia impulsa la evolución de TETRA hacia la integración con tecnologías de banda ancha.
-
-### Tendencias actuales:
-
-- **Integración con LTE y 5G:** Combinación de la fiabilidad de TETRA con la alta velocidad de datos de redes móviles avanzadas.
-- **Desarrollo de estándares abiertos:** Facilita interoperabilidad y reduce dependencia de tecnologías propietarias.
-- **Soluciones híbridas:** Sistemas que utilizan TETRA para voz crítica y LTE para datos de banda ancha.
-- **Avances en seguridad:** Incorporación de ciberseguridad avanzada para proteger comunicaciones en redes más complejas.
-
-### Desafíos:
-
-- **Resiliencia y fiabilidad:** Mantener altos estándares de disponibilidad en nuevas tecnologías.
-- **Compatibilidad e interoperabilidad:** Asegurar interacción con infraestructuras existentes.
-- **Asignación de espectro:** Necesidad de frecuencias dedicadas para servicios de emergencia en bandas aptas para banda ancha.
+- Informe UIT-R M.2033, *Radiocommunication objectives and requirements for public protection and disaster relief* (2003).
+- ETSI EN 300 392 (TETRA Voice plus Data) y EN 300 396 (TETRA Direct Mode Operation); TETRA release 2/TEDS (2005).
+- 3GPP: especificaciones de misión crítica MCPTT (Release 13, 2016), MCVideo y MCData (Release 14, 2017); CEPT ECC/DEC(16)02 (espectro PPDR de banda ancha).
+- Web oficial de la red COMDES (ISTEC, comdes.istecdigital.es; consulta julio 2026) y encargo del Consell a ISTEC (nota de prensa GVA, septiembre 2025).
+- Ministerio del Interior: SIRDEE y su migración a banda ancha LTE (2024); DGPCE (REMER, ES-Alert); UME (RENEM).
+- Directiva (UE) 2018/1972, Código Europeo de las Comunicaciones Electrónicas, art. 110 (sistemas de alerta a la población).
