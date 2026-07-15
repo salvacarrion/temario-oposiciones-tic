@@ -72,10 +72,10 @@ nav:
   - 'Tema 14: Hacienda pública de la Generalitat (Ley 1/2015)': 14-hacienda-publica-de-la-generalitat.md
   - 'Tema 15: Prevención de riesgos laborales': 15-prevencion-de-riesgos-laborales.md
 - Bloque II — Sociedad digital y gestión TIC:
-  - '⚠️ Tema 16: La sociedad digital': 16-sociedad-digital.md
-  - '⚠️ Tema 18: La gestión de los servicios TIC': 18-gestion-de-los-servicios-tic.md
+  - 'Tema 16: La sociedad digital': 16-sociedad-digital.md
+  - 'Tema 18: La gestión de los servicios TIC': 18-gestion-de-los-servicios-tic.md
   - 'Tema 19: Dirección y gestión de proyectos': 19-direccion-y-gestion-de-proyectos.md
-  - '⚠️ Tema 20: Análisis de procesos': 20-analisis-de-procesos.md
+  - 'Tema 20: Análisis de procesos': 20-analisis-de-procesos.md
   - '⚠️ Tema 21: Metodologías ágiles y escalado ágil': 21-metodologias-agiles-y-escalado-agil.md
 - Bloque III — Ingeniería del software:
   - 'Tema 23: Análisis y diseño de aplicaciones': 23-analisis-y-diseno-de-aplicaciones.md
@@ -118,15 +118,15 @@ nav:
 - Bloque IX — Interoperabilidad y confianza digital:
   - 'Tema 58: Esquema Nacional de Interoperabilidad': 58-esquema-nacional-de-interoperabilidad.md
   - 'Tema 59: Infraestructuras y servicios comunes de interoperabilidad': 59-infraestructuras-y-servicios-comunes-de-interoperabilidad.md
-  - '⚠️ Tema 60: Criptografía': 60-criptografia.md
+  - 'Tema 60: Criptografía': 60-criptografia.md
   - 'Tema 61: Identificación y firma electrónica': 61-identificacion-y-firma-electronica.md
   - 'Tema 62: Sistemas de información geográfica': 62-sistemas-de-informacion-geografica.md
   - 'Tema 63: Infraestructuras de datos espaciales': 63-infraestructuras-de-datos-espaciales.md
 - Bloque X — Redes y comunicaciones:
-  - '⚠️ Tema 64: Modelos OSI y TCP/IP': 64-modelos-osi-y-tcp-ip.md
+  - 'Tema 64: Modelos OSI y TCP/IP': 64-modelos-osi-y-tcp-ip.md
   - 'Tema 65: Protocolos de comunicaciones': 65-protocolos-de-comunicaciones.md
   - 'Tema 66: Redes de computadores': 66-redes-de-computadores.md
-  - '⚠️ Tema 68: Virtualización de redes': 68-virtualizacion-de-redes.md
+  - 'Tema 68: Virtualización de redes': 68-virtualizacion-de-redes.md
   - '⚠️ Tema 70: Redes de emergencia': 70-redes-de-emergencia.md
   - '⚠️ Tema 71: Redes inalámbricas y 5G': 71-redes-inalambricas-y-5g.md
   - '⚠️ Tema 72: Internet de las cosas y redes de sensores': 72-internet-de-las-cosas-y-redes-de-sensores.md
