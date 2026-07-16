@@ -136,6 +136,28 @@ nav:
   - 'Tema 75: La agenda digital valenciana': 75-agenda-digital-valenciana.md
   - 'Tema 76: Seguridad de la información en la Generalitat': 76-seguridad-de-la-informacion-en-la-generalitat.md
   - 'Tema 77: Administración electrónica y plataformas de la Generalitat': 77-administracion-electronica-y-plataformas-de-la-generalitat.md
+- Bloque XII — Sanidad:
+  - '⚠️ Tema 78: Ley General de Sanidad (Ley 14/1986)': 78-ley-general-de-sanidad.md
+  - '⚠️ Tema 79: Cohesión y calidad del SNS y cartera de servicios comunes': 79-cohesion-y-calidad-del-sns-y-cartera-de-servicios.md
+  - '⚠️ Tema 80: Salud de la Comunitat Valenciana (Ley 10/2014)': 80-salud-de-la-comunitat-valenciana.md
+  - '⚠️ Tema 81: Organización de la Conselleria de Sanidad (Decreto 22/2025)': 81-organizacion-de-la-conselleria-de-sanidad.md
+  - '⚠️ Tema 82: Personal estatutario de los servicios de salud (Ley 55/2003)': 82-personal-estatutario-ley-55-2003.md
+  - '⚠️ Tema 83: Autonomía del paciente (Ley 41/2002)': 83-autonomia-del-paciente-ley-41-2002.md
+  - '⚠️ Tema 84: Documentación clínica normalizada': 84-documentacion-clinica-normalizada.md
+  - '⚠️ Tema 85: Integración de sistemas sanitarios y mensajería HL7': 85-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md
+  - '⚠️ Tema 86: Estándares de interoperabilidad de la historia clínica electrónica: CDA, FHIR y openEHR': 86-estandares-de-interoperabilidad-de-la-hce.md
+  - '⚠️ Tema 87: Normalización en informática sanitaria: ISO/EN 13606, terminologías clínicas y perfiles IHE': 87-normalizacion-en-informatica-sanitaria.md
+  - '⚠️ Tema 88: Imagen médica digital: DICOM, PACS y RIS': 88-imagen-medica-digital-dicom-pacs-ris.md
+  - '⚠️ Tema 89: Historia clínica digital: HCDSNS, MyHealth@EU y el Espacio Europeo de Datos de Salud': 89-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md
+  - '⚠️ Tema 90: Productos sanitarios: reglamentos MDR e IVDR y software sanitario': 90-productos-sanitarios-mdr-ivdr-y-software-sanitario.md
+- Bloque XIII — Administración local:
+  - '⚠️ Tema 91: Bases del régimen local (Ley 7/1985)': 91-bases-del-regimen-local-ley-7-1985.md
+  - '⚠️ Tema 92: Régimen local de la Comunitat Valenciana (Ley 8/2010)': 92-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md
+  - '⚠️ Tema 93: Personal al servicio de las entidades locales': 93-personal-al-servicio-de-las-entidades-locales.md
+  - '⚠️ Tema 94: Contratación en las entidades locales': 94-contratacion-en-las-entidades-locales.md
+  - '⚠️ Tema 95: Formas de actividad y servicios públicos locales': 95-formas-de-actividad-y-servicios-publicos-locales.md
+  - '⚠️ Tema 96: Sistemas de información corporativos de la administración local': 96-sistemas-de-informacion-corporativos-de-la-administracion-local.md
+  - '⚠️ Tema 97: Administración electrónica local': 97-administracion-electronica-local.md
 - Apéndices:
   - Referencias: referencias.md
 - Descargar PDF: temario-oposiciones-tic.pdf

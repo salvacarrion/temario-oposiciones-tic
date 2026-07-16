@@ -1,11 +1,12 @@
 # Configuración e ÍNDICE del libro. Al añadir/reordenar capítulos, edita
 # la lista book.chapters (y renumera los ficheros NN-*.md si hace falta).
 #
-# El índice objetivo completo (85 capítulos, con subtemas) está en PLAN.md.
+# El índice objetivo completo (92 capítulos, con subtemas) está en PLAN.md.
 # Los capítulos aún sin contenido NO se listan aquí (no publicar esqueletos),
 # por eso hay huecos en la numeración de ficheros (17, 22, 33, 39, 46, 67,
-# 69, 78-85): la numeración visible del libro se compactará sola hasta que
-# existan.
+# 69, 85-92): la numeración visible del libro se compactará sola hasta que
+# existan. Los bocetos de la fase 4 sí se listan (llevan «⚠️ » en el nav de
+# mkdocs.yml hasta pasar su revisión).
 
 project:
   type: book
@@ -123,6 +124,30 @@ book:
         - src/75-agenda-digital-valenciana.md
         - src/76-seguridad-de-la-informacion-en-la-generalitat.md
         - src/77-administracion-electronica-y-plataformas-de-la-generalitat.md
+    - part: "Bloque XII — Sanidad"
+      chapters:
+        - src/78-ley-general-de-sanidad.md
+        - src/79-cohesion-y-calidad-del-sns-y-cartera-de-servicios.md
+        - src/80-salud-de-la-comunitat-valenciana.md
+        - src/81-organizacion-de-la-conselleria-de-sanidad.md
+        - src/82-personal-estatutario-ley-55-2003.md
+        - src/83-autonomia-del-paciente-ley-41-2002.md
+        - src/84-documentacion-clinica-normalizada.md
+        - src/85-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md
+        - src/86-estandares-de-interoperabilidad-de-la-hce.md
+        - src/87-normalizacion-en-informatica-sanitaria.md
+        - src/88-imagen-medica-digital-dicom-pacs-ris.md
+        - src/89-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md
+        - src/90-productos-sanitarios-mdr-ivdr-y-software-sanitario.md
+    - part: "Bloque XIII — Administración local"
+      chapters:
+        - src/91-bases-del-regimen-local-ley-7-1985.md
+        - src/92-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md
+        - src/93-personal-al-servicio-de-las-entidades-locales.md
+        - src/94-contratacion-en-las-entidades-locales.md
+        - src/95-formas-de-actividad-y-servicios-publicos-locales.md
+        - src/96-sistemas-de-informacion-corporativos-de-la-administracion-local.md
+        - src/97-administracion-electronica-local.md
   appendices:
     - src/referencias.md
 
