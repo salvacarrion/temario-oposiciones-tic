@@ -113,6 +113,7 @@ Según su objeto, las métricas son **de producto** (atributos del software), **
 
 - **Complejidad ciclomática** (McCabe, **1976**): número de caminos linealmente independientes del flujo de control (ver caso práctico).
 - **Métricas de Halstead (1977)**: derivan del recuento de operadores y operandos el volumen, la dificultad y el esfuerzo del programa.
+- **COCOMO II** (Boehm, **2000**): modelo algorítmico de **estimación del esfuerzo**: a partir del tamaño estimado (miles de líneas de código o puntos de función convertidos) calcula el esfuerzo en **persona-mes** y el plazo, corregidos por factores de escala y multiplicadores de coste (experiencia del equipo, fiabilidad exigida, herramientas). Actualiza el COCOMO original (1981) a los ciclos de vida modernos.
 - **Cobertura de código**: proporción del código ejercitada por las pruebas (por sentencias, ramas o caminos).
 - **Índice de mantenibilidad**: combina Halstead, complejidad ciclomática y LOC en un valor único de facilidad de mantenimiento.
 - **Deuda técnica**: coste futuro de corregir los atajos tomados durante el desarrollo (metáfora de Ward Cunningham). Se gestiona de forma continua con herramientas de análisis estático como **SonarQube**, que calculan el ratio de deuda técnica y la calificación del proyecto.

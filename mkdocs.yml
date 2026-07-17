@@ -73,10 +73,12 @@ nav:
   - 'Tema 15: Prevención de riesgos laborales': 15-prevencion-de-riesgos-laborales.md
 - Bloque II — Sociedad digital y gestión TIC:
   - 'Tema 16: La sociedad digital': 16-sociedad-digital.md
+  - '⚠️ Tema 17: Gobernanza y planificación estratégica TIC': 17-gobernanza-y-planificacion-estrategica-tic.md
   - 'Tema 18: La gestión de los servicios TIC': 18-gestion-de-los-servicios-tic.md
   - 'Tema 19: Dirección y gestión de proyectos': 19-direccion-y-gestion-de-proyectos.md
   - 'Tema 20: Análisis de procesos': 20-analisis-de-procesos.md
   - 'Tema 21: Metodologías ágiles y escalado ágil': 21-metodologias-agiles-y-escalado-agil.md
+  - '⚠️ Tema 22: Contratación pública de bienes y servicios TIC': 22-contratacion-publica-de-bienes-y-servicios-tic.md
 - Bloque III — Ingeniería del software:
   - 'Tema 23: Análisis y diseño de aplicaciones': 23-analisis-y-diseno-de-aplicaciones.md
   - 'Tema 24: Proceso unificado y UML': 24-proceso-unificado-y-uml.md
@@ -89,12 +91,14 @@ nav:
   - 'Tema 30: Análisis y gestión de riesgos': 30-analisis-y-gestion-de-riesgos.md
   - 'Tema 31: Gestión de ciberincidentes': 31-gestion-de-ciberincidentes.md
   - 'Tema 32: Desarrollo seguro de aplicaciones': 32-desarrollo-seguro-de-aplicaciones.md
+  - '⚠️ Tema 33: Auditoría informática': 33-auditoria-informatica.md
 - Bloque V — Datos, IA y tecnologías emergentes:
   - 'Tema 34: Inteligencia artificial': 34-inteligencia-artificial.md
   - 'Tema 35: Ética y regulación de la inteligencia artificial': 35-etica-regulacion-inteligencia-artificial.md
   - 'Tema 36: Bases de datos': 36-bases-de-datos.md
   - 'Tema 37: Gestión de datos corporativos y Big Data': 37-gestion-de-datos-corporativos-y-big-data.md
   - 'Tema 38: Gobernanza del dato': 38-gobernanza-del-dato.md
+  - '⚠️ Tema 39: Datos abiertos y espacios de datos': 39-datos-abiertos-y-espacios-de-datos.md
   - 'Tema 40: APIs y apificación': 40-apis-y-apificacion.md
   - 'Tema 41: Automatización robótica de procesos (RPA)': 41-automatizacion-robotica-de-procesos.md
   - 'Tema 42: Blockchain y otras tecnologías emergentes': 42-blockchain-y-otras-tecnologias-emergentes.md
@@ -102,62 +106,77 @@ nav:
   - 'Tema 43: Centros de proceso de datos': 43-centros-de-proceso-de-datos.md
   - 'Tema 44: Virtualización y contenedores': 44-virtualizacion-y-contenedores.md
   - 'Tema 45: Sistemas de almacenamiento': 45-sistemas-de-almacenamiento.md
-  - 'Tema 47: Computación en la nube y de altas prestaciones': 47-computacion-en-la-nube-y-altas-prestaciones.md
-  - 'Tema 48: Puesto de trabajo TIC': 48-puesto-de-trabajo-tic.md
+  - '⚠️ Tema 46: Sistemas operativos': 46-sistemas-operativos.md
+  - '⚠️ Tema 47: Administración de sistemas GNU/Linux': 47-administracion-de-sistemas-gnu-linux.md
+  - '⚠️ Tema 48: Administración de sistemas Windows y Directorio Activo': 48-administracion-de-sistemas-windows-y-directorio-activo.md
+  - '⚠️ Tema 49: Servicios de infraestructura: web, correo y monitorización': 49-servicios-de-infraestructura.md
+  - '⚠️ Tema 50: Protección jurídica del software y licencias': 50-proteccion-juridica-del-software-y-licencias.md
+  - 'Tema 51: Computación en la nube y de altas prestaciones': 51-computacion-en-la-nube-y-altas-prestaciones.md
+  - 'Tema 52: Puesto de trabajo TIC': 52-puesto-de-trabajo-tic.md
 - Bloque VII — Protección de datos y administración electrónica:
-  - 'Tema 49: Protección de datos personales': 49-proteccion-de-datos-personales.md
-  - 'Tema 50: Administración electrónica': 50-administracion-electronica.md
-  - 'Tema 51: Documento y expediente electrónico. Gestión documental': 51-documento-y-expediente-electronico.md
+  - 'Tema 53: Protección de datos personales': 53-proteccion-de-datos-personales.md
+  - 'Tema 54: Administración electrónica': 54-administracion-electronica.md
+  - 'Tema 55: Documento y expediente electrónico. Gestión documental': 55-documento-y-expediente-electronico.md
 - Bloque VIII — Desarrollo web y de aplicaciones:
-  - 'Tema 52: Arquitecturas de desarrollo web': 52-arquitecturas-de-desarrollo-web.md
-  - 'Tema 53: Tecnologías web': 53-tecnologias-web.md
-  - 'Tema 54: Accesibilidad y usabilidad': 54-accesibilidad-y-usabilidad.md
-  - 'Tema 55: Desarrollo de aplicaciones móviles': 55-desarrollo-de-aplicaciones-moviles.md
-  - 'Tema 56: SOA, servicios web y microservicios': 56-soa-servicios-web-y-microservicios.md
-  - 'Tema 57: Programación': 57-programacion.md
+  - 'Tema 56: Arquitecturas de desarrollo web': 56-arquitecturas-de-desarrollo-web.md
+  - 'Tema 57: Tecnologías web': 57-tecnologias-web.md
+  - 'Tema 58: Accesibilidad y usabilidad': 58-accesibilidad-y-usabilidad.md
+  - 'Tema 59: Desarrollo de aplicaciones móviles': 59-desarrollo-de-aplicaciones-moviles.md
+  - 'Tema 60: SOA, servicios web y microservicios': 60-soa-servicios-web-y-microservicios.md
+  - 'Tema 61: Programación': 61-programacion.md
 - Bloque IX — Interoperabilidad y confianza digital:
-  - 'Tema 58: Esquema Nacional de Interoperabilidad': 58-esquema-nacional-de-interoperabilidad.md
-  - 'Tema 59: Infraestructuras y servicios comunes de interoperabilidad': 59-infraestructuras-y-servicios-comunes-de-interoperabilidad.md
-  - 'Tema 60: Criptografía': 60-criptografia.md
-  - 'Tema 61: Identificación y firma electrónica': 61-identificacion-y-firma-electronica.md
-  - 'Tema 62: Sistemas de información geográfica': 62-sistemas-de-informacion-geografica.md
-  - 'Tema 63: Infraestructuras de datos espaciales': 63-infraestructuras-de-datos-espaciales.md
+  - 'Tema 62: Esquema Nacional de Interoperabilidad': 62-esquema-nacional-de-interoperabilidad.md
+  - 'Tema 63: Infraestructuras y servicios comunes de interoperabilidad': 63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md
+  - 'Tema 64: Criptografía': 64-criptografia.md
+  - 'Tema 65: Identificación y firma electrónica': 65-identificacion-y-firma-electronica.md
+  - 'Tema 66: Sistemas de información geográfica': 66-sistemas-de-informacion-geografica.md
+  - 'Tema 67: Infraestructuras de datos espaciales': 67-infraestructuras-de-datos-espaciales.md
+  - '⚠️ Tema 68: Comercio electrónico y factura electrónica': 68-comercio-electronico-y-factura-electronica.md
 - Bloque X — Redes y comunicaciones:
-  - 'Tema 64: Modelos OSI y TCP/IP': 64-modelos-osi-y-tcp-ip.md
-  - 'Tema 65: Protocolos de comunicaciones': 65-protocolos-de-comunicaciones.md
-  - 'Tema 66: Redes de computadores': 66-redes-de-computadores.md
-  - 'Tema 68: Virtualización de redes': 68-virtualizacion-de-redes.md
-  - 'Tema 70: Redes de emergencia': 70-redes-de-emergencia.md
-  - 'Tema 71: Redes inalámbricas y 5G': 71-redes-inalambricas-y-5g.md
-  - 'Tema 72: Internet de las cosas y redes de sensores': 72-internet-de-las-cosas-y-redes-de-sensores.md
-  - 'Tema 73: Ciudades inteligentes': 73-ciudades-inteligentes.md
-  - 'Tema 74: Seguridad en las comunicaciones': 74-seguridad-en-las-comunicaciones.md
+  - 'Tema 69: Modelos OSI y TCP/IP': 69-modelos-osi-y-tcp-ip.md
+  - 'Tema 70: Protocolos de comunicaciones': 70-protocolos-de-comunicaciones.md
+  - 'Tema 71: Redes de computadores': 71-redes-de-computadores.md
+  - '⚠️ Tema 72: Cableado estructurado y medios de transmisión': 72-cableado-estructurado-y-medios-de-transmision.md
+  - 'Tema 73: Virtualización de redes': 73-virtualizacion-de-redes.md
+  - '⚠️ Tema 74: Redes de transporte, voz y audiovisuales': 74-redes-de-transporte-voz-y-audiovisuales.md
+  - 'Tema 75: Redes de emergencia': 75-redes-de-emergencia.md
+  - 'Tema 76: Redes inalámbricas y 5G': 76-redes-inalambricas-y-5g.md
+  - 'Tema 77: Internet de las cosas y redes de sensores': 77-internet-de-las-cosas-y-redes-de-sensores.md
+  - 'Tema 78: Ciudades inteligentes': 78-ciudades-inteligentes.md
+  - 'Tema 79: Seguridad en las comunicaciones': 79-seguridad-en-las-comunicaciones.md
 - Bloque XI — Administración de la Generalitat:
-  - 'Tema 75: La agenda digital valenciana': 75-agenda-digital-valenciana.md
-  - 'Tema 76: Seguridad de la información en la Generalitat': 76-seguridad-de-la-informacion-en-la-generalitat.md
-  - 'Tema 77: Administración electrónica y plataformas de la Generalitat': 77-administracion-electronica-y-plataformas-de-la-generalitat.md
+  - 'Tema 80: La agenda digital valenciana': 80-agenda-digital-valenciana.md
+  - 'Tema 81: Seguridad de la información en la Generalitat': 81-seguridad-de-la-informacion-en-la-generalitat.md
+  - 'Tema 82: Administración electrónica y plataformas de la Generalitat': 82-administracion-electronica-y-plataformas-de-la-generalitat.md
 - Bloque XII — Sanidad:
-  - '⚠️ Tema 78: Ley General de Sanidad (Ley 14/1986)': 78-ley-general-de-sanidad.md
-  - '⚠️ Tema 79: Cohesión y calidad del SNS y cartera de servicios comunes': 79-cohesion-y-calidad-del-sns-y-cartera-de-servicios.md
-  - '⚠️ Tema 80: Salud de la Comunitat Valenciana (Ley 10/2014)': 80-salud-de-la-comunitat-valenciana.md
-  - '⚠️ Tema 81: Organización de la Conselleria de Sanidad (Decreto 22/2025)': 81-organizacion-de-la-conselleria-de-sanidad.md
-  - '⚠️ Tema 82: Personal estatutario de los servicios de salud (Ley 55/2003)': 82-personal-estatutario-ley-55-2003.md
-  - '⚠️ Tema 83: Autonomía del paciente (Ley 41/2002)': 83-autonomia-del-paciente-ley-41-2002.md
-  - '⚠️ Tema 84: Documentación clínica normalizada': 84-documentacion-clinica-normalizada.md
-  - '⚠️ Tema 85: Integración de sistemas sanitarios y mensajería HL7': 85-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md
-  - '⚠️ Tema 86: Estándares de interoperabilidad de la historia clínica electrónica: CDA, FHIR y openEHR': 86-estandares-de-interoperabilidad-de-la-hce.md
-  - '⚠️ Tema 87: Normalización en informática sanitaria: ISO/EN 13606, terminologías clínicas y perfiles IHE': 87-normalizacion-en-informatica-sanitaria.md
-  - '⚠️ Tema 88: Imagen médica digital: DICOM, PACS y RIS': 88-imagen-medica-digital-dicom-pacs-ris.md
-  - '⚠️ Tema 89: Historia clínica digital: HCDSNS, MyHealth@EU y el Espacio Europeo de Datos de Salud': 89-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md
-  - '⚠️ Tema 90: Productos sanitarios: reglamentos MDR e IVDR y software sanitario': 90-productos-sanitarios-mdr-ivdr-y-software-sanitario.md
+  - '⚠️ Tema 83: Ley General de Sanidad (Ley 14/1986)': 83-ley-general-de-sanidad.md
+  - '⚠️ Tema 84: Cohesión y calidad del SNS y cartera de servicios comunes': 84-cohesion-y-calidad-del-sns-y-cartera-de-servicios.md
+  - '⚠️ Tema 85: Salud de la Comunitat Valenciana (Ley 10/2014)': 85-salud-de-la-comunitat-valenciana.md
+  - '⚠️ Tema 86: Organización de la Conselleria de Sanidad (Decreto 22/2025)': 86-organizacion-de-la-conselleria-de-sanidad.md
+  - '⚠️ Tema 87: Personal estatutario de los servicios de salud (Ley 55/2003)': 87-personal-estatutario-ley-55-2003.md
+  - '⚠️ Tema 88: Autonomía del paciente (Ley 41/2002)': 88-autonomia-del-paciente-ley-41-2002.md
+  - '⚠️ Tema 89: Documentación clínica normalizada': 89-documentacion-clinica-normalizada.md
+  - '⚠️ Tema 90: Integración de sistemas sanitarios y mensajería HL7': 90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md
+  - '⚠️ Tema 91: Estándares de interoperabilidad de la historia clínica electrónica: CDA, FHIR y openEHR': 91-estandares-de-interoperabilidad-de-la-hce.md
+  - '⚠️ Tema 92: Normalización en informática sanitaria: ISO/EN 13606, terminologías clínicas y perfiles IHE': 92-normalizacion-en-informatica-sanitaria.md
+  - '⚠️ Tema 93: Imagen médica digital: DICOM, PACS y RIS': 93-imagen-medica-digital-dicom-pacs-ris.md
+  - '⚠️ Tema 94: Historia clínica digital: HCDSNS, MyHealth@EU y el Espacio Europeo de Datos de Salud': 94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md
+  - '⚠️ Tema 95: Productos sanitarios: reglamentos MDR e IVDR y software sanitario': 95-productos-sanitarios-mdr-ivdr-y-software-sanitario.md
 - Bloque XIII — Administración local:
-  - '⚠️ Tema 91: Bases del régimen local (Ley 7/1985)': 91-bases-del-regimen-local-ley-7-1985.md
-  - '⚠️ Tema 92: Régimen local de la Comunitat Valenciana (Ley 8/2010)': 92-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md
-  - '⚠️ Tema 93: Personal al servicio de las entidades locales': 93-personal-al-servicio-de-las-entidades-locales.md
-  - '⚠️ Tema 94: Contratación en las entidades locales': 94-contratacion-en-las-entidades-locales.md
-  - '⚠️ Tema 95: Formas de actividad y servicios públicos locales': 95-formas-de-actividad-y-servicios-publicos-locales.md
-  - '⚠️ Tema 96: Sistemas de información corporativos de la administración local': 96-sistemas-de-informacion-corporativos-de-la-administracion-local.md
-  - '⚠️ Tema 97: Administración electrónica local': 97-administracion-electronica-local.md
+  - '⚠️ Tema 96: Bases del régimen local (Ley 7/1985)': 96-bases-del-regimen-local-ley-7-1985.md
+  - '⚠️ Tema 97: Régimen local de la Comunitat Valenciana (Ley 8/2010)': 97-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md
+  - '⚠️ Tema 98: Personal al servicio de las entidades locales': 98-personal-al-servicio-de-las-entidades-locales.md
+  - '⚠️ Tema 99: Contratación en las entidades locales': 99-contratacion-en-las-entidades-locales.md
+  - '⚠️ Tema 100: Formas de actividad y servicios públicos locales': 100-formas-de-actividad-y-servicios-publicos-locales.md
+  - '⚠️ Tema 101: Sistemas de información corporativos de la administración local': 101-sistemas-de-informacion-corporativos-de-la-administracion-local.md
+  - '⚠️ Tema 102: Administración electrónica local': 102-administracion-electronica-local.md
+- Bloque XIV — Universidades:
+  - '⚠️ Tema 103: Sistema universitario (Ley Orgánica 2/2023, LOSU)': 103-sistema-universitario-losu.md
+  - '⚠️ Tema 104: Sistema universitario valenciano (Ley 4/2007)': 104-sistema-universitario-valenciano-ley-4-2007.md
+  - '⚠️ Tema 105: Adecuación al ENS en las universidades (CCN-STIC 881)': 105-adecuacion-al-ens-en-universidades-ccn-stic-881.md
+  - '⚠️ Tema 106: RedIRIS e identidad digital federada': 106-rediris-e-identidad-federada.md
+  - '⚠️ Tema 107: E-learning: plataformas y estándares': 107-e-learning-plataformas-y-estandares.md
+  - '⚠️ Tema 108: Administración electrónica universitaria': 108-administracion-electronica-universitaria.md
 - Apéndices:
   - Referencias: referencias.md
 - Descargar PDF: temario-oposiciones-tic.pdf

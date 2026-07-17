@@ -86,7 +86,7 @@ El propio pipeline se define como código versionado junto a la aplicación (*pi
     2. **Lead time de cambios**: tiempo del commit a producción.
     3. **Tasa de fallo de los cambios**: porcentaje de despliegues que causan incidencias.
     4. **Tiempo de restauración del servicio (MTTR)** tras un fallo.
-- **Infraestructura como código (IaC)**: la infraestructura se describe en ficheros declarativos versionados en Git y se aprovisiona automáticamente (**Terraform**, **Ansible**), lo que hace los entornos reproducibles y auditables (ver temas 44 y 47).
+- **Infraestructura como código (IaC)**: la infraestructura se describe en ficheros declarativos versionados en Git y se aprovisiona automáticamente (**Terraform**, **Ansible**), lo que hace los entornos reproducibles y auditables (ver temas 44 y 51).
 - **SRE** (*Site Reliability Engineering*, Google): aplica ingeniería de software a la operación; define objetivos de nivel de servicio (**SLO**) sobre indicadores (**SLI**) y gestiona el riesgo con el **presupuesto de error**.
 
 ### Cadena de herramientas DevOps

@@ -152,7 +152,7 @@ Validados los requisitos, el prototipado permite explorar la solución con el us
 
 El diseño se aborda en dos niveles complementarios:
 
-- **Diseño arquitectónico (alto nivel)**: descompone el sistema en componentes o subsistemas y define sus interfaces; selecciona el estilo arquitectónico (capas, cliente-servidor, microservicios; ver tema 52) y las tecnologías.
+- **Diseño arquitectónico (alto nivel)**: descompone el sistema en componentes o subsistemas y define sus interfaces; selecciona el estilo arquitectónico (capas, cliente-servidor, microservicios; ver tema 56) y las tecnologías.
 - **Diseño detallado (bajo nivel)**: define estructuras de datos, clases, algoritmos e interfaces internas de cada módulo; se modela habitualmente con UML (ver tema 24).
 
 Dimensiones del diseño según Pressman: diseño **de datos**, **arquitectónico**, **de interfaz** y **procedimental** (a nivel de componentes).

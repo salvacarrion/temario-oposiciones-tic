@@ -11,7 +11,7 @@ El diseño de un CPD abarca desde la elección del emplazamiento hasta la organi
 - **Flexibilidad**: adaptación a los cambios tecnológicos y a las necesidades del negocio.
 - **Estandarización**: uso de estándares que facilitan la interoperabilidad y el mantenimiento.
 
-La computación corporativa ha evolucionado desde los mainframes centralizados hacia la arquitectura cliente-servidor, los clústeres de servidores, el grid computing, la virtualización y consolidación de sistemas y, finalmente, la computación en la nube y los modelos híbridos, con el edge computing como última etapa descentralizadora (la nube y las altas prestaciones se desarrollan en el tema 47).
+La computación corporativa ha evolucionado desde los mainframes centralizados hacia la arquitectura cliente-servidor, los clústeres de servidores, el grid computing, la virtualización y consolidación de sistemas y, finalmente, la computación en la nube y los modelos híbridos, con el edge computing como última etapa descentralizadora (la nube y las altas prestaciones se desarrollan en el tema 51).
 
 Los requisitos generales de un CPD son:
 
@@ -150,7 +150,7 @@ Los porcentajes siguen la regla mnemotécnica «**6-7-8-9**» (99,**6** / 99,**7
     - **Ventajas**: gestión unificada y simplificada, escalado flexible, menores costes operativos y base natural para la nube privada.
     - **Desventajas**: dependencia del fabricante (*lock-in*), crecimiento conjunto de los recursos (posible sobredimensionamiento) y retos de integración o migración de las aplicaciones existentes.
 
-La HCI es uno de los pilares del centro de datos definido por software (SDDC), que se estudia en el tema 47 junto con la computación en la nube.
+La HCI es uno de los pilares del centro de datos definido por software (SDDC), que se estudia en el tema 51 junto con la computación en la nube.
 
 ## Monitorización, gestión y tendencias
 
@@ -162,7 +162,7 @@ La HCI es uno de los pilares del centro de datos definido por software (SDDC), q
     - **Medidas**: free-cooling, confinamiento de pasillos, iluminación LED y equipos de bajo consumo, energías renovables, reutilización del calor residual y reciclaje de equipos obsoletos.
     - **Marco europeo**: el Código de Conducta europeo sobre eficiencia energética en CPD (adhesión voluntaria) y la **Directiva (UE) 2023/1791**, de eficiencia energética, cuyo **Reglamento Delegado (UE) 2024/1364** obliga a los CPD con demanda eléctrica TI de al menos **500 kW** a comunicar anualmente sus indicadores (energía, agua, calor residual) a una base de datos europea.
 - **Tendencias**:
-    - **Edge computing y micro-CPD**: procesamiento cerca de donde se generan los datos, que descentraliza la infraestructura (se desarrolla en el tema 47).
+    - **Edge computing y micro-CPD**: procesamiento cerca de donde se generan los datos, que descentraliza la infraestructura (se desarrolla en el tema 51).
     - **CPD modulares y prefabricados**: bloques estandarizados, incluso en contenedor, de despliegue rápido.
     - **Alta densidad e inteligencia artificial**: los aceleradores (GPU) multiplican la potencia por rack y generalizan la refrigeración líquida; el **suministro eléctrico** pasa a ser el principal factor limitante de los nuevos CPD de IA (la potencia disponible y los plazos de conexión a la red condicionan dónde y cuándo se construyen).
     - **Nube híbrida**: el CPD propio convive con servicios de nube pública; el reto operativo actual es la gestión unificada de ambos entornos.
@@ -225,7 +225,7 @@ Datos de partida:
 
 - **Arquitectura spine-leaf** con switches **ToR** redundantes en cada rack y enlaces agregados a dos leaf, adecuada al tráfico este-oeste de la virtualización.
 - **Perímetro**: cortafuegos redundantes en alta disponibilidad y balanceadores de carga para los servicios web de la sede.
-- **Conectividad exterior**: doble salida WAN con **dos operadores** distintos y rutas físicas separadas; conexión a la **Red SARA** (tema 59).
+- **Conectividad exterior**: doble salida WAN con **dos operadores** distintos y rutas físicas separadas; conexión a la **Red SARA** (tema 63).
 - **Segmentación**: DMZ para sede y registro, zona interna para expedientes y plataformas, y red de gestión fuera de banda (IPMI/Redfish, consolas KVM sobre IP).
 
 **f) Continuidad del servicio y operación**
@@ -252,7 +252,7 @@ Datos de partida:
 
 - **Entrenamiento desde cero**: descartado; exige decenas de miles de GPU y solo está al alcance de los grandes proveedores. Se parte de **modelos fundacionales** ya entrenados.
 - **Ajuste fino (fine-tuning) y experimentación**: en **nube con servicios certificados ENS** de categoría media: es una carga puntual e intensiva en la que el pago por uso evita inmovilizar inversión.
-- **Inferencia**: en el **CPD propio**: es una carga continua y predecible, procesa documentación interna (soberanía del dato) y su coste es estable frente al pago por consumo. Las arquitecturas de computación (HPC, nube) se desarrollan en el tema 47.
+- **Inferencia**: en el **CPD propio**: es una carga continua y predecible, procesa documentación interna (soberanía del dato) y su coste es estable frente al pago por consumo. Las arquitecturas de computación (HPC, nube) se desarrollan en el tema 51.
 
 **b) Densidad y refrigeración**
 

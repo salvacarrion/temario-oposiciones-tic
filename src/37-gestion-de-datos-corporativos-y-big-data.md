@@ -86,6 +86,8 @@ Elementos de apoyo:
 - **Data lake**: repositorio centralizado que almacena grandes volúmenes de datos **en bruto, en su formato original** (estructurados, semiestructurados y no estructurados), aplicando el esquema al leer (*schema-on-read*). Nació ligado a Hadoop/HDFS y hoy se implementa sobre todo en almacenamiento de objetos en la nube (Amazon S3, Azure Data Lake Storage).
     - Sin catálogo, calidad ni gobernanza degenera en un **data swamp** (pantano de datos): información imposible de localizar e interpretar.
 - **Data lakehouse**: arquitectura que añade al data lake capacidades de almacén de datos (transacciones ACID, esquemas, rendimiento SQL) mediante formatos de tabla abiertos: **Delta Lake**, **Apache Iceberg**, Apache Hudi.
+- **Data fabric**: capa de **integración y gestión unificada** sobre fuentes de datos distribuidas y heterogéneas (locales y en la nube), apoyada en metadatos activos, catálogo y virtualización de datos: los datos se quedan donde están y la capa los hace accesibles y gobernables como un todo. Enfoque tecnológico y centralizado en la gestión.
+- **Data mesh**: enfoque **organizativo y descentralizado** (Zhamak Dehghani, 2019) con cuatro principios: propiedad de los datos por **dominios** de negocio, el **dato como producto**, plataforma de datos autoservicio y **gobernanza federada** computacional. Complementario del data fabric: uno reparte la responsabilidad, el otro unifica la tecnología.
 
 ### Espacios de compartición de datos
 
@@ -227,6 +229,17 @@ La **explicabilidad** de los modelos es clave para su adopción: los modelos int
 - **PMML** (*Predictive Model Markup Language*, Data Mining Group, versión 4.4 de 2019): formato XML para definir y compartir modelos de minería de datos entre plataformas sin reimplementarlos.
 - **ONNX** (*Open Neural Network Exchange*): formato abierto actual de intercambio de modelos de aprendizaje automático, en especial redes neuronales.
 
+### Ciencia de datos y MLOps
+
+La **ciencia de datos** generaliza la minería de datos: combina estadística, computación y conocimiento del dominio para extraer valor de los datos, con el ciclo de vida que ya describe CRISP-DM (adquisición y ETL, preprocesado, modelado, validación y despliegue) y herramientas propias (Python con pandas/scikit-learn, R, notebooks, visualización). Las técnicas de aprendizaje automático se estudian en el tema 34.
+
+**MLOps** aplica los principios de DevOps (tema 26) al ciclo de vida de los modelos para llevarlos a producción de forma fiable y repetible:
+
+- **Versionado** de datos, código y modelos, con **registro de modelos** y *feature stores* reutilizables.
+- **Entrenamiento y despliegue automatizados** (pipelines CI/CD que reentrenan, validan y publican el modelo).
+- **Monitorización en producción**: rendimiento del modelo y **deriva** de los datos o del concepto (*data/concept drift*), que dispara el reentrenamiento.
+- Herramientas habituales: **MLflow**, Kubeflow, y los servicios gestionados de las nubes (SageMaker, Vertex AI, Azure ML).
+
 ## Caso práctico: clasificación
 
 ### Planteamiento
@@ -268,6 +281,7 @@ Con clases desbalanceadas, el accuracy no es una métrica fiable: el clasificado
 - R. Kimball y M. Ross, *The Data Warehouse Toolkit*, 3.ª ed., Wiley, 2013.
 - D. Laney, *3D Data Management: Controlling Data Volume, Velocity and Variety*, META Group, 2001.
 - P. Chapman et al., *CRISP-DM 1.0: Step-by-step data mining guide*, SPSS, 2000.
+- Z. Dehghani, *Data Mesh: Delivering Data-Driven Value at Scale*, O'Reilly, 2022 (concepto publicado en 2019).
 - Documentación oficial de los proyectos Apache Hadoop y Apache Spark (Apache Software Foundation).
 - Data Mining Group, *PMML 4.4*, 2019.
 - Reglamento (UE) 2022/868, de Gobernanza de Datos (DOUE 3-jun-2022, aplicable desde el 24-sep-2023) y Reglamento (UE) 2023/2854, de Datos (DOUE 22-dic-2023, aplicable en lo esencial desde el 12-sep-2025), verificados en EUR-Lex en julio de 2026.

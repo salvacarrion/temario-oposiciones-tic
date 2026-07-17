@@ -7,15 +7,15 @@ La sociedad digital es el estadio de la sociedad de la información en el que la
 La transformación digital consiste en integrar las tecnologías en todos los ámbitos (economía, administración, educación, sanidad) para generar desarrollo y bienestar, rediseñando procesos y servicios en torno a los datos y la conectividad.
 
 - **De la sociedad de la información a la sociedad digital**: la primera (años 90-2000) gira en torno al acceso a la información; la segunda añade la conectividad ubicua, los datos como activo económico, las plataformas como intermediarias y la interacción permanente entre lo físico y lo digital.
-- **Tecnologías habilitadoras** (tratadas en sus temas): computación en la nube (tema 47), inteligencia artificial (tema 34), big data (tema 37), Internet de las cosas (tema 72), redes 5G (tema 71), blockchain (tema 42).
+- **Tecnologías habilitadoras** (tratadas en sus temas): computación en la nube (tema 51), inteligencia artificial (tema 34), big data (tema 37), Internet de las cosas (tema 77), redes 5G (tema 76), blockchain (tema 42).
 - **Impactos principales**:
     - **Economía**: comercio electrónico, teletrabajo, nuevos modelos de negocio basados en plataformas y datos.
-    - **Administración**: administración electrónica y servicios públicos digitales (tema 50).
+    - **Administración**: administración electrónica y servicios públicos digitales (tema 54).
     - **Riesgos**: brecha digital, desinformación, ciberamenazas (tema 28) y dependencia tecnológica del exterior, que la UE aborda bajo la idea de **soberanía digital** (autonomía estratégica abierta en chips, nube y datos).
 - **Marcos estratégicos por niveles**:
     - **Unión Europea**: la **Década Digital de Europa** (Brújula Digital 2030 y Decisión (UE) 2022/2481), desarrollada en el último apartado.
     - **España**: agenda **España Digital 2026** (actualización de julio de 2022 de España Digital 2025), hoja de ruta nacional alineada con la Década Digital: conectividad y 5G, competencias digitales, ciberseguridad, digitalización de la administración y de la empresa, economía del dato e inteligencia artificial. La acompaña la **Carta de Derechos Digitales** (14 de julio de 2021), texto no normativo de referencia.
-    - **Comunitat Valenciana**: plan **GEN Digital 2025**, la estrategia digital de la Generalitat (se estudia en el tema 75).
+    - **Comunitat Valenciana**: plan **GEN Digital 2025**, la estrategia digital de la Generalitat (se estudia en el tema 80).
 
 ## Brecha digital e inclusión
 
@@ -25,7 +25,7 @@ La brecha digital es la desigualdad en el acceso, el uso y el aprovechamiento de
     - **Primera brecha (acceso)**: disponibilidad de conectividad y dispositivos; su dimensión territorial (zonas rurales frente a urbanas) se combate con la extensión de redes de muy alta capacidad.
     - **Segunda brecha (uso)**: carencia de competencias digitales para usar las TIC de forma eficaz y segura.
     - **Tercera brecha (aprovechamiento)**: diferencias en la capacidad de traducir el uso en beneficios reales (empleo, trámites, formación, participación).
-- **Variables que la determinan**: edad (brecha generacional), género, territorio, renta, nivel formativo y discapacidad (la accesibilidad se estudia en el tema 54).
+- **Variables que la determinan**: edad (brecha generacional), género, territorio, renta, nivel formativo y discapacidad (la accesibilidad se estudia en el tema 58).
 - **Brecha de género**: las mujeres representan menos del **20 %** de los especialistas TIC de la UE (informe sobre el estado de la Década Digital 2026); el equilibrio de género es objetivo explícito de las metas digitales de 2030.
 - **Inclusión digital**: políticas para que nadie quede atrás: conectividad asequible y universal, capacitación digital de colectivos vulnerables, accesibilidad de los servicios digitales y mantenimiento de canales de atención presencial para quien no puede o no quiere usar el canal digital.
 - **DigComp 2.2 (2022)**: el Marco Europeo de Competencias Digitales para la Ciudadanía (JRC, Comisión Europea) es la referencia para definir y evaluar qué es ser digitalmente competente. Se organiza en **5 áreas de competencia**, **21 competencias** y **8 niveles de aptitud**:

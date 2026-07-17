@@ -23,7 +23,7 @@ Una **API** (*Application Programming Interface*, interfaz de programación de a
 | gRPC | *Framework* RPC (Google, 2015) sobre HTTP/2 con mensajes binarios Protocol Buffers | Comunicación interna entre microservicios de alto rendimiento |
 | Asíncronas | Orientadas a eventos: *webhooks*, colas de mensajes, publicación/suscripción; se describen con AsyncAPI | Notificaciones y procesamiento en tiempo real |
 
-Los servicios web SOAP y la arquitectura SOA se desarrollan en el tema 56.
+Los servicios web SOAP y la arquitectura SOA se desarrollan en el tema 60.
 
 ### REST
 
@@ -87,7 +87,7 @@ La **apificación** es la estrategia de exponer los datos y funcionalidades de l
 
 En la Administración pública, la apificación sustenta tres ámbitos principales:
 
-- **Interoperabilidad entre administraciones**: los servicios de verificación y consulta de datos (Plataforma de Intermediación de Datos y demás soluciones compartidas) se consumen como servicios web, para no exigir al ciudadano documentos que ya obran en poder de la Administración. Se desarrollan en el tema 59.
+- **Interoperabilidad entre administraciones**: los servicios de verificación y consulta de datos (Plataforma de Intermediación de Datos y demás soluciones compartidas) se consumen como servicios web, para no exigir al ciudadano documentos que ya obran en poder de la Administración. Se desarrollan en el tema 63.
 - **Datos abiertos y reutilización (RISP)**: las APIs son el canal preferente para publicar datos dinámicos y en tiempo real. La **Iniciativa Aporta** publica la «Guía práctica para la publicación de datos abiertos usando APIs» (datos.gob.es, versión de **febrero de 2025**), con pautas para el sector público: documentar con OpenAPI, versionar, establecer límites de uso, ofrecer datos actualizados y monitorizar el servicio. Además, el Reglamento de Ejecución (UE) **2023/138** exige que los **conjuntos de datos de alto valor** (geoespaciales, meteorológicos, estadísticos, movilidad, medio ambiente, sociedades) se publiquen también mediante APIs.
 - **Servicios públicos digitales**: exponer los trámites y servicios como APIs permite que terceros (gestorías, aplicaciones ciudadanas, otras administraciones) los integren, y es la base de servicios proactivos y personalizados.
 
@@ -96,7 +96,7 @@ Ejemplos de APIs públicas en España:
 - **datos.gob.es**: API del catálogo nacional de datos abiertos, para consultar y federar conjuntos de datos.
 - **AEMET OpenData**: API REST de datos meteorológicos y climatológicos.
 - **INE**: API de difusión estadística (sistema Tempus3).
-- **CNIG/IDEE**: servicios OGC y OGC API de información geográfica (tema 63).
+- **CNIG/IDEE**: servicios OGC y OGC API de información geográfica (tema 67).
 
 Los beneficios para la Administración son la **transparencia** (acceso automatizable a la información pública), la **eficiencia** (servicios comunes reutilizados por muchos organismos), la mejora del servicio al ciudadano y la creación de un ecosistema **infomediario** que genera valor económico sobre los datos públicos.
 
