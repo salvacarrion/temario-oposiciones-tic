@@ -1,6 +1,6 @@
 # Régimen local de la Comunitat Valenciana (Ley 8/2010)
 
-La **Ley 8/2010, de 23 de junio, de la Generalitat, de Régimen Local de la Comunitat Valenciana** desarrolla las bases estatales (tema 96) en el territorio valenciano y regula las especialidades propias: entidades locales valencianas, órganos complementarios, comarcas, entidades locales menores, áreas metropolitanas y las relaciones entre la Generalitat y las entidades locales.
+La **Ley 8/2010, de 23 de junio, de la Generalitat, de Régimen Local de la Comunitat Valenciana** desarrolla las bases estatales (tema [96](96-bases-del-regimen-local-ley-7-1985.md)) en el territorio valenciano y regula las especialidades propias: entidades locales valencianas, órganos complementarios, comarcas, entidades locales menores, áreas metropolitanas y las relaciones entre la Generalitat y las entidades locales.
 
 ## Características y estructura
 
@@ -35,7 +35,7 @@ El capítulo de mancomunidades (arts. 91 a 107) fue **derogado por la Ley 21/201
 
 - **Término municipal (arts. 5-18)**: creación y supresión de municipios y alteración de términos por la propia ley (segregación, fusión e incorporación, con fomento de las fusiones); el **Consell Tècnic de Delimitació Territorial** (art. 18) es el órgano consultivo en materia de demarcaciones.
 - **Denominación y símbolos (arts. 19-22)**: cambio de denominación, capitalidad, escudo y bandera.
-- **Población (arts. 23-25)**: población municipal, padrón de habitantes y derechos y deberes de los vecinos, por remisión a la legislación básica (tema 96).
+- **Población (arts. 23-25)**: población municipal, padrón de habitantes y derechos y deberes de los vecinos, por remisión a la legislación básica (tema [96](96-bases-del-regimen-local-ley-7-1985.md)).
 - **Organización (arts. 26-32)**, complementaria de la básica y no aplicable a los municipios de gran población:
   - **Reglamento Orgánico Municipal (art. 28)**: obligatorio en los ayuntamientos de **más de 20.000 habitantes**.
   - **Defensor o Defensora de los Vecinos (art. 29)**: alternativa a la Comisión Especial de Sugerencias y Reclamaciones; designado por el Consejo Social o, en su defecto, por el Pleno, entre vecinos de reconocido prestigio; da cuenta anual al Pleno.
@@ -89,8 +89,8 @@ El capítulo de mancomunidades (arts. 91 a 107) fue **derogado por la Ley 21/201
 
 ## Títulos IX, X y XI. Personal, bienes y servicios, y haciendas locales
 
-- **Personal (arts. 159-177)**: remisión al régimen básico y a la ley de función pública valenciana; **agrupaciones de entidades locales para sostener personal común** (arts. 160-161, constituidas por la Generalitat a instancia de las entidades); competencias ejecutivas de la **Generalitat sobre los funcionarios de habilitación nacional** (art. 164: creación y clasificación de puestos, exenciones, **méritos autonómicos** (incluido el valenciano), publicación coordinada de concursos, nombramientos provisionales, comisiones, interinos y accidentales, permutas y régimen disciplinario) y **registro autonómico de méritos** (art. 165). Los detalles del régimen de estos funcionarios se estudian en el tema 98.
-- **Bienes, actividades y servicios (arts. 178-197)**: protección y defensa del patrimonio (con acción vecinal), alteración de la calificación jurídica, cesiones y enajenaciones (**comunicación a la Generalitat** de las enajenaciones, art. 191); servicios públicos locales: creación con memoria y proyecto de establecimiento (art. 192), **acceso en condiciones de igualdad**, **continuidad de la prestación** y recepción obligatoria; iniciativa económica local (arts. 196-197). Las formas de gestión se estudian en el tema 100.
+- **Personal (arts. 159-177)**: remisión al régimen básico y a la ley de función pública valenciana; **agrupaciones de entidades locales para sostener personal común** (arts. 160-161, constituidas por la Generalitat a instancia de las entidades); competencias ejecutivas de la **Generalitat sobre los funcionarios de habilitación nacional** (art. 164: creación y clasificación de puestos, exenciones, **méritos autonómicos** (incluido el valenciano), publicación coordinada de concursos, nombramientos provisionales, comisiones, interinos y accidentales, permutas y régimen disciplinario) y **registro autonómico de méritos** (art. 165). Los detalles del régimen de estos funcionarios se estudian en el tema [98](98-personal-al-servicio-de-las-entidades-locales.md).
+- **Bienes, actividades y servicios (arts. 178-197)**: protección y defensa del patrimonio (con acción vecinal), alteración de la calificación jurídica, cesiones y enajenaciones (**comunicación a la Generalitat** de las enajenaciones, art. 191); servicios públicos locales: creación con memoria y proyecto de establecimiento (art. 192), **acceso en condiciones de igualdad**, **continuidad de la prestación** y recepción obligatoria; iniciativa económica local (arts. 196-197). Las formas de gestión se estudian en el tema [100](100-formas-de-actividad-y-servicios-publicos-locales.md).
 - **Haciendas locales (arts. 198-201)**: principios de suficiencia y lealtad institucional; **tutela financiera de las entidades locales por la Generalitat** (art. 199, conforme al art. 70 del Estatut); medidas de saneamiento; el artículo del **Fondo de Cooperación Municipal de la Comunitat Valenciana** (art. 201) está derogado y el Fondo se regula hoy en la normativa presupuestaria de la Generalitat.
 
 ## Fuentes {.unnumbered .unlisted}

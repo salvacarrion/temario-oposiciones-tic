@@ -56,7 +56,7 @@ El ENI se aplica de acuerdo con los principios generales de la ley y con tres pr
 
 ### Infraestructuras y comunicaciones (Capítulos VI y VII)
 
-- **Art. 12. Infraestructuras y servicios comunes**: las AAPP enlazarán sus infraestructuras y servicios con los **comunes de la Administración General del Estado**, para facilitar la interoperabilidad y la relación multilateral (se estudian en el tema 63).
+- **Art. 12. Infraestructuras y servicios comunes**: las AAPP enlazarán sus infraestructuras y servicios con los **comunes de la Administración General del Estado**, para facilitar la interoperabilidad y la relación multilateral (se estudian en el tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md)).
 - **Art. 13. Red de comunicaciones de las AAPP españolas**: las AAPP la utilizarán **preferentemente** para comunicarse entre sí, conectando a ella sus redes o sus nodos de interoperabilidad, y para interconectarse con las redes de las **instituciones de la Unión Europea** y de otros Estados miembros. «La **Red SARA** prestará la citada Red de comunicaciones de las Administraciones públicas españolas».
 - **Art. 14. Plan de direccionamiento**: las AAPP aplicarán el **Plan de direccionamiento e interconexión de redes** en la Administración, desarrollado en su NTI.
 - **Art. 15. Hora oficial**: los sistemas implicados en servicios públicos electrónicos se sincronizarán con la hora oficial del **Real Instituto y Observatorio de la Armada (ROA)**, laboratorio depositario del **patrón nacional de Tiempo** (Real Decreto 1308/1992), y, cuando sea posible, con la hora oficial a nivel europeo.
@@ -74,7 +74,7 @@ El ENI se aplica de acuerdo con los principios generales de la ley y con tres pr
 ### Firma electrónica y certificados (Capítulo IX)
 
 - **Art. 18. Política de firma electrónica y de certificados**: la **AGE define una política de firma electrónica y de certificados** que sirve de **marco general de interoperabilidad** para el **reconocimiento mutuo** de las firmas electrónicas basadas en certificados de documentos administrativos. La aplican todos los organismos de la AGE (su no aplicación debe justificarse y ser autorizada por la SGAD, hoy AEAD). Las restantes AAPP pueden **acogerse a ella** o **aprobar políticas propias** partiendo de la NTI correspondiente; deben ser **interoperables con la política marco** y comunicarse, con sus ficheros de implementación, a la SGAD (hoy AEAD).
-- **Art. 19**: suprimido por el RD 203/2021 (regulaba los aspectos relativos a los prestadores de servicios de certificación, hoy regidos por el Reglamento eIDAS y la Ley 6/2020, tema 65).
+- **Art. 19**: suprimido por el RD 203/2021 (regulaba los aspectos relativos a los prestadores de servicios de certificación, hoy regidos por el Reglamento eIDAS y la Ley 6/2020, tema [65](65-identificacion-y-firma-electronica.md)).
 - **Art. 20. Plataformas de validación de certificados y de firma electrónica**: proporcionan **servicios de confianza** a las aplicaciones usuarias, ofreciendo «en un único punto de llamada» los elementos de interoperabilidad necesarios para validar certificados y firmas de dominios administrativos distintos; potencian la armonización de formatos y políticas e **incorporan las listas de confianza** de certificados interoperables nacionales y europeos.
 
 ### Recuperación y conservación del documento electrónico (Capítulo X)
@@ -101,7 +101,7 @@ El ENI se aplica de acuerdo con los principios generales de la ley y con tres pr
 ### Desarrollo del ENI (disposición adicional primera)
 
 - El ENI se desarrolla mediante las **NTI**, «de obligado cumplimiento por parte de las Administraciones Públicas». La redacción vigente (RD 203/2021) prevé **22 NTI** (letras a a v). Las aprueba el **Ministerio para la Transformación Digital y de la Función Pública**, a propuesta de la **Comisión Sectorial de Administración Electrónica**, mediante **Resolución** (redacción del RD 1125/2024). En materia de **ciberseguridad y criptografía**, el órgano competente es el **Centro Criptológico Nacional (CCN)**.
-- **Instrumentos para la interoperabilidad** (DA 1.ª.4): el **Sistema de Información Administrativa (SIA)**, el **Centro de Interoperabilidad Semántica de la Administración (CISE)**, el **Centro de Transferencia de Tecnología (CTT)** y el **Directorio Común de Unidades Orgánicas y Oficinas (DIR3)**. Se desarrollan en el tema 63.
+- **Instrumentos para la interoperabilidad** (DA 1.ª.4): el **Sistema de Información Administrativa (SIA)**, el **Centro de Interoperabilidad Semántica de la Administración (CISE)**, el **Centro de Transferencia de Tecnología (CTT)** y el **Directorio Común de Unidades Orgánicas y Oficinas (DIR3)**. Se desarrollan en el tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md).
 
 ## Normas Técnicas de Interoperabilidad (NTI)
 
@@ -122,7 +122,7 @@ Las NTI desarrollan aspectos concretos del ENI y son de **obligado cumplimiento*
 | Política de firma y sello electrónicos y de certificados de la Administración | **27 de octubre de 2016** (sustituye a la de 2011) |
 | Modelo de datos para el intercambio de asientos entre entidades registrales: **SICRES 4.0** | **22 de julio de 2021** (sustituye a SICRES 3.0, de 2011) |
 
-Las más preguntables se detallan a continuación (documento y expediente electrónicos se amplían en el tema 55).
+Las más preguntables se detallan a continuación (documento y expediente electrónicos se amplían en el tema [55](55-documento-y-expediente-electronico.md)).
 
 ### NTI de Documento electrónico
 
@@ -159,7 +159,7 @@ Especifica los protocolos de intermediación que facilitan la **integración y r
 - **Cesionario**: organización **autorizada a consultar** los datos, siempre en relación con trámites y procedimientos autorizados por el cedente.
 - **Requirente**: facilita la consulta **desde el punto de vista tecnológico**; el cesionario que consulta directamente actúa a la vez como requirente.
 
-El protocolo concreto de intercambio es el **SCSP** (última sección de este tema) y la implementación de referencia es la **Plataforma de Intermediación de Datos (PID)**, que se estudia en el tema 63.
+El protocolo concreto de intercambio es el **SCSP** (última sección de este tema) y la implementación de referencia es la **Plataforma de Intermediación de Datos (PID)**, que se estudia en el tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md).
 
 ## Interoperabilidad europea, nacional y autonómica
 
@@ -186,8 +186,8 @@ El **Reglamento (UE) 2024/903, de 13 de marzo de 2024**, por el que se establece
 
 ### Interoperabilidad nacional y autonómica
 
-- **Ámbito nacional**: el ENI y sus NTI; los instrumentos **SIA, CISE, CTT y DIR3**; y las infraestructuras y servicios comunes gestionados hoy por la **AEAD** (Red SARA, PID, plataformas de firma), que se estudian en el tema 63. El **Portal de Administración Electrónica (PAe)** es el punto de difusión de todo ello.
-- **Ámbito autonómico**: las comunidades autónomas actúan como **nodos de interoperabilidad** respecto de sus entidades. En la Comunitat Valenciana, la **Plataforma Autonómica de Interoperabilidad (PAI)** intermedia el acceso de la Generalitat y de las entidades locales valencianas a los servicios de verificación de datos estatales y ofrece servicios propios (temas 63 y 82). Existen además nodos sectoriales, como el **NISUE** (Nodo de Interoperabilidad del Sistema Universitario Español).
+- **Ámbito nacional**: el ENI y sus NTI; los instrumentos **SIA, CISE, CTT y DIR3**; y las infraestructuras y servicios comunes gestionados hoy por la **AEAD** (Red SARA, PID, plataformas de firma), que se estudian en el tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md). El **Portal de Administración Electrónica (PAe)** es el punto de difusión de todo ello.
+- **Ámbito autonómico**: las comunidades autónomas actúan como **nodos de interoperabilidad** respecto de sus entidades. En la Comunitat Valenciana, la **Plataforma Autonómica de Interoperabilidad (PAI)** intermedia el acceso de la Generalitat y de las entidades locales valencianas a los servicios de verificación de datos estatales y ofrece servicios propios (temas [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md) y [82](82-administracion-electronica-y-plataformas-de-la-generalitat.md)). Existen además nodos sectoriales, como el **NISUE** (Nodo de Interoperabilidad del Sistema Universitario Español).
 
 ## Intercambio de datos entre Administraciones Públicas: el protocolo SCSP
 

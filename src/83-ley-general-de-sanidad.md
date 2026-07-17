@@ -20,7 +20,7 @@ La **Ley 14/1986, de 25 de abril, General de Sanidad**, desarrolla el derecho a 
 - **Estado (arts. 38 a 40)**: competencia exclusiva sobre **sanidad exterior** y relaciones y acuerdos sanitarios internacionales (art. 38); bases y coordinación general de la sanidad; actuaciones generales como la determinación de métodos de análisis, reglamentaciones técnico-sanitarias o el control de medicamentos (art. 40).
 - **Comunidades autónomas (art. 41)**: ejercen las competencias asumidas en sus Estatutos y las que el Estado les transfiera o delegue; la regla residual les atribuye las decisiones y actuaciones no reservadas expresamente al Estado.
 - **Corporaciones locales (art. 42)**: participan en los órganos de dirección de las áreas de salud; los ayuntamientos tienen **responsabilidades mínimas obligatorias**: control sanitario del **medio ambiente** (aguas, residuos, contaminación), de **industrias, actividades y servicios**, de **edificios y lugares de vivienda y convivencia**, de la **distribución de alimentos y bebidas** y de los cementerios.
-- **Alta Inspección**: el Capítulo IV del Título II está hoy **derogado**; la función de Alta Inspección del Estado se regula en la Ley 16/2003 (remisión al tema 84).
+- **Alta Inspección**: el Capítulo IV del Título II está hoy **derogado**; la función de Alta Inspección del Estado se regula en la Ley 16/2003 (remisión al tema [84](84-cohesion-y-calidad-del-sns-y-cartera-de-servicios.md)).
 
 ## El Sistema Nacional de Salud (Título III)
 
@@ -38,7 +38,7 @@ La **Ley 14/1986, de 25 de abril, General de Sanidad**, desarrolla el derecho a 
 
 - **Art. 56. Áreas de Salud**: «estructuras fundamentales del sistema sanitario», responsables de la **gestión unitaria** de los centros del Servicio de Salud en su demarcación y de las prestaciones y programas sanitarios. Desarrollan actividades de atención primaria y especializada. Como regla general atienden a una población **no inferior a 200.000 ni superior a 250.000 habitantes** (con excepciones insulares y de Ceuta y Melilla), y como mínimo hay **un área por provincia**.
 - **Art. 62. Zonas básicas de salud**: división de las áreas para la máxima operatividad de la atención primaria; se delimitan según distancias y tiempos de desplazamiento, concentración o dispersión de la población, epidemiología y recursos de la zona.
-- En la Comunitat Valenciana, las áreas de salud se corresponden con los **departamentos de salud** de la Ley 10/2014 (remisión al tema 85).
+- En la Comunitat Valenciana, las áreas de salud se corresponden con los **departamentos de salud** de la Ley 10/2014 (remisión al tema [85](85-salud-de-la-comunitat-valenciana.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

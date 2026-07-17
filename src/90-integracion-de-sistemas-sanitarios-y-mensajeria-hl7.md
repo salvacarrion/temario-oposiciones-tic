@@ -4,17 +4,17 @@ Un hospital moderno ejecuta decenas de aplicaciones que necesitan compartir dato
 
 ## La interoperabilidad en sanidad
 
-La interoperabilidad es la capacidad de dos o más sistemas de **intercambiar información y de utilizar la información intercambiada**. En sanidad se analiza por niveles (modelo de HIMSS, alineado con el Esquema Nacional de Interoperabilidad y el Marco Europeo de Interoperabilidad, remisión al tema 62):
+La interoperabilidad es la capacidad de dos o más sistemas de **intercambiar información y de utilizar la información intercambiada**. En sanidad se analiza por niveles (modelo de HIMSS, alineado con el Esquema Nacional de Interoperabilidad y el Marco Europeo de Interoperabilidad, remisión al tema [62](62-esquema-nacional-de-interoperabilidad.md)):
 
 | Nivel | Qué garantiza | Ejemplo sanitario |
 | --- | --- | --- |
 | **Técnico (fundacional)** | La conexión y el transporte de datos entre sistemas | Red, TCP/IP, MLLP, HTTPS |
 | **Sintáctico (estructural)** | Formato y estructura comunes del mensaje | Mensaje HL7 v2, documento XML, JSON |
-| **Semántico** | Que el receptor interprete el dato con el mismo significado | Codificar el diagnóstico en SNOMED CT o CIE-10-ES (tema 92) |
-| **Organizativo** | Procesos, acuerdos y marco legal compartidos | Consentimientos, convenios entre servicios de salud, HCDSNS (tema 94) |
+| **Semántico** | Que el receptor interprete el dato con el mismo significado | Codificar el diagnóstico en SNOMED CT o CIE-10-ES (tema [92](92-normalizacion-en-informatica-sanitaria.md)) |
+| **Organizativo** | Procesos, acuerdos y marco legal compartidos | Consentimientos, convenios entre servicios de salud, HCDSNS (tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)) |
 
-- **Particularidades del dominio sanitario**: gran heterogeneidad de aplicaciones y proveedores, datos de **categoría especial** (art. 9 RGPD, remisión al tema 53), necesidad de disponibilidad continua (24x7) y una semántica clínica compleja que exige terminologías controladas.
-- **Beneficios**: continuidad asistencial (el dato sigue al paciente), eliminación de pruebas duplicadas, seguridad del paciente (menos transcripciones manuales) y explotación secundaria de los datos (tema 94).
+- **Particularidades del dominio sanitario**: gran heterogeneidad de aplicaciones y proveedores, datos de **categoría especial** (art. 9 RGPD, remisión al tema [53](53-proteccion-de-datos-personales.md)), necesidad de disponibilidad continua (24x7) y una semántica clínica compleja que exige terminologías controladas.
+- **Beneficios**: continuidad asistencial (el dato sigue al paciente), eliminación de pruebas duplicadas, seguridad del paciente (menos transcripciones manuales) y explotación secundaria de los datos (tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)).
 
 ## Integración de aplicaciones sanitarias: patrones y motores de integración
 
@@ -69,7 +69,7 @@ HL7 v3 (edición normativa inicial en **2005**) replanteó la mensajería desde 
 
 - **El RIM**: modelo orientado a objetos con **seis clases nucleares**: tres de contenido, **Act** (todo lo que ocurre: una observación, una prescripción), **Entity** (personas, organizaciones, lugares, cosas) y **Role** (el papel que juega una entidad: paciente, profesional), y tres de enlace, **Participation** (cómo interviene un rol en un acto), **ActRelationship** (relaciones entre actos) y **RoleLink** (relaciones entre roles).
 - **Mensajería v3**: los mensajes se derivan del RIM mediante refinamientos sucesivos (D-MIM, R-MIM, HMD) y se agrupan en dominios (administración de pacientes, laboratorio, farmacia).
-- **Resultado en la práctica**: la mensajería v3 tuvo una **adopción muy limitada** (complejidad alta, coste de implantación, ecosistema v2 ya consolidado). Su producto derivado de éxito es el estándar de documentos clínicos **CDA**, basado en el RIM, que se estudia en el tema 91 junto con FHIR, el estándar moderno que recupera la sencillez de v2 con tecnologías web.
+- **Resultado en la práctica**: la mensajería v3 tuvo una **adopción muy limitada** (complejidad alta, coste de implantación, ecosistema v2 ya consolidado). Su producto derivado de éxito es el estándar de documentos clínicos **CDA**, basado en el RIM, que se estudia en el tema [91](91-estandares-de-interoperabilidad-de-la-hce.md) junto con FHIR, el estándar moderno que recupera la sencillez de v2 con tecnologías web.
 
 | Aspecto | HL7 v2.x | HL7 v3 |
 | --- | --- | --- |

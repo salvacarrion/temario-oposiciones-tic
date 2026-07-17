@@ -80,7 +80,7 @@ En la Administración, la RPA desatendida que produce efectos en procedimientos 
 - **Art. 41.2**: debe establecerse previamente el **órgano u órganos competentes** para la definición de especificaciones, programación, mantenimiento, supervisión y control de calidad y, en su caso, auditoría del sistema de información y de su código fuente; y ha de indicarse el **órgano responsable a efectos de impugnación**.
 - **Art. 42**: la firma de estas actuaciones se realiza mediante **sello electrónico** de Administración Pública, órgano, organismo o entidad, o mediante **código seguro de verificación (CSV)** (desarrollados en los arts. 20 y 21 del RD 203/2021).
 - **Art. 13 del RD 203/2021**: en el ámbito estatal, la determinación de una actuación administrativa como automatizada se autoriza por **resolución** del titular del órgano competente por razón de la materia y se **publica en la sede electrónica**; la resolución debe expresar los recursos que procedan contra la actuación, el órgano ante el que interponerlos y el plazo.
-- Además, los robots deben tratarse como identidades no humanas: credenciales propias y protegidas, mínimo privilegio y registro de actividad, conforme al ENS (tema 29).
+- Además, los robots deben tratarse como identidades no humanas: credenciales propias y protegidas, mínimo privilegio y registro de actividad, conforme al ENS (tema [29](29-esquema-nacional-de-seguridad.md)).
 
 ## Plataformas y automatización inteligente (RPA + IA)
 
@@ -105,7 +105,7 @@ La **automatización inteligente** (*Intelligent Process Automation*, IPA) ampl�
 - **Procesamiento de lenguaje natural (NLP)**: clasificación de correos y solicitudes, extracción de entidades, chatbots y asistentes que derivan trabajo a los robots.
 - **Aprendizaje automático**: decisiones basadas en modelos (priorización, detección de anomalías y fraude) dentro del flujo automatizado.
 - **Minería de procesos y de tareas (process/task mining)**: descubrir, a partir de los registros de los sistemas y de la actividad del puesto, qué procesos existen realmente y cuáles conviene automatizar.
-- **IA generativa y automatización agéntica**: los grandes modelos de lenguaje se integran en las plataformas para generar automatizaciones, resumir y redactar documentos y, en su evolución más reciente, desplegar **agentes** que planifican y ejecutan tareas de principio a fin bajo supervisión (tema 34).
+- **IA generativa y automatización agéntica**: los grandes modelos de lenguaje se integran en las plataformas para generar automatizaciones, resumir y redactar documentos y, en su evolución más reciente, desplegar **agentes** que planifican y ejecutan tareas de principio a fin bajo supervisión (tema [34](34-inteligencia-artificial.md)).
 - **Hiperautomatización**: término acuñado por **Gartner** para el enfoque disciplinado que combina RPA, IPA, BPM, *low-code* y minería de procesos con el fin de automatizar rápidamente el máximo posible de procesos de negocio de extremo a extremo.
 
 ## Fuentes {.unnumbered .unlisted}

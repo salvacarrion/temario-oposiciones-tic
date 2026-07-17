@@ -1,6 +1,6 @@
 # Documentación clínica normalizada
 
-Sobre la base de la Ley 41/2002 (tema 88), dos normas concretan los documentos clínicos y sus datos: en la Comunitat Valenciana, la **Orden de 14 de septiembre de 2001** normaliza los documentos básicos de la historia clínica hospitalaria y su conservación; en el conjunto del SNS, el **Real Decreto 1093/2010** fija el conjunto mínimo de datos de los informes clínicos, base semántica de la historia clínica digital. Cierra el tema el régimen de los datos de salud y la organización de la seguridad de la información sanitaria.
+Sobre la base de la Ley 41/2002 (tema [88](88-autonomia-del-paciente-ley-41-2002.md)), dos normas concretan los documentos clínicos y sus datos: en la Comunitat Valenciana, la **Orden de 14 de septiembre de 2001** normaliza los documentos básicos de la historia clínica hospitalaria y su conservación; en el conjunto del SNS, el **Real Decreto 1093/2010** fija el conjunto mínimo de datos de los informes clínicos, base semántica de la historia clínica digital. Cierra el tema el régimen de los datos de salud y la organización de la seguridad de la información sanitaria.
 
 ## La historia clínica hospitalaria de la Comunitat Valenciana (Orden de 14 de septiembre de 2001)
 
@@ -22,7 +22,7 @@ La Orden de 14 de septiembre de 2001, de la Conselleria de Sanidad, **normaliza 
 
 ## El conjunto mínimo de datos de los informes clínicos (RD 1093/2010)
 
-El Real Decreto 1093/2010, de 3 de septiembre, aprueba el **conjunto mínimo de datos de los informes clínicos** en el Sistema Nacional de Salud: las variables comunes que debe contener cada documento clínico, **cualquiera que sea su soporte, electrónico o papel**, en todos los centros del SNS. Es la base semántica de la interoperabilidad de la historia clínica digital (remisión al tema 94).
+El Real Decreto 1093/2010, de 3 de septiembre, aprueba el **conjunto mínimo de datos de los informes clínicos** en el Sistema Nacional de Salud: las variables comunes que debe contener cada documento clínico, **cualquiera que sea su soporte, electrónico o papel**, en todos los centros del SNS. Es la base semántica de la interoperabilidad de la historia clínica digital (remisión al tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)).
 
 **Texto consolidado a 5 de julio de 2023.**
 
@@ -41,21 +41,21 @@ El Real Decreto 1093/2010, de 3 de septiembre, aprueba el **conjunto mínimo de 
 | Historia clínica resumida | X |
 
 - Cada anexo enumera las **variables** del documento (datos del documento, de la institución emisora, del paciente y del proceso asistencial) y sus formatos, valores y estándares.
-- La **historia clínica resumida** (anexo X) es el documento electrónico generado y actualizado a partir de la historia clínica, pensado para el acceso entre comunidades autónomas mediante la Historia Clínica Digital del SNS (tema 94).
+- La **historia clínica resumida** (anexo X) es el documento electrónico generado y actualizado a partir de la historia clínica, pensado para el acceso entre comunidades autónomas mediante la Historia Clínica Digital del SNS (tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)).
 
 ## Datos de salud y seguridad de la información sanitaria
 
-Los datos relativos a la salud son **categorías especiales de datos** del art. 9 del RGPD: su tratamiento se ampara, entre otros, en los fines de medicina preventiva y asistencial, gestión de los sistemas y servicios de asistencia sanitaria, interés público en el ámbito de la salud pública e investigación, siempre con las garantías de la normativa de protección de datos (desarrollo completo en el tema 53).
+Los datos relativos a la salud son **categorías especiales de datos** del art. 9 del RGPD: su tratamiento se ampara, entre otros, en los fines de medicina preventiva y asistencial, gestión de los sistemas y servicios de asistencia sanitaria, interés público en el ámbito de la salud pública e investigación, siempre con las garantías de la normativa de protección de datos (desarrollo completo en el tema [53](53-proteccion-de-datos-personales.md)).
 
 En el ámbito de la Conselleria de Sanidad, la **Orden 9/2012, de 10 de julio**, establece la **organización de la seguridad de la información**:
 
 - **Estructura central**: el **responsable de la información**, el **responsable de la seguridad de la información**, la **Oficina de seguridad de la información** y el **Comité de seguridad de la información**, junto con los responsables de accesos y los responsables funcionales de tratamiento.
 - **Estructura periférica**: responsables de tratamientos y **responsables locales de la seguridad** en departamentos de salud y centros.
-- La política de seguridad de la información general de la Generalitat es hoy el **Decreto 49/2025** (remisión al tema 81).
+- La política de seguridad de la información general de la Generalitat es hoy el **Decreto 49/2025** (remisión al tema [81](81-seguridad-de-la-informacion-en-la-generalitat.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 
 - Orden de 14 de septiembre de 2001, de la Conselleria de Sanidad, por la que se normalizan los documentos básicos de la historia clínica hospitalaria de la Comunidad Valenciana y se regula su conservación (DOGV núm. 4111, de 22 de octubre de 2001).
 - Real Decreto 1093/2010, de 3 de septiembre, por el que se aprueba el conjunto mínimo de datos de los informes clínicos en el Sistema Nacional de Salud (texto consolidado, última modificación 5 de julio de 2023).
 - Orden 9/2012, de 10 de julio, de la Conselleria de Sanidad, por la que se establece la organización de la seguridad de la información (DOGV núm. 6825, de 20 de julio de 2012).
-- Reglamento (UE) 2016/679 (RGPD), art. 9 (remisión al tema 53).
+- Reglamento (UE) 2016/679 (RGPD), art. 9 (remisión al tema [53](53-proteccion-de-datos-personales.md)).

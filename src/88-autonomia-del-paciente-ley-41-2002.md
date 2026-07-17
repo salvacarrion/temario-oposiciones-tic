@@ -6,7 +6,7 @@ La **Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del pa
 
 **Texto consolidado a 1 de marzo de 2023.**
 
-- **Naturaleza**: ley **básica** (se dicta al amparo del art. 149.1.1.ª y 16.ª CE); las comunidades autónomas la desarrollan (en la Comunitat Valenciana, la Ley 10/2014 y la Orden de 14 de septiembre de 2001, temas 85 y 89).
+- **Naturaleza**: ley **básica** (se dicta al amparo del art. 149.1.1.ª y 16.ª CE); las comunidades autónomas la desarrollan (en la Comunitat Valenciana, la Ley 10/2014 y la Orden de 14 de septiembre de 2001, temas [85](85-salud-de-la-comunitat-valenciana.md) y [89](89-documentacion-clinica-normalizada.md)).
 - **Estructura**: **6 Capítulos**: I Principios generales, II El derecho de información sanitaria, III Derecho a la intimidad, IV El respeto de la autonomía del paciente, V La historia clínica y VI Informe de alta y otra documentación clínica.
 
 ## Principios generales (Capítulo I)
@@ -51,7 +51,7 @@ La **Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del pa
 
 ## Informe de alta y otra documentación clínica (Capítulo VI)
 
-- **Art. 20. Informe de alta**: derecho de todo paciente (o familiar o persona vinculada) a recibirlo al finalizar el proceso asistencial, con los contenidos mínimos del art. 3; sus características se determinan reglamentariamente por las administraciones autonómicas (en el SNS, el RD 1093/2010, tema 89).
+- **Art. 20. Informe de alta**: derecho de todo paciente (o familiar o persona vinculada) a recibirlo al finalizar el proceso asistencial, con los contenidos mínimos del art. 3; sus características se determinan reglamentariamente por las administraciones autonómicas (en el SNS, el RD 1093/2010, tema [89](89-documentacion-clinica-normalizada.md)).
 - **Art. 21. El alta del paciente**: si no acepta el tratamiento prescrito, se le propone la firma del **alta voluntaria**; si no la firma, la dirección del centro puede disponer el **alta forzosa** a propuesta del médico responsable. No procede el alta forzosa si existen **tratamientos alternativos** (aunque sean paliativos) que preste el centro y el paciente acepte.
 - **Art. 22. Certificados médicos**: derecho a que se faciliten certificados acreditativos del estado de salud; gratuitos cuando lo establezca una disposición.
 - **Art. 23**: obligaciones profesionales de información técnica, estadística y administrativa.

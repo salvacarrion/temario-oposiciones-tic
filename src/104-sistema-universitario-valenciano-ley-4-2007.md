@@ -1,6 +1,6 @@
 # Sistema universitario valenciano (Ley 4/2007)
 
-La **Ley 4/2007, de 9 de febrero, de la Generalitat, de coordinación del Sistema Universitario Valenciano** ordena y coordina las universidades valencianas en ejercicio de las competencias autonómicas, «con respeto al principio de autonomía universitaria y en el marco del sistema universitario español y del Espacio Europeo de Educación Superior» (art. 1). Es la pieza autonómica que completa a la LOSU (tema 103).
+La **Ley 4/2007, de 9 de febrero, de la Generalitat, de coordinación del Sistema Universitario Valenciano** ordena y coordina las universidades valencianas en ejercicio de las competencias autonómicas, «con respeto al principio de autonomía universitaria y en el marco del sistema universitario español y del Espacio Europeo de Educación Superior» (art. 1). Es la pieza autonómica que completa a la LOSU (tema [103](103-sistema-universitario-losu.md)).
 
 **Texto consolidado a 16 de abril de 2025.**
 
@@ -56,4 +56,4 @@ La **Ley 4/2007, de 9 de febrero, de la Generalitat, de coordinación del Sistem
 ## Fuentes {.unnumbered .unlisted}
 
 - Ley 4/2007, de 9 de febrero, de la Generalitat, de coordinación del Sistema Universitario Valenciano (texto consolidado, última modificación 16 de abril de 2025; contrastado online en julio de 2026, vigente).
-- Ley Orgánica 2/2023, de 22 de marzo, del Sistema Universitario (marco básico estatal; ver tema 103).
+- Ley Orgánica 2/2023, de 22 de marzo, del Sistema Universitario (marco básico estatal; ver tema [103](103-sistema-universitario-losu.md)).

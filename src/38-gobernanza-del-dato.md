@@ -96,7 +96,7 @@ Elementos comunes:
 
 Las administraciones públicas gestionan volúmenes enormes de datos (tributarios, sanitarios, geográficos, estadísticos) y su gobierno es condición para la administración digital, la transparencia y las políticas públicas basadas en evidencia.
 
-- **Marco europeo**: la estrategia europea de datos impulsa los **espacios comunes europeos de datos** y se apoya en el **Reglamento (UE) 2022/868, de Gobernanza de Datos (DGA)** (reutilización de datos protegidos del sector público, servicios de intermediación y cesión altruista de datos) y el **Reglamento (UE) 2023/2854, de Datos (Data Act)**; se tratan en el tema 37.
+- **Marco europeo**: la estrategia europea de datos impulsa los **espacios comunes europeos de datos** y se apoya en el **Reglamento (UE) 2022/868, de Gobernanza de Datos (DGA)** (reutilización de datos protegidos del sector público, servicios de intermediación y cesión altruista de datos) y el **Reglamento (UE) 2023/2854, de Datos (Data Act)**; se tratan en el tema [37](37-gestion-de-datos-corporativos-y-big-data.md).
 - **La Oficina del Dato**: división de la **Secretaría de Estado de Digitalización e Inteligencia Artificial (SEDIA)**, dirigida por el **Chief Data Officer** nacional. Su misión es «dinamizar la compartición, la gestión y el uso de los datos en todos los sectores de la economía y la sociedad»: espacios de datos sectoriales, gobernanza y tecnologías del dato.
 - **Especificaciones UNE del dato** (2023, impulsadas por la Oficina del Dato junto a UNE): marco español para implantar y evaluar el gobierno del dato, alineado con las normas ISO:
     - **UNE 0077:2023, gobierno del dato**: marco para evaluar, dirigir y monitorizar el uso del dato (**5 procesos**).

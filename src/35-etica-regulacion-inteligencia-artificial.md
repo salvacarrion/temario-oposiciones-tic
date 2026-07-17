@@ -29,7 +29,7 @@ Definiciones clave (art. 3):
 - **Sistema de IA** (art. 3.1): «un sistema basado en una máquina que está diseñado para funcionar con distintos niveles de autonomía y que puede mostrar capacidad de adaptación tras el despliegue, y que, para objetivos explícitos o implícitos, infiere de la información de entrada que recibe la manera de generar resultados de salida, como predicciones, contenidos, recomendaciones o decisiones, que pueden influir en entornos físicos o virtuales».
 - **Proveedor** (art. 3.3): quien desarrolla un sistema o modelo de IA (o lo manda desarrollar) y lo introduce en el mercado o lo pone en servicio con su propio nombre o marca.
 - **Responsable del despliegue** (art. 3.4): quien «utilice un sistema de IA bajo su propia autoridad», salvo en actividades personales no profesionales. Una Administración que usa un sistema de IA es responsable del despliegue.
-- **Modelo de IA de uso general** (art. 3.63): modelo entrenado con un gran volumen de datos mediante autosupervisión a gran escala, que «presenta un grado considerable de generalidad» y realiza de manera competente una gran variedad de tareas distintas (los grandes modelos de lenguaje del tema 34).
+- **Modelo de IA de uso general** (art. 3.63): modelo entrenado con un gran volumen de datos mediante autosupervisión a gran escala, que «presenta un grado considerable de generalidad» y realiza de manera competente una gran variedad de tareas distintas (los grandes modelos de lenguaje del tema [34](34-inteligencia-artificial.md)).
 
 ## El enfoque basado en el riesgo
 

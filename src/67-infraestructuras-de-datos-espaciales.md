@@ -1,6 +1,6 @@
 # Infraestructuras de datos espaciales
 
-Una infraestructura de datos espaciales (IDE) es el conjunto de datos georreferenciados, metadatos, servicios web estandarizados, acuerdos y normas que permite a productores y usuarios compartir información geográfica a través de Internet de forma interoperable. Si el tema 66 trata cómo se produce y analiza la información geográfica (los SIG), este trata cómo se publica y se comparte: la definición y componentes de una IDE, sus servicios web (WMS, WFS, CSW) y el marco normativo que las regula en Europa (INSPIRE) y en España (LISIGE).
+Una infraestructura de datos espaciales (IDE) es el conjunto de datos georreferenciados, metadatos, servicios web estandarizados, acuerdos y normas que permite a productores y usuarios compartir información geográfica a través de Internet de forma interoperable. Si el tema [66](66-sistemas-de-informacion-geografica.md) trata cómo se produce y analiza la información geográfica (los SIG), este trata cómo se publica y se comparte: la definición y componentes de una IDE, sus servicios web (WMS, WFS, CSW) y el marco normativo que las regula en Europa (INSPIRE) y en España (LISIGE).
 
 ## Definición y componentes de una IDE
 
@@ -23,9 +23,9 @@ La LISIGE define la infraestructura de información geográfica (art. 3.1.a) com
 
 Una IDE sigue una arquitectura cliente-servidor distribuida, orientada a servicios y basada en estándares abiertos.
 
-- **Lado servidor (cada nodo)**: bases de datos espaciales (tema 66), un **servidor de mapas** que publica los datos como servicios OGC (**GeoServer**, **MapServer**) y un **catálogo de metadatos** consultable vía CSW (**GeoNetwork**).
+- **Lado servidor (cada nodo)**: bases de datos espaciales (tema [66](66-sistemas-de-informacion-geografica.md)), un **servidor de mapas** que publica los datos como servicios OGC (**GeoServer**, **MapServer**) y un **catálogo de metadatos** consultable vía CSW (**GeoNetwork**).
 - **Clientes ligeros**: geoportales y visores web construidos con bibliotecas como **OpenLayers** o **Leaflet**; no requieren instalar software.
-- **Clientes pesados**: los SIG de escritorio (QGIS, gvSIG, ArcGIS; tema 66), que consumen los servicios de la IDE como capas remotas.
+- **Clientes pesados**: los SIG de escritorio (QGIS, gvSIG, ArcGIS; tema [66](66-sistemas-de-informacion-geografica.md)), que consumen los servicios de la IDE como capas remotas.
 - **Formatos de intercambio**: **GML** (Geography Markup Language, XML del OGC, norma **ISO 19136**) para objetos geográficos, además de GeoJSON en entornos web.
 
 ## Servicios web: WMS, WFS y CSW

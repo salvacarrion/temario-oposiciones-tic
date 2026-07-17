@@ -1,6 +1,6 @@
 # Sistemas operativos
 
-El sistema operativo es la capa de software que gestiona el hardware y ofrece a las aplicaciones una máquina extendida más simple y segura que el hardware desnudo. Este tema cubre sus conceptos y mecanismos fundamentales (procesos, memoria, ficheros y E/S) y el panorama actual de familias, desde el puesto de trabajo hasta el mainframe. La administración práctica de GNU/Linux y de Windows se desarrolla en los temas 47 y 48.
+El sistema operativo es la capa de software que gestiona el hardware y ofrece a las aplicaciones una máquina extendida más simple y segura que el hardware desnudo. Este tema cubre sus conceptos y mecanismos fundamentales (procesos, memoria, ficheros y E/S) y el panorama actual de familias, desde el puesto de trabajo hasta el mainframe. La administración práctica de GNU/Linux y de Windows se desarrolla en los temas [47](47-administracion-de-sistemas-gnu-linux.md) y [48](48-administracion-de-sistemas-windows-y-directorio-activo.md).
 
 ## Concepto, funciones y estructura
 
@@ -49,7 +49,7 @@ El sistema de ficheros organiza el almacenamiento persistente en ficheros y dire
 
 ## Evolución y panorama actual
 
-De los sistemas **por lotes** (años 50-60) se pasó a la **multiprogramación** y el **tiempo compartido** (UNIX, 1969), al PC (MS-DOS 1981, Windows, Mac), y de ahí a los SO de red, los móviles (iPhone 2007, Android 2008) y la era actual de nube y virtualización (temas 44 y 51), donde el SO de servidor corre mayoritariamente virtualizado o en contenedores.
+De los sistemas **por lotes** (años 50-60) se pasó a la **multiprogramación** y el **tiempo compartido** (UNIX, 1969), al PC (MS-DOS 1981, Windows, Mac), y de ahí a los SO de red, los móviles (iPhone 2007, Android 2008) y la era actual de nube y virtualización (temas [44](44-virtualizacion-y-contenedores.md) y [51](51-computacion-en-la-nube-y-altas-prestaciones.md)), donde el SO de servidor corre mayoritariamente virtualizado o en contenedores.
 
 | Familia | Ejemplos | Ámbito típico |
 | --- | --- | --- |
@@ -59,9 +59,9 @@ De los sistemas **por lotes** (años 50-60) se pasó a la **multiprogramación**
 | Móviles | **Android** (núcleo Linux) e **iOS** (base Darwin) | Dispositivos móviles (Android, el SO más extendido del mundo) |
 | Mainframe | **z/OS** (IBM Z) | Grandes volúmenes transaccionales (banca, seguros) |
 
-- **Sistemas operativos móviles**: modelo de seguridad de **aislamiento por aplicación** (*sandbox*), permisos declarados y concedidos por el usuario, distribución por tiendas firmadas y actualizaciones OTA; el desarrollo de aplicaciones se trata en el tema 59.
+- **Sistemas operativos móviles**: modelo de seguridad de **aislamiento por aplicación** (*sandbox*), permisos declarados y concedidos por el usuario, distribución por tiendas firmadas y actualizaciones OTA; el desarrollo de aplicaciones se trata en el tema [59](59-desarrollo-de-aplicaciones-moviles.md).
 - **El mainframe y z/OS**: alta disponibilidad y particiones lógicas (**LPAR**) con virtualización nativa (z/VM); procesamiento transaccional (CICS) y por lotes (JCL); sigue sosteniendo cargas críticas de banca y administraciones.
-- **Tendencias**: contenedores como unidad de despliegue (tema 44), SO inmutables y mínimos para nube (CoreOS, Bottlerocket), **WSL** (subsistema Linux en Windows) y el uso creciente de Linux en el escritorio de la Administración europea.
+- **Tendencias**: contenedores como unidad de despliegue (tema [44](44-virtualizacion-y-contenedores.md)), SO inmutables y mínimos para nube (CoreOS, Bottlerocket), **WSL** (subsistema Linux en Windows) y el uso creciente de Linux en el escritorio de la Administración europea.
 
 ## Fuentes {.unnumbered .unlisted}
 

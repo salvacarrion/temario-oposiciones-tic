@@ -1,6 +1,6 @@
 # Servicios de infraestructura: web, correo y monitorización
 
-Sobre los sistemas operativos de servidor (temas 47 y 48) se despliegan los servicios que sostienen las aplicaciones corporativas: servidores web y de aplicaciones, proxies y balanceadores, correo electrónico, servicios de directorio y monitorización. Los protocolos de red subyacentes se tratan en el tema 70; aquí interesa la arquitectura y la administración del lado servidor.
+Sobre los sistemas operativos de servidor (temas [47](47-administracion-de-sistemas-gnu-linux.md) y [48](48-administracion-de-sistemas-windows-y-directorio-activo.md)) se despliegan los servicios que sostienen las aplicaciones corporativas: servidores web y de aplicaciones, proxies y balanceadores, correo electrónico, servicios de directorio y monitorización. Los protocolos de red subyacentes se tratan en el tema [70](70-protocolos-de-comunicaciones.md); aquí interesa la arquitectura y la administración del lado servidor.
 
 ## Servidores web
 
@@ -10,7 +10,7 @@ El servidor web atiende peticiones HTTP/HTTPS y sirve contenido estático o lo d
 - **Nginx**: arquitectura **asíncrona orientada a eventos**, muy eficiente sirviendo estáticos y con miles de conexiones concurrentes; el uso habitual es de **proxy inverso** y terminación TLS delante de la aplicación.
 - **IIS (Internet Information Services)**: el servidor web de Windows, administrado por consola o PowerShell, con aislamiento por **grupos de aplicaciones** (*application pools*) e integración con el ecosistema .NET y la autenticación de Windows.
 
-Patrón habitual: Nginx (o Apache) delante, sirviendo estático, terminando **TLS** y pasando lo dinámico al servidor de aplicaciones; certificados automatizados (ACME/Let's Encrypt) y cabeceras de seguridad (el desarrollo seguro se trata en el tema 32).
+Patrón habitual: Nginx (o Apache) delante, sirviendo estático, terminando **TLS** y pasando lo dinámico al servidor de aplicaciones; certificados automatizados (ACME/Let's Encrypt) y cabeceras de seguridad (el desarrollo seguro se trata en el tema [32](32-desarrollo-seguro-de-aplicaciones.md)).
 
 ```nginx
 server {
@@ -27,12 +27,12 @@ Ejecutan la lógica de negocio y ofrecen a las aplicaciones servicios comunes: g
 
 - **Apache Tomcat**: contenedor de **servlets** Java (y JSP), ligero y ubicuo; el despliegue empaqueta la aplicación como **WAR**; su rendimiento se ajusta dimensionando la **JVM** (memoria, recolector de basura) y los conectores.
 - **Jakarta EE completos**: **WildFly/JBoss EAP** (Red Hat) y **Oracle WebLogic** (habitual en administraciones con Oracle): clustering, colas de mensajes, transacciones distribuidas y consolas de administración de dominio.
-- **Otras plataformas**: cada ecosistema trae su servidor de aplicación (procesos PHP-FPM, Gunicorn/uWSGI en Python, Node.js), normalmente detrás del proxy inverso (las plataformas de desarrollo se tratan en el tema 61).
+- **Otras plataformas**: cada ecosistema trae su servidor de aplicación (procesos PHP-FPM, Gunicorn/uWSGI en Python, Node.js), normalmente detrás del proxy inverso (las plataformas de desarrollo se tratan en el tema [61](61-programacion.md)).
 
 ## Proxy, proxy inverso y balanceo de carga
 
 - **Proxy directo**: intermedia las salidas de los usuarios hacia Internet: control de acceso y filtrado de contenidos, caché y registro de navegación. El referente libre es **Squid** (ACL por origen/destino/horario, jerarquías de caché, integración con autenticación corporativa).
-- **Proxy inverso**: intermedia las entradas hacia los servidores: publica aplicaciones internas, oculta la topología, termina TLS, cachea y protege (limitación de tasa; se complementa con WAF, tema 32). Lo hacen Nginx, Apache (mod_proxy) y HAProxy.
+- **Proxy inverso**: intermedia las entradas hacia los servidores: publica aplicaciones internas, oculta la topología, termina TLS, cachea y protege (limitación de tasa; se complementa con WAF, tema [32](32-desarrollo-seguro-de-aplicaciones.md)). Lo hacen Nginx, Apache (mod_proxy) y HAProxy.
 - **Balanceo de carga**: reparte peticiones entre varios servidores para escalar y tolerar fallos: algoritmos **round robin**, menos conexiones o hash de IP; **comprobaciones de salud** que retiran nodos caídos; **persistencia de sesión** (*sticky sessions*) cuando la aplicación lo exige. **HAProxy** es el balanceador software de referencia (capas 4 y 7); en nube lo dan los balanceadores gestionados, y a escala Internet las **CDN**.
 
 ## Correo electrónico y mensajería
@@ -48,24 +48,24 @@ En el correo intervienen el **MUA** (cliente), el **MTA** (agente de transferenc
 | **DKIM** (RFC 6376) | Firma criptográfica del mensaje por el dominio emisor | TXT con la clave pública (selector) |
 | **DMARC** (RFC 7489) | Alineación de SPF/DKIM y política ante fallos | TXT: `v=DMARC1; p=quarantine` (none/quarantine/reject) |
 
-- **Higiene y protección**: pasarelas antispam/antimalware, listas de bloqueo (RBL), cifrado TLS entre MTA (MTA-STS) y concienciación anti-*phishing* (tema 28).
-- **Mensajería y colaboración**: la mensajería instantánea corporativa y las plataformas colaborativas (Teams, Slack y equivalentes) complementan al correo como servicio de comunicación gestionado (comunicaciones unificadas, tema 74).
+- **Higiene y protección**: pasarelas antispam/antimalware, listas de bloqueo (RBL), cifrado TLS entre MTA (MTA-STS) y concienciación anti-*phishing* (tema [28](28-ciberseguridad.md)).
+- **Mensajería y colaboración**: la mensajería instantánea corporativa y las plataformas colaborativas (Teams, Slack y equivalentes) complementan al correo como servicio de comunicación gestionado (comunicaciones unificadas, tema [74](74-redes-de-transporte-voz-y-audiovisuales.md)).
 
 ## Servicios de directorio
 
 Un **directorio** es una base de datos jerárquica optimizada para lecturas que centraliza identidades y recursos: cuentas, grupos, equipos, certificados. El protocolo estándar es **LDAP** (RFC 4511): entradas identificadas por un **DN** (nombre distinguido) en un árbol (`uid=maria,ou=personal,dc=gva,dc=es`) y esquema extensible.
 
-- **Implementaciones**: **Active Directory** (el dominante corporativo, tema 48), **OpenLDAP** y 389 Directory Server en el mundo libre, y los directorios en la nube (Entra ID).
-- **Usos**: autenticación y autorización centralizadas de aplicaciones (con LDAPS), libretas de direcciones, inventario de equipos y base de la federación de identidad (tema 65).
+- **Implementaciones**: **Active Directory** (el dominante corporativo, tema [48](48-administracion-de-sistemas-windows-y-directorio-activo.md)), **OpenLDAP** y 389 Directory Server en el mundo libre, y los directorios en la nube (Entra ID).
+- **Usos**: autenticación y autorización centralizadas de aplicaciones (con LDAPS), libretas de direcciones, inventario de equipos y base de la federación de identidad (tema [65](65-identificacion-y-firma-electronica.md)).
 
 ## Monitorización y gestión de logs
 
 La monitorización vigila disponibilidad, capacidad y rendimiento, y alerta antes de que el fallo llegue al usuario; se completa con la centralización de logs para diagnóstico y auditoría.
 
 - **Monitorización clásica de infraestructura**: **Nagios** y **Zabbix**: comprobaciones activas/pasivas por agente o red (ping, puerto, servicio, disco), umbrales, dependencias y alertas (correo, mensajería, guardias).
-- **Métricas y observabilidad**: **Prometheus** (recolección *pull* de métricas en series temporales, lenguaje PromQL, alertas con Alertmanager) con **Grafana** para cuadros de mando; estándar de facto en contenedores y Kubernetes (tema 44). La observabilidad moderna añade trazas distribuidas (OpenTelemetry).
-- **Logs centralizados**: reenvío por **syslog**/journald a una plataforma central: pila **ELK** (Elasticsearch, Logstash, Kibana) o Grafana Loki; retención y correlación con el SIEM de seguridad (tema 31).
-- **Disponibilidad y niveles de servicio**: la monitorización alimenta los indicadores de los acuerdos de nivel de servicio (SLA, tema 18). La disponibilidad se expresa en «nueves», valores redondos que se pactan como objetivo de servicio (no confundir con las disponibilidades de los niveles **TIER** de la infraestructura del CPD, valores propios del estándar: **99,671 a 99,995 %**, tema 43):
+- **Métricas y observabilidad**: **Prometheus** (recolección *pull* de métricas en series temporales, lenguaje PromQL, alertas con Alertmanager) con **Grafana** para cuadros de mando; estándar de facto en contenedores y Kubernetes (tema [44](44-virtualizacion-y-contenedores.md)). La observabilidad moderna añade trazas distribuidas (OpenTelemetry).
+- **Logs centralizados**: reenvío por **syslog**/journald a una plataforma central: pila **ELK** (Elasticsearch, Logstash, Kibana) o Grafana Loki; retención y correlación con el SIEM de seguridad (tema [31](31-gestion-de-ciberincidentes.md)).
+- **Disponibilidad y niveles de servicio**: la monitorización alimenta los indicadores de los acuerdos de nivel de servicio (SLA, tema [18](18-gestion-de-los-servicios-tic.md)). La disponibilidad se expresa en «nueves», valores redondos que se pactan como objetivo de servicio (no confundir con las disponibilidades de los niveles **TIER** de la infraestructura del CPD, valores propios del estándar: **99,671 a 99,995 %**, tema [43](43-centros-de-proceso-de-datos.md)):
 
 | Disponibilidad | Indisponibilidad máxima al año |
 | --- | --- |
@@ -74,7 +74,7 @@ La monitorización vigila disponibilidad, capacidad y rendimiento, y alerta ante
 | **99,99 %** | 52,6 minutos |
 | **99,999 %** | 5,26 minutos |
 
-- **Gestión de red**: la supervisión SNMP de electrónica de red y el modelo FCAPS se tratan en el tema 73.
+- **Gestión de red**: la supervisión SNMP de electrónica de red y el modelo FCAPS se tratan en el tema [73](73-virtualizacion-de-redes.md).
 
 ## Fuentes {.unnumbered .unlisted}
 

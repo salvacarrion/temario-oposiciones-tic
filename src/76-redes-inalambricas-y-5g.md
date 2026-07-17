@@ -1,6 +1,6 @@
 # Redes inalámbricas y 5G
 
-Las redes inalámbricas conectan nodos mediante ondas electromagnéticas, sin cableado, y son la base de la movilidad: desde la red local de una oficina (Wi-Fi) hasta la cobertura nacional de la telefonía móvil (5G). Este tema cubre la familia IEEE 802.11, las generaciones de telefonía móvil con el 5G en detalle y otras tecnologías de transmisión inalámbrica. Los dispositivos y el direccionamiento de red se estudian en el tema 71, las redes de emergencia en el 71, las redes IoT de corto y largo alcance (Bluetooth, LPWAN) en el 73 y la seguridad inalámbrica (WEP/WPA/WPA3, 802.1X) en el 75.
+Las redes inalámbricas conectan nodos mediante ondas electromagnéticas, sin cableado, y son la base de la movilidad: desde la red local de una oficina (Wi-Fi) hasta la cobertura nacional de la telefonía móvil (5G). Este tema cubre la familia IEEE 802.11, las generaciones de telefonía móvil con el 5G en detalle y otras tecnologías de transmisión inalámbrica. Los dispositivos y el direccionamiento de red se estudian en el tema [71](71-redes-de-computadores.md), las redes de emergencia en el 71, las redes IoT de corto y largo alcance (Bluetooth, LPWAN) en el 73 y la seguridad inalámbrica (WEP/WPA/WPA3, 802.1X) en el 75.
 
 ## Wi-Fi: la familia IEEE 802.11
 
@@ -8,12 +8,12 @@ Las redes inalámbricas se clasifican por su alcance, en paralelo a las redes ca
 
 | Tipo | Alcance típico | Tecnologías |
 | --- | --- | --- |
-| **WPAN** (área personal) | 10-100 m | Bluetooth, ZigBee, NFC, RFID (tema 77) |
+| **WPAN** (área personal) | 10-100 m | Bluetooth, ZigBee, NFC, RFID (tema [77](77-internet-de-las-cosas-y-redes-de-sensores.md)) |
 | **WLAN** (área local) | ~100 m | **Wi-Fi (IEEE 802.11)** |
 | **WMAN** (área metropolitana) | 1-50 km | WiMAX (IEEE 802.16, hoy legado) |
 | **WWAN** (área extensa) | regional/global | Telefonía móvil (2G-5G), satélite |
 
-Dentro del proyecto **IEEE 802** (estándares de redes de área local y metropolitana), los grupos de trabajo relevantes son: **802.1** (puentes, VLAN 802.1Q y autenticación 802.1X: temas 71 y 79), **802.3** (Ethernet cableada), **802.11** (WLAN, la base de Wi-Fi), **802.15** (WPAN: Bluetooth en 802.15.1, ZigBee sobre 802.15.4) y **802.16** (WMAN: WiMAX). La marca **Wi-Fi** la otorga la **Wi-Fi Alliance**, que certifica la interoperabilidad de los equipos 802.11.
+Dentro del proyecto **IEEE 802** (estándares de redes de área local y metropolitana), los grupos de trabajo relevantes son: **802.1** (puentes, VLAN 802.1Q y autenticación 802.1X: temas [71](71-redes-de-computadores.md) y [79](79-seguridad-en-las-comunicaciones.md)), **802.3** (Ethernet cableada), **802.11** (WLAN, la base de Wi-Fi), **802.15** (WPAN: Bluetooth en 802.15.1, ZigBee sobre 802.15.4) y **802.16** (WMAN: WiMAX). La marca **Wi-Fi** la otorga la **Wi-Fi Alliance**, que certifica la interoperabilidad de los equipos 802.11.
 
 - **Arquitectura 802.11**:
     - **Estación (STA)**: cualquier dispositivo con interfaz 802.11.
@@ -42,7 +42,7 @@ Las generaciones comerciales de Wi-Fi (numeradas por la Wi-Fi Alliance desde 201
 - **Wi-Fi 6 (802.11ax)**: diseñada para la **eficiencia en entornos densos** más que para la velocidad punta: **OFDMA** (subdivide cada canal entre varios usuarios), MU-MIMO ascendente y descendente, 1024-QAM, coloración de BSS (reduce interferencias entre redes vecinas) y **TWT (Target Wake Time)**, que agenda las transmisiones para ahorrar batería en dispositivos IoT. La certificación exige **WPA3**. **Wi-Fi 6E** extiende lo anterior a la banda de **6 GHz**.
 - **Wi-Fi 7 (802.11be, *Extremely High Throughput*)**: certificación desde enero de **2024** (estándar IEEE 802.11be-2024, publicado en julio de 2025): canales de **320 MHz**, 4096-QAM y **MLO (Multi-Link Operation)**, que agrega varias bandas simultáneamente; hasta ~**46 Gbps** teóricos y latencias bajas orientadas a realidad virtual/aumentada y juego en red.
 - **Wi-Fi 8 (802.11bn, *Ultra High Reliability*)**: en desarrollo, prevista para **2028**; prioriza la fiabilidad (latencia estable, continuidad en movilidad) sobre el aumento de velocidad.
-- **Seguridad**: la enmienda **802.11i** (2004) introdujo WPA2 en sustitución del WEP original, y **802.11w** (2009) protegió las tramas de gestión; el estándar actual de cifrado es **WPA3** (2018). Se desarrollan en el tema 79.
+- **Seguridad**: la enmienda **802.11i** (2004) introdujo WPA2 en sustitución del WEP original, y **802.11w** (2009) protegió las tramas de gestión; el estándar actual de cifrado es **WPA3** (2018). Se desarrollan en el tema [79](79-seguridad-en-las-comunicaciones.md).
 
 ## Generaciones de telefonía móvil y redes 5G
 
@@ -79,7 +79,7 @@ La quinta generación (**5G**) no es solo más velocidad: se define para tres fa
     - **5G DSS (*Dynamic Spectrum Sharing*)**: variante transitoria que comparte dinámicamente una frecuencia 4G para cursar tráfico 5G; despliegue casi inmediato a costa de menores prestaciones.
     - **5G SA (*Stand Alone*)**: la red 5G completa (acceso y núcleo 5G); habilita toda la capacidad: latencia mínima, *network slicing* y millones de dispositivos.
 - **Tecnologías habilitadoras**:
-    - **Network slicing (segmentación de red)**: crea redes virtuales sobre la misma red física, cada una con niveles de servicio a medida (latencia, velocidad, seguridad) para casos de uso distintos; se apoya en SDN/NFV (tema 73) y requiere 5G SA.
+    - **Network slicing (segmentación de red)**: crea redes virtuales sobre la misma red física, cada una con niveles de servicio a medida (latencia, velocidad, seguridad) para casos de uso distintos; se apoya en SDN/NFV (tema [73](73-virtualizacion-de-redes.md)) y requiere 5G SA.
     - **MIMO masivo y beamforming**: antenas activas con decenas o centenares de elementos que combinan multiplexación espacial (varios flujos simultáneos) y conformación del haz (dirigir la energía hacia cada usuario, «siguiéndolo» y reduciendo interferencias).
     - **MEC (*Multi-access Edge Computing*)**: acerca el procesado y las aplicaciones al borde de la red (junto a los nodos radio), evitando el viaje a nubes centralizadas y logrando las latencias de milisegundos de los servicios en tiempo real (V2X, industria, *smart cities*).
 - **Evolución por releases del 3GPP**:
@@ -99,17 +99,17 @@ Además de Wi-Fi y de la telefonía móvil, otras tecnologías inalámbricas cub
 - **Comunicaciones por satélite**: enlazan estaciones terrestres a través de un satélite (señal ascendente hacia el satélite y descendente hacia tierra, en bandas distintas). Por órbita:
     - **GEO (geoestacionaria, ~36.000 km)**: el satélite parece fijo; TV por satélite y VSAT, pero latencia alta (~600 ms ida y vuelta).
     - **MEO (órbita media)**: navegación por satélite (GPS, **Galileo**) y algunas constelaciones de datos.
-    - **LEO (órbita baja, <2.000 km)**: latencias de 20-50 ms; las **megaconstelaciones** de banda ancha (**Starlink**, OneWeb, Kuiper) dan cobertura global y respaldo en catástrofes (tema 75).
+    - **LEO (órbita baja, <2.000 km)**: latencias de 20-50 ms; las **megaconstelaciones** de banda ancha (**Starlink**, OneWeb, Kuiper) dan cobertura global y respaldo en catástrofes (tema [75](75-redes-de-emergencia.md)).
     - **IRIS²** (Reglamento (UE) **2023/588**): la constelación europea de **conectividad segura** (~290 satélites multiórbita), orientada a comunicaciones gubernamentales resilientes; operativa prevista hacia **2030**.
 - **Radioenlaces de microondas terrestres**: enlaces punto a punto con antenas parabólicas alineadas (requieren visión directa); se usan como *backhaul* de operadores y para unir sedes donde no llega la fibra.
 - **Comunicaciones ópticas inalámbricas**: los infrarrojos clásicos (IrDA) han desaparecido del mercado; su relevo es **LiFi** (comunicación por luz visible o infrarroja), estandarizado como **IEEE 802.11bb (2023)**: inmune a interferencias radio y confinado físicamente a la sala, útil en entornos sensibles (hospitales, industria, defensa).
 - **WiMAX (IEEE 802.16)**: banda ancha inalámbrica metropolitana (hasta ~70 Mbps y decenas de km); perdió frente a LTE y la fibra y hoy es una tecnología **legado**, residual en accesos rurales.
 
-Como síntesis, las tecnologías inalámbricas se ordenan en un cuadrante alcance-consumo; las redes de baja potencia (cuadrante inferior derecho) se estudian en el tema 77:
+Como síntesis, las tecnologías inalámbricas se ordenan en un cuadrante alcance-consumo; las redes de baja potencia (cuadrante inferior derecho) se estudian en el tema [77](77-internet-de-las-cosas-y-redes-de-sensores.md):
 
 | | Poco alcance | Mucho alcance |
 | --- | --- | --- |
-| **Bajo consumo** | Bluetooth/BLE, ZigBee, Z-Wave, NFC | **LPWAN**: LoRaWAN, Sigfox, NB-IoT, LTE-M (tema 77) |
+| **Bajo consumo** | Bluetooth/BLE, ZigBee, Z-Wave, NFC | **LPWAN**: LoRaWAN, Sigfox, NB-IoT, LTE-M (tema [77](77-internet-de-las-cosas-y-redes-de-sensores.md)) |
 | **Alto consumo** | Wi-Fi | Telefonía móvil (3G/4G/5G), satélite |
 
 ## Fuentes {.unnumbered .unlisted}

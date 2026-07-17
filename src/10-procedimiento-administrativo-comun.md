@@ -2,7 +2,7 @@
 
 **Texto consolidado a 6 de noviembre de 2024.**
 
-La **Ley 39/2015, de 1 de octubre**, regula la relación *ad extra* entre las Administraciones Públicas y los ciudadanos: el procedimiento administrativo común, los actos administrativos y su revisión. Es la ley «gemela» de la **Ley 40/2015** (tema 9), que regula la organización y el funcionamiento interno (*ad intra*) del sector público. Es, además, el capítulo con más plazos preguntables del bloque.
+La **Ley 39/2015, de 1 de octubre**, regula la relación *ad extra* entre las Administraciones Públicas y los ciudadanos: el procedimiento administrativo común, los actos administrativos y su revisión. Es la ley «gemela» de la **Ley 40/2015** (tema [9](09-regimen-juridico-del-sector-publico.md)), que regula la organización y el funcionamiento interno (*ad intra*) del sector público. Es, además, el capítulo con más plazos preguntables del bloque.
 
 ## Características y estructura
 

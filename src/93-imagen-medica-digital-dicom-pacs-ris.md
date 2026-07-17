@@ -43,14 +43,14 @@ El precursor fue **WADO-URI** (recuperación de una imagen por URL). DICOMweb co
 - **PACS** (*Picture Archiving and Communication System*): sistema que **recibe, archiva, distribuye y presenta** las imágenes. Componentes: pasarelas de adquisición desde las modalidades, archivo (en línea y de largo plazo), base de datos de estudios, y estaciones de visualización (diagnósticas, de altas prestaciones, y clínicas, de consulta).
 - **VNA** (*Vendor Neutral Archive*): archivo de imagen **neutral respecto al proveedor**, en formatos estándar, que consolida las imágenes de varios PACS o departamentos (incluida la imagen no radiológica: dermatología, endoscopia, anatomía patológica) y evita la dependencia del fabricante del PACS.
 - **RIS** (*Radiology Information System*): gestiona el **flujo de trabajo administrativo y clínico** de radiología: agenda y citación, recepción de peticiones, listas de trabajo, dictado e **informe radiológico**, y estadísticas de actividad.
-- **Integración RIS-PACS-HIS**: el ciclo completo de una exploración (perfil IHE **Scheduled Workflow**, tema 92) encadena los tres sistemas:
+- **Integración RIS-PACS-HIS**: el ciclo completo de una exploración (perfil IHE **Scheduled Workflow**, tema [92](92-normalizacion-en-informatica-sanitaria.md)) encadena los tres sistemas:
     1. El médico solicita la exploración en el HIS/HCE (petición electrónica).
     2. El RIS recibe la petición y **cita** al paciente.
     3. La modalidad descarga la cita por **Modality Worklist** y adquiere las imágenes.
     4. Las imágenes se envían al **PACS** por C-STORE; el MPPS notifica la finalización.
     5. El radiólogo informa en el RIS con las imágenes del PACS en pantalla.
-    6. El informe y el enlace a la imagen vuelven al HIS/HCE (mensajería HL7, tema 90) y quedan disponibles para el clínico peticionario.
-- **Tendencias**: visores web «sin cliente» sobre DICOMweb, archivo en la nube, inteligencia artificial de ayuda al diagnóstico integrada en el flujo (remisión al tema 34; su encaje regulatorio como producto sanitario, en el tema 95).
+    6. El informe y el enlace a la imagen vuelven al HIS/HCE (mensajería HL7, tema [90](90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md)) y quedan disponibles para el clínico peticionario.
+- **Tendencias**: visores web «sin cliente» sobre DICOMweb, archivo en la nube, inteligencia artificial de ayuda al diagnóstico integrada en el flujo (remisión al tema [34](34-inteligencia-artificial.md); su encaje regulatorio como producto sanitario, en el tema [95](95-productos-sanitarios-mdr-ivdr-y-software-sanitario.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

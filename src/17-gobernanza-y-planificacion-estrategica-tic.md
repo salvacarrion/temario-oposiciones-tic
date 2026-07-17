@@ -18,8 +18,8 @@ Entre los sistemas corporativos transversales destacan:
 
 - **ERP** (*Enterprise Resource Planning*): integra en una única base de datos los procesos de gestión interna (económico-financiera, recursos humanos, compras, logística). Ejemplos: SAP, Oracle; en la Administración cumplen este papel los sistemas de gestión económico-presupuestaria y de personal.
 - **CRM** (*Customer Relationship Management*): gestiona la relación con clientes o ciudadanos (expedientes de atención, campañas, multicanalidad). Su traslación pública es la atención ciudadana integrada (oficinas, teléfono, sede electrónica).
-- **BI** (*Business Intelligence*) y almacenes de datos: explotan la información para el análisis y la decisión (ver temas 37 y 38).
-- **Gestores documentales y de expedientes**: en la Administración, el sistema de información nuclear es el expediente electrónico (ver tema 55).
+- **BI** (*Business Intelligence*) y almacenes de datos: explotan la información para el análisis y la decisión (ver temas [37](37-gestion-de-datos-corporativos-y-big-data.md) y [38](38-gobernanza-del-dato.md)).
+- **Gestores documentales y de expedientes**: en la Administración, el sistema de información nuclear es el expediente electrónico (ver tema [55](55-documento-y-expediente-electronico.md)).
 
 La Administración es una **organización intensiva en información**: su producto (actos administrativos, resoluciones, registros, prestaciones) es información, por lo que la calidad de sus sistemas de información condiciona directamente la calidad del servicio público.
 
@@ -34,7 +34,7 @@ La **gobernanza TIC** es el sistema por el que el órgano de gobierno dirige y c
   - **Componentes** del sistema de gobierno (antes «habilitadores»): procesos; estructuras organizativas; principios, políticas y marcos; información; cultura, ética y comportamiento; personas, habilidades y competencias; y servicios, infraestructura y aplicaciones.
   - **Cascada de metas** (necesidades de las partes interesadas → metas empresariales → metas de alineamiento → objetivos de gobierno y gestión) y **factores de diseño** para adaptar el marco a cada organización; niveles de **capacidad de procesos de 0 a 5** basados en CMMI.
 
-Ambos marcos son complementarios: ISO/IEC 38500 fija los principios para el órgano de gobierno y COBIT los desarrolla en objetivos, procesos y métricas auditables (ver tema 33).
+Ambos marcos son complementarios: ISO/IEC 38500 fija los principios para el órgano de gobierno y COBIT los desarrolla en objetivos, procesos y métricas auditables (ver tema [33](33-auditoria-informatica.md)).
 
 ## Planificación estratégica TIC y el Plan de Sistemas de Información
 
@@ -43,7 +43,7 @@ La planificación estratégica TIC traduce la estrategia de la organización en 
 - **Participantes**: la dirección (visión estratégica y compromiso, factor crítico de éxito) y los profesionales de SI (aportan las posibilidades de la tecnología). El enfoque es **por procesos**, no por unidades organizativas, para atender intereses globales.
 - **Contenido típico del proceso**: definición del alcance y objetivos; estudio de la información relevante (planes estratégicos, normativa); identificación de requisitos; análisis de la situación actual de los SI (diagnóstico DAFO); diseño del modelo de SI objetivo; y plan de acción priorizado.
 - **Productos finales** (Métrica v3): el **catálogo de requisitos** y la **arquitectura de información**, compuesta por el modelo de información, el modelo de sistemas de información, la **arquitectura tecnológica**, el **plan de proyectos** y el plan de mantenimiento del PSI. Estos productos alimentan el Estudio de Viabilidad del Sistema (EVS) de cada proyecto.
-- **Horizonte y seguimiento**: los planes estratégicos TIC suelen abarcar **3 a 5 años**, con revisión periódica; la cartera de proyectos se gobierna con una oficina de proyectos (PMO, ver tema 19).
+- **Horizonte y seguimiento**: los planes estratégicos TIC suelen abarcar **3 a 5 años**, con revisión periódica; la cartera de proyectos se gobierna con una oficina de proyectos (PMO, ver tema [19](19-direccion-y-gestion-de-proyectos.md)).
 
 No debe confundirse el PSI con la reingeniería de procesos: ambos estudian los procesos y buscan el alineamiento estratégico, pero el PSI persigue orientar el desarrollo de sistemas de información, no rediseñar los procesos por sí mismos.
 
@@ -60,15 +60,15 @@ El **cuadro de mando integral (CMI**, *Balanced Scorecard*, Kaplan y Norton, **1
 
 No existe una estructura única, pero un departamento TIC maduro separa las funciones de demanda y estrategia de las de construcción y operación, y garantiza la **segregación entre desarrollo y explotación**.
 
-- **Funciones habituales**: dirección y estrategia (CIO); oficina de proyectos y demanda; arquitectura y calidad; **desarrollo** de aplicaciones; **sistemas e infraestructuras** (CPD, comunicaciones, puesto de trabajo); **explotación y operaciones** (producción, monitorización); **soporte a usuarios** (CAU, gestionado con ITIL, ver tema 18); **seguridad** (CISO, con independencia funcional respecto de la operación); y, crecientemente, la función del dato (CDO, ver tema 38).
+- **Funciones habituales**: dirección y estrategia (CIO); oficina de proyectos y demanda; arquitectura y calidad; **desarrollo** de aplicaciones; **sistemas e infraestructuras** (CPD, comunicaciones, puesto de trabajo); **explotación y operaciones** (producción, monitorización); **soporte a usuarios** (CAU, gestionado con ITIL, ver tema [18](18-gestion-de-los-servicios-tic.md)); **seguridad** (CISO, con independencia funcional respecto de la operación); y, crecientemente, la función del dato (CDO, ver tema [38](38-gobernanza-del-dato.md)).
 - **Modelos organizativos**: **centralizado** (un único órgano TIC corporativo: economías de escala, homogeneidad), **descentralizado** (TIC en cada unidad de negocio: cercanía, riesgo de silos) y **federado** (núcleo común más equipos sectoriales).
-- **El caso de la Generalitat**: la **DGTIC** concentra desde 2011 la competencia TIC de toda la Administración de la Generalitat y su sector público instrumental (modelo centralizado), incluida la coordinación de ciberseguridad y el CSIRT-CV (ver temas 80 a 82).
+- **El caso de la Generalitat**: la **DGTIC** concentra desde 2011 la competencia TIC de toda la Administración de la Generalitat y su sector público instrumental (modelo centralizado), incluida la coordinación de ciberseguridad y el CSIRT-CV (ver temas [80](80-agenda-digital-valenciana.md) a [82](82-administracion-electronica-y-plataformas-de-la-generalitat.md)).
 
 ## Adquisición de sistemas y rentabilidad de las inversiones TIC
 
 Antes de adquirir o desarrollar un sistema debe realizarse un **estudio de alternativas y de viabilidad** que compare opciones y justifique la inversión.
 
-- **Alternativas de sourcing**: desarrollo a medida (propio o contratado), producto comercial (COTS) parametrizado, software libre, **reutilización** de soluciones de otras Administraciones (las AAPP deben consultar antes el directorio general de aplicaciones, arts. 157 y 158 de la Ley 40/2015, ver tema 50) y servicios en la nube (SaaS, ver temas 22 y 51).
+- **Alternativas de sourcing**: desarrollo a medida (propio o contratado), producto comercial (COTS) parametrizado, software libre, **reutilización** de soluciones de otras Administraciones (las AAPP deben consultar antes el directorio general de aplicaciones, arts. 157 y 158 de la Ley 40/2015, ver tema [50](50-proteccion-juridica-del-software-y-licencias.md)) y servicios en la nube (SaaS, ver temas [22](22-contratacion-publica-de-bienes-y-servicios-tic.md) y [51](51-computacion-en-la-nube-y-altas-prestaciones.md)).
 - **Viabilidad**: técnica (¿es realizable?), económica (¿es rentable?), operativa (¿se usará?) y legal (protección de datos, ENS). En Métrica v3 la recoge el proceso **EVS**.
 - **Análisis coste-beneficio**: identifica costes de inversión (CAPEX) y recurrentes (OPEX), y beneficios tangibles e intangibles (ahorro de tiempos, calidad del servicio). Métricas principales:
 
@@ -84,7 +84,7 @@ Antes de adquirir o desarrollar un sistema debe realizarse un **estudio de alter
 
 ## Calidad de los servicios: EFQM, CAF e ISO 9004; cartas de servicios
 
-La gestión de la calidad de los servicios (públicos o TIC) se apoya en modelos de excelencia basados en la autoevaluación y la mejora continua (la calidad del software se trata en el tema 25; la de los servicios TIC, en el 18).
+La gestión de la calidad de los servicios (públicos o TIC) se apoya en modelos de excelencia basados en la autoevaluación y la mejora continua (la calidad del software se trata en el tema [25](25-calidad-del-software.md); la de los servicios TIC, en el 18).
 
 - **Modelo EFQM** (edición **2025**): modelo europeo de excelencia en gestión. Se estructura en **tres bloques**: **Dirección** (por qué y cómo se orienta la organización), **Ejecución** (cómo entrega valor) y **Resultados** (qué consigue), desarrollados en **7 criterios** y 32 subcriterios; la evaluación aplica la lógica **RADAR** (Resultados, Enfoques, Despliegue, Evaluación y Revisión) y da acceso a los sellos de reconocimiento.
 - **CAF 2020** (*Common Assessment Framework*): adaptación **gratuita del modelo EFQM para las administraciones públicas** europeas, promovida por la red EUPAN y el EIPA. Es un modelo de **autoevaluación** con **9 criterios**: **5 agentes facilitadores** (liderazgo; estrategia y planificación; personas; alianzas y recursos; procesos) y **4 de resultados** (en las personas; en los ciudadanos/clientes; de responsabilidad social; clave de rendimiento).
@@ -100,9 +100,9 @@ La gobernanza TIC de la AGE se renovó por completo a finales de 2024, sustituye
   - **Comisiones Ministeriales de Administración Digital (CMAD)**: órganos colegiados de cada departamento, presididos por su Subsecretaría.
   - **Comité de Dirección de las Tecnologías de la Información y las Comunicaciones (CDTIC)**: órgano de apoyo, presidido por la dirección de la Agencia.
   - Instrumentos operativos: la **Estrategia TIC** (aprobada por el Gobierno), los planes de acción departamentales y el catálogo de medios y servicios comunes.
-- **Agencia Estatal de Administración Digital (AEAD)**: sucede a la Secretaría General de Administración Digital como brazo ejecutor TIC de la AGE; su Estatuto se aprobó por el **Real Decreto 1118/2024**, de 5 de noviembre, y se constituyó el **21 de febrero de 2025**. Presta los servicios comunes y compartidos de administración digital (ver tema 63) y se organiza en tres direcciones (Administración Digital; Provisión de Infraestructuras y Operaciones; y Ciberseguridad, Tecnologías Disruptivas e Integridad de los Datos) más una Secretaría General.
+- **Agencia Estatal de Administración Digital (AEAD)**: sucede a la Secretaría General de Administración Digital como brazo ejecutor TIC de la AGE; su Estatuto se aprobó por el **Real Decreto 1118/2024**, de 5 de noviembre, y se constituyó el **21 de febrero de 2025**. Presta los servicios comunes y compartidos de administración digital (ver tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md)) y se organiza en tres direcciones (Administración Digital; Provisión de Infraestructuras y Operaciones; y Ciberseguridad, Tecnologías Disruptivas e Integridad de los Datos) más una Secretaría General.
 - **Plan de Digitalización de las Administraciones Públicas 2021-2025**: estrategia de administración digital dentro de la agenda **España Digital 2026**, financiada por el Plan de Recuperación; sus **tres ejes** eran la transformación digital de la AGE, los proyectos tractores sectoriales (sanidad, justicia, empleo) y la digitalización de CCAA y EELL. Su informe de balance se presentó en 2026 y la planificación pasa a articularse mediante la Estrategia TIC del RD 1125/2024.
-- **Contraste con la GVA**: la AGE combina un órgano ejecutivo común (AEAD) con unidades TIC departamentales coordinadas por la CETIC; la Generalitat concentra la competencia en la DGTIC (ver tema 80).
+- **Contraste con la GVA**: la AGE combina un órgano ejecutivo común (AEAD) con unidades TIC departamentales coordinadas por la CETIC; la Generalitat concentra la competencia en la DGTIC (ver tema [80](80-agenda-digital-valenciana.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

@@ -1,6 +1,6 @@
 # Estándares de interoperabilidad de la historia clínica electrónica: CDA, FHIR y openEHR
 
-La historia clínica electrónica (HCE) reúne la información clínica de un paciente generada a lo largo de su vida por sistemas y organizaciones distintos. Para que esa información pueda intercambiarse y entenderse existen tres grandes familias de estándares, cada una con un paradigma propio: el **documento clínico** (CDA), el **recurso web** (FHIR) y el **arquetipo** (openEHR y la ISO 13606, tema 92).
+La historia clínica electrónica (HCE) reúne la información clínica de un paciente generada a lo largo de su vida por sistemas y organizaciones distintos. Para que esa información pueda intercambiarse y entenderse existen tres grandes familias de estándares, cada una con un paradigma propio: el **documento clínico** (CDA), el **recurso web** (FHIR) y el **arquetipo** (openEHR y la ISO 13606, tema [92](92-normalizacion-en-informatica-sanitaria.md)).
 
 ## La HCE interoperable y sus modelos
 
@@ -12,11 +12,11 @@ Cada paradigma responde a una pregunta distinta sobre cómo representar la infor
 | Recursos | Piezas pequeñas y componibles | **HL7 FHIR** | API web moderna: la HCE como conjunto de recursos REST |
 | Arquetipos | El concepto clínico modelado | **openEHR / ISO 13606** | Separar el conocimiento clínico del software (modelo dual) |
 
-- **No son excluyentes**: un sistema puede persistir con openEHR, intercambiar informes como CDA y exponer una API FHIR. Los tres comparten la necesidad de **terminologías** comunes (SNOMED CT, LOINC, tema 92) para la interoperabilidad semántica.
+- **No son excluyentes**: un sistema puede persistir con openEHR, intercambiar informes como CDA y exponer una API FHIR. Los tres comparten la necesidad de **terminologías** comunes (SNOMED CT, LOINC, tema [92](92-normalizacion-en-informatica-sanitaria.md)) para la interoperabilidad semántica.
 
 ## HL7 CDA: el documento clínico
 
-**CDA** (*Clinical Document Architecture*, release 2 de **2005**, adoptada también como **ISO/HL7 27932:2009**) es el estándar HL7 para representar documentos clínicos en **XML**, derivado del modelo RIM de HL7 v3 (tema 90). Es el formato de los informes de la HCDSNS y de la historia clínica resumida europea (tema 94).
+**CDA** (*Clinical Document Architecture*, release 2 de **2005**, adoptada también como **ISO/HL7 27932:2009**) es el estándar HL7 para representar documentos clínicos en **XML**, derivado del modelo RIM de HL7 v3 (tema [90](90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md)). Es el formato de los informes de la HCDSNS y de la historia clínica resumida europea (tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)).
 
 - **Seis características definitorias del documento clínico**: persistencia, gestión por una organización responsable (*stewardship*), susceptibilidad de autenticación (firma), contexto, integridad (*wholeness*) y **legibilidad humana**: todo CDA debe poder leerse en un navegador con una hoja de estilo.
 - **Estructura**: una **cabecera** (*header*) con metadatos obligatorios (paciente, autor, custodio, tipo de documento codificado en LOINC, fechas) y un **cuerpo** (*body*) con el contenido clínico organizado en secciones.
@@ -24,7 +24,7 @@ Cada paradigma responde a una pregunta distinta sobre cómo representar la infor
     - **Nivel 1**: cuerpo no estructurado o narrativo (incluso un PDF embebido); solo la cabecera es procesable.
     - **Nivel 2**: cuerpo organizado en **secciones codificadas** (por ejemplo, con códigos LOINC de sección).
     - **Nivel 3**: las secciones contienen **entradas** (*entries*) totalmente estructuradas y codificadas, procesables por máquina dato a dato.
-- **Uso real**: plantillas nacionales de informes clínicos (en España, los informes del RD 1093/2010, tema 89), guías de implementación como C-CDA en EE. UU. y los documentos transfronterizos de MyHealth@EU (tema 94).
+- **Uso real**: plantillas nacionales de informes clínicos (en España, los informes del RD 1093/2010, tema [89](89-documentacion-clinica-normalizada.md)), guías de implementación como C-CDA en EE. UU. y los documentos transfronterizos de MyHealth@EU (tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)).
 
 ## HL7 FHIR: recursos y API REST
 
@@ -52,7 +52,7 @@ GET [base]/Observation?patient=ejemplo&category=laboratory&date=ge2026-01-01
 
 - **Los 80/20**: FHIR estandariza lo que usa la mayoría (el 80 %) y deja el resto a **extensiones** declaradas, evitando la explosión de campos opcionales de v2.
 - **Perfiles y guías de implementación**: un **perfil** (`StructureDefinition`) restringe un recurso para un caso de uso (cardinalidades, terminologías obligatorias); las **guías de implementación** empaquetan perfiles para un ámbito. La más relevante internacionalmente es **IPS** (*International Patient Summary*). La seguridad se resuelve típicamente con **SMART on FHIR** (OAuth 2.0 / OpenID Connect).
-- **Adopción**: es el estándar exigido para las API de acceso del paciente en EE. UU., la base técnica prevista del formato europeo de intercambio de HCE en el EEDS (tema 94) y el estándar de facto para apps y servicios de salud digital.
+- **Adopción**: es el estándar exigido para las API de acceso del paciente en EE. UU., la base técnica prevista del formato europeo de intercambio de HCE en el EEDS (tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)) y el estándar de facto para apps y servicios de salud digital.
 
 ## openEHR: el modelo dual y los arquetipos
 
@@ -62,7 +62,7 @@ GET [base]/Observation?patient=ejemplo&category=laboratory&date=ge2026-01-01
 - **Nivel 2, los arquetipos**: definiciones formales y reutilizables de conceptos clínicos («presión arterial», «diagnóstico», «informe de alta») expresadas en el lenguaje **ADL** (*Archetype Definition Language*), creadas y gobernadas por profesionales clínicos, no por programadores. Se publican en repositorios como el **CKM** (*Clinical Knowledge Manager*).
 - **Plantillas** (*templates*): combinan y restringen arquetipos para un formulario o caso de uso concreto (el informe de urgencias de un hospital), y de ellas se generan artefactos operativos.
 - **Consulta**: el lenguaje **AQL** (*Archetype Query Language*) permite consultar los datos por su estructura de arquetipo, con independencia de la base de datos física.
-- **Posición en el ecosistema**: openEHR es fuerte como **persistencia clínica** (repositorios de datos independientes del proveedor, *vendor-neutral*); FHIR es fuerte como **interfaz de intercambio**. La norma ISO/EN 13606 (tema 92) toma de openEHR el modelo dual para la comunicación de extractos de HCE.
+- **Posición en el ecosistema**: openEHR es fuerte como **persistencia clínica** (repositorios de datos independientes del proveedor, *vendor-neutral*); FHIR es fuerte como **interfaz de intercambio**. La norma ISO/EN 13606 (tema [92](92-normalizacion-en-informatica-sanitaria.md)) toma de openEHR el modelo dual para la comunicación de extractos de HCE.
 
 | Aspecto | CDA | FHIR | openEHR |
 | --- | --- | --- | --- |

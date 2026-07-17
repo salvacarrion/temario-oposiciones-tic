@@ -19,7 +19,7 @@ Dos matices preguntables: la certificación (por ejemplo, **ISO 9001**) se otorg
 La verificación y la validación (V&V) son el núcleo del aseguramiento:
 
 - **Verificación**: ¿estamos construyendo el producto **correctamente**? Comprueba la conformidad de cada producto de trabajo con su especificación. Usa sobre todo **técnicas estáticas** (no ejecutan el código): revisiones técnicas y de gestión (detectan errores en fases tempranas), **inspecciones** (revisión formal con roles y lista de comprobación, método de Fagan), *walkthroughs* y análisis estático.
-- **Validación**: ¿estamos construyendo el producto **correcto**? Comprueba que el software satisface las necesidades reales del usuario. Usa **técnicas dinámicas**: las pruebas, que se estudian en el tema 27.
+- **Validación**: ¿estamos construyendo el producto **correcto**? Comprueba que el software satisface las necesidades reales del usuario. Usa **técnicas dinámicas**: las pruebas, que se estudian en el tema [27](27-testeo-de-software.md).
 - **Auditorías**: evaluación **independiente** del cumplimiento de procesos, estándares y procedimientos (verificación del cumplimiento normativo).
 
 ### Calidad del proceso: ISO 9001, CMMI y SPICE

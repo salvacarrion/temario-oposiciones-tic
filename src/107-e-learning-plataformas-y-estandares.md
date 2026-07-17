@@ -14,7 +14,7 @@ El *e-learning* es la formación impartida a través de medios electrónicos, co
 - **Moodle**: el LMS de **código abierto** (GPL) de referencia en la universidad española. Versión vigente: **Moodle 5.2** (abril de 2026; la próxima versión LTS será la 5.3). Organiza cada curso en secciones con **recursos** (archivo, página, URL) y **actividades** (tarea, cuestionario, foro, taller, H5P interactivo), con calificaciones, competencias, insignias y roles configurables; es extensible mediante *plugins*.
 - **Sakai**: LMS de código abierto de origen universitario; es la base de **PoliformaT**, la plataforma docente corporativa de la **UPV**.
 - **Otras plataformas**: Canvas y Blackboard Learn (comerciales en la nube), Open edX (base de los portales MOOC), Chamilo.
-- **Criterios de selección**: modelo de licenciamiento y coste total, escalabilidad y despliegue (local o SaaS), cumplimiento de estándares (SCORM, xAPI, LTI), **accesibilidad** (tema 58), integración con la identidad corporativa (SSO, tema 106) y protección de datos (tema 53).
+- **Criterios de selección**: modelo de licenciamiento y coste total, escalabilidad y despliegue (local o SaaS), cumplimiento de estándares (SCORM, xAPI, LTI), **accesibilidad** (tema [58](58-accesibilidad-y-usabilidad.md)), integración con la identidad corporativa (SSO, tema [106](106-rediris-e-identidad-federada.md)) y protección de datos (tema [53](53-proteccion-de-datos-personales.md)).
 
 ## Estándares de e-learning
 

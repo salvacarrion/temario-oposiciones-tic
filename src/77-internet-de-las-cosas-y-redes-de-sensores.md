@@ -1,6 +1,6 @@
 # Internet de las cosas y redes de sensores
 
-El Internet de las cosas (IoT) conecta objetos físicos cotidianos (contadores, vehículos, semáforos, electrodomésticos, maquinaria) a internet para recopilar datos y actuar sobre el entorno. Este tema cubre el concepto y la arquitectura del IoT, sus redes de comunicación de corto alcance (BLE, NFC, RFID) y de largo alcance (LPWAN), y las redes de sensores con la inteligencia artificial en el borde. Las redes Wi-Fi y móviles se estudian en el tema 76, los protocolos MQTT y CoAP y las plataformas de ciudad en el 74 y la inteligencia artificial en el 34.
+El Internet de las cosas (IoT) conecta objetos físicos cotidianos (contadores, vehículos, semáforos, electrodomésticos, maquinaria) a internet para recopilar datos y actuar sobre el entorno. Este tema cubre el concepto y la arquitectura del IoT, sus redes de comunicación de corto alcance (BLE, NFC, RFID) y de largo alcance (LPWAN), y las redes de sensores con la inteligencia artificial en el borde. Las redes Wi-Fi y móviles se estudian en el tema [76](76-redes-inalambricas-y-5g.md), los protocolos MQTT y CoAP y las plataformas de ciudad en el 74 y la inteligencia artificial en el 34.
 
 ## IoT: concepto y arquitectura
 
@@ -22,13 +22,13 @@ La UIT define el **Internet de las cosas (IoT)** como una «infraestructura mund
     - **Capa de red**: transporte de los datos (pasarelas, redes de acceso, internet).
     - **Capa de aplicación**: plataformas y servicios que explotan los datos.
     - Cuando los objetos no hablan IP, una **pasarela** hace de frontera (arquitectura de tres niveles: dispositivo, pasarela, nube); los objetos con pila IP (p. ej. 6LoWPAN) pueden conectarse de extremo a extremo.
-- **Edge y fog computing**: para reducir latencia, tráfico y dependencia de la nube, el procesamiento se acerca al origen de los datos: en el propio dispositivo o pasarela (**edge computing**) o en una capa intermedia distribuida entre el dispositivo y la nube (**fog computing**, arquitectura de referencia OpenFog adoptada como **IEEE 1934-2018**). Es la base del MEC en redes 5G (tema 76).
-- **Protocolos de aplicación IoT** (panorama; MQTT y CoAP se desarrollan en el tema 78):
+- **Edge y fog computing**: para reducir latencia, tráfico y dependencia de la nube, el procesamiento se acerca al origen de los datos: en el propio dispositivo o pasarela (**edge computing**) o en una capa intermedia distribuida entre el dispositivo y la nube (**fog computing**, arquitectura de referencia OpenFog adoptada como **IEEE 1934-2018**). Es la base del MEC en redes 5G (tema [76](76-redes-inalambricas-y-5g.md)).
+- **Protocolos de aplicación IoT** (panorama; MQTT y CoAP se desarrollan en el tema [78](78-ciudades-inteligentes.md)):
     - **MQTT**: mensajería ligera de publicación/suscripción con broker central; el más usado en IoT.
     - **CoAP**: web REST para dispositivos restringidos, sobre UDP.
     - **AMQP**: colas de mensajes empresariales; **DDS**: distribución de datos en tiempo real (OMG); **XMPP**: mensajería extensible.
     - **oneM2M**: estándar global de plataforma de servicios **M2M** (*machine-to-machine*), el paradigma de comunicación entre máquinas del que el IoT es heredero.
-- **Retos**: **seguridad y privacidad** (dispositivos poco protegidos, superficies de ataque masivas; tema 79), **interoperabilidad** entre fabricantes y estándares, escalabilidad de las plataformas, consumo energético y coste del despliegue.
+- **Retos**: **seguridad y privacidad** (dispositivos poco protegidos, superficies de ataque masivas; tema [79](79-seguridad-en-las-comunicaciones.md)), **interoperabilidad** entre fabricantes y estándares, escalabilidad de las plataformas, consumo energético y coste del despliegue.
 
 ## Redes de corto alcance: BLE, NFC y RFID
 
@@ -65,7 +65,7 @@ Las **LPWAN (Low Power Wide Area Networks)** conectan dispositivos a kilómetros
 - **LoRaWAN**: especificación **abierta** de la **LoRa Alliance** sobre la capa física LoRa (de Semtech), con modulación de espectro ensanchado **CSS** (*chirp spread spectrum*), muy robusta frente a interferencias. Opera en bandas ISM (**868 MHz** en Europa), con topología en **estrella de estrellas** (los gateways reenvían a un servidor de red), velocidad adaptativa de **0,3 a 50 kbps**, cifrado AES-128 y tres **clases de dispositivo**: **A** (mínimo consumo, escucha solo tras transmitir), **B** (ventanas programadas por balizas) y **C** (escucha continua). Normalizada también como **Recomendación UIT-T Y.4480 (2021)**. Permite montar redes privadas propias (campus, regadíos, ciudades).
 - **Sigfox**: tecnología **propietaria** de red «0G» global, en **banda ultraestrecha (UNB**, canales de 100 Hz) sobre espectro no licenciado: ~**600 bps**, hasta **140 mensajes al día** de **12 bytes** de subida (y muy pocos de bajada). Máxima sencillez y autonomía, mínima flexibilidad. Tras la quiebra de Sigfox S.A. (enero de 2022), la tecnología y la red las **opera UnaBiz** (Singapur), con dificultades financieras recurrentes (nueva reorganización judicial de la red francesa en 2025).
 - **NB-IoT (Narrowband IoT)**: estándar **3GPP (Release 13, 2016)** sobre espectro **licenciado** de operador: portadora de **180 kHz** desplegable dentro de una banda LTE, decenas de kbps y una ganancia de cobertura de **+20 dB** que alcanza interiores profundos (sótanos, arquetas de contadores). Ahorro con los modos **PSM** y **eDRX**. Sin movilidad plena ni voz: pensado para objetos estáticos.
-- **LTE-M (eMTC)**: estándar 3GPP (Release 13) de **1,4 MHz** de ancho de banda: hasta ~**1 Mbps**, menor latencia y, a diferencia de NB-IoT, **movilidad con traspaso (handover) y voz (VoLTE)**: wearables, seguimiento de flotas y activos. NB-IoT y LTE-M están integrados en el ecosistema **5G** como las tecnologías del caso de uso **mMTC** (tema 76).
+- **LTE-M (eMTC)**: estándar 3GPP (Release 13) de **1,4 MHz** de ancho de banda: hasta ~**1 Mbps**, menor latencia y, a diferencia de NB-IoT, **movilidad con traspaso (handover) y voz (VoLTE)**: wearables, seguimiento de flotas y activos. NB-IoT y LTE-M están integrados en el ecosistema **5G** como las tecnologías del caso de uso **mMTC** (tema [76](76-redes-inalambricas-y-5g.md)).
 
 | | Sigfox | LoRaWAN | NB-IoT | LTE-M |
 | --- | --- | --- | --- | --- |
@@ -94,7 +94,7 @@ Una **red de sensores inalámbrica (WSN, *Wireless Sensor Network*)** es un conj
     - **Edge AI**: la inferencia de modelos de IA se ejecuta en la pasarela o en el propio dispositivo, lo que reduce la **latencia**, el consumo de ancho de banda y la exposición de datos personales, y permite operar sin conectividad.
     - **TinyML**: modelos de aprendizaje automático comprimidos para ejecutarse en microcontroladores de milivatios (con marcos como TensorFlow Lite para microcontroladores).
     - **Aplicaciones**: **mantenimiento predictivo** (detectar el fallo antes de que ocurra a partir de vibración y temperatura), detección de anomalías en contadores y redes de suministro, visión artificial en el borde (aforos, seguridad) y reconocimiento de voz local.
-    - Las técnicas de IA subyacentes se estudian en el tema 34; su aplicación urbana (plataformas de ciudad y gemelos digitales), en el 74.
+    - Las técnicas de IA subyacentes se estudian en el tema [34](34-inteligencia-artificial.md); su aplicación urbana (plataformas de ciudad y gemelos digitales), en el 74.
 
 ## Fuentes {.unnumbered .unlisted}
 

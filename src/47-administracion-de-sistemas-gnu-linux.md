@@ -38,7 +38,7 @@ systemctl daemon-reload         # recargar unidades tras editarlas
 journalctl -u nginx --since today   # logs del servicio (journal)
 ```
 
-El **journal** centraliza los logs binarios con metadatos; convive con syslog (rsyslog) para el reenvío a un servidor central de logs (tema 49).
+El **journal** centraliza los logs binarios con metadatos; convive con syslog (rsyslog) para el reenvío a un servidor central de logs (tema [49](49-servicios-de-infraestructura.md)).
 
 ## Gestión de software y actualizaciones
 
@@ -55,9 +55,9 @@ dnf check-update --security     # solo parches de seguridad
 
 ## Almacenamiento local: montaje y LVM
 
-Los sistemas de ficheros se montan sobre el árbol único de directorios, de forma manual (`mount`) o persistente en `/etc/fstab` (identificando el dispositivo por **UUID** o etiqueta). El RAID y las cabinas se tratan en el tema 45; en el propio servidor la pieza clave es el gestor de volúmenes lógicos.
+Los sistemas de ficheros se montan sobre el árbol único de directorios, de forma manual (`mount`) o persistente en `/etc/fstab` (identificando el dispositivo por **UUID** o etiqueta). El RAID y las cabinas se tratan en el tema [45](45-sistemas-de-almacenamiento.md); en el propio servidor la pieza clave es el gestor de volúmenes lógicos.
 
-- **LVM**: añade una capa flexible entre discos y sistemas de ficheros: los discos o particiones se declaran **volúmenes físicos (PV)**, se agrupan en **grupos de volúmenes (VG)** y de ellos se tallan **volúmenes lógicos (LV)**, que se pueden **redimensionar en caliente** y sacar *snapshots* (útiles antes de un cambio; no son copia de seguridad, tema 45).
+- **LVM**: añade una capa flexible entre discos y sistemas de ficheros: los discos o particiones se declaran **volúmenes físicos (PV)**, se agrupan en **grupos de volúmenes (VG)** y de ellos se tallan **volúmenes lógicos (LV)**, que se pueden **redimensionar en caliente** y sacar *snapshots* (útiles antes de un cambio; no son copia de seguridad, tema [45](45-sistemas-de-almacenamiento.md)).
 
 ```bash
 pvcreate /dev/sdb                     # disco nuevo como volumen físico
@@ -96,11 +96,11 @@ setfacl -m u:backup:r /etc/app/config   # ACL: lectura para un usuario extra
 
 ## Servicios de red e integración con Directorio Activo
 
-Sobre un Linux de servidor se despliegan los servicios de compartición e identidad que lo integran en la red corporativa (los servidores web, de correo y proxy se tratan en el tema 49).
+Sobre un Linux de servidor se despliegan los servicios de compartición e identidad que lo integran en la red corporativa (los servidores web, de correo y proxy se tratan en el tema [49](49-servicios-de-infraestructura.md)).
 
 - **Samba**: implementa el protocolo **SMB/CIFS**: comparte ficheros e impresoras con clientes Windows y puede actuar como miembro de dominio (o incluso como controlador de dominio compatible con AD).
 - **NFS**: el sistema de ficheros en red nativo de UNIX, habitual entre servidores Linux (exportaciones en `/etc/exports`).
-- **OpenLDAP**: servidor de **directorio LDAP** de código abierto para autenticación centralizada y cuentas de red en entornos Linux (esquema *posixAccount*); el concepto de directorio se desarrolla en el tema 49.
+- **OpenLDAP**: servidor de **directorio LDAP** de código abierto para autenticación centralizada y cuentas de red en entornos Linux (esquema *posixAccount*); el concepto de directorio se desarrolla en el tema [49](49-servicios-de-infraestructura.md).
 - **Integración con Directorio Activo**: el patrón actual usa **realmd/adcli** para unir la máquina al dominio y **SSSD** como cliente de identidad (autenticación **Kerberos**, búsqueda LDAP, caché offline y reglas de acceso); la vía clásica es **winbind** (Samba). Con ello los usuarios del AD inician sesión en los servidores Linux con su cuenta corporativa:
 
 ```bash

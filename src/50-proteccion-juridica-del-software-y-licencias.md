@@ -29,7 +29,7 @@ El control de legalidad garantiza que todo el software instalado cuenta con lice
 
 - **Gestión de activos de software (SAM)**: inventario automatizado de instalaciones, reconciliación con las licencias adquiridas y métricas de uso; normalizada en **ISO/IEC 19770-1** (sistemas de gestión de activos de TI).
 - **Modelos de licencia propietaria**: por **dispositivo**, por **usuario**, por **núcleo de CPU** (habitual en servidores y bases de datos), licencias de acceso de cliente (**CAL**) y, de forma creciente, **suscripción** con soporte incluido; el mantenimiento y las auditorías del fabricante se pactan en contrato.
-- **Buenas prácticas**: catálogo de software autorizado, despliegue centralizado (temas 47, 48 y 52), revisiones periódicas y cláusulas de auditoría controladas en los contratos (la contratación TIC se trata en el tema 22).
+- **Buenas prácticas**: catálogo de software autorizado, despliegue centralizado (temas [47](47-administracion-de-sistemas-gnu-linux.md), [48](48-administracion-de-sistemas-windows-y-directorio-activo.md) y [52](52-puesto-de-trabajo-tic.md)), revisiones periódicas y cláusulas de auditoría controladas en los contratos (la contratación TIC se trata en el tema [22](22-contratacion-publica-de-bienes-y-servicios-tic.md)).
 
 ## Software libre y de código abierto
 
@@ -44,16 +44,16 @@ El **software libre** (definición de la Free Software Foundation) respeta las *
 | **Apache 2.0** | Permisiva | Añade concesión expresa de **patentes** |
 | **EUPL 1.2** | Copyleft (UE) | Licencia pública de la Unión Europea, compatible con GPL |
 
-- **Compatibilidad y cumplimiento**: combinar componentes exige comprobar la compatibilidad de licencias (el copyleft «contamina» el derivado); las organizaciones lo gestionan con análisis de composición de software (SCA) en la cadena de desarrollo (tema 26).
+- **Compatibilidad y cumplimiento**: combinar componentes exige comprobar la compatibilidad de licencias (el copyleft «contamina» el derivado); las organizaciones lo gestionan con análisis de composición de software (SCA) en la cadena de desarrollo (tema [26](26-control-de-versiones-integracion-continua-y-devops.md)).
 - **Aplicaciones consolidadas**: en servidores (Linux, Apache/Nginx, PostgreSQL), en ofimática (**LibreOffice**, con el formato abierto **ODF**, norma **ISO/IEC 26300**) y en la mayoría de las herramientas de desarrollo y datos.
 
 ## El software en las administraciones públicas
 
-Las administraciones combinan software propietario, libre y desarrollos propios; el marco jurídico favorece expresamente la **reutilización** y los estándares abiertos (ENI, tema 62).
+Las administraciones combinan software propietario, libre y desarrollos propios; el marco jurídico favorece expresamente la **reutilización** y los estándares abiertos (ENI, tema [62](62-esquema-nacional-de-interoperabilidad.md)).
 
 - **EUPL 1.2** (licencia pública de la Unión Europea, **Decisión (UE) 2017/863**, de 18 de mayo de 2017): licencia copyleft creada por la Comisión para liberar software del sector público, con **valor jurídico en las 23 lenguas** oficiales y lista de licencias compatibles (GPL, AGPL, OSL...).
-- **Ley 40/2015, arts. 157 y 158**: las Administraciones **ponen a disposición** de las demás las aplicaciones cuyos derechos posean, pudiendo declararlas **de fuentes abiertas**; antes de adquirir o desarrollar deben **consultar el directorio general de aplicaciones** y, si existe solución reutilizable, están **obligadas a usarla** salvo justificación de eficiencia (art. 7 de la LO 2/2012). La AGE mantiene el directorio general en el **Centro de Transferencia de Tecnología (CTT)** del PAe, con las soluciones y servicios comunes reutilizables (tema 63).
-- **Titularidad en la contratación**: los pliegos de desarrollo a medida deben prever la **entrega del código fuente** y la titularidad pública de los derechos de explotación (tema 22), condición para poder reutilizar y liberar después.
+- **Ley 40/2015, arts. 157 y 158**: las Administraciones **ponen a disposición** de las demás las aplicaciones cuyos derechos posean, pudiendo declararlas **de fuentes abiertas**; antes de adquirir o desarrollar deben **consultar el directorio general de aplicaciones** y, si existe solución reutilizable, están **obligadas a usarla** salvo justificación de eficiencia (art. 7 de la LO 2/2012). La AGE mantiene el directorio general en el **Centro de Transferencia de Tecnología (CTT)** del PAe, con las soluciones y servicios comunes reutilizables (tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md)).
+- **Titularidad en la contratación**: los pliegos de desarrollo a medida deben prever la **entrega del código fuente** y la titularidad pública de los derechos de explotación (tema [22](22-contratacion-publica-de-bienes-y-servicios-tic.md)), condición para poder reutilizar y liberar después.
 
 ## Fuentes {.unnumbered .unlisted}
 

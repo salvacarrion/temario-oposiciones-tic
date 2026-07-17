@@ -25,7 +25,7 @@ El desarrollo móvil está condicionado por un mercado que es en la práctica un
 - **Consistencia**: mismos componentes, gestos y comportamientos en toda la aplicación, y alineados con los patrones de la plataforma.
 - **Navegación intuitiva**: jerarquía clara y previsible (barra inferior, cajón lateral, pila de pantallas con vuelta atrás).
 - **Diseño táctil**: áreas de pulsación suficientes, gestos estándar (deslizar, pellizcar) y respuesta inmediata a cada acción.
-- **Tipografía y color**: tipografías sans-serif legibles en pantalla y un sistema cromático consistente y con significado (rojo para errores, verde para confirmaciones), respetando el contraste (accesibilidad, tema 58).
+- **Tipografía y color**: tipografías sans-serif legibles en pantalla y un sistema cromático consistente y con significado (rojo para errores, verde para confirmaciones), respetando el contraste (accesibilidad, tema [58](58-accesibilidad-y-usabilidad.md)).
 
 **Patrones de presentación**: la evolución fue **MVC** → **MVP** (presentador que aísla la vista) → **MVVM** (modelo-vista-vista-modelo con estado observable), el recomendado por las guías de arquitectura actuales; los frameworks declarativos (Jetpack Compose, SwiftUI) llevan a un **flujo de datos unidireccional**: el estado baja hacia la interfaz y los eventos suben.
 
@@ -132,7 +132,7 @@ Una **PWA (Progressive Web App)** es una aplicación web que el navegador puede 
 
 **PWA frente a aplicación de tienda**: un solo desarrollo web, sin revisión ni comisiones de tienda y con distribución por URL; a cambio se renuncia a la visibilidad de las tiendas y a parte del hardware. Para servicios de información y tramitación (el caso típico de una Administración) suele ser suficiente y evita mantener dos aplicaciones nativas.
 
-El diseño adaptativo y la accesibilidad se tratan en el tema 58; las tecnologías web subyacentes, en el 53.
+El diseño adaptativo y la accesibilidad se tratan en el tema [58](58-accesibilidad-y-usabilidad.md); las tecnologías web subyacentes, en el 53.
 
 ## Fuentes {.unnumbered .unlisted}
 

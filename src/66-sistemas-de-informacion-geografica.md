@@ -1,6 +1,6 @@
 # Sistemas de información geográfica
 
-Un sistema de información geográfica (SIG, en inglés GIS) es un sistema de información diseñado para capturar, almacenar, gestionar, analizar y visualizar datos georreferenciados, es decir, datos asociados a una posición sobre el territorio. Combina cartografía digital con bases de datos alfanuméricas, y eso le permite responder no solo «qué» ocurre, sino «dónde» ocurre. Este tema cubre los conceptos básicos (datos raster y vectoriales), los componentes y funcionalidades de un SIG y la incorporación de la componente geográfica a los sistemas de información; los servicios web geográficos (WMS, WFS, CSW) y las infraestructuras de datos espaciales se estudian en el tema 67.
+Un sistema de información geográfica (SIG, en inglés GIS) es un sistema de información diseñado para capturar, almacenar, gestionar, analizar y visualizar datos georreferenciados, es decir, datos asociados a una posición sobre el territorio. Combina cartografía digital con bases de datos alfanuméricas, y eso le permite responder no solo «qué» ocurre, sino «dónde» ocurre. Este tema cubre los conceptos básicos (datos raster y vectoriales), los componentes y funcionalidades de un SIG y la incorporación de la componente geográfica a los sistemas de información; los servicios web geográficos (WMS, WFS, CSW) y las infraestructuras de datos espaciales se estudian en el tema [67](67-infraestructuras-de-datos-espaciales.md).
 
 ## Conceptos: datos raster y vectoriales
 
@@ -97,7 +97,7 @@ Gran parte de la información que manejan las administraciones lleva asociada un
 - **Casos de uso en la Administración**: padrón y gestión tributaria (domicilios y direcciones normalizadas), catastro y urbanismo (parcelario, planeamiento, licencias), emergencias (localización de llamadas, despliegue de recursos), servicios municipales (rutas de recogida de residuos, alumbrado, mantenimiento), planificación de equipamientos (análisis de cobertura y demanda por zonas).
 - **Visores y APIs de mapas**: las aplicaciones de gestión incorporan mapas mediante bibliotecas web (OpenLayers, Leaflet) o APIs comerciales, consumiendo cartografía publicada como servicios web.
 
-La publicación y compartición de esta información mediante servicios web estandarizados (WMS, WFS, CSW) y su organización en infraestructuras de datos espaciales (INSPIRE, LISIGE, IDEE, IDECV) se estudian en el tema 67.
+La publicación y compartición de esta información mediante servicios web estandarizados (WMS, WFS, CSW) y su organización en infraestructuras de datos espaciales (INSPIRE, LISIGE, IDEE, IDECV) se estudian en el tema [67](67-infraestructuras-de-datos-espaciales.md).
 
 ## Fuentes {.unnumbered .unlisted}
 

@@ -1,6 +1,6 @@
 # Normalización en informática sanitaria: ISO/EN 13606, terminologías clínicas y perfiles IHE
 
-Además de los estándares de HL7 y openEHR (temas 90 y 91), la interoperabilidad sanitaria se apoya en la normalización formal (ISO y CEN), en las terminologías y clasificaciones que dan significado común a los datos, y en los perfiles IHE que indican cómo combinar todos estos estándares en escenarios reales.
+Además de los estándares de HL7 y openEHR (temas [90](90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md) y [91](91-estandares-de-interoperabilidad-de-la-hce.md)), la interoperabilidad sanitaria se apoya en la normalización formal (ISO y CEN), en las terminologías y clasificaciones que dan significado común a los datos, y en los perfiles IHE que indican cómo combinar todos estos estándares en escenarios reales.
 
 ## La normalización en informática sanitaria: ISO/TC 215 y CEN/TC 251
 
@@ -18,7 +18,7 @@ La **ISO/EN 13606** («Electronic health record communication», revisión vigen
     - **Parte 3. Arquetipos de referencia y listas de términos**.
     - **Parte 4. Seguridad**: control de acceso, consentimiento y auditoría del extracto.
     - **Parte 5. Especificación de interfaces**: interfaces de petición y entrega de extractos.
-- **Modelo dual**: adopta el enfoque de openEHR (tema 91): un modelo de referencia estable más **arquetipos** que expresan el conocimiento clínico. La jerarquía del extracto es: `EHR_EXTRACT` → `FOLDER` (carpetas) → `COMPOSITION` (composición, p. ej. un informe) → `SECTION` (secciones) → `ENTRY` (entradas, la observación clínica) → `CLUSTER`/`ELEMENT` (estructuras y elementos con el valor del dato).
+- **Modelo dual**: adopta el enfoque de openEHR (tema [91](91-estandares-de-interoperabilidad-de-la-hce.md)): un modelo de referencia estable más **arquetipos** que expresan el conocimiento clínico. La jerarquía del extracto es: `EHR_EXTRACT` → `FOLDER` (carpetas) → `COMPOSITION` (composición, p. ej. un informe) → `SECTION` (secciones) → `ENTRY` (entradas, la observación clínica) → `CLUSTER`/`ELEMENT` (estructuras y elementos con el valor del dato).
 - **Uso**: ha servido de referencia en proyectos europeos y españoles de comunicación de HCE entre organizaciones; en el examen suele preguntarse su objeto («comunicación de la HCE»), sus 5 partes y su relación con openEHR.
 
 ## Terminologías y clasificaciones clínicas
@@ -57,7 +57,7 @@ Para que el dato clínico viaje con su significado hay que codificarlo con vocab
 | **XUA** | Cross-Enterprise User Assertion | Aserciones de identidad del usuario (SAML) entre organizaciones |
 | **BPPC** | Basic Patient Privacy Consents | Gestión básica de consentimientos de privacidad |
 
-- **Relevancia práctica**: la infraestructura europea MyHealth@EU (tema 94) y muchas plataformas autonómicas de HCE se construyen sobre perfiles IHE (XCA, XCPD, ATNA); en imagen médica, el perfil **SWF** (*Scheduled Workflow*) orquesta RIS, PACS y modalidades (tema 93).
+- **Relevancia práctica**: la infraestructura europea MyHealth@EU (tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)) y muchas plataformas autonómicas de HCE se construyen sobre perfiles IHE (XCA, XCPD, ATNA); en imagen médica, el perfil **SWF** (*Scheduled Workflow*) orquesta RIS, PACS y modalidades (tema [93](93-imagen-medica-digital-dicom-pacs-ris.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

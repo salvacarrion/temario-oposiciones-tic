@@ -1,6 +1,6 @@
 # Análisis y gestión de riesgos
 
-El análisis de riesgos determina qué puede pasarle a los activos de una organización y qué daño supondría; la gestión de riesgos decide qué hacer al respecto y lo mantiene bajo revisión continua. En el sector público esta disciplina es obligatoria (el ENS la exige como principio básico y como medida operacional) y su metodología de referencia es **MAGERIT**. La gestión de los riesgos de un proyecto (área de Riesgos del PMBOK) se estudia en el tema 19; la gestión del ciberincidente, que es el riesgo ya materializado, en el tema 31.
+El análisis de riesgos determina qué puede pasarle a los activos de una organización y qué daño supondría; la gestión de riesgos decide qué hacer al respecto y lo mantiene bajo revisión continua. En el sector público esta disciplina es obligatoria (el ENS la exige como principio básico y como medida operacional) y su metodología de referencia es **MAGERIT**. La gestión de los riesgos de un proyecto (área de Riesgos del PMBOK) se estudia en el tema [19](19-direccion-y-gestion-de-proyectos.md); la gestión del ciberincidente, que es el riesgo ya materializado, en el tema [31](31-gestion-de-ciberincidentes.md).
 
 ## La gestión de riesgos: conceptos
 
@@ -31,7 +31,7 @@ El marco normativo y los estándares aplicables:
 
 ## MAGERIT v3: el método
 
-**MAGERIT** (Metodología de Análisis y Gestión de Riesgos de los Sistemas de Información) es la metodología de referencia de las administraciones públicas españolas. La primera versión es de **1997**, la segunda de 2005 y la vigente es la **versión 3, de octubre de 2012**, elaborada por el **Ministerio de Hacienda y Administraciones Públicas** con la participación del **Centro Criptológico Nacional (CCN)** y publicada en el PAe. Siguiendo la terminología de ISO 31000, MAGERIT implementa el proceso de gestión de riesgos dentro de un marco de trabajo para que los órganos de gobierno tomen decisiones teniendo en cuenta los riesgos del uso de las TIC; es el camino habitual para cumplir la medida op.pl.1 del ENS, y la herramienta **PILAR** del CCN la automatiza (tema 28).
+**MAGERIT** (Metodología de Análisis y Gestión de Riesgos de los Sistemas de Información) es la metodología de referencia de las administraciones públicas españolas. La primera versión es de **1997**, la segunda de 2005 y la vigente es la **versión 3, de octubre de 2012**, elaborada por el **Ministerio de Hacienda y Administraciones Públicas** con la participación del **Centro Criptológico Nacional (CCN)** y publicada en el PAe. Siguiendo la terminología de ISO 31000, MAGERIT implementa el proceso de gestión de riesgos dentro de un marco de trabajo para que los órganos de gobierno tomen decisiones teniendo en cuenta los riesgos del uso de las TIC; es el camino habitual para cumplir la medida op.pl.1 del ENS, y la herramienta **PILAR** del CCN la automatiza (tema [28](28-ciberseguridad.md)).
 
 Sus objetivos son tres directos y uno indirecto:
 
@@ -145,7 +145,7 @@ Un organismo pone en producción una aplicación web de tramitación de expedien
 | Validación de datos en la aplicación | [PR] | Reduce probabilidad de [E.15] |
 | Línea de comunicaciones alternativa | [CR] | Acota la degradación de [I.8] |
 
-**Pasos 4 y 5: impacto y riesgo residual, y tratamiento**. Con las salvaguardas al nivel de madurez actual (L3), el riesgo de ransomware baja a medio (zona 2) y el resto a bajo. La Dirección **acepta formalmente** los riesgos residuales; las carencias detectadas (por ejemplo, falta de segmentación de la red) se recogen en el **informe de insuficiencias** y originan proyectos del **plan de seguridad**. El análisis se revisará al menos anualmente o cuando cambie el sistema. Si pese a todo una amenaza se materializa, se activa la gestión de ciberincidentes (tema 31).
+**Pasos 4 y 5: impacto y riesgo residual, y tratamiento**. Con las salvaguardas al nivel de madurez actual (L3), el riesgo de ransomware baja a medio (zona 2) y el resto a bajo. La Dirección **acepta formalmente** los riesgos residuales; las carencias detectadas (por ejemplo, falta de segmentación de la red) se recogen en el **informe de insuficiencias** y originan proyectos del **plan de seguridad**. El análisis se revisará al menos anualmente o cuando cambie el sistema. Si pese a todo una amenaza se materializa, se activa la gestión de ciberincidentes (tema [31](31-gestion-de-ciberincidentes.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

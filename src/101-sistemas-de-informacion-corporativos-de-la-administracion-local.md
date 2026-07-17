@@ -1,10 +1,10 @@
 # Sistemas de información corporativos de la administración local
 
-Los ayuntamientos operan una familia característica de sistemas de información corporativos: el padrón de habitantes, la gestión económico-financiera (SICAL), la gestión tributaria y de recursos humanos y la gestión de subvenciones (BDNS). Este tema los recorre; la administración electrónica local se estudia en el tema 102, y los otros dos grandes bloques municipales tienen tema propio: **plataformas de ciudad inteligente** en el tema 78 y **SIG y geoportales** en los temas 66 y 67.
+Los ayuntamientos operan una familia característica de sistemas de información corporativos: el padrón de habitantes, la gestión económico-financiera (SICAL), la gestión tributaria y de recursos humanos y la gestión de subvenciones (BDNS). Este tema los recorre; la administración electrónica local se estudia en el tema [102](102-administracion-electronica-local.md), y los otros dos grandes bloques municipales tienen tema propio: **plataformas de ciudad inteligente** en el tema [78](78-ciudades-inteligentes.md) y **SIG y geoportales** en los temas [66](66-sistemas-de-informacion-geografica.md) y [67](67-infraestructuras-de-datos-espaciales.md).
 
 ## El padrón municipal como sistema de información
 
-El padrón (su régimen sustantivo se estudia en el tema 96) es el sistema de información nuclear del ayuntamiento: alimenta el censo electoral, las cifras oficiales de población, la planificación de servicios y la acreditación de residencia en cualquier procedimiento. Lo desarrolla el **Reglamento de Población y Demarcación Territorial de las Entidades Locales (RD 1690/1986)**, modernizado por el **RD 141/2024**, que digitalizó por completo su gestión.
+El padrón (su régimen sustantivo se estudia en el tema [96](96-bases-del-regimen-local-ley-7-1985.md)) es el sistema de información nuclear del ayuntamiento: alimenta el censo electoral, las cifras oficiales de población, la planificación de servicios y la acreditación de residencia en cualquier procedimiento. Lo desarrolla el **Reglamento de Población y Demarcación Territorial de las Entidades Locales (RD 1690/1986)**, modernizado por el **RD 141/2024**, que digitalizó por completo su gestión.
 
 **Texto consolidado a 7 de febrero de 2024** (incluye el RD 141/2024).
 
@@ -14,7 +14,7 @@ El padrón (su régimen sustantivo se estudia en el tema 96) es el sistema de in
 - **Actualización continua (arts. 63-66)**: los organismos estatales remiten las variaciones a los ayuntamientos **a través del INE** (Registro Civil e Interior, **al menos mensualmente**; educación y Catastro para titulaciones y referencias catastrales). Los ayuntamientos remiten sus variaciones al INE por un **sistema de intercambio de datos en tiempo real**, y el INE les comunica las discrepancias detectadas.
 - **Revisión anual y cifras oficiales (arts. 81-82)**: los ayuntamientos aprueban la revisión del padrón **con referencia al 1 de enero de cada año** y remiten la cifra al INE; el Presidente del INE, con informe **vinculante** del Consejo de Empadronamiento, eleva al Gobierno la propuesta de **cifras oficiales de población**, aprobadas por real decreto.
 - **Consejo de Empadronamiento (arts. 84-85)**: órgano colegiado de colaboración AGE-entes locales en materia padronal, con secciones provinciales; resuelve discrepancias (propuesta vinculante), informa las cifras oficiales y las altas y bajas de oficio, y propone las instrucciones técnicas de gestión padronal.
-- **Interoperabilidad (art. 83)**: la base padronal del INE se usa en las **plataformas de intermediación de datos** y en la **pasarela digital única europea** para acreditar la residencia sin certificados en papel (servicios de verificación de datos de residencia, tema 63), y se pone a disposición del ciudadano en la **Carpeta Ciudadana** estatal.
+- **Interoperabilidad (art. 83)**: la base padronal del INE se usa en las **plataformas de intermediación de datos** y en la **pasarela digital única europea** para acreditar la residencia sin certificados en papel (servicios de verificación de datos de residencia, tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md)), y se pone a disposición del ciudadano en la **Carpeta Ciudadana** estatal.
 
 ## Gestión económico-financiera: el SICAL
 
@@ -26,13 +26,13 @@ La gestión económico-financiera municipal se apoya en el **SICAL** (Sistema de
 
 ## Gestión tributaria y de recursos humanos
 
-- **Gestión tributaria y recaudación**: sistemas de padrones fiscales (IBI, IVTM, tasas), liquidaciones, calendario fiscal y recaudación voluntaria y ejecutiva, con intercambios con el **Catastro** y la AEAT; los municipios pequeños suelen delegarla en los organismos provinciales de recaudación (art. 36 LRBRL). En los municipios de gran población puede crearse un **órgano de gestión tributaria** (art. 135 LRBRL, tema 96).
-- **Recursos humanos**: nómina y seguridad social, gestión de plantilla y **relación de puestos de trabajo**, control horario y portal del empleado (los instrumentos de ordenación del personal, en el tema 98).
+- **Gestión tributaria y recaudación**: sistemas de padrones fiscales (IBI, IVTM, tasas), liquidaciones, calendario fiscal y recaudación voluntaria y ejecutiva, con intercambios con el **Catastro** y la AEAT; los municipios pequeños suelen delegarla en los organismos provinciales de recaudación (art. 36 LRBRL). En los municipios de gran población puede crearse un **órgano de gestión tributaria** (art. 135 LRBRL, tema [96](96-bases-del-regimen-local-ley-7-1985.md)).
+- **Recursos humanos**: nómina y seguridad social, gestión de plantilla y **relación de puestos de trabajo**, control horario y portal del empleado (los instrumentos de ordenación del personal, en el tema [98](98-personal-al-servicio-de-las-entidades-locales.md)).
 - **Patrón de integración**: la tendencia es integrar económico-financiero, tributario, RRHH y tramitación de expedientes en un **ERP municipal** común sobre una base de datos corporativa única, evitando islas de información y dobles capturas.
 
 ## Subvenciones: la BDNS/SNPSAP
 
-La actividad de fomento local (tema 100) tiene su sistema de información en la **Base de Datos Nacional de Subvenciones (BDNS)**, regulada en los **arts. 18 y 20 de la Ley 38/2003, General de Subvenciones** y desarrollada por el **RD 130/2019**.
+La actividad de fomento local (tema [100](100-formas-de-actividad-y-servicios-publicos-locales.md)) tiene su sistema de información en la **Base de Datos Nacional de Subvenciones (BDNS)**, regulada en los **arts. 18 y 20 de la Ley 38/2003, General de Subvenciones** y desarrollada por el **RD 130/2019**.
 
 - **Naturaleza**: la BDNS **opera como Sistema Nacional de Publicidad de Subvenciones y Ayudas Públicas (SNPSAP)**: la publicidad de convocatorias y concesiones se realiza a través de ella (art. 18 LGS y art. 7 RD 130/2019), con portal público en subvenciones.gob.es.
 - **Administración**: la administra la **Intervención General de la Administración del Estado (IGAE)**, que custodia la información y determina los instrumentos de comunicación.

@@ -58,7 +58,7 @@ Los servicios web son la materialización clásica de SOA. Según el **W3C**, un
 
 - **Contenido del registro**: **páginas blancas** (identificación y contacto de la organización), **páginas amarillas** (clasificación por taxonomías sectoriales) y **páginas verdes** (información técnica de los servicios).
 - **Tipos de registro**: públicos y privados (corporativos).
-- **Estado actual**: el registro público mundial (UDDI Business Registry, operado por IBM, Microsoft y SAP) **cerró en 2006**; UDDI quedó relegado a registros corporativos y hoy el descubrimiento se resuelve con catálogos y portales de APIs (tema 40).
+- **Estado actual**: el registro público mundial (UDDI Business Registry, operado por IBM, Microsoft y SAP) **cerró en 2006**; UDDI quedó relegado a registros corporativos y hoy el descubrimiento se resuelve con catálogos y portales de APIs (tema [40](40-apis-y-apificacion.md)).
 
 **Extensiones WS-\***: especificaciones que añaden capacidades empresariales sobre SOAP, generalmente mediante el Header:
 
@@ -67,7 +67,7 @@ Los servicios web son la materialización clásica de SOA. Según el **W3C**, un
 - **WS-BPEL** (OASIS): lenguaje de orquestación de procesos de negocio sobre servicios web.
 - **WS-I Basic Profile**: perfil de interoperabilidad que restringe las opciones de SOAP/WSDL para garantizar la compatibilidad entre plataformas (la organización WS-I se integró en OASIS en 2010).
 
-Los servicios web SOAP sobreviven sobre todo en la integración corporativa y en las administraciones públicas (por ejemplo, la intermediación de datos SCSP, temas 62 y 63); el desarrollo nuevo de APIs es mayoritariamente REST.
+Los servicios web SOAP sobreviven sobre todo en la integración corporativa y en las administraciones públicas (por ejemplo, la intermediación de datos SCSP, temas [62](62-esquema-nacional-de-interoperabilidad.md) y [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md)); el desarrollo nuevo de APIs es mayoritariamente REST.
 
 ## Servicios REST
 
@@ -102,7 +102,7 @@ Los servicios web SOAP sobreviven sobre todo en la integración corporativa y en
 - **Caché**: cabeceras `Cache-Control` y `Expires`, y validadores `ETag`/`If-None-Match` y `Last-Modified` (el 304 evita retransmitir).
 - **HATEOAS** (*Hypermedia as the Engine of Application State*): las respuestas incluyen enlaces a las acciones posibles, de modo que el cliente navega la API como hipertexto sin conocer las URIs de antemano.
 - **Modelo de madurez de Richardson**: nivel 0 (HTTP como túnel RPC), nivel 1 (recursos con URI), nivel 2 (verbos HTTP y códigos de estado: lo habitual en la práctica) y nivel 3 (HATEOAS).
-- **Documentación**: el contrato de una API REST se describe con **OpenAPI** (tratada, junto con la gestión y seguridad de APIs, en el tema 40).
+- **Documentación**: el contrato de una API REST se describe con **OpenAPI** (tratada, junto con la gestión y seguridad de APIs, en el tema [40](40-apis-y-apificacion.md)).
 
 **SOAP frente a REST**:
 
@@ -144,7 +144,7 @@ La arquitectura de microservicios construye una aplicación como un conjunto de 
 - **Comunicación por eventos**: los servicios publican eventos en un broker (Kafka, RabbitMQ) y los interesados se suscriben (coreografía), en lugar de encadenar llamadas síncronas.
 - **Observabilidad**: logs centralizados, métricas y **trazabilidad distribuida** de cada petición a través de los servicios (OpenTelemetry como estándar).
 
-**Despliegue y ecosistema**: los microservicios se empaquetan en **contenedores** (Docker) y se operan con orquestadores (**Kubernetes**) (tema 44); frameworks típicos: **Spring Boot/Spring Cloud** (Java), NestJS (Node.js), FastAPI (Python). Una **service mesh** (Istio, Linkerd) saca de las aplicaciones la comunicación segura (mTLS), el enrutado y la observabilidad, y los presta como infraestructura.
+**Despliegue y ecosistema**: los microservicios se empaquetan en **contenedores** (Docker) y se operan con orquestadores (**Kubernetes**) (tema [44](44-virtualizacion-y-contenedores.md)); frameworks típicos: **Spring Boot/Spring Cloud** (Java), NestJS (Node.js), FastAPI (Python). Una **service mesh** (Istio, Linkerd) saca de las aplicaciones la comunicación segura (mTLS), el enrutado y la observabilidad, y los presta como infraestructura.
 
 ## Formatos de intercambio: XML y JSON
 
@@ -211,7 +211,7 @@ La arquitectura de microservicios construye una aplicación como un conjunto de 
 | Procesado en JavaScript | Vía DOM/parsers | Nativo (JSON.parse) |
 | Uso típico | Documentos, integración corporativa, firma electrónica (XAdES, facturae) | APIs REST, configuración, web y móvil |
 
-Otros formatos de intercambio: **YAML** (configuración legible, superconjunto de JSON) y **Protocol Buffers** (binario y tipado, usado por gRPC, tema 56).
+Otros formatos de intercambio: **YAML** (configuración legible, superconjunto de JSON) y **Protocol Buffers** (binario y tipado, usado por gRPC, tema [56](56-arquitecturas-de-desarrollo-web.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

@@ -180,7 +180,7 @@ Documento inicial que recoge:
 2. **Identificación del alcance**: activos de tipo **información** y de tipo **servicio**.
 3. **Categorización del sistema**: valorar cada activo en las cinco dimensiones (DICTA), justificando cada valoración, y categorizar según el nivel máximo.
 4. **Declaración de aplicabilidad provisional**, derivada de la categorización.
-5. **Análisis de riesgos**, con una metodología reconocida internacionalmente (art. 14): en la práctica, **MAGERIT** con herramientas como **PILAR** (ver tema 30).
+5. **Análisis de riesgos**, con una metodología reconocida internacionalmente (art. 14): en la práctica, **MAGERIT** con herramientas como **PILAR** (ver tema [30](30-analisis-y-gestion-de-riesgos.md)).
 6. **Declaración de aplicabilidad definitiva** (o perfil de cumplimiento específico), tras la aceptación del **riesgo residual**.
 
 Tras el plan viene la **implantación**: hoja de ruta de medidas, elaboración del marco normativo interno y aprobación del sistema de gestión de la seguridad. Para las **entidades locales** existe un itinerario específico desarrollado con la FEMP, y el catálogo **CPSTIC** facilita la selección de productos cualificados.
@@ -210,7 +210,7 @@ La **Comisión Sectorial de Administración Electrónica** recoge la informació
 - Las entidades del sector público **notificarán al CCN** los incidentes con **impacto significativo**, conforme a la ITS de Notificación de Incidentes de Seguridad.
 - Las organizaciones **privadas** que presten servicios a entidades públicas notificarán al **INCIBE-CERT**, que lo pondrá inmediatamente en conocimiento del CCN-CERT.
 - Tras un incidente, el CCN-CERT determina técnicamente el **riesgo de reconexión** de los sistemas afectados.
-- El CCN-CERT presta soporte y coordinación ante incidentes, investiga y divulga mejores prácticas (guías **CCN-STIC**), forma especialistas e informa sobre vulnerabilidades y amenazas (art. 34). La gestión de ciberincidentes se desarrolla en el tema 31.
+- El CCN-CERT presta soporte y coordinación ante incidentes, investiga y divulga mejores prácticas (guías **CCN-STIC**), forma especialistas e informa sobre vulnerabilidades y amenazas (art. 34). La gestión de ciberincidentes se desarrolla en el tema [31](31-gestion-de-ciberincidentes.md).
 
 ## Caso práctico: plan de adecuación al ENS
 
