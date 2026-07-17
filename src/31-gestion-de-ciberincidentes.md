@@ -79,23 +79,46 @@ Un **CSIRT** (*Computer Security Incident Response Team*) es un equipo de respue
 - **ESPDEF-CERT** (**Mando Conjunto del Ciberespacio, MCCE**): redes y sistemas de las Fuerzas Armadas y las que afecten a la **Defensa Nacional**, en apoyo de los operadores con incidencia en ella.
 - **CNPIC** (Centro Nacional de Protección de Infraestructuras y Ciberseguridad, Ministerio del Interior): autoridad competente para los operadores críticos; su **Oficina de Coordinación de Ciberseguridad (OCC)** canaliza la coordinación cuando un operador esencial designado crítico sufre un incidente (art. 33.3 del ENS).
 
-El detalle institucional de estos organismos y el catálogo de soluciones del CCN-CERT (GLORIA, REYES, INES, los SAT o la propia LUCIA) se desarrollan en el tema 28; el **CSIRT-CV** de la Generalitat, en el tema 76.
+El detalle institucional de estos organismos y el catálogo de soluciones del CCN-CERT (GLORIA, REYES, INES, los SAT o la propia LUCIA) se desarrollan en el tema 28; el **CSIRT-CV** de la Generalitat, en el tema 81.
 
 ## Operación de la seguridad: SOC, SIEM, EDR
 
 La gestión de incidentes descansa sobre una operación de seguridad continua. El ENS la recoge en el marco operacional de **monitorización del sistema (op.mon)**: detección de intrusión (**op.mon.1**), sistema de métricas (**op.mon.2**) y vigilancia (**op.mon.3**).
 
-- **SOC (*Security Operations Center*)**: centro de operaciones de seguridad; unidad (propia o externalizada) que **monitoriza en continuo (24x7)** la infraestructura, hace el **triaje de alertas** en niveles escalonados de analista (N1 filtrado, N2 investigación, N3 análisis avanzado y *threat hunting*), gestiona vulnerabilidades y ejecuta la primera respuesta. El SOC vigila en continuo; el CSIRT/ERC responde al incidente declarado (en la práctica suelen integrarse). En el ámbito valenciano, el **CSIRT-CV** ejerce este papel para la Generalitat (tema 76).
+- **SOC (*Security Operations Center*)**: centro de operaciones de seguridad; unidad (propia o externalizada) que **monitoriza en continuo (24x7)** la infraestructura, hace el **triaje de alertas** en niveles escalonados de analista (N1 filtrado, N2 investigación, N3 análisis avanzado y *threat hunting*), gestiona vulnerabilidades y ejecuta la primera respuesta. El SOC vigila en continuo; el CSIRT/ERC responde al incidente declarado (en la práctica suelen integrarse). En el ámbito valenciano, el **CSIRT-CV** ejerce este papel para la Generalitat (tema 81).
 - **SIEM (*Security Information and Event Management*)**: plataforma que **agrega y correlaciona en tiempo real** los eventos y logs de múltiples fuentes (red, sistemas, aplicaciones, seguridad perimetral), genera alertas, cuadros de mando e informes, y conserva los registros para el análisis forense y el cumplimiento (medida **op.exp.8**, registro de la actividad). Es la herramienta central del SOC; en el sector público, **GLORIA** (CCN) cumple esta función (tema 28).
 - **EDR (*Endpoint Detection and Response*)**: agente en el puesto y el servidor que recoge telemetría de comportamiento, **detecta anomalías** (no solo firmas, superando al antivirus tradicional) y permite **responder a distancia**: aislar el equipo de la red, terminar procesos o revertir cambios. El **XDR** extiende la detección y correlación al correo, la red, la identidad y la nube.
 - **SOAR (*Security Orchestration, Automation and Response*)**: orquesta las herramientas anteriores y **automatiza mediante playbooks** las respuestas repetitivas (enriquecer alertas, bloquear indicadores, abrir tickets), en línea con el refuerzo **op.exp.7 R4** (prevención y respuesta automáticas) del ENS.
 - **Inteligencia de amenazas (CTI)**: consumo y compartición de **indicadores de compromiso (IOC)** (hashes, direcciones IP, dominios) y de tácticas, técnicas y procedimientos (TTP, catalogados en MITRE ATT&CK, tema 32). En el sector público se comparte a través de **REYES** (tema 28). Sobre ella se apoya el ***threat hunting***: búsqueda proactiva de amenazas no detectadas por las alertas.
 
-Las tecnologías de protección de red que alimentan esta operación (cortafuegos, IDS/IPS, honeypots) se estudian en el tema 74.
+Las tecnologías de protección de red que alimentan esta operación (cortafuegos, IDS/IPS, honeypots) se estudian en el tema 79.
+
+## Continuidad de negocio y recuperación ante desastres
+
+La gestión de incidentes se completa con la pregunta de qué pasa cuando el incidente interrumpe el servicio: la **gestión de la continuidad de negocio** (*Business Continuity Management*, BCM) prepara a la organización para seguir prestando sus servicios esenciales durante una interrupción grave y recuperar la normalidad después. Su sistema de gestión se especifica en la norma **ISO 22301:2019** (requisitos, certificable), complementada por la **ISO 22313:2020** (directrices).
+
+- **Análisis de impacto en el negocio** (*Business Impact Analysis*, BIA): identifica los procesos y servicios críticos, sus dependencias (personas, sistemas, proveedores) y el impacto de su interrupción a lo largo del tiempo. De él salen los objetivos de recuperación:
+    - **RTO** (*Recovery Time Objective*): tiempo máximo admisible hasta recuperar el servicio.
+    - **RPO** (*Recovery Point Objective*): pérdida máxima admisible de datos; determina la frecuencia de las copias de seguridad (tema 45).
+    - **MTPD** (*Maximum Tolerable Period of Disruption*): periodo máximo tolerable de interrupción; el RTO debe quedar por debajo.
+- **Plan de continuidad de negocio (PCN)**: establece las acciones para mantener los servicios esenciales durante la interrupción: funciones y responsabilidades, activación y comunicación, y medios alternativos. Se apoya en:
+    - **Plan de contingencia TIC o de recuperación ante desastres (DRP)**: la vertiente tecnológica; restauración de sistemas y datos dentro de los objetivos RTO/RPO, normalmente sobre un centro de respaldo (tema 43).
+    - **Plan de emergencia**: la respuesta inmediata a la crisis (protección de las personas, evaluación inicial de daños).
+- **Pruebas y mejora continua**: los planes se prueban periódicamente (del ejercicio de mesa al simulacro completo de conmutación) y se revisan tras cada prueba, incidente real o cambio relevante.
+
+En el ENS, la continuidad es el bloque **op.cont (continuidad del servicio)** del marco operacional (Anexo II del RD 311/2022), que aplica según el nivel de la dimensión de **disponibilidad**:
+
+| Medida | Contenido | Aplica |
+| --- | --- | --- |
+| **op.cont.1** Análisis de impacto | determinar los requisitos de disponibilidad de cada servicio y los elementos críticos para prestarlo | **MEDIO y ALTO** |
+| **op.cont.2** Plan de continuidad | acciones ante la interrupción: funciones y responsabilidades, entrada en servicio de los medios alternativos, acuerdos o contratos con proveedores, formación; integrado con los demás planes de continuidad de la organización. Refuerzos R1 (plan de emergencia y contingencia) y R2 (comprobación de integridad tras una caída) | solo **ALTO** |
+| **op.cont.3** Pruebas periódicas | localizar y corregir errores o deficiencias del plan de continuidad | solo **ALTO** |
+| **op.cont.4** Medios alternativos | servicios de terceros, instalaciones, personal, equipamiento y comunicaciones alternativos, con **tiempo máximo de entrada en funcionamiento** y las mismas garantías de seguridad que los originales; refuerzo R1 (transición automática) | solo **ALTO** |
 
 ## Fuentes {.unnumbered .unlisted}
 
-- Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (texto consolidado, última modificación 6 de noviembre de 2024), arts. 8, 33 y 34 y Anexo II (op.exp.7, op.exp.8, op.exp.9, op.mon).
+- Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (texto consolidado, última modificación 6 de noviembre de 2024), arts. 8, 33 y 34 y Anexo II (op.exp.7, op.exp.8, op.exp.9, op.cont, op.mon).
+- ISO 22301:2019, Security and resilience. Business continuity management systems. Requirements; ISO 22313:2020 (directrices).
 - Resolución de 13 de abril de 2018, de la Secretaría de Estado de Función Pública, por la que se aprueba la Instrucción Técnica de Seguridad de Notificación de Incidentes de Seguridad.
 - CCN-STIC 817, Esquema Nacional de Seguridad. Gestión de Ciberincidentes (ed. abril 2020; edición vigente a julio de 2026).
 - Guía Nacional de Notificación y Gestión de Ciberincidentes, aprobada por el Consejo Nacional de Ciberseguridad el 21 de febrero de 2020.

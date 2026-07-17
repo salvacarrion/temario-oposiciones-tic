@@ -1,12 +1,10 @@
 # Configuración e ÍNDICE del libro. Al añadir/reordenar capítulos, edita
 # la lista book.chapters (y renumera los ficheros NN-*.md si hace falta).
 #
-# El índice objetivo completo (92 capítulos, con subtemas) está en PLAN.md.
-# Los capítulos aún sin contenido NO se listan aquí (no publicar esqueletos),
-# por eso hay huecos en la numeración de ficheros (17, 22, 33, 39, 46, 67,
-# 69, 85-92): la numeración visible del libro se compactará sola hasta que
-# existan. Los bocetos de la fase 4 sí se listan (llevan «⚠️ » en el nav de
-# mkdocs.yml hasta pasar su revisión).
+# El índice objetivo completo (108 capítulos, con subtemas) está en PLAN.md.
+# Desde el 17-jul-2026 no quedan huecos: los 108 ficheros existen. Los
+# bocetos de la fase 4 se listan con «⚠️ » en el nav de mkdocs.yml hasta
+# pasar su revisión.
 
 project:
   type: book
@@ -52,10 +50,12 @@ book:
     - part: "Bloque II — Sociedad digital y gestión TIC"
       chapters:
         - src/16-sociedad-digital.md
+        - src/17-gobernanza-y-planificacion-estrategica-tic.md
         - src/18-gestion-de-los-servicios-tic.md
         - src/19-direccion-y-gestion-de-proyectos.md
         - src/20-analisis-de-procesos.md
         - src/21-metodologias-agiles-y-escalado-agil.md
+        - src/22-contratacion-publica-de-bienes-y-servicios-tic.md
     - part: "Bloque III — Ingeniería del software"
       chapters:
         - src/23-analisis-y-diseno-de-aplicaciones.md
@@ -70,6 +70,7 @@ book:
         - src/30-analisis-y-gestion-de-riesgos.md
         - src/31-gestion-de-ciberincidentes.md
         - src/32-desarrollo-seguro-de-aplicaciones.md
+        - src/33-auditoria-informatica.md
     - part: "Bloque V — Datos, IA y tecnologías emergentes"
       chapters:
         - src/34-inteligencia-artificial.md
@@ -77,6 +78,7 @@ book:
         - src/36-bases-de-datos.md
         - src/37-gestion-de-datos-corporativos-y-big-data.md
         - src/38-gobernanza-del-dato.md
+        - src/39-datos-abiertos-y-espacios-de-datos.md
         - src/40-apis-y-apificacion.md
         - src/41-automatizacion-robotica-de-procesos.md
         - src/42-blockchain-y-otras-tecnologias-emergentes.md
@@ -85,69 +87,85 @@ book:
         - src/43-centros-de-proceso-de-datos.md
         - src/44-virtualizacion-y-contenedores.md
         - src/45-sistemas-de-almacenamiento.md
-        - src/47-computacion-en-la-nube-y-altas-prestaciones.md
-        - src/48-puesto-de-trabajo-tic.md
+        - src/46-sistemas-operativos.md
+        - src/47-administracion-de-sistemas-gnu-linux.md
+        - src/48-administracion-de-sistemas-windows-y-directorio-activo.md
+        - src/49-servicios-de-infraestructura.md
+        - src/50-proteccion-juridica-del-software-y-licencias.md
+        - src/51-computacion-en-la-nube-y-altas-prestaciones.md
+        - src/52-puesto-de-trabajo-tic.md
     - part: "Bloque VII — Protección de datos y administración electrónica"
       chapters:
-        - src/49-proteccion-de-datos-personales.md
-        - src/50-administracion-electronica.md
-        - src/51-documento-y-expediente-electronico.md
+        - src/53-proteccion-de-datos-personales.md
+        - src/54-administracion-electronica.md
+        - src/55-documento-y-expediente-electronico.md
     - part: "Bloque VIII — Desarrollo web y de aplicaciones"
       chapters:
-        - src/52-arquitecturas-de-desarrollo-web.md
-        - src/53-tecnologias-web.md
-        - src/54-accesibilidad-y-usabilidad.md
-        - src/55-desarrollo-de-aplicaciones-moviles.md
-        - src/56-soa-servicios-web-y-microservicios.md
-        - src/57-programacion.md
+        - src/56-arquitecturas-de-desarrollo-web.md
+        - src/57-tecnologias-web.md
+        - src/58-accesibilidad-y-usabilidad.md
+        - src/59-desarrollo-de-aplicaciones-moviles.md
+        - src/60-soa-servicios-web-y-microservicios.md
+        - src/61-programacion.md
     - part: "Bloque IX — Interoperabilidad y confianza digital"
       chapters:
-        - src/58-esquema-nacional-de-interoperabilidad.md
-        - src/59-infraestructuras-y-servicios-comunes-de-interoperabilidad.md
-        - src/60-criptografia.md
-        - src/61-identificacion-y-firma-electronica.md
-        - src/62-sistemas-de-informacion-geografica.md
-        - src/63-infraestructuras-de-datos-espaciales.md
+        - src/62-esquema-nacional-de-interoperabilidad.md
+        - src/63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md
+        - src/64-criptografia.md
+        - src/65-identificacion-y-firma-electronica.md
+        - src/66-sistemas-de-informacion-geografica.md
+        - src/67-infraestructuras-de-datos-espaciales.md
+        - src/68-comercio-electronico-y-factura-electronica.md
     - part: "Bloque X — Redes y comunicaciones"
       chapters:
-        - src/64-modelos-osi-y-tcp-ip.md
-        - src/65-protocolos-de-comunicaciones.md
-        - src/66-redes-de-computadores.md
-        - src/68-virtualizacion-de-redes.md
-        - src/70-redes-de-emergencia.md
-        - src/71-redes-inalambricas-y-5g.md
-        - src/72-internet-de-las-cosas-y-redes-de-sensores.md
-        - src/73-ciudades-inteligentes.md
-        - src/74-seguridad-en-las-comunicaciones.md
+        - src/69-modelos-osi-y-tcp-ip.md
+        - src/70-protocolos-de-comunicaciones.md
+        - src/71-redes-de-computadores.md
+        - src/72-cableado-estructurado-y-medios-de-transmision.md
+        - src/73-virtualizacion-de-redes.md
+        - src/74-redes-de-transporte-voz-y-audiovisuales.md
+        - src/75-redes-de-emergencia.md
+        - src/76-redes-inalambricas-y-5g.md
+        - src/77-internet-de-las-cosas-y-redes-de-sensores.md
+        - src/78-ciudades-inteligentes.md
+        - src/79-seguridad-en-las-comunicaciones.md
     - part: "Bloque XI — Administración de la Generalitat"
       chapters:
-        - src/75-agenda-digital-valenciana.md
-        - src/76-seguridad-de-la-informacion-en-la-generalitat.md
-        - src/77-administracion-electronica-y-plataformas-de-la-generalitat.md
+        - src/80-agenda-digital-valenciana.md
+        - src/81-seguridad-de-la-informacion-en-la-generalitat.md
+        - src/82-administracion-electronica-y-plataformas-de-la-generalitat.md
     - part: "Bloque XII — Sanidad"
       chapters:
-        - src/78-ley-general-de-sanidad.md
-        - src/79-cohesion-y-calidad-del-sns-y-cartera-de-servicios.md
-        - src/80-salud-de-la-comunitat-valenciana.md
-        - src/81-organizacion-de-la-conselleria-de-sanidad.md
-        - src/82-personal-estatutario-ley-55-2003.md
-        - src/83-autonomia-del-paciente-ley-41-2002.md
-        - src/84-documentacion-clinica-normalizada.md
-        - src/85-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md
-        - src/86-estandares-de-interoperabilidad-de-la-hce.md
-        - src/87-normalizacion-en-informatica-sanitaria.md
-        - src/88-imagen-medica-digital-dicom-pacs-ris.md
-        - src/89-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md
-        - src/90-productos-sanitarios-mdr-ivdr-y-software-sanitario.md
+        - src/83-ley-general-de-sanidad.md
+        - src/84-cohesion-y-calidad-del-sns-y-cartera-de-servicios.md
+        - src/85-salud-de-la-comunitat-valenciana.md
+        - src/86-organizacion-de-la-conselleria-de-sanidad.md
+        - src/87-personal-estatutario-ley-55-2003.md
+        - src/88-autonomia-del-paciente-ley-41-2002.md
+        - src/89-documentacion-clinica-normalizada.md
+        - src/90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md
+        - src/91-estandares-de-interoperabilidad-de-la-hce.md
+        - src/92-normalizacion-en-informatica-sanitaria.md
+        - src/93-imagen-medica-digital-dicom-pacs-ris.md
+        - src/94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md
+        - src/95-productos-sanitarios-mdr-ivdr-y-software-sanitario.md
     - part: "Bloque XIII — Administración local"
       chapters:
-        - src/91-bases-del-regimen-local-ley-7-1985.md
-        - src/92-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md
-        - src/93-personal-al-servicio-de-las-entidades-locales.md
-        - src/94-contratacion-en-las-entidades-locales.md
-        - src/95-formas-de-actividad-y-servicios-publicos-locales.md
-        - src/96-sistemas-de-informacion-corporativos-de-la-administracion-local.md
-        - src/97-administracion-electronica-local.md
+        - src/96-bases-del-regimen-local-ley-7-1985.md
+        - src/97-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md
+        - src/98-personal-al-servicio-de-las-entidades-locales.md
+        - src/99-contratacion-en-las-entidades-locales.md
+        - src/100-formas-de-actividad-y-servicios-publicos-locales.md
+        - src/101-sistemas-de-informacion-corporativos-de-la-administracion-local.md
+        - src/102-administracion-electronica-local.md
+    - part: "Bloque XIV — Universidades"
+      chapters:
+        - src/103-sistema-universitario-losu.md
+        - src/104-sistema-universitario-valenciano-ley-4-2007.md
+        - src/105-adecuacion-al-ens-en-universidades-ccn-stic-881.md
+        - src/106-rediris-e-identidad-federada.md
+        - src/107-e-learning-plataformas-y-estandares.md
+        - src/108-administracion-electronica-universitaria.md
   appendices:
     - src/referencias.md
 

@@ -4,7 +4,7 @@
 
 La inteligencia artificial (IA) es la rama de la informática que estudia cómo construir sistemas capaces de realizar tareas que, cuando las realiza una persona, exigen inteligencia: percibir, razonar, aprender, comunicarse en lenguaje natural y tomar decisiones. No es una técnica única, sino un campo cuyo enfoque dominante ha ido cambiando: de los sistemas basados en reglas y conocimiento experto de los años 70-80 al aprendizaje a partir de datos que impera desde 2012.
 
-- **IA estrecha (narrow AI)**: sistemas especializados en una tarea o dominio concreto (traducir, detectar fraude, conducir). Toda la IA desplegada hoy es estrecha, incluidos los grandes modelos de lenguaje.
+- **IA estrecha** (*narrow AI*): sistemas especializados en una tarea o dominio concreto (traducir, detectar fraude, conducir). Toda la IA desplegada hoy es estrecha, incluidos los grandes modelos de lenguaje.
 - **IA general (AGI)**: hipotético sistema capaz de desempeñar cualquier tarea intelectual humana con competencia equivalente. Es el objetivo declarado de los grandes laboratorios, pero no existe consenso sobre su definición operativa ni sobre plazos.
 - **Relación entre disciplinas**: la IA engloba el **aprendizaje automático** (*machine learning*) y este, a su vez, el **aprendizaje profundo** (*deep learning*). Los grandes modelos de lenguaje son un caso particular de aprendizaje profundo.
 
@@ -23,9 +23,9 @@ Hitos principales:
 | **2016** | **AlphaGo** (DeepMind) derrota a Lee Sedol al go mediante aprendizaje por refuerzo |
 | **2017** | Google publica la arquitectura **Transformer** ("Attention Is All You Need") |
 | **2022** | **ChatGPT** (noviembre) populariza la IA generativa |
-| 2024- | Modelos de razonamiento y agentes: la computación se desplaza a la inferencia |
+| 2024- | Modelos de razonamiento y agentes: parte del cómputo se desplaza del entrenamiento a la inferencia |
 
-El auge actual se explica por la confluencia de tres factores: **datos masivos** (ImageNet aportó más de **14 millones** de imágenes etiquetadas; la web, billones de palabras), **hardware paralelo** (las GPU abarataron órdenes de magnitud el entrenamiento) y **mejoras algorítmicas** (ReLU, técnicas de regularización, el Transformer). La lectura de fondo la formuló Sutton en *The Bitter Lesson* (2019): a largo plazo, los métodos generales que escalan con la computación acaban superando a los sistemas construidos sobre conocimiento experto codificado a mano.
+El auge actual se explica por la confluencia de tres factores: **datos masivos** (ImageNet aportó más de **14 millones** de imágenes etiquetadas; la web, billones de palabras), **hardware paralelo** (las GPU abarataron el entrenamiento en varios órdenes de magnitud) y **mejoras algorítmicas** (ReLU, técnicas de regularización, el Transformer). Esta evolución la resume Sutton en *The Bitter Lesson* (2019): a largo plazo, los métodos generales que escalan con la computación acaban superando a los sistemas construidos sobre conocimiento experto codificado a mano.
 
 ## Aprendizaje automático (machine learning)
 
@@ -36,14 +36,14 @@ El aprendizaje automático sustituye la programación explícita de reglas por e
 - **Aprendizaje semisupervisado**: combina pocos datos etiquetados con muchos sin etiquetar, cuando etiquetar es caro (transcripciones médicas, imágenes anotadas por expertos).
 - **Aprendizaje autosupervisado**: el propio dato genera la etiqueta, sin anotación humana: predecir la palabra siguiente de un texto o la parte oculta de una imagen. Es la base del preentrenamiento de los grandes modelos de lenguaje y lo que permite aprovechar corpus masivos sin etiquetar.
 - **Aprendizaje por refuerzo**: un agente aprende por ensayo y error interactuando con un entorno que le devuelve recompensas o penalizaciones. Es la técnica tras **AlphaGo** y, combinado con preferencias humanas (RLHF), parte esencial del ajuste de los asistentes actuales.
-- **Aprendizaje por transferencia (transfer learning)**: reutilizar un modelo entrenado en una tarea para adaptarlo (*fine-tuning*) a otra relacionada con muchos menos datos y coste.
+- **Aprendizaje por transferencia** (*transfer learning*): reutilizar un modelo entrenado en una tarea para adaptarlo (*fine-tuning*) a otra relacionada con muchos menos datos y coste.
     - **Destilación de conocimiento**: entrenar un modelo pequeño (*student*) para imitar a uno grande (*teacher*), reduciendo tamaño y coste de inferencia con una pérdida de calidad limitada.
 
 Conceptos transversales de evaluación, imprescindibles en cualquier proyecto:
 
 - **Partición de datos**: entrenamiento (ajustar parámetros), validación (elegir hiperparámetros) y test (estimar el rendimiento real sobre datos nunca vistos).
-- **Sobreajuste (overfitting)**: el modelo memoriza el conjunto de entrenamiento y falla al generalizar; el **infraajuste** es el defecto contrario (modelo demasiado simple). Se combaten con regularización, parada temprana y más datos.
-- **Métricas**: exactitud (*accuracy*), precisión, exhaustividad (*recall*) y **F1** (media armónica de las dos anteriores), derivadas de la matriz de confusión. En problemas desbalanceados (fraude, diagnóstico) la exactitud engaña: un clasificador que siempre dice "sano" acierta el 99 % y no sirve para nada.
+- **Sobreajuste** (*overfitting*): el modelo memoriza el conjunto de entrenamiento y falla al generalizar; el **subajuste** (*underfitting*) es el defecto contrario (modelo demasiado simple). Se combaten con regularización, parada temprana y más datos.
+- **Métricas**: exactitud (*accuracy*), precisión (*precision*), *recall* (exhaustividad) y **F1** (media armónica de precisión y *recall*), derivadas de la matriz de confusión. En problemas desbalanceados (fraude, diagnóstico) la exactitud resulta engañosa: un clasificador que siempre predice "sano" alcanza un 99 % de exactitud sin detectar ningún caso positivo; por eso se emplean precisión, *recall* y F1.
 
 ## Aprendizaje profundo y redes neuronales
 
@@ -59,12 +59,12 @@ El aprendizaje profundo emplea redes de neuronas artificiales organizadas en muc
 
 Un gran modelo de lenguaje (LLM, *large language model*) es un Transformer de tipo *decoder* con miles de millones de parámetros entrenado para predecir el siguiente **token** (unidad mínima de texto, del orden de una subpalabra: en español, una palabra son ~1,5-2 tokens). De ese objetivo tan simple, aplicado a escala suficiente, emergen capacidades generales: traducción, resumen, clasificación, extracción de información, generación de código o conversación. El entrenamiento moderno tiene fases bien diferenciadas:
 
-- **Preentrenamiento**: predicción del siguiente token sobre corpus de billones de tokens (texto web curado, código, libros). Produce un **modelo base**: un "autocompletar erudito" que continúa texto pero no sigue instrucciones.
-- **Post-entrenamiento**: convierte el modelo base en asistente útil y seguro.
-    - **Ajuste supervisado (SFT)**: se afina con ejemplos de pares instrucción-respuesta de alta calidad.
-    - **Aprendizaje por refuerzo con retroalimentación humana (RLHF)**: se entrena un modelo de recompensa a partir de preferencias humanas entre respuestas y se optimiza el LLM contra él. Variantes: **DPO** (optimización directa de preferencias, sin modelo de recompensa explícito) y RLAIF (retroalimentación generada por otra IA).
+- **Preentrenamiento** (*pre-training*): predicción del siguiente token sobre corpus de billones de tokens (texto web curado, código, libros). Produce un **modelo base**, que continúa cualquier texto de forma plausible pero no sigue instrucciones ni dialoga (informalmente, un "autocompletar" de escala masiva).
+- **Posentrenamiento** (*post-training*): convierte el modelo base en un asistente útil y seguro.
+    - **SFT** (*supervised fine-tuning*, ajuste supervisado): se afina el modelo con pares instrucción-respuesta de alta calidad.
+    - **RLHF** (*reinforcement learning from human feedback*, aprendizaje por refuerzo con retroalimentación humana): se entrena un modelo de recompensa a partir de preferencias humanas entre respuestas y se optimiza el LLM contra él. Variantes: **DPO** (*direct preference optimization*, sin modelo de recompensa explícito) y **RLAIF** (retroalimentación generada por otra IA).
 - **Ajuste eficiente (PEFT/LoRA)**: en lugar de reentrenar todos los pesos, se insertan adaptadores de bajo rango sobre el modelo congelado. Permite especializar un modelo a un dominio (jurídico, sanitario) entrenando <1 % de los parámetros, con una fracción mínima del coste.
-- **In-context learning y prompting**: el modelo también "aprende" en tiempo de inferencia a partir de los ejemplos e instrucciones incluidos en el propio contexto, sin modificar ningún parámetro.
+- ***In-context learning* y *prompting***: el modelo también "aprende" en tiempo de inferencia a partir de los ejemplos e instrucciones incluidos en el propio contexto, sin modificar ningún parámetro.
 
 Arquitecturas y capacidades actuales:
 
@@ -72,20 +72,20 @@ Arquitecturas y capacidades actuales:
 - **Modelos multimodales**: procesan y generan texto, imagen y audio de forma nativa. Habilitan el **procesamiento inteligente de documentos** (IDP): extracción automática de datos de facturas, formularios y expedientes combinando visión y lenguaje. Fuera del lenguaje, la generación de imagen y vídeo se apoya en **modelos de difusión** (antes, GAN).
 - **Ventana de contexto**: cantidad de tokens que el modelo maneja en una consulta. Ha pasado de ~**2.000** tokens (GPT-3, 2020) a **128.000-1.000.000+** en los modelos actuales: caben expedientes completos, bases de código o libros enteros.
 
-Las **leyes de escalado** (Kaplan et al., 2020) mostraron que el rendimiento mejora de forma predecible al aumentar parámetros, datos y computación; el estudio **Chinchilla** (2022) las refinó: para un presupuesto dado conviene entrenar modelos más pequeños con más datos (~**20 tokens por parámetro**). El preentrenamiento puro muestra hoy rendimientos decrecientes, y la frontera se ha desplazado al post-entrenamiento, el razonamiento en inferencia y los agentes.
+Las **leyes de escalado** (Kaplan et al., 2020) mostraron que el rendimiento mejora de forma predecible al aumentar parámetros, datos y computación; el estudio **Chinchilla** (2022) las refinó: para un presupuesto dado conviene entrenar modelos más pequeños con más datos (~**20 tokens por parámetro**). Ampliar solo el preentrenamiento ofrece hoy rendimientos decrecientes, y las mejoras recientes proceden sobre todo del posentrenamiento, del razonamiento en inferencia y de los agentes.
 
-Por último, el mercado se divide entre modelos **de pesos abiertos** (Llama, Mistral, Qwen, DeepSeek), descargables y ejecutables en infraestructura propia, y modelos **cerrados** servidos por API (GPT, Claude, Gemini). Pesos abiertos no equivale a *open source*: rara vez se publican los datos y la receta de entrenamiento. La dimensión de **soberanía tecnológica** es creciente: en España, la iniciativa pública **ALIA** (Gobierno de España y Barcelona Supercomputing Center, sobre el superordenador MareNostrum 5) desarrolla modelos abiertos entrenados en castellano y lenguas cooficiales.
+Por último, el mercado se divide entre modelos **de pesos abiertos** (Llama, Mistral, Qwen, DeepSeek), descargables y ejecutables en infraestructura propia, y modelos **cerrados** servidos por API (GPT, Claude, Gemini). Pesos abiertos no equivale a *open source*: rara vez se publican los datos y la receta de entrenamiento. A esta elección se añade la dimensión de **soberanía tecnológica**: en España, la iniciativa pública **ALIA** (Gobierno de España y Barcelona Supercomputing Center, sobre el superordenador MareNostrum 5) desarrolla modelos abiertos entrenados en castellano y lenguas cooficiales.
 
 ## Modelos de razonamiento y panorama actual
 
-La última generación de modelos añade un ingrediente nuevo: antes de responder, el modelo "piensa". Genera una cadena de razonamiento interna en la que planifica, prueba enfoques, se verifica y se corrige, y solo después emite la respuesta visible. Ese bucle de pensamiento no se programa: se entrena.
+Los modelos de razonamiento generan, antes de emitir la respuesta visible, una cadena de razonamiento interna en la que planifican, prueban enfoques, se verifican y se corrigen. Este comportamiento no se programa de forma explícita, sino que se induce durante el entrenamiento.
 
-- **Cadena de pensamiento (*chain-of-thought*)**: razonar paso a paso por escrito antes de dar la respuesta final. Se descubrió como técnica de *prompting* (Wei et al., 2022): pedir al modelo que muestre sus pasos mejora drásticamente el rendimiento en problemas complejos. Hoy es un comportamiento entrenado y en gran parte interno.
-- **Recompensas verificables (RLVR)**: el razonamiento se entrena con aprendizaje por refuerzo sobre problemas cuya solución puede comprobarse automáticamente (matemáticas con resultado exacto, código que pasa pruebas): el modelo explora estrategias y se refuerzan las cadenas que conducen a la respuesta correcta, sin necesidad de anotadores humanos. Lo estrenó **o1** (OpenAI, **2024**); **DeepSeek-R1** (**enero de 2025**) publicó la receta con pesos abiertos y demostró que era reproducible a una fracción del coste.
-- **Presupuesto de pensamiento (*thinking budget*)**: la computación dedicada a razonar es configurable: más tokens de pensamiento mejoran los problemas difíciles a cambio de latencia y coste (*test-time compute*). Es el segundo eje de escalado: además de entrenar modelos mayores, dejarles pensar más en inferencia. Los modelos actuales son híbridos: deciden (o se les indica) cuánto pensar según la dificultad.
-- **Benchmarks**: los clásicos (MMLU) están saturados por los modelos de frontera; las referencias actuales son **SWE-bench Verified** (resolver *issues* reales de GitHub), **GPQA Diamond** (ciencia de nivel de doctorado), **HLE** (*Humanity's Last Exam*, conocimiento experto multidisciplinar) y **ARC-AGI-2** (razonamiento abstracto).
+- **Cadena de pensamiento (*chain-of-thought*)**: razonar paso a paso por escrito antes de dar la respuesta final. Se descubrió como técnica de *prompting* (Wei et al., 2022): pedir al modelo que muestre sus pasos mejora sustancialmente el rendimiento en problemas complejos. Hoy es un comportamiento entrenado y en gran parte interno.
+- **RLVR** (*reinforcement learning with verifiable rewards*, recompensas verificables): el razonamiento se entrena con aprendizaje por refuerzo sobre problemas cuya solución puede comprobarse automáticamente (matemáticas con resultado exacto, código que pasa pruebas): el modelo explora estrategias y se refuerzan las cadenas que conducen a la respuesta correcta, sin necesidad de anotadores humanos. Lo estrenó **o1** (OpenAI, **2024**); **DeepSeek-R1** (**enero de 2025**) publicó el método completo con pesos abiertos y demostró que era reproducible a una fracción del coste.
+- ***Test-time compute***: la computación dedicada a razonar en inferencia es configurable mediante el presupuesto de pensamiento (*thinking budget*): más tokens de razonamiento mejoran el resultado en los problemas difíciles a cambio de más latencia y coste. Constituye el segundo eje de escalado: además de entrenar modelos mayores, aumentar el cómputo dedicado a cada respuesta. Los modelos actuales son híbridos: deciden (o se les indica) cuánto razonar según la dificultad.
+- **Benchmarks**: los clásicos (MMLU) están saturados por los modelos de frontera (los más capaces de cada momento); las referencias actuales son **SWE-bench Verified** (resolver *issues* reales de GitHub), **GPQA Diamond** (ciencia de nivel de doctorado), **HLE** (*Humanity's Last Exam*, conocimiento experto multidisciplinar) y **ARC-AGI-2** (razonamiento abstracto).
 
-En cuanto al panorama concreto (foto a **mediados de 2026**; el ritmo de reemplazo es de meses), conviene saber que desde GPT-4 los laboratorios cerrados no publican el número de parámetros de sus modelos: para **GPT-4** la estimación filtrada (nunca confirmada) fue de **~1,8 billones** con arquitectura MoE, y la escala de los modelos abiertos actuales es coherente con esa cifra. Todos los modelos de frontera son hoy MoE, razonadores y multimodales, con contextos de **1-2 millones** de tokens.
+Panorama a **mediados de 2026**: desde GPT-4, los laboratorios cerrados no publican el número de parámetros de sus modelos. Para **GPT-4**, la estimación filtrada (nunca confirmada) fue de **~1,8 billones** con arquitectura MoE, y la escala de los modelos abiertos actuales es coherente con esa cifra. Todos los modelos de frontera son hoy MoE, razonadores y multimodales, con contextos de **1-2 millones** de tokens.
 
 | Modelo | Laboratorio | Pesos | Parámetros (totales / activos) |
 | --- | --- | --- | --- |
@@ -98,52 +98,52 @@ En cuanto al panorama concreto (foto a **mediados de 2026**; el ritmo de reempla
 | Llama 4 Maverick | Meta | Abiertos | 400.000 M / 17.000 M |
 | Qwen3-235B | Alibaba | Abiertos | 235.000 M / 22.000 M |
 
-La lección estable (los nombres caducan; las tendencias no): la arquitectura dominante es MoE, el razonamiento en inferencia es el segundo eje de escalado, los pesos abiertos siguen a la frontera cerrada con 6-12 meses de retraso y una fracción del coste, y la competición se ha desplazado del modelo aislado al sistema completo (herramientas, agentes, integración).
+Más allá de los modelos concretos, que se renuevan cada pocos meses, las tendencias de fondo son estables: la arquitectura dominante es MoE, el razonamiento en inferencia es el segundo eje de escalado, los modelos de pesos abiertos alcanzan a la frontera cerrada con 6-12 meses de retraso y una fracción del coste, y la competencia se ha desplazado del modelo aislado al sistema completo (herramientas, agentes, integración).
 
 ## Infraestructura, consumo y costes
 
-Detrás de cada modelo hay una infraestructura de escala industrial: entrenar un modelo de frontera moviliza decenas de miles de aceleradores durante meses, y servirlo a millones de usuarios exige flotas de inferencia optimizadas al milímetro. Los elementos clave:
+El entrenamiento y el servicio de los grandes modelos requieren una infraestructura específica: entrenar un modelo de frontera moviliza decenas de miles de aceleradores durante meses, y servirlo a millones de usuarios exige una flota de inferencia muy optimizada. Los elementos clave:
 
-- **Aceleradores**: GPU de centro de datos (NVIDIA H100/B200), TPU (Google) y, en el extremo cliente, NPU integradas. Lo escaso no son los FLOPS sino la memoria **HBM** apilada junto al chip: su capacidad y ancho de banda dictan qué modelos caben y a qué velocidad responden.
-- **Hardware heterogéneo**: la CPU orquesta, la GPU calcula y las DPU/SmartNIC mueven datos; incluso las dos fases de la inferencia (*prefill*, que procesa el contexto, y *decode*, que genera token a token) se sirven en grupos de hardware distintos por tener perfiles opuestos.
-- **Interconexión**: NVLink (~**900 GB/s** por GPU) dentro del nodo e InfiniBand o Ethernet de 400-800 Gb/s entre nodos. El entrenamiento distribuido vale lo que valga su red: miles de GPU sincronizando gradientes constantemente.
+- **Aceleradores**: GPU de centro de datos (NVIDIA H100/B200), TPU (Google) y, en el extremo cliente, NPU integradas. El recurso escaso no es la capacidad de cálculo (FLOPS), sino la memoria **HBM** (*high bandwidth memory*) apilada junto al chip: su capacidad y ancho de banda determinan qué modelos caben y a qué velocidad responden.
+- **Hardware heterogéneo**: la CPU orquesta, la GPU calcula y las DPU/SmartNIC mueven datos; incluso las dos fases de la inferencia se sirven en grupos de hardware distintos por tener perfiles opuestos: el *prefill* (procesar el contexto de entrada) está limitado por capacidad de cálculo, y el *decode* (generar la respuesta token a token), por ancho de banda de memoria.
+- **Interconexión**: NVLink (~**900 GB/s** por GPU) dentro del nodo e InfiniBand o Ethernet de 400-800 Gb/s entre nodos. El rendimiento del entrenamiento distribuido depende directamente de la red, porque miles de GPU deben sincronizar gradientes de forma constante.
 - **Racks y refrigeración**: de los ~5-10 kW por rack del centro de datos clásico se ha pasado a **40-120+ kW** en racks de IA (un rack GB200 NVL72 ronda los **120 kW**), lo que obliga a refrigeración líquida y rediseño eléctrico completo.
 
-Los cuellos de botella reales del sector, por orden de dureza:
+Los principales cuellos de botella del sector:
 
-- **Memoria ("memory wall")**: la inferencia es *memory-bound*: generar cada token exige releer todos los pesos desde la HBM, así que limita el ancho de banda, no la capacidad de cálculo.
+- **Memoria (*memory wall*)**: la inferencia es *memory-bound* (limitada por memoria): generar cada token exige releer todos los pesos desde la HBM, de modo que el factor limitante es el ancho de banda de la memoria, no la capacidad de cálculo.
 - **Energía**: los centros de datos consumieron ~**415 TWh en 2024** (en torno al **1,5 %** de la electricidad mundial) y la IEA proyecta que la cifra casi se duplique en 2030. La disponibilidad de potencia eléctrica (no de chips) es ya el principal límite de crecimiento.
-- **Datos**: el texto público de calidad es finito; la frontera depende cada vez más de datos sintéticos y de una curación agresiva.
+- **Datos**: el texto público de calidad es finito; los modelos de frontera dependen cada vez más de datos sintéticos y de un filtrado y curación estrictos de los corpus.
 
 Para abaratar la inferencia se combinan varias técnicas:
 
 - **Cuantización**: reducir la precisión numérica de los pesos: FP32 (4 bytes/parámetro) → FP16/BF16 (2) → INT8 (1) → INT4 (0,5). Hasta 8 bits la pérdida de calidad es mínima; a 4 bits, moderada. Divide la memoria necesaria y multiplica la velocidad. Puede aplicarse tras el entrenamiento (PTQ) o durante él (QAT).
 - **KV cache**: memoriza los cálculos de atención de los tokens ya procesados para no repetirlos; su tamaño crece con la longitud de contexto y el número de usuarios concurrentes, y compite por la misma memoria que los pesos.
-- ***Batching* continuo y decodificación especulativa**: agrupar peticiones de muchos usuarios para amortizar cada lectura de pesos, y usar un modelo pequeño que "borra" varios tokens que el grande verifica de golpe.
+- ***Continuous batching* y decodificación especulativa**: agrupar las peticiones de muchos usuarios en lotes para amortizar cada lectura de los pesos; y emplear un modelo pequeño (*draft model*) que propone varios tokens candidatos que el modelo grande verifica en una sola pasada.
 
-En cuanto a costes: un entrenamiento de frontera supera los **100 millones de dólares** solo en computación (estimación para GPT-4); una GPU de centro de datos cuesta decenas de miles de euros y un servidor de 8 GPU, varios cientos de miles. A escala, la flota de inferencia acaba costando bastante más que el entrenamiento. Sobre esta base se plantea la decisión de despliegue **on-premise frente a nube/API**, con dos matices que suelen pasarse por alto:
+En cuanto a costes: un entrenamiento de frontera supera los **100 millones de dólares** solo en computación (estimación para GPT-4); una GPU de centro de datos cuesta decenas de miles de euros y un servidor de 8 GPU, varios cientos de miles. A escala, la flota de inferencia acaba costando bastante más que el entrenamiento. Sobre esta base se plantea la decisión de despliegue **on-premise frente a nube/API**, en la que pesan dos factores además del coste directo:
 
-- **El valor ya no está en los pesos, sino en el ecosistema.** Descargar un modelo abierto proporciona un motor, no un coche: la utilidad real viene del sistema que lo rodea (herramientas y agentes, RAG, evaluaciones continuas, filtros de seguridad, actualizaciones, integraciones), que los proveedores renuevan a un ritmo que una instalación aislada no puede seguir.
-- **Operar inferencia competitiva es extraordinariamente difícil.** Exprimir la utilización de una flota de GPU (kernels optimizados, planificación de *batching*, servicio desagregado, monitorización) es un problema de ingeniería en el que fallan incluso grandes organizaciones; los proveedores de API amortizan esa ingeniería entre millones de clientes.
+- **Ecosistema**: el valor no reside solo en los pesos, sino en el sistema que rodea al modelo (herramientas y agentes, RAG, evaluaciones continuas, filtros de seguridad, actualizaciones, integraciones), que los proveedores renuevan a un ritmo que una instalación aislada no puede seguir; descargar un modelo abierto proporciona el motor, no el vehículo completo.
+- **Operación de la inferencia**: maximizar la utilización de una flota de GPU (kernels optimizados, planificación de *batching*, servicio desagregado, monitorización) es un problema de ingeniería considerable; los proveedores de API amortizan esa ingeniería entre millones de clientes.
 
 El criterio práctico para una Administración: API o nube para capacidad general, modelos de pesos abiertos on-premise cuando la sensibilidad de los datos o la soberanía lo exijan, y arquitecturas híbridas como norma.
 
-Sobre sostenibilidad conviene manejar números y no titulares:
+En materia de sostenibilidad, las cifras de referencia son las siguientes:
 
-- **Energía por consulta**: una consulta de texto mediana consume ~**0,24-0,34 Wh** (mediciones de Google, agosto de 2025, y estimaciones de OpenAI): como una bombilla LED de 10 W encendida unos dos minutos. El impacto relevante no es la consulta individual, sino el agregado del sector y, sobre todo, el entrenamiento y el vídeo generativo.
-- **El consumo de agua**: los titulares de "medio litro por conversación" mezclan agua directa (refrigeración evaporativa) con agua indirecta (la usada en generar la electricidad) y parten de estimaciones antiguas. La medición directa actual ronda **0,26 ml por consulta** mediana (unas cinco gotas). El problema real es local y agregado: dónde se ubican los centros (zonas con estrés hídrico) y qué tecnología de refrigeración usan; los circuitos cerrados de refrigeración líquida apenas consumen agua.
+- **Energía por consulta**: una consulta de texto mediana consume ~**0,24-0,34 Wh** (mediciones de Google, agosto de 2025, y estimaciones de OpenAI), equivalente a una bombilla LED de 10 W encendida unos dos minutos. El impacto relevante no es la consulta individual, sino el agregado del sector y, sobre todo, el entrenamiento y el vídeo generativo.
+- **Consumo de agua**: las estimaciones divulgadas de "medio litro por conversación" mezclan el agua directa (refrigeración evaporativa) con la indirecta (la usada en generar la electricidad) y parten de datos antiguos; la medición directa actual ronda los **0,26 ml por consulta** mediana (unas cinco gotas). El impacto relevante es local y agregado: dónde se ubican los centros (zonas con estrés hídrico) y qué tecnología de refrigeración emplean; los circuitos cerrados de refrigeración líquida apenas consumen agua.
 - **PUE** (*Power Usage Effectiveness*): ratio entre la energía total del centro y la consumida por el equipamiento TI; los centros hiperescala modernos operan en torno a **1,1**.
 
 ## Alucinaciones y su mitigación
 
 Una alucinación es contenido falso o inventado que el modelo presenta con total seguridad y fluidez. No es un defecto puntual corregible, sino una consecuencia del objetivo de entrenamiento: el modelo optimiza la verosimilitud del texto, no su verdad, y además la mayoría de las evaluaciones puntúan mejor arriesgar una respuesta que admitir "no lo sé", con lo que el propio proceso de entrenamiento premia adivinar (OpenAI, *Why Language Models Hallucinate*, 2025). Sus causas: el objetivo de predicción del siguiente token, lagunas y errores del corpus, incentivos de evaluación mal diseñados y la decodificación estocástica.
 
-La mitigación más extendida es **RAG** (*retrieval-augmented generation*): recuperar documentos relevantes de una base de conocimiento (habitualmente vía búsqueda semántica sobre embeddings) e inyectarlos en el contexto para que el modelo responda apoyándose en ellos. Conviene ser preciso sobre qué resuelve y qué no:
+La mitigación más extendida es **RAG** (*retrieval-augmented generation*): recuperar documentos relevantes de una base de conocimiento (habitualmente vía búsqueda semántica sobre embeddings) e inyectarlos en el contexto para que el modelo responda apoyándose en ellos. Es importante delimitar qué problemas resuelve y cuáles no:
 
 - **RAG mitiga**: las lagunas de conocimiento del modelo, la desactualización (información posterior a su entrenamiento) y el acceso a datos privados de la organización; además permite citar las fuentes usadas.
 - **RAG no mitiga**: los errores de razonamiento; la infidelidad al contexto (el modelo puede contradecir o distorsionar lo que se le ha dado); los fallos del propio recuperador (si se recupera el documento equivocado, la respuesta será errónea con apariencia de fundamentada); ni los conflictos entre fuentes. RAG reduce las alucinaciones; no las elimina.
 
-El resto del arsenal realista:
+Otras técnicas de mitigación complementarias:
 
 - **Citación verificable**: obligar a que cada afirmación enlace con el fragmento de la fuente que la sustenta, de modo que un humano pueda auditarla.
 - **Abstención calibrada**: diseñar el sistema (y sus evaluaciones) para que rechazar o escalar una pregunta dudosa sea mejor que inventar.
@@ -151,13 +151,13 @@ El resto del arsenal realista:
 - **Guardrails y validación de salidas**: esquemas estructurados, reglas de negocio y filtros que comprueban la respuesta antes de usarla.
 - **Supervisión humana** en decisiones con efectos sobre terceros: en el sector público no es solo prudencia, sino exigencia del régimen de actuación administrativa automatizada y del Reglamento europeo de IA (tema 35).
 
-Igual de importante es saber qué **no** funciona: el *fine-tuning* especializa el estilo y el dominio, pero no convierte al modelo en veraz; fijar la temperatura a 0 lo hace determinista, no exacto; y prohibir las alucinaciones en el *prompt* es papel mojado.
+También hay que conocer las medidas que no resuelven el problema: el *fine-tuning* especializa el estilo y el dominio, pero no convierte al modelo en veraz; fijar la temperatura a 0 hace la salida determinista, no exacta; y las instrucciones del tipo "no inventes información" en el *prompt* tienen un efecto muy limitado.
 
 ## Agentes de IA
 
-Un agente es un modelo de lenguaje que opera en bucle sobre un objetivo: no responde y termina, sino que trabaja hasta completar la tarea. Supone el salto del "modelo que responde" al "sistema que trabaja", y es el patrón dominante desde 2025.
+Un agente es un sistema en el que un modelo de lenguaje opera en bucle para completar un objetivo: en lugar de generar una única respuesta, planifica, actúa mediante herramientas y evalúa los resultados hasta terminar la tarea. Es el patrón de aplicación dominante desde 2025.
 
-- **Bucle agéntico**: razonar sobre el estado de la tarea → planificar el siguiente paso → actuar mediante una herramienta → observar el resultado → reflexionar y corregir el plan; y vuelta a empezar hasta completar el objetivo o escalarlo a un humano. Lo formalizó el patrón **ReAct** (Yao et al., **2022**): intercalar trazas de razonamiento y acciones funciona mejor que razonar o actuar por separado.
+- **Bucle agéntico**: razonar sobre el estado de la tarea → planificar el siguiente paso → actuar mediante una herramienta → observar el resultado → reflexionar y corregir el plan; el ciclo se repite hasta completar el objetivo o escalarlo a un humano. Lo formalizó el patrón **ReAct** (Yao et al., **2022**): intercalar trazas de razonamiento y acciones funciona mejor que razonar o actuar por separado.
 
 Sus componentes:
 
@@ -166,21 +166,21 @@ Sus componentes:
 - **Contexto y memoria**: la ventana de contexto es la memoria de trabajo (instrucciones, historial de acciones y observaciones). Como es finita, los agentes de sesiones largas la compactan (resumen del trabajo hecho) y mantienen memoria persistente fuera de ella (ficheros de notas, bases vectoriales) que releen entre sesiones.
 - **Entorno**: el espacio sobre el que actúa, típicamente un repositorio de ficheros versionado.
 
-Patrones de diseño (Anthropic, "Building Effective Agents", **2024**); la regla práctica es usar la solución más simple que funcione:
+Patrones de diseño (Anthropic, "Building Effective Agents", **2024**), ordenados de menor a mayor autonomía; el criterio general es emplear la solución más simple que resuelva el problema:
 
-- ***Workflows***: cuando el problema es predecible, el LLM ocupa pasos fijos de un flujo predefinido: encadenamiento de *prompts*, enrutado, paralelización, orquestador-trabajadores y evaluador-optimizador.
+- ***Workflows***: cuando el problema es predecible, el LLM ocupa pasos fijos de un flujo predefinido: *prompt chaining* (encadenamiento), *routing* (enrutado), paralelización, *orchestrator-workers* y *evaluator-optimizer*.
 - **Agente autónomo**: el modelo dirige su propio proceso; se reserva para tareas abiertas donde no puede preverse el número de pasos.
 - **Multiagente**: un orquestador descompone el trabajo y lo delega en subagentes especializados con permisos y contexto acotados.
 
-El ejemplo de referencia de la categoría es **Claude Code** (Anthropic), un agente de terminal: explora un repositorio, edita ficheros, ejecuta comandos y pruebas, usa git y verifica su propio trabajo. Aunque nació para programar, cualquier corpus de trabajo estructurado como texto plano y versionado (código, pero también contratos, expedientes o temarios) se convierte en un espacio de trabajo agéntico; el rendimiento depende tanto de la estructura del repositorio (convenciones documentadas, fuentes de verdad explícitas, verificaciones automatizables) como del modelo.
+Un ejemplo representativo es **Claude Code** (Anthropic), un agente de terminal orientado al desarrollo de software: explora un repositorio, edita ficheros, ejecuta comandos y pruebas, usa git y verifica su propio trabajo. El mismo patrón es aplicable a cualquier corpus de trabajo en texto plano y versionado (código, pero también documentación técnica o expedientes).
 
 La **evaluación** de agentes no puntúa respuestas, sino tareas completadas de principio a fin: **SWE-bench Verified** (resolver *issues* reales de GitHub), **GAIA** (asistencia general con herramientas y web) y **OSWorld** (manejar un ordenador por su interfaz gráfica) son las referencias.
 
-Los agentes introducen un riesgo de seguridad específico: la **inyección de instrucciones** (*prompt injection*). Un contenido no confiable que el agente procesa (una página web, un correo, un documento adjunto) puede contener instrucciones maliciosas que el modelo ejecute como si vinieran del usuario legítimo. Las defensas son arquitectónicas, no solo de modelo: mínimo privilegio en las herramientas, aislamiento (*sandboxing*), aprobación humana para acciones destructivas o con efectos externos, separación entre instrucciones y datos, y trazabilidad completa de las acciones.
+Los agentes introducen un riesgo de seguridad específico, el ***prompt injection*** (inyección de instrucciones): un contenido no confiable que el agente procesa (una página web, un correo, un documento adjunto) puede contener instrucciones maliciosas que el modelo ejecute como si vinieran del usuario legítimo. Las defensas son arquitectónicas, no solo de modelo: mínimo privilegio en las herramientas, aislamiento (*sandboxing*), aprobación humana para acciones destructivas o con efectos externos, separación entre instrucciones y datos, y trazabilidad completa de las acciones.
 
 ## IA distribuida y federada
 
-Bajo esta etiqueta conviven dos ideas complementarias: sistemas de múltiples agentes que cooperan, y entrenamiento repartido allí donde están los datos.
+La IA distribuida agrupa dos enfoques complementarios: los sistemas de múltiples agentes que cooperan para resolver un problema y el entrenamiento repartido entre los nodos donde residen los datos.
 
 - **IA distribuida clásica**: sistemas multiagente en los que agentes autónomos, posiblemente dispersos geográficamente, cooperan o compiten para resolver un problema (robótica de enjambre, simulación, optimización logística).
 - **Aprendizaje federado** (Google, **2017**, algoritmo FedAvg): entrenar un modelo común sin centralizar nunca los datos. Cada nodo (un hospital, un móvil) entrena localmente y comparte solo actualizaciones de pesos, que un servidor agrega en rondas sucesivas. Casos típicos: teclados predictivos móviles y colaboración entre hospitales sin ceder historias clínicas. Retos: heterogeneidad de datos y dispositivos, coste de comunicación y una privacidad que no es absoluta (las actualizaciones pueden filtrar información, por lo que se combina con agregación segura y privacidad diferencial).
@@ -197,7 +197,7 @@ Bajo esta etiqueta conviven dos ideas complementarias: sistemas de múltiples ag
 5. **Coste total**: la electricidad no es el coste dominante. Un nodo de 4 GPU de gama alta ronda los **150.000-200.000 €**, unos **3.000-4.000 €/mes** amortizado a 4 años, más el personal necesario para operarlo y optimizarlo.
 6. **Comparación con API**: 50 usuarios intensivos generan del orden de 100 M de tokens/mes que, a precios típicos de mercado (entre décimas de euro y unos pocos euros por millón de tokens), cuestan **100-300 €/mes**: hasta 20 veces menos que el despliegue propio, siempre actualizado y sin operación.
 
-*Conclusión*: con esta carga, el on-premise solo se justifica por la confidencialidad de los datos o por requisitos de soberanía, no por coste; el punto de equilibrio exige una utilización alta y sostenida de la infraestructura. Y la lección de fondo: dimensionar las GPU es la parte fácil del problema; construir y mantener el sistema completo de inferencia (colas y *batching*, observabilidad, evaluación continua de la calidad, actualización de modelos y seguridad) es donde se concentra el esfuerzo real del proyecto.
+*Conclusión*: con esta carga, el on-premise solo se justifica por la confidencialidad de los datos o por requisitos de soberanía, no por coste; el punto de equilibrio exige una utilización alta y sostenida de la infraestructura. Además, el dimensionamiento del hardware es solo una parte del proyecto: construir y mantener el sistema completo de inferencia (colas y *batching*, observabilidad, evaluación continua de la calidad, actualización de modelos y seguridad) concentra la mayor parte del esfuerzo.
 
 ## Fuentes {.unnumbered .unlisted}
 
