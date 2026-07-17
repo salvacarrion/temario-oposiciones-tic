@@ -1,0 +1,61 @@
+# Contratación pública de bienes y servicios TIC
+
+La Administración adquiere la mayor parte de su tecnología mediante contratación pública, sujeta a la **Ley 9/2017, de Contratos del Sector Público (LCSP)**. El régimen general (tipos de contrato, procedimientos, ejecución y recurso especial) se estudia en el tema 11; este tema se centra en las especialidades de la contratación de bienes y servicios TIC: la calificación de los contratos, los pliegos y criterios de valoración, la contratación de servicios en la nube, la compra pública de innovación y la racionalización mediante acuerdos marco y centrales de compras.
+
+**LCSP: texto consolidado a 9 de abril de 2026.**
+
+## Especialidades de la contratación TIC
+
+La contratación TIC no tiene un régimen propio en la LCSP, pero presenta particularidades de calificación y tramitación que conviene retener.
+
+- **Calificación del contrato** (art. 16): la adquisición de equipos y de **programas de ordenador estándar** (licencias) es contrato de **suministro**; en cambio, «los contratos de adquisición de programas de ordenador **desarrollados a medida**» se consideran **contratos de servicios** (art. 16.3.b). Son frecuentes los **contratos mixtos** (suministro más servicios de implantación y mantenimiento), que se rigen por las normas de la prestación principal (art. 18).
+- **Adquisición centralizada TIC** (art. 230): en el ámbito estatal obligatorio, la contratación de **equipos y sistemas para el tratamiento de la información** y sus elementos complementarios corresponde al órgano de contratación del **sistema estatal de contratación centralizada**, aunque no estén declarados de adquisición centralizada (ver más abajo).
+- **Contratación electrónica** (DA 15.ª, 16.ª y 17.ª): la tramitación es **electrónica obligatoria**: notificaciones por dirección electrónica habilitada o comparecencia electrónica, y **presentación electrónica de ofertas** (con excepciones tasadas: herramientas no disponibles con carácter general, modelos físicos, seguridad). Las herramientas deben ser **no discriminatorias y de disponibilidad general** (DA 16.ª), y se garantiza la confidencialidad de las ofertas hasta su apertura. En la AGE el soporte es la **Plataforma de Contratación del Sector Público**; en la GVA, la plataforma de licitación electrónica corporativa.
+- **Seguridad**: los **pliegos** de los contratos cuyos servicios se sustenten en sistemas de información de contratistas deben incluir los requisitos para asegurar la **conformidad con el ENS** (art. 2 del RD 311/2022), como la presentación de las Declaraciones o Certificaciones de Conformidad (ver tema 29).
+- **Facturación**: la presentación y tramitación de las facturas de los contratos TIC sigue el régimen general de la factura electrónica en el sector público (Ley 25/2013, FACe), que se estudia en el tema 68.
+
+## Pliegos y criterios de valoración de productos y servicios TIC
+
+Los dos documentos que rigen la licitación son el **pliego de cláusulas administrativas particulares (PCAP)**, con los pactos y condiciones jurídicas y económicas (solvencia, criterios de adjudicación, garantías, penalidades, condiciones especiales de ejecución), y el **pliego de prescripciones técnicas (PPT)**, que define el objeto con sus requisitos funcionales y técnicos (la redacción de un pliego se ejercita en el caso práctico del tema 11).
+
+- **Reglas de las prescripciones técnicas** (arts. 125-126): deben permitir el acceso en condiciones de igualdad y **no crear obstáculos injustificados a la competencia**; se formulan por referencia a **normas técnicas** (nacionales que traspongan europeas, evaluaciones técnicas europeas) o en términos de **rendimiento o exigencias funcionales**. Está prohibido citar **marcas, patentes o tipos concretos** que favorezcan a un empresario, salvo justificación por el objeto y acompañado de «**o equivalente**». Deben tener en cuenta la **accesibilidad universal** (ver tema 58).
+- **Neutralidad tecnológica e interoperabilidad**: los pliegos TIC deben respetar los estándares del **ENI** y su catálogo de estándares (ver tema 62), evitar la dependencia de un único proveedor (*lock-in*) y prever la **entrega del código fuente y la documentación** cuando se contrata desarrollo a medida, con atención a la titularidad de la propiedad intelectual (ver tema 50).
+- **Criterios de adjudicación** (arts. 145-146): la adjudicación se basa en la **mejor relación calidad-precio**, con criterios económicos y **cualitativos** (calidad técnica, experiencia del equipo adscrito, plan de trabajo, soporte, características medioambientales o sociales). Los criterios evaluables mediante **juicio de valor** se ponderan separadamente de los evaluables por **fórmulas**. En servicios intensivos en conocimiento es habitual exigir **solvencia técnica específica** (certificaciones ISO 9001/27001, perfiles profesionales) como requisito, no como criterio.
+- **Coste del ciclo de vida** (art. 148): el precio puede sustituirse por el **coste del ciclo de vida**, que incorpora adquisición, utilización (energía), mantenimiento y fin de vida: es la traslación contractual del **TCO** (ver tema 17).
+- **Condiciones de ejecución y SLA**: los niveles de servicio (disponibilidad, tiempos de respuesta y resolución) se fijan como condiciones de ejecución con **penalidades** asociadas (art. 192), y conviene definir indicadores medibles y un modelo de gobernanza del contrato (comités de seguimiento).
+
+## Contratación de servicios en la nube y por uso; outsourcing y offshoring
+
+La contratación TIC se desplaza del producto al **servicio**: infraestructura, plataformas y aplicaciones se consumen como servicios medidos y facturados **por uso** (los modelos IaaS/PaaS/SaaS se estudian en el tema 51).
+
+- **Calificación y precio**: los servicios en la nube se contratan como **contratos de servicios**, con precios unitarios (por usuario, por instancia, por consumo) y presupuesto estimado sobre consumos previstos; el pago por uso exige mecanismos de control del gasto (techos de consumo, informes periódicos).
+- **Cláusulas críticas en la nube**: **ubicación de los datos** y transferencias internacionales (RGPD, ver tema 53); cumplimiento del **ENS** por el proveedor (certificación de conformidad; la guía **CCN-STIC 823**, de utilización de servicios en la nube, detalla los requisitos por categoría); **portabilidad y reversibilidad** al finalizar el contrato (plan de salida, devolución y borrado certificado de datos); propiedad de los datos; subcontratación de centros de datos; y **SLA** con disponibilidad comprometida y penalidades.
+- **Outsourcing (externalización)**: encargo a un tercero de funciones TIC (desarrollo, CAU, operación del CPD, servicios gestionados). Ventajas: especialización, flexibilidad, coste variable; riesgos: **pérdida de conocimiento interno**, dependencia del proveedor y degradación del servicio. Mitigaciones: retener la **gobernanza y la arquitectura**, exigir transferencia de conocimiento y documentación, y cláusulas de reversión. La Administración también puede acudir a **encargos a medios propios personificados** (art. 32 LCSP), que no son contratos.
+- **Offshoring y nearshoring**: deslocalización del servicio a países lejanos (menor coste, husos horarios y barreras idiomáticas) o próximos. En el sector público está condicionado por la protección de datos (transferencias fuera del EEE) y por los requisitos del ENS sobre la ubicación de la información.
+
+## Compra pública de innovación
+
+La **compra pública de innovación (CPI)** usa la demanda pública para impulsar el desarrollo de soluciones que no existen en el mercado, mejorando los servicios públicos y la competitividad empresarial (referencia: **Guía 2.0 para la compra pública de innovación**, Ministerio de Economía y Competitividad, 2015).
+
+- **Compra pública precomercial (CPP)**: contratación de **servicios de I+D** en los que el comprador no reserva para sí todos los resultados y comparte riesgos y beneficios con las empresas; está **excluida de la LCSP** (art. 8) y suele articularse en fases competitivas (diseño, prototipo, pruebas).
+- **Compra pública de tecnología innovadora (CPTI)**: adquisición de un bien o servicio que **no existe en el mercado** pero puede desarrollarse en un plazo razonable; se tramita **dentro de la LCSP** con los procedimientos ordinarios o con licitación con negociación.
+- **Asociación para la innovación** (arts. 177-182 LCSP): procedimiento específico cuya finalidad es «el desarrollo de productos, servicios u obras innovadores y la **compra ulterior** de los suministros, servicios u obras resultantes», cuando la necesidad **no puede satisfacerse con soluciones ya disponibles**. El órgano de contratación selecciona a los candidatos (reglas del procedimiento restringido), negocia las ofertas y puede crear la asociación **con uno o varios socios** que ejecutan por separado actividades de I+D en **fases sucesivas** con objetivos intermedios; los pliegos definen el régimen de los **derechos de propiedad intelectual e industrial**.
+- **Instrumentos complementarios**: **consultas preliminares del mercado** (art. 115) para preparar la licitación sin falsear la competencia, y financiación de la CPI con fondos europeos y líneas del CDTI.
+
+## Racionalización: acuerdos marco y centrales de compras
+
+Las técnicas de racionalización (acuerdos marco, sistemas dinámicos de adquisición y centrales de contratación, arts. 218-230 LCSP) se estudian en el tema 11; aquí interesa su aplicación TIC, donde son la vía habitual de compra de bienes homogéneos.
+
+- **Sistema estatal de contratación centralizada**: la **Dirección General de Racionalización y Centralización de la Contratación (DGRCC)**, del Ministerio de Hacienda, gestiona la declaración de contratación centralizada (art. 229) y los **acuerdos marco** del catálogo centralizado, varios de ellos TIC (ordenadores y equipamiento, servidores y almacenamiento, comunicaciones, licencias de software, servicios de desarrollo de sistemas). Los organismos adheridos contratan mediante **contratos basados** en los acuerdos marco, normalmente con nueva licitación entre las empresas seleccionadas.
+- **Adquisición centralizada TIC** (art. 230): competencia del órgano de contratación del sistema estatal para los equipos y sistemas de tratamiento de la información en el ámbito obligatorio, oídos los departamentos interesados.
+- **Central de Compras de la Generalitat**: órgano interdepartamental adscrito a la conselleria competente en **hacienda**, creado por el **Decreto 16/2012** y regulado actualmente por el **Decreto 35/2018**, de 23 de marzo, del Consell (que regula también la Junta Superior de Contratación Administrativa, el Registro Oficial de Contratos y el Registro de Contratistas y Empresas Clasificadas de la Comunitat Valenciana). Centraliza la contratación de suministros y servicios **de características homogéneas** (entre ellos los informáticos) mediante acuerdos marco autonómicos, a los que pueden adherirse las entidades locales y universidades de la Comunitat; la licitación se soporta en la plataforma electrónica corporativa de la Generalitat.
+- **Ventajas y límites**: economías de escala, menores plazos y homogeneidad tecnológica, a cambio de menor adaptación a necesidades singulares; por ello conviven los acuerdos marco (bienes estandarizados) con licitaciones específicas (proyectos a medida).
+
+## Fuentes {.unnumbered .unlisted}
+
+- Ley 9/2017, de Contratos del Sector Público (texto consolidado, última modificación 9 de abril de 2026).
+- Real Decreto 311/2022, Esquema Nacional de Seguridad, art. 2 (texto consolidado, última modificación 6 de noviembre de 2024).
+- CCN-STIC 823, *Utilización de servicios en la nube* (ed. septiembre 2020).
+- Guía 2.0 para la compra pública de innovación (Ministerio de Economía y Competitividad, 2015).
+- Decreto 16/2012 y Decreto 35/2018, del Consell (Central de Compras de la Generalitat), y web de la DGRCC (Ministerio de Hacienda), contrastados online en julio de 2026.
+- Ley 25/2013, de impulso de la factura electrónica (por remisión al tema 68).
