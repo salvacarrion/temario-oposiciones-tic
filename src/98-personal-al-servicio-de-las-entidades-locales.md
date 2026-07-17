@@ -1,6 +1,6 @@
 # Personal al servicio de las entidades locales
 
-El empleo público local resulta del **Título VII de la LRBRL** (arts. 89 a 104 bis), del **TREBEP** como legislación básica de función pública (tema 12), de la legislación autonómica (Ley 4/2021 y Título IX de la Ley 8/2010; temas 13 y 97) y, para los funcionarios de habilitación nacional, del **RD 128/2018**. Completan el régimen la Ley 53/1984 (incompatibilidades) y el régimen disciplinario del TREBEP.
+El empleo público local resulta del **Título VII de la LRBRL** (arts. 89 a 104 bis), del **TREBEP** como legislación básica de función pública (tema [12](12-estatuto-basico-del-empleado-publico.md)), de la legislación autonómica (Ley 4/2021 y Título IX de la Ley 8/2010; temas [13](13-funcion-publica-valenciana.md) y [97](97-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md)) y, para los funcionarios de habilitación nacional, del **RD 128/2018**. Completan el régimen la Ley 53/1984 (incompatibilidades) y el régimen disciplinario del TREBEP.
 
 ## Clases de personal y ordenación
 
@@ -31,11 +31,11 @@ Regulados en el **art. 92 bis LRBRL** y en el **RD 128/2018**, de régimen jurí
 
 ## Derechos, deberes, carrera y retribuciones
 
-El régimen sustantivo es el del **TREBEP** (derechos individuales y colectivos, código de conducta, carrera profesional, situaciones administrativas: tema 12), con estas reglas propias de la LRBRL:
+El régimen sustantivo es el del **TREBEP** (derechos individuales y colectivos, código de conducta, carrera profesional, situaciones administrativas: tema [12](12-estatuto-basico-del-empleado-publico.md)), con estas reglas propias de la LRBRL:
 
 - **Art. 93. Retribuciones**: las retribuciones básicas tienen la **misma estructura e idéntica cuantía** que las establecidas con carácter general para toda la función pública; las complementarias siguen la estructura y criterios de valoración estatales, y su **cuantía global la fija el Pleno**.
 - **Art. 94. Jornada**: la jornada de trabajo, en cómputo anual, es la misma que la de los funcionarios de la **Administración Civil del Estado**.
-- **Carrera y provisión**: la carrera administrativa se rige por el TREBEP y la legislación autonómica de desarrollo (en la Comunitat Valenciana, la Ley 4/2021: tema 13); los concursos y la libre designación siguen las normas comunes de provisión (art. 101 LRBRL).
+- **Carrera y provisión**: la carrera administrativa se rige por el TREBEP y la legislación autonómica de desarrollo (en la Comunitat Valenciana, la Ley 4/2021: tema [13](13-funcion-publica-valenciana.md)); los concursos y la libre designación siguen las normas comunes de provisión (art. 101 LRBRL).
 
 ## Incompatibilidades (Ley 53/1984)
 
@@ -51,7 +51,7 @@ El personal al servicio de las **corporaciones locales y de los organismos de el
 
 ## Régimen disciplinario
 
-- **Régimen general**: el del **Título VII del TREBEP** (faltas muy graves tasadas en el art. 95; sanciones del art. 96, incluida la separación del servicio; prescripción del art. 97 y procedimiento del art. 98), completado por la legislación autonómica de función pública (tema 12).
+- **Régimen general**: el del **Título VII del TREBEP** (faltas muy graves tasadas en el art. 95; sanciones del art. 96, incluida la separación del servicio; prescripción del art. 97 y procedimiento del art. 98), completado por la legislación autonómica de función pública (tema [12](12-estatuto-basico-del-empleado-publico.md)).
 - **Órganos locales**: la incoación y sanción corresponden al **Alcalde o Presidente** como jefe superior del personal (art. 21.1.h LRBRL), incluida la **separación del servicio de los funcionarios y el despido del personal laboral, dando cuenta al Pleno**; en los municipios de gran población, las decisiones en materia de personal corresponden a la **Junta de Gobierno Local** (art. 127.1.h).
 - **Habilitados nacionales (art. 92 bis.10-11 LRBRL)**: incoación por la corporación (faltas leves), la comunidad autónoma o el Ministerio (faltas muy graves de normativa básica); sancionan el **Ministro** (faltas muy graves), la **comunidad autónoma** (suspensión y destitución restantes) y la **entidad local** (faltas leves). La **destitución** implica la prohibición de obtener destino en la misma corporación en un plazo máximo de **6 años** (muy graves) o **3 años** (graves).
 

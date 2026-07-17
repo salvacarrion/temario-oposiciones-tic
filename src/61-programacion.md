@@ -80,7 +80,7 @@ Un **patrón de diseño** es una solución reutilizable y probada a un problema 
 - **Template Method**: define en la superclase el esqueleto de un algoritmo y deja pasos concretos a las subclases.
 - **Visitor**: añade operaciones nuevas a una jerarquía de objetos sin modificar sus clases.
 
-Aparte del catálogo GoF están los **patrones arquitectónicos**, que operan a nivel de aplicación: **MVC** (modelo-vista-controlador) y sus variantes MVP y MVVM (temas 56 y 59), la arquitectura en capas o los microservicios (tema 60).
+Aparte del catálogo GoF están los **patrones arquitectónicos**, que operan a nivel de aplicación: **MVC** (modelo-vista-controlador) y sus variantes MVP y MVVM (temas [56](56-arquitecturas-de-desarrollo-web.md) y [59](59-desarrollo-de-aplicaciones-moviles.md)), la arquitectura en capas o los microservicios (tema [60](60-soa-servicios-web-y-microservicios.md)).
 
 **Antipatrones** (Brown et al., *AntiPatterns*, **1998**): prácticas recurrentes y contraproducentes que conviene reconocer:
 
@@ -105,17 +105,17 @@ Los lenguajes se caracterizan por unas pocas dimensiones que conviene dominar:
 
 - **Modelo**: compila a **bytecode** que ejecuta la **JVM** («*write once, run anywhere*»); tipado estático, orientación a objetos con genéricos y rasgos funcionales (lambdas, *streams*).
 - **Versionado**: una versión cada **6 meses** y una **LTS cada dos años**: Java 8, 11, 17, **21 (sep-2023)** y **25 (sep-2025)**.
-- **Ecosistema**: construcción con Maven/Gradle, framework **Spring/Spring Boot** (tema 56); otros lenguajes sobre la JVM: **Kotlin** (tema 59), Scala.
+- **Ecosistema**: construcción con Maven/Gradle, framework **Spring/Spring Boot** (tema [56](56-arquitecturas-de-desarrollo-web.md)); otros lenguajes sobre la JVM: **Kotlin** (tema [59](59-desarrollo-de-aplicaciones-moviles.md)), Scala.
 - **Uso**: el estándar del software corporativo y de las administraciones públicas.
 
 **Python** (1991, Python Software Foundation):
 
 - **Modelo**: interpretado (implementación de referencia CPython), **tipado dinámico** fuerte, sintaxis por indentación, multiparadigma; admite anotaciones de tipos opcionales verificables con herramientas externas.
 - **Versionado**: una versión anual cada octubre (3.13 en 2024, **3.14 en oct-2025**); **Python 2 quedó sin soporte el 1 de enero de 2020**.
-- **Ecosistema**: paquetes con **pip** desde el repositorio **PyPI**, entornos virtuales; dominio absoluto en **ciencia de datos e IA** (NumPy, pandas, PyTorch, tema 34); web con Django y FastAPI (tema 56); scripting y automatización de sistemas.
+- **Ecosistema**: paquetes con **pip** desde el repositorio **PyPI**, entornos virtuales; dominio absoluto en **ciencia de datos e IA** (NumPy, pandas, PyTorch, tema [34](34-inteligencia-artificial.md)); web con Django y FastAPI (tema [56](56-arquitecturas-de-desarrollo-web.md)); scripting y automatización de sistemas.
 - **Uso**: primer lenguaje de los índices de popularidad y lengua franca del análisis de datos.
 
-**JavaScript y TypeScript**: el lenguaje de la web en navegador y, con **Node.js**, también en servidor; TypeScript le añade tipado estático. Tratados en el tema 57.
+**JavaScript y TypeScript**: el lenguaje de la web en navegador y, con **Node.js**, también en servidor; TypeScript le añade tipado estático. Tratados en el tema [57](57-tecnologias-web.md).
 
 | | Java | Python | JavaScript/TypeScript |
 | --- | --- | --- | --- |
@@ -136,7 +136,7 @@ Los temarios piden, además de los lenguajes, sus plataformas: el entorno de eje
 - **Plataforma**: el **JDK** reúne compilador, JVM y biblioteca estándar. Sobre la edición estándar (**Java SE**) se construye la empresarial: **Jakarta EE** (antes Java EE; cedida por Oracle a la **Fundación Eclipse** en 2017; versión **11, de 2025**), un conjunto de especificaciones para aplicaciones corporativas (Servlets, **JPA** de persistencia, CDI de inyección de dependencias, JAX-RS para REST) que implementan los **servidores de aplicaciones** (WildFly, Payara, WebSphere) y, en su parte web, el contenedor **Apache Tomcat**.
 - **Spring y Spring Boot**: el framework dominante de facto, basado en **inversión de control e inyección de dependencias**; **Spring Boot** añade autoconfiguración, servidor embebido y métricas (*actuator*). Versión **4.0 (nov-2025)**, con Jakarta EE 11 como base y **Java 17** como mínimo.
 - **Persistencia**: **JPA** (Jakarta Persistence) es el estándar ORM; **Hibernate**, su implementación más extendida.
-- **Herramientas**: construcción y dependencias con **Maven** o **Gradle**; pruebas con **JUnit 5** (tema 27).
+- **Herramientas**: construcción y dependencias con **Maven** o **Gradle**; pruebas con **JUnit 5** (tema [27](27-testeo-de-software.md)).
 
 ```java
 @RestController
@@ -152,7 +152,7 @@ public class SaludoController {
 
 - **Plataforma**: la de Microsoft, hoy **libre y multiplataforma** (Windows, Linux, macOS); el **.NET Framework** clásico, solo Windows, quedó congelado en la versión 4.8. Versión anual cada noviembre con **LTS los años impares**: .NET 8 (2023) y **.NET 10 (nov-2025**, con **C# 14**, soporte hasta nov-2028).
 - **Modelo**: **C#** (y F#) compilan a un código intermedio (**CIL**) que ejecuta el runtime **CLR**, el equivalente de la JVM.
-- **Pila corporativa**: **ASP.NET Core** (web y APIs), **Entity Framework Core** (ORM), **Blazor** (interfaces web con C#), .NET MAUI (móvil, tema 59) y paquetes con **NuGet**.
+- **Pila corporativa**: **ASP.NET Core** (web y APIs), **Entity Framework Core** (ORM), **Blazor** (interfaces web con C#), .NET MAUI (móvil, tema [59](59-desarrollo-de-aplicaciones-moviles.md)) y paquetes con **NuGet**.
 
 ```csharp
 var app = WebApplication.CreateBuilder(args).Build();
@@ -163,7 +163,7 @@ app.Run();
 ### PHP
 
 - **Plataforma**: lenguaje interpretado de servidor (motor Zend, con **JIT desde PHP 8.0**), ejecutado tras Nginx/Apache mediante **PHP-FPM**. Versión vigente **8.5 (nov-2025)**, con tipado gradual moderno.
-- **Ecosistema**: dependencias con **Composer** (repositorio Packagist); frameworks **Laravel** y **Symfony**; base de los grandes CMS (**WordPress**, Drupal; tema 55).
+- **Ecosistema**: dependencias con **Composer** (repositorio Packagist); frameworks **Laravel** y **Symfony**; base de los grandes CMS (**WordPress**, Drupal; tema [55](55-documento-y-expediente-electronico.md)).
 - **Uso**: domina la web de gran volumen (WordPress por sí solo supera el 40 % de los sitios) y es habitual en portales y sedes de las AAPP.
 
 | | Java | .NET | PHP |

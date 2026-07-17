@@ -1,6 +1,6 @@
 # Contratación en las entidades locales
 
-Las Administraciones locales aplican íntegramente la **LCSP (Ley 9/2017)**, cuyo régimen general (principios, preparación, adjudicación y recurso especial) se estudia en el tema 11. Este tema recoge las especialidades locales de sus **disposiciones adicionales segunda y tercera** (órganos de contratación, mesa y normas de procedimiento) y una síntesis de las garantías y la extinción de los contratos, que el temario local pide junto a aquellas.
+Las Administraciones locales aplican íntegramente la **LCSP (Ley 9/2017)**, cuyo régimen general (principios, preparación, adjudicación y recurso especial) se estudia en el tema [11](11-contratos-del-sector-publico.md). Este tema recoge las especialidades locales de sus **disposiciones adicionales segunda y tercera** (órganos de contratación, mesa y normas de procedimiento) y una síntesis de las garantías y la extinción de los contratos, que el temario local pide junto a aquellas.
 
 **Texto consolidado de la LCSP a 9 de abril de 2026.**
 
@@ -40,7 +40,7 @@ Las Administraciones locales aplican íntegramente la **LCSP (Ley 9/2017)**, cuy
 
 ## Cumplimiento, extinción y responsabilidad
 
-Los contratos se extinguen **por cumplimiento o por resolución** (régimen general del tema 11; aquí lo esencial):
+Los contratos se extinguen **por cumplimiento o por resolución** (régimen general del tema [11](11-contratos-del-sector-publico.md); aquí lo esencial):
 
 - **Cumplimiento y recepción (art. 210)**: el contrato se entiende cumplido cuando el contratista realiza la totalidad de la prestación a satisfacción de la Administración; exige un **acto formal y positivo de recepción o conformidad dentro del mes siguiente** a la entrega, con posible asistencia de la Intervención a la comprobación material. Desde la recepción corre el **plazo de garantía** fijado en el pliego, a cuyo término sin objeciones se extingue la responsabilidad del contratista (en obras, régimen específico del art. 243).
 - **Causas de resolución (art. 211)**: muerte o incapacidad sobrevenida del contratista individual o extinción de la personalidad jurídica; **declaración de concurso o insolvencia**; **mutuo acuerdo**; **demora del contratista** en los plazos; demora en el pago por la Administración superior al plazo legal; **incumplimiento de la obligación principal** (y de las esenciales calificadas así en los pliegos); imposibilidad de ejecutar la prestación o modificaciones que superen, en más o en menos, el **20 % del precio inicial**; el **impago de salarios** o incumplimiento de convenio por el contratista durante la ejecución; y las específicas de cada tipo contractual.

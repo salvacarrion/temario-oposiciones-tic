@@ -145,7 +145,7 @@ La copia de seguridad (*backup*) es la última línea de defensa de la informaci
 
 ### Las copias de seguridad en el ENS
 
-El **RD 311/2022** (ENS, tema 29) exige las copias de seguridad como medida de protección de la información, **mp.info.6** (Anexo II), sobre la dimensión de **disponibilidad**:
+El **RD 311/2022** (ENS, tema [29](29-esquema-nacional-de-seguridad.md)) exige las copias de seguridad como medida de protección de la información, **mp.info.6** (Anexo II), sobre la dimensión de **disponibilidad**:
 
 - Se realizarán copias que permitan **recuperar datos perdidos, accidental o intencionadamente**; periodicidad y plazos de retención según la normativa interna de la organización.
 - Los procedimientos de respaldo indicarán: la **frecuencia** de las copias, los requisitos de almacenamiento **en el propio lugar** y **en otros lugares**, y los **controles de acceso autorizado** a las copias.

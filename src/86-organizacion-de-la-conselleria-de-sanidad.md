@@ -27,7 +27,7 @@ La administración del Sistema Valenciano de Salud corresponde a la **Conselleri
 
 ## La transformación digital sanitaria en la estructura
 
-Para el opositor TIC, el dato organizativo clave es que los sistemas de información sanitarios están adscritos a una **secretaría autonómica específica de transformación digital**: de ella dependen los proyectos de historia clínica electrónica, receta electrónica e interoperabilidad sanitaria de la Generalitat (remisiones a los temas 90 a 94), en coordinación con la política TIC corporativa de la Generalitat (DGTIC, remisión al tema 82).
+Para el opositor TIC, el dato organizativo clave es que los sistemas de información sanitarios están adscritos a una **secretaría autonómica específica de transformación digital**: de ella dependen los proyectos de historia clínica electrónica, receta electrónica e interoperabilidad sanitaria de la Generalitat (remisiones a los temas [90](90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md) a [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)), en coordinación con la política TIC corporativa de la Generalitat (DGTIC, remisión al tema [82](82-administracion-electronica-y-plataformas-de-la-generalitat.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

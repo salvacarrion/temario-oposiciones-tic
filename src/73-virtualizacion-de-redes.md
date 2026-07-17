@@ -1,10 +1,10 @@
 # Virtualización de redes
 
-La virtualización de redes desacopla los servicios de red del hardware que los soporta: la red deja de ser un conjunto de equipos configurados uno a uno y pasa a definirse, desplegarse y gestionarse por software. Este tema cubre sus dos pilares (las redes definidas por software, SDN, y la virtualización de funciones de red, NFV), su aplicación a la red de área extensa (SD-WAN) y la gestión y administración de red (SNMP). Los dispositivos y tecnologías de red se estudian en el tema 71, los protocolos en el 66, la seguridad de red en el 75 y las redes 5G (grandes consumidoras de NFV) en el 72.
+La virtualización de redes desacopla los servicios de red del hardware que los soporta: la red deja de ser un conjunto de equipos configurados uno a uno y pasa a definirse, desplegarse y gestionarse por software. Este tema cubre sus dos pilares (las redes definidas por software, SDN, y la virtualización de funciones de red, NFV), su aplicación a la red de área extensa (SD-WAN) y la gestión y administración de red (SNMP). Los dispositivos y tecnologías de red se estudian en el tema [71](71-redes-de-computadores.md), los protocolos en el 66, la seguridad de red en el 75 y las redes 5G (grandes consumidoras de NFV) en el 72.
 
 ## Redes definidas por software (SDN)
 
-Virtualizar una red es presentar una vista lógica que difiere de la infraestructura física subyacente: permite **combinar varias redes físicas en una sola red virtual** o, a la inversa, **dividir una red física en varias redes virtuales independientes**, cada una con sus propias características. Se distingue la **virtualización externa** (dispositivos como switches y routers particionan la red física, p. ej. las VLAN del tema 71) de la **interna** (redes virtuales dentro de un mismo equipo, p. ej. los switches virtuales de un hipervisor).
+Virtualizar una red es presentar una vista lógica que difiere de la infraestructura física subyacente: permite **combinar varias redes físicas en una sola red virtual** o, a la inversa, **dividir una red física en varias redes virtuales independientes**, cada una con sus propias características. Se distingue la **virtualización externa** (dispositivos como switches y routers particionan la red física, p. ej. las VLAN del tema [71](71-redes-de-computadores.md)) de la **interna** (redes virtuales dentro de un mismo equipo, p. ej. los switches virtuales de un hipervisor).
 
 Sobre esta idea se construyen las **redes de superposición** (*overlay*): redes virtuales montadas sobre una infraestructura física (*underlay*) que solo aporta conectividad IP. La tecnología de referencia es **VXLAN** (RFC 7348, 2014), que encapsula tramas Ethernet en UDP (puerto **4789**) y sustituye el límite de **4094 VLAN** por un identificador **VNI de 24 bits** (unos **16,7 millones** de segmentos), la base de las redes de los centros de datos y las nubes actuales.
 
@@ -48,11 +48,11 @@ La **virtualización de funciones de red (NFV)** sustituye los equipos de red de
     - **Escalado elástico**: las funciones crecen o decrecen bajo demanda, como cualquier carga en la nube.
     - **Independencia del fabricante**: hardware común y funciones de distintos proveedores.
 - **De VNF a CNF**: la evolución *cloud-native* empaqueta las funciones en contenedores orquestados con Kubernetes (**CNF**), más ligeros y escalables que las máquinas virtuales.
-- **SDN y NFV son complementarias e independientes**: NFV virtualiza las funciones (qué ejecuta la red) y SDN programa la conectividad entre ellas (cómo se encamina el tráfico). El ejemplo canónico de su combinación es el **núcleo de las redes 5G**, desplegado como funciones virtualizadas (tema 76).
+- **SDN y NFV son complementarias e independientes**: NFV virtualiza las funciones (qué ejecuta la red) y SDN programa la conectividad entre ellas (cómo se encamina el tráfico). El ejemplo canónico de su combinación es el **núcleo de las redes 5G**, desplegado como funciones virtualizadas (tema [76](76-redes-inalambricas-y-5g.md)).
 
 ## SD-WAN
 
-La **SD-WAN** (*Software-Defined WAN*) aplica los principios SDN a la red de área extensa corporativa. En la WAN tradicional cada sede se conecta por líneas dedicadas (típicamente **MPLS**, tema 71) y el tráfico a internet se hace pasar por el centro de datos corporativo (*backhauling*), un modelo caro y poco flexible para un mundo de aplicaciones en la nube. La SD-WAN crea una **red de superposición cifrada sobre cualquier transporte** (MPLS, banda ancha, fibra, 4G/5G) y **encamina el tráfico de forma dinámica según la aplicación** y el estado medido de cada enlace. El servicio está estandarizado por el **MEF** (norma **MEF 70**, 2019, y su revisión **70.1**, 2021).
+La **SD-WAN** (*Software-Defined WAN*) aplica los principios SDN a la red de área extensa corporativa. En la WAN tradicional cada sede se conecta por líneas dedicadas (típicamente **MPLS**, tema [71](71-redes-de-computadores.md)) y el tráfico a internet se hace pasar por el centro de datos corporativo (*backhauling*), un modelo caro y poco flexible para un mundo de aplicaciones en la nube. La SD-WAN crea una **red de superposición cifrada sobre cualquier transporte** (MPLS, banda ancha, fibra, 4G/5G) y **encamina el tráfico de forma dinámica según la aplicación** y el estado medido de cada enlace. El servicio está estandarizado por el **MEF** (norma **MEF 70**, 2019, y su revisión **70.1**, 2021).
 
 - **Componentes**:
     - **Edge SD-WAN**: el dispositivo (físico o virtual) de cada sede que levanta los túneles del overlay y aplica las políticas.
@@ -75,7 +75,7 @@ La comparación con la WAN tradicional resume lo que aporta:
 | Aprovisionamiento | Manual, equipo a equipo | Centralizado, *zero-touch* |
 | Cambios de política | Reconfiguración sede a sede | Distribución desde el orquestador |
 
-El paso siguiente es **SASE** (*Secure Access Service Edge*, término acuñado por Gartner en **2019**): la convergencia de SD-WAN con la seguridad entregada desde la nube (pasarela web segura **SWG**, **CASB**, acceso a red de confianza cero **ZTNA** y cortafuegos como servicio **FWaaS**), de modo que cualquier usuario acceda de forma segura desde cualquier ubicación. La variante que agrupa solo los servicios de seguridad, sin la SD-WAN, se denomina **SSE** (*Security Service Edge*). La seguridad de red se desarrolla en el tema 79.
+El paso siguiente es **SASE** (*Secure Access Service Edge*, término acuñado por Gartner en **2019**): la convergencia de SD-WAN con la seguridad entregada desde la nube (pasarela web segura **SWG**, **CASB**, acceso a red de confianza cero **ZTNA** y cortafuegos como servicio **FWaaS**), de modo que cualquier usuario acceda de forma segura desde cualquier ubicación. La variante que agrupa solo los servicios de seguridad, sin la SD-WAN, se denomina **SSE** (*Security Service Edge*). La seguridad de red se desarrolla en el tema [79](79-seguridad-en-las-comunicaciones.md).
 
 ## Gestión y administración de red: SNMP
 

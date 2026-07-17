@@ -86,7 +86,7 @@ El propio pipeline se define como código versionado junto a la aplicación (*pi
     2. **Lead time de cambios**: tiempo del commit a producción.
     3. **Tasa de fallo de los cambios**: porcentaje de despliegues que causan incidencias.
     4. **Tiempo de restauración del servicio (MTTR)** tras un fallo.
-- **Infraestructura como código (IaC)**: la infraestructura se describe en ficheros declarativos versionados en Git y se aprovisiona automáticamente (**Terraform**, **Ansible**), lo que hace los entornos reproducibles y auditables (ver temas 44 y 51).
+- **Infraestructura como código (IaC)**: la infraestructura se describe en ficheros declarativos versionados en Git y se aprovisiona automáticamente (**Terraform**, **Ansible**), lo que hace los entornos reproducibles y auditables (ver temas [44](44-virtualizacion-y-contenedores.md) y [51](51-computacion-en-la-nube-y-altas-prestaciones.md)).
 - **SRE** (*Site Reliability Engineering*, Google): aplica ingeniería de software a la operación; define objetivos de nivel de servicio (**SLO**) sobre indicadores (**SLI**) y gestiona el riesgo con el **presupuesto de error**.
 
 ### Cadena de herramientas DevOps
@@ -110,7 +110,7 @@ El propio pipeline se define como código versionado junto a la aplicación (*pi
 - **DAST**: pruebas dinámicas contra la aplicación desplegada en entornos de prueba.
 - **Escaneo de secretos** (credenciales en el repositorio) y de **imágenes de contenedor** antes de publicarlas.
 
-El detalle de estas técnicas y del ciclo de desarrollo seguro se estudia en el tema 32.
+El detalle de estas técnicas y del ciclo de desarrollo seguro se estudia en el tema [32](32-desarrollo-seguro-de-aplicaciones.md).
 
 ## Gestión de la configuración y CMDB
 
@@ -136,7 +136,7 @@ En la gestión de servicios TI (**ITIL 4**, práctica de gestión de la configur
 - **CMDB** (*Configuration Management Database*): base de datos que almacena los CI con sus atributos y, sobre todo, sus **relaciones** (qué depende de qué), lo que permite el análisis de impacto de cambios e incidencias.
 - **CMS** (*Configuration Management System*): conjunto de herramientas, datos e información que integra una o varias CMDB con otras fuentes (descubrimiento automático, inventario).
 
-La CMDB da soporte a las prácticas de incidencias, problemas y cambios (ver tema 18). En entornos modernos se alimenta con **descubrimiento automático** y converge con el enfoque **GitOps**: el repositorio Git como única fuente de verdad del estado deseado de aplicaciones e infraestructura, que herramientas como Argo CD reconcilian continuamente con el estado real.
+La CMDB da soporte a las prácticas de incidencias, problemas y cambios (ver tema [18](18-gestion-de-los-servicios-tic.md)). En entornos modernos se alimenta con **descubrimiento automático** y converge con el enfoque **GitOps**: el repositorio Git como única fuente de verdad del estado deseado de aplicaciones e infraestructura, que herramientas como Argo CD reconcilian continuamente con el estado real.
 
 ## Fuentes {.unnumbered .unlisted}
 

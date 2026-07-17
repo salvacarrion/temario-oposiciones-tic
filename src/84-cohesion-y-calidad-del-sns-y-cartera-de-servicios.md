@@ -26,7 +26,7 @@ Tras culminar las transferencias sanitarias a las comunidades autónomas (2002),
 | **Suplementaria** (art. 8 ter) | Prestaciones de dispensación ambulatoria: farmacéutica, ortoprotésica, productos dietéticos y transporte sanitario no urgente | Sujeta a aportación |
 | **De servicios accesorios** (art. 8 quáter) | Actividades sin carácter de prestación, no esenciales o de apoyo | Sujeta a aportación o reembolso |
 
-- **Art. 8 quinquies. Cartera complementaria autonómica**: las comunidades autónomas pueden aprobar sus carteras, que incluirán **como mínimo** la cartera común del SNS; las prestaciones adicionales las financian con recursos propios (en la Comunitat Valenciana, art. 9 de la Ley 10/2014, remisión al tema 85).
+- **Art. 8 quinquies. Cartera complementaria autonómica**: las comunidades autónomas pueden aprobar sus carteras, que incluirán **como mínimo** la cartera común del SNS; las prestaciones adicionales las financian con recursos propios (en la Comunitat Valenciana, art. 9 de la Ley 10/2014, remisión al tema [85](85-salud-de-la-comunitat-valenciana.md)).
 
 ## RD 1030/2006: la cartera de servicios comunes y su actualización
 

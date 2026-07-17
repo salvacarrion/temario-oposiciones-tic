@@ -73,7 +73,7 @@ El MDR clasifica los productos en cuatro clases de riesgo creciente: **I** (con 
 
 ## IA como producto sanitario: interacción MDR-AI Act
 
-La IA sanitaria queda sujeta a **doble regulación**: el MDR/IVDR como producto sanitario y el **Reglamento (UE) 2024/1689 (AI Act, remisión al tema 35)** como sistema de IA. Las guías **MDCG 2025-6 y AIB 2025-1** (junio de 2025, primera guía conjunta del MDCG y la Oficina de IA) aclaran el encaje del **MDAI** (*medical device AI*):
+La IA sanitaria queda sujeta a **doble regulación**: el MDR/IVDR como producto sanitario y el **Reglamento (UE) 2024/1689 (AI Act, remisión al tema [35](35-etica-regulacion-inteligencia-artificial.md))** como sistema de IA. Las guías **MDCG 2025-6 y AIB 2025-1** (junio de 2025, primera guía conjunta del MDCG y la Oficina de IA) aclaran el encaje del **MDAI** (*medical device AI*):
 
 - **Cuándo es de alto riesgo** (art. 6.1 del AI Act): un sistema de IA es de **alto riesgo** si cumple **las dos condiciones**: (1) es un **componente de seguridad** de un producto cubierto por la legislación armonizada del Anexo I del AI Act (que incluye MDR e IVDR) **o es él mismo ese producto**, y (2) ese producto está sujeto a **evaluación de la conformidad por un organismo notificado**.
 - **Consecuencia práctica**: el MDSW con IA de **clase IIa o superior** (que siempre pasa por organismo notificado) **es sistema de IA de alto riesgo**; el de **clase I** (autoevaluado, sin organismo notificado) **no** lo es por esta vía. Por la regla 11, casi toda la IA clínica con finalidad diagnóstica o terapéutica acaba siendo de alto riesgo.

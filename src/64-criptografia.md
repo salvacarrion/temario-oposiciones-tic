@@ -1,6 +1,6 @@
 # Criptografía
 
-La criptografía protege la información transformándola de modo que solo las partes autorizadas puedan interpretarla o verificar su origen. Es la base técnica de la confidencialidad de las comunicaciones, de la firma electrónica (tema 65) y de protocolos como TLS o las VPN (temas 70 y 79). Este tema recorre sus bloques constructivos (cifrado simétrico y asimétrico, funciones hash y MAC), la infraestructura de clave pública que hace utilizables las claves públicas, el uso combinado de todo ello en TLS y la transición poscuántica.
+La criptografía protege la información transformándola de modo que solo las partes autorizadas puedan interpretarla o verificar su origen. Es la base técnica de la confidencialidad de las comunicaciones, de la firma electrónica (tema [65](65-identificacion-y-firma-electronica.md)) y de protocolos como TLS o las VPN (temas [70](70-protocolos-de-comunicaciones.md) y [79](79-seguridad-en-las-comunicaciones.md)). Este tema recorre sus bloques constructivos (cifrado simétrico y asimétrico, funciones hash y MAC), la infraestructura de clave pública que hace utilizables las claves públicas, el uso combinado de todo ello en TLS y la transición poscuántica.
 
 ## Conceptos y objetivos de la criptografía
 
@@ -88,7 +88,7 @@ Una función hash criptográfica condensa una entrada de longitud arbitraria en 
     - **SHA-1** (160 bits): **roto** (colisión pública *SHAttered*, 2017); prohibido en firmas y certificados.
     - **SHA-2** (FIPS 180-4): la familia en uso general (**SHA-256, SHA-384, SHA-512**), estructura Merkle-Damgård.
     - **SHA-3** (FIPS 202, **2015**): basado en **Keccak**, con construcción de **esponja**; alternativa estandarizada con diseño independiente de SHA-2.
-- **Usos**: verificación de integridad, firma digital (se firma el hash, no el documento), sellado de tiempo, cadenas de bloques (tema 42) y almacenamiento de contraseñas.
+- **Usos**: verificación de integridad, firma digital (se firma el hash, no el documento), sellado de tiempo, cadenas de bloques (tema [42](42-blockchain-y-otras-tecnologias-emergentes.md)) y almacenamiento de contraseñas.
 - **Contraseñas**: nunca se almacenan en claro ni con un hash rápido. Se usa un **salt** aleatorio por usuario (impide tablas precalculadas) y funciones **deliberadamente costosas** que frenan la fuerza bruta: **bcrypt**, **scrypt** o **Argon2** (RFC 9106, ganadora de la Password Hashing Competition de 2015, la recomendada hoy).
 - **Códigos de autenticación de mensaje (MAC)**: resumen calculado **con una clave secreta compartida**, que garantiza integridad y autenticidad del origen (quien conoce la clave). A diferencia de la firma digital, **no aporta no repudio** (ambas partes conocen la clave).
     - **HMAC** (RFC 2104): construcción sobre una función hash (HMAC-SHA-256); la más usada.
@@ -102,7 +102,7 @@ La criptografía asimétrica deja un problema abierto: garantizar que una clave 
 - **Modelos de confianza**:
     - **Jerárquico (PKI/X.509)**: la confianza emana de una **CA raíz** autofirmada, que certifica CA subordinadas, que a su vez emiten los certificados de entidad final. Es el modelo de la web y de las AAPP.
     - **Malla o *web of trust* (PGP)**: sin autoridades; cada usuario decide en qué claves confía y las firmas cruzadas propagan la confianza.
-- **Componentes** (desarrollados en el tema 65): **Autoridad de Certificación (CA)**, que emite y revoca; **Autoridad de Registro (RA)**, que verifica la identidad del solicitante; **Autoridad de Validación (VA)**, que informa del estado; repositorio y **Declaración de Prácticas de Certificación (CPS)**.
+- **Componentes** (desarrollados en el tema [65](65-identificacion-y-firma-electronica.md)): **Autoridad de Certificación (CA)**, que emite y revoca; **Autoridad de Registro (RA)**, que verifica la identidad del solicitante; **Autoridad de Validación (VA)**, que informa del estado; repositorio y **Declaración de Prácticas de Certificación (CPS)**.
 - **Certificado X.509 v3** (RFC 5280): formato estándar; contiene la identidad del titular, su clave pública, el período de validez, los usos de la clave y la firma de la CA emisora.
 - **Validación de la cadena**: quien verifica un certificado comprueba la **cadena de certificación** completa (entidad final → CA intermedias → CA raíz en su almacén de confianza), la vigencia de cada eslabón y su estado de revocación.
 - **Ciclo de vida del certificado (y de sus claves)**:
@@ -117,11 +117,11 @@ La criptografía asimétrica deja un problema abierto: garantizar que una clave 
     - **OCSP** (RFC 6960): consulta **en línea** del estado de un certificado concreto; con ***OCSP stapling*** es el propio servidor quien adjunta una respuesta OCSP reciente, evitando la consulta del cliente.
 - **Custodia de claves privadas**: el ENS exige protegerlas durante todo su ciclo de vida (**op.exp.10**). Medios habituales: **HSM** (*Hardware Security Module*, módulo físico que genera y usa claves sin exponerlas), tarjetas criptográficas (el chip del **DNIe**) y, en firma cualificada, los **QSCD** (dispositivos cualificados de creación de firma del eIDAS, anexo II).
 
-El marco jurídico (eIDAS, Ley 6/2020), los tipos de certificados, los prestadores (FNMT-RCM, ACCV) y las plataformas (@firma, Cl@ve) se estudian en el tema 65.
+El marco jurídico (eIDAS, Ley 6/2020), los tipos de certificados, los prestadores (FNMT-RCM, ACCV) y las plataformas (@firma, Cl@ve) se estudian en el tema [65](65-identificacion-y-firma-electronica.md).
 
 ## Protocolos seguros: TLS
 
-**TLS (Transport Layer Security)** es el protocolo que asegura la mayoría de las comunicaciones en Internet (HTTPS, correo, VPN SSL) y el mejor ejemplo de cómo se combinan todas las piezas anteriores: acuerdo de claves asimétrico, autenticación con certificados X.509 y cifrado simétrico autenticado para los datos. Sus versiones, puertos y despliegue se tratan en el tema 70; las VPN e IPsec, en el 75.
+**TLS (Transport Layer Security)** es el protocolo que asegura la mayoría de las comunicaciones en Internet (HTTPS, correo, VPN SSL) y el mejor ejemplo de cómo se combinan todas las piezas anteriores: acuerdo de claves asimétrico, autenticación con certificados X.509 y cifrado simétrico autenticado para los datos. Sus versiones, puertos y despliegue se tratan en el tema [70](70-protocolos-de-comunicaciones.md); las VPN e IPsec, en el 75.
 
 - **Handshake (visión criptográfica)**, en TLS 1.3 (RFC 8446):
     1. **Acuerdo de claves** con **ECDHE** (efímero, con PFS): cliente y servidor derivan un secreto compartido.

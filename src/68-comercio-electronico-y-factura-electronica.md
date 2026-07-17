@@ -1,6 +1,6 @@
 # Comercio electrónico y factura electrónica
 
-El comercio electrónico es la contratación de bienes y servicios por vía electrónica. Este tema repasa su marco jurídico (la LSSI), sus modelos de negocio, los medios de pago electrónicos y la factura electrónica, tanto en el sector público (Ley 25/2013, Facturae y FACe) como en las relaciones entre empresas (Ley «Crea y Crece» y su reglamento de 2026). La identificación y firma electrónica que dan soporte a todo ello se estudian en el tema 65.
+El comercio electrónico es la contratación de bienes y servicios por vía electrónica. Este tema repasa su marco jurídico (la LSSI), sus modelos de negocio, los medios de pago electrónicos y la factura electrónica, tanto en el sector público (Ley 25/2013, Facturae y FACe) como en las relaciones entre empresas (Ley «Crea y Crece» y su reglamento de 2026). La identificación y firma electrónica que dan soporte a todo ello se estudian en el tema [65](65-identificacion-y-firma-electronica.md).
 
 ## Servicios de la sociedad de la información: la LSSI
 
@@ -25,7 +25,7 @@ La **Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información
 | --- | --- | --- |
 | **B2C** | Empresa a consumidor | Tienda online, suscripciones |
 | **B2B** | Empresa a empresa | Aprovisionamiento electrónico, EDI |
-| **B2A/B2G** | Empresa a Administración | Licitación y factura electrónicas (ver tema 22) |
+| **B2A/B2G** | Empresa a Administración | Licitación y factura electrónicas (ver tema [22](22-contratacion-publica-de-bienes-y-servicios-tic.md)) |
 | **C2C** | Entre consumidores | Plataformas de compraventa entre particulares |
 | **D2C** | Fabricante a consumidor final | Venta directa sin intermediarios |
 
@@ -45,9 +45,9 @@ Principales instrumentos de pago:
 
 - **Tarjetas**: esquema «de cuatro esquinas» (titular, banco emisor, comercio y banco adquirente, sobre las redes de Visa/Mastercard); el comercio online cobra a través de un **TPV virtual o pasarela de pago**, y la SCA se aplica con el protocolo **3-D Secure 2** (EMVCo). La **tokenización** sustituye el número de tarjeta por un token de un solo uso o de ámbito limitado.
 - **Bizum**: solución española de pagos inmediatos ligados al **número de teléfono móvil**, creada por la banca en **2016** sobre las transferencias inmediatas SEPA (SCT Inst); se usa entre particulares, en comercio electrónico y para donaciones y pagos a la Administración.
-- **Carteras digitales (wallets)**: Apple Pay, Google Wallet o PayPal almacenan credenciales tokenizadas y pagan por NFC o en línea; la futura **cartera europea de identidad digital** (eIDAS2, ver tema 65) incorporará también medios de pago.
+- **Carteras digitales (wallets)**: Apple Pay, Google Wallet o PayPal almacenan credenciales tokenizadas y pagan por NFC o en línea; la futura **cartera europea de identidad digital** (eIDAS2, ver tema [65](65-identificacion-y-firma-electronica.md)) incorporará también medios de pago.
 - **Transferencias inmediatas**: el **Reglamento (UE) 2024/886** obliga a las entidades a ofrecerlas en euros **al mismo precio** que las ordinarias, con abono en segundos y verificación del beneficiario.
-- **Criptoactivos**: regulados en la UE por el Reglamento **MiCA** (2023/1114); no son medio de pago generalizado (ver tema 42).
+- **Criptoactivos**: regulados en la UE por el Reglamento **MiCA** (2023/1114); no son medio de pago generalizado (ver tema [42](42-blockchain-y-otras-tecnologias-emergentes.md)).
 
 El paquete **PSD3 y Reglamento de servicios de pago (PSR)**, que sustituirá a la PSD2, se encuentra en tramitación final (textos de compromiso del Consejo de abril de 2026, pendientes de adopción formal a julio de 2026).
 
@@ -63,7 +63,7 @@ La **Ley 25/2013, de 27 de diciembre, de impulso de la factura electrónica y cr
 
 - **Obligación de presentación** (art. 3): el proveedor debe presentar la factura ante un **registro administrativo** en el plazo de **treinta días** desde la entrega efectiva de las mercancías o la prestación del servicio.
 - **Obligados a factura electrónica** (art. 4): todos los proveedores **pueden** expedirla y, **en todo caso, están obligadas** las sociedades anónimas y limitadas, las personas jurídicas y entidades sin personalidad jurídica sin nacionalidad española, los establecimientos permanentes de no residentes, las **UTE** y las agrupaciones de interés económico y fondos. Reglamentariamente pueden excluirse las facturas de **hasta 5.000 euros**.
-- **Formato y firma** (art. 5 y DA 2.ª): formato **estructurado** firmado con **firma electrónica avanzada** basada en certificado reconocido (se admite el **sello electrónico avanzado**); en tanto no se apruebe otra orden, el formato es **Facturae 3.2** con firma **XAdES** (ver tema 65). Facturae es el XML español de factura electrónica, cuya gestión corresponde a la AGE (facturae.gob.es).
+- **Formato y firma** (art. 5 y DA 2.ª): formato **estructurado** firmado con **firma electrónica avanzada** basada en certificado reconocido (se admite el **sello electrónico avanzado**); en tanto no se apruebe otra orden, el formato es **Facturae 3.2** con firma **XAdES** (ver tema [65](65-identificacion-y-firma-electronica.md)). Facturae es el XML español de factura electrónica, cuya gestión corresponde a la AGE (facturae.gob.es).
 - **Punto general de entrada** (art. 6): Estado, CCAA y EELL disponen de un punto general de entrada de facturas electrónicas, con posibilidad de **adhesión** al de otra Administración (las EELL, al de su diputación, comunidad o el Estado). La presentación produce un **asiento automático** en un registro electrónico y un **acuse de recibo con fecha y hora**. El punto de la AGE es **FACe**; las diputaciones asisten a los municipios de menos de **20.000 habitantes**.
 - **Registro contable de facturas** (arts. 8-10): cada Administración dispone de un registro contable **gestionado por el órgano con la función de contabilidad** e integrado con el sistema contable; la anotación asigna un **código de identificación** y desencadena la tramitación del reconocimiento de la obligación. El órgano contable efectúa **requerimientos periódicos** y un **informe trimestral** de facturas pendientes más de **tres meses**; el órgano de control interno (IGAE o equivalente) elabora un **informe anual de morosidad** y una **auditoría de sistemas anual** del registro contable (art. 12).
 - **FACeB2B**: plataforma pública complementaria de FACe para el **intercambio de facturas electrónicas entre empresas** (por ejemplo, entre contratistas y subcontratistas de la Administración).

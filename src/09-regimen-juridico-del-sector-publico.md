@@ -178,7 +178,7 @@ Artículos 32 a 37: los principios sustantivos de la responsabilidad patrimonial
 
 ## Capítulo V. Funcionamiento electrónico del sector público
 
-Artículos 38 a 46 bis: es el núcleo TIC de la Ley. Su desarrollo reglamentario es el **RD 203/2021** (tema 54).
+Artículos 38 a 46 bis: es el núcleo TIC de la Ley. Su desarrollo reglamentario es el **RD 203/2021** (tema [54](54-administracion-electronica.md)).
 
 - **Art. 38. La sede electrónica**: es «aquella dirección electrónica, disponible para los ciudadanos a través de redes de telecomunicaciones, cuya titularidad corresponde a una Administración Pública, o bien a una o varios organismos públicos o entidades de Derecho Público en el ejercicio de sus competencias».
     - Su establecimiento conlleva la **responsabilidad del titular** respecto de la **integridad, veracidad y actualización** de la información y los servicios.

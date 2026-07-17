@@ -67,7 +67,7 @@ El **marco regulatorio europeo** de los criptoactivos ya existe y conviene conoc
 
 - **Reglamento (UE) 2023/1114 (MiCA**, *Markets in Crypto-Assets*): primer marco integral de la UE sobre criptoactivos; regula a los emisores y a los proveedores de servicios (custodia, intercambio) y es **plenamente aplicable desde el 30 de diciembre de 2024**. En España supervisan la **CNMV** y el **Banco de España**.
 - **Reglamento (UE) 2022/858**: régimen piloto para infraestructuras de mercado basadas en DLT (negociación y liquidación de instrumentos financieros tokenizados).
-- **Reglamento (UE) 2024/1183 (eIDAS 2)**: incorpora los **libros mayores electrónicos** como nuevo servicio de confianza y crea la **Cartera Europea de Identidad Digital** (EUDI Wallet), punto de convergencia con la identidad basada en blockchain (tema 65).
+- **Reglamento (UE) 2024/1183 (eIDAS 2)**: incorpora los **libros mayores electrónicos** como nuevo servicio de confianza y crea la **Cartera Europea de Identidad Digital** (EUDI Wallet), punto de convergencia con la identidad basada en blockchain (tema [65](65-identificacion-y-firma-electronica.md)).
 
 **Casos de uso en la Administración**:
 
@@ -92,7 +92,7 @@ La **realidad extendida** (*eXtended Reality*, XR) agrupa las tecnologías que c
 - **Realidad mixta (RM)**: los objetos digitales se anclan al entorno real e interactúan con él.
 - **Dispositivos y estándares**: visores autónomos (Meta Quest, Apple Vision Pro, lanzado en **2024**) y el estándar abierto **OpenXR** (Khronos Group) para la interoperabilidad entre aplicaciones y dispositivos.
 
-El **metaverso** designa la evolución hacia espacios virtuales tridimensionales, persistentes e interoperables donde los usuarios interactúan mediante avatares; combina XR con blockchain (activos digitales, NFT) y con los **gemelos digitales**, réplicas virtuales de objetos o sistemas reales sincronizadas con sus datos (los gemelos urbanos se tratan en el tema 78).
+El **metaverso** designa la evolución hacia espacios virtuales tridimensionales, persistentes e interoperables donde los usuarios interactúan mediante avatares; combina XR con blockchain (activos digitales, NFT) y con los **gemelos digitales**, réplicas virtuales de objetos o sistemas reales sincronizadas con sus datos (los gemelos urbanos se tratan en el tema [78](78-ciudades-inteligentes.md)).
 
 - **Marco europeo**: la Comisión adoptó en **julio de 2023** su estrategia sobre **Web 4.0 y mundos virtuales** (COM(2023) 442), para orientar esta transición conforme a los valores y derechos de la UE.
 - **Aplicaciones en el sector público**: formación inmersiva (sanitaria, emergencias, seguridad), planificación urbana participativa sobre gemelos digitales, atención ciudadana en entornos virtuales, turismo y patrimonio cultural.

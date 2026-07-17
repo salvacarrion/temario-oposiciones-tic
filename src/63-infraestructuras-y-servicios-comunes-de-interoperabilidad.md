@@ -1,6 +1,6 @@
 # Infraestructuras y servicios comunes de interoperabilidad
 
-Las Administraciones públicas españolas comparten un conjunto de infraestructuras y servicios comunes que hacen posible la interoperabilidad en la práctica: identificarse una sola vez, registrar un documento en cualquier oficina, no aportar datos que ya tiene otra Administración o recibir todas las notificaciones en un único punto. El **artículo 12 del Real Decreto 4/2010** (ENI, ver tema 62) ordena a las Administraciones enlazar sus infraestructuras y servicios con «las infraestructuras y servicios comunes que proporcione la Administración General del Estado», para facilitar la interoperabilidad y la relación multilateral. En la misma línea, el **artículo 155 de la Ley 40/2015** obliga a cada Administración a facilitar a las demás el acceso a los datos de los interesados que obren en su poder.
+Las Administraciones públicas españolas comparten un conjunto de infraestructuras y servicios comunes que hacen posible la interoperabilidad en la práctica: identificarse una sola vez, registrar un documento en cualquier oficina, no aportar datos que ya tiene otra Administración o recibir todas las notificaciones en un único punto. El **artículo 12 del Real Decreto 4/2010** (ENI, ver tema [62](62-esquema-nacional-de-interoperabilidad.md)) ordena a las Administraciones enlazar sus infraestructuras y servicios con «las infraestructuras y servicios comunes que proporcione la Administración General del Estado», para facilitar la interoperabilidad y la relación multilateral. En la misma línea, el **artículo 155 de la Ley 40/2015** obliga a cada Administración a facilitar a las demás el acceso a los datos de los interesados que obren en su poder.
 
 La **disposición adicional primera del RD 4/2010** (en la redacción dada por el RD 203/2021) enumera cuatro **instrumentos para la interoperabilidad**:
 
@@ -47,7 +47,7 @@ Cl@ve es la plataforma común del sector público estatal de **identificación, 
 - **Cl@ve PIN**: clave de un solo uso y validez limitada en el tiempo, pensada para accesos esporádicos.
 - **Cl@ve Permanente**: usuario y contraseña de validez duradera, reforzada con códigos de un solo uso (SMS) para servicios de mayor nivel de seguridad; es la puerta de acceso a la firma en la nube.
 - **Certificado electrónico y DNIe**: la plataforma los admite como medios de identificación junto a las claves concertadas.
-- **Firma en la nube (Cl@ve Firma)**: firma electrónica con **certificados centralizados** custodiados en servidores remotos de la Administración. La identificación y firma electrónica se desarrollan en el tema 65.
+- **Firma en la nube (Cl@ve Firma)**: firma electrónica con **certificados centralizados** custodiados en servidores remotos de la Administración. La identificación y firma electrónica se desarrollan en el tema [65](65-identificacion-y-firma-electronica.md).
 
 ## Intermediación de datos: la PID
 
@@ -68,7 +68,7 @@ La **Plataforma de Intermediación de Datos (PID)** es el nodo de interoperabili
 - **Asegura** la confidencialidad e integridad de la información intercambiada.
 - **Publica** un portal web con el catálogo de servicios disponibles y los formularios de solicitud de acceso.
 
-Los **servicios de verificación y consulta de datos (SVD)** de la PID cubren los certificados en papel más habituales, con un catálogo en crecimiento constante: verificación de datos de **identidad** y **residencia**, prestaciones por desempleo, titulaciones oficiales, condición de familia numerosa o grado de discapacidad, o estar al corriente de las obligaciones tributarias y con la Seguridad Social. Técnicamente los intercambios se realizan mediante servicios web conformes al protocolo **SCSP** (Sustitución de Certificados en Soporte Papel, ver tema 62). Las comunidades autónomas acceden a la PID a través de sus propios nodos de interoperabilidad: en la Comunitat Valenciana, la **Plataforma Autonómica de Interoperabilidad (PAI)** (ver tema 82).
+Los **servicios de verificación y consulta de datos (SVD)** de la PID cubren los certificados en papel más habituales, con un catálogo en crecimiento constante: verificación de datos de **identidad** y **residencia**, prestaciones por desempleo, titulaciones oficiales, condición de familia numerosa o grado de discapacidad, o estar al corriente de las obligaciones tributarias y con la Seguridad Social. Técnicamente los intercambios se realizan mediante servicios web conformes al protocolo **SCSP** (Sustitución de Certificados en Soporte Papel, ver tema [62](62-esquema-nacional-de-interoperabilidad.md)). Las comunidades autónomas acceden a la PID a través de sus propios nodos de interoperabilidad: en la Comunitat Valenciana, la **Plataforma Autonómica de Interoperabilidad (PAI)** (ver tema [82](82-administracion-electronica-y-plataformas-de-la-generalitat.md)).
 
 ## Notificaciones y documentos: DEHú, Notific@, INSIDE y ARCHIVE
 
@@ -90,7 +90,7 @@ Las notificaciones electrónicas se practican «mediante comparecencia en la sed
 
 ### INSIDE
 
-- **Definición**: sistema de gestión de **documentos y expedientes electrónicos conforme al ENI**: garantiza que unos y otros se almacenan e intercambian según las NTI de documento y expediente electrónico (ver temas 55 y 62), como gestión documental «viva» previa al archivo definitivo.
+- **Definición**: sistema de gestión de **documentos y expedientes electrónicos conforme al ENI**: garantiza que unos y otros se almacenan e intercambian según las NTI de documento y expediente electrónico (ver temas [55](55-documento-y-expediente-electronico.md) y [62](62-esquema-nacional-de-interoperabilidad.md)), como gestión documental «viva» previa al archivo definitivo.
 - **Funciones**: almacenamiento en cualquier gestor documental compatible con el estándar **CMIS**; gestión de los **metadatos obligatorios**; asociación de documentos a expedientes y gestión del índice electrónico; validación y visualización de documentos y expedientes; gestión de las firmas de cada fichero.
 - **Interconexión con Justicia**: permite la **remisión electrónica de expedientes administrativos** a los órganos judiciales, eliminando el papel en las relaciones con la Administración de Justicia.
 

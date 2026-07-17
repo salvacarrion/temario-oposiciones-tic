@@ -1,6 +1,6 @@
 # Sistema universitario (Ley Orgánica 2/2023, LOSU)
 
-La **Ley Orgánica 2/2023, de 22 de marzo, del Sistema Universitario (LOSU)** es la norma de cabecera de la universidad española: deroga la **Ley Orgánica 6/2001, de Universidades (LOU)** y regula el sistema universitario y los mecanismos de coordinación, cooperación y colaboración entre las Administraciones con competencias en la materia. El sistema universitario valenciano y su ley de coordinación (Ley 4/2007) se estudian en el tema 104.
+La **Ley Orgánica 2/2023, de 22 de marzo, del Sistema Universitario (LOSU)** es la norma de cabecera de la universidad española: deroga la **Ley Orgánica 6/2001, de Universidades (LOU)** y regula el sistema universitario y los mecanismos de coordinación, cooperación y colaboración entre las Administraciones con competencias en la materia. El sistema universitario valenciano y su ley de coordinación (Ley 4/2007) se estudian en el tema [104](104-sistema-universitario-valenciano-ley-4-2007.md).
 
 **Texto consolidado a 2 de agosto de 2024.**
 

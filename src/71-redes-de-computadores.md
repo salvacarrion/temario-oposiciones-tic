@@ -1,6 +1,6 @@
 # Redes de computadores
 
-Una red de computadores es un conjunto de equipos (nodos) interconectados mediante dispositivos físicos y software que intercambian datos a través de impulsos eléctricos, ondas electromagnéticas u otros medios, con el fin de compartir información, recursos y servicios. Este tema cubre los elementos y clasificaciones de las redes, las redes de área local (Ethernet, VLAN, DMZ), las redes de área extensa y el direccionamiento IP con su caso práctico. Los protocolos de cada capa se estudian en el tema 70, las redes inalámbricas en el 72 y la seguridad de red en el 75.
+Una red de computadores es un conjunto de equipos (nodos) interconectados mediante dispositivos físicos y software que intercambian datos a través de impulsos eléctricos, ondas electromagnéticas u otros medios, con el fin de compartir información, recursos y servicios. Este tema cubre los elementos y clasificaciones de las redes, las redes de área local (Ethernet, VLAN, DMZ), las redes de área extensa y el direccionamiento IP con su caso práctico. Los protocolos de cada capa se estudian en el tema [70](70-protocolos-de-comunicaciones.md), las redes inalámbricas en el 72 y la seguridad de red en el 75.
 
 ## Componentes, topologías y dispositivos de interconexión
 
@@ -10,11 +10,11 @@ Toda red combina una **capa física** (los elementos tangibles: tarjetas de red,
 - **Componentes básicos de la red**:
     - **Hardware**: los dispositivos físicos (equipos, switches, routers, servidores, cableado).
     - **Software**: los programas que gestionan la comunicación y el flujo de datos.
-    - **Protocolos**: las reglas que permiten entenderse a dispositivos de distintos fabricantes (tema 70).
+    - **Protocolos**: las reglas que permiten entenderse a dispositivos de distintos fabricantes (tema [70](70-protocolos-de-comunicaciones.md)).
 
 ### Dispositivos de interconexión
 
-Cada dispositivo opera en una capa del modelo OSI (tema 69), lo que determina qué información usa para reenviar el tráfico:
+Cada dispositivo opera en una capa del modelo OSI (tema [69](69-modelos-osi-y-tcp-ip.md)), lo que determina qué información usa para reenviar el tráfico:
 
 | Dispositivo | Capa OSI | Función |
 | --- | --- | --- |
@@ -28,7 +28,7 @@ Cada dispositivo opera en una capa del modelo OSI (tema 69), lo que determina qu
 ### Clasificación de las redes por alcance
 
 - **PAN (Personal Area Network)**: comunicación entre dispositivos cercanos a una persona (smartphone, reloj); su variante inalámbrica es la **WPAN** (p. ej. Bluetooth).
-- **LAN (Local Area Network)**: área geográfica pequeña (una sala, un edificio); su variante inalámbrica es la **WLAN** (Wi-Fi, tema 76).
+- **LAN (Local Area Network)**: área geográfica pequeña (una sala, un edificio); su variante inalámbrica es la **WLAN** (Wi-Fi, tema [76](76-redes-inalambricas-y-5g.md)).
 - **CAN (Campus Area Network)**: interconecta las LAN de un campus o parque tecnológico.
 - **MAN (Metropolitan Area Network)**: red de alta velocidad de ámbito urbano (una ciudad, una red de edificios públicos).
 - **WAN (Wide Area Network)**: área geográfica extensa, usando enlaces de operador, cables submarinos o satélites; Internet es la WAN global.
@@ -74,7 +74,7 @@ Las LAN actuales son casi universalmente redes **Ethernet conmutadas** en topolo
 
 - Una **VLAN** (*Virtual LAN*) divide lógicamente un mismo switch (o conjunto de switches) en varias redes independientes: los equipos de VLAN distintas no se comunican entre sí aunque compartan la electrónica física.
 - **Etiquetado 802.1Q**: inserta en la trama Ethernet una etiqueta de **4 bytes** cuyo identificador de VLAN (**VLAN ID, 12 bits**) admite hasta **4094 VLAN**.
-- **Tipos de asignación**: **estática o por puerto** (cada puerto pertenece a una VLAN) o **dinámica** (según la MAC o la autenticación del equipo, p. ej. con 802.1X, tema 79).
+- **Tipos de asignación**: **estática o por puerto** (cada puerto pertenece a una VLAN) o **dinámica** (según la MAC o la autenticación del equipo, p. ej. con 802.1X, tema [79](79-seguridad-en-las-comunicaciones.md)).
 - **Tipos de enlaces**: de **acceso** (transportan una sola VLAN, hacia los equipos) y **troncales (trunk)** (transportan varias VLAN etiquetadas entre switches; la **VLAN nativa** viaja sin etiquetar).
 - **Comunicación entre VLAN**: requiere un dispositivo de capa 3: un router (*router-on-a-stick*) o un **switch de capa 3**.
 - **Ventajas**: segmentación y seguridad (aísla departamentos, invitados, VoIP), dominios de difusión más pequeños y flexibilidad (mover un usuario de red sin recablear).
@@ -83,8 +83,8 @@ Las LAN actuales son casi universalmente redes **Ethernet conmutadas** en topolo
 
 - Segmento de red intermedio entre la red interna y el exterior donde se ubican los **servicios expuestos a Internet** (web, correo, DNS público).
 - **Arquitectura**: entre dos cortafuegos (uno frente a Internet y otro frente a la red interna) o en una **tercera interfaz** de un mismo cortafuegos.
-- **Principio**: desde la DMZ **no se permite iniciar conexiones hacia la red interna**; si un servidor expuesto se ve comprometido, el atacante no alcanza la red corporativa. Las arquitecturas de cortafuegos se desarrollan en el tema 79.
-- Las LAN inalámbricas (**WLAN**, familia IEEE 802.11/Wi-Fi) se estudian en el tema 76, y su seguridad en el 75.
+- **Principio**: desde la DMZ **no se permite iniciar conexiones hacia la red interna**; si un servidor expuesto se ve comprometido, el atacante no alcanza la red corporativa. Las arquitecturas de cortafuegos se desarrollan en el tema [79](79-seguridad-en-las-comunicaciones.md).
+- Las LAN inalámbricas (**WLAN**, familia IEEE 802.11/Wi-Fi) se estudian en el tema [76](76-redes-inalambricas-y-5g.md), y su seguridad en el 75.
 
 ## Redes de área extensa (WAN)
 
@@ -113,8 +113,8 @@ Las redes de área extensa interconectan redes de ámbito menor (LAN, MAN) a tra
 - **MPLS (Multiprotocol Label Switching)**: conmuta los paquetes según **etiquetas** cortas asignadas en el ingreso a la red, en lugar de consultar la dirección IP en cada salto (se le llama de «capa 2,5»). Es la base de las **VPN de nivel 3** de operador que interconectan sedes, con ingeniería de tráfico y calidad de servicio.
 - **Ethernet WAN (metro Ethernet)**: extiende Ethernet sobre la fibra del operador para enlaces metropolitanos de alta velocidad.
 - **Banda ancha sobre el bucle local**: **DSL** (sobre el par de cobre telefónico), **cable** (sobre la red HFC de televisión, estándar DOCSIS) y **FTTH** (fibra hasta el hogar, con redes ópticas pasivas GPON), hoy la tecnología dominante en España.
-- **Acceso inalámbrico**: **VSAT** (terminales de satélite, para zonas remotas) y **datos móviles** 4G/5G, incluido el acceso fijo inalámbrico (las generaciones móviles se estudian en el tema 76).
-- **SD-WAN**: gestión centralizada por software de múltiples enlaces WAN (MPLS, fibra, 4G/5G), seleccionando el camino según la aplicación (se estudia en el tema 73).
+- **Acceso inalámbrico**: **VSAT** (terminales de satélite, para zonas remotas) y **datos móviles** 4G/5G, incluido el acceso fijo inalámbrico (las generaciones móviles se estudian en el tema [76](76-redes-inalambricas-y-5g.md)).
+- **SD-WAN**: gestión centralizada por software de múltiples enlaces WAN (MPLS, fibra, 4G/5G), seleccionando el camino según la aplicación (se estudia en el tema [73](73-virtualizacion-de-redes.md)).
 - **Tecnologías legadas**, hoy retiradas o residuales pero preguntables:
 
 | Tecnología | Características | Conmutación |
@@ -149,7 +149,7 @@ Una dirección IPv4 son **32 bits** divididos en dos partes: la que identifica l
 - **CIDR (Classless Inter-Domain Routing)**: elimina las clases y permite prefijos de cualquier longitud (/n = número de bits de red), lo que aprovecha mejor el espacio y permite **agregar rutas** (superredes). **VLSM** aplica la misma idea dentro de una organización: subredes de distinto tamaño según las necesidades de cada segmento.
 - **Subnetting**: tomar prestados **n bits** de la parte de host crea **2^n subredes**; con **h** bits de host restantes, cada subred tiene **2^h - 2** direcciones útiles (se descuentan la de red y la de broadcast).
 - **NAT/PAT**: la traducción de direcciones de red permite que una red privada salga a Internet con una o pocas IP públicas; **PAT** (NAT con sobrecarga) multiplexa muchas conexiones sobre una sola IP distinguiéndolas por el puerto. Ha sido el gran paliativo del agotamiento de IPv4.
-- **Direccionamiento IPv6** (tema 70): prefijos habituales **/64** por subred; direcciones **link-local** (fe80::/10, autoconfiguradas en cada interfaz), **ULA** (fc00::/7, el equivalente a las privadas), **unicast globales** (2000::/3) y **multicast** (ff00::/8); no existe el broadcast.
+- **Direccionamiento IPv6** (tema [70](70-protocolos-de-comunicaciones.md)): prefijos habituales **/64** por subred; direcciones **link-local** (fe80::/10, autoconfiguradas en cada interfaz), **ULA** (fc00::/7, el equivalente a las privadas), **unicast globales** (2000::/3) y **multicast** (ff00::/8); no existe el broadcast.
 
 ## Caso práctico: cálculo de subredes
 

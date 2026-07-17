@@ -1,6 +1,6 @@
 # Personal estatutario de los servicios de salud (Ley 55/2003)
 
-La **Ley 55/2003, de 16 de diciembre, del Estatuto Marco del personal estatutario de los servicios de salud**, regula la relación funcionarial especial del personal de las instituciones sanitarias públicas. Es la norma equivalente al TREBEP en el ámbito sanitario: el personal estatutario se rige por ella y por su normativa autonómica de desarrollo, con el régimen general de empleo público como supletorio (remisión al tema 12).
+La **Ley 55/2003, de 16 de diciembre, del Estatuto Marco del personal estatutario de los servicios de salud**, regula la relación funcionarial especial del personal de las instituciones sanitarias públicas. Es la norma equivalente al TREBEP en el ámbito sanitario: el personal estatutario se rige por ella y por su normativa autonómica de desarrollo, con el régimen general de empleo público como supletorio (remisión al tema [12](12-estatuto-basico-del-empleado-publico.md)).
 
 ## Características y estructura
 

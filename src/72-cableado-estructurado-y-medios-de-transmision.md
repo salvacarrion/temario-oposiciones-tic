@@ -16,12 +16,12 @@ Los medios guiados transportan la señal por un soporte físico (cobre o fibra);
 | **7 / 7A** | 600 / 1000 MHz | Siempre apantalladas (solo ISO, sin reconocimiento TIA) |
 | **8** | 2000 MHz | **25/40GBASE-T hasta 30 m**, enlaces cortos de CPD |
 
-- **Cable coaxial**: conductor central y malla concéntrica, gran inmunidad al ruido. Hoy es residual en redes de datos; pervive en las redes de televisión por cable **CATV/HFC** (75 ohmios, tema 74) y en radiofrecuencia (antenas).
+- **Cable coaxial**: conductor central y malla concéntrica, gran inmunidad al ruido. Hoy es residual en redes de datos; pervive en las redes de televisión por cable **CATV/HFC** (75 ohmios, tema [74](74-redes-de-transporte-voz-y-audiovisuales.md)) y en radiofrecuencia (antenas).
 - **Fibra óptica**: transmite pulsos de luz por un núcleo de vidrio que los confina por reflexión total interna; inmune a interferencias electromagnéticas, sin emisiones (más segura frente a escuchas) y con atenuaciones muy bajas (del orden de **0,2 a 0,4 dB/km**), lo que da alcances y anchos de banda muy superiores al cobre. Se transmite en las **ventanas** de menor atenuación: **850 nm** (multimodo), **1310 y 1550 nm** (monomodo). Dos tipos:
   - **Monomodo (OS1/OS2)**: núcleo de **9 µm**, láser a 1310/1550 nm, alcances de kilómetros; es la fibra de los enlaces troncales, el acceso FTTH y las redes de operador.
   - **Multimodo (OM1 a OM5)**: núcleo de **50 µm** (62,5 µm en la antigua OM1), fuentes VCSEL a 850 nm, alcances de cientos de metros: **OM3** (10 Gbps hasta 300 m), **OM4** (10 Gbps hasta 550 m, 100 Gbps en paralelo), **OM5** (multiplexación por longitud de onda corta, SWDM). Habitual dentro del edificio y el CPD.
   - **Conectores**: **LC** (pequeño factor de forma, el habitual), SC, y MPO/MTP para enlaces paralelos de alta densidad.
-- **Medios no guiados**: radioenlaces y microondas, Wi-Fi y comunicaciones móviles; se tratan en el tema 76.
+- **Medios no guiados**: radioenlaces y microondas, Wi-Fi y comunicaciones móviles; se tratan en el tema [76](76-redes-inalambricas-y-5g.md).
 
 ## Cableado estructurado: subsistemas y topología
 
@@ -62,7 +62,7 @@ Buenas prácticas de instalación: respetar el **radio de curvatura** y la tensi
 
 ## El cableado del CPD y PoE
 
-El centro de proceso de datos tiene su propia norma de infraestructura (**ANSI/TIA-942**, tratada en el tema 43) que aplica el modelo estructurado a las áreas del CPD (distribuidor principal MDA, distribuidores horizontales HDA y áreas de equipos EDA), con topologías de conmutación **ToR** (*top of rack*, conmutador en cada armario) o **EoR** (*end of row*). En CPD la práctica actual es **categoría 6A como mínimo** en cobre y fibra **OM4/OS2** con conectividad LC y troncales MPO preconectorizados.
+El centro de proceso de datos tiene su propia norma de infraestructura (**ANSI/TIA-942**, tratada en el tema [43](43-centros-de-proceso-de-datos.md)) que aplica el modelo estructurado a las áreas del CPD (distribuidor principal MDA, distribuidores horizontales HDA y áreas de equipos EDA), con topologías de conmutación **ToR** (*top of rack*, conmutador en cada armario) o **EoR** (*end of row*). En CPD la práctica actual es **categoría 6A como mínimo** en cobre y fibra **OM4/OS2** con conectividad LC y troncales MPO preconectorizados.
 
 **PoE (Power over Ethernet)** alimenta dispositivos por el propio par trenzado, eliminando tomas eléctricas dedicadas: telefonía IP, puntos de acceso Wi-Fi, cámaras y sensores.
 

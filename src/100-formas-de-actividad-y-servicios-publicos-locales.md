@@ -15,7 +15,7 @@ La doctrina clásica, plasmada en el **Reglamento de Servicios de las Corporacio
 
 - **Concepto**: estímulo de actividades privadas de interés público sin usar la coacción ni crear servicios públicos; su técnica principal es la **subvención**.
 - **Título II del RSCL**: las corporaciones pueden subvencionar obras y servicios de particulares que **complementen o suplan los atribuidos a la competencia local**; la subvención clásica del RSCL no podía exceder del **50 % del coste** de la actividad y tiene carácter voluntario y eventual.
-- **Régimen vigente**: la **Ley 38/2003, General de Subvenciones** y su reglamento son el marco general (bases reguladoras, concurrencia competitiva, justificación y reintegro), con la publicidad canalizada por la **BDNS** (tema 101) y los **planes estratégicos de subvenciones** como instrumento de planificación.
+- **Régimen vigente**: la **Ley 38/2003, General de Subvenciones** y su reglamento son el marco general (bases reguladoras, concurrencia competitiva, justificación y reintegro), con la publicidad canalizada por la **BDNS** (tema [101](101-sistemas-de-informacion-corporativos-de-la-administracion-local.md)) y los **planes estratégicos de subvenciones** como instrumento de planificación.
 
 ## El servicio público local y sus formas de gestión
 

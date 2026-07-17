@@ -78,7 +78,7 @@ Los procesos **ETL** (*Extract, Transform, Load*) alimentan el almacén de datos
 Elementos de apoyo:
 
 - **ELT**: variante actual en la que los datos se cargan en bruto y se transforman dentro de la plataforma de destino, aprovechando la potencia de los almacenes en la nube (BigQuery, Snowflake, Redshift).
-- **Metadatos**: documentan el origen, la estructura, las transformaciones y el linaje de los datos; su catalogación es una función central de la gobernanza del dato (tema 38).
+- **Metadatos**: documentan el origen, la estructura, las transformaciones y el linaje de los datos; su catalogación es una función central de la gobernanza del dato (tema [38](38-gobernanza-del-dato.md)).
 - **Middleware**: capa de interoperabilidad entre plataformas heterogéneas.
 
 ### Data lake y lakehouse
@@ -107,7 +107,7 @@ La estrategia europea de datos (2020) impulsa la creación de **espacios comunes
 - **Veracidad**: fiabilidad y calidad del dato.
 - **Valor**: conocimiento útil extraído de los datos.
 
-El almacenamiento se apoya en las bases de datos **NoSQL** (clave-valor, documentales, columnares y de grafos), tratadas en el tema 36. En cuanto al procesamiento:
+El almacenamiento se apoya en las bases de datos **NoSQL** (clave-valor, documentales, columnares y de grafos), tratadas en el tema [36](36-bases-de-datos.md). En cuanto al procesamiento:
 
 - **Batch (por lotes)**: grandes volúmenes con latencia alta (MapReduce, Spark).
 - **Streaming (en flujo)**: procesamiento continuo casi en tiempo real (Kafka, Flink, Spark Structured Streaming).
@@ -182,7 +182,7 @@ La **minería de datos** es el proceso de extraer conocimiento útil, comprensib
 - **Aprendizaje anticipativo (eager learning)**: construye un modelo durante el entrenamiento.
     - **Métodos bayesianos**: predicen la clase más probable a partir de probabilidades.
     - **Árboles de decisión**: reglas en forma de árbol, interpretables.
-    - **Redes neuronales**: capturan relaciones complejas (base del aprendizaje profundo, tema 34).
+    - **Redes neuronales**: capturan relaciones complejas (base del aprendizaje profundo, tema [34](34-inteligencia-artificial.md)).
     - **Máquinas de vectores de soporte (SVM)**: buscan el hiperplano que mejor separa las clases.
     - **Algoritmos evolutivos**: optimizan soluciones imitando la evolución biológica.
 - **Ensembles (meta-clasificadores)**: combinan varios modelos para ganar precisión y robustez.
@@ -231,9 +231,9 @@ La **explicabilidad** de los modelos es clave para su adopción: los modelos int
 
 ### Ciencia de datos y MLOps
 
-La **ciencia de datos** generaliza la minería de datos: combina estadística, computación y conocimiento del dominio para extraer valor de los datos, con el ciclo de vida que ya describe CRISP-DM (adquisición y ETL, preprocesado, modelado, validación y despliegue) y herramientas propias (Python con pandas/scikit-learn, R, notebooks, visualización). Las técnicas de aprendizaje automático se estudian en el tema 34.
+La **ciencia de datos** generaliza la minería de datos: combina estadística, computación y conocimiento del dominio para extraer valor de los datos, con el ciclo de vida que ya describe CRISP-DM (adquisición y ETL, preprocesado, modelado, validación y despliegue) y herramientas propias (Python con pandas/scikit-learn, R, notebooks, visualización). Las técnicas de aprendizaje automático se estudian en el tema [34](34-inteligencia-artificial.md).
 
-**MLOps** aplica los principios de DevOps (tema 26) al ciclo de vida de los modelos para llevarlos a producción de forma fiable y repetible:
+**MLOps** aplica los principios de DevOps (tema [26](26-control-de-versiones-integracion-continua-y-devops.md)) al ciclo de vida de los modelos para llevarlos a producción de forma fiable y repetible:
 
 - **Versionado** de datos, código y modelos, con **registro de modelos** y *feature stores* reutilizables.
 - **Entrenamiento y despliegue automatizados** (pipelines CI/CD que reentrenan, validan y publican el modelo).

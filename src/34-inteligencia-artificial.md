@@ -149,7 +149,7 @@ Otras técnicas de mitigación complementarias:
 - **Abstención calibrada**: diseñar el sistema (y sus evaluaciones) para que rechazar o escalar una pregunta dudosa sea mejor que inventar.
 - **Verificación externa**: dar al modelo herramientas cuya salida es comprobable (ejecutar código, consultar una base de datos, buscar) en lugar de fiar el resultado a su memoria; o contrastar varias generaciones o modelos entre sí.
 - **Guardrails y validación de salidas**: esquemas estructurados, reglas de negocio y filtros que comprueban la respuesta antes de usarla.
-- **Supervisión humana** en decisiones con efectos sobre terceros: en el sector público no es solo prudencia, sino exigencia del régimen de actuación administrativa automatizada y del Reglamento europeo de IA (tema 35).
+- **Supervisión humana** en decisiones con efectos sobre terceros: en el sector público no es solo prudencia, sino exigencia del régimen de actuación administrativa automatizada y del Reglamento europeo de IA (tema [35](35-etica-regulacion-inteligencia-artificial.md)).
 
 También hay que conocer las medidas que no resuelven el problema: el *fine-tuning* especializa el estilo y el dominio, pero no convierte al modelo en veraz; fijar la temperatura a 0 hace la salida determinista, no exacta; y las instrucciones del tipo "no inventes información" en el *prompt* tienen un efecto muy limitado.
 

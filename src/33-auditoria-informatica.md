@@ -18,7 +18,7 @@ La auditoría se distingue de la consultoría en que **no diseña soluciones sin
 ## Marcos profesionales: ITAF, COBIT, ISO/IEC 27007 e ISO 19011
 
 - **ITAF** (*IT Audit Framework*, ISACA; **4.ª edición, 2020**): marco de prácticas profesionales para la auditoría TI. Organiza las **normas** (de obligado cumplimiento para los titulares de la certificación **CISA**) en tres grupos: **generales** (independencia, objetividad, competencia, debido cuidado profesional), de **desempeño** (planificación, supervisión, obtención de evidencias, uso del trabajo de terceros) y de **informes**; las desarrolla mediante **directrices** alineadas con las fases del proceso de auditoría.
-- **COBIT 2019** (ISACA): aunque es un marco de gobierno y gestión (ver tema 17), sus 40 objetivos con sus prácticas y actividades son el **criterio de referencia** más usado para auditar la función TIC; el dominio **MEA** incluye la evaluación del sistema de control interno y del cumplimiento.
+- **COBIT 2019** (ISACA): aunque es un marco de gobierno y gestión (ver tema [17](17-gobernanza-y-planificacion-estrategica-tic.md)), sus 40 objetivos con sus prácticas y actividades son el **criterio de referencia** más usado para auditar la función TIC; el dominio **MEA** incluye la evaluación del sistema de control interno y del cumplimiento.
 - **ISO 19011:2018**: directrices para la **auditoría de sistemas de gestión** (de cualquier disciplina). Define **7 principios** (integridad; presentación imparcial; debido cuidado profesional; confidencialidad; independencia; enfoque basado en evidencias; enfoque basado en riesgos) y regula la gestión del **programa de auditorías**, la realización de cada auditoría y la competencia de los auditores.
 - **ISO/IEC 27007:2020**: directrices específicas para auditar **sistemas de gestión de seguridad de la información (SGSI)**, complementando la ISO 19011 con orientación sobre los controles de la ISO/IEC 27001 (las auditorías de certificación se rigen además por la ISO/IEC 27006).
 
@@ -29,12 +29,12 @@ El plan de auditoría TIC cubre de forma rotatoria las áreas de mayor riesgo. L
 | Área | Aspectos revisados |
 | --- | --- |
 | Seguridad lógica | Gestión de identidades y accesos, privilegios, contraseñas, segregación de funciones |
-| Seguridad física y CPD | Control de acceso, climatización, energía, protección contra incendios (ver tema 43) |
+| Seguridad física y CPD | Control de acceso, climatización, energía, protección contra incendios (ver tema [43](43-centros-de-proceso-de-datos.md)) |
 | Desarrollo | Metodología del ciclo de vida, gestión de cambios y versiones, separación de entornos, pruebas y pase a producción |
 | Explotación y operaciones | Planificación de trabajos, copias de seguridad y restauración, gestión de incidencias, monitorización |
-| Bases de datos | Privilegios de administración, integridad, cifrado, registro de actividad (ver tema 36) |
-| Redes y comunicaciones | Segmentación, cortafuegos, accesos remotos (ver tema 79) |
-| Continuidad | BIA, planes de continuidad y recuperación, resultados de las pruebas (ver tema 31) |
+| Bases de datos | Privilegios de administración, integridad, cifrado, registro de actividad (ver tema [36](36-bases-de-datos.md)) |
+| Redes y comunicaciones | Segmentación, cortafuegos, accesos remotos (ver tema [79](79-seguridad-en-las-comunicaciones.md)) |
+| Continuidad | BIA, planes de continuidad y recuperación, resultados de las pruebas (ver tema [31](31-gestion-de-ciberincidentes.md)) |
 | Cumplimiento y licencias | Legalidad del software instalado, contratos con proveedores, informes SOC 2 / ISAE 3402 de servicios externalizados |
 
 Las **CAAT** (*Computer-Assisted Audit Techniques*) son las técnicas de auditoría asistidas por ordenador:
@@ -42,7 +42,7 @@ Las **CAAT** (*Computer-Assisted Audit Techniques*) son las técnicas de auditor
 - **Análisis masivo de datos**: herramientas tipo ACL/IDEA o consultas SQL sobre el universo completo de transacciones (duplicados, valores atípicos, conciliaciones), en lugar de muestreos.
 - **Datos y transacciones de prueba**: juegos de ensayo procesados por la aplicación auditada para verificar sus controles.
 - **Módulos de auditoría embebidos** y pistas de auditoría: captura continua de operaciones marcadas dentro de la propia aplicación.
-- **Herramientas técnicas**: escáneres de vulnerabilidades, analizadores de configuración, revisión de logs y SIEM (ver tema 31), que sustentan la auditoría de seguridad.
+- **Herramientas técnicas**: escáneres de vulnerabilidades, analizadores de configuración, revisión de logs y SIEM (ver tema [31](31-gestion-de-ciberincidentes.md)), que sustentan la auditoría de seguridad.
 - La explotación de estas técnicas de forma permanente da lugar a la **auditoría continua**, con indicadores y alertas sobre los controles clave.
 
 ## Auditoría en la Administración: ENS y protección de datos
@@ -63,7 +63,7 @@ El RGPD no impone una auditoría periódica general, pero la exige como instrume
 - **Art. 39.1.b**: el **delegado de protección de datos** supervisa el cumplimiento, **incluidas las auditorías**.
 - **Art. 28.3.h**: el **encargado del tratamiento** debe permitir y contribuir a las auditorías e inspecciones del responsable o de otro auditor mandatado.
 - **Art. 58.1.b**: las autoridades de control (AEPD) pueden «llevar a cabo investigaciones **en forma de auditorías** de protección de datos».
-- En la práctica, las auditorías RGPD revisan el registro de actividades de tratamiento, las bases jurídicas, las medidas de seguridad (en las AAPP, alineadas con el ENS), las evaluaciones de impacto y los contratos de encargo (ver tema 53).
+- En la práctica, las auditorías RGPD revisan el registro de actividades de tratamiento, las bases jurídicas, las medidas de seguridad (en las AAPP, alineadas con el ENS), las evaluaciones de impacto y los contratos de encargo (ver tema [53](53-proteccion-de-datos-personales.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

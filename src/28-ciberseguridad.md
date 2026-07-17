@@ -1,13 +1,13 @@
 # Ciberseguridad
 
-La ciberseguridad es el conjunto de actividades dirigidas a proteger el ciberespacio (las redes y sistemas de información y los servicios que dependen de ellos) frente a las ciberamenazas. Este tema presenta el marco normativo e institucional de la ciberseguridad en España: la Estrategia Nacional de Ciberseguridad, los organismos con competencias (CCN, CCN-CERT e INCIBE) y las guías CCN-STIC. El Esquema Nacional de Seguridad se estudia en el tema 29, la gestión de ciberincidentes en el 31 y la normativa propia de la Generalitat en el 77.
+La ciberseguridad es el conjunto de actividades dirigidas a proteger el ciberespacio (las redes y sistemas de información y los servicios que dependen de ellos) frente a las ciberamenazas. Este tema presenta el marco normativo e institucional de la ciberseguridad en España: la Estrategia Nacional de Ciberseguridad, los organismos con competencias (CCN, CCN-CERT e INCIBE) y las guías CCN-STIC. El Esquema Nacional de Seguridad se estudia en el tema [29](29-esquema-nacional-de-seguridad.md), la gestión de ciberincidentes en el 31 y la normativa propia de la Generalitat en el 77.
 
 ## Conceptos y marco de la ciberseguridad
 
-La ciberseguridad se apoya en los conceptos de la seguridad de la información: proteger la **confidencialidad, integridad y disponibilidad** de la información y de los servicios (a las que el ENS añade la **autenticidad** y la **trazabilidad**), reduciendo los riesgos hasta un nivel aceptable mediante un proceso de gestión de riesgos (tema 30).
+La ciberseguridad se apoya en los conceptos de la seguridad de la información: proteger la **confidencialidad, integridad y disponibilidad** de la información y de los servicios (a las que el ENS añade la **autenticidad** y la **trazabilidad**), reduciendo los riesgos hasta un nivel aceptable mediante un proceso de gestión de riesgos (tema [30](30-analisis-y-gestion-de-riesgos.md)).
 
 - **Ciberespacio**: espacio creado por el uso masivo de las TIC, donde se producen conflictos y agresiones que pueden atentar contra la seguridad nacional, la prosperidad económica y el funcionamiento normal de la sociedad y de las administraciones.
-- **Principales ciberamenazas**: el malware y en particular el *ransomware* (secuestro de datos mediante cifrado y extorsión); el *phishing* y la ingeniería social; la denegación de servicio (DoS/DDoS); las amenazas persistentes avanzadas (**APT**, campañas dirigidas y prolongadas, típicas del ciberespionaje); los ataques a la cadena de suministro; y la amenaza interna. La taxonomía oficial de ciberincidentes y su gestión se desarrollan en el tema 31.
+- **Principales ciberamenazas**: el malware y en particular el *ransomware* (secuestro de datos mediante cifrado y extorsión); el *phishing* y la ingeniería social; la denegación de servicio (DoS/DDoS); las amenazas persistentes avanzadas (**APT**, campañas dirigidas y prolongadas, típicas del ciberespionaje); los ataques a la cadena de suministro; y la amenaza interna. La taxonomía oficial de ciberincidentes y su gestión se desarrollan en el tema [31](31-gestion-de-ciberincidentes.md).
 
 ### Marco normativo de la Unión Europea
 
@@ -28,9 +28,9 @@ La ciberseguridad se apoya en los conceptos de la seguridad de la información: 
     - Instrumentos: el **Catálogo Nacional de Infraestructuras Estratégicas** (información clasificada, gestionado por el Ministerio del Interior) y los instrumentos de planificación: **Plan Nacional de Protección de las Infraestructuras Críticas, Planes Estratégicos Sectoriales, Plan de Seguridad del Operador, Planes de Protección Específicos y Planes de Apoyo Operativo**.
     - El anexo define **12 sectores estratégicos**: administración, espacio, industria nuclear, industria química, instalaciones de investigación, agua, energía, salud, TIC, transporte, alimentación y sistema financiero y tributario.
     - Órgano responsable: el **CNPIC** (Centro Nacional de Protección de Infraestructuras y Ciberseguridad), dependiente de la **Secretaría de Estado de Seguridad** del Ministerio del Interior.
-- **ENS (RD 311/2022)**: principios, requisitos y medidas de seguridad para el sector público (tema 29). **Protección de datos**: RGPD y LO 3/2018 (tema 53).
+- **ENS (RD 311/2022)**: principios, requisitos y medidas de seguridad para el sector público (tema [29](29-esquema-nacional-de-seguridad.md)). **Protección de datos**: RGPD y LO 3/2018 (tema [53](53-proteccion-de-datos-personales.md)).
 - **Normativa en tramitación** (a julio de 2026): el **Proyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad** (transposición de NIS2, en tramitación parlamentaria; crea el **Centro Nacional de Ciberseguridad**; España recibió en mayo de 2025 un dictamen motivado de la Comisión Europea por el retraso) y el proyecto de ley de **protección y resiliencia de entidades críticas** (transposición de la Directiva CER, que derogará la Ley 8/2011).
-- **Ámbito de la Generalitat**: la política y organización de la seguridad de la información (**Decreto 49/2025**) y el uso seguro de medios tecnológicos (**Orden 19/2013**) se estudian en el tema 81.
+- **Ámbito de la Generalitat**: la política y organización de la seguridad de la información (**Decreto 49/2025**) y el uso seguro de medios tecnológicos (**Orden 19/2013**) se estudian en el tema [81](81-seguridad-de-la-informacion-en-la-generalitat.md).
 
 ## La Estrategia Nacional de Ciberseguridad
 
@@ -68,26 +68,26 @@ La **Estrategia Nacional de Ciberseguridad 2019**, aprobada por el **Consejo de 
 | ANA | Automatización y normalización de auditorías: gestión centralizada y continua de vulnerabilidades |
 | GLORIA | Plataforma de gestión de incidentes y amenazas mediante correlación compleja de eventos (SIEM) |
 | LUCIA | Listado Unificado de Coordinación de Incidentes y Amenazas: gestión y notificación de ciberincidentes en el ámbito del ENS |
-| INES | Informe Nacional del Estado de Seguridad: recogida de la información para el informe anual del estado de la seguridad (tema 29) |
+| INES | Informe Nacional del Estado de Seguridad: recogida de la información para el informe anual del estado de la seguridad (tema [29](29-esquema-nacional-de-seguridad.md)) |
 | IRIS | Cuadro de mando del estado de la ciberseguridad del sector público en tiempo casi real |
 | REYES | Intercambio de información de ciberamenazas (integrada con CARMEN, GLORIA y LUCIA) |
-| PILAR | Análisis y gestión de riesgos conforme a la metodología MAGERIT (tema 30) |
+| PILAR | Análisis y gestión de riesgos conforme a la metodología MAGERIT (tema [30](30-analisis-y-gestion-de-riesgos.md)) |
 | SAT | Sistemas de alerta temprana: sondas en las salidas a internet de los organismos (SAT-INET) y en la red SARA (SAT-SARA) |
 
 - **INCIBE** (Instituto Nacional de Ciberseguridad): sociedad estatal dependiente de la **Secretaría de Estado de Digitalización e Inteligencia Artificial**; atiende a la **ciudadanía, las empresas** (en especial pymes y autónomos) y los sectores estratégicos privados. Opera el **INCIBE-CERT** (CSIRT de referencia para entidades privadas y ciudadanía, conjuntamente con el CNPIC para los operadores críticos), la **línea de ayuda en ciberseguridad 017**, y programas de talento y concienciación.
-- **Otros organismos**: el **CNPIC** (protección de infraestructuras críticas, Ministerio del Interior), la **OCC** (enlace con las FCSE para la cibercriminalidad), el **ESPDEF-CERT** del Mando Conjunto del Ciberespacio (Defensa) y la **AEPD** en materia de datos personales. En el ámbito autonómico valenciano, el **CSIRT-CV** es el centro de operaciones de ciberseguridad de la Generalitat (tema 81).
+- **Otros organismos**: el **CNPIC** (protección de infraestructuras críticas, Ministerio del Interior), la **OCC** (enlace con las FCSE para la cibercriminalidad), el **ESPDEF-CERT** del Mando Conjunto del Ciberespacio (Defensa) y la **AEPD** en materia de datos personales. En el ámbito autonómico valenciano, el **CSIRT-CV** es el centro de operaciones de ciberseguridad de la Generalitat (tema [81](81-seguridad-de-la-informacion-en-la-generalitat.md)).
 
 ## Las guías CCN-STIC
 
-Las guías **CCN-STIC** son el conjunto de normas, instrucciones, guías y recomendaciones que el **CCN** elabora y difunde para garantizar la seguridad de los sistemas TIC de la Administración, en cumplimiento de sus funciones (Ley 11/2002 y RD 421/2004). En el marco del **ENS**, la disposición adicional segunda del RD 311/2022 encarga al CCN la elaboración de estas guías como apoyo para el mejor cumplimiento de sus requisitos (las **instrucciones técnicas de seguridad**, de obligado cumplimiento, se estudian en el tema 29).
+Las guías **CCN-STIC** son el conjunto de normas, instrucciones, guías y recomendaciones que el **CCN** elabora y difunde para garantizar la seguridad de los sistemas TIC de la Administración, en cumplimiento de sus funciones (Ley 11/2002 y RD 421/2004). En el marco del **ENS**, la disposición adicional segunda del RD 311/2022 encarga al CCN la elaboración de estas guías como apoyo para el mejor cumplimiento de sus requisitos (las **instrucciones técnicas de seguridad**, de obligado cumplimiento, se estudian en el tema [29](29-esquema-nacional-de-seguridad.md)).
 
 - Se organizan en **series temáticas**; para las administraciones públicas destacan la **serie 800**, dedicada al ENS, y las series de **bastionado** de entornos y productos concretos (aplicables a cualquier organización).
 - Guías relevantes de la **serie 800**:
     - **CCN-STIC 800**: glosario de términos y abreviaturas del ENS.
-    - **CCN-STIC 801**: responsabilidades y funciones (roles de seguridad; es la referencia del Decreto 49/2025 de la GVA, tema 81).
+    - **CCN-STIC 801**: responsabilidades y funciones (roles de seguridad; es la referencia del Decreto 49/2025 de la GVA, tema [81](81-seguridad-de-la-informacion-en-la-generalitat.md)).
     - **CCN-STIC 803**: valoración de sistemas en el ENS.
     - **CCN-STIC 804**: medidas de implantación del ENS.
-    - **CCN-STIC 817**: gestión de ciberincidentes (tema 31).
+    - **CCN-STIC 817**: gestión de ciberincidentes (tema [31](31-gestion-de-ciberincidentes.md)).
     - **CCN-STIC 818**: herramientas de seguridad en el ENS.
     - **CCN-STIC 823**: utilización de servicios en la nube.
     - **CCN-STIC 836**: seguridad en redes privadas virtuales (VPN).

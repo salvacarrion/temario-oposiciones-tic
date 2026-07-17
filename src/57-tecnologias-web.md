@@ -77,7 +77,7 @@ Estructura básica de un documento:
 </video>
 ```
 
-**APIs de la plataforma** (accesibles desde JavaScript): almacenamiento local (**Web Storage**: `localStorage` persistente y `sessionStorage` por pestaña), **geolocalización**, **Web Workers** (hilos en segundo plano), **History API** (navegación de las SPA), arrastrar y soltar, y **WebSocket** (tema 56).
+**APIs de la plataforma** (accesibles desde JavaScript): almacenamiento local (**Web Storage**: `localStorage` persistente y `sessionStorage` por pestaña), **geolocalización**, **Web Workers** (hilos en segundo plano), **History API** (navegación de las SPA), arrastrar y soltar, y **WebSocket** (tema [56](56-arquitecturas-de-desarrollo-web.md)).
 
 **Elementos y atributos obsoletos**: su función pasó a CSS.
 
@@ -125,7 +125,7 @@ CSS (*Cascading Style Sheets*, hojas de estilo en cascada) describe la presentac
 - **`position`**: static (flujo normal), relative, absolute, fixed, sticky; con `z-index` para el apilamiento.
 - **Flexbox** (`display: flex`): maquetación en **una dimensión** (fila o columna): alineación y distribución del espacio entre elementos (`justify-content`, `align-items`, `gap`, `flex-wrap`). Es el estándar para barras, menús y componentes.
 - **Grid** (`display: grid`): maquetación en **dos dimensiones** (filas y columnas): `grid-template-columns: 1fr 2fr;` define la retícula y los elementos se colocan en sus celdas o áreas. Es el estándar para la estructura general de la página.
-- **Media queries** (`@media (max-width: 768px) { ... }`): aplican reglas según las características del dispositivo (ancho, orientación, esquema de color); son la base del **diseño web adaptativo** (tema 58).
+- **Media queries** (`@media (max-width: 768px) { ... }`): aplican reglas según las características del dispositivo (ancho, orientación, esquema de color); son la base del **diseño web adaptativo** (tema [58](58-accesibilidad-y-usabilidad.md)).
 
 ```css
 /* Flexbox: una dimensión (barra de navegación) */
@@ -245,7 +245,7 @@ fetch("/api/datos")
 
 - **AJAX**: nombre histórico (2005) de esta técnica: intercambiar datos con el servidor en segundo plano y actualizar la página sin recargarla. Entonces se hacía con `XMLHttpRequest` y XML; hoy, con `fetch` y JSON.
 
-**DOM y eventos**: el navegador expone el documento como árbol de objetos (**DOM**) manipulable desde JavaScript; los manejadores de eventos reaccionan a las acciones del usuario. **JSON** (`JSON.parse` / `JSON.stringify`) es el formato de intercambio nativo (tema 60).
+**DOM y eventos**: el navegador expone el documento como árbol de objetos (**DOM**) manipulable desde JavaScript; los manejadores de eventos reaccionan a las acciones del usuario. **JSON** (`JSON.parse` / `JSON.stringify`) es el formato de intercambio nativo (tema [60](60-soa-servicios-web-y-microservicios.md)).
 
 ```javascript
 const boton = document.querySelector("#enviar");
@@ -277,7 +277,7 @@ const u: Usuario = { id: 1, nombre: "Ana" };
 
 ## Frameworks y entornos: Angular, React, Vue y Node.js
 
-Las aplicaciones web actuales se construyen con frameworks de **componentes** reutilizables con estado. Los tres principales son Angular, React y Vue; Node.js lleva JavaScript al servidor. Los modelos de aplicación que habilitan (SPA, renderizado en cliente y servidor) se tratan en el tema 56.
+Las aplicaciones web actuales se construyen con frameworks de **componentes** reutilizables con estado. Los tres principales son Angular, React y Vue; Node.js lleva JavaScript al servidor. Los modelos de aplicación que habilitan (SPA, renderizado en cliente y servidor) se tratan en el tema [56](56-arquitecturas-de-desarrollo-web.md).
 
 - **Angular** (Google): framework **completo y opinado**: incluye de serie todo lo que React delega en su ecosistema.
     - **AngularJS frente a Angular**: **AngularJS (1.x, 2010)**, el del patrón MVC con `$scope` y directivas `ng-*`, fue **descontinuado por Google en enero de 2022**; las aplicaciones que lo usan deben migrarse. **Angular (v2+, 2016)** es una reescritura total en TypeScript, incompatible con la anterior: son productos distintos pese al nombre.
@@ -289,7 +289,7 @@ Las aplicaciones web actuales se construyen con frameworks de **componentes** re
     - **Modelo**: componentes como funciones, sintaxis **JSX** (HTML dentro de JavaScript), **DOM virtual** (calcula la diferencia mínima a aplicar sobre el DOM real) y **flujo de datos unidireccional**.
     - **Hooks** (desde 16.8, 2019): estado y ciclo de vida en componentes de función: `useState`, `useEffect`.
     - **React 19 (diciembre de 2024)**: componentes de servidor (*Server Components*) y *Actions*, integrando el renderizado en servidor en el modelo.
-    - **Ecosistema**: enrutado (React Router), estado global (Redux, Zustand), metaframework **Next.js**; **React Native** para móvil (tema 59).
+    - **Ecosistema**: enrutado (React Router), estado global (Redux, Zustand), metaframework **Next.js**; **React Native** para móvil (tema [59](59-desarrollo-de-aplicaciones-moviles.md)).
     - **Uso**: el más extendido de la industria; máxima oferta de talento y de bibliotecas.
 - **Vue** (Evan You, 2014, comunitario): framework **progresivo**: puede adoptarse desde una sola página mejorada hasta una SPA completa.
     - **Modelo**: componentes de fichero único (`.vue` con plantilla, script y estilo), reactividad automática y **Composition API** desde **Vue 3 (2020)**; ecosistema Nuxt (metaframework) y Pinia (estado).

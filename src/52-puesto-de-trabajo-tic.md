@@ -23,7 +23,7 @@ El puesto de trabajo TIC es el conjunto de dispositivos (PC, portátil, perifér
 
 - **Medidas técnicas habituales**: cifrado de disco completo (BitLocker), protección antimalware/EDR gestionada centralmente, cortafuegos personal, usuarios sin privilegios de administrador, listas de aplicaciones permitidas y bloqueo automático de sesión.
 - **Autenticación en el puesto**: en las administraciones es habitual la autenticación robusta con **tarjeta criptográfica** de empleado público o DNIe (certificado electrónico), complementada con biometría o PIN (Windows Hello) y **SSO** (*single sign-on*) hacia las aplicaciones corporativas.
-- **El ENS (RD 311/2022, Anexo II)** dedica al puesto la familia **mp.eq, «Protección de los equipos»** (tema 29):
+- **El ENS (RD 311/2022, Anexo II)** dedica al puesto la familia **mp.eq, «Protección de los equipos»** (tema [29](29-esquema-nacional-de-seguridad.md)):
     - **mp.eq.1 Puesto de trabajo despejado**: sin material distinto del necesario en cada momento; con refuerzo (desde categoría MEDIA), el material usado se guarda en lugar cerrado.
     - **mp.eq.2 Bloqueo de puesto de trabajo** (dimensión A, desde nivel MEDIO): bloqueo tras un tiempo prudencial de inactividad, exigiendo nueva autenticación; en nivel ALTO, pasado un tiempo superior se cancelan las sesiones.
     - **mp.eq.3 Protección de dispositivos portátiles**: se trata en la sección de movilidad.
@@ -38,11 +38,11 @@ Con cientos o miles de puestos, la administración se centraliza: identidad y po
     - **Microsoft Configuration Manager** (denominación actual desde la versión 2303; antes SCCM y MECM): despliegue de sistemas operativos, distribución de software, parcheo e inventario en entornos locales.
     - **Microsoft Intune**: gestión desde la nube de PC y móviles; es la vía que Microsoft señala como futuro, con **cogestión** para convivir con Configuration Manager.
     - Alternativas de código abierto para inventario y soporte: **OCS Inventory** y **GLPI**.
-- **Inventario y CMDB**: el parque de puestos alimenta la base de datos de gestión de la configuración, ligada a las prácticas ITIL (tema 18).
+- **Inventario y CMDB**: el parque de puestos alimenta la base de datos de gestión de la configuración, ligada a las prácticas ITIL (tema [18](18-gestion-de-los-servicios-tic.md)).
 - **Impresión corporativa**: colas de impresión centralizadas sobre equipos multifunción compartidos, con **impresión segura** (*pull printing*: el trabajo se libera al autenticarse el usuario en el dispositivo), cuotas y auditoría; los multifunción son dispositivos de red a securizar (mp.eq.4 del ENS).
 - **Soporte a usuarios (CAU / service desk)**: punto único de contacto para incidencias y peticiones, organizado por niveles: **N1** (atención inicial y resolución de incidencias conocidas), **N2** (técnicos de microinformática y sistemas) y **N3** (especialistas o fabricante). Se apoya en herramientas ITSM de tickets, asistencia remota y acuerdos de nivel de servicio (SLA).
     - **Escalado**: funcional (a un nivel con más conocimiento) o jerárquico (a la cadena de mando, por impacto o incumplimiento de plazos).
-    - **Métricas habituales**: resolución en primer contacto (FCR), tiempos de primera respuesta y de resolución frente a SLA, y volumen por categorías; la base de conocimiento reduce reincidencias. Las prácticas de gestión de incidencias y peticiones se desarrollan en ITIL (tema 18).
+    - **Métricas habituales**: resolución en primer contacto (FCR), tiempos de primera respuesta y de resolución frente a SLA, y volumen por categorías; la base de conocimiento reduce reincidencias. Las prácticas de gestión de incidencias y peticiones se desarrollan en ITIL (tema [18](18-gestion-de-los-servicios-tic.md)).
 
 ### El puesto de trabajo en la Generalitat: PTN y CAU-TIC
 
@@ -59,7 +59,7 @@ Práctica interna de la **DGTIC** para el puesto de trabajo de la Administració
 
 ## Virtualización del escritorio: VDI y Remote Desktop Services
 
-En el escritorio virtualizado, el puesto deja de ejecutarse en el dispositivo del usuario y pasa al CPD (tema 44): al cliente solo viajan la pantalla y las pulsaciones, y el dato nunca abandona el centro de datos.
+En el escritorio virtualizado, el puesto deja de ejecutarse en el dispositivo del usuario y pasa al CPD (tema [44](44-virtualizacion-y-contenedores.md)): al cliente solo viajan la pantalla y las pulsaciones, y el dato nunca abandona el centro de datos.
 
 - **VDI** (*Virtual Desktop Infrastructure*): cada usuario recibe **su propia máquina virtual** de escritorio, alojada en los servidores.
 - **RDS** (*Remote Desktop Services*, el antiguo Terminal Services de Windows Server): los usuarios comparten **sesiones** sobre un mismo servidor (Remote Desktop Session Host). Mayor densidad y menor coste que VDI, a cambio de menos aislamiento y personalización; también publica aplicaciones individuales (RemoteApp).
@@ -67,7 +67,7 @@ En el escritorio virtualizado, el puesto deja de ejecutarse en el dispositivo de
 
 ### Componentes de una plataforma VDI
 
-- **Hipervisor**: aloja las máquinas virtuales de escritorio (tema 44).
+- **Hipervisor**: aloja las máquinas virtuales de escritorio (tema [44](44-virtualizacion-y-contenedores.md)).
 - **Broker de conexión**: autentica al usuario, le asigna su escritorio y gestiona los *pools*.
 - **Protocolo de visualización**: transporta pantalla, teclado, ratón y periféricos con compresión y tolerancia a la latencia: **RDP** (Microsoft), **HDX/ICA** (Citrix) y **Blast** (Omnissa).
 - **Imagen maestra y pools**: los escritorios se clonan de una *golden image*; las actualizaciones se hacen sobre la maestra y se recomponen los clones.
@@ -107,7 +107,7 @@ El puesto de trabajo ya no es solo el PC de la oficina: portátiles, móviles y 
     - **UEM** (*Unified Endpoint Management*): consola única para todos los dispositivos (PC, móviles, tabletas): Microsoft Intune, Omnissa Workspace ONE, Jamf (ecosistema Apple).
 - **Riesgos y medidas**: pérdida o robo del dispositivo, redes no confiables, mezcla de datos personales y corporativos y *shadow IT*; se mitigan con cifrado, bloqueo y borrado remotos, autenticación multifactor, contenedores de trabajo y control de acceso a la red.
 - **El ENS**: la medida **mp.eq.3, «Protección de dispositivos portátiles»**, exige un **inventario** de portátiles con su responsable identificado y control regular, un procedimiento para **comunicar pérdidas o sustracciones** al servicio de gestión de incidentes, y que las conexiones remotas por redes que no controle la organización limiten la información y los servicios accesibles a los **mínimos imprescindibles**, con autorización previa de los responsables afectados (refuerzos adicionales en categoría ALTA).
-- **Teletrabajo**: el acceso remoto se resuelve con **VPN** corporativa o, de forma creciente, con modelos **ZTNA** (*Zero Trust Network Access*: acceso por aplicación con verificación continua de usuario y dispositivo); los escritorios VDI/DaaS son otra vía segura, porque el dato no sale del CPD. En la Generalitat, el teletrabajo del personal se regula en el **Decreto 49/2021** (tema 13).
+- **Teletrabajo**: el acceso remoto se resuelve con **VPN** corporativa o, de forma creciente, con modelos **ZTNA** (*Zero Trust Network Access*: acceso por aplicación con verificación continua de usuario y dispositivo); los escritorios VDI/DaaS son otra vía segura, porque el dato no sale del CPD. En la Generalitat, el teletrabajo del personal se regula en el **Decreto 49/2021** (tema [13](13-funcion-publica-valenciana.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

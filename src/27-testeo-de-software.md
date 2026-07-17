@@ -4,7 +4,7 @@ Las pruebas de software evalúan la calidad del producto y encuentran defectos a
 
 ## Fundamentos del testeo (ISTQB)
 
-Probar no es solo ejecutar el software: es un **proceso** que incluye actividades estáticas (revisiones, análisis) y dinámicas (ejecución), con objetivos que van más allá de encontrar defectos: evaluar productos de trabajo, dar confianza en el nivel de calidad, reducir el riesgo y aportar información para decidir. La prueba es una forma de control de calidad (QC); el aseguramiento (QA) se orienta al proceso (ver tema 25).
+Probar no es solo ejecutar el software: es un **proceso** que incluye actividades estáticas (revisiones, análisis) y dinámicas (ejecución), con objetivos que van más allá de encontrar defectos: evaluar productos de trabajo, dar confianza en el nivel de calidad, reducir el riesgo y aportar información para decidir. La prueba es una forma de control de calidad (QC); el aseguramiento (QA) se orienta al proceso (ver tema [25](25-calidad-del-software.md)).
 
 ### Error, defecto y fallo
 
@@ -47,7 +47,7 @@ El ciclo de vida de desarrollo condiciona cómo, cuándo y quién prueba. Como b
 
 - **Desplazamiento a la izquierda (*shift-left*)**: iniciar las pruebas cuanto antes: revisar los requisitos, análisis estático en el IDE y en CI, pruebas escritas antes que el código.
 - **La prueba como impulsor del desarrollo**: **TDD** (desarrollo guiado por prueba, a nivel de componente), **ATDD/DGPA** (guiado por la prueba de aceptación, desde los criterios de aceptación) y **BDD** (guiado por el comportamiento, con escenarios *Given-When-Then*).
-- **DevOps y prueba**: el pipeline CI/CD ejecuta las pruebas automatizadas en cada cambio (ver tema 26): retroalimentación rápida y regresión constante, a cambio del esfuerzo de definir y mantener la automatización.
+- **DevOps y prueba**: el pipeline CI/CD ejecuta las pruebas automatizadas en cada cambio (ver tema [26](26-control-de-versiones-integracion-continua-y-devops.md)): retroalimentación rápida y regresión constante, a cambio del esfuerzo de definir y mantener la automatización.
 - **Retrospectivas**: al cerrar cada iteración o hito se analizan éxitos y mejoras del propio proceso de prueba.
 
 ### Niveles de prueba
@@ -65,7 +65,7 @@ Los niveles se distinguen por su objeto, sus objetivos, su base de prueba, los d
 ### Tipos de prueba
 
 - **Prueba funcional**: evalúa «qué» hace el sistema (completitud, corrección y pertinencia funcional).
-- **Prueba no funcional**: evalúa «lo bien que se comporta»: las características de calidad de **ISO/IEC 25010** (eficiencia de desempeño, compatibilidad, usabilidad, fiabilidad, seguridad, mantenibilidad, portabilidad; ver tema 25).
+- **Prueba no funcional**: evalúa «lo bien que se comporta»: las características de calidad de **ISO/IEC 25010** (eficiencia de desempeño, compatibilidad, usabilidad, fiabilidad, seguridad, mantenibilidad, portabilidad; ver tema [25](25-calidad-del-software.md)).
 - **Prueba de caja negra**: se basa en la especificación, sin conocer la estructura interna.
 - **Prueba de caja blanca**: se basa en la estructura interna (cobertura de código).
 - **Pruebas asociadas al cambio**: la **prueba de confirmación** verifica que un defecto se corrigió; la **prueba de regresión**, que el cambio no ha roto nada existente (candidata prioritaria a la automatización).
@@ -109,7 +109,7 @@ Las técnicas ayudan a derivar condiciones y casos de prueba con una cobertura m
 
 Novedad del 4.0: la calidad se construye en colaboración con negocio y desarrollo, no solo se verifica:
 
-- **Redacción colaborativa de historias de usuario**: las 3 C y los criterios INVEST (ver tema 23).
+- **Redacción colaborativa de historias de usuario**: las 3 C y los criterios INVEST (ver tema [23](23-analisis-y-diseno-de-aplicaciones.md)).
 - **Criterios de aceptación**: en formato escenario (**Given-When-Then**) u orientados a reglas; son la base de prueba de la historia.
 - **Desarrollo guiado por la prueba de aceptación (DGPA/ATDD)**: los casos de prueba de aceptación se escriben **antes** de desarrollar, a partir de los criterios de aceptación.
 
@@ -144,9 +144,9 @@ El **plan de prueba** documenta objetivos, alcance, contexto, supuestos y restri
 
 ### Herramientas y automatización
 
-El programa agrupa las herramientas de apoyo en: gestión (pruebas, defectos, configuración), prueba estática, diseño e implementación de pruebas, **ejecución y cobertura**, pruebas no funcionales, DevOps (CI/CD), colaboración y escalado de entornos (máquinas virtuales, contenedores). Ejemplos habituales: **JUnit** (unitarias en Java), **Selenium** y **Playwright** (interfaz web), **Postman** (API), **JMeter** (rendimiento) y **SonarQube** (análisis estático), integradas en el pipeline (ver tema 26).
+El programa agrupa las herramientas de apoyo en: gestión (pruebas, defectos, configuración), prueba estática, diseño e implementación de pruebas, **ejecución y cobertura**, pruebas no funcionales, DevOps (CI/CD), colaboración y escalado de entornos (máquinas virtuales, contenedores). Ejemplos habituales: **JUnit** (unitarias en Java), **Selenium** y **Playwright** (interfaz web), **Postman** (API), **JMeter** (rendimiento) y **SonarQube** (análisis estático), integradas en el pipeline (ver tema [26](26-control-de-versiones-integracion-continua-y-devops.md)).
 
-Una prueba unitaria con JUnit 5 sobre el método `clasificar` del caso práctico del tema 25:
+Una prueba unitaria con JUnit 5 sobre el método `clasificar` del caso práctico del tema [25](25-calidad-del-software.md):
 
 ```java
 @Test

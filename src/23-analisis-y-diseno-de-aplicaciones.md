@@ -12,7 +12,7 @@ El **ciclo de vida del software** es el conjunto de etapas por las que pasa un s
 - **Análisis de requisitos**: identifica, especifica y documenta los requisitos funcionales y no funcionales que debe satisfacer el sistema.
 - **Diseño**: elabora la arquitectura y las especificaciones detalladas (módulos, datos, interfaces) que guían la construcción.
 - **Desarrollo (implementación)**: transforma el diseño en código funcional.
-- **Pruebas**: verifican que el sistema cumple los requisitos y detectan defectos antes de la entrega. Los niveles, tipos y técnicas de prueba se estudian en el tema 27.
+- **Pruebas**: verifican que el sistema cumple los requisitos y detectan defectos antes de la entrega. Los niveles, tipos y técnicas de prueba se estudian en el tema [27](27-testeo-de-software.md).
 - **Implantación**: prepara el entorno de hardware y software, configura el sistema y lo despliega en producción.
 - **Mantenimiento**: conserva el sistema operativo y actualizado durante su vida útil. Es la etapa más larga del ciclo y suele concentrar la mayor parte del coste total del sistema.
 
@@ -44,7 +44,7 @@ Los modelos de ciclo de vida (o modelos de proceso) organizan las etapas anterio
 - **Espiral (Boehm, 1988)**: modelo **dirigido por el riesgo** que combina iteración y prototipado. Cada vuelta de la espiral recorre **cuatro cuadrantes**: (1) determinar objetivos y restricciones, (2) evaluar alternativas e identificar y resolver **riesgos**, (3) desarrollar y verificar, y (4) planificar la siguiente iteración. La dimensión radial representa el coste acumulado.
     - *Ventajas*: permite determinar la viabilidad en fases tempranas; integra el análisis de riesgos en el propio proceso.
     - *Inconvenientes*: complejo de gestionar; exige experiencia en evaluación de riesgos.
-- **Ágil**: familia de enfoques iterativos ligeros basados en el **Manifiesto Ágil (2001)** y sus cuatro valores: individuos e interacciones, software funcionando, colaboración con el cliente y respuesta al cambio. Prima la entrega frecuente de valor y admite requisitos evolutivos. Scrum, Kanban, XP y el escalado ágil se estudian en el tema 21.
+- **Ágil**: familia de enfoques iterativos ligeros basados en el **Manifiesto Ágil (2001)** y sus cuatro valores: individuos e interacciones, software funcionando, colaboración con el cliente y respuesta al cambio. Prima la entrega frecuente de valor y admite requisitos evolutivos. Scrum, Kanban, XP y el escalado ágil se estudian en el tema [21](21-metodologias-agiles-y-escalado-agil.md).
 
 ## Análisis de requisitos: técnicas y gestión
 
@@ -53,7 +53,7 @@ La **ingeniería de requisitos** es el proceso de descubrir, especificar, valida
 Los requisitos se clasifican en **dos tipos principales**:
 
 - **Funcionales**: definen las funciones y comportamientos concretos del sistema (qué hace); se capturan típicamente como casos de uso o historias de usuario.
-- **No funcionales**: definen atributos de calidad y restricciones (cómo lo hace): rendimiento, seguridad, usabilidad, disponibilidad, portabilidad… Las características de calidad se estudian con ISO/IEC 25010 en el tema 25.
+- **No funcionales**: definen atributos de calidad y restricciones (cómo lo hace): rendimiento, seguridad, usabilidad, disponibilidad, portabilidad… Las características de calidad se estudian con ISO/IEC 25010 en el tema [25](25-calidad-del-software.md).
 
 Por nivel de abstracción se distinguen los **requisitos de negocio** (objetivos de la organización), los **de usuario** (tareas que el usuario debe poder realizar) y los **de sistema** (especificación detallada y verificable).
 
@@ -152,8 +152,8 @@ Validados los requisitos, el prototipado permite explorar la solución con el us
 
 El diseño se aborda en dos niveles complementarios:
 
-- **Diseño arquitectónico (alto nivel)**: descompone el sistema en componentes o subsistemas y define sus interfaces; selecciona el estilo arquitectónico (capas, cliente-servidor, microservicios; ver tema 56) y las tecnologías.
-- **Diseño detallado (bajo nivel)**: define estructuras de datos, clases, algoritmos e interfaces internas de cada módulo; se modela habitualmente con UML (ver tema 24).
+- **Diseño arquitectónico (alto nivel)**: descompone el sistema en componentes o subsistemas y define sus interfaces; selecciona el estilo arquitectónico (capas, cliente-servidor, microservicios; ver tema [56](56-arquitecturas-de-desarrollo-web.md)) y las tecnologías.
+- **Diseño detallado (bajo nivel)**: define estructuras de datos, clases, algoritmos e interfaces internas de cada módulo; se modela habitualmente con UML (ver tema [24](24-proceso-unificado-y-uml.md)).
 
 Dimensiones del diseño según Pressman: diseño **de datos**, **arquitectónico**, **de interfaz** y **procedimental** (a nivel de componentes).
 

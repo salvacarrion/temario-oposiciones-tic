@@ -1,10 +1,10 @@
 # Adecuación al ENS en las universidades (CCN-STIC 881)
 
-Las universidades públicas forman parte del sector público y sus sistemas de información están sujetos al **Esquema Nacional de Seguridad** (RD 311/2022, tema 29). Para facilitar esa adecuación de forma homogénea en todo el sector, el Centro Criptológico Nacional publicó la **guía CCN-STIC 881, de Adecuación al ENS para Universidades** (ed. mayo 2022), elaborada en colaboración con la CRUE, que define un **Perfil de Cumplimiento Específico para Universidades** y un modelo completo de gobernanza y adecuación.
+Las universidades públicas forman parte del sector público y sus sistemas de información están sujetos al **Esquema Nacional de Seguridad** (RD 311/2022, tema [29](29-esquema-nacional-de-seguridad.md)). Para facilitar esa adecuación de forma homogénea en todo el sector, el Centro Criptológico Nacional publicó la **guía CCN-STIC 881, de Adecuación al ENS para Universidades** (ed. mayo 2022), elaborada en colaboración con la CRUE, que define un **Perfil de Cumplimiento Específico para Universidades** y un modelo completo de gobernanza y adecuación.
 
 ## El ENS y los perfiles de cumplimiento específicos
 
-- **Marco**: el **RD 311/2022** regula el ENS, con sus principios básicos, requisitos mínimos, la categorización de sistemas (**BÁSICA, MEDIA, ALTA**) y las medidas de seguridad del Anexo II (tema 29).
+- **Marco**: el **RD 311/2022** regula el ENS, con sus principios básicos, requisitos mínimos, la categorización de sistemas (**BÁSICA, MEDIA, ALTA**) y las medidas de seguridad del Anexo II (tema [29](29-esquema-nacional-de-seguridad.md)).
 - **Perfiles de cumplimiento específicos (art. 30 RD 311/2022)**: conjuntos de medidas de seguridad ajustados a un **colectivo de entidades con riesgos homogéneos** (ayuntamientos, universidades…), que permiten una adecuación «más eficaz y eficiente» sin rebajar la protección exigible. Los **valida y publica el CCN**.
 - **Objetivo de la CCN-STIC 881**: proporcionar «un modelo que facilite la adecuación al ENS de los sistemas de las universidades públicas de forma ordenada y efectiva», hasta obtener la **Certificación de Conformidad** con el ENS según el Perfil de Cumplimiento Específico para Universidades. La guía incluye como anexos un modelo de **Política de Seguridad** (Anexo I) y de **Plan de Adecuación** (Anexo II), junto con un catálogo tipo de servicios e información universitarios.
 
@@ -27,7 +27,7 @@ Documento que recoge el proceso de adecuación, en **cinco pasos**:
 1. **Alcance de los sistemas a certificar**: catálogo de los **servicios prestados** y la **información** que manejan, y del sistema que los aloja (la guía aporta un modelo elaborado con la CRUE a partir de las funciones legales de las universidades).
 2. **Valoración y categorización del sistema**: impacto de un incidente en las **cinco dimensiones** de seguridad (**confidencialidad, integridad, trazabilidad, autenticidad y disponibilidad**) en niveles **BAJO, MEDIO o ALTO**, conforme al Anexo I del ENS y la guía **CCN-STIC 803** (valoración de sistemas); la determinan los responsables de la información y de los servicios.
 3. **Declaración de Aplicabilidad Provisional**: adopción formal del **Perfil de Cumplimiento Específico para Universidades**, identificando sus medidas y refuerzos y, en su caso, las **medidas compensatorias** de igual o superior protección (guía **CCN-STIC 819**).
-4. **Análisis de riesgos**: conforme al Anexo II del ENS, con la metodología **MAGERIT** recomendada (tema 30).
+4. **Análisis de riesgos**: conforme al Anexo II del ENS, con la metodología **MAGERIT** recomendada (tema [30](30-analisis-y-gestion-de-riesgos.md)).
 5. **Declaración de Aplicabilidad Definitiva**: el **perfil de cumplimiento validado** para los sistemas de la universidad.
 
 Tras el Plan de Adecuación se elabora el **plan de implantación**: la hoja de ruta priorizada de documentos a elaborar y medidas técnicas a implementar.
@@ -52,10 +52,10 @@ En consonancia con la **vigilancia continua y la reevaluación periódica** (art
 - **INES**: informe del estado de seguridad y asistente para elaborar y actualizar el **Plan de Adecuación** (alcance, categorización, declaraciones de aplicabilidad, análisis de riesgos), revisar la valoración de servicios e información y la **Política de Seguridad** (revisión normalmente **anual** por el Comité de Seguridad).
 - **AMPARO**: apoyo a la **implantación** del ENS y al seguimiento del plan de implantación, la concienciación y formación anual y la revisión de la normativa de seguridad.
 
-El ciclo se cierra con las **auditorías de conformidad** (cada **dos años** en categorías MEDIA y ALTA, conforme al régimen general del ENS, tema 29) y la mejora continua de los procesos de seguridad.
+El ciclo se cierra con las **auditorías de conformidad** (cada **dos años** en categorías MEDIA y ALTA, conforme al régimen general del ENS, tema [29](29-esquema-nacional-de-seguridad.md)) y la mejora continua de los procesos de seguridad.
 
 ## Fuentes {.unnumbered .unlisted}
 
 - CCN-STIC 881, Guía de Adecuación al ENS para Universidades (ed. mayo 2022, con Anexos I Política de Seguridad y II Plan de Adecuación; edición vigente verificada online en julio de 2026).
-- Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (texto consolidado; ver tema 29).
+- Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (texto consolidado; ver tema [29](29-esquema-nacional-de-seguridad.md)).
 - Guías CCN-STIC relacionadas citadas por la 881: 803 (valoración de sistemas), 819 (medidas compensatorias), 821 (normas de seguridad) y catálogo CPSTIC.

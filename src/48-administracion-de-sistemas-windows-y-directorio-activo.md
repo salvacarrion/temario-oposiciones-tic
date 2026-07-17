@@ -58,7 +58,7 @@ Las **GPO** aplican configuración centralizada de seguridad, software y escrito
 El directorio es el servicio más crítico del dominio: su pérdida o compromiso afecta a toda la organización.
 
 - **Copia de seguridad**: se protege el **estado del sistema** (*system state*) de los controladores (base de datos NTDS, SYSVOL, registro); la restauración de objetos borrados usa la **papelera de reciclaje de AD** (si está habilitada) o una restauración **autoritativa** (marca los objetos restaurados para que la replicación no los vuelva a borrar), frente a la no autoritativa (el DC se pone al día replicando).
-- **Buenas prácticas de seguridad**: separar cuentas de usuario y de administración por **niveles** (*tiering*: los administradores de dominio solo inician sesión en DC), **LAPS** (contraseñas de administrador local únicas y rotadas), **gMSA** (cuentas de servicio administradas con contraseña automática), grupo *Protected Users*, mínimo de servicios en los DC y parcheo prioritario; auditoría de cambios y vigilancia de ataques típicos al directorio (Kerberoasting, pass-the-hash, tema 28).
+- **Buenas prácticas de seguridad**: separar cuentas de usuario y de administración por **niveles** (*tiering*: los administradores de dominio solo inician sesión en DC), **LAPS** (contraseñas de administrador local únicas y rotadas), **gMSA** (cuentas de servicio administradas con contraseña automática), grupo *Protected Users*, mínimo de servicios en los DC y parcheo prioritario; auditoría de cambios y vigilancia de ataques típicos al directorio (Kerberoasting, pass-the-hash, tema [28](28-ciberseguridad.md)).
 
 ## PowerShell y administración moderna
 
@@ -71,9 +71,9 @@ New-ADUser -Name "maria" -Path "OU=Personal,DC=gva,DC=es" -Enabled $true
 Get-ADDomainController -Filter * | Select-Object Name,Site
 ```
 
-- **Microsoft Entra ID** (renombrado desde **Azure AD** en 2023): el directorio **en la nube** de Microsoft, base de identidad de Microsoft 365. No es un AD DS en la nube: no usa Kerberos/LDAP ni GPO, sino protocolos web (**OAuth 2.0, OpenID Connect, SAML**) y acceso condicional; la gestión de dispositivos se hace con Intune (tema 52).
+- **Microsoft Entra ID** (renombrado desde **Azure AD** en 2023): el directorio **en la nube** de Microsoft, base de identidad de Microsoft 365. No es un AD DS en la nube: no usa Kerberos/LDAP ni GPO, sino protocolos web (**OAuth 2.0, OpenID Connect, SAML**) y acceso condicional; la gestión de dispositivos se hace con Intune (tema [52](52-puesto-de-trabajo-tic.md)).
 - **Identidad híbrida**: **Entra Connect** sincroniza las identidades locales con la nube (sincronización de hash de contraseña o autenticación federada), dando **inicio de sesión único** a los servicios cloud con la cuenta corporativa; es el escenario habitual en las administraciones.
-- **Integración con Linux**: los servidores Linux se unen al dominio con SSSD/realmd o winbind (tema 47), y Samba ofrece recursos compartidos a clientes Windows.
+- **Integración con Linux**: los servidores Linux se unen al dominio con SSSD/realmd o winbind (tema [47](47-administracion-de-sistemas-gnu-linux.md)), y Samba ofrece recursos compartidos a clientes Windows.
 
 ## Fuentes {.unnumbered .unlisted}
 

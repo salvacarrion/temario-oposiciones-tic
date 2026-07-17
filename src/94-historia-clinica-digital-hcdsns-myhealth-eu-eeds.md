@@ -12,7 +12,7 @@ El proyecto HCDSNS, coordinado por el **Ministerio de Sanidad** con las comunida
 
 - **Objetivos**: garantizar la continuidad y la calidad asistencial (evitar pruebas y procedimientos repetidos), facilitar el acceso a la información clínica dondequiera que se haya generado y proteger la privacidad (solo profesionales autorizados, con trazabilidad completa de los accesos).
 - **Arquitectura descentralizada**: cada comunidad autónoma **custodia sus propios datos clínicos**; todas se interconectan a través de un **nodo central** gestionado por el Ministerio (sobre la red privada del SNS). El nodo central **no almacena información clínica**: guarda únicamente **índices de referencia** que localizan en qué servicio de salud hay documentación de cada paciente y actúa de intermediario en las consultas.
-- **Contenidos**: los informes clínicos normalizados del **RD 1093/2010** (tema 89): la **historia clínica resumida** como pieza central, más los informes de alta, de consultas externas, de urgencias, de atención primaria, de resultados de laboratorio, de imagen, de otras pruebas diagnósticas y de cuidados de enfermería.
+- **Contenidos**: los informes clínicos normalizados del **RD 1093/2010** (tema [89](89-documentacion-clinica-normalizada.md)): la **historia clínica resumida** como pieza central, más los informes de alta, de consultas externas, de urgencias, de atención primaria, de resultados de laboratorio, de imagen, de otras pruebas diagnósticas y de cuidados de enfermería.
 - **Acceso**: el ciudadano accede desde la sede electrónica de su servicio de salud (con certificado electrónico o Cl@ve) y puede **consultar quién ha accedido** a sus informes y ejercer la **ocultación** de aquellos que no desee mostrar; el profesional solo accede en el marco de una atención sanitaria real y todo acceso queda registrado.
 
 ## La receta electrónica interoperable del SNS
@@ -30,7 +30,7 @@ La receta electrónica sustituye la prescripción en papel por una anotación en
 - **Servicios en producción**:
     - **Receta electrónica transfronteriza** (*ePrescription/eDispensation*): retirar en una farmacia de otro Estado miembro la medicación prescrita electrónicamente en el país de origen, con registro de la dispensación de vuelta.
     - **Historia clínica resumida** (*Patient Summary*): acceso del profesional de otro Estado miembro a los datos esenciales del paciente (alergias, medicación actual, problemas de salud, intervenciones) en su idioma, en encuentros asistenciales no programados.
-- **Arquitectura**: cada Estado miembro despliega un **punto de contacto nacional de sanidad electrónica (NCPeH)** que traduce entre los sistemas nacionales y el formato europeo común (documentos **CDA** con perfiles IHE de intercambio entre comunidades, temas 91 y 92). En España el NCPeH lo opera el **Ministerio de Sanidad** (servicio «Mi Salud@UE»), conectado a la HCDSNS y a la receta interoperable del SNS.
+- **Arquitectura**: cada Estado miembro despliega un **punto de contacto nacional de sanidad electrónica (NCPeH)** que traduce entre los sistemas nacionales y el formato europeo común (documentos **CDA** con perfiles IHE de intercambio entre comunidades, temas [91](91-estandares-de-interoperabilidad-de-la-hce.md) y [92](92-normalizacion-en-informatica-sanitaria.md)). En España el NCPeH lo opera el **Ministerio de Sanidad** (servicio «Mi Salud@UE»), conectado a la HCDSNS y a la receta interoperable del SNS.
 - **Despliegue**: progresivo por países y por servicio; España fue de los primeros Estados en operar la receta transfronteriza. <!-- TODO: verificar en la revisión la lista actual de países conectados con España -->
 
 ## El Espacio Europeo de Datos de Salud (Reglamento (UE) 2025/327)
@@ -63,6 +63,6 @@ El **Reglamento (UE) 2025/327, de 11 de febrero de 2025, relativo al Espacio Eur
 
 - Ley 16/2003, de 28 de mayo, de cohesión y calidad del Sistema Nacional de Salud (texto consolidado, última modificación 31 de octubre de 2024), art. 56 y 57.
 - Reglamento (UE) 2025/327, de 11 de febrero de 2025, relativo al Espacio Europeo de Datos de Salud (DOUE L de 5 de marzo de 2025).
-- Real Decreto 1093/2010 (contenidos de la HCDSNS; tema 89).
+- Real Decreto 1093/2010 (contenidos de la HCDSNS; tema [89](89-documentacion-clinica-normalizada.md)).
 - Ministerio de Sanidad, páginas oficiales de la HCDSNS y de «Mi Salud@UE» / receta electrónica europea (consultadas en julio de 2026).
 - Directiva 2011/24/UE, de asistencia sanitaria transfronteriza (art. 14, red de sanidad electrónica).

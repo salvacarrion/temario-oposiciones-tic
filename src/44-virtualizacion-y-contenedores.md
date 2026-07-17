@@ -2,7 +2,7 @@
 
 ## Virtualización e hipervisores
 
-La virtualización es la técnica que permite abstraer un recurso físico (servidor, almacenamiento, red, escritorio) y presentarlo como uno o varios recursos lógicos independientes mediante una capa de software. Es la base de la consolidación de servidores, del centro de datos definido por software (tema 51) y de la computación en la nube.
+La virtualización es la técnica que permite abstraer un recurso físico (servidor, almacenamiento, red, escritorio) y presentarlo como uno o varios recursos lógicos independientes mediante una capa de software. Es la base de la consolidación de servidores, del centro de datos definido por software (tema [51](51-computacion-en-la-nube-y-altas-prestaciones.md)) y de la computación en la nube.
 
 - **Ventajas**: consolidación de servidores y ahorro de costes (menos máquinas físicas, menor consumo energético), aislamiento entre entornos, agilidad de aprovisionamiento, escalabilidad, alta disponibilidad y recuperación ante desastres (una máquina virtual son ficheros: se copia, se migra y se restaura), entornos de prueba baratos.
 - **Inconvenientes**: cierta sobrecarga de rendimiento (hoy mínima gracias a la asistencia hardware), el host físico como punto único de fallo si no se trabaja en clúster, y complejidad añadida de gestión y licenciamiento.
@@ -28,11 +28,11 @@ Terminología y capacidades comunes a las plataformas de virtualización empresa
     - **Virtualización completa (nativa)**: el hipervisor presenta un hardware virtual completo y el sistema operativo invitado se ejecuta sin modificar. Hoy se apoya en la **virtualización asistida por hardware**: extensiones del procesador **Intel VT-x** y **AMD-V** (estándar en cualquier CPU actual), traducción de direcciones en hardware (**EPT/RVI**) y virtualización de E/S (**VT-d/AMD-Vi**, **SR-IOV**).
     - **Paravirtualización**: el sistema operativo invitado se modifica para colaborar con el hipervisor, sustituyendo las instrucciones privilegiadas por llamadas a su API (**hypercalls**). Gana rendimiento a costa de exigir kernels adaptados. El ejemplo clásico es **Xen** en modo PV; hoy la técnica pervive sobre todo en los drivers paravirtualizados (**virtio** en KVM, VMware Tools, servicios de integración de Hyper-V).
     - **Virtualización a nivel de sistema operativo**: un único kernel anfitrión ejecuta varios espacios de usuario aislados, los **contenedores** (LXC, Docker, *jails* de FreeBSD, zonas de Solaris). No hay hipervisor ni sistema operativo invitado completo (se desarrolla en la sección siguiente).
-- **Virtualización de escritorio (VDI)**: el escritorio del usuario se ejecuta como VM en el CPD y se accede a él por red desde cualquier dispositivo; escritorios persistentes o no persistentes. Se desarrolla en el tema 52.
+- **Virtualización de escritorio (VDI)**: el escritorio del usuario se ejecuta como VM en el CPD y se accede a él por red desde cualquier dispositivo; escritorios persistentes o no persistentes. Se desarrolla en el tema [52](52-puesto-de-trabajo-tic.md).
 - **Virtualización de aplicaciones**: la aplicación se empaqueta y ejecuta aislada del sistema operativo donde corre, eliminando conflictos de librerías (Citrix Virtual Apps, VMware ThinApp).
-- **Virtualización del almacenamiento**: presenta el almacenamiento físico como volúmenes lógicos independientes de los dispositivos (tema 45).
-- **Virtualización de red**: crea redes lógicas independientes de la topología física; su evolución son las redes definidas por software, SDN y NFV (tema 73).
-- **Virtualización del CPD (SDDC)**: cómputo, red y almacenamiento virtualizados y orquestados por software (temas 43 y 51).
+- **Virtualización del almacenamiento**: presenta el almacenamiento físico como volúmenes lógicos independientes de los dispositivos (tema [45](45-sistemas-de-almacenamiento.md)).
+- **Virtualización de red**: crea redes lógicas independientes de la topología física; su evolución son las redes definidas por software, SDN y NFV (tema [73](73-virtualizacion-de-redes.md)).
+- **Virtualización del CPD (SDDC)**: cómputo, red y almacenamiento virtualizados y orquestados por software (temas [43](43-centros-de-proceso-de-datos.md) y [51](51-computacion-en-la-nube-y-altas-prestaciones.md)).
 - **Emulación**: reproducir por software una arquitectura hardware completa distinta de la real (procesador incluido), lo que permite ejecutar binarios de otra plataforma a costa de un gran coste de rendimiento. Ejemplos: **QEMU** (en modo emulación), Bochs, MAME. Wine no es un emulador sino una capa de compatibilidad (reimplementa las API de Windows sobre Linux).
 
 ### El hipervisor
@@ -47,7 +47,7 @@ El hipervisor o monitor de máquina virtual (VMM) es el software que crea, ejecu
 
 ## Contenedores: Docker
 
-Los contenedores son virtualización a nivel de sistema operativo: empaquetan una aplicación con todas sus dependencias (binarios, librerías, configuración) en una unidad ligera y portable que se ejecuta aislada pero **compartiendo el kernel del anfitrión**. Garantizan que la aplicación se comporte igual en desarrollo, pruebas y producción, y son la unidad de despliegue natural de los microservicios (tema 60).
+Los contenedores son virtualización a nivel de sistema operativo: empaquetan una aplicación con todas sus dependencias (binarios, librerías, configuración) en una unidad ligera y portable que se ejecuta aislada pero **compartiendo el kernel del anfitrión**. Garantizan que la aplicación se comporte igual en desarrollo, pruebas y producción, y son la unidad de despliegue natural de los microservicios (tema [60](60-soa-servicios-web-y-microservicios.md)).
 
 - **Base tecnológica (kernel Linux)**:
     - **Namespaces**: dan a cada contenedor una vista privada del sistema: procesos (pid), red (net), sistema de ficheros (mnt), nombre de máquina (uts), comunicación entre procesos (ipc) y usuarios (user).

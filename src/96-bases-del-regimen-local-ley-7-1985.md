@@ -1,6 +1,6 @@
 # Bases del régimen local (Ley 7/1985)
 
-Este tema cubre la norma de cabecera del régimen local español, la Ley 7/1985, centrada en el municipio: territorio, población y padrón, organización, competencias y el régimen especial de los municipios de gran población (aplicable a València), con una síntesis final de la provincia y las demás entidades locales. El desarrollo valenciano (Ley 8/2010) se estudia en el tema 97.
+Este tema cubre la norma de cabecera del régimen local español, la Ley 7/1985, centrada en el municipio: territorio, población y padrón, organización, competencias y el régimen especial de los municipios de gran población (aplicable a València), con una síntesis final de la provincia y las demás entidades locales. El desarrollo valenciano (Ley 8/2010) se estudia en el tema [97](97-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md).
 
 ## Características y estructura
 
@@ -29,7 +29,7 @@ Estructura de la ley:
 | X | Régimen de organización de los municipios de gran población |
 | XI | Tipificación de infracciones y sanciones por las entidades locales |
 
-Los Títulos VI (actividades y servicios), VII (personal) y las especialidades locales de contratación se desarrollan en los temas 98 a 100.
+Los Títulos VI (actividades y servicios), VII (personal) y las especialidades locales de contratación se desarrollan en los temas [98](98-personal-al-servicio-de-las-entidades-locales.md) a [100](100-formas-de-actividad-y-servicios-publicos-locales.md).
 
 ## El municipio: territorio y población; el padrón municipal
 
@@ -40,14 +40,14 @@ El municipio es «la entidad local básica de la organización territorial del E
 - **Art. 14. Denominación**: los cambios son oficiales tras su anotación en el Registro estatal de entidades locales y publicación en el BOE; puede ser en castellano, en otra lengua española oficial, o en ambas.
 - **Art. 15. Vecindad**: «Toda persona que viva en España está obligada a inscribirse en el Padrón del municipio en el que resida habitualmente»; quien viva en varios, en el que habite más tiempo al año. La población del municipio es el conjunto de inscritos; los inscritos son los **vecinos**, condición que se adquiere en el momento de la inscripción.
 - **Art. 16. El padrón municipal**: «registro administrativo donde constan los vecinos de un municipio». Sus datos son **prueba de la residencia y del domicilio habitual**; las certificaciones son documento **público y fehaciente**. La inscripción de extranjeros no comunitarios sin autorización de residencia de larga duración se renueva **cada 2 años** (caducidad sin audiencia previa si no se renueva). Datos obligatorios: nombre y apellidos, sexo, domicilio habitual (con referencia catastral), nacionalidad, lugar y fecha de nacimiento, DNI o NIE/pasaporte, certificado o título escolar o académico, y los necesarios para el censo electoral. Los datos se ceden a otras AAPP sin consentimiento solo para competencias en que la residencia sea relevante.
-- **Art. 17. Gestión del padrón**: corresponde al ayuntamiento, **con medios informáticos**; las diputaciones asumen la gestión informatizada de los municipios sin capacidad. El **INE** coordina los padrones, resuelve discrepancias (su Presidencia) y propone al Gobierno las **cifras oficiales de población**, con el **Consejo de Empadronamiento** como órgano colegiado de colaboración AGE-entes locales (informa con carácter vinculante las cifras oficiales). Existe además el Padrón de españoles residentes en el extranjero (PERE). La dimensión de sistema de información del padrón se desarrolla en el tema 101.
+- **Art. 17. Gestión del padrón**: corresponde al ayuntamiento, **con medios informáticos**; las diputaciones asumen la gestión informatizada de los municipios sin capacidad. El **INE** coordina los padrones, resuelve discrepancias (su Presidencia) y propone al Gobierno las **cifras oficiales de población**, con el **Consejo de Empadronamiento** como órgano colegiado de colaboración AGE-entes locales (informa con carácter vinculante las cifras oficiales). Existe además el Padrón de españoles residentes en el extranjero (PERE). La dimensión de sistema de información del padrón se desarrolla en el tema [101](101-sistemas-de-informacion-corporativos-de-la-administracion-local.md).
 - **Art. 18. Derechos y deberes de los vecinos**: ser elector y elegible; participar en la gestión municipal; utilizar los servicios públicos municipales; contribuir mediante prestaciones económicas y personales; ser informado y dirigir solicitudes; pedir la consulta popular; **exigir la prestación o el establecimiento de los servicios públicos obligatorios**; ejercer la iniciativa popular del art. 70 bis.
 
 Información y participación ciudadana (Capítulo IV del Título V):
 
 - **Art. 70. Publicidad**: las sesiones del **Pleno son públicas** (secretas solo por mayoría absoluta cuando afecten al art. 18.1 CE); **no son públicas las de la Junta de Gobierno Local**. Las ordenanzas se publican en el boletín oficial de la provincia.
 - **Art. 70 bis. Iniciativa popular**: pueden ejercerla los vecinos con derecho de sufragio activo, suscrita por el **20 %** (hasta 5.000 habitantes), **15 %** (5.001-20.000) o **10 %** (a partir de 20.001).
-- **Art. 70 quater. Portal de internet**: las entidades locales deben crear y mantener un portal de información y acceso a los servicios públicos digitalizados (su dimensión tecnológica, en el tema 102).
+- **Art. 70 quater. Portal de internet**: las entidades locales deben crear y mantener un portal de información y acceso a los servicios públicos digitalizados (su dimensión tecnológica, en el tema [102](102-administracion-electronica-local.md)).
 - **Art. 71. Consulta popular**: el alcalde, **previo acuerdo por mayoría absoluta del Pleno y autorización del Gobierno de la Nación**, sobre asuntos de competencia propia municipal de especial relevancia, **excepto Hacienda local**.
 
 ## Organización municipal y competencias

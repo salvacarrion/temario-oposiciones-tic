@@ -9,7 +9,7 @@ La agregación de recursos de computación ha seguido dos caminos complementario
     - **Clúster de alta disponibilidad (HA)**: nodos redundantes que asumen el servicio si otro falla (failover), eliminando puntos únicos de fallo.
     - **Clúster de balanceo de carga**: reparte las peticiones entre los nodos para escalar el servicio y absorber picos de demanda.
 - **Grid computing (computación en malla)**: conecta recursos heterogéneos y **distribuidos geográficamente**, pertenecientes a organizaciones distintas y sin control centralizado, mediante un middleware que reparte los trabajos entre los nodos disponibles. Es el modelo de las «organizaciones virtuales» científicas: el **WLCG** (Worldwide LHC Computing Grid, la malla del CERN) o los proyectos de computación voluntaria sobre **BOINC**.
-- **De la malla a la nube**: la nube toma del grid la agregación de recursos distribuidos y le añade la **virtualización** (tema 44), el autoservicio y el pago por uso, consolidando los recursos en grandes centros de datos de proveedor.
+- **De la malla a la nube**: la nube toma del grid la agregación de recursos distribuidos y le añade la **virtualización** (tema [44](44-virtualizacion-y-contenedores.md)), el autoservicio y el pago por uso, consolidando los recursos en grandes centros de datos de proveedor.
 
 | Aspecto | Clúster | Grid | Nube |
 | --- | --- | --- | --- |
@@ -80,7 +80,7 @@ Los **datos, su clasificación y el control de accesos son siempre responsabilid
 Otros modelos derivados (**XaaS**, «todo como servicio»):
 
 - **FaaS (Function as a Service)**: ejecución de funciones dirigida por eventos, base del serverless (ver tendencias).
-- **CaaS (Containers as a Service)**: contenedores y su orquestación gestionados por el proveedor (tema 44).
+- **CaaS (Containers as a Service)**: contenedores y su orquestación gestionados por el proveedor (tema [44](44-virtualizacion-y-contenedores.md)).
 - **DBaaS, DRaaS...**: bases de datos gestionadas, recuperación ante desastres y otros servicios especializados.
 - **Almacenamiento en la nube**: se ofrece en tres tipos: **de bloques** (discos para máquinas virtuales), **de ficheros** (carpetas compartidas) y **de objetos**, el modelo nativo de la nube por su escalabilidad (Amazon S3, Azure Blob Storage).
 
@@ -90,31 +90,31 @@ El SDDC (*Software-Defined Data Center*) es la arquitectura en la que **todos lo
 
 Sus pilares:
 
-- **Computación virtualizada**: hipervisores que abstraen los servidores físicos (tema 44).
-- **Redes definidas por software (SDN)**: separan el plano de control del plano de datos y permiten crear y configurar redes por software (tema 73).
+- **Computación virtualizada**: hipervisores que abstraen los servidores físicos (tema [44](44-virtualizacion-y-contenedores.md)).
+- **Redes definidas por software (SDN)**: separan el plano de control del plano de datos y permiten crear y configurar redes por software (tema [73](73-virtualizacion-de-redes.md)).
 - **Almacenamiento definido por software (SDS)**: abstrae el almacenamiento del hardware y lo agrega en pools gestionados por políticas.
 - **Capa de gestión y automatización**: orquestación, autoservicio e **infraestructura como código**, que aplican políticas de forma consistente en todo el centro.
 
-La **infraestructura hiperconvergente (HCI)** es su materialización comercial más habitual (tema 43). Ventajas: agilidad en la provisión, consistencia de la configuración y eficiencia operativa; retos: complejidad de la implantación inicial, necesidad de personal especializado y consideraciones de seguridad y cumplimiento.
+La **infraestructura hiperconvergente (HCI)** es su materialización comercial más habitual (tema [43](43-centros-de-proceso-de-datos.md)). Ventajas: agilidad en la provisión, consistencia de la configuración y eficiencia operativa; retos: complejidad de la implantación inicial, necesidad de personal especializado y consideraciones de seguridad y cumplimiento.
 
 ## Tendencias: serverless y edge computing
 
 - **Serverless computing**: el proveedor asume por completo el aprovisionamiento, el escalado y la administración de los servidores; el cliente paga **solo por la ejecución real** de su código, no por capacidad reservada. Su modelo principal es el **FaaS**: el código se empaqueta en funciones que se ejecutan como respuesta a eventos, con escalado automático (incluso a cero instancias). Ejemplos: AWS Lambda, Azure Functions, Google Cloud Functions.
     - **Ventajas**: coste proporcional al uso, sin administración de infraestructura, escalado inmediato.
     - **Inconvenientes**: latencia de arranque en frío, límites de tiempo y memoria por ejecución y fuerte dependencia del proveedor.
-- **Edge computing (computación en el borde)**: lleva el procesamiento y el almacenamiento **cerca de donde se generan los datos**, en lugar de depender solo de centros de datos remotos: reduce la **latencia** y el consumo de ancho de banda, y es clave para IoT, el análisis en tiempo real y las redes 5G (temas 76 y 77). El **fog computing** es la capa intermedia que conecta el borde con la nube, y los micro-CPD su soporte físico (tema 43).
+- **Edge computing (computación en el borde)**: lleva el procesamiento y el almacenamiento **cerca de donde se generan los datos**, en lugar de depender solo de centros de datos remotos: reduce la **latencia** y el consumo de ancho de banda, y es clave para IoT, el análisis en tiempo real y las redes 5G (temas [76](76-redes-inalambricas-y-5g.md) y [77](77-internet-de-las-cosas-y-redes-de-sensores.md)). El **fog computing** es la capa intermedia que conecta el borde con la nube, y los micro-CPD su soporte físico (tema [43](43-centros-de-proceso-de-datos.md)).
 - **Multicloud y nube híbrida**: combinación de varios proveedores y de nube propia para evitar la dependencia de un único proveedor y cumplir requisitos de soberanía del dato; su reto es la gestión y la seguridad unificadas de entornos heterogéneos.
 
 ## La nube en las administraciones públicas
 
-El uso de servicios en la nube por el sector público está condicionado por el **Esquema Nacional de Seguridad (RD 311/2022**, tema 29), que le dedica una medida específica del Anexo II:
+El uso de servicios en la nube por el sector público está condicionado por el **Esquema Nacional de Seguridad (RD 311/2022**, tema [29](29-esquema-nacional-de-seguridad.md)), que le dedica una medida específica del Anexo II:
 
 - **op.nub.1 (Protección de servicios en la nube)**: los sistemas que suministren un servicio en la nube a organismos del sector público deberán cumplir las medidas de seguridad **en función del modelo de servicio (SaaS, PaaS, IaaS)** definidas en las guías CCN-STIC de aplicación. Cuando se utilicen servicios de terceros, sus sistemas deberán ser **conformes con el ENS** o cumplir una guía CCN-STIC con requisitos de auditoría de pruebas de penetración, transparencia, cifrado y gestión de claves y **jurisdicción de los datos**.
     - **Refuerzo R1** (categorías media y alta): los servicios deberán estar **certificados** bajo una metodología reconocida por el Organismo de Certificación del Esquema Nacional de Evaluación y Certificación de la Seguridad de las TI.
     - **Refuerzo R2** (categoría alta): configuración conforme a las guías CCN-STIC de configuración de seguridad específicas, para usuario y proveedor.
 - **Conformidad exigible en la contratación**: los proveedores deben poder exhibir la **Declaración de Conformidad** con el ENS (sistemas de categoría básica) o la **Certificación de Conformidad** (categorías media y alta), también respecto de los sistemas del proveedor final cuando se contrata a través de intermediarios.
 - **CCN-STIC 823, «Utilización de servicios en la nube»** (edición de diciembre de 2019, revisada en septiembre de 2020; anterior al RD 311/2022): guía del CCN con los riesgos, el clausulado contractual y los SLA, y un **decálogo de recomendaciones** que sintetiza el proceso: categorizar el sistema y elaborar la declaración de aplicabilidad, realizar el análisis de riesgos, acogerse a un perfil de cumplimiento específico si procede, fijar las condiciones contractuales antes de contratar (en pliegos: servicio, registros de actividad, gestión de incidentes, copias de seguridad y finalización del servicio), supervisar el cumplimiento del proveedor (CSP), hacer seguimiento periódico de los **SLA** y de la información del servicio, y aprobar una normativa de seguridad específica para los usuarios de la nube.
-- **Nube de la Administración**: la AEAD ofrece a las AAPP servicios de nube privada/comunitaria sobre la Red SARA (nubeSARA), que se estudian con los servicios comunes de interoperabilidad (tema 63).
+- **Nube de la Administración**: la AEAD ofrece a las AAPP servicios de nube privada/comunitaria sobre la Red SARA (nubeSARA), que se estudian con los servicios comunes de interoperabilidad (tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 

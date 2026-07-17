@@ -1,6 +1,6 @@
 # Protocolos de comunicaciones
 
-Un protocolo de comunicaciones es el conjunto de reglas que permite a dos sistemas intercambiar datos de forma ordenada: define los formatos de los mensajes, la secuencia de intercambio y el tratamiento de errores. Este tema recorre los protocolos de la pila TCP/IP (tema 69) de abajo arriba: la capa de internet (IPv4, IPv6, ICMP, ARP), la capa de transporte (TCP y UDP, con TLS) y la capa de aplicación (DNS, HTTP, SMTP, FTP, DHCP y SSH). Los protocolos de la capa de enlace (Ethernet, PPP, HDLC) se tratan en el tema 71, y las redes inalámbricas en el 72.
+Un protocolo de comunicaciones es el conjunto de reglas que permite a dos sistemas intercambiar datos de forma ordenada: define los formatos de los mensajes, la secuencia de intercambio y el tratamiento de errores. Este tema recorre los protocolos de la pila TCP/IP (tema [69](69-modelos-osi-y-tcp-ip.md)) de abajo arriba: la capa de internet (IPv4, IPv6, ICMP, ARP), la capa de transporte (TCP y UDP, con TLS) y la capa de aplicación (DNS, HTTP, SMTP, FTP, DHCP y SSH). Los protocolos de la capa de enlace (Ethernet, PPP, HDLC) se tratan en el tema [71](71-redes-de-computadores.md), y las redes inalámbricas en el 72.
 
 Tabla resumen de los puertos más preguntables (los puertos identifican la aplicación dentro del host):
 
@@ -26,7 +26,7 @@ La capa de internet encamina los paquetes desde el host origen hasta el destino 
 
 ### IPv4 (Internet Protocol version 4)
 
-- **Direcciones de 32 bits** (2^32, unos 4300 millones), en notación decimal punteada (p. ej. 192.0.2.33). El direccionamiento (clases, CIDR, subredes) se estudia en el tema 71.
+- **Direcciones de 32 bits** (2^32, unos 4300 millones), en notación decimal punteada (p. ej. 192.0.2.33). El direccionamiento (clases, CIDR, subredes) se estudia en el tema [71](71-redes-de-computadores.md).
 - **No orientado a conexión**: cada datagrama se encamina de forma independiente; pueden perderse, duplicarse o llegar desordenados.
 - **Checksum solo de cabecera**: verifica la integridad de la cabecera, no de los datos.
 - **Fragmentación**: los routers pueden fragmentar los datagramas que excedan la **MTU** del enlace; el reensamblado se hace solo en el destino. Todo host debe aceptar datagramas de al menos **576 bytes**.
@@ -264,7 +264,7 @@ La capa de aplicación agrupa los protocolos con los que trabajan directamente l
 - **TFTP** (*Trivial File Transfer Protocol*), UDP **69**: transferencia simple de archivos sin autenticación; usado en arranque por red (PXE) y carga de firmware.
 - **NFS** (*Network File System*): acceso a sistemas de archivos remotos como si fueran locales, originario de Sun Microsystems.
 - **NTP** (*Network Time Protocol*), UDP **123**: sincronización horaria jerárquica (estratos).
-- **SNMP** (*Simple Network Management Protocol*), UDP **161/162**: gestión y monitorización de dispositivos de red (se estudia en el tema 73).
+- **SNMP** (*Simple Network Management Protocol*), UDP **161/162**: gestión y monitorización de dispositivos de red (se estudia en el tema [73](73-virtualizacion-de-redes.md)).
 
 ## Fuentes {.unnumbered .unlisted}
 
