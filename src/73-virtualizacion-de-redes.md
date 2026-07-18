@@ -1,6 +1,6 @@
 # Virtualización de redes
 
-La virtualización de redes desacopla los servicios de red del hardware que los soporta: la red deja de ser un conjunto de equipos configurados uno a uno y pasa a definirse, desplegarse y gestionarse por software. Este tema cubre sus dos pilares (las redes definidas por software, SDN, y la virtualización de funciones de red, NFV), su aplicación a la red de área extensa (SD-WAN) y la gestión y administración de red (SNMP). Los dispositivos y tecnologías de red se estudian en el tema [71](71-redes-de-computadores.md), los protocolos en el 66, la seguridad de red en el 75 y las redes 5G (grandes consumidoras de NFV) en el 72.
+La virtualización de redes desacopla los servicios de red del hardware que los soporta: la red deja de ser un conjunto de equipos configurados uno a uno y pasa a definirse, desplegarse y gestionarse por software. Este tema cubre sus dos pilares (las redes definidas por software, SDN, y la virtualización de funciones de red, NFV), su aplicación a la red de área extensa (SD-WAN) y la gestión y administración de red (SNMP). Los dispositivos y tecnologías de red se estudian en el tema [71](71-redes-de-computadores.md), los protocolos en el [70](70-protocolos-de-comunicaciones.md), la seguridad de red en el [79](79-seguridad-en-las-comunicaciones.md) y las redes 5G (grandes consumidoras de NFV) en el [76](76-redes-inalambricas-y-5g.md).
 
 ## Redes definidas por software (SDN)
 

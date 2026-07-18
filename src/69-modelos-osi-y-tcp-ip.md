@@ -1,6 +1,6 @@
 # Modelos OSI y TCP/IP
 
-Los modelos de referencia organizan las funciones de una red en capas, de modo que un problema complejo (llevar datos de una aplicación a otra a través de medios y tecnologías heterogéneos) se descompone en problemas menores y bien delimitados. Este tema cubre los conceptos de la arquitectura en capas, el modelo de referencia OSI, el modelo TCP/IP y la comparativa entre ambos. Los protocolos de cada capa se estudian en el tema [70](70-protocolos-de-comunicaciones.md), y los dispositivos y tecnologías de red en el 67.
+Los modelos de referencia organizan las funciones de una red en capas, de modo que un problema complejo (llevar datos de una aplicación a otra a través de medios y tecnologías heterogéneos) se descompone en problemas menores y bien delimitados. Este tema cubre los conceptos de la arquitectura en capas, el modelo de referencia OSI, el modelo TCP/IP y la comparativa entre ambos. Los protocolos de cada capa se estudian en el tema [70](70-protocolos-de-comunicaciones.md), y los dispositivos y tecnologías de red en el [71](71-redes-de-computadores.md).
 
 ## La arquitectura en capas: conceptos básicos
 

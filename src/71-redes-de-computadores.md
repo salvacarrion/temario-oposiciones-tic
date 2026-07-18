@@ -1,6 +1,6 @@
 # Redes de computadores
 
-Una red de computadores es un conjunto de equipos (nodos) interconectados mediante dispositivos físicos y software que intercambian datos a través de impulsos eléctricos, ondas electromagnéticas u otros medios, con el fin de compartir información, recursos y servicios. Este tema cubre los elementos y clasificaciones de las redes, las redes de área local (Ethernet, VLAN, DMZ), las redes de área extensa y el direccionamiento IP con su supuesto práctico. Los protocolos de cada capa se estudian en el tema [70](70-protocolos-de-comunicaciones.md), las redes inalámbricas en el 72 y la seguridad de red en el 75.
+Una red de computadores es un conjunto de equipos (nodos) interconectados mediante dispositivos físicos y software que intercambian datos a través de impulsos eléctricos, ondas electromagnéticas u otros medios, con el fin de compartir información, recursos y servicios. Este tema cubre los elementos y clasificaciones de las redes, las redes de área local (Ethernet, VLAN, DMZ), las redes de área extensa y el direccionamiento IP con su supuesto práctico. Los protocolos de cada capa se estudian en el tema [70](70-protocolos-de-comunicaciones.md), las redes inalámbricas en el [76](76-redes-inalambricas-y-5g.md) y la seguridad de red en el [79](79-seguridad-en-las-comunicaciones.md).
 
 ## Componentes, topologías y dispositivos de interconexión
 
@@ -84,7 +84,7 @@ Las LAN actuales son casi universalmente redes **Ethernet conmutadas** en topolo
 - Segmento de red intermedio entre la red interna y el exterior donde se ubican los **servicios expuestos a Internet** (web, correo, DNS público).
 - **Arquitectura**: entre dos cortafuegos (uno frente a Internet y otro frente a la red interna) o en una **tercera interfaz** de un mismo cortafuegos.
 - **Principio**: desde la DMZ **no se permite iniciar conexiones hacia la red interna**; si un servidor expuesto se ve comprometido, el atacante no alcanza la red corporativa. Las arquitecturas de cortafuegos se desarrollan en el tema [79](79-seguridad-en-las-comunicaciones.md).
-- Las LAN inalámbricas (**WLAN**, familia IEEE 802.11/Wi-Fi) se estudian en el tema [76](76-redes-inalambricas-y-5g.md), y su seguridad en el 75.
+- Las LAN inalámbricas (**WLAN**, familia IEEE 802.11/Wi-Fi) se estudian en el tema [76](76-redes-inalambricas-y-5g.md), y su seguridad en el [79](79-seguridad-en-las-comunicaciones.md).
 
 ## Redes de área extensa (WAN)
 

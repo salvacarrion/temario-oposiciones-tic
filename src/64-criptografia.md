@@ -121,7 +121,7 @@ El marco jurídico (eIDAS, Ley 6/2020), los tipos de certificados, los prestador
 
 ## Protocolos seguros: TLS
 
-**TLS (Transport Layer Security)** es el protocolo que asegura la mayoría de las comunicaciones en Internet (HTTPS, correo, VPN SSL) y el mejor ejemplo de cómo se combinan todas las piezas anteriores: acuerdo de claves asimétrico, autenticación con certificados X.509 y cifrado simétrico autenticado para los datos. Sus versiones, puertos y despliegue se tratan en el tema [70](70-protocolos-de-comunicaciones.md); las VPN e IPsec, en el 75.
+**TLS (Transport Layer Security)** es el protocolo que asegura la mayoría de las comunicaciones en Internet (HTTPS, correo, VPN SSL) y el mejor ejemplo de cómo se combinan todas las piezas anteriores: acuerdo de claves asimétrico, autenticación con certificados X.509 y cifrado simétrico autenticado para los datos. Sus versiones, puertos y despliegue se tratan en el tema [70](70-protocolos-de-comunicaciones.md); las VPN e IPsec, en el [75](75-redes-de-emergencia.md).
 
 - **Handshake (visión criptográfica)**, en TLS 1.3 (RFC 8446):
     1. **Acuerdo de claves** con **ECDHE** (efímero, con PFS): cliente y servidor derivan un secreto compartido.

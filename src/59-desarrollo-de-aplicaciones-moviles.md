@@ -132,7 +132,7 @@ Una **PWA (Progressive Web App)** es una aplicación web que el navegador puede 
 
 **PWA frente a aplicación de tienda**: un solo desarrollo web, sin revisión ni comisiones de tienda y con distribución por URL; a cambio se renuncia a la visibilidad de las tiendas y a parte del hardware. Para servicios de información y tramitación (el caso típico de una Administración) suele ser suficiente y evita mantener dos aplicaciones nativas.
 
-El diseño adaptativo y la accesibilidad se tratan en el tema [58](58-accesibilidad-y-usabilidad.md); las tecnologías web subyacentes, en el 53.
+El diseño adaptativo y la accesibilidad se tratan en el tema [58](58-accesibilidad-y-usabilidad.md); las tecnologías web subyacentes, en el [53](53-proteccion-de-datos-personales.md).
 
 ## Fuentes {.unnumbered .unlisted}
 

@@ -1,6 +1,6 @@
 # Internet de las cosas y redes de sensores
 
-El Internet de las cosas (IoT) conecta objetos físicos cotidianos (contadores, vehículos, semáforos, electrodomésticos, maquinaria) a internet para recopilar datos y actuar sobre el entorno. Este tema cubre el concepto y la arquitectura del IoT, sus redes de comunicación de corto alcance (BLE, NFC, RFID) y de largo alcance (LPWAN), y las redes de sensores con la inteligencia artificial en el borde. Las redes Wi-Fi y móviles se estudian en el tema [76](76-redes-inalambricas-y-5g.md), los protocolos MQTT y CoAP y las plataformas de ciudad en el 74 y la inteligencia artificial en el 34.
+El Internet de las cosas (IoT) conecta objetos físicos cotidianos (contadores, vehículos, semáforos, electrodomésticos, maquinaria) a internet para recopilar datos y actuar sobre el entorno. Este tema cubre el concepto y la arquitectura del IoT, sus redes de comunicación de corto alcance (BLE, NFC, RFID) y de largo alcance (LPWAN), y las redes de sensores con la inteligencia artificial en el borde. Las redes Wi-Fi y móviles se estudian en el tema [76](76-redes-inalambricas-y-5g.md), los protocolos MQTT y CoAP y las plataformas de ciudad en el [78](78-ciudades-inteligentes.md) y la inteligencia artificial en el [34](34-inteligencia-artificial.md).
 
 ## IoT: concepto y arquitectura
 
@@ -94,7 +94,7 @@ Una **red de sensores inalámbrica (WSN, *Wireless Sensor Network*)** es un conj
     - **Edge AI**: la inferencia de modelos de IA se ejecuta en la pasarela o en el propio dispositivo, lo que reduce la **latencia**, el consumo de ancho de banda y la exposición de datos personales, y permite operar sin conectividad.
     - **TinyML**: modelos de aprendizaje automático comprimidos para ejecutarse en microcontroladores de milivatios (con marcos como TensorFlow Lite para microcontroladores).
     - **Aplicaciones**: **mantenimiento predictivo** (detectar el fallo antes de que ocurra a partir de vibración y temperatura), detección de anomalías en contadores y redes de suministro, visión artificial en el borde (aforos, seguridad) y reconocimiento de voz local.
-    - Las técnicas de IA subyacentes se estudian en el tema [34](34-inteligencia-artificial.md); su aplicación urbana (plataformas de ciudad y gemelos digitales), en el 74.
+    - Las técnicas de IA subyacentes se estudian en el tema [34](34-inteligencia-artificial.md); su aplicación urbana (plataformas de ciudad y gemelos digitales), en el [78](78-ciudades-inteligentes.md).
 
 ## Fuentes {.unnumbered .unlisted}
 

@@ -1,6 +1,6 @@
 # Ciberseguridad
 
-La ciberseguridad es el conjunto de actividades dirigidas a proteger el ciberespacio (las redes y sistemas de información y los servicios que dependen de ellos) frente a las ciberamenazas. Este tema presenta el marco normativo e institucional de la ciberseguridad en España: la Estrategia Nacional de Ciberseguridad, los organismos con competencias (CCN, CCN-CERT e INCIBE) y las guías CCN-STIC. El Esquema Nacional de Seguridad se estudia en el tema [29](29-esquema-nacional-de-seguridad.md), la gestión de ciberincidentes en el 31 y la normativa propia de la Generalitat en el 77.
+La ciberseguridad es el conjunto de actividades dirigidas a proteger el ciberespacio (las redes y sistemas de información y los servicios que dependen de ellos) frente a las ciberamenazas. Este tema presenta el marco normativo e institucional de la ciberseguridad en España: la Estrategia Nacional de Ciberseguridad, los organismos con competencias (CCN, CCN-CERT e INCIBE) y las guías CCN-STIC. El Esquema Nacional de Seguridad se estudia en el tema [29](29-esquema-nacional-de-seguridad.md), la gestión de ciberincidentes en el [31](31-gestion-de-ciberincidentes.md) y la normativa propia de la Generalitat en el [77](77-internet-de-las-cosas-y-redes-de-sensores.md).
 
 ## Conceptos y marco de la ciberseguridad
 

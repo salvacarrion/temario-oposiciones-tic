@@ -1,6 +1,6 @@
 # Protocolos de comunicaciones
 
-Un protocolo de comunicaciones es el conjunto de reglas que permite a dos sistemas intercambiar datos de forma ordenada: define los formatos de los mensajes, la secuencia de intercambio y el tratamiento de errores. Este tema recorre los protocolos de la pila TCP/IP (tema [69](69-modelos-osi-y-tcp-ip.md)) de abajo arriba: la capa de internet (IPv4, IPv6, ICMP, ARP), la capa de transporte (TCP y UDP, con TLS) y la capa de aplicación (DNS, HTTP, SMTP, FTP, DHCP y SSH). Los protocolos de la capa de enlace (Ethernet, PPP, HDLC) se tratan en el tema [71](71-redes-de-computadores.md), y las redes inalámbricas en el 72.
+Un protocolo de comunicaciones es el conjunto de reglas que permite a dos sistemas intercambiar datos de forma ordenada: define los formatos de los mensajes, la secuencia de intercambio y el tratamiento de errores. Este tema recorre los protocolos de la pila TCP/IP (tema [69](69-modelos-osi-y-tcp-ip.md)) de abajo arriba: la capa de internet (IPv4, IPv6, ICMP, ARP), la capa de transporte (TCP y UDP, con TLS) y la capa de aplicación (DNS, HTTP, SMTP, FTP, DHCP y SSH). Los protocolos de la capa de enlace (Ethernet, PPP, HDLC) se tratan en el tema [71](71-redes-de-computadores.md), y las redes inalámbricas en el [76](76-redes-inalambricas-y-5g.md).
 
 Tabla resumen de los puertos más preguntables (los puertos identifican la aplicación dentro del host):
 

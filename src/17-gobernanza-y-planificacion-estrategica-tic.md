@@ -84,7 +84,7 @@ Antes de adquirir o desarrollar un sistema debe realizarse un **estudio de alter
 
 ## Calidad de los servicios: EFQM, CAF e ISO 9004; cartas de servicios
 
-La gestión de la calidad de los servicios (públicos o TIC) se apoya en modelos de excelencia basados en la autoevaluación y la mejora continua (la calidad del software se trata en el tema [25](25-calidad-del-software.md); la de los servicios TIC, en el 18).
+La gestión de la calidad de los servicios (públicos o TIC) se apoya en modelos de excelencia basados en la autoevaluación y la mejora continua (la calidad del software se trata en el tema [25](25-calidad-del-software.md); la de los servicios TIC, en el [18](18-gestion-de-los-servicios-tic.md)).
 
 - **Modelo EFQM** (edición **2025**): modelo europeo de excelencia en gestión. Se estructura en **tres bloques**: **Dirección** (por qué y cómo se orienta la organización), **Ejecución** (cómo entrega valor) y **Resultados** (qué consigue), desarrollados en **7 criterios** y 32 subcriterios; la evaluación aplica la lógica **RADAR** (Resultados, Enfoques, Despliegue, Evaluación y Revisión) y da acceso a los sellos de reconocimiento.
 - **CAF 2020** (*Common Assessment Framework*): adaptación **gratuita del modelo EFQM para las administraciones públicas** europeas, promovida por la red EUPAN y el EIPA. Es un modelo de **autoevaluación** con **9 criterios**: **5 agentes facilitadores** (liderazgo; estrategia y planificación; personas; alianzas y recursos; procesos) y **4 de resultados** (en las personas; en los ciudadanos/clientes; de responsabilidad social; clave de rendimiento).
