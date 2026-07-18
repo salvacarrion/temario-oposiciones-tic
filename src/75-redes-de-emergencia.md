@@ -1,6 +1,6 @@
 # Redes de emergencia
 
-Las redes de emergencia son las redes de comunicaciones móviles que utilizan los servicios de protección ciudadana (policía, bomberos, urgencias sanitarias, protección civil) para coordinar sus operativos. Deben funcionar precisamente cuando las redes comerciales fallan o se saturan, por lo que se diseñan con requisitos propios de disponibilidad, prioridad y seguridad. Este tema cubre el concepto y los requisitos de estas redes, el estándar TETRA que domina su despliegue en Europa y la red COMDES de la Generalitat. Las redes móviles comerciales (4G/5G) se estudian en el tema [76](76-redes-inalambricas-y-5g.md) y la seguridad de las comunicaciones en el 75.
+Las redes de emergencia son las redes de comunicaciones móviles que utilizan los servicios de protección ciudadana (policía, bomberos, urgencias sanitarias, protección civil) para coordinar sus operativos. Deben funcionar precisamente cuando las redes comerciales fallan o se saturan, por lo que se diseñan con requisitos propios de disponibilidad, prioridad y seguridad. Este tema cubre el concepto y los requisitos de estas redes, el estándar TETRA que domina su despliegue en Europa y la red COMDES de la Generalitat. Las redes móviles comerciales (4G/5G) se estudian en el tema [76](76-redes-inalambricas-y-5g.md) y la seguridad de las comunicaciones en el [79](79-seguridad-en-las-comunicaciones.md).
 
 ## Redes de emergencia y misión crítica
 

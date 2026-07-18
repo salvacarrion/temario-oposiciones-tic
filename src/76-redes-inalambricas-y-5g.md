@@ -1,6 +1,6 @@
 # Redes inalámbricas y 5G
 
-Las redes inalámbricas conectan nodos mediante ondas electromagnéticas, sin cableado, y son la base de la movilidad: desde la red local de una oficina (Wi-Fi) hasta la cobertura nacional de la telefonía móvil (5G). Este tema cubre la familia IEEE 802.11, las generaciones de telefonía móvil con el 5G en detalle y otras tecnologías de transmisión inalámbrica. Los dispositivos y el direccionamiento de red se estudian en el tema [71](71-redes-de-computadores.md), las redes de emergencia en el 71, las redes IoT de corto y largo alcance (Bluetooth, LPWAN) en el 73 y la seguridad inalámbrica (WEP/WPA/WPA3, 802.1X) en el 75.
+Las redes inalámbricas conectan nodos mediante ondas electromagnéticas, sin cableado, y son la base de la movilidad: desde la red local de una oficina (Wi-Fi) hasta la cobertura nacional de la telefonía móvil (5G). Este tema cubre la familia IEEE 802.11, las generaciones de telefonía móvil con el 5G en detalle y otras tecnologías de transmisión inalámbrica. Los dispositivos y el direccionamiento de red se estudian en el tema [71](71-redes-de-computadores.md), las redes de emergencia en el [75](75-redes-de-emergencia.md), las redes IoT de corto y largo alcance (Bluetooth, LPWAN) en el [77](77-internet-de-las-cosas-y-redes-de-sensores.md) y la seguridad inalámbrica (WEP/WPA/WPA3, 802.1X) en el [79](79-seguridad-en-las-comunicaciones.md).
 
 ## Wi-Fi: la familia IEEE 802.11
 

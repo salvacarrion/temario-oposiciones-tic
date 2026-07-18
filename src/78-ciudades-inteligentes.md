@@ -1,6 +1,6 @@
 # Ciudades inteligentes
 
-Las ciudades inteligentes (*smart cities*) aplican las TIC a la gestión urbana para prestar mejores servicios con menos recursos: movilidad, energía, agua, residuos, seguridad o participación ciudadana. Este tema cubre el concepto, la arquitectura y el gobierno de la ciudad inteligente, las plataformas de ciudad (con FIWARE como referencia), los protocolos MQTT y CoAP y los gemelos digitales. El IoT y las redes de sensores que la alimentan se estudian en el tema [77](77-internet-de-las-cosas-y-redes-de-sensores.md), los SIG y las IDE en los temas [66](66-sistemas-de-informacion-geografica.md) y [67](67-infraestructuras-de-datos-espaciales.md), y la inteligencia artificial en el 34.
+Las ciudades inteligentes (*smart cities*) aplican las TIC a la gestión urbana para prestar mejores servicios con menos recursos: movilidad, energía, agua, residuos, seguridad o participación ciudadana. Este tema cubre el concepto, la arquitectura y el gobierno de la ciudad inteligente, las plataformas de ciudad (con FIWARE como referencia), los protocolos MQTT y CoAP y los gemelos digitales. El IoT y las redes de sensores que la alimentan se estudian en el tema [77](77-internet-de-las-cosas-y-redes-de-sensores.md), los SIG y las IDE en los temas [66](66-sistemas-de-informacion-geografica.md) y [67](67-infraestructuras-de-datos-espaciales.md), y la inteligencia artificial en el [34](34-inteligencia-artificial.md).
 
 ## Concepto, arquitectura y gobierno
 
