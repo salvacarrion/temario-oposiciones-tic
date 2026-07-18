@@ -111,7 +111,7 @@ El **Libro II** ofrece catálogos estándar con un doble objetivo: facilitar el 
 
 El **Libro III (Guía de técnicas)** completa el método con técnicas específicas (análisis mediante tablas, análisis algorítmico, **árboles de ataque**) y generales (técnicas gráficas, sesiones de trabajo como entrevistas y reuniones, y la **valoración Delphi**).
 
-## Caso práctico: análisis de riesgos con MAGERIT
+## Supuesto práctico: análisis de riesgos con MAGERIT
 
 Un organismo pone en producción una aplicación web de tramitación de expedientes con datos personales. Se resume un análisis semiformal (categoría MEDIA del ENS, op.pl.1 + R1) siguiendo los pasos del método.
 

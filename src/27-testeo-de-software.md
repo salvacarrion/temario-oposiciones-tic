@@ -146,7 +146,7 @@ El **plan de prueba** documenta objetivos, alcance, contexto, supuestos y restri
 
 El programa agrupa las herramientas de apoyo en: gestión (pruebas, defectos, configuración), prueba estática, diseño e implementación de pruebas, **ejecución y cobertura**, pruebas no funcionales, DevOps (CI/CD), colaboración y escalado de entornos (máquinas virtuales, contenedores). Ejemplos habituales: **JUnit** (unitarias en Java), **Selenium** y **Playwright** (interfaz web), **Postman** (API), **JMeter** (rendimiento) y **SonarQube** (análisis estático), integradas en el pipeline (ver tema [26](26-control-de-versiones-integracion-continua-y-devops.md)).
 
-Una prueba unitaria con JUnit 5 sobre el método `clasificar` del caso práctico del tema [25](25-calidad-del-software.md):
+Una prueba unitaria con JUnit 5 sobre el método `clasificar` del supuesto práctico del tema [25](25-calidad-del-software.md):
 
 ```java
 @Test

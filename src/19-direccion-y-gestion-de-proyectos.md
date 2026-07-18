@@ -1,6 +1,6 @@
 # Dirección y gestión de proyectos
 
-Un **proyecto** es un esfuerzo temporal que se lleva a cabo para crear un producto, servicio o resultado único, con un inicio y un fin definidos y bajo restricciones de alcance, tiempo, coste y calidad. La **gestión (o dirección) de proyectos** consiste en aplicar conocimientos, habilidades, herramientas y técnicas a las actividades del proyecto para cumplir sus objetivos, adaptando el enfoque a las características de cada proyecto. Este tema recorre el marco de referencia del PMI (PMBOK), la metodología **PM²** de la Comisión Europea, la metodología **gvLOGOS** de la Generalitat Valenciana y un caso práctico de planificación con PERT y CPM.
+Un **proyecto** es un esfuerzo temporal que se lleva a cabo para crear un producto, servicio o resultado único, con un inicio y un fin definidos y bajo restricciones de alcance, tiempo, coste y calidad. La **gestión (o dirección) de proyectos** consiste en aplicar conocimientos, habilidades, herramientas y técnicas a las actividades del proyecto para cumplir sus objetivos, adaptando el enfoque a las características de cada proyecto. Este tema recorre el marco de referencia del PMI (PMBOK), la metodología **PM²** de la Comisión Europea, la metodología **gvLOGOS** de la Generalitat Valenciana y un supuesto práctico de planificación con PERT y CPM.
 
 ## Fundamentos y áreas de conocimiento (PMBOK)
 
@@ -267,7 +267,7 @@ Las pruebas (desarrolladas en su propio tema) se organizan en:
 - **Entrega y despliegue**: **CONFIE** (configuración de entornos), **Subversion** (control de versiones y documentación técnica, con estructura normalizada de carpetas: trunk, branches, tags, doc y fuentes), **Nexus** (repositorio de dependencias y artefactos), **Jenkins** (automatización de construcción y despliegue, con instancias jenkins-qua y jenkins-sis y jobs de integración continua, entrega y análisis de código), **Sonar** (análisis estático) y **Condesa** (control de despliegues).
 - **gvLOGIN**: sistema corporativo de **autenticación, autorización y auditoría** con **SSO** (inicio de sesión único) para los sistemas de la Generalitat. Fases: autenticación (validación de credenciales), autorización opcional (permisos sobre recursos) y post-procesamiento opcional. Se integra con **gvCLAU** (gestión de accesos con repositorio único de usuarios y permisos), **gvCREDENCIALS** (aceptación o rechazo de permisos según políticas) y **CADENAT** (gestión segura de contraseñas).
 
-## Caso práctico: PERT y CPM
+## Supuesto práctico 1: PERT y CPM
 
 **PERT** (*Program Evaluation and Review Technique*) y **CPM** (*Critical Path Method*) son técnicas de planificación que representan el proyecto como un grafo de actividades con dependencias y determinan la **ruta crítica**: la secuencia de actividades que fija la **duración mínima total** del proyecto. Se diferencian en el tratamiento de las duraciones:
 
@@ -320,6 +320,38 @@ Aplicando las pasadas hacia adelante y hacia atrás:
 | Más temprano | Holgura | Más tardío |
 | :---: | :---: | :---: |
 | 22 | 0 | 22 |
+
+## Supuesto práctico 2: gestión del valor ganado (EVM)
+
+La **gestión del valor ganado** (EVM, *Earned Value Management*) es la técnica del PMBOK para medir de forma integrada **alcance, plazo y coste**: compara lo que se planificó producir, lo que se ha producido realmente y lo que ha costado producirlo. Magnitudes básicas en la fecha de control:
+
+- **BAC** (*Budget at Completion*): presupuesto total del proyecto.
+- **PV** (*Planned Value*, valor planificado): coste presupuestado del trabajo que debería estar hecho.
+- **EV** (*Earned Value*, valor ganado): coste presupuestado del trabajo realmente hecho.
+- **AC** (*Actual Cost*, coste real): lo realmente gastado en el trabajo hecho.
+
+### Enunciado
+
+Un proyecto de desarrollo tiene una duración prevista de **12 meses** y un presupuesto (**BAC**) de **600.000 €**, con avance planificado uniforme. En el control de fin del **mes 6**: debería estar completado el **50 %** del trabajo, se ha completado realmente el **40 %** y se han gastado **280.000 €**. Se pide: calcular las variaciones e índices de valor ganado, diagnosticar el estado del proyecto y estimar el coste y el plazo finales si se mantiene el rendimiento actual.
+
+### Resolución
+
+Valores base: PV = 50 % × 600.000 = **300.000 €**; EV = 40 % × 600.000 = **240.000 €**; AC = **280.000 €**.
+
+| Magnitud | Fórmula | Cálculo | Resultado | Lectura |
+| --- | --- | --- | :---: | --- |
+| **SV** (variación de plazo) | EV - PV | 240.000 - 300.000 | **-60.000 €** | Negativa: retraso |
+| **CV** (variación de coste) | EV - AC | 240.000 - 280.000 | **-40.000 €** | Negativa: sobrecoste |
+| **SPI** (índice de desempeño de plazo) | EV / PV | 240.000 / 300.000 | **0,80** | Se avanza al 80 % del ritmo previsto |
+| **CPI** (índice de desempeño de coste) | EV / AC | 240.000 / 280.000 | **0,857** | Cada euro gastado produce 0,86 € de trabajo |
+| **EAC** (coste final estimado) | BAC / CPI | 600.000 / 0,857 | **700.000 €** | Si el rendimiento de coste se mantiene |
+| **ETC** (coste del trabajo restante) | EAC - AC | 700.000 - 280.000 | **420.000 €** | Pendiente de gastar |
+| **VAC** (desviación final prevista) | BAC - EAC | 600.000 - 700.000 | **-100.000 €** | Sobrecoste esperado al cierre |
+| **TCPI** (índice para cumplir el BAC) | (BAC - EV) / (BAC - AC) | 360.000 / 320.000 | **1,125** | Habría que rendir un 12,5 % mejor que lo planificado en lo que queda |
+
+- **Diagnóstico**: el proyecto va **retrasado** (SPI < 1) **y con sobrecoste** (CPI < 1), el peor de los cuatro cuadrantes posibles.
+- **Plazo estimado**: si el ritmo se mantiene, la duración total aproximada es 12 / SPI = **15 meses** (3 meses de retraso).
+- **Decisiones de dirección**: analizar causas (estimación optimista, crecimiento del alcance, baja productividad), replanificar formalmente con una **nueva línea base** aprobada por el comité de seguimiento, valorar medidas correctoras (repriorizar alcance con el patrocinador, reforzar el equipo sabiendo que incorporar personal tarde puede empeorar el plazo) y comunicar el EAC actualizado. Un **TCPI de 1,125** indica que terminar dentro del presupuesto original es poco realista.
 
 ## Fuentes {.unnumbered .unlisted}
 

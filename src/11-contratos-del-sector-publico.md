@@ -253,7 +253,7 @@ La representación de las entidades del sector público en materia contractual c
 - **Responsable del contrato** (art. 62): los órganos de contratación **deben designar** un responsable que **supervisa la ejecución**, adopta decisiones y dicta las instrucciones necesarias; en los contratos de obras, sus funciones las ejerce el **Director Facultativo**.
 - **Perfil de contratante** (art. 63): agrupa la información y documentos de la actividad contractual del órgano y se difunde **exclusivamente a través de Internet**, con acceso **libre y gratuito** y la información accesible durante al menos **5 años**. Publica, entre otros, la memoria justificativa, los pliegos, los anuncios, las actas e informes de valoración, la composición de las mesas y la adjudicación y formalización. Los perfiles del **sector público estatal** se alojan obligatoriamente en la **Plataforma de Contratación del Sector Público** (art. 347), donde también pueden alojarse los de CCAA y EELL.
 
-## Caso práctico: redacción de un pliego
+## Supuesto práctico: redacción de un pliego
 
 Supuesto: una conselleria necesita contratar el **desarrollo y mantenimiento de una aplicación web de cita previa**. Presupuesto anual estimado: 55.000 € (IVA excluido); duración de **1 año**, con posible **prórroga de 1 año** y **modificación prevista del 10%**. El objetivo es identificar los documentos que hay que redactar y su contenido esencial.
 

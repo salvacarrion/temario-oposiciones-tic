@@ -120,6 +120,50 @@ La Red SARA (**Sistema de Aplicaciones y Redes para las Administraciones**) es l
 - **Evolución**: nació como **TESTA** (programa IDA, 1996); la versión segura **sTESTA** la sustituyó, y la generación en servicio es **TESTA-ng** (new generation), gestionada por la Comisión Europea en el marco de sus programas de interoperabilidad (ISA² y sucesores).
 - **Conexión española**: la **Red SARA está conectada a TESTA**, de modo que cualquier Administración española alcanza los servicios paneuropeos (y las administraciones europeas, los españoles) sin salir de redes privadas.
 
+## Supuesto práctico: supresión de la aportación de documentos mediante la PID
+
+**Enunciado**: un ayuntamiento convoca **ayudas de comedor escolar** y hoy exige adjuntar a la solicitud: copia del **DNI** de los solicitantes, **volante de empadronamiento**, **declaración del IRPF** del último ejercicio, título de **familia numerosa**, certificado de **grado de discapacidad** y certificado de **prestaciones por desempleo**. Quiere suprimir toda esa documentación conforme al **art. 28 de la Ley 39/2015**, consultando los datos a través de la **Plataforma de Intermediación de Datos (PID)**.
+
+**Se pide**:
+
+- a) Fundamentar jurídicamente la supresión e identificar el rol de cada organismo según la NTI.
+- b) Determinar, para cada documento, el servicio de verificación y el cedente.
+- c) Describir los pasos para que el ayuntamiento acceda a la PID.
+- d) Establecer las garantías de la tramitación (oposición, trazabilidad, protección de datos).
+
+**Resolución**:
+
+**a) Fundamento y roles**
+
+- **Art. 28.2 de la Ley 39/2015**: los interesados tienen derecho a no aportar documentos elaborados por cualquier Administración; la actuante los recaba «a través de sus redes corporativas o mediante consulta a las plataformas de intermediación de datos», **salvo oposición** del interesado. El **volante de empadronamiento** ni siquiera necesita intermediación: el padrón es del propio ayuntamiento (documento **en poder de la Administración actuante**) y se consulta internamente.
+- **Roles (NTI de Protocolos de intermediación de datos)**: el ayuntamiento actúa como **cesionario** (consulta datos dentro de un procedimiento concreto); la AEAT, el SEPE o la comunidad autónoma son **cedentes** (responsables de los datos y de sus condiciones de acceso); la **PID** es el **nodo de interoperabilidad** que presta las funciones comunes de intercambio, **sin almacenar** los datos de los ciudadanos.
+- **Bases de la convocatoria**: deben sustituir la lista de documentos por la previsión de consulta por intermediación, informando de las consultas y del derecho de oposición.
+
+**b) Mapa de consultas**
+
+| Documento exigido hoy | Servicio de verificación y consulta (SVD) | Cedente |
+| --- | --- | --- |
+| Copia del DNI | Verificación de **datos de identidad** | Dirección General de la Policía |
+| Volante de empadronamiento | Consulta del **padrón municipal propio** (sin PID) | El propio ayuntamiento |
+| Declaración del IRPF | **Nivel de renta** | AEAT |
+| Título de familia numerosa | **Familia numerosa** | Comunidad autónoma |
+| Certificado de discapacidad | **Grado de discapacidad** | Comunidad autónoma |
+| Prestaciones por desempleo | **Prestaciones por desempleo** (situación e importes) | SEPE |
+
+**c) Alta del ayuntamiento como cesionario**
+
+- **Requisitos previos**: el procedimiento debe estar inventariado con su **código SIA** y las unidades tramitadoras codificadas en **DIR3**: las autorizaciones se conceden **por procedimiento y finalidad**, y cada consulta viaja identificándolos.
+- **Solicitud de acceso**: para cada servicio, el formulario de autorización del portal de la PID; cada **cedente** fija sus condiciones y autoriza la cesión (la AEAT es especialmente estricta con la finalidad y puede exigir convenio previo).
+- **Conectividad**: el acceso discurre por redes administrativas: la **Red SARA**, a la que la entidad local llega directamente o a través de la red de su comunidad autónoma; en la Comunitat Valenciana, las entidades locales pueden apoyarse en la **PAI** como nodo de interoperabilidad autonómico (tema [82](82-administracion-electronica-y-plataformas-de-la-generalitat.md)).
+- **Integración técnica**: servicios web conformes al protocolo **SCSP** (tema [62](62-esquema-nacional-de-interoperabilidad.md)), integrados en el gestor de expedientes municipal o mediante un cliente SCSP; las peticiones se firman con el certificado de **sello electrónico** del ayuntamiento; pruebas en el entorno de preproducción de cada servicio y paso a producción tras validarlas.
+
+**d) Garantías de la tramitación**
+
+- **Oposición y consentimiento**: el formulario informa de las consultas y permite la **oposición expresa** (no cabe en el ejercicio de potestades sancionadoras o de inspección); quien se oponga deberá aportar el documento. Para los datos **tributarios**, la normativa específica exige el **consentimiento expreso** en lugar del régimen general de oposición.
+- **Finalidad y proporcionalidad**: solo se consultan los datos necesarios del procedimiento que ampara la autorización; una consulta sin expediente que la justifique es una cesión ilegítima de datos.
+- **Trazabilidad**: cada transmisión queda registrada (quién consultó, qué dato, cuándo y para qué procedimiento) y las respuestas intermediadas tienen la **consideración de certificados administrativos**: se incorporan al expediente como justificante de la comprobación.
+- **Protección de datos**: la consulta es una cesión entre Administraciones amparada en una obligación legal y en el interés público (art. 28 de la Ley 39/2015 y RGPD); debe reflejarse en el **registro de las actividades de tratamiento** y en la información al interesado (tema [53](53-proteccion-de-datos-personales.md)). Si un servicio no está disponible, el dato se recaba por otros medios administrativos, sin trasladar la carga al ciudadano.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad (texto consolidado, última modificación 6 de noviembre de 2024).

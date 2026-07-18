@@ -164,6 +164,43 @@ spec:
 - **Distribuciones empresariales**: Red Hat **OpenShift** (muy extendida en administraciones públicas), SUSE Rancher y **k3s** (ligera, para edge), VMware Tanzu.
 - **Servicios gestionados en nube**: Amazon **EKS**, Microsoft **AKS** y Google **GKE**: el proveedor opera el plano de control y el cliente gestiona las cargas.
 
+## Supuesto práctico: dimensionamiento de un clúster de virtualización
+
+**Enunciado**: una diputación provincial renueva su plataforma de virtualización, hoy dispersa en hosts sueltos sin alta disponibilidad. El inventario actual suma **180 VM** con **520 vCPU** asignadas, **1.900 GB** de RAM asignada y **60 TB** de disco aprovisionado (de los que hay **45 TB** realmente escritos, gracias al thin provisioning). Se prevé un crecimiento del **20 %** en tres años. Requisitos: tolerar el fallo de un host sin pérdida de servicio (**N+1**), mantenimiento de hosts sin parada, ratio máximo de sobresuscripción de CPU de **4:1** (vCPU por núcleo físico), memoria **sin sobresuscripción** reservando un **10 %** por host para el hipervisor, y almacenamiento compartido que permita la migración en caliente. El host candidato tiene **2 procesadores de 32 núcleos** (64 núcleos físicos) y **1.024 GB** de RAM.
+
+**Se pide**:
+
+- a) Calcular el número de hosts del clúster.
+- b) Definir la configuración del clúster (alta disponibilidad, balanceo, control de admisión).
+- c) Diseñar el almacenamiento y la red.
+- d) Valorar el licenciamiento y las alternativas de plataforma.
+
+**Resolución**:
+
+**a) Número de hosts**
+
+- **Demanda con crecimiento**: 520 × 1,2 = **624 vCPU**; 1.900 × 1,2 = **2.280 GB** de RAM.
+- **Por CPU**: con ratio 4:1 hacen falta 624 / 4 = **156 núcleos físicos**; cada host aporta 64, luego 156 / 64 = 2,44 → **3 hosts**.
+- **Por RAM**: cada host aporta 1.024 × 0,9 ≈ **921 GB útiles**; 2.280 / 921 = 2,47 → **3 hosts**.
+- **Con N+1**: 3 + 1 = **4 hosts**. Comprobación del peor caso (un host caído): quedan 3 hosts con 192 núcleos (≥ 156) y unos 2.764 GB útiles (≥ 2.280), de modo que el clúster soporta el fallo sin degradar el servicio.
+
+**b) Configuración del clúster**
+
+- **Alta disponibilidad (HA)** activada: si cae un host, sus VM se rearrancan automáticamente en el resto.
+- **Control de admisión**: reservar la capacidad de **1 host** (el 25 % del clúster), de modo que nunca se admitan más VM de las que los supervivientes puedan rearrancar.
+- **Balanceo dinámico** automático (DRS) y **migración en caliente** para vaciar cada host antes de su mantenimiento, cumpliendo el requisito de mantenimiento sin parada.
+- **Reglas de antiafinidad**: las VM redundantes entre sí (los nodos de una misma base de datos, los controladores de dominio) se mantienen en hosts distintos.
+
+**c) Almacenamiento y red**
+
+- **Almacenamiento compartido** (SAN iSCSI/FC o NVMe-oF, tema [45](45-sistemas-de-almacenamiento.md)) accesible por los 4 hosts: es la condición de la migración en caliente y del HA. Capacidad: 45 TB escritos × 1,2 ≈ 54 TB, más un margen del 25-30 % para snapshots y picos: en torno a **70 TB útiles** en RAID 6, vigilando el sobreaprovisionamiento (hay 60 TB nominales asignados que podrían llegar a escribirse).
+- **Red por host**: adaptadores redundantes y tráficos separados en VLAN distintas (gestión, migración en caliente, VM y almacenamiento IP); lo habitual hoy es **2 × 25 GbE** por host.
+
+**d) Licenciamiento y alternativas**
+
+- **Licenciamiento por núcleo físico**: tanto los hipervisores comerciales (suscripción por núcleo) como Windows Server Datacenter (VM ilimitadas en el host licenciando todos sus núcleos) se pagan por los **256 núcleos** del clúster: el coste de licencias puede superar al del hardware, lo que obliga a comparar con **KVM/Proxmox** (sin coste de licencia, con suscripción de soporte).
+- **Alternativas**: la **hiperconvergencia (HCI)** sustituiría la cabina por almacenamiento distribuido en los propios hosts (exige normalmente un mínimo de 3-4 nodos, que aquí se cumple); las cargas nuevas sin estado pueden desplegarse como **contenedores** sobre Kubernetes, conviviendo con las VM en la misma plataforma.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - Documentación oficial de Docker, docs.docker.com (Docker Engine 29), consulta de julio de 2026.

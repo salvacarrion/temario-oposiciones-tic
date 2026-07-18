@@ -116,6 +116,51 @@ El uso de servicios en la nube por el sector público está condicionado por el 
 - **CCN-STIC 823, «Utilización de servicios en la nube»** (edición de diciembre de 2019, revisada en septiembre de 2020; anterior al RD 311/2022): guía del CCN con los riesgos, el clausulado contractual y los SLA, y un **decálogo de recomendaciones** que sintetiza el proceso: categorizar el sistema y elaborar la declaración de aplicabilidad, realizar el análisis de riesgos, acogerse a un perfil de cumplimiento específico si procede, fijar las condiciones contractuales antes de contratar (en pliegos: servicio, registros de actividad, gestión de incidentes, copias de seguridad y finalización del servicio), supervisar el cumplimiento del proveedor (CSP), hacer seguimiento periódico de los **SLA** y de la información del servicio, y aprobar una normativa de seguridad específica para los usuarios de la nube.
 - **Nube de la Administración**: la AEAD ofrece a las AAPP servicios de nube privada/comunitaria sobre la Red SARA (nubeSARA), que se estudian con los servicios comunes de interoperabilidad (tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md)).
 
+## Supuesto práctico: migración a la nube de los servicios de un organismo
+
+**Enunciado**: un organismo autonómico debe abandonar en **18 meses** el CPD que ocupa en un edificio que va a venderse. Su inventario de servicios: **correo y ofimática** (1.800 buzones en servidores propios), **portal web y sede electrónica** (aplicaciones Java con datos personales), un **sistema de gestión de expedientes** cliente-servidor legado sobre base de datos Oracle, **entornos de desarrollo y preproducción**, y las **copias de seguridad**. El sistema de información está categorizado en el ENS como de **categoría MEDIA**. Construir un CPD propio se estima en **1,4 M€** de inversión más su operación; la dirección pide evaluar la **migración a la nube**.
+
+**Se pide**:
+
+- a) Asignar a cada carga un modelo de servicio (IaaS/PaaS/SaaS) y una estrategia de migración.
+- b) Elegir y justificar el modelo de despliegue.
+- c) Determinar los requisitos de seguridad y cumplimiento (ENS, RGPD, contrato).
+- d) Analizar el impacto económico, los riesgos y el gobierno del gasto.
+
+**Resolución**:
+
+**a) Modelo de servicio y estrategia por carga**
+
+Las estrategias de migración habituales son las «**6 R**»: *rehost* (mover tal cual), *replatform* (ajustes menores), *refactor* (rediseñar para la nube), *repurchase* (sustituir por SaaS), *retire* (eliminar) y *retain* (mantener donde está).
+
+| Carga | Modelo | Estrategia |
+| --- | --- | --- |
+| Correo y ofimática | **SaaS** | *Repurchase*: suite en nube; desaparecen los servidores y su administración |
+| Portal y sede electrónica | **PaaS**/CaaS | *Replatform*: contenedores sobre plataforma gestionada (tema [44](44-virtualizacion-y-contenedores.md)) |
+| Gestión de expedientes (legado) | **IaaS** | *Rehost* (*lift and shift*): VM equivalentes; su modernización se aborda después, sin atarla al plazo del traslado |
+| Desarrollo y preproducción | IaaS/PaaS | *Rehost* con **apagado programado** fuera de horario e infraestructura como código |
+| Copias de seguridad | Almacenamiento **de objetos** | Copia externa **inmutable** de la regla 3-2-1 (tema [45](45-sistemas-de-almacenamiento.md)), en niveles de acceso esporádico |
+
+**b) Modelo de despliegue**
+
+- **Nube híbrida** con predominio de **nube pública** de un proveedor con **región en la UE**: es la que aporta la elasticidad, los servicios gestionados y la velocidad que exige el plazo de 18 meses con un equipo reducido.
+- La **nube privada** (reconstruir infraestructura propia) reproduce el problema que se quiere evitar; la **comunitaria** (nubeSARA o la nube autonómica, tema [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md)) se valora para cargas administrativas estables si su catálogo las cubre.
+- Mientras conviven entornos durante la migración por olas, la conectividad privada es imprescindible: enlaces dedicados o VPN con las sedes y acceso a la **Red SARA**.
+
+**c) Seguridad y cumplimiento**
+
+- **ENS, medida op.nub.1**: en categoría **MEDIA** aplica el **refuerzo R1**: los servicios en la nube deben estar **certificados**; en la contratación se exige la **Certificación de Conformidad con el ENS** de los servicios del proveedor (también del proveedor final si se contrata a través de intermediarios).
+- **CCN-STIC 823**: seguir su decálogo: categorización y declaración de aplicabilidad previas, **análisis de riesgos** (tema [30](30-analisis-y-gestion-de-riesgos.md)), condiciones fijadas **en los pliegos antes de contratar** (SLA, registros de actividad, gestión de incidentes, copias de seguridad y **reversibilidad al finalizar el servicio**), supervisión continua del proveedor y normativa de seguridad específica para los usuarios de la nube.
+- **RGPD**: el proveedor actúa como **encargado del tratamiento** (contrato del art. 28 RGPD); datos y copias en la **UE**, garantías frente a transferencias internacionales, cifrado en tránsito y en reposo y gestión de claves documentada (tema [53](53-proteccion-de-datos-personales.md)).
+- **Responsabilidad compartida**: los **datos, su clasificación y el control de accesos son siempre responsabilidad del organismo**; en IaaS lo son también el sistema operativo, su bastionado y sus parches.
+
+**d) Economía, riesgos y gobierno del gasto**
+
+- **De CAPEX a OPEX**: se evita la inversión de 1,4 M€ y el gasto pasa a ser operativo y proporcional al uso; la comparación correcta es el **TCO a 4-5 años** (computando personal, licencias, comunicaciones y salida de datos), no la cuota mensual contra la inversión.
+- **Palancas de ahorro**: *rightsizing* de las VM migradas (el legado suele estar sobredimensionado), **capacidad reservada** para las cargas estables (descuentos típicos del 30-60 % sobre el precio bajo demanda), apagado de los entornos no productivos y niveles fríos para el archivo.
+- **Riesgos**: ***lock-in*** del proveedor (mitigado con contenedores, estándares abiertos y plan de reversibilidad contractual), **costes de salida de datos** (*egress*), dependencia de la conectividad (enlaces redundantes) y gasto descontrolado (gobierno **FinOps**: etiquetado de recursos por servicio, presupuestos y alertas de consumo).
+- **Plan por olas**: primero el correo (SaaS) y los entornos no productivos; después el portal y la sede (PaaS); por último el legado (IaaS), cuya modernización queda como proyecto posterior ya en la nube.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - NIST Special Publication 800-145, The NIST Definition of Cloud Computing (septiembre de 2011).

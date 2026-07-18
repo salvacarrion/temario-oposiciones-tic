@@ -212,7 +212,7 @@ La **Comisión Sectorial de Administración Electrónica** recoge la informació
 - Tras un incidente, el CCN-CERT determina técnicamente el **riesgo de reconexión** de los sistemas afectados.
 - El CCN-CERT presta soporte y coordinación ante incidentes, investiga y divulga mejores prácticas (guías **CCN-STIC**), forma especialistas e informa sobre vulnerabilidades y amenazas (art. 34). La gestión de ciberincidentes se desarrolla en el tema [31](31-gestion-de-ciberincidentes.md).
 
-## Caso práctico: plan de adecuación al ENS
+## Supuesto práctico: plan de adecuación al ENS
 
 La Subsecretaría de la Conselleria de Hacienda y Administración Pública de la Generalitat Valenciana debe adaptar sus sistemas de información al ENS. Los sistemas implicados gestionan los siguientes activos:
 

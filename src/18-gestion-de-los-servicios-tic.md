@@ -141,6 +141,56 @@ El **modelo de mejora continua** guía cualquier iniciativa mediante **7 pasos**
 - **Métodos complementarios**: el modelo es compatible con el ciclo **PDCA** de Deming (planificar-hacer-verificar-actuar), lean (eliminación de desperdicio), agile y DevOps.
 - **Papel del liderazgo**: la dirección debe integrar la mejora en la cultura, asignar recursos y dar ejemplo; los principios «progresar iterativamente» y «enfocarse en el valor» aplican a cada iniciativa.
 
+## Supuesto práctico: catálogo de servicios, SLA y dimensionamiento de un CAU
+
+**Enunciado**: una conselleria con **3.000 empleados** repartidos entre los servicios centrales y las direcciones territoriales decide centralizar su soporte TIC, hoy disperso: las incidencias se comunican por teléfono o correo a técnicos concretos, sin registro, sin prioridades y sin compromisos de servicio. Se implantará un modelo conforme a **ITIL 4** con un **centro de atención a usuarios (CAU)** como punto único de contacto. Datos medidos durante tres meses: **0,7 contactos por usuario y mes** (70 % incidencias, 30 % peticiones de servicio), tiempo medio de atención de **10 minutos** por contacto, horario de soporte de **8:00 a 20:00** de lunes a viernes (**21 días laborables** al mes de media), ocupación máxima de los agentes del **75 %**, jornada efectiva de **7 horas** y factor de merma por vacaciones, ausencias y formación del **20 %**.
+
+**Se pide**:
+
+- a) Diseñar el modelo de soporte: funciones del centro de servicios, niveles y escalados.
+- b) Definir el catálogo de servicios y la estructura del SLA, con su matriz de prioridades.
+- c) Dimensionar el número de agentes del CAU.
+- d) Establecer los indicadores de seguimiento y el plan de mejora continua.
+
+**Resolución**:
+
+**a) Modelo de soporte**
+
+- **Centro de servicios como punto único de contacto (SPOC)**: todo contacto entra por los canales oficiales (teléfono, correo, portal de autoservicio) y se **registra, clasifica y prioriza** en la herramienta ITSM; desaparece el soporte informal a técnicos concretos.
+- **Separación de flujos**: las **incidencias** (interrupción o degradación no planificada) siguen la gestión de incidentes; las **peticiones de servicio** (altas, accesos, software estándar) siguen flujos preacordados y automatizables desde el portal; los cambios derivados pasan por la **habilitación del cambio** (estándar preautorizado, normal o de emergencia).
+- **Niveles de soporte**: **nivel 1** (CAU: registro, diagnóstico con guiones y base de conocimiento, resolución del mayor número posible de casos), **nivel 2** (grupos especialistas: sistemas, comunicaciones, aplicaciones) y **nivel 3** (fabricantes y proveedores, bajo contrato). Escalado **funcional** entre niveles y **jerárquico** hacia la línea de mando; los **incidentes graves** tienen procedimiento propio, con equipo dedicado y comunicación reforzada.
+- **Gestión de problemas**: análisis de tendencias sobre lo registrado para identificar problemas, documentar **errores conocidos** y sus **soluciones temporales** (*workarounds*) en la base de conocimiento del nivel 1.
+
+**b) Catálogo de servicios y SLA**
+
+- **Catálogo de servicios**: describe los servicios en explotación con la vista del usuario, no de la tecnología: puesto de trabajo, correo y colaboración, cada aplicación corporativa, telefonía, conectividad, impresión. Cada entrada recoge descripción, destinatarios, horario, forma de solicitud y niveles comprometidos.
+- **Estructura del SLA**: alcance y descripción del servicio, horario de soporte, compromisos medibles (tiempos de respuesta y resolución por prioridad, disponibilidad), exclusiones, forma de medición, informes y calendario de revisión. Debe ligarse a **resultados** para el usuario, no solo a métricas operativas.
+- **Soportes internos y externos**: el SLA se apoya en **OLA** con los grupos internos de nivel 2 y en los **contratos con proveedores** (tema [22](22-contratacion-publica-de-bienes-y-servicios-tic.md)), cuyos tiempos de soporte deben ser coherentes con lo comprometido al usuario.
+- **Matriz de prioridades** (prioridad = **impacto × urgencia**):
+
+| Impacto \ Urgencia | Alta | Media | Baja |
+| --- | :---: | :---: | :---: |
+| **Alto** (servicio esencial o muchos usuarios) | P1 | P2 | P3 |
+| **Medio** (una unidad o grupo) | P2 | P3 | P4 |
+| **Bajo** (un usuario con alternativa) | P3 | P4 | P4 |
+
+- **Objetivos por prioridad** (ejemplo de compromiso en el SLA): **P1**: respuesta 15 min y resolución 4 h; **P2**: respuesta 1 h y resolución 8 h laborables; **P3**: respuesta 4 h y resolución 2 días; **P4**: respuesta 1 día y resolución 5 días.
+
+**c) Dimensionamiento del CAU**
+
+- **Volumen**: 3.000 usuarios × 0,7 = **2.100 contactos/mes**; 2.100 / 21 = **100 contactos/día**.
+- **Carga de atención**: 100 × 10 min = 1.000 min ≈ **16,7 horas/día**.
+- **Con ocupación máxima del 75 %**: 16,7 / 0,75 ≈ **22,2 horas-agente/día** (la ocupación limitada absorbe los picos y el trabajo interno: documentación, formación).
+- **Agentes simultáneos**: 22,2 / 7 ≈ 3,2 → **4 agentes** operativos cada día, en dos turnos solapados que cubren las 12 horas y refuerzan el pico de media mañana.
+- **Plantilla con merma del 20 %**: 4 / 0,8 = **5 agentes** en plantilla.
+- Para volúmenes mayores, el cálculo fino de la simultaneidad se haría con teoría de colas (**Erlang C**, probabilidad de espera por franja); a esta escala basta el cálculo por carga, con el margen que dan la ocupación del 75 % y el redondeo al alza.
+
+**d) Indicadores y mejora continua**
+
+- **KPI operativos**: volumen por canal y servicio, **tasa de resolución en primer contacto (FCR)**, tiempos medios de respuesta y resolución por prioridad, **porcentaje de cumplimiento del SLA**, casos pendientes (backlog) y reaperturas.
+- **KPI de experiencia**: encuesta breve tras cada cierre y medición periódica de satisfacción, para evitar el **efecto sandía** (SLA verde por fuera, usuarios descontentos por dentro).
+- **Mejora continua**: las desviaciones e ideas alimentan el **registro de mejora continua (CIR)** y se gestionan con el **modelo de 7 pasos**: la visión es el soporte único con compromisos; la línea base, los tres meses medidos; los objetivos, medibles (p. ej. FCR > 70 %, cumplimiento de SLA > 95 %); y cada trimestre se revisan catálogo, SLA y dimensionamiento con los datos reales, progresando iterativamente con retroalimentación.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - ITIL Foundation, ITIL 4 Edition. AXELOS, febrero de 2019 (material oficial de formación ITIL 4 Foundation v4.2, PeopleCert, marzo de 2025).

@@ -239,7 +239,7 @@ Otras familias relacionadas:
 - **Bases de datos vectoriales**: almacenan *embeddings* (vectores) y buscan por similitud; se han popularizado con la IA generativa como soporte de la generación aumentada por recuperación (RAG). Ejemplos: Milvus, Qdrant o la extensión **pgvector** de PostgreSQL.
 - **Motores de búsqueda**: indexación y consulta de texto completo (**Elasticsearch**, Apache Solr).
 
-## Caso práctico: diseño de una base de datos
+## Supuesto práctico: diseño de una base de datos
 
 ### Planteamiento
 

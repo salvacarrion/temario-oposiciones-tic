@@ -167,7 +167,7 @@ La HCI es uno de los pilares del centro de datos definido por software (SDDC), q
     - **Alta densidad e inteligencia artificial**: los aceleradores (GPU) multiplican la potencia por rack y generalizan la refrigeración líquida; el **suministro eléctrico** pasa a ser el principal factor limitante de los nuevos CPD de IA (la potencia disponible y los plazos de conexión a la red condicionan dónde y cuándo se construyen).
     - **Nube híbrida**: el CPD propio convive con servicios de nube pública; el reto operativo actual es la gestión unificada de ambos entornos.
 
-## Caso práctico 1: diseño de un CPD
+## Supuesto práctico 1: diseño de un CPD
 
 **Enunciado**: una administración autonómica quiere consolidar en un CPD propio los servicios que hoy reparte entre varias salas técnicas envejecidas (sede electrónica, registro electrónico, gestión de expedientes y plataformas internas). Los sistemas están categorizados como de **categoría media** del ENS, con **nivel medio** en disponibilidad, y se exige poder realizar los mantenimientos programados sin parada de servicio.
 
@@ -235,7 +235,7 @@ Datos de partida:
 - **Respaldo**: los medios alternativos (op.cont.4) solo son exigibles en nivel alto, pero se recomienda replicar los servicios críticos en la nube híbrida del apartado a) para reducir el RTO.
 - **Operación**: **DCIM** para monitorizar energía, climatización, ocupación de racks e inventario; gestión remota fuera de banda; seguimiento mensual del **PUE** frente al objetivo de 1,4 y **auditoría ENS bienal** (obligatoria en categoría media).
 
-## Caso práctico 2: ampliación para cargas de inteligencia artificial
+## Supuesto práctico 2: ampliación para cargas de inteligencia artificial
 
 **Enunciado**: dos años después de la puesta en marcha del CPD del caso 1, la administración quiere desplegar una plataforma de IA generativa: un asistente interno para los empleados públicos y la tramitación asistida de expedientes con modelos de lenguaje (LLM) sobre documentación propia. Por soberanía del dato, la inferencia debe ejecutarse en las instalaciones propias. El piloto dimensionado por el área de sistemas consta de **8 servidores de 8 GPU**, con un consumo aproximado de **10 kW por servidor** (**80 kW** TI adicionales).
 

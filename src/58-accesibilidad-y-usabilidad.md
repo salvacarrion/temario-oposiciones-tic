@@ -152,6 +152,52 @@ El **diseño web adaptativo o responsivo** (*responsive web design*, término ac
 - **Enfoques alternativos**: el diseño **adaptativo** en sentido estricto sirve varios diseños fijos según rangos de pantalla (frente al fluido del responsivo), y los sitios móviles separados (subdominios «m.») están desaconsejados por duplicar contenido y mantenimiento.
 - **Relación con la accesibilidad**: varios criterios WCAG exigen adaptación de la presentación: **orientación** (1.3.4: no bloquear vertical/horizontal), **redimensionado del texto** hasta el 200 % (1.4.4) y ***reflow*** (1.4.10: contenido usable a **320 píxeles CSS** de ancho sin desplazamiento horizontal); WCAG 2.2 añade el **tamaño mínimo del objetivo** táctil (2.5.8, **24×24 píxeles CSS**).
 
+## Supuesto práctico: revisión de accesibilidad de un portal público
+
+**Enunciado**: la unidad TIC de un organismo autonómico recibe, a través del mecanismo de comunicación de su portal, una **queja**: una persona usuaria de **lector de pantalla** no consigue completar el formulario de solicitud de una beca. Una comprobación preliminar detecta: imágenes y botones sin alternativa textual; campos del formulario **sin etiquetas asociadas**; un selector de fecha que **solo funciona con ratón**; textos grises con **contraste 3:1**; errores de validación indicados **solo con color rojo**; las bases de la convocatoria en un **PDF escaneado** (imagen); un vídeo tutorial **sin subtítulos**; y una declaración de accesibilidad sin actualizar desde hace tres años.
+
+**Se pide**:
+
+- a) Determinar el marco normativo aplicable y el nivel de conformidad exigible.
+- b) Planificar la revisión de accesibilidad.
+- c) Mapear cada deficiencia a criterios WCAG y proponer su corrección.
+- d) Tramitar la queja y regularizar las obligaciones formales.
+
+**Resolución**:
+
+**a) Marco aplicable**
+
+- **RD 1112/2018** (transposición de la Directiva (UE) 2016/2102): el organismo está dentro del ámbito subjetivo (art. 2), y el formulario, los documentos descargables y el multimedia pregrabado, dentro del objetivo (art. 3), incluidos los procesos de identificación, autenticación, firma y pago.
+- **Nivel exigible**: la presunción de conformidad (art. 6) se obtiene cumpliendo la norma armonizada **EN 301 549 V3.2.1**, que incorpora las **WCAG 2.1 nivel AA** para web y documentos. (WCAG 2.2 es la recomendación vigente del W3C, pero el listón legal sigue siendo 2.1 AA mientras la Comisión no armonice otra versión.)
+- **No cabe alegar carga desproporcionada** (art. 7): la falta de prioridad, tiempo o conocimientos no la justifica, y menos en el trámite principal de un servicio.
+
+**b) Planificación de la revisión (art. 17)**
+
+- **Muestra**: página de inicio, ficha del trámite, el formulario completo de extremo a extremo (incluido el envío con identificación y firma), la declaración de accesibilidad, los documentos descargables y las páginas más visitadas.
+- **Revisión automática**: herramientas tipo axe, Lighthouse o WAVE y el servicio de diagnóstico del **Observatorio de Accesibilidad Web** (PAe); detectan una parte de los problemas (contrastes, atributos ausentes), pero no bastan por sí solas.
+- **Revisión manual experta**: navegación **solo con teclado** (orden y visibilidad del foco, sin trampas de foco), prueba con **lector de pantalla** (NVDA con navegador; VoiceOver en móvil), zoom del texto al 200 % y *reflow* a 320 px, comprobación de los mensajes de error de los formularios y revisión de los PDF (etiquetado y orden de lectura).
+- **Resultado**: informe de revisión con los incumplimientos por criterio, su alcance y el plan de corrección con plazos; opcionalmente, certificación por una entidad acreditada por **ENAC**.
+
+**c) Diagnóstico y corrección**
+
+| Deficiencia | Criterio WCAG 2.1 (nivel) | Corrección |
+| --- | --- | --- |
+| Imágenes y botones sin alternativa | **1.1.1** Contenido no textual (A) | `alt` descriptivo (o vacío si es decorativa); nombre accesible en botones e iconos |
+| Campos sin etiqueta | **1.3.1** Información y relaciones (A) y **3.3.2** Etiquetas o instrucciones (A) | `label` asociado a cada campo, con instrucciones y formato esperado |
+| Selector de fecha solo con ratón | **2.1.1** Teclado (A) | Componente operable por teclado (o entrada de texto alternativa), con roles y estados WAI-ARIA |
+| Contraste 3:1 en texto normal | **1.4.3** Contraste mínimo (AA) | Contraste **≥ 4,5:1** (3:1 solo se admite en texto grande) |
+| Errores solo con color | **1.4.1** Uso del color (A) | Mensaje de texto asociado al campo e icono, anunciado a las tecnologías de asistencia |
+| PDF escaneado | **1.4.5** Imágenes de texto (AA) y 1.1.1 | Publicar un **PDF accesible etiquetado** (o versión HTML); el escaneo nunca como único formato |
+| Vídeo sin subtítulos | **1.2.2** Subtítulos pregrabados (A) | Subtitular; valorar audiodescripción (**1.2.5**, AA) |
+| Foco no visible (si se confirma) | **2.4.7** Foco visible (AA) | Indicador de foco visible con contraste suficiente |
+
+**d) Tramitación de la queja y obligaciones formales**
+
+- **Respuesta a la queja**: máximo **20 días hábiles** (el silencio equivale a no aceptación); contra la respuesta o su ausencia cabe **reclamación ante la Unidad responsable de accesibilidad**, que resuelve en un máximo de **dos meses** (la organización concreta del procedimiento y de la unidad en las comunidades autónomas es propia: STC 100/2019).
+- **Alternativa accesible inmediata**: mientras se corrige, debe ofrecerse una vía para no bloquear la solicitud de la beca: las bases en formato accesible y asistencia telefónica o presencial para completar el trámite.
+- **Declaración de accesibilidad (art. 15)**: actualizarla tras la revisión y al menos **una vez al año**, detallando los contenidos no conformes y sus alternativas, con el mecanismo de comunicación y la vía de reclamación, enlazada desde **todas las páginas** («Accesibilidad»).
+- **De cara al futuro**: accesibilidad **desde el diseño** y revisiones periódicas (art. 17), requisitos EN 301 549 en los **pliegos** de desarrollo y mantenimiento (tema [22](22-contratacion-publica-de-bienes-y-servicios-tic.md)), formación del personal editor, y los **tres informes anuales** de la unidad responsable (quejas, cumplimiento y promoción) antes del **1 de octubre**.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público (texto consolidado, última modificación 12 de agosto de 2019; contrastado online sin cambios posteriores).

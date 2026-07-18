@@ -240,7 +240,7 @@ La **ciencia de datos** generaliza la minería de datos: combina estadística, c
 - **Monitorización en producción**: rendimiento del modelo y **deriva** de los datos o del concepto (*data/concept drift*), que dispara el reentrenamiento.
 - Herramientas habituales: **MLflow**, Kubeflow, y los servicios gestionados de las nubes (SageMaker, Vertex AI, Azure ML).
 
-## Caso práctico: clasificación
+## Supuesto práctico: clasificación
 
 ### Planteamiento
 

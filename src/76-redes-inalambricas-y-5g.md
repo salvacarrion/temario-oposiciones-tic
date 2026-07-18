@@ -112,10 +112,57 @@ Como síntesis, las tecnologías inalámbricas se ordenan en un cuadrante alcanc
 | **Bajo consumo** | Bluetooth/BLE, ZigBee, Z-Wave, NFC | **LPWAN**: LoRaWAN, Sigfox, NB-IoT, LTE-M (tema [77](77-internet-de-las-cosas-y-redes-de-sensores.md)) |
 | **Alto consumo** | Wi-Fi | Telefonía móvil (3G/4G/5G), satélite |
 
+## Supuesto práctico: despliegue de una red Wi-Fi corporativa
+
+**Enunciado**: un organismo traslada su sede a un edificio de **3 plantas** de **1.200 m²**, con **80 empleados por planta** (cada uno con portátil y móvil) y un **salón de actos de 200 plazas** en la planta baja. Requisitos: acceso corporativo seguro integrado con el directorio, red de **invitados** separada, voz y videoconferencia sobre Wi-Fi con itinerancia sin cortes, y soporte futuro de sensores IoT. El edificio dispone de cableado de **categoría 6A** con PoE (tema [72](72-cableado-estructurado-y-medios-de-transmision.md)).
+
+**Se pide**:
+
+- a) Elegir estándar, bandas y arquitectura de gestión.
+- b) Dimensionar y ubicar los puntos de acceso.
+- c) Planificar canales y potencias.
+- d) Diseñar la seguridad y la segmentación.
+- e) Garantizar la itinerancia y la calidad de servicio.
+
+**Resolución**:
+
+**a) Estándar y arquitectura**
+
+- **Wi-Fi 6 (802.11ax)**, preferiblemente **6E**: OFDMA y MU-MIMO para los entornos densos (salón de actos), TWT para el IoT futuro y la banda de **6 GHz** libre de interferencias. Wi-Fi 7 solo se justifica si el parque de clientes va a aprovecharlo.
+- **Gestión centralizada**: AP gestionados por una controladora (física, virtual o en la nube): configuración y políticas únicas, **RRM** (gestión automática de canales y potencias) e itinerancia coordinada. AP alimentados por **PoE 802.3at**.
+
+**b) Dimensionamiento y ubicación de los AP**
+
+- **Por capacidad (oficinas)**: 80 × 2 = **160 dispositivos por planta**; con la regla práctica de **30-50 clientes activos por AP**, bastarían 4 AP. **Por cobertura**: en oficina se estima un AP por cada **100-150 m²**, luego 1.200 m² piden **8-10 AP por planta**. Manda el criterio más exigente: **9 AP por planta** como hipótesis de partida.
+- **Salón de actos (alta densidad)**: 200 personas × 1,5 dispositivos ≈ **300 dispositivos**; a ~50 por AP, **6 AP** de alta densidad con celdas pequeñas (potencia baja y, si es posible, antenas direccionales o montaje distribuido entre el público).
+- **Site survey**: el número y la posición finales los fija un **estudio de cobertura** predictivo verificado sobre el terreno, con objetivo de **RSSI ≥ -67 dBm** y SNR ≥ 25 dB en las zonas con voz, y un solape del **15-20 %** entre celdas para la itinerancia.
+
+**c) Canales y potencias**
+
+- **2,4 GHz**: solo canales **1, 6 y 11**; se desactiva la radio de 2,4 GHz en parte de los AP (evita el solapamiento cocanal) y la banda se reserva para dispositivos antiguos e IoT.
+- **5 GHz**: canales de **40 MHz** en oficinas (80 MHz solo si el espectro local lo permite), aprovechando los canales **DFS**; en el salón de actos, celdas de **20-40 MHz** para multiplicar la reutilización.
+- **6 GHz** (si 6E): canales de 80 MHz para los clientes compatibles.
+- **Potencias**: ajustadas automáticamente por el RRM dentro de límites definidos (una celda demasiado grande rompe la itinerancia y la reutilización de canales).
+
+**d) Seguridad y segmentación** (desarrollo en el tema [79](79-seguridad-en-las-comunicaciones.md))
+
+- **Red corporativa**: **WPA3-Enterprise** con **802.1X** contra un servidor RADIUS integrado con el directorio, idealmente **EAP-TLS** con certificados en los dispositivos gestionados; asignación a la VLAN corporativa y **PMF (802.11w)** obligatorio.
+- **Invitados**: SSID separado en VLAN propia con salida solo a internet, aislamiento entre clientes, portal cautivo y ancho de banda limitado.
+- **IoT**: SSID/VLAN dedicada con WPA3-Personal o claves por dispositivo (MPSK) y filtrado hacia lo imprescindible.
+- Regla general: **máximo 3-4 SSID**, porque cada SSID añade tramas de gestión que consumen capacidad radio.
+
+**e) Itinerancia y calidad de servicio**
+
+- **802.11k** (informe de vecinos), **802.11v** (transición dirigida por la red) y **802.11r** (transición rápida FT, con reautenticación en decenas de milisegundos) activados para la voz.
+- ***Band steering*** hacia 5/6 GHz y balanceo de clientes entre AP contiguos.
+- **QoS**: WMM con prioridad para voz y vídeo, coherente extremo a extremo con la QoS de la red cableada.
+- **Operación**: monitorización continua desde la controladora (clientes, interferencias, AP caídos), revisión del diseño tras cambios de ocupación o mobiliario y actualización planificada del firmware.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - AUTELSI, informes *5G: Introducción y Tecnología* y *5G: Casos de uso y habilitadores* (junio de 2022), en `references/08-redes/`.
 - IEEE 802.11ax-2021, 802.11be-2024 (publicado en julio de 2025) y 802.11bb-2023; certificaciones y generaciones de la Wi-Fi Alliance (consulta julio 2026).
+- IEEE 802.11k-2008, 802.11r-2008 y 802.11v-2011 (itinerancia asistida), refundidas en las revisiones consolidadas del estándar 802.11.
 - 3GPP (Releases 15 a 19; 5G-Advanced) y UIT-R: requisitos IMT-2020 y Recomendación UIT-R M.2160 (IMT-2030, noviembre de 2023), contrastados online en julio de 2026.
 - Ley 11/2022, de 28 de junio, General de Telecomunicaciones; RD-ley 7/2022, de 29 de marzo; RD 443/2024, de 30 de abril (ENS5G), todos en BOE.
 - Reglamento (UE) 2023/588 (programa de conectividad segura de la Unión, IRIS²).
