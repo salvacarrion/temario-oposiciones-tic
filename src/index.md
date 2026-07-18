@@ -1,4 +1,4 @@
-# Temario de Oposiciones TIC
+# Temario de Oposiciones TIC {.unnumbered}
 
 !!! info "Descargar temario completo en PDF"
     Puedes descargar todo el temario compilado y unificado en un único archivo PDF optimizado para lectura e impresión: [**temario-oposiciones-tic.pdf**](temario-oposiciones-tic.pdf).
