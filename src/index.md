@@ -8,7 +8,7 @@
 
 Hola! Soy **Salva Carrión**, y este temario es la evolución del que elaboré para aprobar la oposición al **Cuerpo Superior Técnico de Ingeniería en Informática de la Generalitat Valenciana** (convocatoria 5/22): una versión limpia, ampliada y actualizada de mi temario original, publicada como proyecto **open source** para que cualquiera pueda usarla y mejorarla.
 
-No es un temario oficial ni sustituye al programa de cada convocatoria. Intenta cubrir de forma exhaustiva el programa de la GVA, aunque solapando en un muy alto grado con los de la mayoría de oposiciones TIC. En total son **108 temas** organizados en **14 bloques**, con **14 supuestos prácticos** resueltos. Úsalo como punto de partida y contrástalo con las bases oficiales para adaptarlo a la oposición que estés preparando.
+No es un temario oficial ni sustituye al programa de cada convocatoria. Intenta cubrir de forma exhaustiva el programa de la GVA, aunque solapando en un muy alto grado con los de la mayoría de oposiciones TIC. En total son **108 temas** organizados en **14 bloques**, con **32 supuestos prácticos** resueltos. Úsalo como punto de partida y contrástalo con las bases oficiales para adaptarlo a la oposición que estés preparando.
 
 ### Estructura del temario
 
@@ -137,25 +137,43 @@ El contenido está organizado en los siguientes bloques. Puedes navegar por los 
     - [Tema 107: E-learning: plataformas y estándares](107-e-learning-plataformas-y-estandares.md)
     - [Tema 108: Administración electrónica universitaria](108-administracion-electronica-universitaria.md)
 
-### Casos prácticos
+### Supuestos prácticos
 
 Algunos temas incluyen supuestos prácticos resueltos, especialmente útiles para la preparación del segundo ejercicio de la oposición:
 
-| Tema | Caso práctico |
+| Tema | Supuesto práctico |
 |------|---------------|
 | [Tema 11](11-contratos-del-sector-publico.md#caso-practico-redaccion-de-un-pliego) | Redacción de un pliego |
-| [Tema 19](19-direccion-y-gestion-de-proyectos.md#caso-practico-pert-y-cpm) | PERT y CPM |
+| [Tema 17](17-gobernanza-y-planificacion-estrategica-tic.md#caso-practico-elaboracion-de-un-plan-estrategico-tic) | Elaboración de un plan estratégico TIC |
+| [Tema 18](18-gestion-de-los-servicios-tic.md#caso-practico-catalogo-de-servicios-sla-y-dimensionamiento-de-un-cau) | Catálogo de servicios, SLA y dimensionamiento de un CAU |
+| [Tema 19](19-direccion-y-gestion-de-proyectos.md#caso-practico-1-pert-y-cpm) | PERT y CPM |
+| [Tema 19](19-direccion-y-gestion-de-proyectos.md#caso-practico-2-gestion-del-valor-ganado-evm) | Gestión del valor ganado (EVM) |
 | [Tema 20](20-analisis-de-procesos.md#caso-practico-analisis-de-procesos) | Análisis de procesos |
-| [Tema 23](23-analisis-y-diseno-de-aplicaciones.md#caso-practico-diagramas-de-casos-de-uso-y-de-actividades) | Diagramas de casos de uso y de actividades |
+| [Tema 23](23-analisis-y-diseno-de-aplicaciones.md#caso-practico-1-diagramas-de-casos-de-uso-y-de-actividades) | Diagramas de casos de uso y de actividades |
+| [Tema 23](23-analisis-y-diseno-de-aplicaciones.md#caso-practico-2-estimacion-por-puntos-de-funcion) | Estimación por puntos de función |
 | [Tema 25](25-calidad-del-software.md#caso-practico-calculo-de-la-complejidad-ciclomatica) | Cálculo de la complejidad ciclomática |
 | [Tema 29](29-esquema-nacional-de-seguridad.md#caso-practico-plan-de-adecuacion-al-ens) | Plan de adecuación al ENS |
 | [Tema 30](30-analisis-y-gestion-de-riesgos.md#caso-practico-analisis-de-riesgos-con-magerit) | Análisis de riesgos con MAGERIT |
+| [Tema 31](31-gestion-de-ciberincidentes.md#caso-practico-respuesta-a-un-incidente-de-ransomware) | Respuesta a un incidente de ransomware |
 | [Tema 34](34-inteligencia-artificial.md#caso-practico-dimensionamiento-del-despliegue-de-un-llm) | Dimensionamiento del despliegue de un LLM |
 | [Tema 36](36-bases-de-datos.md#caso-practico-diseno-de-una-base-de-datos) | Diseño de una base de datos |
 | [Tema 37](37-gestion-de-datos-corporativos-y-big-data.md#caso-practico-clasificacion) | Clasificación de datos |
 | [Tema 43](43-centros-de-proceso-de-datos.md#caso-practico-1-diseno-de-un-cpd) | Diseño de un CPD |
 | [Tema 43](43-centros-de-proceso-de-datos.md#caso-practico-2-ampliacion-para-cargas-de-inteligencia-artificial) | Ampliación de CPD para cargas de IA |
+| [Tema 44](44-virtualizacion-y-contenedores.md#caso-practico-dimensionamiento-de-un-cluster-de-virtualizacion) | Dimensionamiento de un clúster de virtualización |
+| [Tema 45](45-sistemas-de-almacenamiento.md#caso-practico-dimensionamiento-del-almacenamiento-y-plan-de-copias) | Dimensionamiento del almacenamiento y plan de copias |
+| [Tema 51](51-computacion-en-la-nube-y-altas-prestaciones.md#caso-practico-migracion-a-la-nube-de-los-servicios-de-un-organismo) | Migración a la nube de los servicios de un organismo |
 | [Tema 53](53-proteccion-de-datos-personales.md#caso-practico-analisis-de-riesgos-y-evaluacion-de-impacto) | Análisis de riesgos y evaluación de impacto |
+| [Tema 54](54-administracion-electronica.md#caso-practico-digitalizacion-de-un-procedimiento-de-extremo-a-extremo) | Digitalización de un procedimiento de extremo a extremo |
+| [Tema 56](56-arquitecturas-de-desarrollo-web.md#caso-practico-arquitectura-de-una-aplicacion-web-de-cita-previa) | Arquitectura de una aplicación web de cita previa |
+| [Tema 58](58-accesibilidad-y-usabilidad.md#caso-practico-revision-de-accesibilidad-de-un-portal-publico) | Revisión de accesibilidad de un portal público |
+| [Tema 60](60-soa-servicios-web-y-microservicios.md#caso-practico-diseno-de-una-api-rest) | Diseño de una API REST |
+| [Tema 61](61-programacion.md#caso-practico-algoritmia-sobre-un-registro-de-entrada) | Algoritmia sobre un registro de entrada |
+| [Tema 63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md#caso-practico-supresion-de-la-aportacion-de-documentos-mediante-la-pid) | Supresión de la aportación de documentos mediante la PID |
+| [Tema 65](65-identificacion-y-firma-electronica.md#caso-practico-identificacion-y-firma-en-un-tramite-de-subvenciones) | Identificación y firma en un trámite de subvenciones |
 | [Tema 71](71-redes-de-computadores.md#caso-practico-calculo-de-subredes) | Cálculo de subredes |
+| [Tema 72](72-cableado-estructurado-y-medios-de-transmision.md#caso-practico-diseno-del-cableado-estructurado-de-un-edificio) | Diseño del cableado estructurado de un edificio |
+| [Tema 76](76-redes-inalambricas-y-5g.md#caso-practico-despliegue-de-una-red-wi-fi-corporativa) | Despliegue de una red Wi-Fi corporativa |
+| [Tema 90](90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md#caso-practico-integracion-del-laboratorio-mediante-mensajeria-hl7) | Integración del laboratorio mediante mensajería HL7 |
 
 En el [Prólogo](prologo.md) encontrarás el origen del proyecto, cómo contribuir, el aviso legal y la licencia.
