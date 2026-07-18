@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="660" viewBox="0 0 940 660" font-family="Helvetica, Arial, sans-serif">
+  <rect width="940" height="660" fill="#ffffff"/>
+  <text x="20" y="42" font-size="19" font-weight="700" fill="#1f3a5f">Ficha de proceso tipo, organizada según el ciclo PDCA</text>
+
+  <!-- Cabecera de la ficha -->
+  <rect x="20" y="62" width="250" height="40" fill="#f2f5f8" stroke="#9db8cd"/>
+  <rect x="270" y="62" width="400" height="40" fill="#2e5f8a" stroke="#9db8cd"/>
+  <rect x="670" y="62" width="250" height="40" fill="#f2f5f8" stroke="#9db8cd"/>
+  <text x="145" y="80" font-size="10.5" fill="#4a5b68" text-anchor="middle">Nombre de la</text>
+  <text x="145" y="94" font-size="10.5" fill="#4a5b68" text-anchor="middle">organización o sistema</text>
+  <text x="470" y="87" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">FICHA DE PROCESO</text>
+  <text x="795" y="80" font-size="10.5" fill="#4a5b68" text-anchor="middle">Código del proceso,</text>
+  <text x="795" y="94" font-size="10.5" fill="#4a5b68" text-anchor="middle">subproceso o actividad</text>
+
+  <!-- Columna de fases -->
+  <g stroke="#9db8cd" stroke-width="1">
+    <rect x="20" y="102" width="110" height="176" fill="#dbe7f3"/>
+    <rect x="20" y="278" width="110" height="104" fill="#e9f2ea"/>
+    <rect x="20" y="382" width="110" height="116" fill="#faeed7"/>
+    <rect x="20" y="498" width="110" height="104" fill="#fbeae7"/>
+  </g>
+  <g font-size="12.5" font-weight="700" text-anchor="middle">
+    <text x="75" y="194" fill="#1f3a5f">PLANEAR</text>
+    <text x="75" y="334" fill="#2e6b3a">HACER</text>
+    <text x="75" y="444" fill="#8a6a1c">VERIFICAR</text>
+    <text x="75" y="554" fill="#b23b2e">ACTUAR</text>
+  </g>
+
+  <!-- PLANEAR -->
+  <g stroke="#9db8cd" stroke-width="1" fill="#ffffff">
+    <rect x="130" y="102" width="395" height="36"/>
+    <rect x="525" y="102" width="395" height="36"/>
+    <rect x="130" y="138" width="790" height="42"/>
+    <rect x="130" y="180" width="790" height="56"/>
+    <rect x="130" y="236" width="395" height="42"/>
+    <rect x="525" y="236" width="395" height="42"/>
+  </g>
+  <text x="140" y="124" font-size="11"><tspan font-weight="700" fill="#1f3a5f">PROCESO:</tspan><tspan fill="#4a5b68"> nombre del proceso</tspan></text>
+  <text x="535" y="124" font-size="11"><tspan font-weight="700" fill="#1f3a5f">PROPIETARIO:</tspan><tspan fill="#4a5b68"> responsable del proceso</tspan></text>
+  <text x="140" y="155" font-size="11" font-weight="700" fill="#1f3a5f">OBJETIVO:</text>
+  <text x="140" y="171" font-size="10.5" fill="#4a5b68">cuál es el propósito del proceso (para qué sirve o para qué se requiere)</text>
+  <text x="140" y="197" font-size="11" font-weight="700" fill="#1f3a5f">ALCANCE:</text>
+  <text x="150" y="213" font-size="10.5" fill="#4a5b68"><tspan font-weight="700">Empieza:</tspan> dónde empieza el proceso · <tspan font-weight="700">Incluye:</tspan> qué elementos incluye</text>
+  <text x="150" y="228" font-size="10.5" fill="#4a5b68"><tspan font-weight="700">Termina:</tspan> dónde termina el proceso</text>
+  <text x="140" y="253" font-size="11" font-weight="700" fill="#1f3a5f">PROVEEDORES:</text>
+  <text x="140" y="269" font-size="10.5" fill="#4a5b68">quiénes alimentan el proceso</text>
+  <text x="535" y="253" font-size="11" font-weight="700" fill="#1f3a5f">CLIENTES:</text>
+  <text x="535" y="269" font-size="10.5" fill="#4a5b68">a quiénes se entregan los productos o resultados</text>
+
+  <!-- HACER -->
+  <g stroke="#9db8cd" stroke-width="1" fill="#ffffff">
+    <rect x="130" y="278" width="395" height="52"/>
+    <rect x="525" y="278" width="395" height="52"/>
+    <rect x="130" y="330" width="395" height="52"/>
+    <rect x="525" y="330" width="395" height="52"/>
+  </g>
+  <text x="140" y="295" font-size="11" font-weight="700" fill="#2e6b3a">ENTRADAS:</text>
+  <text x="140" y="311" font-size="10.5" fill="#4a5b68">información, productos o requisitos</text>
+  <text x="140" y="325" font-size="10.5" fill="#4a5b68">que activan el proceso</text>
+  <text x="535" y="295" font-size="11" font-weight="700" fill="#2e6b3a">SALIDAS:</text>
+  <text x="535" y="311" font-size="10.5" fill="#4a5b68">todos los resultados esperados del proceso</text>
+  <text x="140" y="347" font-size="11" font-weight="700" fill="#2e6b3a">REGISTROS:</text>
+  <text x="140" y="363" font-size="10.5" fill="#4a5b68">formatos o sistemas donde se registra la</text>
+  <text x="140" y="377" font-size="10.5" fill="#4a5b68">información de resultado o desempeño</text>
+  <text x="535" y="347" font-size="11" font-weight="700" fill="#2e6b3a">DIAGRAMA DEL PROCESO:</text>
+  <text x="535" y="363" font-size="10.5" fill="#4a5b68">indica el diagrama de proceso relacionado</text>
+
+  <!-- VERIFICAR -->
+  <g stroke="#9db8cd" stroke-width="1" fill="#ffffff">
+    <rect x="130" y="382" width="395" height="62"/>
+    <rect x="525" y="382" width="395" height="62"/>
+    <rect x="130" y="444" width="790" height="54"/>
+  </g>
+  <text x="140" y="399" font-size="11" font-weight="700" fill="#8a6a1c">VARIABLES A CONTROLAR:</text>
+  <text x="140" y="415" font-size="10.5" fill="#4a5b68">parámetros sobre los que se puede intervenir</text>
+  <text x="140" y="429" font-size="10.5" fill="#4a5b68">y que alteran los indicadores de desempeño</text>
+  <text x="535" y="399" font-size="11" font-weight="700" fill="#8a6a1c">INSPECCIONES / CONTROLES:</text>
+  <text x="535" y="415" font-size="10.5" fill="#4a5b68">controles aplicados al proceso para verificar</text>
+  <text x="535" y="429" font-size="10.5" fill="#4a5b68">el cumplimiento de los requisitos</text>
+  <text x="140" y="461" font-size="11" font-weight="700" fill="#8a6a1c">INDICADORES:</text>
+  <text x="140" y="477" font-size="10.5" fill="#4a5b68">índices que permiten seguir y medir el cumplimiento de los objetivos del proceso,</text>
+  <text x="140" y="491" font-size="10.5" fill="#4a5b68">y planificar sus valores esperados</text>
+
+  <!-- ACTUAR -->
+  <g stroke="#9db8cd" stroke-width="1" fill="#ffffff">
+    <rect x="130" y="498" width="790" height="44"/>
+    <rect x="130" y="542" width="395" height="60"/>
+    <rect x="525" y="542" width="395" height="60"/>
+  </g>
+  <text x="140" y="515" font-size="11" font-weight="700" fill="#b23b2e">PRODUCTO NO CONFORME:</text>
+  <text x="140" y="531" font-size="10.5" fill="#4a5b68">define el producto no conforme del proceso en cada una de sus etapas</text>
+  <text x="140" y="559" font-size="11" font-weight="700" fill="#b23b2e">ACCIÓN PREVENTIVA:</text>
+  <text x="140" y="575" font-size="10.5" fill="#4a5b68">acciones para prevenir fallos o corregir</text>
+  <text x="140" y="589" font-size="10.5" fill="#4a5b68">tendencias que salen del control del proceso</text>
+  <text x="535" y="559" font-size="11" font-weight="700" fill="#b23b2e">ACCIÓN CORRECTIVA:</text>
+  <text x="535" y="575" font-size="10.5" fill="#4a5b68">acciones a tomar dentro del proceso para</text>
+  <text x="535" y="589" font-size="10.5" fill="#4a5b68">mantenerlo bajo control ante desviaciones</text>
+
+  <!-- Pie de control documental -->
+  <g stroke="#9db8cd" stroke-width="1" fill="#f2f5f8">
+    <rect x="20" y="602" width="225" height="30"/>
+    <rect x="245" y="602" width="225" height="30"/>
+    <rect x="470" y="602" width="225" height="30"/>
+    <rect x="695" y="602" width="225" height="30"/>
+  </g>
+  <g font-size="11" font-weight="700" fill="#1f3a5f">
+    <text x="30" y="621">Elaborado por:</text>
+    <text x="255" y="621">Revisado por:</text>
+    <text x="480" y="621">Aprobado por:</text>
+    <text x="705" y="621">Fecha:</text>
+  </g>
+
+  <text x="920" y="652" font-size="11.5" fill="#8a949e" text-anchor="end">Elaboración propia.</text>
+</svg>

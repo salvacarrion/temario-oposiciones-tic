@@ -43,7 +43,7 @@ La capa de internet encamina los paquetes desde el host origen hasta el destino 
     - **Checksum de cabecera (16 bits)**.
     - **Direcciones origen y destino (32 bits cada una)**, más opciones y relleno.
 
-![Formato de la cabecera IPv4](media/image75.png)
+![Formato de la cabecera IPv4](media/ipv4-cabecera.png){width=100%}
 
 ### IPv6 (Internet Protocol version 6)
 
@@ -69,7 +69,7 @@ Diseñado para sustituir a IPv4 ante el agotamiento de sus direcciones, con **di
 - **Notación**: **8 grupos de 4 dígitos hexadecimales** separados por dos puntos (2001:0db8:85a3:0000:0000:8a2e:0370:7334). Se pueden omitir los ceros iniciales de cada grupo y comprimir **una sola vez** grupos consecutivos de ceros con «::» (2001:db8::8a2e:370:7334). Las direcciones IPv4 se representan en IPv6 como *IPv4-mapped*: **::ffff:192.0.2.33**.
 - **Transición IPv4/IPv6**: **doble pila** (el host habla ambos protocolos), **túneles** (IPv6 encapsulado en IPv4, p. ej. 6in4) y **traducción** (NAT64/DNS64).
 
-![Formato de la cabecera IPv6](media/image76.png)
+![Formato de la cabecera IPv6](media/ipv6-cabecera.png){width=100%}
 
 ### ICMP (Internet Control Message Protocol)
 
@@ -113,7 +113,7 @@ La capa de transporte proporciona comunicación extremo a extremo entre procesos
     2. **SYN-ACK**: el servidor acepta (secuencia y, confirma x+1).
     3. **ACK**: el cliente confirma; puede empezar el intercambio de datos.
 
-![Establecimiento de conexión TCP en tres pasos](media/image73.png)
+![Establecimiento de conexión TCP en tres pasos](media/image73.png){width=50%}
 
 - **Transferencia de datos**:
     - **Números de secuencia**: identifican y ordenan los bytes transmitidos.
@@ -127,7 +127,7 @@ La capa de transporte proporciona comunicación extremo a extremo entre procesos
     - **Fast recovery**: tras la retransmisión rápida continúa sin volver a slow start.
 - **Cierre de conexión** en cuatro pasos (*four-way handshake*): cada sentido se cierra por separado (**FIN**, **ACK**, **FIN**, **ACK**), lo que permite el cierre a medias (*half-close*) mientras el otro extremo termina de enviar.
 
-![Cierre de conexión TCP en cuatro pasos](media/image74.png)
+![Cierre de conexión TCP en cuatro pasos](media/image74.png){width=50%}
 
 ### UDP (User Datagram Protocol)
 
@@ -138,7 +138,7 @@ La capa de transporte proporciona comunicación extremo a extremo entre procesos
     - **Ligero y rápido**: cabecera fija de **8 bytes** (puerto origen, puerto destino, longitud y checksum).
 - **Usos**: consultas DNS, DHCP, streaming de audio y vídeo, VoIP, juegos en línea y, en general, tráfico en tiempo real donde retransmitir llega tarde. Sobre UDP se construye **QUIC**, el transporte de HTTP/3.
 
-![Cabecera UDP](media/image72.png)
+![Formato de la cabecera UDP](media/udp-cabecera.png){width=100%}
 
 ### TLS (Transport Layer Security)
 

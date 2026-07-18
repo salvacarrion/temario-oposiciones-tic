@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="920" viewBox="0 0 940 920" font-family="Helvetica, Arial, sans-serif">
+  <rect width="940" height="920" fill="#ffffff"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#1f3a5f">Los 7 diagramas estructurales de UML: ejemplos mínimos</text>
+
+  <defs>
+    <marker id="gen" viewBox="0 0 14 12" refX="13" refY="6" markerWidth="13" markerHeight="11" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 6 L 1 11 Z" fill="#ffffff" stroke="#4a5b68" stroke-width="1.3"/>
+    </marker>
+    <marker id="fill" viewBox="0 0 14 12" refX="13" refY="6" markerWidth="12" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 6 L 1 11 Z" fill="#4a5b68"/>
+    </marker>
+    <marker id="open" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#4a5b68" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- Paneles -->
+  <g fill="#f8fafb" stroke="#c6d2dc" stroke-width="1.4">
+    <rect x="40" y="70" width="400" height="190" rx="10"/>
+    <rect x="510" y="70" width="400" height="190" rx="10"/>
+    <rect x="40" y="280" width="400" height="190" rx="10"/>
+    <rect x="510" y="280" width="400" height="190" rx="10"/>
+    <rect x="40" y="490" width="400" height="190" rx="10"/>
+    <rect x="510" y="490" width="400" height="190" rx="10"/>
+    <rect x="255" y="700" width="430" height="190" rx="10"/>
+  </g>
+  <g font-size="13" font-weight="700" fill="#1f3a5f">
+    <text x="56" y="94">De clases</text>
+    <text x="526" y="94">De componentes</text>
+    <text x="56" y="304">De despliegue</text>
+    <text x="526" y="304">De objetos</text>
+    <text x="56" y="514">De paquetes</text>
+    <text x="526" y="514">De perfil</text>
+    <text x="271" y="724">De estructura compuesta</text>
+  </g>
+
+  <!-- 1. De clases -->
+  <g stroke="#5b87b0" stroke-width="1.4">
+    <rect x="175" y="100" width="130" height="22" fill="#dbe7f3"/>
+    <rect x="175" y="122" width="130" height="18" fill="#ffffff"/>
+    <rect x="175" y="140" width="130" height="18" fill="#ffffff"/>
+    <rect x="75" y="196" width="110" height="22" fill="#dbe7f3"/>
+    <rect x="75" y="218" width="110" height="18" fill="#ffffff"/>
+    <rect x="295" y="196" width="110" height="22" fill="#dbe7f3"/>
+    <rect x="295" y="218" width="110" height="18" fill="#ffffff"/>
+  </g>
+  <g fill="#22303c" text-anchor="middle">
+    <text x="240" y="116" font-size="12" font-weight="700">Persona</text>
+    <text x="240" y="135" font-size="10.5">nombre: String</text>
+    <text x="240" y="153" font-size="10.5">+presentarse()</text>
+    <text x="130" y="212" font-size="12" font-weight="700">Alumno</text>
+    <text x="130" y="231" font-size="10.5">curso: int</text>
+    <text x="350" y="212" font-size="12" font-weight="700">Profesor</text>
+    <text x="350" y="231" font-size="10.5">área: String</text>
+  </g>
+  <g stroke="#4a5b68" stroke-width="1.5" fill="none" marker-end="url(#gen)">
+    <line x1="130" y1="196" x2="212" y2="160"/>
+    <line x1="350" y1="196" x2="268" y2="160"/>
+  </g>
+  <line x1="185" y1="218" x2="295" y2="218" stroke="#4a5b68" stroke-width="1.4"/>
+  <g font-size="9.5" fill="#4a5b68">
+    <text x="190" y="212">0..*</text>
+    <text x="278" y="212">1</text>
+    <text x="222" y="232">tutoriza ◂</text>
+  </g>
+
+  <!-- 2. De componentes -->
+  <g stroke="#5b87b0" stroke-width="1.5" fill="#dbe7f3">
+    <rect x="545" y="120" width="130" height="54" rx="4"/>
+    <rect x="760" y="120" width="145" height="54" rx="4"/>
+  </g>
+  <g stroke="#5b87b0" stroke-width="1.2" fill="#ffffff">
+    <rect x="652" y="128" width="14" height="16"/>
+    <rect x="648" y="131" width="8" height="4"/>
+    <rect x="648" y="138" width="8" height="4"/>
+    <rect x="882" y="128" width="14" height="16"/>
+    <rect x="878" y="131" width="8" height="4"/>
+    <rect x="878" y="138" width="8" height="4"/>
+  </g>
+  <text x="605" y="152" font-size="12" font-weight="700" fill="#22303c" text-anchor="middle">Pedidos</text>
+  <text x="826" y="152" font-size="12" font-weight="700" fill="#22303c" text-anchor="middle">Facturación</text>
+  <line x1="675" y1="147" x2="712" y2="147" stroke="#4a5b68" stroke-width="1.5"/>
+  <circle cx="720" cy="147" r="8" fill="#ffffff" stroke="#4a5b68" stroke-width="1.5"/>
+  <path d="M 733 134 A 13 13 0 0 1 733 160" fill="none" stroke="#4a5b68" stroke-width="1.5"/>
+  <line x1="734" y1="147" x2="760" y2="147" stroke="#4a5b68" stroke-width="1.5"/>
+  <text x="722" y="182" font-size="10.5" fill="#4a5b68" text-anchor="middle">IPedidos</text>
+  <text x="722" y="196" font-size="10" fill="#8a949e" text-anchor="middle">interfaz proporcionada y requerida</text>
+
+  <!-- 3. De despliegue -->
+  <g stroke="#5b87b0" stroke-width="1.4">
+    <polygon points="80,340 92,328 242,328 230,340" fill="#c9d9e8"/>
+    <polygon points="230,340 242,328 242,408 230,420" fill="#c9d9e8"/>
+    <rect x="80" y="340" width="150" height="80" fill="#dbe7f3"/>
+    <polygon points="290,340 302,328 422,328 410,340" fill="#c9d9e8"/>
+    <polygon points="410,340 422,328 422,408 410,420" fill="#c9d9e8"/>
+    <rect x="290" y="340" width="120" height="80" fill="#dbe7f3"/>
+  </g>
+  <text x="155" y="358" font-size="10" fill="#4a5b68" text-anchor="middle">«nodo»</text>
+  <text x="155" y="373" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">Servidor de apps</text>
+  <rect x="105" y="384" width="100" height="24" fill="#ffffff" stroke="#5b87b0" stroke-width="1.1"/>
+  <text x="155" y="400" font-size="10" fill="#22303c" text-anchor="middle">«artefacto» app.war</text>
+  <text x="350" y="358" font-size="10" fill="#4a5b68" text-anchor="middle">«nodo»</text>
+  <text x="350" y="373" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">Servidor de BD</text>
+  <rect x="305" y="384" width="90" height="24" fill="#ffffff" stroke="#5b87b0" stroke-width="1.1"/>
+  <text x="350" y="400" font-size="10" fill="#22303c" text-anchor="middle">«artefacto» bd.sql</text>
+  <line x1="230" y1="385" x2="290" y2="385" stroke="#4a5b68" stroke-width="1.5"/>
+  <text x="260" y="377" font-size="10.5" fill="#4a5b68" text-anchor="middle">LAN</text>
+
+  <!-- 4. De objetos -->
+  <g stroke="#5b87b0" stroke-width="1.4">
+    <rect x="545" y="340" width="160" height="26" fill="#dbe7f3"/>
+    <rect x="545" y="366" width="160" height="22" fill="#ffffff"/>
+    <rect x="745" y="340" width="160" height="26" fill="#dbe7f3"/>
+    <rect x="745" y="366" width="160" height="22" fill="#ffffff"/>
+  </g>
+  <g fill="#22303c" text-anchor="middle">
+    <text x="625" y="358" font-size="12" font-weight="700" text-decoration="underline">ana : Alumno</text>
+    <text x="625" y="382" font-size="10.5">curso = 2</text>
+    <text x="825" y="358" font-size="12" font-weight="700" text-decoration="underline">gii : Titulación</text>
+    <text x="825" y="382" font-size="10.5">créditos = 240</text>
+  </g>
+  <line x1="705" y1="364" x2="745" y2="364" stroke="#4a5b68" stroke-width="1.5"/>
+  <text x="725" y="410" font-size="10" fill="#8a949e" text-anchor="middle">instantánea del sistema en ejecución</text>
+
+  <!-- 5. De paquetes -->
+  <g stroke="#5b87b0" stroke-width="1.5" fill="#dbe7f3">
+    <rect x="85" y="546" width="55" height="16"/>
+    <rect x="85" y="562" width="130" height="62"/>
+    <rect x="275" y="546" width="55" height="16"/>
+    <rect x="275" y="562" width="130" height="62"/>
+  </g>
+  <text x="150" y="598" font-size="12" font-weight="700" fill="#22303c" text-anchor="middle">Interfaz</text>
+  <text x="340" y="598" font-size="12" font-weight="700" fill="#22303c" text-anchor="middle">Dominio</text>
+  <line x1="219" y1="593" x2="271" y2="593" stroke="#4a5b68" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#open)"/>
+  <text x="245" y="583" font-size="10.5" fill="#4a5b68" text-anchor="middle">«import»</text>
+
+  <!-- 6. De perfil -->
+  <g stroke="#5b87b0" stroke-width="1.4" fill="none">
+    <rect x="545" y="530" width="70" height="16" fill="#dbe7f3"/>
+    <rect x="545" y="546" width="330" height="114"/>
+  </g>
+  <text x="580" y="542" font-size="10" font-weight="700" fill="#1f3a5f" text-anchor="middle">«perfil»</text>
+  <g stroke="#5b87b0" stroke-width="1.4">
+    <rect x="565" y="580" width="130" height="44" fill="#dbe7f3"/>
+    <rect x="725" y="580" width="135" height="44" fill="#dbe7f3"/>
+  </g>
+  <text x="630" y="597" font-size="10" fill="#4a5b68" text-anchor="middle">«metaclase»</text>
+  <text x="630" y="614" font-size="12" font-weight="700" fill="#22303c" text-anchor="middle">Clase</text>
+  <text x="792" y="597" font-size="10" fill="#4a5b68" text-anchor="middle">«estereotipo»</text>
+  <text x="792" y="614" font-size="12" font-weight="700" fill="#22303c" text-anchor="middle">Auditable</text>
+  <line x1="725" y1="602" x2="699" y2="602" stroke="#4a5b68" stroke-width="1.5" marker-end="url(#fill)"/>
+
+  <!-- 7. De estructura compuesta -->
+  <g stroke="#5b87b0" stroke-width="1.5">
+    <rect x="295" y="740" width="350" height="24" fill="#dbe7f3"/>
+    <rect x="295" y="764" width="350" height="96" fill="#ffffff"/>
+  </g>
+  <text x="470" y="757" font-size="12" font-weight="700" fill="#22303c" text-anchor="middle">Coche</text>
+  <g stroke="#5b87b0" stroke-width="1.3" fill="#dbe7f3">
+    <rect x="320" y="785" width="130" height="50"/>
+    <rect x="495" y="785" width="130" height="50"/>
+  </g>
+  <text x="385" y="814" font-size="11" font-weight="700" fill="#22303c" text-anchor="middle">motor : Motor</text>
+  <text x="560" y="814" font-size="11" font-weight="700" fill="#22303c" text-anchor="middle">ruedas : Rueda [4]</text>
+  <line x1="450" y1="810" x2="495" y2="810" stroke="#4a5b68" stroke-width="1.5"/>
+  <rect x="446" y="806" width="8" height="8" fill="#ffffff" stroke="#4a5b68" stroke-width="1.2"/>
+  <rect x="491" y="806" width="8" height="8" fill="#ffffff" stroke="#4a5b68" stroke-width="1.2"/>
+  <rect x="291" y="800" width="9" height="9" fill="#ffffff" stroke="#4a5b68" stroke-width="1.2"/>
+  <line x1="300" y1="805" x2="320" y2="807" stroke="#4a5b68" stroke-width="1.4"/>
+  <text x="296" y="830" font-size="9.5" fill="#4a5b68" text-anchor="middle">puerto</text>
+
+  <text x="900" y="906" font-size="12" fill="#8a949e" text-anchor="end">Elaboración propia.</text>
+</svg>

@@ -170,7 +170,7 @@ Convenciones de aplicación de las medidas:
 
 El proceso de adecuación al ENS que describe el CCN en su portal se articula en cinco fases: elaborar el **plan de adecuación**, implantar la seguridad, obtener la **declaración o certificación de conformidad**, informar sobre el **estado de la seguridad** y mantener una **vigilancia y mejora continua**. Las guías de la serie CCN-STIC 800 dan soporte a cada fase.
 
-![Ciclo de adecuación al ENS y guías CCN-STIC de apoyo a cada fase](media/image44.png){width=90%}
+![Ciclo de adecuación al ENS y guías CCN-STIC de apoyo a cada fase](media/ens-ciclo-adecuacion.png){width=100%}
 
 ### Plan de adecuación
 

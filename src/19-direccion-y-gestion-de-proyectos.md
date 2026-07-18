@@ -59,9 +59,9 @@ Las **10 áreas de conocimiento** agrupan los procesos por disciplina:
 | **Adquisiciones** | Planificar, efectuar y controlar las adquisiciones |
 | **Interesados** | Identificar a los interesados y planificar, gestionar y monitorizar su involucramiento |
 
-En la 6.ª edición, «Cronograma» y «Recursos» sustituyen a las áreas «Tiempo» y «Recursos Humanos» de ediciones anteriores. La matriz completa cruza áreas y grupos:
+En la 6.ª edición, «Cronograma» y «Recursos» sustituyen a las áreas «Tiempo» y «Recursos Humanos» de ediciones anteriores. La matriz completa cruza las **10 áreas** con los **5 grupos** (49 procesos):
 
-![Matriz de procesos de la Guía del PMBOK (6.ª edición): 49 procesos en 5 grupos y 10 áreas de conocimiento](media/image3.jpeg){width=100%}
+![Matriz de procesos de la Guía del PMBOK (6.ª edición): 49 procesos en 5 grupos y 10 áreas de conocimiento](media/pmbok-matriz-procesos.png){width=100%}
 
 ### PMBOK 7: principios y dominios de desempeño
 
@@ -306,12 +306,12 @@ Aplicando las pasadas hacia adelante y hacia atrás:
 | C | 8 | 13 | 9 | 14 | 1 | No |
 | D | 10 | 14 | 10 | 14 | **0** | Sí |
 | E | 0 | 12 | 1 | 13 | 1 | No |
-| F | 12 | 18 | 16 | 22 | 10 | No |
+| F | 12 | 18 | 16 | 22 | 4 | No |
 | G | 12 | 19 | 15 | 22 | 3 | No |
 | H | 12 | 21 | 13 | 22 | 1 | No |
 | I | 14 | 22 | 14 | 22 | **0** | Sí |
 
-![](media/image4.png){width=100%}
+![Diagrama PERT del supuesto con los valores calculados y la ruta crítica destacada](media/pert-cpm-ruta-critica.png){width=100%}
 
 - **Ruta crítica**: Inicio → **A → D → I** → Fin.
 - **Duración del proyecto**: **22** unidades de tiempo.

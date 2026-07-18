@@ -140,6 +140,8 @@ public String clasificar(boolean urgente, int dias, boolean recurrido) {
 
 **Paso 1. Construir el grafo de flujo de control**: los **nodos** son bloques de código secuenciales y las **aristas**, los flujos de control entre ellos. El método tiene **7 nodos**: evaluación de `urgente` (N1), evaluación de `dias > 30` (N2, solo se alcanza si `urgente` es cierto, por el cortocircuito del operador `&&`), asignación «prioritario» (N3), evaluación de `recurrido` (N4), asignación «recurso» (N5), asignación «ordinario» (N6) y el `return` final (N7). Las **9 aristas** son: N1→N2, N1→N4, N2→N3, N2→N4, N3→N7, N4→N5, N4→N6, N5→N7 y N6→N7.
 
+![Grafo de flujo de control del método, con los nodos predicado, las regiones y el cálculo de V(G)](media/grafo-flujo-complejidad.png){width=100%}
+
 **Paso 2. Calcular V(G) por los tres métodos** (deben coincidir):
 
 - **Por aristas y nodos**: V(G) = E − N + 2 = 9 − 7 + 2 = **4**.

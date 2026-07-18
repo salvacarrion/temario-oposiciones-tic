@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="590" viewBox="0 0 940 590" font-family="Helvetica, Arial, sans-serif">
+  <rect width="940" height="590" fill="#ffffff"/>
+  <text x="40" y="42" font-size="19" font-weight="700" fill="#1f3a5f">Ciclo de adecuación al ENS y guías CCN-STIC de apoyo a cada fase</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5a7d99"/>
+    </marker>
+  </defs>
+
+  <!-- Cajas -->
+  <g stroke="#5b87b0" stroke-width="1.6" fill="#dbe7f3">
+    <rect x="60" y="90" width="200" height="84" rx="10"/>
+    <rect x="370" y="90" width="200" height="84" rx="10"/>
+    <rect x="680" y="90" width="200" height="84" rx="10"/>
+    <rect x="680" y="250" width="200" height="84" rx="10"/>
+    <rect x="680" y="410" width="200" height="84" rx="10"/>
+    <rect x="60" y="410" width="200" height="84" rx="10"/>
+    <rect x="60" y="250" width="200" height="84" rx="10"/>
+  </g>
+  <rect x="370" y="410" width="200" height="84" rx="10" fill="#e9f2ea" stroke="#4e7d52" stroke-width="1.8"/>
+
+  <!-- Textos -->
+  <g text-anchor="middle">
+    <text x="160" y="116" font-size="11.5" font-weight="700" fill="#1f3a5f">1. Preparar y aprobar la</text>
+    <text x="160" y="132" font-size="11.5" font-weight="700" fill="#1f3a5f">política de seguridad</text>
+    <text x="160" y="158" font-size="10.5" font-weight="700" fill="#8a6a1c">CCN-STIC 805</text>
+
+    <text x="470" y="116" font-size="11.5" font-weight="700" fill="#1f3a5f">2. Definir los roles y</text>
+    <text x="470" y="132" font-size="11.5" font-weight="700" fill="#1f3a5f">asignar personas</text>
+    <text x="470" y="158" font-size="10.5" font-weight="700" fill="#8a6a1c">CCN-STIC 801</text>
+
+    <text x="780" y="116" font-size="11.5" font-weight="700" fill="#1f3a5f">3. Categorizar el sistema:</text>
+    <text x="780" y="132" font-size="11.5" font-weight="700" fill="#1f3a5f">información y servicios</text>
+    <text x="780" y="158" font-size="10.5" font-weight="700" fill="#8a6a1c">CCN-STIC 803</text>
+
+    <text x="780" y="276" font-size="11.5" font-weight="700" fill="#1f3a5f">4. Realizar el análisis</text>
+    <text x="780" y="292" font-size="11.5" font-weight="700" fill="#1f3a5f">de riesgos</text>
+    <text x="780" y="318" font-size="10.5" font-weight="700" fill="#8a6a1c">MAGERIT · PILAR · µPILAR</text>
+
+    <text x="780" y="436" font-size="11.5" font-weight="700" fill="#1f3a5f">5. Preparar y aprobar la</text>
+    <text x="780" y="452" font-size="11.5" font-weight="700" fill="#1f3a5f">declaración de aplicabilidad</text>
+    <text x="780" y="478" font-size="10.5" font-weight="700" fill="#8a6a1c">CCN-STIC 804 · ISO/IEC 27001-27002</text>
+
+    <text x="470" y="436" font-size="11.5" font-weight="700" fill="#2e6b3a">6. Implantar, operar y</text>
+    <text x="470" y="452" font-size="11.5" font-weight="700" fill="#2e6b3a">monitorizar el sistema</text>
+    <text x="470" y="478" font-size="10.5" font-weight="700" fill="#8a6a1c">CCN-STIC 806 · 807 · 811-814</text>
+
+    <text x="160" y="436" font-size="11.5" font-weight="700" fill="#1f3a5f">7. Auditar al menos</text>
+    <text x="160" y="452" font-size="11.5" font-weight="700" fill="#1f3a5f">cada dos años</text>
+    <text x="160" y="478" font-size="10.5" font-weight="700" fill="#8a6a1c">CCN-STIC 802 · 808</text>
+
+    <text x="160" y="284" font-size="11.5" font-weight="700" fill="#1f3a5f">8. Mejorar la seguridad</text>
+    <text x="160" y="310" font-size="10.5" font-weight="700" fill="#8a6a1c">CCN-STIC 809 · 815</text>
+  </g>
+
+  <!-- Flechas del ciclo -->
+  <g stroke="#5a7d99" stroke-width="2.4" fill="none" marker-end="url(#arr)">
+    <line x1="264" y1="132" x2="364" y2="132"/>
+    <line x1="574" y1="132" x2="674" y2="132"/>
+    <line x1="780" y1="178" x2="780" y2="244"/>
+    <line x1="780" y1="338" x2="780" y2="404"/>
+    <line x1="676" y1="452" x2="576" y2="452"/>
+    <line x1="366" y1="452" x2="266" y2="452"/>
+    <line x1="160" y1="406" x2="160" y2="340"/>
+    <line x1="160" y1="246" x2="160" y2="180"/>
+  </g>
+
+  <!-- Centro -->
+  <text x="470" y="278" font-size="19" font-weight="700" fill="#2e5f8a" text-anchor="middle">Adecuarse al ENS</text>
+  <text x="470" y="300" font-size="12" fill="#4a5b68" text-anchor="middle">Real Decreto 311/2022</text>
+  <text x="470" y="320" font-size="11" fill="#8a949e" text-anchor="middle">Esquema Nacional de Seguridad</text>
+
+  <text x="900" y="574" font-size="12" fill="#8a949e" text-anchor="end">Elaboración propia, según el proceso descrito por el CCN.</text>
+</svg>

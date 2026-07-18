@@ -67,7 +67,7 @@ Los 12 principios:
 
 Además de Scrum, Lean, Kanban y XP, son métodos ágiles Crystal, DSDM, Feature Driven Development (FDD), Adaptive Software Development (ASD) y Agile Unified Process (AUP):
 
-![Línea temporal de la aparición de los principales métodos ágiles](media/image19.png)
+![Línea temporal de la aparición de los principales métodos ágiles](media/image19.png){width=100%}
 
 ## Scrum
 
@@ -134,7 +134,7 @@ Método visual para **gestionar y mejorar el flujo de trabajo**, formulado para 
 
 El tablero debe estar **visible para todo el equipo**, para facilitar la colaboración y la detección de impedimentos:
 
-![Tablero Kanban con las historias de usuario repartidas por columnas de estado](media/image20.jpeg)
+![Tablero Kanban con las historias de usuario repartidas por columnas de estado y límites WIP](media/tablero-kanban.png){width=100%}
 
 - **Métricas de flujo**: **lead time** (desde la petición hasta la entrega), **cycle time** (desde que se empieza hasta que se termina), rendimiento (*throughput*) y diagrama de flujo acumulado (CFD).
 - **Scrumban**: híbrido que combina la estructura de Scrum con el flujo visual y los límites WIP de Kanban.
