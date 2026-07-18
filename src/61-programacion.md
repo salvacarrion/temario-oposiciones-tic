@@ -206,6 +206,67 @@ Son enfoques de desarrollo sobre **plataformas visuales** que reducen (o elimina
 
 La frontera actual es el **desarrollo asistido por IA generativa** (GitHub Copilot y asistentes similares), que genera código desde lenguaje natural: no elimina al programador, pero desplaza su trabajo hacia la especificación, la revisión y las pruebas.
 
+## Supuesto práctico: algoritmia sobre un registro de entrada
+
+**Enunciado**: el registro electrónico genera cada día un fichero con los asientos de entrada; cada asiento tiene **número de asiento** (entero, único y creciente), **NIF** del interesado, **unidad de destino** y fecha y hora. Se pide resolver, en pseudocódigo o en un lenguaje a elección (aquí, Python):
+
+- a) Una función que valide la **letra de control del NIF** de una persona física (8 dígitos y una letra).
+- b) El recuento de asientos por unidad de destino, ordenado de mayor a menor, razonando la estructura de datos elegida y su complejidad.
+- c) La búsqueda de un asiento por su número mediante **búsqueda binaria**, indicando su complejidad y la condición para poder aplicarla.
+- d) La complejidad total y qué cambiaría si el fichero tuviera decenas de millones de asientos.
+
+**Resolución**:
+
+**a) Validación del NIF**. La letra de control se obtiene del **resto de dividir el número entre 23**, usado como índice sobre la cadena oficial de 23 letras:
+
+```python
+LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE"
+
+def nif_valido(nif: str) -> bool:
+    nif = nif.strip().upper()
+    if len(nif) != 9 or not nif[:8].isdigit() or not nif[8].isalpha():
+        return False
+    return nif[8] == LETRAS[int(nif[:8]) % 23]
+```
+
+La comprobación es **O(1)**: su coste no depende del tamaño de ningún conjunto de datos.
+
+**b) Recuento por unidad de destino**. La estructura adecuada es una **tabla hash** (diccionario): insertar y actualizar cada contador cuesta **O(1)** de media, así que recorrer los *n* asientos cuesta **O(n)**; la ordenación posterior de las *k* unidades añade **O(k log k)**, con *k* mucho menor que *n*:
+
+```python
+def asientos_por_unidad(asientos: list[dict]) -> list[tuple[str, int]]:
+    contador: dict[str, int] = {}
+    for a in asientos:
+        contador[a["unidad"]] = contador.get(a["unidad"], 0) + 1
+    return sorted(contador.items(), key=lambda par: par[1], reverse=True)
+```
+
+Con una lista de pares en lugar de diccionario, localizar cada unidad costaría O(k) por asiento (O(n·k) en total): la tabla hash es la elección correcta. En Python real este patrón lo encapsula `collections.Counter`.
+
+**c) Búsqueda binaria**. Exige que la secuencia esté **ordenada** por la clave de búsqueda, condición que aquí se cumple porque el número de asiento es creciente. Cada paso descarta la mitad del espacio de búsqueda: complejidad **O(log n)** frente al O(n) de la búsqueda lineal (sobre 10 millones de asientos, unas 24 comparaciones frente a millones):
+
+```python
+def buscar_asiento(asientos: list[dict], numero: int) -> dict | None:
+    izq, der = 0, len(asientos) - 1
+    while izq <= der:
+        medio = (izq + der) // 2
+        if asientos[medio]["numero"] == numero:
+            return asientos[medio]
+        if asientos[medio]["numero"] < numero:
+            izq = medio + 1
+        else:
+            der = medio - 1
+    return None
+```
+
+Errores clásicos que conviene evitar (y que los tribunales miran): la condición del bucle debe ser `izq <= der` (con `<` se pierde el caso de un solo elemento) y, en lenguajes con enteros de tamaño fijo, el punto medio se calcula como `izq + (der - izq) // 2` para evitar el desbordamiento de la suma.
+
+**d) Complejidad total y escala**. El procesamiento completo es **O(n)** por el recuento más **O(log n)** por cada búsqueda: lineal en el tamaño del fichero. Con decenas de millones de asientos cambiarían tres cosas:
+
+- **Memoria**: no cargar la lista entera, sino procesar el fichero **en flujo** (línea a línea, con generadores): el recuento sigue siendo O(n) pero la memoria baja a O(k).
+- **Búsquedas repetidas**: si van a hacerse muchas, compensa construir una vez un **índice hash** (número → asiento), con coste O(n) de construcción y **O(1)** por consulta.
+- **Persistencia**: a esa escala el fichero plano deja de ser razonable: los datos pertenecen a una **base de datos** con índices (árbol B) sobre el número de asiento (tema [36](36-bases-de-datos.md)), que ofrece estas mismas operaciones (búsqueda indexada, agregación, ordenación) de forma declarativa con SQL.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - E. Gamma, R. Helm, R. Johnson y J. Vlissides, *Design Patterns: Elements of Reusable Object-Oriented Software*, Addison-Wesley, 1994.
