@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" font-family="Helvetica, Arial, sans-serif">
+  <rect width="940" height="400" fill="#ffffff"/>
+  <text x="20" y="40" font-size="19" font-weight="700" fill="#1f3a5f">Formato de la cabecera IPv4 (palabras de 32 bits)</text>
+
+  <!-- Regla de bits -->
+  <g font-size="10" fill="#8a949e">
+    <text x="90" y="70">0</text><text x="190" y="70">4</text><text x="290" y="70">8</text><text x="390" y="70">12</text>
+    <text x="490" y="70">16</text><text x="590" y="70">20</text><text x="690" y="70">24</text><text x="790" y="70">28</text><text x="882" y="70">31</text>
+  </g>
+  <g stroke="#c6d2dc" stroke-width="1">
+    <line x1="90" y1="74" x2="90" y2="82"/><line x1="190" y1="74" x2="190" y2="82"/><line x1="290" y1="74" x2="290" y2="82"/>
+    <line x1="390" y1="74" x2="390" y2="82"/><line x1="490" y1="74" x2="490" y2="82"/><line x1="590" y1="74" x2="590" y2="82"/>
+    <line x1="690" y1="74" x2="690" y2="82"/><line x1="790" y1="74" x2="790" y2="82"/><line x1="890" y1="74" x2="890" y2="82"/>
+  </g>
+
+  <!-- Etiquetas de byte a la izquierda -->
+  <g font-size="10" fill="#8a949e" text-anchor="end">
+    <text x="80" y="110">0</text><text x="80" y="152">4</text><text x="80" y="194">8</text>
+    <text x="80" y="236">12</text><text x="80" y="278">16</text><text x="80" y="320">20</text>
+  </g>
+
+  <!-- Fila 1 -->
+  <g stroke="#5b87b0" stroke-width="1.4" fill="#dbe7f3">
+    <rect x="90" y="84" width="100" height="42"/>
+    <rect x="190" y="84" width="100" height="42"/>
+    <rect x="290" y="84" width="200" height="42"/>
+    <rect x="490" y="84" width="400" height="42"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="140" y="102" font-size="11.5" font-weight="700" fill="#22303c">Versión</text><text x="140" y="118" font-size="9.5" fill="#4a5b68">(4 bits)</text>
+    <text x="240" y="102" font-size="11.5" font-weight="700" fill="#22303c">IHL</text><text x="240" y="118" font-size="9.5" fill="#4a5b68">(4 bits)</text>
+    <text x="390" y="102" font-size="11.5" font-weight="700" fill="#22303c">Tipo de servicio</text><text x="390" y="118" font-size="9.5" fill="#4a5b68">DSCP/ECN (8 bits)</text>
+    <text x="690" y="102" font-size="11.5" font-weight="700" fill="#22303c">Longitud total</text><text x="690" y="118" font-size="9.5" fill="#4a5b68">(16 bits)</text>
+  </g>
+
+  <!-- Fila 2 -->
+  <g stroke="#5b87b0" stroke-width="1.4" fill="#dbe7f3">
+    <rect x="90" y="126" width="400" height="42"/>
+    <rect x="490" y="126" width="75" height="42"/>
+    <rect x="565" y="126" width="325" height="42"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="290" y="144" font-size="11.5" font-weight="700" fill="#22303c">Identificación</text><text x="290" y="160" font-size="9.5" fill="#4a5b68">(16 bits)</text>
+    <text x="527" y="144" font-size="11.5" font-weight="700" fill="#22303c">Flags</text><text x="527" y="160" font-size="9.5" fill="#4a5b68">(3 bits)</text>
+    <text x="727" y="144" font-size="11.5" font-weight="700" fill="#22303c">Offset de fragmento</text><text x="727" y="160" font-size="9.5" fill="#4a5b68">(13 bits)</text>
+  </g>
+
+  <!-- Fila 3 -->
+  <g stroke="#5b87b0" stroke-width="1.4" fill="#dbe7f3">
+    <rect x="90" y="168" width="200" height="42"/>
+    <rect x="290" y="168" width="200" height="42"/>
+    <rect x="490" y="168" width="400" height="42"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="190" y="186" font-size="11.5" font-weight="700" fill="#22303c">TTL</text><text x="190" y="202" font-size="9.5" fill="#4a5b68">(8 bits)</text>
+    <text x="390" y="186" font-size="11.5" font-weight="700" fill="#22303c">Protocolo</text><text x="390" y="202" font-size="9.5" fill="#4a5b68">(8 bits)</text>
+    <text x="690" y="186" font-size="11.5" font-weight="700" fill="#22303c">Checksum de cabecera</text><text x="690" y="202" font-size="9.5" fill="#4a5b68">(16 bits)</text>
+  </g>
+
+  <!-- Filas 4 y 5 -->
+  <rect x="90" y="210" width="800" height="42" stroke="#5b87b0" stroke-width="1.4" fill="#c9d9e8"/>
+  <text x="490" y="228" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">Dirección IP de origen</text>
+  <text x="490" y="244" font-size="9.5" fill="#4a5b68" text-anchor="middle">(32 bits)</text>
+  <rect x="90" y="252" width="800" height="42" stroke="#5b87b0" stroke-width="1.4" fill="#c9d9e8"/>
+  <text x="490" y="270" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">Dirección IP de destino</text>
+  <text x="490" y="286" font-size="9.5" fill="#4a5b68" text-anchor="middle">(32 bits)</text>
+
+  <!-- Fila 6: opciones -->
+  <rect x="90" y="294" width="600" height="42" stroke="#c9a24b" stroke-width="1.4" stroke-dasharray="7 4" fill="#faeed7"/>
+  <rect x="690" y="294" width="200" height="42" stroke="#c9a24b" stroke-width="1.4" stroke-dasharray="7 4" fill="#faeed7"/>
+  <text x="390" y="312" font-size="11.5" font-weight="700" fill="#8a6a1c" text-anchor="middle">Opciones</text>
+  <text x="390" y="328" font-size="9.5" fill="#8a6a1c" text-anchor="middle">(longitud variable)</text>
+  <text x="790" y="312" font-size="11.5" font-weight="700" fill="#8a6a1c" text-anchor="middle">Relleno</text>
+  <text x="790" y="328" font-size="9.5" fill="#8a6a1c" text-anchor="middle">(padding)</text>
+
+  <text x="90" y="366" font-size="11.5" fill="#4a5b68">Cabecera mínima: <tspan font-weight="700">20 bytes</tspan> (5 palabras, IHL = 5); con opciones, hasta <tspan font-weight="700">60 bytes</tspan>.</text>
+  <text x="920" y="390" font-size="11.5" fill="#8a949e" text-anchor="end">Elaboración propia.</text>
+</svg>

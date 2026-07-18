@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="920" viewBox="0 0 940 920" font-family="Helvetica, Arial, sans-serif">
+  <rect width="940" height="920" fill="#ffffff"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#1f3a5f">Los 7 diagramas de comportamiento de UML: ejemplos mínimos</text>
+
+  <defs>
+    <marker id="arrf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a5b68"/>
+    </marker>
+    <marker id="open" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#4a5b68" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- Paneles -->
+  <g fill="#f8fafb" stroke="#c6d2dc" stroke-width="1.4">
+    <rect x="40" y="70" width="400" height="190" rx="10"/>
+    <rect x="510" y="70" width="400" height="190" rx="10"/>
+    <rect x="40" y="280" width="400" height="190" rx="10"/>
+    <rect x="510" y="280" width="400" height="190" rx="10"/>
+    <rect x="40" y="490" width="400" height="190" rx="10"/>
+    <rect x="510" y="490" width="400" height="190" rx="10"/>
+    <rect x="240" y="700" width="560" height="190" rx="10"/>
+  </g>
+  <g font-size="13" font-weight="700" fill="#1f3a5f">
+    <text x="56" y="94">De actividades</text>
+    <text x="526" y="94">De casos de uso</text>
+    <text x="56" y="304">De máquina de estados</text>
+    <text x="526" y="304">De secuencia</text>
+    <text x="56" y="514">De comunicación</text>
+    <text x="526" y="514">De tiempos</text>
+    <text x="256" y="724">Global de interacciones</text>
+  </g>
+
+  <!-- 1. De actividades -->
+  <circle cx="78" cy="150" r="8" fill="#22303c"/>
+  <rect x="101" y="128" width="125" height="44" rx="14" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.4"/>
+  <text x="163" y="146" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">Revisar la</text>
+  <text x="163" y="162" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">solicitud</text>
+  <path d="M 270 132 L 288 150 L 270 168 L 252 150 Z" fill="#faeed7" stroke="#c9a24b" stroke-width="1.5"/>
+  <rect x="322" y="128" width="95" height="44" rx="14" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.4"/>
+  <text x="369" y="155" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">Notificar</text>
+  <g stroke="#4a5b68" stroke-width="1.6" fill="none" marker-end="url(#arrf)">
+    <line x1="86" y1="150" x2="97" y2="150"/>
+    <line x1="226" y1="150" x2="248" y2="150"/>
+    <line x1="288" y1="150" x2="318" y2="150"/>
+    <line x1="369" y1="172" x2="369" y2="201"/>
+    <line x1="270" y1="168" x2="270" y2="201"/>
+  </g>
+  <text x="303" y="166" font-size="9.5" fill="#4a5b68">[aprobada]</text>
+  <text x="277" y="192" font-size="9.5" fill="#4a5b68">[rechazada]</text>
+  <circle cx="369" cy="214" r="9" fill="none" stroke="#22303c" stroke-width="1.6"/>
+  <circle cx="369" cy="214" r="4.5" fill="#22303c"/>
+  <circle cx="270" cy="214" r="9" fill="none" stroke="#22303c" stroke-width="1.6"/>
+  <circle cx="270" cy="214" r="4.5" fill="#22303c"/>
+
+  <!-- 2. De casos de uso -->
+  <circle cx="555" cy="115" r="8" fill="none" stroke="#22303c" stroke-width="1.6"/>
+  <g stroke="#22303c" stroke-width="1.6">
+    <line x1="555" y1="123" x2="555" y2="143"/>
+    <line x1="543" y1="130" x2="567" y2="130"/>
+    <line x1="555" y1="143" x2="546" y2="158"/>
+    <line x1="555" y1="143" x2="564" y2="158"/>
+  </g>
+  <text x="555" y="176" font-size="10.5" fill="#4a5b68" text-anchor="middle">Ciudadano</text>
+  <rect x="600" y="108" width="290" height="138" fill="#ffffff" stroke="#5b87b0" stroke-width="1.4"/>
+  <text x="745" y="127" font-size="11.5" font-weight="700" fill="#1f3a5f" text-anchor="middle">Sede electrónica</text>
+  <ellipse cx="745" cy="160" rx="88" ry="18" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.4"/>
+  <text x="745" y="164" font-size="11" fill="#22303c" text-anchor="middle">Presentar solicitud</text>
+  <ellipse cx="700" cy="212" rx="66" ry="17" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.4"/>
+  <text x="700" y="216" font-size="10.5" fill="#22303c" text-anchor="middle">Consultar expediente</text>
+  <ellipse cx="828" cy="212" rx="52" ry="17" fill="#eef1f4" stroke="#9aa5ae" stroke-width="1.4"/>
+  <text x="828" y="216" font-size="10.5" fill="#22303c" text-anchor="middle">Identificarse</text>
+  <line x1="745" y1="178" x2="810" y2="197" stroke="#4a5b68" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#open)"/>
+  <text x="792" y="184" font-size="9" fill="#4a5b68">«include»</text>
+  <g stroke="#4a5b68" stroke-width="1.4">
+    <line x1="567" y1="132" x2="657" y2="157"/>
+    <line x1="567" y1="138" x2="637" y2="205"/>
+  </g>
+
+  <!-- 3. De máquina de estados -->
+  <circle cx="72" cy="375" r="8" fill="#22303c"/>
+  <rect x="95" y="352" width="100" height="46" rx="12" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.4"/>
+  <text x="145" y="379" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">Borrador</text>
+  <rect x="240" y="352" width="110" height="46" rx="12" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.4"/>
+  <text x="295" y="379" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">En trámite</text>
+  <g stroke="#4a5b68" stroke-width="1.6" fill="none" marker-end="url(#arrf)">
+    <line x1="80" y1="375" x2="91" y2="375"/>
+    <line x1="195" y1="375" x2="236" y2="375"/>
+    <line x1="350" y1="375" x2="384" y2="375"/>
+  </g>
+  <text x="216" y="344" font-size="10" fill="#4a5b68" text-anchor="middle">presentar</text>
+  <text x="367" y="344" font-size="10" fill="#4a5b68" text-anchor="middle">resolver</text>
+  <circle cx="395" cy="375" r="10" fill="none" stroke="#22303c" stroke-width="1.6"/>
+  <circle cx="395" cy="375" r="5" fill="#22303c"/>
+  <text x="240" y="435" font-size="10" fill="#8a949e">estados de un objeto y transiciones ante eventos</text>
+
+  <!-- 4. De secuencia -->
+  <rect x="545" y="310" width="110" height="32" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.4"/>
+  <text x="600" y="330" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">:Ciudadano</text>
+  <rect x="755" y="310" width="100" height="32" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.4"/>
+  <text x="805" y="330" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">:Sede</text>
+  <g stroke="#9aa5ae" stroke-width="1.3" stroke-dasharray="5 4">
+    <line x1="600" y1="342" x2="600" y2="450"/>
+    <line x1="805" y1="342" x2="805" y2="450"/>
+  </g>
+  <rect x="595" y="362" width="10" height="60" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.2"/>
+  <rect x="800" y="375" width="10" height="35" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.2"/>
+  <line x1="605" y1="380" x2="796" y2="380" stroke="#4a5b68" stroke-width="1.6" marker-end="url(#arrf)"/>
+  <text x="700" y="372" font-size="10.5" fill="#22303c" text-anchor="middle">presentarSolicitud()</text>
+  <line x1="800" y1="425" x2="609" y2="425" stroke="#4a5b68" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#open)"/>
+  <text x="700" y="417" font-size="10.5" fill="#4a5b68" text-anchor="middle">justificante</text>
+
+  <!-- 5. De comunicación -->
+  <g stroke="#5b87b0" stroke-width="1.4" fill="#dbe7f3">
+    <rect x="70" y="540" width="105" height="34"/>
+    <rect x="230" y="540" width="105" height="34"/>
+    <rect x="230" y="620" width="105" height="34"/>
+  </g>
+  <g font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle" text-decoration="underline">
+    <text x="122" y="561">:Interfaz</text>
+    <text x="282" y="561">:Control</text>
+    <text x="282" y="641">:Entidad</text>
+  </g>
+  <line x1="175" y1="557" x2="230" y2="557" stroke="#4a5b68" stroke-width="1.4"/>
+  <line x1="282" y1="574" x2="282" y2="620" stroke="#4a5b68" stroke-width="1.4"/>
+  <line x1="188" y1="545" x2="216" y2="545" stroke="#4a5b68" stroke-width="1.3" marker-end="url(#arrf)"/>
+  <text x="202" y="536" font-size="10" fill="#4a5b68" text-anchor="middle">1: consultar()</text>
+  <line x1="294" y1="586" x2="294" y2="610" stroke="#4a5b68" stroke-width="1.3" marker-end="url(#arrf)"/>
+  <text x="306" y="601" font-size="10" fill="#4a5b68">1.1: leer()</text>
+  <text x="150" y="600" font-size="10" fill="#8a949e">mensajes numerados</text>
+  <text x="150" y="614" font-size="10" fill="#8a949e">sobre los enlaces</text>
+
+  <!-- 6. De tiempos -->
+  <g font-size="10.5" fill="#4a5b68" text-anchor="end">
+    <text x="608" y="552">Rojo</text>
+    <text x="608" y="572">Ámbar</text>
+    <text x="608" y="592">Verde</text>
+    <text x="608" y="622">Cruza</text>
+    <text x="608" y="642">Espera</text>
+  </g>
+  <g font-size="10" font-weight="700" fill="#1f3a5f">
+    <text x="530" y="552">Semáforo</text>
+    <text x="530" y="622">Peatón</text>
+  </g>
+  <g stroke="#dfe5ea" stroke-width="1" stroke-dasharray="3 4">
+    <line x1="620" y1="548" x2="880" y2="548"/>
+    <line x1="620" y1="568" x2="880" y2="568"/>
+    <line x1="620" y1="588" x2="880" y2="588"/>
+    <line x1="620" y1="618" x2="880" y2="618"/>
+    <line x1="620" y1="638" x2="880" y2="638"/>
+  </g>
+  <path d="M 620 588 H 680 V 568 H 715 V 548 H 790 V 588 H 880" fill="none" stroke="#2e5f8a" stroke-width="2.2"/>
+  <path d="M 620 638 H 715 V 618 H 790 V 638 H 880" fill="none" stroke="#b23b2e" stroke-width="2.2"/>
+  <line x1="620" y1="656" x2="880" y2="656" stroke="#9aa5ae" stroke-width="1.3"/>
+  <g stroke="#9aa5ae" stroke-width="1.3">
+    <line x1="620" y1="653" x2="620" y2="659"/>
+    <line x1="680" y1="653" x2="680" y2="659"/>
+    <line x1="715" y1="653" x2="715" y2="659"/>
+    <line x1="790" y1="653" x2="790" y2="659"/>
+    <line x1="880" y1="653" x2="880" y2="659"/>
+  </g>
+  <text x="750" y="674" font-size="10.5" fill="#4a5b68" text-anchor="middle">tiempo: el peatón cruza mientras el semáforo está en rojo</text>
+
+  <!-- 7. Global de interacciones -->
+  <circle cx="290" cy="790" r="8" fill="#22303c"/>
+  <g stroke="#5b87b0" stroke-width="1.4" fill="#ffffff">
+    <rect x="315" y="765" width="150" height="50"/>
+    <rect x="565" y="765" width="150" height="50"/>
+  </g>
+  <g fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.2">
+    <rect x="315" y="765" width="36" height="16"/>
+    <rect x="565" y="765" width="36" height="16"/>
+  </g>
+  <text x="333" y="777" font-size="9.5" font-weight="700" fill="#1f3a5f" text-anchor="middle">ref</text>
+  <text x="583" y="777" font-size="9.5" font-weight="700" fill="#1f3a5f" text-anchor="middle">ref</text>
+  <text x="390" y="800" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">Autenticación</text>
+  <text x="640" y="800" font-size="11.5" font-weight="700" fill="#22303c" text-anchor="middle">Tramitación</text>
+  <path d="M 518 774 L 534 790 L 518 806 L 502 790 Z" fill="#faeed7" stroke="#c9a24b" stroke-width="1.5"/>
+  <g stroke="#4a5b68" stroke-width="1.6" fill="none" marker-end="url(#arrf)">
+    <line x1="298" y1="790" x2="311" y2="790"/>
+    <line x1="465" y1="790" x2="498" y2="790"/>
+    <line x1="534" y1="790" x2="561" y2="790"/>
+    <line x1="715" y1="790" x2="741" y2="790"/>
+    <line x1="518" y1="806" x2="518" y2="841"/>
+  </g>
+  <text x="547" y="782" font-size="9.5" fill="#4a5b68">[ok]</text>
+  <text x="526" y="830" font-size="9.5" fill="#4a5b68">[error]</text>
+  <circle cx="752" cy="790" r="9" fill="none" stroke="#22303c" stroke-width="1.6"/>
+  <circle cx="752" cy="790" r="4.5" fill="#22303c"/>
+  <circle cx="518" cy="852" r="9" fill="none" stroke="#22303c" stroke-width="1.6"/>
+  <circle cx="518" cy="852" r="4.5" fill="#22303c"/>
+
+  <text x="900" y="906" font-size="12" fill="#8a949e" text-anchor="end">Elaboración propia.</text>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="600" viewBox="0 0 940 600" font-family="Helvetica, Arial, sans-serif">
+  <rect width="940" height="600" fill="#ffffff"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#1f3a5f">Elementos básicos de la notación BPMN</text>
+
+  <!-- Paneles -->
+  <g fill="#f8fafb" stroke="#c6d2dc" stroke-width="1.4">
+    <rect x="40" y="70" width="280" height="230" rx="10"/>
+    <rect x="340" y="70" width="280" height="230" rx="10"/>
+    <rect x="640" y="70" width="280" height="230" rx="10"/>
+    <rect x="40" y="320" width="280" height="230" rx="10"/>
+    <rect x="340" y="320" width="280" height="230" rx="10"/>
+    <rect x="640" y="320" width="280" height="230" rx="10"/>
+  </g>
+  <g font-size="13.5" font-weight="700" fill="#1f3a5f">
+    <text x="56" y="96">Eventos</text>
+    <text x="356" y="96">Actividades</text>
+    <text x="656" y="96">Compuertas</text>
+    <text x="56" y="346">Conexiones</text>
+    <text x="356" y="346">Carriles</text>
+    <text x="656" y="346">Artefactos</text>
+  </g>
+
+  <!-- Eventos -->
+  <circle cx="95" cy="165" r="22" fill="#e9f2ea" stroke="#4e7d52" stroke-width="2"/>
+  <circle cx="180" cy="165" r="22" fill="#faeed7" stroke="#c9a24b" stroke-width="2"/>
+  <circle cx="180" cy="165" r="16" fill="none" stroke="#c9a24b" stroke-width="2"/>
+  <circle cx="265" cy="165" r="22" fill="#fbeae7" stroke="#b23b2e" stroke-width="5"/>
+  <g font-size="11.5" fill="#4a5b68" text-anchor="middle">
+    <text x="95" y="212">Inicio</text>
+    <text x="180" y="212">Intermedio</text>
+    <text x="265" y="212">Fin</text>
+    <text x="180" y="262">inicio: trazo fino · intermedio: doble · fin: trazo grueso</text>
+  </g>
+
+  <!-- Actividades -->
+  <rect x="365" y="130" width="105" height="64" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <text x="417" y="167" font-size="12.5" font-weight="700" fill="#22303c" text-anchor="middle">Tarea</text>
+  <rect x="495" y="130" width="105" height="64" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <text x="547" y="160" font-size="12.5" font-weight="700" fill="#22303c" text-anchor="middle">Subproceso</text>
+  <rect x="540" y="172" width="15" height="15" fill="#ffffff" stroke="#5b87b0" stroke-width="1.3"/>
+  <line x1="543" y1="179.5" x2="552" y2="179.5" stroke="#5b87b0" stroke-width="1.5"/>
+  <line x1="547.5" y1="175" x2="547.5" y2="184" stroke="#5b87b0" stroke-width="1.5"/>
+  <text x="480" y="262" font-size="11.5" fill="#4a5b68" text-anchor="middle">el signo + marca un subproceso desplegable</text>
+
+  <!-- Compuertas -->
+  <g fill="#faeed7" stroke="#c9a24b" stroke-width="1.8">
+    <path d="M 700 137 L 726 163 L 700 189 L 674 163 Z"/>
+    <path d="M 780 137 L 806 163 L 780 189 L 754 163 Z"/>
+    <path d="M 860 137 L 886 163 L 860 189 L 834 163 Z"/>
+  </g>
+  <g stroke="#8a6a1c" stroke-width="2.4" stroke-linecap="round">
+    <line x1="692" y1="155" x2="708" y2="171"/>
+    <line x1="708" y1="155" x2="692" y2="171"/>
+    <line x1="780" y1="151" x2="780" y2="175"/>
+    <line x1="768" y1="163" x2="792" y2="163"/>
+  </g>
+  <circle cx="860" cy="163" r="10" fill="none" stroke="#8a6a1c" stroke-width="2.4"/>
+  <g font-size="11" fill="#4a5b68" text-anchor="middle">
+    <text x="700" y="212">Exclusiva</text><text x="700" y="226">(XOR)</text>
+    <text x="780" y="212">Paralela</text><text x="780" y="226">(AND)</text>
+    <text x="860" y="212">Inclusiva</text><text x="860" y="226">(OR)</text>
+    <text x="780" y="262">deciden o sincronizan los caminos del flujo</text>
+  </g>
+
+  <!-- Conexiones -->
+  <defs>
+    <marker id="arrf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a5b68"/>
+    </marker>
+    <marker id="arro" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#4a5b68" stroke-width="1.6"/>
+    </marker>
+  </defs>
+  <text x="70" y="384" font-size="11.5" fill="#4a5b68">Flujo de secuencia</text>
+  <line x1="70" y1="396" x2="270" y2="396" stroke="#4a5b68" stroke-width="2" marker-end="url(#arrf)"/>
+  <text x="70" y="444" font-size="11.5" fill="#4a5b68">Flujo de mensaje</text>
+  <line x1="76" y1="456" x2="270" y2="456" stroke="#4a5b68" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#arro)"/>
+  <circle cx="73" cy="456" r="4" fill="#ffffff" stroke="#4a5b68" stroke-width="1.6"/>
+  <text x="70" y="504" font-size="11.5" fill="#4a5b68">Asociación</text>
+  <line x1="70" y1="516" x2="270" y2="516" stroke="#4a5b68" stroke-width="1.8" stroke-dasharray="2 5"/>
+
+  <!-- Carriles -->
+  <rect x="365" y="370" width="230" height="150" fill="#ffffff" stroke="#5b87b0" stroke-width="1.6"/>
+  <rect x="365" y="370" width="26" height="150" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <text x="382" y="445" font-size="12" font-weight="700" fill="#1f3a5f" text-anchor="middle" transform="rotate(-90 382 445)">Pool</text>
+  <line x1="391" y1="445" x2="595" y2="445" stroke="#5b87b0" stroke-width="1.2"/>
+  <text x="405" y="412" font-size="11.5" fill="#4a5b68">Carril 1 (rol o unidad)</text>
+  <text x="405" y="487" font-size="11.5" fill="#4a5b68">Carril 2 (rol o unidad)</text>
+
+  <!-- Artefactos -->
+  <path d="M 670 385 h 32 l 14 14 v 44 h -46 z" fill="#faeed7" stroke="#c9a24b" stroke-width="1.6"/>
+  <path d="M 702 385 v 14 h 14" fill="none" stroke="#c9a24b" stroke-width="1.6"/>
+  <text x="693" y="466" font-size="11" fill="#4a5b68" text-anchor="middle">Objeto de</text>
+  <text x="693" y="480" font-size="11" fill="#4a5b68" text-anchor="middle">datos</text>
+  <rect x="746" y="385" width="78" height="58" rx="8" fill="none" stroke="#9aa5ae" stroke-width="1.6" stroke-dasharray="8 4 2 4"/>
+  <text x="785" y="466" font-size="11" fill="#4a5b68" text-anchor="middle">Grupo</text>
+  <path d="M 872 385 h -14 v 58 h 14" fill="none" stroke="#9aa5ae" stroke-width="1.8"/>
+  <g fill="#c3cdd4">
+    <rect x="866" y="398" width="42" height="5" rx="2.5"/>
+    <rect x="866" y="411" width="34" height="5" rx="2.5"/>
+    <rect x="866" y="424" width="40" height="5" rx="2.5"/>
+  </g>
+  <text x="880" y="466" font-size="11" fill="#4a5b68" text-anchor="middle">Anotación</text>
+
+  <text x="900" y="584" font-size="12" fill="#8a949e" text-anchor="end">Elaboración propia.</text>
+</svg>

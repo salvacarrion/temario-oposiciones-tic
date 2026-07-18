@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="480" viewBox="0 0 940 480" font-family="Helvetica, Arial, sans-serif">
+  <rect width="940" height="480" fill="#ffffff"/>
+  <text x="40" y="42" font-size="19" font-weight="700" fill="#1f3a5f">Grafo de flujo de control del método clasificar(): V(G) = 4</text>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5a7d99"/>
+    </marker>
+  </defs>
+  <g stroke="#5a7d99" stroke-width="1.8" fill="none" marker-end="url(#arr)">
+    <line x1="333.0" y1="122.4" x2="241.0" y2="189.7"/><line x1="367.0" y1="122.4" x2="459.0" y2="189.7"/><line x1="207.3" y1="221.7" x2="155.8" y2="289.3"/><line x1="241.0" y1="205.0" x2="454.0" y2="205.0"/><line x1="468.4" y1="222.5" x2="424.4" y2="288.4"/><line x1="496.8" y1="217.6" x2="599.2" y2="294.4"/><line x1="159.2" y1="318.4" x2="356.2" y2="404.6"/><line x1="404.2" y1="330.2" x2="387.1" y2="390.0"/><line x1="600.8" y1="318.4" x2="403.8" y2="404.6"/>
+  </g>
+  <g font-size="10" font-weight="700" fill="#4a5b68" text-anchor="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">
+    <text x="279" y="148">sí</text><text x="405" y="170">no</text><text x="170" y="250">sí</text><text x="348" y="222">no</text><text x="435" y="251">sí</text><text x="540" y="270">no</text>
+  </g>
+  <circle cx="350" cy="110" r="21" fill="#faeed7" stroke="#c9a24b" stroke-width="1.8"/>
+  <text x="350" y="114" font-size="11" font-weight="700" fill="#22303c" text-anchor="middle">N1</text>
+  <circle cx="220" cy="205" r="21" fill="#faeed7" stroke="#c9a24b" stroke-width="1.8"/>
+  <text x="220" y="209" font-size="11" font-weight="700" fill="#22303c" text-anchor="middle">N2</text>
+  <circle cx="480" cy="205" r="21" fill="#faeed7" stroke="#c9a24b" stroke-width="1.8"/>
+  <text x="480" y="209" font-size="11" font-weight="700" fill="#22303c" text-anchor="middle">N4</text>
+  <circle cx="140" cy="310" r="21" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <text x="140" y="314" font-size="11" font-weight="700" fill="#22303c" text-anchor="middle">N3</text>
+  <circle cx="410" cy="310" r="21" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <text x="410" y="314" font-size="11" font-weight="700" fill="#22303c" text-anchor="middle">N5</text>
+  <circle cx="620" cy="310" r="21" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <text x="620" y="314" font-size="11" font-weight="700" fill="#22303c" text-anchor="middle">N6</text>
+  <circle cx="380" cy="415" r="21" fill="#eef1f4" stroke="#9aa5ae" stroke-width="1.8"/>
+  <text x="380" y="419" font-size="11" font-weight="700" fill="#22303c" text-anchor="middle">N7</text>
+
+  <g font-size="10" fill="#4a5b68" paint-order="stroke" stroke="#ffffff" stroke-width="3" stroke-linejoin="round">
+    <text x="378" y="103">¿urgente?</text>
+    <text x="190" y="198" text-anchor="end">¿días &gt; 30?</text>
+    <text x="508" y="198">¿recurrido?</text>
+    <text x="140" y="350" text-anchor="middle">«prioritario»</text>
+    <text x="410" y="350" text-anchor="middle">«recurso»</text>
+    <text x="620" y="350" text-anchor="middle">«ordinario»</text>
+    <text x="380" y="455" text-anchor="middle">return</text>
+  </g>
+  <g font-size="11" font-style="italic" fill="#b23b2e" text-anchor="middle">
+    <text x="350" y="180">R1</text>
+    <text x="268" y="330">R2</text>
+    <text x="500" y="330">R3</text>
+    <text x="540" y="430">R4 (exterior)</text>
+  </g>
+  <rect x="660" y="80" width="240" height="168" rx="10" fill="#f2f5f8" stroke="#c6d2dc" stroke-width="1.4"/>
+  <text x="780" y="106" font-size="12.5" font-weight="700" fill="#1f3a5f" text-anchor="middle">Tres formas de calcular V(G)</text>
+  <g font-size="11.5" fill="#22303c">
+    <text x="676" y="136">Aristas y nodos: <tspan font-weight="700">9 − 7 + 2 = 4</tspan></text>
+    <text x="676" y="164">Predicados + 1: <tspan font-weight="700">3 + 1 = 4</tspan></text>
+    <text x="676" y="192">Regiones: <tspan font-weight="700">3 + 1 = 4</tspan></text>
+  </g>
+  <text x="676" y="228" font-size="10" fill="#4a5b68">E = 9 · N = 7 · P = 3 predicados</text>
+  <circle cx="672" cy="290" r="9" fill="#faeed7" stroke="#c9a24b" stroke-width="1.6"/>
+  <text x="688" y="294" font-size="10.5" fill="#4a5b68">nodo predicado (decisión)</text>
+  <circle cx="672" cy="316" r="9" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.5"/>
+  <text x="688" y="320" font-size="10.5" fill="#4a5b68">bloque secuencial</text>
+  <text x="900" y="464" font-size="12" fill="#8a949e" text-anchor="end">Elaboración propia.</text>
+</svg>

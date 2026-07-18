@@ -30,7 +30,7 @@ El proceso unificado describe el sistema como un conjunto de modelos, cada uno a
 - **Modelo de implementación**: implementación (diagramas de componentes, secuencia y comunicación).
 - **Modelo de pruebas**: prueba (utiliza todos los diagramas).
 
-![](media/image24.png){width=75%}
+![Modelos del sistema asociados a cada flujo de trabajo del proceso unificado](media/image24.png){width=75%}
 
 Conviene distinguir los tres primeros modelos, que se suceden en el desarrollo:
 
@@ -72,7 +72,7 @@ El proceso unificado define **cinco flujos de trabajo fundamentales**: **requisi
 
 Cada iteración es un miniproyecto que atraviesa todos los flujos de trabajo (desde los requisitos hasta las pruebas) y culmina en un hito que permite revisar el progreso. El esfuerzo dedicado a cada disciplina varía con la fase, como refleja el clásico diagrama de «jorobas» de RUP:
 
-![](media/image26.png){width=85%}
+![Diagrama de «jorobas» de RUP: esfuerzo de cada disciplina a lo largo de las cuatro fases](media/image26.png){width=85%}
 
 ### Trabajadores y artefactos asociados
 
@@ -94,29 +94,57 @@ El **Lenguaje Unificado de Modelado** (UML, *Unified Modeling Language*) es un l
 
 Representan la estructura estática del sistema: sus elementos y las relaciones entre ellos.
 
-| Diagrama | Descripción | Ejemplo |
-| :------------- | :------------------------------------------ | :------------------------ |
-| **De clases** | Clases del sistema con sus atributos, operaciones y relaciones; es el diagrama central del diseño orientado a objetos | ![Ejemplo de diagrama de clases](media/image25.png){width=90%} |
-| **De componentes** | División del sistema en componentes y dependencias entre ellos, con las interfaces que proporcionan y requieren | ![Ejemplo de diagrama de componentes](media/uml-diagrama-componentes.png){width=95%} |
-| **De despliegue** | Disposición física de los artefactos software sobre los nodos hardware (topología) | ![Ejemplo de diagrama de despliegue](media/image27.png){width=90%} |
-| **De objetos** (o de instancias) | Vista de los objetos del sistema y sus relaciones en un instante concreto de ejecución | ![Ejemplo de diagrama de objetos](media/image28.png){width=90%} |
-| **De paquetes** | Agrupaciones lógicas del sistema y dependencias entre ellas | ![Ejemplo de diagrama de paquetes](media/image29.png){width=95%} |
-| **De perfil** | Personaliza UML para un dominio o plataforma mediante estereotipos, valores etiquetados y restricciones | ![Ejemplo de diagrama de perfil](media/image30.png){width=95%} |
-| **De estructura compuesta** | Estructura interna de una clase y colaboraciones que esa estructura hace posibles | ![Ejemplo de diagrama de estructura compuesta](media/image31.png){width=95%} |
+| Diagrama | Descripción |
+| :------------- | :------------------------------------------ |
+| **De clases** | Clases del sistema con sus atributos, operaciones y relaciones; es el diagrama central del diseño orientado a objetos |
+| **De componentes** | División del sistema en componentes y dependencias entre ellos, con las interfaces que proporcionan y requieren |
+| **De despliegue** | Disposición física de los artefactos software sobre los nodos hardware (topología) |
+| **De objetos** (o de instancias) | Vista de los objetos del sistema y sus relaciones en un instante concreto de ejecución |
+| **De paquetes** | Agrupaciones lógicas del sistema y dependencias entre ellas |
+| **De perfil** | Personaliza UML para un dominio o plataforma mediante estereotipos, valores etiquetados y restricciones |
+| **De estructura compuesta** | Estructura interna de una clase y colaboraciones que esa estructura hace posibles |
+
+![Ejemplo de diagrama de clases](media/uml-clases.png){width=70%}
+
+![Ejemplo de diagrama de componentes](media/uml-componentes.png){width=70%}
+
+![Ejemplo de diagrama de despliegue](media/uml-despliegue.png){width=70%}
+
+![Ejemplo de diagrama de objetos](media/uml-objetos.png){width=70%}
+
+![Ejemplo de diagrama de paquetes](media/uml-paquetes.png){width=70%}
+
+![Ejemplo de diagrama de perfil](media/uml-perfil.png){width=70%}
+
+![Ejemplo de diagrama de estructura compuesta](media/uml-estructura-compuesta.png){width=75%}
 
 ### Diagramas de comportamiento
 
 Capturan la dinámica del sistema: cómo evoluciona y cómo interactúan sus elementos. Los **cuatro últimos** forman el subgrupo de los **diagramas de interacción**.
 
-| Diagrama | Descripción | Ejemplo |
-| :------------- | :------------------------------------------ | :------------------------ |
-| **De actividades** (o de flujo) | Flujos de trabajo paso a paso, con decisiones, bifurcaciones y uniones; representa procesos y algoritmos | ![Ejemplo de diagrama de actividades](media/image32.png){width=50%} |
-| **De casos de uso** | Interacciones entre los actores y el sistema; visión general de la funcionalidad requerida | ![Ejemplo de diagrama de casos de uso](media/image33.png){width=90%} |
-| **De máquina de estados** | Estados por los que pasa un objeto y transiciones entre ellos ante eventos | ![Ejemplo de diagrama de maquina de estados](media/image34.png){width=90%} |
-| **De secuencia** *(interacción)* | Intercambio de mensajes entre objetos ordenado en el tiempo, sobre líneas de vida | ![Ejemplo de diagrama de secuencia](media/image35.png){width=95%} |
-| **De comunicación** *(interacción)* | Interacción centrada en los enlaces entre objetos, con los mensajes numerados en secuencia | ![Ejemplo de diagrama de comunicacion](media/image36.png){width=75%} |
-| **De tiempos** *(interacción)* | Evolución del estado o valor de uno o varios objetos a lo largo de un eje temporal (formas de onda) | ![Ejemplo de diagrama de tiempos](media/image37.png){width=95%} |
-| **Global de interacciones** *(interacción)* | Combina el diagrama de actividades con diagramas de interacción anidados para mostrar secuencias completas | ![Ejemplo de diagrama global de interacciones](media/image38.png){width=55%} |
+| Diagrama | Descripción |
+| :------------- | :------------------------------------------ |
+| **De actividades** (o de flujo) | Flujos de trabajo paso a paso, con decisiones, bifurcaciones y uniones; representa procesos y algoritmos |
+| **De casos de uso** | Interacciones entre los actores y el sistema; visión general de la funcionalidad requerida |
+| **De máquina de estados** | Estados por los que pasa un objeto y transiciones entre ellos ante eventos |
+| **De secuencia** *(interacción)* | Intercambio de mensajes entre objetos ordenado en el tiempo, sobre líneas de vida |
+| **De comunicación** *(interacción)* | Interacción centrada en los enlaces entre objetos, con los mensajes numerados en secuencia |
+| **De tiempos** *(interacción)* | Evolución del estado o valor de uno o varios objetos a lo largo de un eje temporal (formas de onda) |
+| **Global de interacciones** *(interacción)* | Combina el diagrama de actividades con diagramas de interacción anidados para mostrar secuencias completas |
+
+![Ejemplo de diagrama de actividades](media/uml-actividades.png){width=70%}
+
+![Ejemplo de diagrama de casos de uso](media/uml-casos-de-uso.png){width=70%}
+
+![Ejemplo de diagrama de máquina de estados](media/uml-maquina-estados.png){width=70%}
+
+![Ejemplo de diagrama de secuencia](media/uml-secuencia.png){width=70%}
+
+![Ejemplo de diagrama de comunicación](media/uml-comunicacion.png){width=70%}
+
+![Ejemplo de diagrama de tiempos](media/uml-tiempos.png){width=70%}
+
+![Ejemplo de diagrama global de interacciones](media/uml-global-interacciones.png){width=90%}
 
 ### Notación del modelado estructural
 
@@ -137,6 +165,8 @@ Las **relaciones** entre clasificadores y su notación:
 | **Composición** | Rombo relleno (negro) en el «todo» | Relación todo-parte fuerte: la parte no existe sin el todo (si desaparece la Empresa, desaparecen sus Facturas) |
 | **Generalización (herencia)** | Flecha de triángulo hueco hacia la superclase | Las subclases heredan estructura y comportamiento |
 | **Realización** | Flecha discontinua de triángulo hueco | Una clase implementa el contrato de una interfaz |
+
+![Notación de las seis relaciones entre clasificadores, con un ejemplo de cada una](media/uml-relaciones-notacion.png){width=100%}
 
 En código, la diferencia entre agregación y composición está en quién controla el ciclo de vida del objeto contenido:
 

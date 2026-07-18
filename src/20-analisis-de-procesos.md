@@ -28,7 +28,7 @@ Conceptos asociados:
 - **Diagrama de proceso (flujograma)**: describe la secuencia de actividades internas de un proceso; puede organizarse en carriles según el responsable de cada actividad.
 - **Ficha de proceso**: documento que recoge los componentes principales de un proceso (propietario, objetivo, alcance, entradas y salidas, indicadores, acciones de mejora). Suele estructurarse según el ciclo **PDCA** (planear, hacer, verificar, actuar).
 
-![Ficha de proceso tipo, organizada según el ciclo PDCA](media/image5.png)
+![Ficha de proceso tipo, organizada según el ciclo PDCA](media/ficha-proceso-pdca.png){width=100%}
 
 ### El diagrama de flujo de datos (DFD)
 
@@ -45,7 +45,7 @@ Componentes (notación Yourdon/DeMarco):
 
 **Reglas de conexión**: todo flujo de datos nace o termina en un proceso. Son válidas las conexiones entidad-proceso (E-P), proceso-proceso (P-P) y proceso-almacén (P-A, en lectura o escritura); están prohibidas entidad-entidad, entidad-almacén y almacén-almacén.
 
-![DFD elemental: un almacén alimenta el proceso del sistema, cuya salida llega al cliente](media/image7.png)
+![DFD elemental: un almacén alimenta el proceso del sistema, cuya salida llega al cliente](media/image7.png){width=90%}
 
 **Niveles** (descomposición descendente):
 
@@ -54,7 +54,7 @@ Componentes (notación Yourdon/DeMarco):
 - **Niveles de detalle (2 y siguientes)**: explosión de cada proceso hasta llegar a procesos primitivos, que se describen mediante una especificación de proceso.
 - **Equilibrado (balancing)**: al explotar un proceso, los flujos que entran y salen de él deben conservarse en el nivel inferior.
 
-![Ejemplo de diagrama de contexto (nivel 0) de un sistema de pedidos](media/image12.png){width=85%}
+![Ejemplo de diagrama de contexto (nivel 0) de un sistema de pedidos](media/dfd-contexto-pedidos.png){width=95%}
 
 ### Diccionario de datos
 
@@ -120,11 +120,9 @@ BPMN 2.0 organiza sus elementos en **cinco categorías**: objetos de flujo, dato
     - **Carril (lane)**: subdivisión de la piscina que organiza las actividades por rol, función o departamento.
 - **Artefactos**: información adicional que no afecta al flujo: **grupo** (recuadro discontinuo que agrupa elementos) y **anotación** (texto explicativo).
 
-![Símbolos básicos de BPMN: eventos, actividades, compuertas y conexiones](media/image16.png)
+![Símbolos básicos de BPMN: eventos, actividades, compuertas, conexiones, carriles y artefactos](media/bpmn-simbolos.png){width=100%}
 
-![Carriles de nado, objetos de datos, grupos y anotaciones en BPMN](media/image18.png)
-
-![Ejemplo de proceso BPMN: evento inicial de mensaje, temporizador, compuerta exclusiva y objeto de datos](media/image17.jpeg){width=70%}
+![Ejemplo de proceso BPMN: evento inicial de mensaje, temporizador, compuerta exclusiva y objeto de datos](media/bpmn-ejemplo-proceso.png){width=100%}
 
 ### Niveles del modelo de procesos
 
@@ -187,6 +185,8 @@ Requisitos:
     - **2. Evaluar solicitud**: remite el *expediente a evaluar* al departamento urbanístico, recibe su *informe técnico*, actualiza el estado en A1 y traslada el *dictamen* al proceso 3.
     - **3. Emitir resolución**: genera la *resolución* (aprobada o denegada), la registra en A1 y la comunica al ciudadano.
 - **Comprobación de las reglas**: todos los flujos nacen o terminan en un proceso (no hay conexiones entidad-entidad ni entidad-almacén) y los flujos externos del nivel 1 coinciden con los del nivel 0 (equilibrado).
+
+![DFD de nivel 1 del sistema de licencias urbanísticas: tres procesos, el almacén A1 y las dos entidades externas](media/dfd-nivel1-licencias.png){width=100%}
 
 **3. Diccionario de datos.**
 
