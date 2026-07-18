@@ -74,6 +74,48 @@ El centro de proceso de datos tiene su propia norma de infraestructura (**ANSI/T
 
 El 802.3bt alimenta por los **cuatro pares** y exige atención al calentamiento de los mazos de cables y al desequilibrio de resistencia DC; con cargas PoE altas se recomienda cableado de categoría 6A y limitar el tamaño de los mazos.
 
+## Supuesto práctico: diseño del cableado estructurado de un edificio
+
+**Enunciado**: una conselleria rehabilita para oficinas un edificio de **4 plantas** de unos **1.000 m²** cada una, con **60 puestos de trabajo por planta**. Además, cada planta necesita **8 puntos de acceso Wi-Fi**, **4 cámaras IP** y unas **8 tomas** para impresoras y salas de reuniones. La telefonía es IP y debe alimentarse por el propio cableado, igual que los AP y las cámaras. A **250 m**, en otro edificio del mismo recinto, está la sala técnica principal con el enlace al CPD corporativo. Se exige una vida útil de al menos **15 años** y la certificación del 100 % de la instalación.
+
+**Se pide**:
+
+- a) Dimensionar las tomas y elegir la categoría del cableado horizontal.
+- b) Definir los subsistemas, repartidores y topología.
+- c) Diseñar el troncal de edificio y el enlace de campus.
+- d) Dimensionar la electrónica de acceso y el PoE.
+- e) Establecer el plan de certificación y administración.
+
+**Resolución**:
+
+**a) Tomas y categoría del horizontal**
+
+- **Tomas por planta**: 60 puestos × **2 tomas** (voz IP y datos, la práctica habitual) = 120; más 8 AP con 2 tomas cada uno (16, previendo enlaces agregados futuros), 4 cámaras y 8 tomas comunes: **148 tomas**. Con una **reserva del ~20 %** resultan unas **180 tomas por planta**, parcheadas en **8 paneles de 24 puertos**, y en torno a **720 en el edificio**.
+- **Categoría**: **6A / clase EA** (10GBASE-T hasta 100 m), el mínimo razonable en obra nueva con 15-25 años de vida útil; en mazos densos con PoE conviene cable **apantallado (F/UTP)**, que elimina el problema de la diafonía exógena y disipa mejor el calor.
+- **Distancias**: con el repartidor centrado en cada planta de 1.000 m², ningún enlace permanente se acerca al límite de **90 m** (canal de 100 m con latiguillos).
+
+**b) Subsistemas y topología**
+
+- **Estrella jerárquica** normalizada (ANSI/TIA-568 e ISO/IEC 11801): acometida de operadores en planta baja; **repartidor de edificio** en la sala técnica de planta baja; un **cuarto de telecomunicaciones por planta** (repartidor de planta) con acceso controlado, alimentación protegida por SAI y ventilación; subsistema horizontal **sin empalmes ni derivaciones** hasta la toma; área de trabajo con latiguillos de fábrica.
+- **Armarios**: rack de 19" por planta con paneles de parcheo, guías pasahilos, electrónica de acceso y espacio de reserva; separación de recorridos respecto del cableado eléctrico según **EN 50174-2**.
+
+**c) Troncal y enlace de campus**
+
+- **Troncal vertical**: fibra multimodo **OM4** (sobrada para 10/40 Gbps en distancias de edificio) desde el repartidor de edificio a cada planta, **12 fibras por planta** con conectividad **LC**; no se tiende multipar telefónico porque toda la voz es IP.
+- **Enlace de campus (250 m)**: fibra **monomodo OS2** de exterior (holgura para 100 Gbps futuros), tendida por **dos rutas físicas separadas** para tolerar un corte; OM4 alcanzaría (10 Gbps hasta 550 m), pero OS2 es la elección correcta a 15-25 años vista.
+- **Puesta a tierra**: sistema de tierra de telecomunicaciones y continuidad de pantallas (*bonding*) en toda la instalación apantallada.
+
+**d) Electrónica de acceso y PoE**
+
+- **Por planta**: para unas 148 tomas activas previstas, **4 conmutadores apilados de 48 puertos** (192 puertos) con uplinks redundantes de **2 × 10 Gbps** (SFP+) hacia el núcleo por caminos físicos distintos.
+- **PoE**: teléfonos IP y cámaras con **802.3af** (15,4 W); AP Wi-Fi 6/6E con **802.3at** (30 W) o **802.3bt** los de gama alta (tema [76](76-redes-inalambricas-y-5g.md)). Se comprueba el **presupuesto PoE** de cada conmutador (por ejemplo, 740 W) frente a la suma de cargas, y el SAI del armario se dimensiona incluyendo ese consumo.
+
+**e) Certificación y administración**
+
+- **Cobre**: certificación del **100 % de los enlaces permanentes** a **clase EA** con certificador de campo: mapa de hilos, longitud, pérdida de inserción, NEXT/PS-NEXT, ACR-F, pérdida de retorno, retardo y desfase, resistencia DC y su desequilibrio (crítico con PoE) y **diafonía exógena**; informe por toma como condición de recepción de la obra.
+- **Fibra**: pérdida del enlace con **OLTS** en las longitudes de onda de trabajo (850/1300 nm en OM4; 1310/1550 nm en OS2) y **OTDR** para documentar cada tramo del enlace de campus.
+- **Administración (ANSI/TIA-606)**: identificador único por toma, panel, cable y armario, etiquetado en ambos extremos, registros *as-built* y actualización obligatoria con cada cambio.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - ANSI/TIA-568: TIA-568.0-E/568.1-E y **ANSI/TIA-568.2-E** (cableado de par trenzado, octubre de 2024); ANSI/TIA-606 (administración) y ANSI/TIA-942 (CPD), citadas por edición (normas de pago).

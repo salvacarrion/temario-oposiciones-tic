@@ -79,6 +79,63 @@ HL7 v3 (edición normativa inicial en **2005**) replanteó la mensajería desde 
 | Adopción | Dominante en hospitales | Muy limitada (sobrevive vía CDA) |
 | Coste de implantación | Bajo | Alto |
 
+## Supuesto práctico: integración del laboratorio mediante mensajería HL7
+
+**Enunciado**: un hospital sustituye su sistema de laboratorio (**LIS**). El nuevo LIS debe recibir del **HIS** los movimientos de pacientes, recibir de la historia clínica electrónica (HCE) las peticiones de analítica y devolver los resultados validados, todo a través del **motor de integración** corporativo con mensajería **HL7 v2.5.1**. Durante las pruebas se captura este mensaje emitido por el LIS:
+
+```text
+MSH|^~\&|LIS|HOSP_LA_FE|HIS|HOSP_LA_FE|20260718083000||ORU^R01|000456|P|2.5.1
+PID|1||12345678^^^SIP||García López^Ana||19800413|F
+PV1|1|I|MI^301^A|||||1122^Pérez^Juan|MED
+OBR|1|HCE-9871|LAB-4432|2345-7^Glucosa en suero^LN|||20260718073000
+OBX|1|NM|2345-7^Glucosa^LN||142|mg/dL|70-110|H|||F
+NTE|1||Extracción en ayunas
+```
+
+**Se pide**:
+
+- a) Interpretar el mensaje capturado.
+- b) Definir los flujos de mensajería del circuito petición-resultado.
+- c) Diseñar la integración en el motor.
+- d) Señalar los aspectos semánticos y de protección de datos.
+
+**Resolución**:
+
+**a) Interpretación del mensaje**
+
+- **MSH**: el LIS envía al HIS del centro HOSP_LA_FE, el 18-jul-2026 a las 08:30, un mensaje **ORU^R01** (resultado de observación), con id de control 000456, en producción (**P**) y versión **2.5.1**.
+- **PID**: paciente Ana García López, nacida el 13-abr-1980, sexo F, identificada por su número **SIP** 12345678.
+- **PV1**: ingresada (**I**) en Medicina Interna, habitación 301, cama A; médico responsable 1122 (Pérez, Juan).
+- **OBR**: la petición está identificada por el peticionario (*placer*) como **HCE-9871** y por el laboratorio (*filler*) como **LAB-4432**; la prueba «glucosa en suero» va codificada en **LOINC** (`2345-7`, sistema `LN`); la muestra se extrajo a las 07:30.
+- **OBX**: un único resultado **numérico (NM)**: **142 mg/dL**, rango de referencia **70-110**, marcado **H** (alto) y en estado **F** (final, validado; sería P si fuera preliminar y C si corrigiera uno anterior).
+- **NTE**: nota de texto libre («Extracción en ayunas»).
+
+**b) Flujos de mensajería**
+
+| Flujo | Mensajes HL7 | Sentido |
+| --- | --- | --- |
+| Sincronización de pacientes y episodios | **ADT**: A01 ingreso, A02 traslado, A03 alta, A08 actualización, **A40 fusión de pacientes** | HIS → LIS |
+| Petición de analítica | **ORM^O01** (u OML en perfiles más recientes) | HCE → LIS |
+| Respuesta y estado de la petición | ORR, ACK | LIS → HCE |
+| Resultados (preliminares, finales y correcciones) | **ORU^R01** | LIS → HCE y HIS |
+| Citas de extracción (si aplica) | SIU | Citación → LIS |
+
+Todos los intercambios se confirman con **ACK**. El evento **A40** (fusión de pacientes duplicados) es crítico: si el LIS no lo procesa, quedan resultados colgados de historias duplicadas.
+
+**c) Diseño en el motor de integración**
+
+- **Un canal por flujo** (ADT, peticiones, resultados): entrada y salida por **MLLP** sobre TCP contra cada sistema, de modo que LIS, HIS y HCE mantienen **una única interfaz** con el bus en lugar de integraciones punto a punto.
+- **Transformación**: el mapeo entre «dialectos» (versiones 2.3 a 2.5.1, tablas de códigos de servicios y unidades) se hace en el motor, no en las aplicaciones.
+- **Enrutamiento**: por tipo y evento (campo MSH-9) y por contenido (por ejemplo, reenviar al LIS solo los ADT de hospitalización).
+- **Garantía de entrega**: colas persistentes con reintentos, gestión de los ACK, alertas por cola detenida o tasa anómala de errores, y **trazabilidad** completa de mensajes para auditoría y reenvío.
+- **Implantación**: pruebas en preproducción con juegos de mensajes reales **anonimizados**, prueba de carga (pico matinal de extracciones), arranque con plan de contingencia (circuito manual) y marcha atrás definida.
+
+**d) Semántica y protección de datos**
+
+- **Semántica**: catálogo maestro de pruebas codificado en **LOINC** y unidades normalizadas (**UCUM**); diagnósticos en SNOMED CT o CIE-10-ES (tema [92](92-normalizacion-en-informatica-sanitaria.md)). Sin acuerdo semántico la integración sintáctica «funciona», pero los datos no son comparables ni explotables.
+- **Protección de datos**: datos de salud, de **categoría especial** (art. 9 RGPD, tema [53](53-proteccion-de-datos-personales.md)): transporte cifrado (MLLP sobre TLS o red segregada), acceso restringido al motor, registro de actividad, minimización de campos y datos anonimizados en los entornos de prueba.
+- **Disponibilidad**: el bus es un punto único de fallo: motor de integración en **alta disponibilidad** y monitorización 24x7.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - HL7 Messaging Standard v2.x, HL7 International (v2.9 publicada en 2019; última versión v2.9.1; verificado online en julio de 2026).

@@ -1,6 +1,6 @@
 # Redes de computadores
 
-Una red de computadores es un conjunto de equipos (nodos) interconectados mediante dispositivos físicos y software que intercambian datos a través de impulsos eléctricos, ondas electromagnéticas u otros medios, con el fin de compartir información, recursos y servicios. Este tema cubre los elementos y clasificaciones de las redes, las redes de área local (Ethernet, VLAN, DMZ), las redes de área extensa y el direccionamiento IP con su caso práctico. Los protocolos de cada capa se estudian en el tema [70](70-protocolos-de-comunicaciones.md), las redes inalámbricas en el 72 y la seguridad de red en el 75.
+Una red de computadores es un conjunto de equipos (nodos) interconectados mediante dispositivos físicos y software que intercambian datos a través de impulsos eléctricos, ondas electromagnéticas u otros medios, con el fin de compartir información, recursos y servicios. Este tema cubre los elementos y clasificaciones de las redes, las redes de área local (Ethernet, VLAN, DMZ), las redes de área extensa y el direccionamiento IP con su supuesto práctico. Los protocolos de cada capa se estudian en el tema [70](70-protocolos-de-comunicaciones.md), las redes inalámbricas en el 72 y la seguridad de red en el 75.
 
 ## Componentes, topologías y dispositivos de interconexión
 
@@ -151,7 +151,7 @@ Una dirección IPv4 son **32 bits** divididos en dos partes: la que identifica l
 - **NAT/PAT**: la traducción de direcciones de red permite que una red privada salga a Internet con una o pocas IP públicas; **PAT** (NAT con sobrecarga) multiplexa muchas conexiones sobre una sola IP distinguiéndolas por el puerto. Ha sido el gran paliativo del agotamiento de IPv4.
 - **Direccionamiento IPv6** (tema [70](70-protocolos-de-comunicaciones.md)): prefijos habituales **/64** por subred; direcciones **link-local** (fe80::/10, autoconfiguradas en cada interfaz), **ULA** (fc00::/7, el equivalente a las privadas), **unicast globales** (2000::/3) y **multicast** (ff00::/8); no existe el broadcast.
 
-## Caso práctico: cálculo de subredes
+## Supuesto práctico: cálculo de subredes
 
 **Enunciado**: dividir la red **192.168.48.0** con máscara **255.255.255.0** en **4 subredes**.
 

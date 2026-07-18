@@ -186,7 +186,7 @@ La IA distribuida agrupa dos enfoques complementarios: los sistemas de múltiple
 - **Aprendizaje federado** (Google, **2017**, algoritmo FedAvg): entrenar un modelo común sin centralizar nunca los datos. Cada nodo (un hospital, un móvil) entrena localmente y comparte solo actualizaciones de pesos, que un servidor agrega en rondas sucesivas. Casos típicos: teclados predictivos móviles y colaboración entre hospitales sin ceder historias clínicas. Retos: heterogeneidad de datos y dispositivos, coste de comunicación y una privacidad que no es absoluta (las actualizaciones pueden filtrar información, por lo que se combina con agregación segura y privacidad diferencial).
 - **Edge AI**: ejecución de modelos compactos directamente en el dispositivo (NPU de móviles y portátiles), que aporta latencia mínima, funcionamiento sin conexión y privacidad por diseño.
 
-## Caso práctico: dimensionamiento del despliegue de un LLM
+## Supuesto práctico: dimensionamiento del despliegue de un LLM
 
 *Enunciado*: una Administración quiere un asistente interno sobre documentación sensible que no puede salir de su infraestructura. Se plantea servir on-premise un modelo de pesos abiertos de **70.000 millones de parámetros** (clase Llama 70B) para ~50 usuarios con contextos de hasta 32.000 tokens. Dimensionar memoria, hardware y consumo, y comparar con el uso de una API externa.
 

@@ -118,6 +118,53 @@ Una aplicación web rara vez vive aislada: consume y expone APIs, se integra con
 - **HTTP/2 y HTTP/3**: multiplexación de peticiones sobre una conexión (HTTP/2) y transporte **QUIC** sobre UDP (HTTP/3), que reducen la latencia de carga; se detallan en el tema [70](70-protocolos-de-comunicaciones.md).
 - **HTTPS/TLS**: el cifrado del canal es hoy requisito por defecto de cualquier aplicación web; la criptografía y la seguridad de las comunicaciones se tratan en los temas [64](64-criptografia.md) y [79](79-seguridad-en-las-comunicaciones.md).
 
+## Supuesto práctico: arquitectura de una aplicación web de cita previa
+
+**Enunciado**: una Administración autonómica necesita una aplicación de **cita previa** para su red de oficinas de asistencia: la ciudadanía reserva, consulta y anula citas desde la web y el móvil, y el personal gestiona agendas y calendarios. Requisitos: **200.000 usuarios al mes** con picos de **500 peticiones por segundo** al abrirse las agendas más demandadas; disponibilidad del **99,9 %**; datos personales en sistemas de **categoría MEDIA** del ENS; el equipo de desarrollo domina **Java/Spring** y la plataforma corporativa es un clúster de **Kubernetes** en nube privada.
+
+**Se pide**:
+
+- a) Proponer la arquitectura lógica y el modelo de renderizado del front-end.
+- b) Diseñar el back-end y su API, incluida la gestión del estado.
+- c) Resolver la escalabilidad y la alta disponibilidad para los picos.
+- d) Plantear la seguridad y las integraciones.
+- e) Definir entornos, despliegue y observabilidad.
+
+**Resolución**:
+
+**a) Arquitectura lógica y front-end**
+
+- **Tres capas** desplegadas en niveles separados: presentación (front-end en el navegador), lógica de negocio (API en el clúster) y datos (SGBD), de modo que cada nivel escala por separado y la base de datos nunca se expone al cliente.
+- **Front-end**: **SPA** basada en componentes (React o Angular, este último frecuente en entornos corporativos) que consume la API JSON. Para la parte pública (información, primera carga) conviene un enfoque **híbrido con SSR o SSG**, que acelera la primera carga y facilita el posicionamiento; el área de reservas funciona como SPA (CSR). La accesibilidad es obligación legal (RD 1112/2018, tema [58](58-accesibilidad-y-usabilidad.md)) y se valida desde el diseño.
+- **Contenido estático** (aplicación JavaScript, imágenes) servido desde el proxy inverso o la CDN, no desde la aplicación.
+
+**b) Back-end y API**
+
+- **API REST** con Spring Boot: recursos (`/oficinas`, `/franjas`, `/citas`), verbos y códigos HTTP con semántica estándar, versionado (`/v1`) y especificación **OpenAPI** publicada, reutilizable por la app móvil o por terceros (tema [40](40-apis-y-apificacion.md)).
+- **Sin estado (stateless)**: cualquier instancia atiende cualquier petición; la sesión y la caché se externalizan a **Redis** y la autenticación viaja en **tokens JWT** de corta duración.
+- **Persistencia**: **PostgreSQL** con **JPA/Hibernate**, **pool de conexiones** (imprescindible bajo carga) y vigilancia de las consultas N+1.
+- **Integridad de la reserva**: la asignación de franja es transaccional, con **restricción de unicidad** (oficina, franja) y bloqueo optimista: dos usuarios no pueden quedarse la misma cita.
+
+**c) Escalabilidad y alta disponibilidad**
+
+- **Escalado horizontal**: réplicas stateless tras el balanceador (Ingress); **autoescalado** por CPU y latencia (por ejemplo, entre 4 y 12 réplicas si cada instancia sostiene del orden de 100-150 peticiones por segundo con margen).
+- **Absorber el pico de 500 peticiones/s**: la consulta de disponibilidad (la operación masiva) se sirve desde la **caché Redis con TTL corto**; **limitación de tasa** por usuario en el punto de entrada y, para campañas extremas, sala de espera virtual que encola el exceso.
+- **Sin punto único de fallo**: al menos **2 réplicas** de cada componente en nodos distintos, base de datos con **réplica** y conmutación, Redis en clúster y despliegues **rolling update** sin corte. El objetivo del 99,9 % admite unas **8,8 horas** de indisponibilidad al año: exige redundancia y ensayo de los fallos, no infraestructura exótica.
+- **Asíncrono**: la confirmación por correo o SMS sale por una **cola de mensajería** (RabbitMQ): un envío lento no bloquea la reserva.
+
+**d) Seguridad e integraciones**
+
+- **Perímetro**: TLS en todo el recorrido, **WAF** delante del balanceador, cabeceras de seguridad y desarrollo conforme a OWASP (tema [32](32-desarrollo-seguro-de-aplicaciones.md)).
+- **Identidad**: la ciudadanía se identifica con **Cl@ve** o certificado a través de **OIDC** contra el proveedor de identidad corporativo (tema [65](65-identificacion-y-firma-electronica.md)); el personal, contra el directorio corporativo (LDAP/AD) con el mismo patrón OIDC o SAML.
+- **ENS categoría MEDIA**: registro de actividad centralizado, control de acceso por perfiles y copias y continuidad heredadas de la plataforma; **minimización** de datos personales (solo los necesarios para la cita) conforme al RGPD (tema [53](53-proteccion-de-datos-personales.md)).
+- **Integraciones**: API y webhooks con el sistema de gestión de turnos de las oficinas y con la pasarela de avisos SMS.
+
+**e) Entornos, despliegue y observabilidad**
+
+- **Tres entornos** (desarrollo, preproducción y producción) idénticos y definidos como código.
+- **CI/CD** (tema [26](26-control-de-versiones-integracion-continua-y-devops.md)): pipeline con compilación, pruebas, análisis estático, construcción de la imagen de contenedor y despliegue declarativo en Kubernetes (tema [44](44-virtualizacion-y-contenedores.md)).
+- **Observabilidad**: métricas (Prometheus/Grafana), logs centralizados y trazas distribuidas; **pruebas de carga** antes de cada campaña, simulando al menos el doble del pico previsto (1.000 peticiones por segundo).
+
 ## Fuentes {.unnumbered .unlisted}
 
 - MDN Web Docs (Mozilla): referencia de tecnologías y arquitectura web (consulta: julio de 2026).

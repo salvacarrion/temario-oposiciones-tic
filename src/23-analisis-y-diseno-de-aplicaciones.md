@@ -165,7 +165,7 @@ Principios de un buen diseño:
 - **Ocultación de información** (Parnas): cada módulo esconde sus decisiones internas tras una interfaz estable.
 - **Separación de intereses** (*separation of concerns*): aspectos distintos (presentación, negocio, datos) en elementos distintos.
 
-## Caso práctico: diagramas de casos de uso y de actividades
+## Supuesto práctico 1: diagramas de casos de uso y de actividades
 
 ### Enunciado
 
@@ -205,6 +205,45 @@ En notación UML completa, el diagrama incorpora además un **nodo inicial** (c�
 
 ![](media/image22.png)
 
+## Supuesto práctico 2: estimación por puntos de función
+
+El **análisis de puntos de función** (Albrecht, IBM, **1979**; método **IFPUG**, normalizado como **ISO/IEC 20926**) mide el **tamaño funcional** del software desde la perspectiva del usuario, con independencia de la tecnología, y es la base habitual para estimar esfuerzo, plazo y coste (es la técnica que subyace a herramientas corporativas de estimación como gvEstima, tema [19](19-direccion-y-gestion-de-proyectos.md)). Se cuentan cinco tipos de funciones, ponderadas por complejidad:
+
+| Componente | Qué mide | Simple | Media | Compleja |
+| --- | --- | :---: | :---: | :---: |
+| **EI** (entrada externa) | Proceso que introduce o modifica datos | 3 | 4 | 6 |
+| **EO** (salida externa) | Salida con elaboración o cálculo (informes) | 4 | 5 | 7 |
+| **EQ** (consulta externa) | Recuperación de datos sin cálculo | 3 | 4 | 6 |
+| **ILF** (fichero lógico interno) | Grupo de datos mantenido por la aplicación | 7 | 10 | 15 |
+| **EIF** (fichero de interfaz externo) | Grupo de datos de otra aplicación, solo consultado | 5 | 7 | 10 |
+
+Los **puntos de función sin ajustar (PFSA)** se multiplican por el **factor de ajuste**: VAF = 0,65 + 0,01 × ΣGSC, donde ΣGSC es la suma de las **14 características generales del sistema** (comunicaciones de datos, procesamiento distribuido, rendimiento, facilidad de uso, reutilización, facilidad de cambio...), valoradas de **0 a 5**; el factor queda así entre **0,65 y 1,35**.
+
+### Enunciado
+
+Se estima una aplicación de **gestión de ayudas** con estas funciones: registro de solicitudes (entrada compleja), modificación de solicitudes (entrada media) y alta de solicitantes (entrada simple); generación de resoluciones (salida media) e informe estadístico anual (salida compleja); consulta del estado de una solicitud (consulta simple) y consulta del histórico (consulta media). Datos: fichero de solicitudes (interno, complejidad media), fichero de solicitantes (interno, simple) y verificación de identidad contra la Plataforma de Intermediación de Datos (fichero externo, simple). La valoración de las 14 características generales suma **42** puntos. La organización tiene una productividad histórica de **8 horas por punto de función**, jornadas efectivas de **130 horas/mes** por persona y una tarifa media de **50 €/hora**. Se pide: calcular los puntos de función ajustados y estimar esfuerzo, plazo (con un equipo de 2 personas) y coste.
+
+### Resolución
+
+**1. Puntos de función sin ajustar**:
+
+| Tipo | Funciones contadas | Cálculo | Subtotal |
+| --- | --- | --- | :---: |
+| EI | Registro (compleja), modificación (media), alta de solicitante (simple) | 6 + 4 + 3 | 13 |
+| EO | Resoluciones (media), informe anual (compleja) | 5 + 7 | 12 |
+| EQ | Estado (simple), histórico (media) | 3 + 4 | 7 |
+| ILF | Solicitudes (media), solicitantes (simple) | 10 + 7 | 17 |
+| EIF | Identidad vía PID (simple) | 5 | 5 |
+| **PFSA** | | | **54** |
+
+**2. Ajuste**: VAF = 0,65 + 0,01 × 42 = **1,07**; puntos de función ajustados = 54 × 1,07 = 57,8 ≈ **58 PF**.
+
+**3. Esfuerzo**: 58 PF × 8 h/PF = **464 horas**.
+
+**4. Plazo y coste**: con **2 personas** a 130 h/mes efectivas, 464 / (2 × 130) ≈ **1,8 meses**; coste estimado: 464 h × 50 €/h = **23.200 €**. Debe explicitarse qué cubre el ratio de productividad: si solo la construcción, el plazo total añade análisis, pruebas e implantación; si es de ciclo completo, ya lo incluye.
+
+- **Observaciones**: la fiabilidad depende de usar **ratios históricos propios** por tecnología, no valores de manual; los puntos de función miden **tamaño**, y su conversión a esfuerzo puede refinarse con modelos paramétricos como **COCOMO II** (esfuerzo = a × tamaño^b × factores de coste); la estimación se revisa al cerrar el análisis, cuando el cono de incertidumbre se estrecha.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - ISO/IEC/IEEE 12207:2017, *Systems and software engineering. Software life cycle processes*.
@@ -216,3 +255,4 @@ En notación UML completa, el diagrama incorpora además un **nodo inicial** (c�
 - Cohn, M., *User Stories Applied*, Addison-Wesley, 2004; Wake, B., criterios INVEST, 2003.
 - Sommerville, I., *Software Engineering*, 10.ª ed., Pearson, 2016.
 - Pressman, R. y Maxim, B., *Software Engineering: A Practitioner's Approach*, 9.ª ed., McGraw-Hill, 2020.
+- IFPUG, *Function Point Counting Practices Manual*, versión 4.3.1 (2010); ISO/IEC 20926:2009 (medición del tamaño funcional, método IFPUG).

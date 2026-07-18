@@ -104,6 +104,67 @@ La gobernanza TIC de la AGE se renovó por completo a finales de 2024, sustituye
 - **Plan de Digitalización de las Administraciones Públicas 2021-2025**: estrategia de administración digital dentro de la agenda **España Digital 2026**, financiada por el Plan de Recuperación; sus **tres ejes** eran la transformación digital de la AGE, los proyectos tractores sectoriales (sanidad, justicia, empleo) y la digitalización de CCAA y EELL. Su informe de balance se presentó en 2026 y la planificación pasa a articularse mediante la Estrategia TIC del RD 1125/2024.
 - **Contraste con la GVA**: la AGE combina un órgano ejecutivo común (AEAD) con unidades TIC departamentales coordinadas por la CETIC; la Generalitat concentra la competencia en la DGTIC (ver tema [80](80-agenda-digital-valenciana.md)).
 
+## Supuesto práctico: elaboración de un plan estratégico TIC
+
+**Enunciado**: un organismo autónomo de la Generalitat con **1.500 empleados** encarga a su nueva jefatura de servicio de informática un **plan estratégico TIC 2027-2029**. Situación de partida: unas **40 aplicaciones** desarrolladas sin arquitectura común (varias sobre tecnologías fuera de soporte), tramitación aún parcialmente en papel, adecuación al ENS sin completar, proyectos que se aprueban caso a caso sin cartera priorizada y presupuesto TIC disperso entre unidades. La dirección quiere alinear las TIC con su plan de gestión (mejorar el servicio al ciudadano, reducir cargas, cumplir la normativa) y aprovechar los servicios comunes de la DGTIC.
+
+**Se pide**:
+
+- a) Metodología y fases de elaboración del plan.
+- b) Diagnóstico de la situación actual.
+- c) Modelo objetivo: líneas estratégicas y cartera de proyectos priorizada.
+- d) Gobernanza del plan, cuadro de mando y seguimiento.
+
+**Resolución**:
+
+**a) Metodología y fases**
+
+Se adapta el proceso de **Plan de Sistemas de Información** de Métrica v3, con horizonte de **3 años** y revisión anual:
+
+1. **Inicio**: alcance (todo el organismo, con enfoque **por procesos**, no por unidades), patrocinio explícito de la dirección (factor crítico de éxito) y equipo mixto (dirección y profesionales de SI).
+2. **Estudio de la información relevante**: plan de gestión del organismo, normativa aplicable (Leyes 39 y 40/2015, ENS, RGPD, accesibilidad), estrategias superiores (Estrategia TIC de la AGE, agenda digital de la GVA) y catálogo de servicios comunes reutilizables.
+3. **Identificación de requisitos**: entrevistas y talleres por proceso de negocio.
+4. **Diagnóstico de la situación actual** (apartado b).
+5. **Modelo de SI objetivo**: arquitectura de información y arquitectura tecnológica.
+6. **Plan de acción**: cartera de proyectos priorizada, calendario, presupuesto y plan de mantenimiento del PSI.
+7. **Aprobación por la dirección** y comunicación a toda la organización.
+
+**b) Diagnóstico (DAFO)**
+
+| | Favorable | Desfavorable |
+| --- | --- | --- |
+| **Interno** | Fortalezas: equipo TIC con conocimiento del negocio; datos de gestión abundantes | Debilidades: obsolescencia tecnológica, 40 aplicaciones sin integrar, ENS incompleto, ausencia de gestión de cartera |
+| **Externo** | Oportunidades: servicios comunes de la DGTIC y del Estado, nube, fondos europeos, automatización e IA | Amenazas: ciberamenazas crecientes, dependencia de proveedores, dificultad para retener talento TIC, exigencia normativa |
+
+El diagnóstico se completa con el inventario valorado de aplicaciones e infraestructuras (criticidad, estado tecnológico, coste anual) y una evaluación de madurez (por ejemplo, con los niveles de capacidad de COBIT).
+
+**c) Modelo objetivo y cartera de proyectos**
+
+Se definen **4 líneas estratégicas** con objetivos medibles, y los proyectos se priorizan por **valor** (público y económico: coste-eficacia, VAN/TCO) frente a **esfuerzo y riesgo**, empezando por victorias rápidas (*quick wins*):
+
+| Línea estratégica | Proyectos (ejemplos) | Prioridad |
+| --- | --- | --- |
+| 1. Servicios digitales al ciudadano | Tramitación electrónica de extremo a extremo de los 10 procedimientos de mayor volumen; carpeta ciudadana | Alta |
+| 2. Modernización tecnológica | Racionalización de las 40 aplicaciones; retirada de tecnologías fuera de soporte; migración a la plataforma corporativa/nube | Alta |
+| 3. Seguridad y cumplimiento | Completar la adecuación al ENS (tema [29](29-esquema-nacional-de-seguridad.md)); continuidad de servicios | Alta (obligación normativa) |
+| 4. Gobierno del dato | Inventario y calidad del dato; cuadro de mando directivo | Media |
+
+Cada proyecto de la cartera se documenta con: objetivo, línea a la que sirve, coste (CAPEX/OPEX), beneficios esperados, riesgos, dependencias y calendario.
+
+**d) Gobernanza, cuadro de mando y seguimiento**
+
+- **Gobernanza** (ISO/IEC 38500): un **comité de dirección TIC** presidido por la dirección del organismo **evalúa, dirige y supervisa**; la ejecución de la cartera se encomienda a una **oficina de proyectos** (PMO, tema [19](19-direccion-y-gestion-de-proyectos.md)); la seguridad se reporta con independencia de la operación.
+- **Cuadro de mando integral** adaptado al sector público, con indicadores SMART por perspectiva:
+
+| Perspectiva | KPI (ejemplo) | Meta |
+| --- | --- | --- |
+| Ciudadano | % de tramitación electrónica de los procedimientos objetivo | > 90 % en 2029 |
+| Financiera (presupuesto) | Ejecución del presupuesto TIC; TCO de las aplicaciones racionalizadas | 100 %; reducción del 20 % |
+| Procesos internos | Disponibilidad de servicios críticos; % de proyectos en plazo y coste | 99,5 %; 80 % |
+| Aprendizaje y crecimiento | Horas de formación TIC por persona; puestos críticos cubiertos | 20 h/año; 100 % |
+
+- **Seguimiento**: cuadro de mando operativo mensual para el comité, revisión **anual** del plan (repriorización de la cartera según resultados y cambios normativos) y evaluación final que alimente el siguiente ciclo de planificación.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - ISO/IEC 38500:2024, *Information technology. Governance of IT for the organization*, 3.ª ed., febrero de 2024.

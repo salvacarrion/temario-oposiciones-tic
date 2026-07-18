@@ -138,6 +138,47 @@ La administración electrónica es también un instrumento de simplificación: r
     - **Análisis de impacto normativo**: la **Memoria del Análisis de Impacto Normativo (MAIN)** de todo proyecto normativo (RD 931/2017, modificado por la DF 3.ª del propio RD 203/2021) debe evaluar, entre otros extremos, el impacto en **cargas administrativas** y la adecuación al funcionamiento electrónico.
 - En el ámbito valenciano, la simplificación administrativa se regula hoy en el **Decreto 54/2025** y su guía MAIN autonómica (tema de administración electrónica de la GVA).
 
+## Supuesto práctico: digitalización de un procedimiento de extremo a extremo
+
+**Enunciado**: una Administración autonómica quiere tramitar íntegramente por medios electrónicos su procedimiento de **ayudas a pymes y personas trabajadoras autónomas**: solicitud con formulario y documentación acreditativa, subsanación, resolución y notificación. Hoy exige aportar certificados de estar al corriente con la AEAT y la TGSS y copia del documento de identidad. Los solicitantes son personas jurídicas, autónomos y gestorías que los representan. Debe diseñarse la solución conforme a la **Ley 39/2015** y al **RD 203/2021**, suprimiendo la aportación de documentos y archivando el expediente conforme al ENI.
+
+**Se pide**:
+
+- a) Determinar quiénes están obligados a relacionarse electrónicamente y la asistencia a los no obligados.
+- b) Diseñar la fase de solicitud: sede, identificación y firma, representación y registro.
+- c) Suprimir la aportación de documentos y diseñar la tramitación interna, incluida la actuación automatizada.
+- d) Diseñar la notificación, la resolución y el archivo del expediente.
+
+**Resolución**:
+
+**a) Obligados y asistencia**
+
+- **Obligados (art. 14.2 Ley 39/2015)**: las **personas jurídicas**, las entidades sin personalidad y quienes **representen a un obligado** (las gestorías, respecto de sus clientes obligados). Los autónomos, como personas físicas, **pueden elegir** el medio, salvo que ejerzan una actividad de colegiación obligatoria o que la convocatoria les imponga la vía electrónica al amparo del **art. 14.3** (colectivo con acreditado acceso y disponibilidad de medios electrónicos), lo que debe valorarse y motivarse en las bases.
+- **Asistencia a no obligados**: canales del art. 4 del RD 203/2021; en las **oficinas de asistencia en materia de registros** se digitaliza lo presentado en papel (la copia electrónica auténtica se incorpora al expediente y el papel se devuelve) y un **funcionario habilitado** puede identificar y firmar por el interesado con su **consentimiento expreso**, del que queda constancia.
+- **Presentación en papel por un obligado**: requerimiento de subsanación; de no atenderlo en **10 días**, se le tiene por desistido; si subsana, la **fecha de la subsanación** pasa a ser la de presentación de la solicitud.
+
+**b) Fase de solicitud**
+
+- **Sede electrónica**: el trámite se publica en la sede con el contenido mínimo del art. 11 (sistemas de identificación y firma admitidos, calendario de días inhábiles, modelo normalizado, plazos, e incidencias técnicas con eventual ampliación de plazos).
+- **Identificación y firma (arts. 26 y 29 RD 203/2021)**: se admiten el **certificado cualificado de firma**, el **certificado de sello** (personas jurídicas) y la **clave concertada (Cl@ve)**; los sistemas basados en certificado deben poder usarse en todo caso. El formulario incorpora **declaraciones responsables (art. 69 Ley 39/2015)** para los requisitos que no exijan acreditación documental, reduciendo cargas.
+- **Representación (art. 32)**: las gestorías acreditan el poder mediante el **registro electrónico de apoderamientos** (apoderamiento apud acta electrónico o presencial), **certificado cualificado de representante** o documento público notarial; el bastanteo consta en el registro.
+- **Registro (art. 37)**: la solicitud se asienta en el **Registro Electrónico General**, que emite un **recibo automático** con fecha y hora de presentación; lo presentado en oficinas de otras Administraciones viaja por el **SIR**.
+
+**c) Supresión de documentos y tramitación interna**
+
+- **Derecho a no aportar (art. 28 Ley 39/2015)**: no se exigen los certificados de la AEAT y la TGSS ni el documento de identidad: el órgano tramitador los obtiene mediante consulta a la **plataforma de intermediación de datos** (arts. 61-62 RD 203/2021), identificando datos, titulares y finalidad; las transmisiones tienen la **consideración de certificados administrativos**. La consulta procede **salvo oposición** del interesado (o con el consentimiento que exija la normativa tributaria específica), y su justificación se conserva en el expediente.
+- **Comprobación automatizada**: la verificación de los requisitos objetivos (estar al corriente, umbrales de la ayuda) puede configurarse como **actuación administrativa automatizada (art. 41 Ley 40/2015)**: exige establecer previamente el órgano competente y una resolución que la autorice, publicada en la sede junto a la relación de AAA con su diseño, funcionamiento y el **órgano responsable a efectos de impugnación**.
+- **Firma de la tramitación**: los documentos automatizados se firman con **sello de órgano** y llevan **CSV** verificable en sede (único por documento, comprobación directa y gratuita); los actos del personal, con su firma electrónica; las **copias auténticas** pueden expedirse de forma automatizada (art. 48.2).
+- **Subsanación**: cuando la solicitud esté incompleta, requerimiento con plazo de **10 días**.
+
+**d) Notificación, resolución y archivo**
+
+- **Notificación electrónica (art. 42)**: por **comparecencia en la sede electrónica**, mediante la dirección electrónica habilitada o por ambos sistemas (computando los efectos desde el primer acceso o rechazo). Se envía el **aviso** al dispositivo o correo comunicado, de carácter meramente informativo: su falta **no invalida** la notificación. Transcurridos **10 días naturales** desde la puesta a disposición sin acceder, el trámite se da por efectuado; la obligación de notificar dentro de plazo se cumple con la **puesta a disposición**.
+- **No obligados**: si no han elegido medio, en los procedimientos iniciados de oficio la primera notificación se practica **en papel**, advirtiendo de que las siguientes serán electrónicas si así lo eligen; su comparecencia voluntaria en sede tiene plenos efectos.
+- **Expediente y archivo (arts. 51-55)**: el expediente se folia mediante un **índice electrónico autenticado**; los documentos incorporan los formatos y metadatos del ENI (tema [55](55-documento-y-expediente-electronico.md)); el derecho de acceso del interesado se satisface con la **puesta a disposición** en la sede o la carpeta ciudadana; al finalizar el procedimiento, el expediente pasa al **archivo electrónico único**, con garantías de autenticidad, integridad, confidencialidad, disponibilidad y cadena de custodia conforme al ENI y al ENS.
+
+Las plataformas concretas que materializan cada pieza (plataforma de intermediación, SIR, Notific@, Cl@ve) se desarrollan en los temas [63](63-infraestructuras-y-servicios-comunes-de-interoperabilidad.md) y [65](65-identificacion-y-firma-electronica.md).
+
 ## Fuentes {.unnumbered .unlisted}
 
 - Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas (texto consolidado, última modificación 6 de noviembre de 2024).

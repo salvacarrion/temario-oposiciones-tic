@@ -151,6 +151,44 @@ El **RD 311/2022** (ENS, tema [29](29-esquema-nacional-de-seguridad.md)) exige l
 - Los procedimientos de respaldo indicarán: la **frecuencia** de las copias, los requisitos de almacenamiento **en el propio lugar** y **en otros lugares**, y los **controles de acceso autorizado** a las copias.
 - Refuerzos por nivel: **R1, pruebas de recuperación** periódicas (exigido desde nivel MEDIO) y **R2, protección de las copias**: al menos una copia separada en lugar diferente, de modo que un incidente no afecte a la vez al original y a la copia (nivel ALTO).
 
+## Supuesto práctico: dimensionamiento del almacenamiento y plan de copias
+
+**Enunciado**: un organismo debe renovar su almacenamiento y su plan de copias de seguridad. Datos actuales: base de datos de expedientes de **8 TB** (crítica: **RPO de 15 minutos y RTO de 4 horas**), servidor de ficheros de **30 TB** y otros sistemas con **2 TB** (ambos con **RPO y RTO de 24 horas**). Crecimiento anual del **20 %**, horizonte de diseño de **3 años** y ventana nocturna de copia de **8 horas**. Los sistemas son de **categoría MEDIA** del ENS con nivel MEDIO en disponibilidad, y se exige protección explícita frente al ransomware.
+
+**Se pide**:
+
+- a) Dimensionar la cabina: pools, niveles RAID y número de discos.
+- b) Definir la política de copias: tipos, frecuencia y retención.
+- c) Explicar cómo se alcanzan el RPO de 15 minutos y el RTO de 4 horas de la base de datos.
+- d) Verificar el cumplimiento de la regla 3-2-1 y del ENS.
+
+**Resolución**:
+
+**a) Dimensionamiento de la cabina**
+
+- **Capacidad a 3 años** (crecimiento compuesto: × 1,2³ = × 1,728): base de datos ≈ **13,8 TB**; ficheros ≈ **51,8 TB**; otros ≈ **3,5 TB**; total ≈ **69 TB**. Se diseña para una ocupación máxima del **80 %**.
+- **Pool de rendimiento (base de datos)**: SSD en **RAID 10**, la opción preferente para E/S intensiva: necesita 13,8 / 0,8 ≈ 17 TB útiles → **6 SSD de 7,68 TB** (23 TB útiles al 50 %).
+- **Pool de capacidad (ficheros y resto)**: necesita (51,8 + 3,5) / 0,8 ≈ 69 TB útiles → grupo **RAID 6 de 8 discos NL-SAS de 16 TB** (6+2: 96 TB útiles). Se descarta RAID 5: con discos de 16 TB la reconstrucción dura días y un segundo fallo durante ella perdería el conjunto.
+- **Hot spare**: al menos **1 disco de reserva** por tipo de disco, con reconstrucción automática.
+
+**b) Política de copias**
+
+- **Esquema**: **completa semanal** en fin de semana e **incrementales diarias** entre semana (la diferencial crecería demasiado sobre 50 TB de ficheros); las herramientas actuales generan **completas sintéticas** a partir de la cadena, sin releer el origen, lo que alivia la ventana de 8 horas.
+- **Retención GFS**: diarias 2 semanas (hijo), semanales 1-2 meses (padre), mensuales 12 meses y anuales según el calendario de conservación documental (abuelo).
+- **Repositorio**: appliance o cabina de respaldo **dedicada y separada de producción**, con **deduplicación**; como orden de magnitud, una completa deduplicada (~35 TB efectivos con ratio 2:1) más las cadenas de incrementales y las sintéticas mensuales llevan a dimensionar en torno a **100-120 TB útiles**.
+- **Copia externa**: mensuales y anuales a **cinta LTO-9** (18 TB nativos: un juego completo son 4 cartuchos), externalizadas y cifradas, o a almacenamiento de objetos en nube con inmutabilidad.
+
+**c) RPO de 15 minutos y RTO de 4 horas de la base de datos**
+
+- La copia diaria da un RPO de 24 horas: insuficiente. Se añade el **archivado continuo del log de transacciones** (copia de los logs cada **15 minutos** al repositorio), que permite la **restauración a un punto en el tiempo**: última completa, más incrementales, más logs hasta el instante deseado.
+- Los **snapshots** horarios en la cabina complementan la política (recuperación rápida de errores lógicos) pero **no la sustituyen**: viven en la misma cabina que protegen.
+- El **RTO de 4 horas** se valida con **pruebas de restauración cronometradas** (restaurar 13,8 TB a 1 GB/s efectivo ronda las 4 horas: conviene contar con restauración instantánea desde el repositorio o con una réplica en espera para no apurar el objetivo).
+
+**d) Cumplimiento 3-2-1 y ENS**
+
+- **Regla 3-2-1**: **3** copias (producción, repositorio de respaldo, cinta o nube), **2** soportes distintos (disco y cinta), **1** fuera de las instalaciones. Ampliación **3-2-1-1-0** frente al ransomware: **1** copia inmutable u offline (la cinta extraída o el bloqueo de objetos en nube) y **0** errores en las pruebas de restauración.
+- **ENS (mp.info.6)**: los procedimientos documentan frecuencia, almacenamiento local y remoto y controles de acceso a las copias; el refuerzo **R1 (pruebas de recuperación periódicas)** es exigible desde nivel MEDIO, y la copia separada del refuerzo R2 queda cubierta por la copia externa aunque solo sea obligatoria en nivel ALTO.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - Real Decreto 311/2022, Esquema Nacional de Seguridad, texto consolidado, última modificación 6 de noviembre de 2024 (Anexo II, medida mp.info.6).

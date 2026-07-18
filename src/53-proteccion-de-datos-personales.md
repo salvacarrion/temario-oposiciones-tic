@@ -209,7 +209,7 @@ La AEPD es la autoridad de control estatal que supervisa la aplicación del RGPD
 - **Autoridades existentes**: Cataluña (**Autoritat Catalana de Protecció de Dades**), País Vasco (**Agencia Vasca de Protección de Datos**) y Andalucía (**Consejo de Transparencia y Protección de Datos de Andalucía**). La Comunitat Valenciana no cuenta con autoridad propia, por lo que la autoridad competente sobre su sector público es la **AEPD**.
 - **Cooperación institucional (art. 58)**: la ley articula la cooperación entre la AEPD y las autoridades autonómicas para la aplicación coherente del RGPD.
 
-## Caso práctico: análisis de riesgos y evaluación de impacto
+## Supuesto práctico: análisis de riesgos y evaluación de impacto
 
 El RGPD impone un enfoque basado en el riesgo: todo tratamiento exige un análisis de riesgos previo y, cuando sea probable un alto riesgo para los derechos y libertades, una EIPD antes de iniciar el tratamiento (art. 35). Las siguientes plantillas orientativas ilustran ambos ejercicios.
 

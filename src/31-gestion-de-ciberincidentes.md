@@ -115,6 +115,45 @@ En el ENS, la continuidad es el bloque **op.cont (continuidad del servicio)** de
 | **op.cont.3** Pruebas periódicas | localizar y corregir errores o deficiencias del plan de continuidad | solo **ALTO** |
 | **op.cont.4** Medios alternativos | servicios de terceros, instalaciones, personal, equipamiento y comunicaciones alternativos, con **tiempo máximo de entrada en funcionamiento** y las mismas garantías de seguridad que los originales; refuerzo R1 (transición automática) | solo **ALTO** |
 
+## Supuesto práctico: respuesta a un incidente de ransomware
+
+**Enunciado**: un lunes a las 7:45, el SOC de un organismo autonómico (sistemas de **categoría MEDIA** del ENS) recibe alertas del EDR: cifrado masivo de ficheros en los dos servidores de ficheros y actividad anómala de una cuenta de administración del dominio durante el fin de semana. En los directorios afectados aparece una nota de rescate y el servicio de gestión de expedientes, que depende de esos servidores, deja de funcionar para toda la organización. El SIEM muestra transferencias salientes inusuales (unos **200 GB**) la madrugada del sábado, lo que apunta a una exfiltración previa; los expedientes contienen datos personales. El organismo dispone de copias de seguridad diarias con una copia inmutable, EDR desplegado en servidores y puestos, y probó la restauración hace tres meses.
+
+**Se pide**:
+
+- a) Clasificar el incidente: taxonomía, peligrosidad e impacto.
+- b) Determinar las obligaciones de notificación y sus plazos.
+- c) Describir la actuación en cada fase del ciclo de gestión.
+- d) Indicar el tratamiento de las evidencias.
+- e) Proponer las actuaciones post-incidente.
+
+**Resolución**:
+
+**a) Clasificación (Guía Nacional y CCN-STIC 817)**
+
+- **Taxonomía**: el suceso encaja en varios tipos a la vez: contenido dañino (sistema infectado por ransomware), intrusión (compromiso de cuenta con privilegios), compromiso de la información (exfiltración) y disponibilidad (interrupción). La regla es asignarlo al tipo de **mayor peligrosidad**.
+- **Peligrosidad**: los tipos implicados son de nivel **ALTO** (sistema infectado, compromiso de cuenta con privilegios, acceso no autorizado a la información); si el análisis confirmara un ataque dirigido, sofisticado y persistente, se reevaluaría como APT (CRÍTICO).
+- **Impacto**: interrupción de un servicio para más del 10 % de los usuarios durante más de 1 hora y resolución estimada en 5-30 jornadas-persona: nivel **ALTO**.
+- **Conclusión**: incidente de nivel ALTO: la **notificación es obligatoria**.
+
+**b) Notificaciones**
+
+- **CCN-CERT** (CSIRT de referencia del sector público): **notificación inicial inmediata** a través de **LUCIA**, con los reportes intermedio y final que exige op.exp.9; la ventanilla única traslada el incidente a quien corresponda.
+- **AEPD**: la exfiltración de expedientes con datos personales es una violación de la seguridad de los datos; el responsable del tratamiento la notifica **sin dilación indebida y, a más tardar, en 72 horas** desde que tuvo constancia (**art. 33 RGPD**), con asesoramiento del delegado de protección de datos, y la documenta en su registro interno. Al ser probable un alto riesgo para los derechos y libertades, se **comunica también a los afectados** (**art. 34 RGPD**). La notificación al CCN-CERT no sustituye esta obligación (tema [53](53-proteccion-de-datos-personales.md)).
+- **Denuncia**: ante las Fuerzas y Cuerpos de Seguridad, por los delitos de daños informáticos y descubrimiento de secretos; la recomendación del CCN-CERT es **no pagar el rescate** (no garantiza la recuperación, financia al atacante y no elimina la obligación de notificar).
+- **En su caso**: si el organismo prestara servicios esenciales, notificación además a la autoridad competente NIS; los proveedores privados afectados notifican al INCIBE-CERT, que lo traslada al CCN-CERT.
+
+**c) Ciclo de gestión**
+
+- **Identificación**: confirmar el alcance con el EDR y el SIEM (equipos cifrados, cuenta comprometida, variante del ransomware, indicadores de compromiso), determinar el vector de entrada probable (acceso remoto sin doble factor, phishing) y fechar la intrusión inicial, anterior a la exfiltración del sábado.
+- **Contención** (máxima prioridad): aislar de la red los servidores afectados desde el EDR, deshabilitar la cuenta comprometida y rotar las credenciales privilegiadas, bloquear en el perímetro las comunicaciones con la infraestructura del atacante y **proteger las copias de seguridad** (desconectar los repositorios accesibles desde el dominio antes de que también se cifren). En esta fase se realiza el triaje formal del apartado a).
+- **Mitigación**: eliminar la causa: **replataformado completo** de los servidores comprometidos (la mayor garantía), búsqueda de persistencia en el dominio (cuentas nuevas, tareas programadas, servicios), cierre o parcheo del vector de entrada y rotación general de credenciales.
+- **Recuperación**: restaurar desde la **copia inmutable** anterior a la fecha de intrusión verificada, comprobar la integridad de lo restaurado, reincorporar los sistemas de forma escalonada según los requisitos del análisis de impacto (op.cont.1) y mantener una **monitorización reforzada** durante las semanas siguientes.
+
+**d) Evidencias** (op.exp.9): antes de manipular los sistemas, obtener una instantánea (imagen de disco y volcado de memoria de al menos un servidor afectado) y trabajar sobre copias; preservar los logs del SIEM, los registros de tráfico que cuantifican la exfiltración y la nota de rescate; mantener la **cadena de custodia** (quién maneja cada evidencia, fecha y hora de cada tratamiento, ubicación); al existir recorrido judicial, asesoramiento legal especializado.
+
+**e) Post-incidente**: informe de cierre en LUCIA con el análisis de la causa raíz y los costes; lecciones aprendidas convertidas en proyectos: **doble factor** en todos los accesos remotos y cuentas privilegiadas, segmentación de la red, revisión del análisis de riesgos (tema [30](30-analisis-y-gestion-de-riesgos.md)) y del plan de continuidad, ciberejercicio de simulación, seguimiento con las métricas del Anexo A de la CCN-STIC 817 e inclusión en el **resumen anual** que se remite al CCN-CERT.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (texto consolidado, última modificación 6 de noviembre de 2024), arts. 8, 33 y 34 y Anexo II (op.exp.7, op.exp.8, op.exp.9, op.cont, op.mon).
@@ -122,3 +161,4 @@ En el ENS, la continuidad es el bloque **op.cont (continuidad del servicio)** de
 - Resolución de 13 de abril de 2018, de la Secretaría de Estado de Función Pública, por la que se aprueba la Instrucción Técnica de Seguridad de Notificación de Incidentes de Seguridad.
 - CCN-STIC 817, Esquema Nacional de Seguridad. Gestión de Ciberincidentes (ed. abril 2020; edición vigente a julio de 2026).
 - Guía Nacional de Notificación y Gestión de Ciberincidentes, aprobada por el Consejo Nacional de Ciberseguridad el 21 de febrero de 2020.
+- Reglamento (UE) 2016/679, general de protección de datos, arts. 33 y 34 (notificación y comunicación de las violaciones de la seguridad de los datos), citados en el supuesto práctico.

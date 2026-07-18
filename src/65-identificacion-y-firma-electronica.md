@@ -161,6 +161,48 @@ Los **servicios de directorio** almacenan y sirven de forma centralizada la info
 - **Funciones típicas**: autenticación de usuarios, inicio de sesión único corporativo, aplicación de políticas de seguridad y publicación de certificados y listas de revocación.
 - **Federación de identidades**: permite el inicio de sesión único entre organizaciones distintas mediante un proveedor de identidad de confianza; estándares **SAML 2.0** (habitual en las AAPP y en Cl@ve), **OAuth 2.0** (autorización delegada) y **OpenID Connect** (autenticación sobre OAuth 2.0). Los protocolos de control de acceso a red y AAA (Kerberos, RADIUS, 802.1X) se estudian en el tema de seguridad en las comunicaciones.
 
+## Supuesto práctico: identificación y firma en un trámite de subvenciones
+
+**Enunciado**: un organismo autonómico diseña un nuevo trámite de **solicitud de subvenciones** en su sede electrónica, dirigido a personas físicas y jurídicas. Debe decidir qué sistemas de **identificación y firma** admite a los interesados y en qué pasos exige cada cosa; cómo se identifica y firma la **Administración**, incluida la **resolución automatizada** de las solicitudes que cumplen requisitos objetivos; qué **formatos de firma** usar para que las firmas sigan siendo válidas durante los **6 años** de conservación del expediente; y sobre qué **plataformas comunes** apoyarse.
+
+**Se pide**:
+
+- a) Seleccionar los sistemas de identificación y firma de los interesados y cuándo exigir firma.
+- b) Definir la identificación y firma de la Administración actuante.
+- c) Elegir los formatos de firma y garantizar su validez a largo plazo.
+- d) Diseñar la arquitectura sobre las plataformas comunes.
+
+**Resolución**:
+
+**a) Sistemas de los interesados**
+
+- **Identificación (art. 9 Ley 39/2015)**: se admiten los tres bloques: **certificados cualificados de firma** (incluido el DNIe), **certificados cualificados de sello** y un sistema de **clave concertada con registro previo**: **Cl@ve** (PIN, Permanente y Móvil), cuya aceptación por la AGE **vale frente a todas las Administraciones** (art. 9.4). Los sistemas basados en certificado deben poder usarse **en todo caso**.
+- **Nivel de seguridad**: el trámite maneja datos personales y económicos, por lo que se exige un nivel de garantía equivalente a **sustancial** (eIDAS): en Cl@ve, el **registro avanzado** (presencial, vídeo-identificación o con certificado) habilita la tramitación completa; el registro básico se limita a consultas.
+- **Cuándo exigir firma (art. 11.2 Ley 39/2015)**: solo para **formular la solicitud**, presentar declaraciones responsables o comunicaciones, interponer recursos, desistir y renunciar; para el resto (consultar el expediente, comparecer una notificación) **basta la identificación**.
+- **Personas jurídicas**: certificado de **representante** (o apoderamiento inscrito en el registro electrónico de apoderamientos, tema [54](54-administracion-electronica.md)).
+
+**b) Identificación y firma de la Administración**
+
+- **Sede electrónica**: certificado de **sede** que autentica el dominio y cifra el canal (TLS).
+- **Actuación administrativa automatizada**: la resolución automatizada se firma con **sello electrónico de órgano** basado en certificado cualificado (art. 42 Ley 40/2015); el sello cualificado goza de **presunción de integridad y de corrección del origen** (art. 35.2 eIDAS).
+- **Código seguro de verificación (CSV)**: todos los documentos emitidos lo incorporan, permitiendo el **cotejo en la sede** de las copias impresas (art. 42 Ley 40/2015 y art. 21 RD 203/2021).
+- **Personal actuante**: firma de **empleado público** con certificado cualificado, usando el **número de identificación profesional** en lugar del DNI para no exponer datos personales (art. 23 RD 203/2021).
+
+**c) Formatos de firma y validez a largo plazo**
+
+- **Formatos AdES** conforme a la **NTI de Política de Firma** (Resolución de 27 de octubre de 2016) y la Decisión 2015/1506: **PAdES** para los PDF del expediente (la firma la ve cualquier lector), **XAdES** para los intercambios XML entre aplicaciones y **CAdES** para ficheros grandes; perfil mínimo **-EPES**, con referencia a la política de firma.
+- **El problema de la caducidad**: los certificados cualificados duran como máximo **5 años** (30 meses los del DNIe), menos que los 6 años de conservación: una firma básica dejaría de poder validarse con garantías.
+- **Solución**: completar las firmas al nivel ***baseline* B-LT** (incorporando en el momento de la validación la cadena de certificados y las evidencias CRL/OCSP) y **resellar periódicamente** (**B-LTA**) con **sellos de tiempo cualificados**, que gozan de presunción de exactitud de fecha y hora (art. 41.2 eIDAS) y renuevan la protección criptográfica mientras dure la conservación.
+- **Verificación en la recepción**: cada firma recibida se valida contra la **TSL** de prestadores cualificados y el estado de revocación, y la evidencia de esa validación se archiva con el documento.
+
+**d) Arquitectura sobre plataformas comunes**
+
+- **Identificación**: integración de la sede con **Cl@ve**, que engloba claves concertadas, certificados y DNIe, e incorpora el **nodo eIDAS** español para ciudadanos de otros Estados miembros.
+- **Firma del interesado**: **FIRe** como API única que orquesta **Autofirma** (firma local con el certificado del usuario) y **Cl@ve Firma** (firma en la nube con certificados centralizados, para quien no tiene certificado en su equipo).
+- **Validación**: **@firma**, la plataforma multi-PKI del art. 16 del RD 203/2021, para validar certificados y firmas recibidas (con **VALIDe** como herramienta de apoyo).
+- **Sellado de tiempo**: **TS@** como autoridad de sellado de tiempo para los sellos y resellados de las firmas longevas.
+- **Ámbito valenciano**: los certificados de la **ACCV** (empleado público, sello de órgano, sede) y las plataformas equivalentes de la Generalitat (tema [82](82-administracion-electronica-y-plataformas-de-la-generalitat.md)) completan la solución.
+
 ## Fuentes {.unnumbered .unlisted}
 
 - Reglamento (UE) n.º 910/2014 (eIDAS), texto consolidado a 18 de octubre de 2024 (02014R0910-20241018, EUR-Lex; incorpora las modificaciones del Reglamento (UE) 2024/1183).

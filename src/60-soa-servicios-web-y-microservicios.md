@@ -213,6 +213,67 @@ La arquitectura de microservicios construye una aplicación como un conjunto de 
 
 Otros formatos de intercambio: **YAML** (configuración legible, superconjunto de JSON) y **Protocol Buffers** (binario y tipado, usado por gRPC, tema [56](56-arquitecturas-de-desarrollo-web.md)).
 
+## Supuesto práctico: diseño de una API REST
+
+**Enunciado**: un ayuntamiento quiere exponer una **API REST** para la **reserva de instalaciones deportivas municipales**, que consumirán su portal web, la app móvil y terceros autorizados (gestores de clubes). Operaciones: consultar el catálogo de instalaciones y su disponibilidad (acceso público) y crear, consultar, modificar y anular reservas (acceso autenticado). Requisitos: versionado, paginación, gestión de errores homogénea, protección frente a abusos y documentación del contrato.
+
+**Se pide**:
+
+- a) Diseñar los recursos y las URIs.
+- b) Definir las operaciones con sus métodos y códigos de estado.
+- c) Resolver el versionado, la paginación, la caché y los errores.
+- d) Diseñar la seguridad y la publicación de la API.
+
+**Resolución**:
+
+**a) Recursos y URIs**
+
+- **Recursos como sustantivos en plural** (nunca verbos en la URI): `/instalaciones`, `/instalaciones/{id}`, `/instalaciones/{id}/disponibilidad`, `/reservas`, `/reservas/{id}`.
+- Cada recurso tiene una **URI estable**; las relaciones se modelan con un nivel de anidamiento como máximo y con filtros, no con rutas profundas.
+- Representación en **JSON** (`application/json`), con negociación de contenido mediante `Accept`.
+
+**b) Operaciones, métodos y códigos de estado**
+
+| Operación | Petición | Respuestas |
+| --- | --- | --- |
+| Listar instalaciones | `GET /api/v1/instalaciones?tipo=piscina&page=2&size=20` | **200** con la página de resultados |
+| Detalle de instalación | `GET /api/v1/instalaciones/{id}` | **200**; **404** si no existe |
+| Disponibilidad | `GET /api/v1/instalaciones/{id}/disponibilidad?fecha=2026-09-01` | **200** |
+| Crear reserva | `POST /api/v1/reservas` | **201** con cabecera `Location`; **400** datos inválidos; **401**/**403**; **409** franja ya reservada |
+| Modificar reserva | `PUT /api/v1/reservas/{id}` (sustitución completa) | **200**; **409** en conflicto |
+| Anular reserva | `DELETE /api/v1/reservas/{id}` | **204**; una repetición devuelve **404** |
+
+- **Semántica**: GET es **seguro e idempotente**; PUT y DELETE son **idempotentes** (repetir la anulación no cambia el estado final); POST no lo es: para evitar reservas duplicadas por reintentos de red, el cliente envía una **clave de idempotencia** (`Idempotency-Key`) que el servidor recuerda.
+- Ejemplo de creación:
+
+```http
+POST /api/v1/reservas HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiIs...
+
+{ "instalacionId": "PISC-01", "fecha": "2026-09-01", "horaInicio": "18:00", "duracionMin": 60 }
+```
+
+```http
+HTTP/1.1 201 Created
+Location: /api/v1/reservas/8f2d31a0
+```
+
+**c) Versionado, paginación, caché y errores**
+
+- **Versionado en la URI** (`/api/v1/`): explícito y cacheable. Solo los cambios **no compatibles** (renombrar o eliminar campos, cambiar la semántica) exigen una `v2`, con convivencia temporal de ambas; añadir campos opcionales no rompe el contrato.
+- **Paginación** con `page`/`size` (o por cursor si el volumen crece) y metadatos en la respuesta (total y enlaces `next`/`prev`, acercándose a **HATEOAS**, nivel 3 del modelo de Richardson; con recursos, verbos y códigos correctos la API está en el **nivel 2**, el habitual). **Filtrado y ordenación** por parámetros de consulta (`?tipo=`, `&sort=fecha,desc`).
+- **Caché**: catálogo y disponibilidad son cacheables (`Cache-Control: max-age` corto y validación con **ETag**/`If-None-Match`: el **304** evita retransmitir); las reservas, `no-store`. El ETag sirve además para la **concurrencia optimista**: `If-Match` en el PUT, rechazando con **412** Precondition Failed si otra petición modificó antes la reserva.
+- **Errores homogéneos**: cuerpo normalizado conforme al **RFC 9457** (*Problem Details*, `application/problem+json`, sucesor del RFC 7807): campos `type`, `title`, `status` y `detail`, sin trazas internas. **429 Too Many Requests** con `Retry-After` al superar el límite de peticiones.
+
+**d) Seguridad y publicación**
+
+- **Transporte**: HTTPS obligatorio (TLS 1.2 o superior).
+- **Autorización con OAuth 2.0**: flujo *authorization code* con PKCE para el portal y la app (actúa un usuario final) y *client credentials* para los terceros (máquina a máquina); **tokens JWT** de vida corta firmados, con *scopes* (`reservas:read`, `reservas:write`) verificados en cada recurso. La identificación de la ciudadanía en la sede puede delegarse en Cl@ve (tema [65](65-identificacion-y-firma-electronica.md)).
+- **API gateway** como punto de entrada único (tema [40](40-apis-y-apificacion.md)): validación de tokens, **limitación de tasa** y cuotas por consumidor, registro, métricas y ocultación de la topología interna.
+- **Contrato OpenAPI** como fuente de verdad: documentación navegable, generación de clientes y validación automática en las pruebas; publicación en el portal de APIs, donde los terceros se dan de alta y gestionan sus credenciales.
+- **Buenas prácticas de seguridad**: validar toda entrada contra esquema, no exponer identificadores predecibles ni datos personales innecesarios y auditar los accesos (OWASP API Security, tema [32](32-desarrollo-seguro-de-aplicaciones.md)).
+
 ## Fuentes {.unnumbered .unlisted}
 
 - W3C: SOAP 1.2 (Recomendación, 2.ª ed., 27 de abril de 2007), WSDL 1.1 (Nota, 15 de marzo de 2001), WSDL 2.0 (Recomendación, 26 de junio de 2007), XML 1.0 (5.ª ed., 26 de noviembre de 2008), Web Services Glossary (Nota, 11 de febrero de 2004), MTOM (Recomendación, 25 de enero de 2005).

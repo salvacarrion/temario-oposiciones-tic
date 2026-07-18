@@ -134,7 +134,7 @@ Un mismo proceso se modela con tres niveles de refinamiento sucesivos:
 - **Nivel II (operacional)**: incluye toda la lógica de negocio, con los casos de excepción y las reglas. Para el usuario de negocio sirve de guía o manual de procedimientos; para el analista de procesos, de input para evaluar la eficiencia y plantear mejoras.
 - **Nivel III (técnico)**: adapta el proceso a un modelo ejecutable con consideraciones técnicas. Puede interpretarse como código fuente y refleja siempre la situación actual del proceso.
 
-## Caso práctico: análisis de procesos
+## Supuesto práctico: análisis de procesos
 
 La Generalitat Valenciana está implementando un sistema de gestión de licencias urbanísticas para agilizar el proceso de solicitud, evaluación y resolución. Como técnico del cuerpo superior de ingeniería informática, se te encarga diseñar una **ficha de proceso**, un **diagrama de flujo de datos (DFD)** y un **diccionario de datos** para describir el proceso de tramitación de estas licencias.
 
