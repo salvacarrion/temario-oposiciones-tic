@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="110" viewBox="0 0 240 110" font-family="Helvetica, Arial, sans-serif">
+  <rect width="240" height="110" fill="#ffffff"/>
+  <line x1="30" y1="38" x2="210" y2="38" stroke="#22303c" stroke-width="2"/>
+  <line x1="30" y1="72" x2="210" y2="72" stroke="#22303c" stroke-width="2"/>
+  <text x="120" y="60" font-size="12.5" font-weight="700" fill="#22303c" text-anchor="middle">A1 · Almacén</text>
+</svg>

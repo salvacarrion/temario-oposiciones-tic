@@ -203,7 +203,7 @@ El flujo del proceso «Reserva de un libro» es el siguiente:
 
 En notación UML completa, el diagrama incorpora además un **nodo inicial** (círculo relleno), un **nodo final** (círculo con borde), guardas entre corchetes en cada rama de la decisión («[disponible]», «[no disponible]») y, opcionalmente, **calles** (*swimlanes*) que reparten las actividades entre usuario y sistema. La figura muestra la versión simplificada del flujo:
 
-![](media/image22.png)
+![](media/image22.png){width=40%}
 
 ## Supuesto práctico 2: estimación por puntos de función
 

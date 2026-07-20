@@ -1,6 +1,6 @@
 # Análisis de procesos
 
-El análisis de procesos estudia cómo trabaja una organización para describir, medir y mejorar sus procesos. Es la base del enfoque a procesos de la gestión de la calidad (**ISO 9001:2015**) y de la gestión por procesos (**BPM**), y se apoya en herramientas de modelado: el mapa, el diagrama y la ficha de proceso, el diagrama de flujo de datos y la notación estándar **BPMN**.
+El análisis de procesos estudia cómo trabaja una organización para describir, medir y mejorar sus procesos. Es la base del enfoque a procesos de la gestión de la calidad (**ISO 9001:2015**) y de la gestión por procesos (**BPM**), y se apoya en herramientas de modelado: el mapa, el diagrama y la ficha de proceso, la notación estándar **BPMN** y el diagrama de flujo de datos.
 
 ## Análisis y modelado de procesos
 
@@ -29,43 +29,6 @@ Conceptos asociados:
 - **Ficha de proceso**: documento que recoge los componentes principales de un proceso (propietario, objetivo, alcance, entradas y salidas, indicadores, acciones de mejora). Suele estructurarse según el ciclo **PDCA** (planear, hacer, verificar, actuar).
 
 ![Ficha de proceso tipo, organizada según el ciclo PDCA](media/ficha-proceso-pdca.png){width=100%}
-
-### El diagrama de flujo de datos (DFD)
-
-El DFD es la técnica de modelado del **análisis estructurado** (DeMarco, 1979): representa el sistema como una red de procesos que transforman flujos de datos. Modela la perspectiva funcional (qué se hace con los datos), no el orden temporal ni el flujo de control.
-
-Componentes (notación Yourdon/DeMarco):
-
-- **Entidad externa** (rectángulo): fuente o destino de los datos, fuera del sistema. Ejemplo: cliente, proveedor.
-- **Proceso** (círculo o burbuja): función que transforma entradas de datos en salidas.
-- **Almacén de datos** (líneas paralelas): datos en reposo. Es un depósito lógico (un fichero de clientes, una tabla de solicitudes), no un soporte físico.
-- **Flujo de datos** (flecha): datos en movimiento entre los demás componentes.
-
-![Símbolos de un DFD en notación Yourdon/DeMarco](media/image6.png){width=45%}
-
-**Reglas de conexión**: todo flujo de datos nace o termina en un proceso. Son válidas las conexiones entidad-proceso (E-P), proceso-proceso (P-P) y proceso-almacén (P-A, en lectura o escritura); están prohibidas entidad-entidad, entidad-almacén y almacén-almacén.
-
-![DFD elemental: un almacén alimenta el proceso del sistema, cuya salida llega al cliente](media/image7.png){width=90%}
-
-**Niveles** (descomposición descendente):
-
-- **Nivel 0 o diagrama de contexto**: un único proceso (el sistema completo) con sus entidades externas y los flujos que intercambian.
-- **Nivel 1 o diagrama de nivel superior**: los subsistemas o funciones principales del sistema.
-- **Niveles de detalle (2 y siguientes)**: explosión de cada proceso hasta llegar a procesos primitivos, que se describen mediante una especificación de proceso.
-- **Equilibrado (balancing)**: al explotar un proceso, los flujos que entran y salen de él deben conservarse en el nivel inferior.
-
-![Ejemplo de diagrama de contexto (nivel 0) de un sistema de pedidos](media/dfd-contexto-pedidos.png){width=95%}
-
-### Diccionario de datos
-
-Repositorio técnico que define con precisión todos los datos que aparecen en el DFD (flujos, almacenes y sus elementos). Para cada dato se recogen:
-
-- **Nombre**: identificación completa del dato.
-- **Descripción**: origen y función del dato.
-- **Tipo de dato**: entero, texto, fecha, documento.
-- **Longitud**: número de caracteres o dígitos.
-- **Nulo**: si el dato puede quedar vacío.
-- **Alias**: nombre corto para simplificar la referencia. Ejemplo: «Nombre del cliente» → «NC».
 
 ### La gestión por procesos (BPM)
 
@@ -132,9 +95,46 @@ Un mismo proceso se modela con tres niveles de refinamiento sucesivos:
 - **Nivel II (operacional)**: incluye toda la lógica de negocio, con los casos de excepción y las reglas. Para el usuario de negocio sirve de guía o manual de procedimientos; para el analista de procesos, de input para evaluar la eficiencia y plantear mejoras.
 - **Nivel III (técnico)**: adapta el proceso a un modelo ejecutable con consideraciones técnicas. Puede interpretarse como código fuente y refleja siempre la situación actual del proceso.
 
+## El diagrama de flujo de datos (DFD)
+
+El DFD es la técnica de modelado del **análisis estructurado** (DeMarco, 1979): representa el sistema como una red de procesos que transforman flujos de datos. A diferencia de BPMN, que modela el flujo de control de un proceso de negocio (qué actividad sigue a cuál y bajo qué condiciones), el DFD modela la perspectiva funcional de un sistema de información (qué se hace con los datos), sin orden temporal ni flujo de control. Ambas vistas son complementarias, y el supuesto práctico las combina.
+
+Componentes (notación Yourdon/DeMarco):
+
+| Componente | Notación | Descripción | Símbolo |
+| :------------- | :------------ | :------------------------ | :------------------- |
+| **Entidad externa** | Rectángulo | Fuente o destino de los datos, fuera del sistema. Ejemplo: cliente, proveedor | ![Rectángulo con el nombre de la entidad](media/dfd-simbolo-entidad.png){width=100%} |
+| **Proceso** | Círculo o burbuja | Función que transforma entradas de datos en salidas | ![Círculo con el número del proceso arriba y su nombre debajo](media/dfd-simbolo-proceso.png){width=100%} |
+| **Almacén de datos** | Líneas paralelas | Datos en reposo. Es un depósito lógico (un fichero de clientes, una tabla de solicitudes), no un soporte físico | ![Dos líneas paralelas con el identificador y nombre del almacén entre ellas](media/dfd-simbolo-almacen.png){width=100%} |
+| **Flujo de datos** | Flecha | Datos en movimiento entre los demás componentes | ![Flecha curva etiquetada con el dato que transporta](media/dfd-simbolo-flujo.png){width=100%} |
+
+**Reglas de conexión**: todo flujo de datos nace o termina en un proceso. Son válidas las conexiones entidad-proceso (E-P), proceso-proceso (P-P) y proceso-almacén (P-A, en lectura o escritura); están prohibidas entidad-entidad, entidad-almacén y almacén-almacén.
+
+![DFD elemental: un almacén alimenta el proceso del sistema, cuya salida llega al cliente](media/dfd-elemental.png){width=90%}
+
+**Niveles** (descomposición descendente):
+
+- **Nivel 0 o diagrama de contexto**: un único proceso (el sistema completo) con sus entidades externas y los flujos que intercambian.
+- **Nivel 1 o diagrama de nivel superior**: los subsistemas o funciones principales del sistema.
+- **Niveles de detalle (2 y siguientes)**: explosión de cada proceso hasta llegar a procesos primitivos, que se describen mediante una especificación de proceso.
+- **Equilibrado (balancing)**: al explotar un proceso, los flujos que entran y salen de él deben conservarse en el nivel inferior.
+
+![Ejemplo de diagrama de contexto (nivel 0) de un sistema de pedidos](media/dfd-contexto-pedidos.png){width=95%}
+
+### Diccionario de datos
+
+Repositorio técnico que define con precisión todos los datos que aparecen en el DFD (flujos, almacenes y sus elementos). Para cada dato se recogen:
+
+- **Nombre**: identificación completa del dato.
+- **Descripción**: origen y función del dato.
+- **Tipo de dato**: entero, texto, fecha, documento.
+- **Longitud**: número de caracteres o dígitos.
+- **Nulo**: si el dato puede quedar vacío.
+- **Alias**: nombre corto para simplificar la referencia. Ejemplo: «Nombre del cliente» → «NC».
+
 ## Supuesto práctico: análisis de procesos
 
-La Generalitat Valenciana está implementando un sistema de gestión de licencias urbanísticas para agilizar el proceso de solicitud, evaluación y resolución. Como técnico del cuerpo superior de ingeniería informática, se te encarga diseñar una **ficha de proceso**, un **diagrama de flujo de datos (DFD)** y un **diccionario de datos** para describir el proceso de tramitación de estas licencias.
+La Generalitat Valenciana está implementando un sistema de gestión de licencias urbanísticas para agilizar el proceso de solicitud, evaluación y resolución. Como técnico del cuerpo superior de ingeniería informática, se te encarga diseñar una **ficha de proceso**, un **diagrama de flujo de datos (DFD)**, un **diccionario de datos** y un **modelo BPMN** para describir el proceso de tramitación de estas licencias.
 
 Requisitos:
 
@@ -148,6 +148,7 @@ Requisitos:
     - **Flujos de datos**: solicitud enviada por el ciudadano; resolución emitida al ciudadano.
     - **Almacenes**: base de datos de solicitudes.
 3. **Diccionario de datos**: definir, al menos, los datos «Solicitud» y «Resolución».
+4. **Modelo BPMN**: diagrama de colaboración a nivel descriptivo, con el ciudadano y la Generalitat como participantes y contemplando el plazo de subsanación y la decisión de aprobar o denegar.
 
 ### Solución
 
@@ -166,7 +167,7 @@ Requisitos:
 | Hacer | Entradas | Documentación aportada por el ciudadano (solicitud, planos, informes técnicos) |
 | Hacer | Insumos | Normativa urbanística vigente; personal técnico del departamento de urbanismo |
 | Hacer | Salidas | Resolución aprobatoria o denegatoria de la licencia |
-| Hacer | Diagrama del proceso | DFD del apartado 2 |
+| Hacer | Diagrama del proceso | Modelo BPMN del apartado 4 (flujo de actividades); el DFD del apartado 2 aporta la vista de datos |
 | Verificar | Variables a controlar | Compleción de la documentación requerida; cumplimiento de los plazos legales |
 | Verificar | Inspecciones / controles | Verificación técnica de la documentación; supervisión de los plazos de tramitación |
 | Verificar | Indicadores | Porcentaje de licencias resueltas en plazo; tiempo medio de tramitación por licencia |
@@ -175,11 +176,11 @@ Requisitos:
 | Actuar | Acción correctiva | Subsanación de errores dentro del plazo; automatización del sistema para reducir errores humanos |
 | | Elaborado / revisado / aprobado por | Responsable, revisor y aprobador, con fecha de elaboración |
 
-**2. Diagrama de flujo de datos.** En notación Yourdon/DeMarco, en dos niveles:
+**2. Diagrama de flujo de datos.** En notación Yourdon/DeMarco, en dos niveles. La solución añade a los flujos mínimos del enunciado los que el proceso necesita para funcionar: el requerimiento de subsanación y el intercambio con el departamento (expediente e informe técnico).
 
 - **Nivel 0 (diagrama de contexto)**: un único proceso, «0. Tramitar licencia urbanística», con dos entidades externas:
     - **Ciudadano**: envía el flujo *solicitud con documentación*; recibe *requerimiento de subsanación* y *resolución*.
-    - **Departamento urbanístico**: recibe el *expediente a evaluar*; devuelve el *informe técnico*.
+    - **Departamento urbanístico**: recibe el *expediente a evaluar*; devuelve el *informe técnico*. Aunque en la ficha es el propietario del proceso, aquí se modela como entidad externa: la frontera del DFD es el sistema informático, y la evaluación técnica la realizan personas fuera de él, que reciben datos del sistema y le devuelven otros.
 - **Nivel 1 (explosión del proceso 0)**: tres procesos y un almacén:
     - **1. Registrar y validar documentación**: recibe la *solicitud* del ciudadano, la anota en el almacén **A1 Base de datos de solicitudes** y comprueba que está completa. Si falta documentación, envía el *requerimiento de subsanación* al ciudadano; si es válida, pasa el *expediente validado* al proceso 2.
     - **2. Evaluar solicitud**: remite el *expediente a evaluar* al departamento urbanístico, recibe su *informe técnico*, actualiza el estado en A1 y traslada el *dictamen* al proceso 3.
@@ -203,6 +204,15 @@ Requisitos:
 | Plazo de subsanación | Tiempo máximo para corregir errores en la documentación aportada | Entero (días) | 2 dígitos | No | PLAZO_SUB |
 | Técnico asignado | Nombre del técnico encargado de evaluar la solicitud | Cadena de texto | 100 caracteres | No | TECNICO |
 | Base normativa | Referencia a la normativa urbanística aplicada en la evaluación | Cadena de texto | 255 caracteres | Sí | NORMATIVA |
+
+**4. Modelo BPMN.** Diagrama de colaboración a nivel I (descriptivo): el flujo normal más la excepción principal (la subsanación), comprensible para todos los implicados.
+
+- **Piscinas**: «Ciudadano», cerrada (caja negra: solo interesan los mensajes que intercambia), y «Generalitat Valenciana», abierta, con el proceso interno. Entre ambas cruzan cuatro **flujos de mensaje** (línea discontinua): solicitud, requerimiento de subsanación, documentación subsanada y resolución.
+- **Eventos**: inicial de mensaje (llega la solicitud), intermedio temporizador (espera del plazo de subsanación) y final de mensaje (se envía la resolución).
+- **Compuertas exclusivas (XOR)**: «¿documentación completa?» (si falta, se requiere la subsanación y, transcurrido el plazo, se vuelve a validar) y «¿evaluación favorable?» (resolución aprobatoria o denegatoria); una tercera compuerta exclusiva converge las dos ramas antes del evento final.
+- **Correspondencia con el DFD**: las actividades del BPMN se corresponden con los procesos 1 a 3 del DFD, pero cada notación aporta lo que la otra no expresa: el BPMN, el orden de ejecución, las decisiones y los plazos; el DFD, los datos que cada proceso consume y produce y el almacén A1.
+
+![Modelo BPMN de la tramitación de licencias: piscina cerrada del ciudadano y piscina abierta de la Generalitat, con eventos de mensaje y temporizador y compuertas exclusivas](media/bpmn-licencias.png){width=100%}
 
 ## Fuentes {.unnumbered .unlisted}
 

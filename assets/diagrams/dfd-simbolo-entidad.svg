@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="110" viewBox="0 0 240 110" font-family="Helvetica, Arial, sans-serif">
+  <rect width="240" height="110" fill="#ffffff"/>
+  <rect x="55" y="27" width="130" height="56" fill="#eef1f4" stroke="#9aa5ae" stroke-width="1.6"/>
+  <text x="120" y="60" font-size="13" font-weight="700" fill="#22303c" text-anchor="middle">CLIENTE</text>
+</svg>

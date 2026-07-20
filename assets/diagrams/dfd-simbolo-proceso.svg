@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="110" viewBox="0 0 240 110" font-family="Helvetica, Arial, sans-serif">
+  <rect width="240" height="110" fill="#ffffff"/>
+  <circle cx="120" cy="55" r="46" fill="#dbe7f3" stroke="#5b87b0" stroke-width="2"/>
+  <line x1="89" y1="41" x2="151" y2="41" stroke="#5b87b0" stroke-width="1.2"/>
+  <text x="120" y="34" font-size="12.5" font-weight="700" fill="#22303c" text-anchor="middle">1</text>
+  <text x="120" y="66" font-size="13" font-weight="700" fill="#22303c" text-anchor="middle">Proceso</text>
+</svg>
