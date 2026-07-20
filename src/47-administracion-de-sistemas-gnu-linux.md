@@ -16,7 +16,7 @@ Una **distribución** empaqueta núcleo, herramientas y un gestor de paquetes. E
 - **Secuencia de arranque**: firmware **UEFI** (con arranque seguro) carga el gestor **GRUB 2** (instalado en la partición de sistema EFI o, en equipos antiguos con BIOS, en el **MBR**; el histórico LILO está abandonado), que carga el **núcleo** y el *initramfs* (raíz mínima en memoria con los controladores para montar el disco); el núcleo monta la raíz y lanza el primer proceso, **systemd** (PID 1), que activa el resto según el *target* por defecto (los sistemas antiguos usaban el init de SysV con `/etc/inittab` y *runlevels*).
 - **Reparación y análisis**: desde el menú de GRUB se pueden editar los parámetros del núcleo para arrancar en modo rescate; `systemd-analyze blame` desglosa qué unidades retrasan el arranque.
 - **Módulos y parámetros del núcleo**: los módulos se listan y cargan con `lsmod`/`modprobe` (controladores bajo demanda); los parámetros se consultan y ajustan en caliente con `sysctl` (persistentes en `/etc/sysctl.d`, p. ej. `vm.swappiness` o `net.ipv4.ip_forward`).
-- **Jerarquía de ficheros (FHS)**: `/etc` (configuración), `/var` (datos variables y logs), `/home` (usuarios), `/root` (home de root), `/usr` (software), `/opt` y `/srv` (aplicaciones de terceros y datos servidos), `/boot` (núcleo y GRUB), `/dev` (dispositivos), `/tmp` (temporales).
+- **Jerarquía de ficheros (FHS)**: `/etc` (configuración), `/var` (datos variables y logs), `/home` (usuarios), `/root` (home de root), `/usr` (software), `/opt` y `/srv` (aplicaciones de terceros y datos servidos), `/boot` (núcleo y GRUB), `/dev` (dispositivos), `/tmp` (temporales). En servidores, `/var` (y a veces `/home` y `/tmp`) va en partición o disco aparte: un log desbocado o una subida masiva no llenan la raíz.
 - **Pseudo-sistemas de ficheros**: `/proc` no existe en disco: expone el estado del núcleo y de cada proceso como ficheros virtuales (`/proc/cpuinfo`, `/proc/meminfo`, `/proc/cmdline`, `/proc/<pid>/`); `/sys` expone dispositivos, buses, módulos y firmware. Son la vía de comunicación con el núcleo que usan muchas herramientas.
 
 ## La shell: comandos y scripting
@@ -25,7 +25,7 @@ La shell habitual es **bash**: intérprete de comandos que encadena procesos con
 
 - **Comandos esenciales**: navegación y ficheros (`ls`, `cp`, `mv`, `rm`, `find`), texto (`grep`, `sed`, `awk`, `sort`), procesos (`ps`, `top`, `kill`), espacio (`df`, `du`), red (`ip`, `ss`, `ping`), archivo y copia remota (`tar`, `rsync`, `ssh`, `scp`).
 - **Utilidades de ficheros**: empaquetado y compresión (`tar -czf copia.tar.gz dir` crea, `tar -xzf` extrae; algoritmos gzip, bzip2, xz y zstd), enlaces (`ln` duro, `ln -s` simbólico), búsqueda con acción (`find /var -name '*.log' -mtime +30 -exec rm {} \;`), localización de ejecutables (`which`, `whereis`), visualización (`cat`, `less`) y metadatos (`stat`).
-- **Redirección y encadenado**: `>` sobrescribe, `>>` añade, `2>` desvía los errores y `2>&1` los combina con la salida; `&&` y `||` encadenan según el **código de salida** del comando anterior (`$?`, **0 = éxito**) y `;` ejecuta en secuencia incondicionalmente. Las **variables de entorno** se publican con `export` (`PATH`, `HOME`, `LANG`).
+- **Redirección y encadenado**: `>` sobrescribe, `>>` añade, `2>` desvía los errores, `2>&1` los combina con la salida y `<` toma la entrada de un fichero; `&&` y `||` encadenan según el **código de salida** del comando anterior (`$?`, **0 = éxito**) y `;` ejecuta en secuencia incondicionalmente. Las **variables de entorno** se publican con `export` (`PATH`, `HOME`, `LANG`) y se retiran con `unset`.
 - **Expansión de nombres**: los comodines `*` (cualquier cadena) y `?` (un carácter) se expanden antes de ejecutar el comando; `\` escapa caracteres especiales y las comillas simples suprimen toda expansión.
 - **Control de trabajos**: `&` lanza en segundo plano, `Ctrl-Z` suspende, `jobs` lista, `fg`/`bg` reanudan en primer o segundo plano, y `nohup`/`disown` evitan que el proceso muera al cerrar la terminal.
 - **Procesos y señales**: `kill -15` (SIGTERM, terminación ordenada, la señal por defecto) frente a `kill -9` (SIGKILL, inmediata e inignorable); la prioridad se ajusta con `nice`/`renice` (valores -20 a +19).
@@ -125,10 +125,11 @@ lvextend -r -L +50G /dev/vg_datos/lv_app   # crecer LV y su sistema de ficheros
 
 El diagnóstico sigue la cadena recursos-procesos-logs: qué recurso satura (CPU, memoria, disco, red), qué proceso lo consume y qué cuentan los registros.
 
+- **Sistema y sesiones**: `uname -a` (núcleo, versión y arquitectura), `hostnamectl`, `uptime` y `who`/`w` (quién tiene sesión abierta y qué ejecuta).
 - **Carga y CPU**: `top`/`htop` y la **media de carga** (*load average* a 1/5/15 min; orientativamente, sostenida por encima del número de núcleos indica saturación).
 - **Memoria**: `free -h` distinguiendo la memoria **disponible** de la usada por caché de disco (que se libera sola); presión real cuando el sistema pagina (*swap in/out* en `vmstat`).
 - **Disco y E/S**: `iostat -x` (utilización y latencias; un **%iowait** alto delata cuello de E/S), `lsof` para ver qué ficheros usa un proceso.
-- **Red**: `ip a` y `ip route` (interfaces y rutas), `ss -tulpn` (puertos en escucha; sustituye a netstat), `ping`/`traceroute` y `dig` para resolución de nombres.
+- **Red**: `ip a` y `ip route` (interfaces y rutas; la suite `ip` sustituye a los históricos ifconfig/route), `ss -tulpn` (puertos en escucha; sustituye a netstat), `ping`/`traceroute`, y para nombres `dig` (también `host` y `nslookup`) y `whois` (titularidad de un dominio).
 - **Análisis y auditoría de red**: `tcpdump` captura el tráfico en línea de comandos (Wireshark en gráfico) y `nmap` escanea los puertos abiertos de los propios servidores para contrastarlos con lo esperado (seguridad de red en el tema [79](79-seguridad-en-las-comunicaciones.md)).
 - **Histórico y trazado**: `sar` (paquete sysstat) guarda series históricas de todos los recursos; `strace` traza las llamadas al sistema de un proceso que falla sin logs.
 - **Logs**: `journalctl -p err -b` (errores del arranque actual), `dmesg` (mensajes del núcleo, hardware) y los logs de cada servicio.
@@ -143,8 +144,9 @@ Linux es multiusuario: las cuentas se definen en `/etc/passwd`, las contraseñas
 
 ```bash
 useradd -m -G sudo maria        # crear usuario y añadir a un grupo
-chown -R www-data:www-data /var/www
-chmod 640 /etc/app/config       # rw- r-- ---
+chown -R www-data:www-data /var/www     # propietario (chgrp solo el grupo)
+chmod 640 /etc/app/config       # octal: rw- r-- ---
+chmod u+x deploy.sh             # simbólico: ejecución para el dueño (a+x, todos)
 setfacl -m u:backup:r /etc/app/config   # ACL: lectura para un usuario extra
 ```
 
@@ -169,7 +171,7 @@ id 'DOMINIO\maria'                       # verificar resolución de usuarios AD
 ```
 
 - **Transferencia de ficheros**: el FTP clásico (servidor **vsftpd**; modos activo/pasivo en el tema [70](70-protocolos-de-comunicaciones.md)) está desplazado por **SFTP** sobre SSH, que cifra y no necesita puertos extra.
-- **Impresión**: **CUPS** gestiona las colas con el protocolo **IPP** (herencia de los comandos `lpr`/`lpq`/`lprm` del histórico LPD).
+- **Impresión**: **CUPS** gestiona las colas (*spooler*) con el protocolo **IPP** (herencia de los comandos `lpr`/`lpq`/`lprm` del histórico LPD); la impresora recibe el trabajo en un lenguaje de descripción de página (**PDL**: PostScript, PCL).
 - **Otros servicios habituales**: NTP/chrony (sincronización horaria, crítica para Kerberos).
 
 ## Fuentes {.unnumbered .unlisted}
