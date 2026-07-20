@@ -15,10 +15,19 @@ La interoperabilidad es la capacidad de dos o más sistemas de **intercambiar in
 
 - **Particularidades del dominio sanitario**: gran heterogeneidad de aplicaciones y proveedores, datos de **categoría especial** (art. 9 RGPD, remisión al tema [53](53-proteccion-de-datos-personales.md)), necesidad de disponibilidad continua (24x7) y una semántica clínica compleja que exige terminologías controladas.
 - **Beneficios**: continuidad asistencial (el dato sigue al paciente), eliminación de pruebas duplicadas, seguridad del paciente (menos transcripciones manuales) y explotación secundaria de los datos (tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)).
+- **Perfiles de integración**: la iniciativa **IHE** (*Integrating the Healthcare Enterprise*) especifica cómo aplicar los estándares existentes (HL7, DICOM) a flujos de trabajo concretos mediante perfiles como PIX/PDQ o XDS (tema [92](92-normalizacion-en-informatica-sanitaria.md)).
 
 ## Integración de aplicaciones sanitarias: patrones y motores de integración
 
-Integrar aplicaciones dos a dos no escala: con *n* sistemas conectados punto a punto se necesitan hasta **n(n-1)/2** interfaces distintas, cada una con su formato, su ciclo de vida y su mantenimiento. La respuesta arquitectónica es centralizar el intercambio.
+Integrar aplicaciones dos a dos no escala: con *n* sistemas conectados punto a punto se necesitan hasta **n(n-1)/2** interfaces distintas, cada una con su formato, su ciclo de vida y su mantenimiento. La respuesta arquitectónica es centralizar el intercambio. Los actores típicos del mapa de aplicaciones hospitalario:
+
+| Sigla | Sistema | Función principal |
+| --- | --- | --- |
+| **HIS** | Sistema de información hospitalario | Admisión, censo de camas, episodios, facturación |
+| **HCE** | Historia clínica electrónica | Documentación clínica y estación de trabajo del profesional |
+| **LIS** | Sistema de información de laboratorio | Peticiones, analizadores y resultados |
+| **RIS/PACS** | Radiología e imagen médica | Citación, informes e imágenes (tema [93](93-imagen-medica-digital-dicom-pacs-ris.md)) |
+| **Farmacia** | Prescripción electrónica | Circuito prescripción-validación-dispensación |
 
 - **Integración punto a punto**: conexiones directas entre pares de aplicaciones. Simple al principio, inmanejable al crecer («espagueti de interfaces»).
 - **Hub-and-spoke / bus de integración (ESB)**: todas las aplicaciones se conectan a un nodo central que enruta y transforma los mensajes. Cada sistema mantiene **una sola interfaz** con el bus.
@@ -29,6 +38,8 @@ Integrar aplicaciones dos a dos no escala: con *n* sistemas conectados punto a p
     - **Garantía de entrega**: colas persistentes, reintentos, gestión de acuses de recibo (ACK).
     - **Monitorización y trazabilidad**: registro de todos los mensajes, alertas ante errores o colas paradas.
 - **Productos habituales**: **Mirth Connect** (código abierto, muy extendido), **InterSystems** (Ensemble/IRIS for Health), **Rhapsody** e **Infor Cloverleaf**.
+- **Modelo canónico de datos**: patrón asociado al bus: los mensajes se transforman a un formato pivote común (una versión de referencia y unas tablas maestras unificadas), de modo que cada aplicación necesita **una sola transformación** de entrada/salida en lugar de un mapeo por cada pareja de sistemas.
+- **Evolución hacia APIs**: los motores actuales añaden pasarelas **REST/FHIR** (tema [91](91-estandares-de-interoperabilidad-de-la-hce.md)) para exponer los datos a aplicaciones móviles, portales de paciente y terceros, conviviendo con la mensajería v2 interna.
 
 ## HL7 v2.x: la mensajería clínica
 
@@ -36,6 +47,9 @@ Integrar aplicaciones dos a dos no escala: con *n* sistemas conectados punto a p
 
 - **Modelo de intercambio**: mensajería asíncrona dirigida por **eventos disparadores** (*trigger events*): cuando en un sistema ocurre un hecho (un ingreso, un resultado validado), se emite un mensaje a los sistemas interesados, que responden con un acuse **ACK**.
 - **Estructura jerárquica del mensaje**: mensaje → **segmentos** (una línea, identificada por 3 letras) → **campos** (separados por `|`) → **componentes** (separados por `^`). Los delimitadores estándar son `| ^ ~ \ &`.
+- **Campos clave del MSH**: **MSH-9** tipo de mensaje y evento (`ADT^A01`), **MSH-10** identificador de control del mensaje (único, correlaciona el ACK), **MSH-11** ámbito de procesamiento (**P** producción, **T** pruebas, **D** depuración) y **MSH-12** versión del estándar (`2.5.1`).
+- **Tipos de datos**: cada campo tiene un tipo definido: **ST** (texto), **NM** (numérico), **DTM/TS** (fecha-hora), **CX** (identificador compuesto: número de historia, SIP), **XPN** (nombre de persona) y **CE/CWE** (código con su sistema de codificación).
+- **Tablas de valores**: muchos campos toman sus valores de tablas HL7 (p. ej. la tabla 0004, clase de paciente: **I** ingresado, **O** ambulatorio, **E** urgencias), ampliables localmente.
 - **Segmentos más comunes**:
 
 | Segmento | Contenido |
@@ -48,7 +62,8 @@ Integrar aplicaciones dos a dos no escala: con *n* sistemas conectados punto a p
 | **OBX** | Resultado u observación (una por segmento) |
 | **NTE** | Notas y comentarios |
 
-- **Tipos de mensaje y eventos**: el tipo se indica como `TIPO^EVENTO` en MSH-9. Los más usados: **ADT** (movimientos de pacientes: A01 ingreso, A02 traslado, A03 alta, A08 actualización de datos), **ORM/OMG** (peticiones), **ORU** (resultados, por ejemplo de laboratorio), **SIU** (citas y agendas) y **MDM** (documentos).
+- **Tipos de mensaje y eventos**: el tipo se indica como `TIPO^EVENTO` en MSH-9. Los más usados: **ADT** (movimientos de pacientes: A01 ingreso, A02 traslado, A03 alta, A04 registro ambulatorio, A08 actualización de datos, A11/A13 cancelaciones de ingreso/alta y A40 fusión de historias), **ORM/OMG** (peticiones), **ORU** (resultados, por ejemplo de laboratorio), **SIU** (citas y agendas) y **MDM** (documentos).
+- **Acuses de recibo**: la respuesta es un mensaje **ACK** cuyo segmento **MSA** codifica el resultado: **AA** (aceptado), **AE** (error de aplicación) o **AR** (rechazado). El modo *enhanced acknowledgement* distingue además el acuse de recepción (*commit*: CA/CE/CR) del acuse de procesamiento por la aplicación.
 
 Ejemplo de mensaje ADT^A01 (ingreso de un paciente), simplificado:
 
@@ -60,7 +75,9 @@ PV1|1|I|MI^301^A|||||1122^Pérez^Juan|MED
 ```
 
 - **Lectura del ejemplo**: el HIS comunica al laboratorio un ingreso (`ADT^A01`) en la versión **2.5.1**; el PID identifica a la paciente por su número **SIP** y el PV1 la sitúa ingresada (`I`) en la cama A de la habitación 301 de Medicina Interna.
-- **Transporte**: el protocolo habitual es **MLLP** (*Minimal Lower Layer Protocol*): el mensaje viaja sobre una conexión TCP delimitado por caracteres de control, normalmente a través del motor de integración.
+- **Transporte**: el protocolo habitual es **MLLP** (*Minimal Lower Layer Protocol*): el mensaje viaja sobre una conexión TCP delimitado por caracteres de control (**0x0B** al inicio, **0x1C 0x0D** al final), normalmente a través del motor de integración.
+- **Segmentos Z**: extensiones locales no estándar (su nombre empieza por **Z**) para datos que el estándar no cubre; son la principal fuente de «dialectos» y deben documentarse en la guía de integración de cada implantación.
+- **Perfiles de mensaje y XML**: los *conformance profiles* fijan por contrato la opcionalidad real de campos, tablas y segmentos de una interfaz concreta; desde la especificación v2.xml los mensajes pueden serializarse también en **XML**.
 - **Limitaciones de v2**: semántica débil (muchos campos opcionales y de texto libre), variabilidad entre implantaciones (cada hospital «habla su dialecto» de HL7) y ausencia de un modelo de información formal. Estas carencias motivaron HL7 v3.
 
 ## HL7 v3 y el modelo RIM
@@ -68,6 +85,7 @@ PV1|1|I|MI^301^A|||||1122^Pérez^Juan|MED
 HL7 v3 (edición normativa inicial en **2005**) replanteó la mensajería desde cero con una metodología dirigida por modelos: todos los mensajes derivan de un modelo de información único, el **RIM** (*Reference Information Model*), y se serializan en **XML**.
 
 - **El RIM**: modelo orientado a objetos con **seis clases nucleares**: tres de contenido, **Act** (todo lo que ocurre: una observación, una prescripción), **Entity** (personas, organizaciones, lugares, cosas) y **Role** (el papel que juega una entidad: paciente, profesional), y tres de enlace, **Participation** (cómo interviene un rol en un acto), **ActRelationship** (relaciones entre actos) y **RoleLink** (relaciones entre roles).
+- **Atributos estructurales**: la semántica de cada clase se precisa con atributos codificados: `classCode` (qué es el acto: observación, procedimiento, encuentro) y `moodCode` (su modo: **EVN** hecho realizado, **RQO** petición, **INT** intención). Es el rigor formal del que carece v2.
 - **Mensajería v3**: los mensajes se derivan del RIM mediante refinamientos sucesivos (D-MIM, R-MIM, HMD) y se agrupan en dominios (administración de pacientes, laboratorio, farmacia).
 - **Resultado en la práctica**: la mensajería v3 tuvo una **adopción muy limitada** (complejidad alta, coste de implantación, ecosistema v2 ya consolidado). Su producto derivado de éxito es el estándar de documentos clínicos **CDA**, basado en el RIM, que se estudia en el tema [91](91-estandares-de-interoperabilidad-de-la-hce.md) junto con FHIR, el estándar moderno que recupera la sencillez de v2 con tecnologías web.
 

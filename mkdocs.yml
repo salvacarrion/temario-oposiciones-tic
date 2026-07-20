@@ -156,12 +156,12 @@ nav:
   - '⚠️ Tema 87: Personal estatutario de los servicios de salud (Ley 55/2003)': 87-personal-estatutario-ley-55-2003.md
   - '⚠️ Tema 88: Autonomía del paciente (Ley 41/2002)': 88-autonomia-del-paciente-ley-41-2002.md
   - '⚠️ Tema 89: Documentación clínica normalizada': 89-documentacion-clinica-normalizada.md
-  - '⚠️ Tema 90: Integración de sistemas sanitarios y mensajería HL7': 90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md
-  - '⚠️ Tema 91: Estándares de interoperabilidad de la historia clínica electrónica: CDA, FHIR y openEHR': 91-estandares-de-interoperabilidad-de-la-hce.md
-  - '⚠️ Tema 92: Normalización en informática sanitaria: ISO/EN 13606, terminologías clínicas y perfiles IHE': 92-normalizacion-en-informatica-sanitaria.md
-  - '⚠️ Tema 93: Imagen médica digital: DICOM, PACS y RIS': 93-imagen-medica-digital-dicom-pacs-ris.md
-  - '⚠️ Tema 94: Historia clínica digital: HCDSNS, MyHealth@EU y el Espacio Europeo de Datos de Salud': 94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md
-  - '⚠️ Tema 95: Productos sanitarios: reglamentos MDR e IVDR y software sanitario': 95-productos-sanitarios-mdr-ivdr-y-software-sanitario.md
+  - 'Tema 90: Integración de sistemas sanitarios y mensajería HL7': 90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md
+  - 'Tema 91: Estándares de interoperabilidad de la historia clínica electrónica: CDA, FHIR y openEHR': 91-estandares-de-interoperabilidad-de-la-hce.md
+  - 'Tema 92: Normalización en informática sanitaria: ISO/EN 13606, terminologías clínicas y perfiles IHE': 92-normalizacion-en-informatica-sanitaria.md
+  - 'Tema 93: Imagen médica digital: DICOM, PACS y RIS': 93-imagen-medica-digital-dicom-pacs-ris.md
+  - 'Tema 94: Historia clínica digital: HCDSNS, MyHealth@EU y el Espacio Europeo de Datos de Salud': 94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md
+  - 'Tema 95: Productos sanitarios: reglamentos MDR e IVDR y software sanitario': 95-productos-sanitarios-mdr-ivdr-y-software-sanitario.md
 - Bloque XIII — Administración local:
   - '⚠️ Tema 96: Bases del régimen local (Ley 7/1985)': 96-bases-del-regimen-local-ley-7-1985.md
   - '⚠️ Tema 97: Régimen local de la Comunitat Valenciana (Ley 8/2010)': 97-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md
