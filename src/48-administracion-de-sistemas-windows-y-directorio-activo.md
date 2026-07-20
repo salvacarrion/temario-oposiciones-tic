@@ -13,7 +13,7 @@ La versión vigente es **Windows Server 2025** (disponible desde **noviembre de 
 - **Roles y características**: el servidor se especializa añadiendo roles (AD DS, DNS, DHCP, servicios de archivos, IIS, Hyper-V) desde el Administrador del servidor o PowerShell; la administración moderna usa **Windows Admin Center** (web) y la remota, WinRM/PowerShell o las consolas **RSAT** instaladas en el puesto del administrador (nunca iniciando sesión interactiva en los servidores).
 - **Actualizaciones**: Windows Update, centralizado tradicionalmente con **WSUS** (sin desarrollo activo desde 2024, aunque sigue soportado) y en la estrategia actual con **Azure Update Manager**; el **hotpatching** (parches de seguridad sin reinicio) llega con Azure Edition o por suscripción vía Azure Arc.
 - **Almacenamiento y permisos**: volúmenes **NTFS** (o ReFS para datos masivos) con permisos por **ACL**, herencia y auditoría; las carpetas compartidas combinan permisos de recurso y NTFS (prevalece el más restrictivo).
-- **Servicios de archivos**: cuotas y filtrado por tipo de fichero con **FSRM**, instantáneas **VSS** («versiones anteriores» para el usuario) y cifrado de volumen con **BitLocker**.
+- **Servicios de archivos**: cuotas y filtrado por tipo de fichero con **FSRM**, instantáneas **VSS** («versiones anteriores» para el usuario) y cifrado de volumen con **BitLocker**. **DFS** unifica recursos de varios servidores bajo un espacio de nombres único (`\\gva.es\datos`) y los replica entre sedes con **DFS-R**; las impresoras se comparten desde el servidor de impresión y se despliegan por GPO.
 
 ## AD DS: estructura lógica
 
@@ -42,7 +42,7 @@ La estructura física adapta el directorio a la topología de red real.
 - **Controladores de dominio (DC)**: servidores que albergan la base de datos del directorio y autentican; la replicación es **multimaestro** (se escribe en cualquier DC). Todo dominio debe tener **al menos dos DC** (redundancia del servicio); en sedes con seguridad física limitada se usan **RODC** (controladores de solo lectura).
 - **Catálogo global**: índice parcial de todos los objetos del bosque, necesario para inicios de sesión y búsquedas entre dominios.
 - **Sitios y subredes**: los **sitios** modelan las ubicaciones con buena conectividad; la replicación dentro del sitio es inmediata y entre sitios se comprime y programa por enlaces de sitio.
-- **Topología de replicación**: la calcula y mantiene automáticamente el **KCC** (*Knowledge Consistency Checker*) en cada DC; la replicación entre sitios se canaliza por **servidores cabeza de puente** (*bridgehead*).
+- **Topología de replicación**: la calcula y mantiene automáticamente el **KCC** (*Knowledge Consistency Checker*) en cada DC; la replicación entre sitios se canaliza por **servidores cabeza de puente** (*bridgehead*). Cada DC lleva su contador de cambios (**USN**): dentro del sitio se replica por notificación casi inmediata y los conflictos se resuelven por versión y marca de tiempo (gana el último escritor).
 - **Roles FSMO**: cinco operaciones que solo ejerce un DC a la vez:
 
 | Rol FSMO | Ámbito | Función |
@@ -70,6 +70,8 @@ Las **GPO** aplican configuración centralizada de seguridad, software y escrito
 - **Ámbito y herencia**: se vinculan a sitio, dominio y OU, y se aplican en el orden **local, sitio, dominio, OU** (LSDOU): la más cercana al objeto prevalece, salvo vínculos **forzados** (*enforced*) o bloqueo de herencia; el filtrado por seguridad o WMI afina los destinatarios.
 - **GPO predefinidas**: **Default Domain Policy** (política de contraseñas y bloqueo de cuenta del dominio) y **Default Domain Controllers Policy** (derechos de usuario en los DC); la buena práctica es no sobrecargarlas con otras configuraciones.
 - **Directivas y preferencias**: las directivas se imponen y reaplican; las **preferencias** (unidades de red, impresoras, accesos directos) fijan un valor inicial que el usuario puede cambiar. Las plantillas administrativas (**ADMX**) se centralizan en el **almacén central** de SYSVOL para que todas las consolas vean las mismas.
+- **Directivas típicas de seguridad**: política de contraseñas (longitud mínima, historial, caducidad) y de **bloqueo de cuenta** (umbral de intentos fallidos), derechos de usuario (quién inicia sesión dónde), auditoría, y control de aplicaciones con **AppLocker**/WDAC (listas de lo que se puede ejecutar).
+- **Entorno del usuario**: los **perfiles móviles** y la redirección de carpetas llevaban el escritorio y los documentos de equipo en equipo; hoy los desplaza **OneDrive** con el movimiento de carpetas conocidas (*Known Folder Move*).
 - **Procesamiento**: la configuración de **equipo** y la de **usuario** se procesan por separado (el modo *loopback* aplica las de usuario según el equipo: aulas, quioscos, RDS); los equipos las refrescan periódicamente (por defecto cada **90 minutos** con desfase aleatorio); diagnóstico con `gpupdate /force` y `gpresult /r`.
 - **Buenas prácticas**: pocas GPO y bien nombradas, separar las de equipo y usuario, y probar en OU piloto antes de extender al dominio.
 
@@ -77,7 +79,7 @@ Las **GPO** aplican configuración centralizada de seguridad, software y escrito
 
 El directorio es el servicio más crítico del dominio: su pérdida o compromiso afecta a toda la organización.
 
-- **Tolerancia a fallos del servidor**: en disco, **Storage Spaces** agrupa discos físicos en pools con resiliencia simple, en **espejo** o con **paridad** (RAID por software; cabinas y RAID hardware en el tema [45](45-sistemas-de-almacenamiento.md)); en servicio, el **clúster de conmutación por error** (*Failover Clustering*) mueve roles entre nodos con testigo de **quórum** (típico bajo Hyper-V, SQL Server o servidores de archivos). Si el sistema no arranca, **WinRE** (entorno de recuperación) permite reparar el arranque o restaurar una imagen.
+- **Tolerancia a fallos del servidor**: en disco, **Storage Spaces** agrupa discos físicos en pools con resiliencia simple, en **espejo** o con **paridad** (RAID por software; cabinas y RAID hardware en el tema [45](45-sistemas-de-almacenamiento.md)); en red, la agregación de tarjetas (**NIC Teaming**/SET); en servicio, el **clúster de conmutación por error** (*Failover Clustering*) mueve roles entre nodos con testigo de **quórum** (típico bajo Hyper-V, SQL Server o servidores de archivos). Si el sistema no arranca, **WinRE** (entorno de recuperación) permite reparar el arranque o restaurar una imagen.
 - **Copia de seguridad**: se protege el **estado del sistema** (*system state*) de los controladores (base de datos NTDS, SYSVOL, registro), p. ej. con Windows Server Backup (`wbadmin`); la restauración de objetos borrados usa la **papelera de reciclaje de AD** (si está habilitada y dentro de la vida del objeto eliminado, **180 días** por defecto) o una restauración **autoritativa** (marca los objetos restaurados para que la replicación no los vuelva a borrar), frente a la no autoritativa (el DC se pone al día replicando). Las restauraciones del directorio exigen arrancar el DC en **DSRM** (*Directory Services Restore Mode*, con la contraseña propia fijada al promoverlo).
 - **Buenas prácticas de seguridad**: separar cuentas de usuario y de administración por **niveles** (*tiering*: los administradores de dominio solo inician sesión en DC), **LAPS** (contraseñas de administrador local únicas y rotadas), **gMSA** (cuentas de servicio administradas con contraseña automática), grupo *Protected Users*, mínimo de servicios en los DC y parcheo prioritario; auditoría de cambios y vigilancia de ataques típicos al directorio (Kerberoasting, pass-the-hash, tema [28](28-ciberseguridad.md)), con detección especializada tipo Microsoft Defender for Identity.
 - **Tras un compromiso**: además de restaurar desde copia **aislada** (el ransomware busca los DC), se restablece **dos veces** la contraseña de la cuenta **krbtgt** (invalida los tickets Kerberos robados, los *golden tickets*) y se rotan las credenciales privilegiadas (respuesta a incidentes en el tema [31](31-gestion-de-ciberincidentes.md)).
@@ -90,6 +92,7 @@ El directorio es el servicio más crítico del dominio: su pérdida o compromiso
 Get-Service | Where-Object Status -eq 'Stopped'
 Get-ADUser -Filter 'Enabled -eq $false' | Select-Object Name
 New-ADUser -Name "maria" -Path "OU=Personal,DC=gva,DC=es" -Enabled $true
+Import-Csv altas.csv | New-ADUser           # altas masivas desde un CSV
 Get-ADDomainController -Filter * | Select-Object Name,Site
 Install-WindowsFeature AD-Domain-Services   # instalar el rol AD DS
 Install-ADDSForest -DomainName "gva.es"     # promover el primer DC del bosque
@@ -106,7 +109,7 @@ Install-ADDSForest -DomainName "gva.es"     # promover el primer DC del bosque
 | `robocopy` | Copia masiva robusta de ficheros (reanudable, con ACL) |
 | `gpupdate /force`, `gpresult /r` | Refresco y diagnóstico de GPO |
 
-- **Microsoft Entra ID** (renombrado desde **Azure AD** en 2023): el directorio **en la nube** de Microsoft, base de identidad de Microsoft 365. No es un AD DS en la nube: no usa Kerberos/LDAP ni GPO, sino protocolos web (**OAuth 2.0, OpenID Connect, SAML**) y acceso condicional; la gestión de dispositivos se hace con Intune (tema [52](52-puesto-de-trabajo-tic.md)).
+- **Microsoft Entra ID** (renombrado desde **Azure AD** en 2023): el directorio **en la nube** de Microsoft, base de identidad de Microsoft 365. No es un AD DS en la nube: no usa Kerberos/LDAP ni GPO, sino protocolos web (**OAuth 2.0, OpenID Connect, SAML**), **acceso condicional** y **MFA**, con autenticación sin contraseña (**Windows Hello for Business**, claves FIDO2); la gestión de dispositivos se hace con Intune (tema [52](52-puesto-de-trabajo-tic.md)). Los dispositivos se **registran** (BYOD), se **unen a Entra** (*Entra joined*, sin AD local) o se unen de forma **híbrida** (AD + Entra a la vez).
 - **Identidad híbrida**: **Entra Connect** sincroniza las identidades locales con la nube (sincronización de hash de contraseña o autenticación federada), dando **inicio de sesión único** a los servicios cloud con la cuenta corporativa; es el escenario habitual en las administraciones. Los dispositivos se relacionan con Entra en tres grados: **unidos a Entra** (solo nube), **unidos híbridos** (dominio AD + Entra) y **registrados** (dispositivo personal BYOD).
 - **Integración con Linux**: los servidores Linux se unen al dominio con SSSD/realmd o winbind (tema [47](47-administracion-de-sistemas-gnu-linux.md)), y Samba ofrece recursos compartidos a clientes Windows.
 

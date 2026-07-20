@@ -72,7 +72,7 @@ El sistema de ficheros organiza el almacenamiento persistente en ficheros y dire
 | Sistema de ficheros | Ámbito | Rasgos |
 | --- | --- | --- |
 | **NTFS** | Windows | Journaling, ACL, cifrado EFS, compresión |
-| **ext4** | Linux (por defecto en Debian/Ubuntu) | Journaling, extents |
+| **ext4** | Linux (por defecto en Debian/Ubuntu) | Journaling, extents, bloques de 1-4 KiB |
 | **XFS** | Linux (por defecto en RHEL) | Alto rendimiento en ficheros grandes |
 | **Btrfs / ZFS** | Linux/BSD | Copy-on-write, instantáneas, sumas de verificación, RAID integrado |
 | **APFS** | macOS/iOS | Copy-on-write, instantáneas, cifrado nativo |

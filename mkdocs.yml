@@ -73,12 +73,12 @@ nav:
   - 'Tema 15: Prevención de riesgos laborales': 15-prevencion-de-riesgos-laborales.md
 - Bloque II — Sociedad digital y gestión TIC:
   - 'Tema 16: La sociedad digital': 16-sociedad-digital.md
-  - '⚠️ Tema 17: Gobernanza y planificación estratégica TIC': 17-gobernanza-y-planificacion-estrategica-tic.md
+  - 'Tema 17: Gobernanza y planificación estratégica TIC': 17-gobernanza-y-planificacion-estrategica-tic.md
   - 'Tema 18: La gestión de los servicios TIC': 18-gestion-de-los-servicios-tic.md
   - 'Tema 19: Dirección y gestión de proyectos': 19-direccion-y-gestion-de-proyectos.md
   - 'Tema 20: Análisis de procesos': 20-analisis-de-procesos.md
   - 'Tema 21: Metodologías ágiles y escalado ágil': 21-metodologias-agiles-y-escalado-agil.md
-  - '⚠️ Tema 22: Contratación pública de bienes y servicios TIC': 22-contratacion-publica-de-bienes-y-servicios-tic.md
+  - 'Tema 22: Contratación pública de bienes y servicios TIC': 22-contratacion-publica-de-bienes-y-servicios-tic.md
 - Bloque III — Ingeniería del software:
   - 'Tema 23: Análisis y diseño de aplicaciones': 23-analisis-y-diseno-de-aplicaciones.md
   - 'Tema 24: Proceso unificado y UML': 24-proceso-unificado-y-uml.md
@@ -91,14 +91,14 @@ nav:
   - 'Tema 30: Análisis y gestión de riesgos': 30-analisis-y-gestion-de-riesgos.md
   - 'Tema 31: Gestión de ciberincidentes': 31-gestion-de-ciberincidentes.md
   - 'Tema 32: Desarrollo seguro de aplicaciones': 32-desarrollo-seguro-de-aplicaciones.md
-  - '⚠️ Tema 33: Auditoría informática': 33-auditoria-informatica.md
+  - 'Tema 33: Auditoría informática': 33-auditoria-informatica.md
 - Bloque V — Datos, IA y tecnologías emergentes:
   - 'Tema 34: Inteligencia artificial': 34-inteligencia-artificial.md
   - 'Tema 35: Ética y regulación de la inteligencia artificial': 35-etica-regulacion-inteligencia-artificial.md
   - 'Tema 36: Bases de datos': 36-bases-de-datos.md
   - 'Tema 37: Gestión de datos corporativos y Big Data': 37-gestion-de-datos-corporativos-y-big-data.md
   - 'Tema 38: Gobernanza del dato': 38-gobernanza-del-dato.md
-  - '⚠️ Tema 39: Datos abiertos y espacios de datos': 39-datos-abiertos-y-espacios-de-datos.md
+  - 'Tema 39: Datos abiertos y espacios de datos': 39-datos-abiertos-y-espacios-de-datos.md
   - 'Tema 40: APIs y apificación': 40-apis-y-apificacion.md
   - 'Tema 41: Automatización robótica de procesos (RPA)': 41-automatizacion-robotica-de-procesos.md
   - 'Tema 42: Blockchain y otras tecnologías emergentes': 42-blockchain-y-otras-tecnologias-emergentes.md
@@ -110,7 +110,7 @@ nav:
   - 'Tema 47: Administración de sistemas GNU/Linux': 47-administracion-de-sistemas-gnu-linux.md
   - 'Tema 48: Administración de sistemas Windows y Directorio Activo': 48-administracion-de-sistemas-windows-y-directorio-activo.md
   - 'Tema 49: Servicios de infraestructura: web, correo y monitorización': 49-servicios-de-infraestructura.md
-  - '⚠️ Tema 50: Protección jurídica del software y licencias': 50-proteccion-juridica-del-software-y-licencias.md
+  - 'Tema 50: Protección jurídica del software y licencias': 50-proteccion-juridica-del-software-y-licencias.md
   - 'Tema 51: Computación en la nube y de altas prestaciones': 51-computacion-en-la-nube-y-altas-prestaciones.md
   - 'Tema 52: Puesto de trabajo TIC': 52-puesto-de-trabajo-tic.md
 - Bloque VII — Protección de datos y administración electrónica:
@@ -131,14 +131,14 @@ nav:
   - 'Tema 65: Identificación y firma electrónica': 65-identificacion-y-firma-electronica.md
   - 'Tema 66: Sistemas de información geográfica': 66-sistemas-de-informacion-geografica.md
   - 'Tema 67: Infraestructuras de datos espaciales': 67-infraestructuras-de-datos-espaciales.md
-  - '⚠️ Tema 68: Comercio electrónico y factura electrónica': 68-comercio-electronico-y-factura-electronica.md
+  - 'Tema 68: Comercio electrónico y factura electrónica': 68-comercio-electronico-y-factura-electronica.md
 - Bloque X — Redes y comunicaciones:
   - 'Tema 69: Modelos OSI y TCP/IP': 69-modelos-osi-y-tcp-ip.md
   - 'Tema 70: Protocolos de comunicaciones': 70-protocolos-de-comunicaciones.md
   - 'Tema 71: Redes de computadores': 71-redes-de-computadores.md
-  - '⚠️ Tema 72: Cableado estructurado y medios de transmisión': 72-cableado-estructurado-y-medios-de-transmision.md
+  - 'Tema 72: Cableado estructurado y medios de transmisión': 72-cableado-estructurado-y-medios-de-transmision.md
   - 'Tema 73: Virtualización de redes': 73-virtualizacion-de-redes.md
-  - '⚠️ Tema 74: Redes de transporte, voz y audiovisuales': 74-redes-de-transporte-voz-y-audiovisuales.md
+  - 'Tema 74: Redes de transporte, voz y audiovisuales': 74-redes-de-transporte-voz-y-audiovisuales.md
   - 'Tema 75: Redes de emergencia': 75-redes-de-emergencia.md
   - 'Tema 76: Redes inalámbricas y 5G': 76-redes-inalambricas-y-5g.md
   - 'Tema 77: Internet de las cosas y redes de sensores': 77-internet-de-las-cosas-y-redes-de-sensores.md
