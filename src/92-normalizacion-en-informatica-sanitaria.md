@@ -5,6 +5,7 @@ Además de los estándares de HL7 y openEHR (temas [90](90-integracion-de-sistem
 ## La normalización en informática sanitaria: ISO/TC 215 y CEN/TC 251
 
 - **ISO/TC 215 «Health informatics»** (creado en **1998**): comité técnico de ISO para la informática sanitaria. De él salen, entre otras, la **ISO 13606** (comunicación de la HCE), la ISO/HL7 27932 (CDA), la **ISO 13940** (ContSys, sistema de conceptos para la continuidad asistencial) y la **ISO 12967** (HISA, arquitectura de servicios de los sistemas de información sanitarios).
+- **Otras familias del TC 215**: **ISO/IEEE 11073**, interoperabilidad de dispositivos médicos (incluida la serie **PHD** para dispositivos personales de salud: tensiómetros, pulsioxímetros, básculas), e **IDMP**, identificación de medicamentos (ISO 11615, 11616, 11238, 11239 y 11240), adoptada por la **EMA** para el registro europeo de medicamentos.
 - **CEN/TC 251**: el comité europeo equivalente, pionero en la materia (la 13606 nació como norma europea EN 13606 antes de adoptarse en ISO). Muchas normas se publican en paralelo como **EN ISO**.
 - **En España**: el comité espejo de UNE adopta estas normas como **UNE-EN ISO**; el Ministerio de Sanidad lidera la interoperabilidad semántica del SNS (centro de referencia de SNOMED CT y edición de CIE-10-ES, ver más abajo).
 
@@ -26,11 +27,14 @@ La **ISO/EN 13606** («Electronic health record communication», revisión vigen
 Para que el dato clínico viaje con su significado hay que codificarlo con vocabularios comunes. Conviene distinguir **terminologías clínicas** (muy granulares, pensadas para registrar la asistencia: SNOMED CT) de **clasificaciones** (agrupan casos en categorías excluyentes para estadística y gestión: CIE).
 
 - **SNOMED CT**: la terminología clínica integral **más completa del mundo**, mantenida por **SNOMED International**. Estructura: **conceptos** (con identificador numérico único), **descripciones** (términos sinónimos en cada idioma) y **relaciones** entre conceptos (jerárquicas «IS_A» y de atributo), organizados en jerarquías (hallazgo clínico, procedimiento, estructura corporal, fármaco…).
+    - **Precoordinación y poscoordinación**: un significado puede registrarse con un concepto único ya definido (**precoordinado**) o construirse como **expresión composicional** que combina conceptos y atributos mediante la gramática de expresiones (**poscoordinación**); de ahí su granularidad.
+    - **Distribución y uso**: se publica en el formato **RF2** (*Release Format 2*); los **subconjuntos** (*refsets*) acotan los conceptos aplicables a un ámbito y los **mapeos** oficiales la conectan con las clasificaciones (CIE-10), todo ello servido típicamente por un servidor terminológico (tema [91](91-estandares-de-interoperabilidad-de-la-hce.md)).
     - **En España**: es la **terminología clínica de referencia del SNS**. El **Ministerio de Sanidad** actúa como **Centro Nacional de Referencia** (distribución en exclusiva para el territorio) y publica dos extensiones nacionales: la **extensión para España del SNS** (actualización **semestral**) y la **extensión de medicamentos** (actualización **mensual**).
 - **CIE (Clasificación Internacional de Enfermedades)**: clasificación estadística de la **OMS**.
-    - **CIE-10-ES**: la modificación clínica española de la CIE-10 (diagnósticos y procedimientos), obligatoria para codificar los episodios asistenciales del SNS (CMBD/RAE-CMBD) desde **2016**. Edición vigente: **6.ª edición (enero de 2026)**, consultable en la herramienta **eCIE-Maps** del Ministerio.
-    - **CIE-11**: adoptada por la OMS en 2019 y **en vigor internacionalmente desde el 1 de enero de 2022**; nativa digital (entidades con URI, herramienta de codificación en línea). En España la codificación oficial continúa en CIE-10-ES.
+    - **CIE-10-ES**: la modificación clínica española de la CIE-10 (diagnósticos y procedimientos), obligatoria para codificar los episodios asistenciales del SNS (CMBD/RAE-CMBD) desde **2016**, con ediciones bienales. Edición vigente: **6.ª edición (enero de 2026)**, consultable en la herramienta **eCIE-Maps** del Ministerio.
+    - **CIE-11**: adoptada por la OMS en 2019 y **en vigor internacionalmente desde el 1 de enero de 2022**; nativa digital (entidades con URI, herramienta de codificación en línea), estructurada como una **fundación** común de entidades de la que derivan **linearizaciones** (la estadística MMS entre ellas). En España la codificación oficial continúa en CIE-10-ES.
 - **LOINC** (*Logical Observation Identifiers Names and Codes*): terminología del **Regenstrief Institute** que identifica **pruebas de laboratorio y observaciones clínicas** (el «qué se mide»: analito, propiedad, sistema, escala, método). Se usa en los mensajes de resultados (OBX-3 de HL7 v2), en FHIR (`Observation.code`) y para codificar secciones de documentos CDA. Dos versiones al año; la vigente es la **2.82 (2026)**.
+- **Otros vocabularios habituales**: **ATC** (clasificación anatómica-terapéutica-química de medicamentos, de la OMS, base de la explotación farmacéutica) y **CIAP-2** (clasificación internacional de la atención primaria, de WONCA, usada en las HCE de atención primaria).
 
 | Vocabulario | Organismo | Tipo | Uso principal |
 | --- | --- | --- | --- |
@@ -38,6 +42,7 @@ Para que el dato clínico viaje con su significado hay que codificarlo con vocab
 | **CIE-10-ES** | OMS / Ministerio de Sanidad | Clasificación | Codificación de episodios (CMBD), estadística |
 | **CIE-11** | OMS | Clasificación | Sucesora digital de la CIE-10 |
 | **LOINC** | Regenstrief Institute | Terminología | Identificar pruebas y observaciones |
+| **UCUM** | Regenstrief Institute | Códigos de unidades | Unidades de medida sin ambigüedad (mg/dL) |
 
 ## Perfiles IHE
 
@@ -57,6 +62,9 @@ Para que el dato clínico viaje con su significado hay que codificarlo con vocab
 | **XUA** | Cross-Enterprise User Assertion | Aserciones de identidad del usuario (SAML) entre organizaciones |
 | **BPPC** | Basic Patient Privacy Consents | Gestión básica de consentimientos de privacidad |
 
+- **Actores de XDS.b**: el **Document Source** (quien produce el documento) lo envía al **Document Repository** (que lo almacena), y este registra sus metadatos en el **Document Registry** (el índice único del dominio); el **Document Consumer** consulta el registro y recupera el documento del repositorio.
+- **Proceso**: cada dominio publica su **Technical Framework** (los volúmenes que definen perfiles, actores y transacciones); los fabricantes declaran los perfiles que implementan en sus **integration statements**.
+- **Perfiles modernos**: **MHD** (*Mobile access to Health Documents*) reformula el acceso a documentos XDS con una API **FHIR** para aplicaciones móviles y web; **XDS-I** extiende XDS a la compartición de estudios de imagen (tema [93](93-imagen-medica-digital-dicom-pacs-ris.md)).
 - **Relevancia práctica**: la infraestructura europea MyHealth@EU (tema [94](94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md)) y muchas plataformas autonómicas de HCE se construyen sobre perfiles IHE (XCA, XCPD, ATNA); en imagen médica, el perfil **SWF** (*Scheduled Workflow*) orquesta RIS, PACS y modalidades (tema [93](93-imagen-medica-digital-dicom-pacs-ris.md)).
 
 ## Fuentes {.unnumbered .unlisted}
