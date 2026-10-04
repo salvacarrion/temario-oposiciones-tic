@@ -1,10 +1,6 @@
 # Configuración e ÍNDICE del libro. Al añadir/reordenar capítulos, edita
 # la lista book.chapters (y renumera los ficheros NN-*.md si hace falta).
-#
-# El índice objetivo completo (108 capítulos, con subtemas) está en PLAN.md.
-# Desde el 17-jul-2026 no quedan huecos: los 108 ficheros existen. Los
-# bocetos de la fase 4 se listan con «⚠️ » en el nav de mkdocs.yml hasta
-# pasar su revisión.
+# Este índice y el nav de mkdocs.yml deben ir sincronizados.
 
 project:
   type: book
@@ -20,7 +16,7 @@ book:
   author: "Salvador Carrión Ponz"
   # Versión del temario: la portada del PDF muestra «Versión X.Y · fecha de
   # compilación». Al publicar una versión nueva, cambia el número aquí y en
-  # extra.temario_version de mkdocs.yml (ver «Versiones» en CLAUDE.md).
+  # extra.temario_version de mkdocs.yml (ver «Versiones» en CONTRIBUTING.md).
   date: today
   date-format: "[Versión 1.0] · D [de] MMMM [de] YYYY"
   output-file: temario-oposiciones-tic

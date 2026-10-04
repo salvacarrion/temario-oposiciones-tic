@@ -160,7 +160,7 @@ Como síntesis, las tecnologías inalámbricas se ordenan en un cuadrante alcanc
 
 ## Fuentes {.unnumbered .unlisted}
 
-- AUTELSI, informes *5G: Introducción y Tecnología* y *5G: Casos de uso y habilitadores* (junio de 2022), en `references/08-redes/`.
+- AUTELSI, informes *5G: Introducción y Tecnología* y *5G: Casos de uso y habilitadores* (junio de 2022).
 - IEEE 802.11ax-2021, 802.11be-2024 (publicado en julio de 2025) y 802.11bb-2023; certificaciones y generaciones de la Wi-Fi Alliance (consulta julio 2026).
 - IEEE 802.11k-2008, 802.11r-2008 y 802.11v-2011 (itinerancia asistida), refundidas en las revisiones consolidadas del estándar 802.11.
 - 3GPP (Releases 15 a 19; 5G-Advanced) y UIT-R: requisitos IMT-2020 y Recomendación UIT-R M.2160 (IMT-2030, noviembre de 2023), contrastados online en julio de 2026.

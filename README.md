@@ -23,7 +23,7 @@ En **julio de 2026** decidí publicarlo, revisarlo y actualizarlo para que otras
 
 El grueso del temario es común a la mayoría de cuerpos TIC de nivel A1/A2: Administración de la Generalitat Valenciana, sanidad, universidades, administración local y otras administraciones públicas. No cubre de forma exhaustiva el programa de ninguna convocatoria concreta (tampoco el de la GVA), pero el solapamiento con todas ellas es muy alto. Solo los temas específicos valencianos habría que sustituirlos por los del ámbito correspondiente.
 
-Los **11 bloques** actuales:
+Sus **108 temas** se organizan en **14 bloques**:
 
 1. Marco jurídico y administrativo
 2. Sociedad digital y gestión TIC
@@ -36,6 +36,9 @@ Los **11 bloques** actuales:
 9. Interoperabilidad y confianza digital
 10. Redes y comunicaciones
 11. Administración de la Generalitat
+12. Sanidad
+13. Administración local
+14. Universidades
 
 ## Versiones
 
@@ -43,7 +46,7 @@ Cada edición del temario lleva un número de versión (v1.0, v1.1…) y la fech
 
 ## Contribuir
 
-¡Toda ayuda es bienvenida! Este material lo mantengo en mi tiempo libre y seguro que contiene erratas o normativa que ha cambiado. Si ves algo mejorable, abre una [*issue*](https://github.com/salvacarrion/temario-oposiciones-tic/issues) o envía directamente un *pull request* (cada página del libro tiene enlaces de edición y de reporte de errores). En temas legales, cita la fuente (BOE/DOGV consolidado) para que la corrección sea verificable.
+¡Toda ayuda es bienvenida! Este material lo mantengo en mi tiempo libre y seguro que contiene erratas o normativa que ha cambiado. Si ves algo mejorable, abre una [*issue*](https://github.com/salvacarrion/temario-oposiciones-tic/issues) o envía directamente un *pull request* (cada página del libro tiene enlaces de edición y de reporte de errores). En temas legales, cita la fuente (BOE/DOGV consolidado) para que la corrección sea verificable. Las convenciones de estilo y cómo compilar el libro están en [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Si el material te ha resultado útil y quieres apoyarlo, puedes invitarme a un café en [ko-fi.com/salvacarrion](https://ko-fi.com/salvacarrion). ☕
 

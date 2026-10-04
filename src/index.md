@@ -3,10 +3,7 @@
 !!! info "Descargar temario completo en PDF"
     Puedes descargar todo el temario compilado y unificado en un único archivo PDF optimizado para lectura e impresión: [**temario-oposiciones-tic.pdf**](temario-oposiciones-tic.pdf).
 
-!!! warning "Temario en proceso de revisión"
-    Algunos temas aún **no han sido revisados**. Su contenido puede estar incompleto, desactualizado o contener errores. Los temas marcados con **⚠️** en el menú lateral están pendientes de revisión. Contrasta siempre con fuentes oficiales.
-
-Hola! Soy **Salva Carrión**, y este temario es la evolución del que elaboré para aprobar la oposición al **Cuerpo Superior Técnico de Ingeniería en Informática de la Generalitat Valenciana** (convocatoria 5/22): una versión limpia, ampliada y actualizada de mi temario original, publicada como proyecto **open source** para que cualquiera pueda usarla y mejorarla.
+¡Hola! Soy **Salva Carrión**, y este temario es la evolución del que elaboré para aprobar la oposición al **Cuerpo Superior Técnico de Ingeniería en Informática de la Generalitat Valenciana** (convocatoria 5/22): una versión limpia, ampliada y actualizada de mi temario original, publicada como proyecto **open source** para que cualquiera pueda usarla y mejorarla.
 
 No es un temario oficial ni sustituye al programa de cada convocatoria. Intenta cubrir de forma exhaustiva el programa de la GVA, aunque solapando en un muy alto grado con los de la mayoría de oposiciones TIC. En total son **108 temas** organizados en **14 bloques**, con **32 supuestos prácticos** resueltos. Úsalo como punto de partida y contrástalo con las bases oficiales para adaptarlo a la oposición que estés preparando.
 
