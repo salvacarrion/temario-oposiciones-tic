@@ -5,6 +5,12 @@ site_libs/
 src/*.html
 /*.pdf
 src/temario-oposiciones-tic.pdf
+# Intermedios de LaTeX que quedan en la raíz si se interrumpe el render del PDF
+/*.tex
+/*.aux
+/*.log
+/*.toc
+/*.out
 
 # Sistema
 .DS_Store
