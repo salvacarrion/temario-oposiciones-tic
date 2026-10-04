@@ -6,7 +6,7 @@ en hipervínculos relativos dentro de los archivos Markdown en src/.
 Uso:
     python3 tools/linkify_temas.py [--dry-run] [--check] [file1.md file2.md ...]
 
-    Sin argumentos de archivo, procesa todos los archivos .md en src/ (excepto index.md o referencias.md).
+    Sin argumentos de archivo, procesa todos los archivos .md en src/ (excepto index.md y prologo.md).
     --dry-run muestra lo que cambiaría sin escribir en disco.
     --check   no escribe nada: detecta referencias elípticas a temas sin enlazar
               (ej. "…en el tema 71, y las redes inalámbricas en el 76") y las lista
@@ -32,7 +32,7 @@ def build_theme_map(src_dir: Path) -> dict:
     theme_map = {}
     for path in src_dir.glob("*.md"):
         # Ignorar archivos generales
-        if path.name in ("index.md", "referencias.md", "prologo.md"):
+        if path.name in ("index.md", "prologo.md"):
             continue
         # Buscar temas que empiecen por dígitos (ej. "01-", "102-")
         match = re.match(r"^(\d+)-", path.name)
@@ -179,7 +179,7 @@ def main():
     print(f"Mapeados {len(theme_map)} temas en 'src/'.")
     
     for file_path in files_to_process:
-        if file_path.name in ("index.md", "referencias.md", "prologo.md"):
+        if file_path.name in ("index.md", "prologo.md"):
             continue
             
         if not file_path.exists():

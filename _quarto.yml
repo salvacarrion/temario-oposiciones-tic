@@ -167,8 +167,6 @@ book:
         - src/106-rediris-e-identidad-federada.md
         - src/107-e-learning-plataformas-y-estandares.md
         - src/108-administracion-electronica-universitaria.md
-  appendices:
-    - src/referencias.md
 
 format:
   html:
