@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="660" viewBox="0 0 940 660" font-family="Helvetica, Arial, sans-serif">
+  <rect width="940" height="660" fill="#ffffff"/>
+  <text x="40" y="42" font-size="19" font-weight="700" fill="#1f3a5f">eduroam: autenticación 802.1X y jerarquía de proxies RADIUS</text>
+  <text x="40" y="66" font-size="12.5" fill="#4a5b68">Ejemplo: una investigadora de la UPV se conecta a la red «eduroam» de una universidad portuguesa</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5a7d99"/>
+    </marker>
+  </defs>
+
+  <!-- Etiquetas de columna -->
+  <text x="300" y="96" font-size="12" font-weight="700" fill="#2e5f8a" text-anchor="middle">Institución visitada (proveedor de servicio)</text>
+  <text x="680" y="96" font-size="12" font-weight="700" fill="#2e5f8a" text-anchor="middle">Institución de origen (proveedor de identidad)</text>
+
+  <!-- Nivel raíz -->
+  <rect x="360" y="112" width="220" height="54" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <g text-anchor="middle">
+    <text x="470" y="135" font-size="12" font-weight="700" fill="#1f3a5f">Servidores raíz</text>
+    <text x="470" y="153" font-size="11" fill="#4a5b68">Nivel internacional (varios continentes)</text>
+  </g>
+
+  <!-- Proxies nacionales -->
+  <rect x="180" y="196" width="240" height="58" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <g text-anchor="middle">
+    <text x="300" y="220" font-size="12" font-weight="700" fill="#1f3a5f">Proxy RADIUS nacional</text>
+    <text x="300" y="238" font-size="11" fill="#4a5b68">de Portugal</text>
+  </g>
+  <rect x="540" y="196" width="280" height="58" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <g text-anchor="middle">
+    <text x="680" y="219" font-size="12" font-weight="700" fill="#1f3a5f">Proxy RADIUS nacional de España (RedIRIS)</text>
+    <text x="680" y="238" font-size="11" fill="#4a5b68">radius.rediris.es · radius2.rediris.es</text>
+  </g>
+
+  <!-- Túnel EAP (detrás de las cajas institucionales) -->
+  <path d="M 95 418 L 95 276 L 526 276 L 526 331 L 538 331" fill="none" stroke="#c9a24b" stroke-width="3" stroke-dasharray="8 5"/>
+
+  <!-- RADIUS institucionales -->
+  <rect x="180" y="302" width="240" height="58" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <g text-anchor="middle">
+    <text x="300" y="326" font-size="12" font-weight="700" fill="#1f3a5f">Servidor RADIUS</text>
+    <text x="300" y="344" font-size="11" fill="#4a5b68">de la universidad visitada</text>
+  </g>
+  <rect x="540" y="302" width="280" height="58" rx="10" fill="#faeed7" stroke="#c9a24b" stroke-width="1.8"/>
+  <g text-anchor="middle">
+    <text x="680" y="326" font-size="12" font-weight="700" fill="#1f3a5f">Servidor RADIUS de la UPV</text>
+    <text x="680" y="344" font-size="11" fill="#4a5b68">Cierra el túnel EAP y valida las credenciales</text>
+  </g>
+
+  <!-- Acceso -->
+  <rect x="20" y="420" width="140" height="58" rx="10" fill="#eef4fa" stroke="#5b87b0" stroke-width="1.4"/>
+  <g text-anchor="middle">
+    <text x="90" y="444" font-size="12" font-weight="700" fill="#1f3a5f">Portátil</text>
+    <text x="90" y="462" font-size="11" fill="#4a5b68">(suplicante)</text>
+  </g>
+  <rect x="180" y="420" width="240" height="58" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <g text-anchor="middle">
+    <text x="300" y="444" font-size="12" font-weight="700" fill="#1f3a5f">Punto de acceso «eduroam»</text>
+    <text x="300" y="462" font-size="11" fill="#4a5b68">(autenticador; WPA2/AES como mínimo)</text>
+  </g>
+  <rect x="540" y="420" width="280" height="58" rx="10" fill="#eef4fa" stroke="#5b87b0" stroke-width="1.4"/>
+  <g text-anchor="middle">
+    <text x="680" y="444" font-size="12" font-weight="700" fill="#1f3a5f">Directorio de la UPV</text>
+    <text x="680" y="462" font-size="11" fill="#4a5b68">(LDAP / Active Directory)</text>
+  </g>
+
+  <!-- Flechas de la petición -->
+  <g stroke="#5a7d99" stroke-width="2" fill="none" marker-end="url(#arr)">
+    <line x1="161" y1="449" x2="176" y2="449"/>
+    <line x1="300" y1="418" x2="300" y2="364"/>
+    <line x1="300" y1="300" x2="300" y2="258"/>
+    <line x1="330" y1="194" x2="392" y2="169"/>
+    <line x1="548" y1="169" x2="610" y2="194"/>
+    <line x1="680" y1="256" x2="680" y2="298"/>
+    <line x1="680" y1="362" x2="680" y2="416"/>
+  </g>
+
+  <!-- Etiqueta del túnel, encima de las flechas -->
+  <text x="112" y="291" font-size="11" font-weight="700" fill="#8a6a1c" paint-order="stroke" stroke="#ffffff" stroke-width="4">Túnel EAP (PEAP, EAP-TTLS o EAP-TLS): identidad real y contraseña cifradas de extremo a extremo</text>
+
+  <!-- Números de paso -->
+  <g font-size="11" font-weight="700" text-anchor="middle">
+    <circle cx="168" cy="500" r="10" fill="#1f3a5f"/><text x="168" y="504" fill="#ffffff">1</text>
+    <circle cx="322" cy="391" r="10" fill="#1f3a5f"/><text x="322" y="395" fill="#ffffff">2</text>
+    <circle cx="352" cy="170" r="10" fill="#1f3a5f"/><text x="352" y="174" fill="#ffffff">3</text>
+    <circle cx="589" cy="170" r="10" fill="#1f3a5f"/><text x="589" y="174" fill="#ffffff">3</text>
+    <circle cx="702" cy="277" r="10" fill="#1f3a5f"/><text x="702" y="281" fill="#ffffff">4</text>
+  </g>
+  <g font-size="10.5" fill="#4a5b68" paint-order="stroke" stroke="#ffffff" stroke-width="4">
+    <text x="184" y="504">identidad externa: anonymous@upv.es (el dominio decide la ruta)</text>
+    <text x="336" y="395">RADIUS</text>
+    <text x="692" y="394">consulta de credenciales</text>
+  </g>
+
+  <!-- Pasos -->
+  <text x="40" y="540" font-size="13" font-weight="700" fill="#2e5f8a">Pasos</text>
+  <g font-size="11" fill="#4a5b68">
+    <text x="40" y="561"><tspan font-weight="700" fill="#1f3a5f">1.</tspan> El portátil se asocia a «eduroam» y envía por 802.1X (EAP) la identidad externa anonymous@upv.es.</text>
+    <text x="40" y="579"><tspan font-weight="700" fill="#1f3a5f">2.</tspan> El RADIUS visitado comprueba que upv.es no es un dominio local y reenvía la petición a su proxy nacional.</text>
+    <text x="40" y="597"><tspan font-weight="700" fill="#1f3a5f">3.</tspan> El nivel raíz la encamina por el dominio de primer nivel (.es) hasta el proxy nacional de RedIRIS.</text>
+    <text x="40" y="615"><tspan font-weight="700" fill="#1f3a5f">4.</tspan> RedIRIS la entrega al RADIUS de la UPV, que valida las credenciales dentro del túnel EAP.</text>
+    <text x="40" y="633"><tspan font-weight="700" fill="#1f3a5f">5.</tspan> La respuesta (Access-Accept o Access-Reject) vuelve por el mismo camino y el punto de acceso abre o mantiene cerrado el puerto.</text>
+  </g>
+
+  <text x="900" y="652" font-size="12" fill="#8a949e" text-anchor="end">Elaboración propia a partir del RFC 7593 y de la documentación de eduroam ES.</text>
+</svg>

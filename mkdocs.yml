@@ -52,6 +52,7 @@ docs_dir: src
 site_dir: book-mkdocs
 extra:
   generator: false
+  temario_version: '1.0'
 nav:
 - Inicio: index.md
 - Prólogo: prologo.md
@@ -149,13 +150,13 @@ nav:
   - 'Tema 81: Seguridad de la información en la Generalitat': 81-seguridad-de-la-informacion-en-la-generalitat.md
   - 'Tema 82: Administración electrónica y plataformas de la Generalitat': 82-administracion-electronica-y-plataformas-de-la-generalitat.md
 - Bloque XII — Sanidad:
-  - '⚠️ Tema 83: Ley General de Sanidad (Ley 14/1986)': 83-ley-general-de-sanidad.md
-  - '⚠️ Tema 84: Cohesión y calidad del SNS y cartera de servicios comunes': 84-cohesion-y-calidad-del-sns-y-cartera-de-servicios.md
-  - '⚠️ Tema 85: Salud de la Comunitat Valenciana (Ley 10/2014)': 85-salud-de-la-comunitat-valenciana.md
-  - '⚠️ Tema 86: Organización de la Conselleria de Sanidad (Decreto 22/2025)': 86-organizacion-de-la-conselleria-de-sanidad.md
-  - '⚠️ Tema 87: Personal estatutario de los servicios de salud (Ley 55/2003)': 87-personal-estatutario-ley-55-2003.md
-  - '⚠️ Tema 88: Autonomía del paciente (Ley 41/2002)': 88-autonomia-del-paciente-ley-41-2002.md
-  - '⚠️ Tema 89: Documentación clínica normalizada': 89-documentacion-clinica-normalizada.md
+  - 'Tema 83: Ley General de Sanidad (Ley 14/1986)': 83-ley-general-de-sanidad.md
+  - 'Tema 84: Cohesión y calidad del SNS y cartera de servicios comunes': 84-cohesion-y-calidad-del-sns-y-cartera-de-servicios.md
+  - 'Tema 85: Salud de la Comunitat Valenciana (Ley 10/2014)': 85-salud-de-la-comunitat-valenciana.md
+  - 'Tema 86: Organización de la Conselleria de Sanidad (Decreto 22/2025)': 86-organizacion-de-la-conselleria-de-sanidad.md
+  - 'Tema 87: Personal estatutario de los servicios de salud (Ley 55/2003)': 87-personal-estatutario-ley-55-2003.md
+  - 'Tema 88: Autonomía del paciente (Ley 41/2002)': 88-autonomia-del-paciente-ley-41-2002.md
+  - 'Tema 89: Documentación clínica normalizada': 89-documentacion-clinica-normalizada.md
   - 'Tema 90: Integración de sistemas sanitarios y mensajería HL7': 90-integracion-de-sistemas-sanitarios-y-mensajeria-hl7.md
   - 'Tema 91: Estándares de interoperabilidad de la historia clínica electrónica: CDA, FHIR y openEHR': 91-estandares-de-interoperabilidad-de-la-hce.md
   - 'Tema 92: Normalización en informática sanitaria: ISO/EN 13606, terminologías clínicas y perfiles IHE': 92-normalizacion-en-informatica-sanitaria.md
@@ -163,20 +164,20 @@ nav:
   - 'Tema 94: Historia clínica digital: HCDSNS, MyHealth@EU y el Espacio Europeo de Datos de Salud': 94-historia-clinica-digital-hcdsns-myhealth-eu-eeds.md
   - 'Tema 95: Productos sanitarios: reglamentos MDR e IVDR y software sanitario': 95-productos-sanitarios-mdr-ivdr-y-software-sanitario.md
 - Bloque XIII — Administración local:
-  - '⚠️ Tema 96: Bases del régimen local (Ley 7/1985)': 96-bases-del-regimen-local-ley-7-1985.md
-  - '⚠️ Tema 97: Régimen local de la Comunitat Valenciana (Ley 8/2010)': 97-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md
-  - '⚠️ Tema 98: Personal al servicio de las entidades locales': 98-personal-al-servicio-de-las-entidades-locales.md
-  - '⚠️ Tema 99: Contratación en las entidades locales': 99-contratacion-en-las-entidades-locales.md
-  - '⚠️ Tema 100: Formas de actividad y servicios públicos locales': 100-formas-de-actividad-y-servicios-publicos-locales.md
-  - '⚠️ Tema 101: Sistemas de información corporativos de la administración local': 101-sistemas-de-informacion-corporativos-de-la-administracion-local.md
-  - '⚠️ Tema 102: Administración electrónica local': 102-administracion-electronica-local.md
+  - 'Tema 96: Bases del régimen local (Ley 7/1985)': 96-bases-del-regimen-local-ley-7-1985.md
+  - 'Tema 97: Régimen local de la Comunitat Valenciana (Ley 8/2010)': 97-regimen-local-de-la-comunitat-valenciana-ley-8-2010.md
+  - 'Tema 98: Personal al servicio de las entidades locales': 98-personal-al-servicio-de-las-entidades-locales.md
+  - 'Tema 99: Contratación en las entidades locales': 99-contratacion-en-las-entidades-locales.md
+  - 'Tema 100: Formas de actividad y servicios públicos locales': 100-formas-de-actividad-y-servicios-publicos-locales.md
+  - 'Tema 101: Sistemas de información corporativos de la administración local': 101-sistemas-de-informacion-corporativos-de-la-administracion-local.md
+  - 'Tema 102: Administración electrónica local': 102-administracion-electronica-local.md
 - Bloque XIV — Universidades:
-  - '⚠️ Tema 103: Sistema universitario (Ley Orgánica 2/2023, LOSU)': 103-sistema-universitario-losu.md
-  - '⚠️ Tema 104: Sistema universitario valenciano (Ley 4/2007)': 104-sistema-universitario-valenciano-ley-4-2007.md
-  - '⚠️ Tema 105: Adecuación al ENS en las universidades (CCN-STIC 881)': 105-adecuacion-al-ens-en-universidades-ccn-stic-881.md
-  - '⚠️ Tema 106: RedIRIS e identidad digital federada': 106-rediris-e-identidad-federada.md
-  - '⚠️ Tema 107: E-learning: plataformas y estándares': 107-e-learning-plataformas-y-estandares.md
-  - '⚠️ Tema 108: Administración electrónica universitaria': 108-administracion-electronica-universitaria.md
+  - 'Tema 103: Sistema universitario (Ley Orgánica 2/2023, LOSU)': 103-sistema-universitario-losu.md
+  - 'Tema 104: Sistema universitario valenciano (Ley 4/2007)': 104-sistema-universitario-valenciano-ley-4-2007.md
+  - 'Tema 105: Adecuación al ENS en las universidades (CCN-STIC 881)': 105-adecuacion-al-ens-en-universidades-ccn-stic-881.md
+  - 'Tema 106: RedIRIS e identidad digital federada': 106-rediris-e-identidad-federada.md
+  - 'Tema 107: E-learning: plataformas y estándares': 107-e-learning-plataformas-y-estandares.md
+  - 'Tema 108: Administración electrónica universitaria': 108-administracion-electronica-universitaria.md
 - Apéndices:
   - Referencias: referencias.md
 - Descargar PDF: temario-oposiciones-tic.pdf

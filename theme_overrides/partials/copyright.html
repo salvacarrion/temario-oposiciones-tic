@@ -1,0 +1,16 @@
+{#- Pie de página de Material con la versión del temario (extra.temario_version
+    en mkdocs.yml) y la fecha de compilación, igual que la portada del PDF. -#}
+{%- set meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+                 "agosto", "septiembre", "octubre", "noviembre", "diciembre"] -%}
+<div class="md-copyright">
+  {% if config.extra.temario_version %}
+    <div class="md-copyright__highlight">
+      Versión {{ config.extra.temario_version }} · {{ build_date_utc.day }} de {{ meses[build_date_utc.month - 1] }} de {{ build_date_utc.year }}
+    </div>
+  {% endif %}
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+</div>

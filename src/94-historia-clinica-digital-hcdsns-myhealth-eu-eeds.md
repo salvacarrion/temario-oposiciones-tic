@@ -8,7 +8,7 @@ El proyecto HCDSNS, coordinado por el **Ministerio de Sanidad** con las comunida
 
 - **Base legal**: el **art. 56 de la Ley 16/2003**, de cohesión y calidad del SNS («Intercambio de información en salud»): el Ministerio «coordinará los mecanismos de intercambio electrónico de información clínica y de salud individual, previamente acordados con las comunidades autónomas», para el acceso del interesado y de los profesionales «en los términos estrictamente necesarios». Se apoya en la **tarjeta sanitaria individual** (art. 57) y su base de datos de población protegida para identificar unívocamente al paciente.
 
-**Texto consolidado de la Ley 16/2003 a 31 de octubre de 2024.**
+**Texto consolidado de la Ley 16/2003 a 31 de julio de 2026.**
 
 - **Objetivos**: garantizar la continuidad y la calidad asistencial (evitar pruebas y procedimientos repetidos), facilitar el acceso a la información clínica dondequiera que se haya generado y proteger la privacidad (solo profesionales autorizados, con trazabilidad completa de los accesos).
 - **Arquitectura descentralizada**: cada comunidad autónoma **custodia sus propios datos clínicos**; todas se interconectan a través de un **nodo central** gestionado por el Ministerio (sobre la red privada del SNS). El nodo central **no almacena información clínica**: guarda únicamente **índices de referencia** que localizan en qué servicio de salud hay documentación de cada paciente y actúa de intermediario en las consultas.
@@ -83,7 +83,7 @@ El **Reglamento (UE) 2025/327, de 11 de febrero de 2025, relativo al Espacio Eur
 
 ## Fuentes {.unnumbered .unlisted}
 
-- Ley 16/2003, de 28 de mayo, de cohesión y calidad del Sistema Nacional de Salud (texto consolidado, última modificación 31 de octubre de 2024), arts. 56 y 57.
+- Ley 16/2003, de 28 de mayo, de cohesión y calidad del Sistema Nacional de Salud (texto consolidado, última modificación 31 de julio de 2026), arts. 56 y 57.
 - Reglamento (UE) 2025/327, de 11 de febrero de 2025, relativo al Espacio Europeo de Datos de Salud (DOUE L de 5 de marzo de 2025), arts. 12, 14, 19, 20, 103, 104 y 105.
 - Real Decreto 1718/2010, de 17 de diciembre, sobre receta médica y órdenes de dispensación (texto consolidado, última modificación 23 de diciembre de 2015), arts. 1, 2, 7, 10 y 11.
 - Real Decreto 81/2014, de 7 de febrero, por el que se establecen normas para garantizar la asistencia sanitaria transfronteriza (modifica el RD 1718/2010).

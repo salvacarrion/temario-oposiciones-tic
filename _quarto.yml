@@ -18,6 +18,11 @@ book:
   title: "Temario de Oposiciones TIC"
   subtitle: "Cuerpo Superior Técnico de Ingeniería Informática"
   author: "Salvador Carrión Ponz"
+  # Versión del temario: la portada del PDF muestra «Versión X.Y · fecha de
+  # compilación». Al publicar una versión nueva, cambia el número aquí y en
+  # extra.temario_version de mkdocs.yml (ver «Versiones» en CLAUDE.md).
+  date: today
+  date-format: "[Versión 1.0] · D [de] MMMM [de] YYYY"
   output-file: temario-oposiciones-tic
   site-url: https://salvacarrion.github.io/temario-oposiciones-tic/
   repo-url: https://github.com/salvacarrion/temario-oposiciones-tic

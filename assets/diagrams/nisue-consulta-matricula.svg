@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="610" viewBox="0 0 940 610" font-family="Helvetica, Arial, sans-serif">
+  <rect width="940" height="610" fill="#ffffff"/>
+  <text x="40" y="42" font-size="19" font-weight="700" fill="#1f3a5f">Consulta de datos de matrícula a través de NISUE</text>
+  <text x="40" y="66" font-size="12.5" fill="#4a5b68">Ejemplo: el organismo que tramita una ayuda comprueba que el solicitante está matriculado, sin pedirle un certificado</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5a7d99"/>
+    </marker>
+  </defs>
+
+  <!-- Actores -->
+  <rect x="40" y="96" width="185" height="100" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <g text-anchor="middle">
+    <text x="132" y="122" font-size="12" font-weight="700" fill="#1f3a5f">Organismo cesionario</text>
+    <text x="132" y="142" font-size="11" fill="#4a5b68">Necesita el dato para</text>
+    <text x="132" y="157" font-size="11" fill="#4a5b68">su procedimiento</text>
+    <text x="132" y="180" font-size="10.5" font-weight="700" fill="#8a6a1c">Requirente</text>
+  </g>
+
+  <rect x="265" y="96" width="185" height="100" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <g text-anchor="middle">
+    <text x="357" y="122" font-size="12" font-weight="700" fill="#1f3a5f">Plataforma de</text>
+    <text x="357" y="138" font-size="12" font-weight="700" fill="#1f3a5f">Intermediación (PID)</text>
+    <text x="357" y="158" font-size="11" fill="#4a5b68">Agencia Estatal de</text>
+    <text x="357" y="173" font-size="11" fill="#4a5b68">Administración Digital (AEAD)</text>
+  </g>
+
+  <rect x="490" y="96" width="185" height="100" rx="10" fill="#faeed7" stroke="#c9a24b" stroke-width="1.8"/>
+  <g text-anchor="middle">
+    <text x="582" y="122" font-size="12" font-weight="700" fill="#1f3a5f">NISUE</text>
+    <text x="582" y="142" font-size="11" fill="#4a5b68">Nodo de Interoperabilidad</text>
+    <text x="582" y="157" font-size="11" fill="#4a5b68">del Sistema Universitario</text>
+    <text x="582" y="180" font-size="10.5" font-weight="700" fill="#8a6a1c">Emisor ante la PID</text>
+  </g>
+
+  <rect x="715" y="96" width="185" height="100" rx="10" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.6"/>
+  <g text-anchor="middle">
+    <text x="807" y="122" font-size="12" font-weight="700" fill="#1f3a5f">Universidad</text>
+    <text x="807" y="142" font-size="11" fill="#4a5b68">Dueña y responsable</text>
+    <text x="807" y="157" font-size="11" fill="#4a5b68">de los datos</text>
+    <text x="807" y="180" font-size="10.5" font-weight="700" fill="#8a6a1c">Cedente</text>
+  </g>
+
+  <!-- Petición (arriba) y respuesta (abajo) -->
+  <g stroke="#5a7d99" stroke-width="2" fill="none" marker-end="url(#arr)">
+    <line x1="227" y1="128" x2="261" y2="128"/>
+    <line x1="452" y1="128" x2="486" y2="128"/>
+    <line x1="677" y1="128" x2="711" y2="128"/>
+    <line x1="713" y1="166" x2="679" y2="166"/>
+    <line x1="488" y1="166" x2="454" y2="166"/>
+    <line x1="263" y1="166" x2="229" y2="166"/>
+  </g>
+  <g font-size="10.5" font-weight="700" text-anchor="middle">
+    <circle cx="245" cy="110" r="9" fill="#1f3a5f"/><text x="245" y="114" fill="#ffffff">1</text>
+    <circle cx="470" cy="110" r="9" fill="#1f3a5f"/><text x="470" y="114" fill="#ffffff">2</text>
+    <circle cx="695" cy="110" r="9" fill="#1f3a5f"/><text x="695" y="114" fill="#ffffff">3</text>
+    <circle cx="695" cy="184" r="9" fill="#1f3a5f"/><text x="695" y="188" fill="#ffffff">4</text>
+    <circle cx="470" cy="184" r="9" fill="#1f3a5f"/><text x="470" y="188" fill="#ffffff">5</text>
+    <circle cx="245" cy="184" r="9" fill="#1f3a5f"/><text x="245" y="188" fill="#ffffff">5</text>
+  </g>
+
+  <!-- Contenido de los mensajes -->
+  <rect x="40" y="222" width="410" height="128" rx="10" fill="#eef4fa" stroke="#5b87b0" stroke-width="1.2"/>
+  <text x="56" y="244" font-size="12" font-weight="700" fill="#2e5f8a">Petición (SCSP v3 hasta NISUE)</text>
+  <g font-size="11" fill="#4a5b68">
+    <text x="56" y="265">· Identificador único de la petición</text>
+    <text x="56" y="283">· NIF del organismo solicitante</text>
+    <text x="56" y="301">· Documento del titular (NIF, NIE o pasaporte)</text>
+    <text x="56" y="319">· Código RUCT de la universidad (si falta, se consulta</text>
+    <text x="66" y="335">a todas las conectadas en paralelo) y curso académico</text>
+  </g>
+
+  <rect x="490" y="222" width="410" height="128" rx="10" fill="#eef4fa" stroke="#5b87b0" stroke-width="1.2"/>
+  <text x="506" y="244" font-size="12" font-weight="700" fill="#2e5f8a">Respuesta</text>
+  <g font-size="11" fill="#4a5b68">
+    <text x="506" y="265">· Datos de la universidad (nombre, naturaleza, código RUCT)</text>
+    <text x="506" y="283">· Datos personales del estudiante o egresado</text>
+    <text x="506" y="301">· Estudios en los que está o estuvo matriculado</text>
+    <text x="506" y="319">· Código de estado SCSP: 0003, solicitud tramitada;</text>
+    <text x="516" y="335">0238, información no disponible</text>
+  </g>
+
+  <!-- Pasos -->
+  <text x="40" y="378" font-size="13" font-weight="700" fill="#2e5f8a">Pasos</text>
+  <g font-size="11" fill="#4a5b68">
+    <text x="40" y="398"><tspan font-weight="700" fill="#1f3a5f">1.</tspan> El cesionario envía la petición a la PID con el protocolo SCSP v3 (firma con certificado electrónico y HTTPS).</text>
+    <text x="40" y="416"><tspan font-weight="700" fill="#1f3a5f">2.</tspan> La PID la encamina al servicio único que NISUE expone para los datos universitarios.</text>
+    <text x="40" y="434"><tspan font-weight="700" fill="#1f3a5f">3.</tspan> NISUE identifica la universidad y le traslada la petición con un protocolo más sencillo.</text>
+    <text x="40" y="452"><tspan font-weight="700" fill="#1f3a5f">4.</tspan> La universidad consulta su sistema de gestión académica y devuelve los datos de matrícula.</text>
+    <text x="40" y="470"><tspan font-weight="700" fill="#1f3a5f">5.</tspan> La respuesta vuelve por la PID al cesionario, que la incorpora al expediente sin pedir papel al interesado.</text>
+  </g>
+
+  <!-- Casos de uso -->
+  <text x="40" y="502" font-size="13" font-weight="700" fill="#2e5f8a">Casos de uso de NISUE</text>
+  <rect x="40" y="514" width="170" height="44" rx="8" fill="#dbe7f3" stroke="#5b87b0" stroke-width="1.4"/>
+  <g text-anchor="middle">
+    <text x="125" y="532" font-size="11" font-weight="700" fill="#1f3a5f">0. Datos de matrícula</text>
+    <text x="125" y="548" font-size="10.5" fill="#4a5b68">En producción desde 2016</text>
+  </g>
+  <g stroke="#c9a24b" stroke-width="1.4" stroke-dasharray="6 4" fill="#fdf6e8">
+    <rect x="226" y="514" width="160" height="44" rx="8"/>
+    <rect x="398" y="514" width="160" height="44" rx="8"/>
+    <rect x="570" y="514" width="160" height="44" rx="8"/>
+    <rect x="742" y="514" width="158" height="44" rx="8"/>
+  </g>
+  <g text-anchor="middle" font-size="11" fill="#1f3a5f" font-weight="700">
+    <text x="306" y="532">1. Datos de acceso</text>
+    <text x="478" y="532">2. Expedientes académicos</text>
+    <text x="650" y="532">3. Docencia compartida</text>
+    <text x="821" y="532">4. Títulos propios</text>
+  </g>
+  <g text-anchor="middle" font-size="10.5" fill="#8a6a1c">
+    <text x="306" y="548">Preproducción (sept. 2024)</text>
+    <text x="478" y="548">Preproducción (sept. 2024)</text>
+    <text x="650" y="548">Preproducción (sept. 2024)</text>
+    <text x="821" y="548">Preproducción (sept. 2024)</text>
+  </g>
+
+  <text x="900" y="596" font-size="12" fill="#8a949e" text-anchor="end">Elaboración propia a partir de la documentación de NISUE (Crue Digitalización y RedIRIS).</text>
+</svg>
